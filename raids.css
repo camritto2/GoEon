@@ -239,3 +239,12 @@ body {
 .team-text {
   font-weight: 600;
 }
+/* Ajustements pour que les PC restent sur une seule ligne sur mobile */
+.pokemon-stats p {
+  font-size: 13px;       /* Réduit légèrement la taille du texte */
+  white-space: nowrap;   /* Force le texte à rester sur une seule ligne */
+}
+
+.boost-value {
+  font-weight: 700;      /* Rend le chiffre bien visible */
+}
