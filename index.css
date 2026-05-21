@@ -93,9 +93,9 @@ body {
 }
 
 .card-btn img {
-  max-width: 64px;
-  max-height: 64px;
-  margin-bottom: 10px;
+  max-width: 100px;  /* Augmenté de 64px à 100px */
+  max-height: 100px; /* Augmenté de 64px à 100px */
+  margin-bottom: 12px;
   object-fit: contain;
 }
 
@@ -125,5 +125,8 @@ body {
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
   .welcome-badge { font-size: 1.6rem; padding: 10px 15px; }
-  .card-btn img { max-width: 56px; max-height: 56px; }
+  .card-btn img { 
+    max-width: 80px;  /* Augmenté pour le téléphone aussi */
+    max-height: 80px; 
+  }
 }
