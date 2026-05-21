@@ -54,7 +54,13 @@ body {
   border-bottom: 2px solid #ffcb05;
   padding-bottom: 8px;
   margin-top: 0;
-  margin-bottom: 12px; /* Espace réduit au minimum : la carte remonte enfin ! */
+  margin-bottom: 5px; /* Réduit encore plus le titre */
+}
+
+/* On force la grille à se coller immédiatement sous le titre */
+.grid-saison {
+  margin-top: 5px; 
+  padding-top: 0;
 }
 
 /* Bouton Raids */
