@@ -1,0 +1,92 @@
+/* Style global (raccord avec raids.css) */
+body {
+  background-color: #f5f7fa;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main-header h1 {
+  font-size: 42px;
+  color: #2d3748;
+  margin: 0 0 10px 0;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.main-header .subtitle {
+  font-size: 16px;
+  color: #718096;
+  margin: 0;
+}
+
+/* Grille du Menu */
+.menu-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Les cartes / boutons */
+.menu-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.menu-card:hover:not(.disabled) {
+  transform: translateX(4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Les icônes des boutons */
+.card-icon {
+  font-size: 32px;
+  width: 60px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+/* Textes à l'intérieur */
+.card-info h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.card-info p {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+}
+
+/* Couleurs thématiques adaptées de tes titres */
+.tier-1 h2 { color: #d63031; }
+.tier-3 h2 { color: #fdcb6e; }
+.tier-5 h2 { color: #0984e3; }
+.tier-mega h2 { color: #6c5ce7; }
+
+/* Style pour les sections pas encore prêtes */
+.menu-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #edf2f7;
+}
