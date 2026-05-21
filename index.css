@@ -14,35 +14,32 @@ body {
   padding: 20px;
 }
 
-/* --- EN-TÊTE PROFESSIONNEL --- */
+/* --- EN-TÊTE PROFESSIONNEL & MODERNE --- */
 .welcome-header {
-  margin: 40px 20px 35px 20px; /* Augmenté l'espace du bas à 35px */
+  margin: 50px 20px 30px 20px;
 }
 
 .main-title {
   font-size: 3.5rem;
-  font-weight: 900;
-  color: #ffcb05; /* Le beau Jaune Pokémon ! */
-  text-shadow: 
-    -2px -2px 0 #1a1a1a,  
-     2px -2px 0 #1a1a1a,
-    -2px  2px 0 #1a1a1a,
-     2px  2px 0 #1a1a1a,
-     3px  3px 6px rgba(0,0,0,0.3); /* Un superbe contour noir pro et une ombre portée */
-  margin: 0 0 15px 0; /* Force un espace de 15px sous GoEon pour ne plus être collé */
+  font-weight: 800;
+  /* Superbe dégradé moderne bleu/cyan pro */
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 10px 0;
   letter-spacing: -1px;
 }
 
 .welcome-subtitle {
-  font-size: 1.15rem;
-  color: #4a4a4a;
+  font-size: 1.1rem;
+  color: #666666;
   font-style: italic;
-  margin: 0 0 40px 0; /* Force un GROS espace de 40px SOUS le sous-titre pour repousser la carte */
+  margin: 0;
 }
 
 /* --- SECTIONS ET CARTES --- */
 .home-section {
-  margin-top: 0px; /* On remet à 0 car c'est la marge du sous-titre juste au-dessus qui gère l'espace maintenant */
+  margin-top: 30px;
   background: #ffffff;
   padding: 25px 20px;
   border-radius: 15px;
@@ -55,15 +52,9 @@ body {
 .home-section h2 {
   color: #1a1a1a;
   border-bottom: 2px solid #ffcb05;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   margin-top: 0;
-}
-
-.section-subtitle {
-  font-size: 0.9rem;
-  color: #666;
-  font-style: italic;
-  margin-bottom: 25px;
+  margin-bottom: 12px; /* Espace réduit au minimum : la carte remonte enfin ! */
 }
 
 /* Bouton Raids */
@@ -92,8 +83,8 @@ body {
 }
 
 .card-btn img {
-  max-width: 100px;  /* Augmenté de 64px à 100px */
-  max-height: 100px; /* Augmenté de 64px à 100px */
+  max-width: 100px;  /* Icône plus grande sur PC */
+  max-height: 100px; 
   margin-bottom: 12px;
   object-fit: contain;
 }
@@ -123,9 +114,8 @@ body {
 
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
-  .welcome-badge { font-size: 1.6rem; padding: 10px 15px; }
   .card-btn img { 
-    max-width: 80px;  /* Augmenté pour le téléphone aussi */
+    max-width: 80px;  /* Icône adaptée pour le téléphone */
     max-height: 80px; 
   }
 }
