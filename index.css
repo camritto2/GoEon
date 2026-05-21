@@ -16,27 +16,33 @@ body {
 
 /* --- EN-TÊTE PROFESSIONNEL --- */
 .welcome-header {
-  margin: 30px 20px 10px 20px;
+  margin: 40px 20px 35px 20px; /* Augmenté l'espace du bas à 35px */
 }
 
 .main-title {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  margin: 0 0 5px 0;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffcb05; /* Le beau Jaune Pokémon ! */
+  text-shadow: 
+    -2px -2px 0 #1a1a1a,  
+     2px -2px 0 #1a1a1a,
+    -2px  2px 0 #1a1a1a,
+     2px  2px 0 #1a1a1a,
+     3px  3px 6px rgba(0,0,0,0.3); /* Un superbe contour noir pro et une ombre portée */
+  margin: 0 0 15px 0; /* Force un espace de 15px sous GoEon pour ne plus être collé */
   letter-spacing: -1px;
 }
 
 .welcome-subtitle {
-  font-size: 1.1rem;
-  color: #555555;
+  font-size: 1.15rem;
+  color: #4a4a4a;
   font-style: italic;
-  margin: 0;
+  margin: 0 0 40px 0; /* Force un GROS espace de 40px SOUS le sous-titre pour repousser la carte */
 }
 
-/* --- SECTIONS ET CARTES (ESPACE RÉDUIT) --- */
+/* --- SECTIONS ET CARTES --- */
 .home-section {
-  margin-top: 20px; /* Réduit de 40px à 20px pour remonter le bloc */
+  margin-top: 0px; /* On remet à 0 car c'est la marge du sous-titre juste au-dessus qui gère l'espace maintenant */
   background: #ffffff;
   padding: 25px 20px;
   border-radius: 15px;
