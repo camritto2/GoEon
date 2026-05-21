@@ -1,8 +1,8 @@
-/* --- DESIGN GÉNÉRAL --- */
+/* --- DESIGN GÉNÉRAL (MODE CLAIR) --- */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #f7f9fa;
+  color: #2a303d;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -13,16 +13,6 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
-
-/* --- BARRE DE NAVIGATION (Identique à raids.css) --- */
-.navbar { background-color: #2a2a2a; position: sticky; top: 0; z-index: 1000; padding: 10px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-.nav-logo { color: #ffcb05; font-size: 24px; font-weight: bold; text-decoration: none; }
-.nav-links { display: flex; list-style: none; gap: 20px; margin: 0; padding: 0; }
-.nav-links a { color: #ffffff; text-decoration: none; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
-.nav-links a:hover, .nav-links a.active { background-color: #ffcb05; color: #1a1a1a; }
-.menu-toggle { display: none; flex-direction: column; background: none; border: none; cursor: pointer; gap: 5px; }
-.menu-toggle .bar { width: 25px; height: 3px; background-color: white; border-radius: 2px; }
 
 /* --- BANNIÈRE DE BIENVENUE --- */
 .welcome-header {
@@ -36,32 +26,35 @@ body {
   padding: 15px 30px;
   border: 3px solid #FFB380;
   border-radius: 20px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
   background-color: #e6f0ff;
   margin-bottom: 15px;
 }
 
-.text-blue { color: #0055A4; text-shadow: 1px 1px 2px #ccc; }
-.text-white { color: #4a4a4a; } /* Légèrement grisé pour être lisible sur fond blanc */
-.text-red { color: #EF4135; text-shadow: 1px 1px 2px #ccc; }
+.text-blue { color: #0055A4; text-shadow: 1px 1px 1px #fff; }
+.text-white { color: #4a4a4a; }
+.text-red { color: #EF4135; text-shadow: 1px 1px 1px #fff; }
 
 .welcome-subtitle {
   font-size: 1.2rem;
-  color: #cccccc;
+  color: #555555;
   font-style: italic;
 }
 
-/* --- SECTIONS ET GRILLES --- */
+/* --- SECTIONS ET CARTES --- */
 .home-section {
   margin-top: 40px;
-  background: #252525;
-  padding: 20px;
+  background: #ffffff;
+  padding: 30px 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 500px; /* On réduit la largeur de la section pour qu'un seul bouton ne fasse pas trop "vide" */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-section h2 {
-  color: #ffcb05;
+  color: #1a1a1a;
   border-bottom: 2px solid #ffcb05;
   padding-bottom: 10px;
   margin-top: 0;
@@ -69,29 +62,34 @@ body {
 
 .section-subtitle {
   font-size: 0.9rem;
-  color: #aaa;
+  color: #666;
   font-style: italic;
+  margin-bottom: 25px;
 }
 
-/* Les fameux boutons/cartes */
+/* Bouton Raids */
 .card-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 20px;
   text-decoration: none;
-  color: #1a1a1a;
+  color: #2a303d;
   font-weight: bold;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.12);
+  background-color: #fffde7;
+  border: 1px solid #ffcb05;
   transition: transform 0.2s, box-shadow 0.2s;
-  background-color: #fffde7; /* Couleur claire par défaut */
+  max-width: 200px;
+  margin: 0 auto;
 }
 
 .card-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+  background-color: #fff59d;
 }
 
 .card-btn img {
@@ -101,48 +99,22 @@ body {
   object-fit: contain;
 }
 
-/* Variantes de couleurs de ton Fandom */
-.yellow-light { background-color: #fffde7; }
-.yellow-dark { background-color: #fff9c4; }
-.type-rules { background-color: #ffb380; color: #1a1a1a; }
-
-/* Configurations des Grilles (PC par défaut) */
-.grid-saison, .grid-autres {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.grid-types {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 colonnes sur PC pour les types */
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.grid-tutos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-top: 20px;
-}
-
 /* --- FOOTER / DISCORD --- */
 .home-footer {
   margin: 50px 0;
   font-size: 1.1rem;
+  color: #4a4a4a;
 }
 
 .discord-btn {
   display: inline-block;
   margin-top: 10px;
   padding: 12px 25px;
-  background-color: #5865F2; /* Bleu Discord */
+  background-color: #5865F2;
   color: white;
   text-decoration: none;
   border-radius: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
 
@@ -152,23 +124,6 @@ body {
 
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
-  .menu-toggle { display: flex; }
-  .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background-color: #2a2a2a; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.3); gap: 15px; }
-  .nav-links.active { display: flex; }
-
   .welcome-badge { font-size: 1.6rem; padding: 10px 15px; }
-  
-  /* Sur mobile, on passe les grilles de types à 3 colonnes pour que ce soit gros et cliquable */
-  .grid-types {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .grid-tutos {
-    grid-template-columns: 1fr; /* 1 par ligne pour les longs textes de tutos */
-  }
-  
-  .card-btn img {
-    max-width: 48px;
-    max-height: 48px;
-  }
+  .card-btn img { max-width: 56px; max-height: 56px; }
 }
