@@ -7,7 +7,25 @@
   <link rel="stylesheet" href="raids.css">
 </head>
 <body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">GoEon ⚡</a>
 
+    <button class="menu-toggle" id="mobile-menu" aria-label="Ouvrir le menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="#">Événements</a></li>
+      <li><a href="raids.html" class="active">Raids</a></li>
+      <li><a href="#">Ressources</a></li>
+      <li><a href="#">Meilleurs Pokémon</a></li>
+      <li><a href="#">Autres Ressources</a></li>
+    </ul>
+  </div>
+</nav>
   <div class="pokemon-app">
     <h1 class="category-title tier-1">Raids 1 Étoile</h1>
 
@@ -372,6 +390,13 @@
 
     </div>
   </div>
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
 
+  mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
