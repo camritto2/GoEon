@@ -1,92 +1,174 @@
-/* Style global (raccord avec raids.css) */
+/* --- DESIGN GÉNÉRAL --- */
 body {
-  background-color: #f5f7fa;
-  padding: 40px 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
   margin: 0;
-  min-height: 100vh;
-}
-
-.app-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Header */
-.main-header {
+  padding: 0;
   text-align: center;
-  margin-bottom: 50px;
 }
 
-.main-header h1 {
-  font-size: 42px;
-  color: #2d3748;
-  margin: 0 0 10px 0;
-  font-weight: 800;
-  letter-spacing: -1px;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.main-header .subtitle {
-  font-size: 16px;
-  color: #718096;
-  margin: 0;
+/* --- BARRE DE NAVIGATION (Identique à raids.css) --- */
+.navbar { background-color: #2a2a2a; position: sticky; top: 0; z-index: 1000; padding: 10px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+.nav-logo { color: #ffcb05; font-size: 24px; font-weight: bold; text-decoration: none; }
+.nav-links { display: flex; list-style: none; gap: 20px; margin: 0; padding: 0; }
+.nav-links a { color: #ffffff; text-decoration: none; font-weight: 500; padding: 8px 12px; border-radius: 5px; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { background-color: #ffcb05; color: #1a1a1a; }
+.menu-toggle { display: none; flex-direction: column; background: none; border: none; cursor: pointer; gap: 5px; }
+.menu-toggle .bar { width: 25px; height: 3px; background-color: white; border-radius: 2px; }
+
+/* --- BANNIÈRE DE BIENVENUE --- */
+.welcome-header {
+  margin: 40px 20px 20px 20px;
 }
 
-/* Grille du Menu */
-.menu-grid {
+.welcome-badge {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: 3px solid #FFB380;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  background-color: #e6f0ff;
+  margin-bottom: 15px;
+}
+
+.text-blue { color: #0055A4; text-shadow: 1px 1px 2px #ccc; }
+.text-white { color: #4a4a4a; } /* Légèrement grisé pour être lisible sur fond blanc */
+.text-red { color: #EF4135; text-shadow: 1px 1px 2px #ccc; }
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  font-style: italic;
+}
+
+/* --- SECTIONS ET GRILLES --- */
+.home-section {
+  margin-top: 40px;
+  background: #252525;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.home-section h2 {
+  color: #ffcb05;
+  border-bottom: 2px solid #ffcb05;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Les fameux boutons/cartes */
+.card-btn {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-/* Les cartes / boutons */
-.menu-card {
-  display: flex;
   align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 20px;
+  justify-content: center;
+  padding: 15px;
   text-decoration: none;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
+  color: #1a1a1a;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fffde7; /* Couleur claire par défaut */
 }
 
-.menu-card:hover:not(.disabled) {
-  transform: translateX(4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+.card-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
 }
 
-/* Les icônes des boutons */
-.card-icon {
-  font-size: 32px;
-  width: 60px;
-  text-align: center;
-  margin-right: 20px;
+.card-btn img {
+  max-width: 64px;
+  max-height: 64px;
+  margin-bottom: 10px;
+  object-fit: contain;
 }
 
-/* Textes à l'intérieur */
-.card-info h2 {
-  font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 4px 0;
+/* Variantes de couleurs de ton Fandom */
+.yellow-light { background-color: #fffde7; }
+.yellow-dark { background-color: #fff9c4; }
+.type-rules { background-color: #ffb380; color: #1a1a1a; }
+
+/* Configurations des Grilles (PC par défaut) */
+.grid-saison, .grid-autres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.card-info p {
-  font-size: 14px;
-  color: #718096;
-  margin: 0;
+.grid-types {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 colonnes sur PC pour les types */
+  gap: 12px;
+  margin-top: 20px;
 }
 
-/* Couleurs thématiques adaptées de tes titres */
-.tier-1 h2 { color: #d63031; }
-.tier-3 h2 { color: #fdcb6e; }
-.tier-5 h2 { color: #0984e3; }
-.tier-mega h2 { color: #6c5ce7; }
+.grid-tutos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
 
-/* Style pour les sections pas encore prêtes */
-.menu-card.disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  background-color: #edf2f7;
+/* --- FOOTER / DISCORD --- */
+.home-footer {
+  margin: 50px 0;
+  font-size: 1.1rem;
+}
+
+.discord-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 25px;
+  background-color: #5865F2; /* Bleu Discord */
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.discord-btn:hover {
+  background-color: #4752c4;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+  .menu-toggle { display: flex; }
+  .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background-color: #2a2a2a; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.3); gap: 15px; }
+  .nav-links.active { display: flex; }
+
+  .welcome-badge { font-size: 1.6rem; padding: 10px 15px; }
+  
+  /* Sur mobile, on passe les grilles de types à 3 colonnes pour que ce soit gros et cliquable */
+  .grid-types {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-tutos {
+    grid-template-columns: 1fr; /* 1 par ligne pour les longs textes de tutos */
+  }
+  
+  .card-btn img {
+    max-width: 48px;
+    max-height: 48px;
+  }
 }
