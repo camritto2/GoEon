@@ -14,41 +14,34 @@ body {
   padding: 20px;
 }
 
-/* --- BANNIÈRE DE BIENVENUE --- */
+/* --- EN-TÊTE PROFESSIONNEL --- */
 .welcome-header {
-  margin: 40px 20px 20px 20px;
+  margin: 30px 20px 10px 20px;
 }
 
-.welcome-badge {
-  display: inline-block;
-  font-size: 2.5rem;
-  font-weight: bold;
-  padding: 15px 30px;
-  border: 3px solid #FFB380;
-  border-radius: 20px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
-  background-color: #e6f0ff;
-  margin-bottom: 15px;
+.main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 5px 0;
+  letter-spacing: -1px;
 }
-
-.text-blue { color: #0055A4; text-shadow: 1px 1px 1px #fff; }
-.text-white { color: #4a4a4a; }
-.text-red { color: #EF4135; text-shadow: 1px 1px 1px #fff; }
 
 .welcome-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555555;
   font-style: italic;
+  margin: 0;
 }
 
-/* --- SECTIONS ET CARTES --- */
+/* --- SECTIONS ET CARTES (ESPACE RÉDUIT) --- */
 .home-section {
-  margin-top: 40px;
+  margin-top: 20px; /* Réduit de 40px à 20px pour remonter le bloc */
   background: #ffffff;
-  padding: 30px 20px;
+  padding: 25px 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  max-width: 500px; /* On réduit la largeur de la section pour qu'un seul bouton ne fasse pas trop "vide" */
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
