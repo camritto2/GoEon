@@ -40,7 +40,7 @@ body {
 .home-section {
   margin-top: 30px;
   background: #ffffff;
-  padding: 10px 20px 25px 20px; /* CORRIGÉ ICI : le premier chiffre passe de 25px à 10px pour remonter le mot Combats tout en haut ! */
+  padding: 10px 20px 25px 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   max-width: 500px;
@@ -52,11 +52,19 @@ body {
   color: #1a1a1a;
   border-bottom: 2px solid #ffcb05;
   padding-bottom: 8px;
-  margin-top: 5px; /* Réduit l'espace au-dessus du texte */
-  margin-bottom: 20px; /* Remet l'espace normal entre le titre et la carte de raid */
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
 
-/* Bouton Raids */
+/* CONTENEUR DES BOUTONS (Pour les mettre côte à côte) */
+.grid-saison {
+  display: flex;
+  justify-content: center; /* Centre le bloc de boutons */
+  gap: 20px;               /* Espace de 20px entre les deux boutons */
+  flex-wrap: wrap;         /* Passe à la ligne proprement sur mobile */
+}
+
+/* Style de base des boutons de combat */
 .card-btn {
   display: flex;
   flex-direction: column;
@@ -68,17 +76,15 @@ body {
   font-weight: bold;
   border-radius: 10px;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.12);
-  background-color: #fffde7;
-  border: 1px solid #ffcb05;
-  transition: transform 0.2s, box-shadow 0.2s;
-  max-width: 200px;
-  margin: 0 auto;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+  flex: 1;                 /* Permet aux deux boutons d'avoir la même largeur */
+  max-width: 200px;        /* Largeur max par bouton */
+  min-width: 150px;        /* Sécurité pour le responsive */
 }
 
 .card-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-  background-color: #fff59d;
 }
 
 .card-btn img {
@@ -86,6 +92,28 @@ body {
   max-height: 100px; 
   margin-bottom: 12px;
   object-fit: contain;
+}
+
+/* --- COULEURS SPÉCIFIQUES DES BOUTONS --- */
+
+/* Bouton Raids Classiques (Jaune) */
+.yellow-light {
+  background-color: #fffde7;
+  border: 1px solid #ffcb05;
+}
+.yellow-light:hover {
+  background-color: #fff59d;
+}
+
+/* Bouton Raids Obscurs (Bordure éclaircie) */
+.purple-light {
+  background-color: #f3e5f5; /* Ton joli fond violet */
+  border: 1px solid #e1bee7; /* Une bordure violette très claire et douce */
+}
+
+.purple-light:hover {
+  background-color: #e1bee7; /* Fond qui se teinte un peu plus au survol */
+  border-color: #ce93d8;     /* Bordure qui suit la couleur au survol */
 }
 
 /* --- FOOTER / DISCORD --- */
@@ -116,5 +144,8 @@ body {
   .card-btn img { 
     max-width: 80px;
     max-height: 80px; 
+  }
+  .grid-saison {
+    gap: 15px;
   }
 }
