@@ -6,6 +6,9 @@
     <title>GoEon - Top Acier</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="global.css"> 
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="images/icon-512.png">
 </head>
 <body>
 
@@ -15,124 +18,133 @@
     <h1>Les meilleurs Pokémon de Type Acier</h1>
     
     <div class="intro-rules">
-        <div class="intro-item"><span class="bullet" style="color:blue;">•</span>Les Pokémon en <span style="color:blue; font-weight:bold;">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
-        <div class="intro-item"><span class="bullet" style="color:#10b981;">•</span>Les Pokémon en <span style="color:#10b981; font-weight:bold;">vert</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
-        <div class="intro-item"><span class="bullet" style="color:red;">•</span>Les Méga sont en <span style="color:red; font-weight:bold;">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
-        <div class="intro-item"><span class="bullet" style="color:#333;">•</span><span class="legacy-indicator" style="vertical-align: baseline; margin-left: 0;">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
+        <div class="intro-item"><span class="bullet" >•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
+        <div class="intro-item"><span class="bullet" class="bullet-green">•</span>Les Pokémon en <span class="legend-green">vert</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
+        <div class="intro-item"><span class="bullet" >•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
+        <div class="intro-item"><span class="bullet" >•</span><span class="legacy-indicator" >L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
         Plus de détails sur ce classement : <a href="MeilleursPokemon.html">Règles Générales</a><br><br>
         💡 <strong>Astuce de stratégie :</strong> Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
     </div>
 
-    <h2 style="text-align: center; margin-bottom: 30px; color: var(--text-principal);">Top 25</h2>
+    <h2 class="top-title">Top 25</h2>
 
     <div class="pokemon-grid">
 
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">1</td></tr>
-                <tr><td><img src="images/ZacianES.png" alt="Zacian" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/ZacianES.png" alt="Zacian" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Zacian</span></strong><br>
-                        <span style="font-size: 1.1em; color: var(--text-secondaire);"><em>Épée Suprême</em></span><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Gladius Maximus</strong><span class="legacy-indicator" style="color: var(--text-muet);">1</span>
+                        <strong><span class="pokemon-name-legendary">Zacian</span></strong><br>
+                        <span class="pokemon-form"><em>Épée Suprême</em></span><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Gladius Maximus</strong><span class="legacy-indicator" style="color: var(--text-muet);">1</span>
                         </div>
                         <div>
                             <button id="toggle-fee-btn" class="btn-fee" onclick="toggleBuild('fee-details-row', 'toggle-fee-btn', '#db2777', '#fce7f3', '#9d174d', '#fbcfe8', '#be185d')">
-                                Également Top Fée <img src="images/fee.webp" alt="Type Fée" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Fée <img src="images/fee.webp" alt="Type Fée" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="fee-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Câlinerie</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Câlinerie</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">100 Bonbons Zacian + 100 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">100 Bonbons Zacian + 100 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
+                <tr><td class="note"><span class="footnote-ref">1</span> : Gladius Maximus s'obtient si la forme de base de Zacian connaît Tête de Fer avant de changer de forme.</td></tr>
             </table>
-            <div class="note"><span style="font-size: 0.75em; font-weight: bold; vertical-align: super; margin-right: 2px;">1</span> : Gladius Maximus s'obtient si la forme de base de Zacian connaît Tête de Fer avant de changer de forme.</div>
         </div>
 
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">2</td></tr>
-                <tr><td><img src="images/ZamazentaBS.png" alt="Zamazenta" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/ZamazentaBS.png" alt="Zamazenta" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Zamazenta</span></strong><br>
-                        <span style="font-size: 1.1em; color: var(--text-secondaire);"><em>Bouclier Suprême</em></span><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Aegis Maxima</strong><span class="legacy-indicator" style="color: var(--text-muet);">2</span>
+                        <strong><span class="pokemon-name-legendary">Zamazenta</span></strong><br>
+                        <span class="pokemon-form"><em>Bouclier Suprême</em></span><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Aegis Maxima</strong><span class="legacy-indicator" style="color: var(--text-muet);">2</span>
                         </div>
-                        <div style="height: 29px;"></div>
+                        
                     </td>
                 </tr>
+                <tr><td class="note"><span class="footnote-ref">2</span> : Aegis Maxima s'obtient si la forme de base de Zamazenta connaît Tête de Fer avant de changer de forme.</td></tr>
             </table>
-            <div class="note"><span style="font-size: 0.75em; font-weight: bold; vertical-align: super; margin-right: 2px;">2</span> : Aegis Maxima s'obtient si la forme de base de Zamazenta connaît Tête de Fer avant de changer de forme.</div>
         </div>
 
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">3</td></tr>
-                <tr><td><img src="images/NecrozmaCC.png" alt="Necrozma" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/NecrozmaCC.png" alt="Necrozma" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Necrozma</span></strong><br>
-                        <span style="font-size: 1.1em; color: var(--text-secondaire);"><em>Crinière du Couchant</em></span><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <span id="necro-fast-atk"><strong>Griffe Acier</strong></span><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Choc Météore</strong>
+                        <strong><span class="pokemon-name-legendary">Necrozma</span></strong><br>
+                        <span class="pokemon-form"><em>Crinière du Couchant</em></span><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <span id="necro-fast-atk"><strong>Griffe Acier</strong></span><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Choc Météore</strong>
                         </div>
                         <div>
                             <button id="toggle-psy-btn" class="btn-psy" onclick="toggleBuild('psy-details-row', 'toggle-psy-btn', '#8e44ad', '#f5eef8', '#9b59b6', '#e8daef', '#7d3c98', 'necro-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Griffe Acier</span> ➔ <strong>Coupe Psycho</strong>', '<strong>Griffe Acier</strong>')">
-                                Également Top Psy <img src="images/psy.webp" alt="Type Psy" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="psy-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Prescience</strong><span class="legacy-indicator" style="color: var(--text-muet);">3</span>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Prescience</strong><span class="legacy-indicator" style="color: var(--text-muet);">3</span>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">100 Bonbons Necrozma + 100 000 Poussières Étoiles</span>
-                        <div style="font-size: 12px; color: var(--text-muet); margin-top: 12px; border-top: 1px dashed var(--border-carte); padding-top: 8px; line-height: 1.4; text-align: left;">
-                            <span style="font-size: 0.75em; font-weight: bold; vertical-align: super; margin-right: 2px;">3</span> : Choc Météore fera toujours plus de dégâts qu'un Prescience Super Efficace.
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">100 Bonbons Necrozma + 100 000 Poussières Étoiles</span>
+                        </div>
+                        <div class="footnote">
+                            <span class="footnote-ref">3</span> : Choc Météore fera toujours plus de dégâts qu'un Prescience Super Efficace.
                         </div>
                     </td>
                 </tr>
             </table>
-            <div style="height: 25px;"></div>
+            
         </div>
 
         <div class="grid-item">
             <table class="fandom-table mega-card">
                 <tr><td class="rank-cell">Méga 1</td></tr>
-                <tr><td><img src="images/MetalosseM.png" alt="Méga-Métalosse" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/MetalosseM.png" alt="Méga-Métalosse" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Méga-Métalosse</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Pisto-Poing</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Poing Météore</strong><span class="legacy-indicator">L</span>
+                        <strong><span class="pokemon-name-normal">Méga-Métalosse</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Pisto-Poing</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Poing Météore</strong><span class="legacy-indicator">L</span>
                         </div>
                         <div>
                             <button id="toggle-mm-btn" class="btn-psy" onclick="toggleBuild('mm-details-row', 'toggle-mm-btn', '#8e44ad', '#f5eef8', '#9b59b6', '#e8daef', '#7d3c98')">
-                                Également Top Psy <img src="images/psy.webp" alt="Type Psy" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="mm-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Psyko</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Psyko</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">75 Bonbons Terhal + 75 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">75 Bonbons Terhal + 75 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -142,58 +154,64 @@
         <div class="grid-item">
             <table class="fandom-table mega-card">
                 <tr><td class="rank-cell">Méga 2</td></tr>
-                <tr><td><img src="images/LucarioM.png" alt="Méga-Lucario" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/LucarioM.png" alt="Méga-Lucario" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Méga-Lucario</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <span id="lucario-fast-atk"><strong>Pisto-Poing</strong></span><span class="legacy-indicator" style="color: var(--text-muet);">3</span><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Luminocanon</strong>
+                        <strong><span class="pokemon-name-normal">Méga-Lucario</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <span id="lucario-fast-atk"><strong>Pisto-Poing</strong></span><span class="legacy-indicator" style="color: var(--text-muet);">3</span><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Luminocanon</strong>
                         </div>
                         <div>
                             <button id="toggle-ml-btn" class="btn-combat" onclick="toggleBuild('ml-details-row', 'toggle-ml-btn', '#d35400', '#fdf3e7', '#d35400', '#f5cba7', '#a04000', 'lucario-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Pisto-Poing</span> ➔ <strong>Forte-Paume</strong><span class=\'legacy-indicator\'>L</span>', '<strong>Pisto-Poing</strong>')">
-                                Également Top Combat <img src="images/combat.webp" alt="Type Combat" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Combat <img src="images/combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="ml-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Aurasphère</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Aurasphère</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">75 Bonbons Riolu + 75 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">75 Bonbons Riolu + 75 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
+                <tr><td class="note"><span class="footnote-ref">3</span> : Forte-Paume<span class="legacy-indicator">L</span> s'obtient avec une CT d'Élite et fera toujours plus de dégâts que Pisto-Poing Super Efficace.</td></tr>
             </table>
-            <div class="note"><span style="font-size: 0.75em; font-weight: bold; vertical-align: super; margin-right: 2px;">3</span> : Forte-Paume<span class="legacy-indicator">L</span> s'obtient avec une CT d'Élite et fera toujours plus de dégâts que Pisto-Poing Super Efficace.</div>
         </div>
 
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">4</td></tr>
-                <tr><td><img src="images/Metalosse.png" alt="Métalosse" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Metalosse.png" alt="Métalosse" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Métalosse</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-normal">Métalosse</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Pisto-Poing</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Poing Météore</strong><span class="legacy-indicator">L</span>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Pisto-Poing</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Poing Météore</strong><span class="legacy-indicator">L</span>
                         </div>
                         <div>
                             <button id="toggle-met-btn" class="btn-psy" onclick="toggleBuild('met-details-row', 'toggle-met-btn', '#8e44ad', '#f5eef8', '#9b59b6', '#e8daef', '#7d3c98')">
-                                Également Top Psy <img src="images/psy.webp" alt="Type Psy" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="met-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Psyko</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Psyko</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">75 Bonbons Terhal + 75 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">75 Bonbons Terhal + 75 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -203,63 +221,69 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">5</td></tr>
-                <tr><td><img src="images/DialgaO.png" alt="Dialga Forme Originelle" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/DialgaO.png" alt="Dialga Forme Originelle" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Dialga</span></strong><br>
-                        <span style="font-size: 1.1em; color: var(--text-secondaire);"><em>Forme Originelle</em></span><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <strong><span class="pokemon-name-legendary">Dialga</span></strong><br>
+                        <span class="pokemon-form"><em>Forme Originelle</em></span><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
                             <button id="toggle-dialgao-btn" class="btn-dragon" onclick="toggleBuild('dialgao-details-row', 'toggle-dialgao-btn', '#0284c7', '#f0f9ff', '#0284c7', '#bae6fd', '#0369a1')">
-                                Également Top Dragon <img src="images/dragon.webp" alt="Type Dragon" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Dragon <img src="images/dragon.webp" alt="Type Dragon" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="dialgao-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Hurle-Temps</strong><span class="legacy-indicator" style="color: var(--text-muet);">4</span><span class="legacy-indicator">L</span>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Hurle-Temps</strong><span class="legacy-indicator" style="color: var(--text-muet);">4</span><span class="legacy-indicator">L</span>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">100 Bonbons + 100 000 Poussières Étoiles</span>
-                        <div style="font-size: 12px; color: var(--text-muet); margin-top: 12px; border-top: 1px dashed var(--border-carte); padding-top: 8px; line-height: 1.4; text-align: left;">
-                            <span class="legacy-indicator" style="vertical-align: baseline;">L</span> : Hurle-Temps ne peut pas être appris via une CT d'Élite ; il est exclusif aux événements.<br>
-                            <span style="font-size: 0.75em; font-weight: bold; vertical-align: super; margin-right: 2px;">4</span> : Hurle-Temps fera toujours plus de dégâts que Tête de Fer Super Efficace.
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        </div>
+                        <div class="footnote">
+                            <span class="legacy-indicator" >L</span> : Hurle-Temps ne peut pas être appris via une CT d'Élite ; il est exclusif aux événements.<br>
+                            <span class="footnote-ref">4</span> : Hurle-Temps fera toujours plus de dégâts que Tête de Fer Super Efficace.
                         </div>
                     </td>
                 </tr>
             </table>
-            <div style="height: 25px;"></div>
+            
         </div>
 
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">6</td></tr>
-                <tr><td><img src="images/Dialga.png" alt="Dialga" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Dialga.png" alt="Dialga" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Dialga</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-legendary">Dialga</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
                             <button id="toggle-dialgan-btn" class="btn-dragon" onclick="toggleBuild('dialgan-details-row', 'toggle-dialgan-btn', '#0284c7', '#f0f9ff', '#0284c7', '#bae6fd', '#0369a1')">
-                                Également Top Dragon <img src="images/dragon.webp" alt="Type Dragon" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Dragon <img src="images/dragon.webp" alt="Type Dragon" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="dialgan-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Draco-Météore</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Draco-Météore</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -269,15 +293,15 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">7</td></tr>
-                <tr><td><img src="images/Melmetal.png" alt="Melmetal" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Melmetal.png" alt="Melmetal" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Melmetal</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Éclair</strong> <img src="images/electrik.webp" alt="Type Électrik" style="height: 16px; width: auto; vertical-align: middle;"><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Écrous d'Poing</strong><span class="legacy-indicator">L</span>
+                        <strong><span class="pokemon-name-legendary">Melmetal</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Éclair</strong> <img src="images/electrik.webp" alt="Type Électrik" class="type-icon-btn"><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Écrous d'Poing</strong><span class="legacy-indicator">L</span>
                         </div>
-                        <div style="height: 29px;"></div>
+                        
                     </td>
                 </tr>
             </table>
@@ -287,15 +311,15 @@
         <div class="grid-item">
             <table class="fandom-table mega-card">
                 <tr><td class="rank-cell">Méga 3</td></tr>
-                <tr><td><img src="images/GalekingM.png" alt="Méga-Galeking" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/GalekingM.png" alt="Méga-Galeking" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Méga-Galeking</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Queue de Fer</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tacle Lourd</strong>
+                        <strong><span class="pokemon-name-normal">Méga-Galeking</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Queue de Fer</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tacle Lourd</strong>
                         </div>
-                        <div style="height: 29px;"></div>
+                        
                     </td>
                 </tr>
             </table>
@@ -305,27 +329,30 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">8</td></tr>
-                <tr><td><img src="images/Genesect.png" alt="Genesect" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Genesect.png" alt="Genesect" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Genesect</span></strong><br>
-                        <span style="font-size: 1.1em; color: var(--text-secondaire);"><em>Tout Module</em></span><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Bombe Aimant</strong>
+                        <strong><span class="pokemon-name-legendary">Genesect</span></strong><br>
+                        <span class="pokemon-form"><em>Tout Module</em></span><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Bombe Aimant</strong>
                         </div>
                         <div>
                             <button id="toggle-gen-btn" class="btn-insecte" onclick="toggleBuild('gen-details-row', 'toggle-gen-btn', '#a8b820', '#f7fede', '#a8b820', '#e6f7a1', '#808c11')">
-                                Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="gen-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Plaie Croix</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Plaie Croix</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -335,55 +362,61 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">9</td></tr>
-                <tr><td><img src="images/Lucario.png" alt="Lucario" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Lucario.png" alt="Lucario" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Lucario</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <span id="lucarion-fast-atk"><strong>Pisto-Poing</strong></span><span class="legacy-indicator" style="color: var(--text-muet);">3</span><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Poing Météore</strong>
+                        <strong><span class="pokemon-name-normal">Lucario</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <span id="lucarion-fast-atk"><strong>Pisto-Poing</strong></span><span class="legacy-indicator" style="color: var(--text-muet);">3</span><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Poing Météore</strong>
                         </div>
                         <div>
                             <button id="toggle-lucarion-btn" class="btn-combat" onclick="toggleBuild('lucarion-details-row', 'toggle-lucarion-btn', '#d35400', '#fdf3e7', '#d35400', '#f5cba7', '#a04000', 'lucarion-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Pisto-Poing</span> ➔ <strong>Forte-Paume</strong><span class=\'legacy-indicator\'>L</span>', '<strong>Pisto-Poing</strong>')">
-                                Également Top Combat <img src="images/combat.webp" alt="Type Combat" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Combat <img src="images/combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="lucarion-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Aurasphère</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Aurasphère</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">75 Bonbons + 75 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">75 Bonbons + 75 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
-            <div class="note"><span style="font-size: 0.75em; font-weight: bold; vertical-align: super; margin-right: 2px;">3</span> : Forte-Paume s'obtient avec une CT d'Élite et fera toujours plus de dégâts que Pisto-Poing Super Efficace.</div>
+            <div class="note"><span class="footnote-ref">3</span> : Forte-Paume s'obtient avec une CT d'Élite et fera toujours plus de dégâts que Pisto-Poing Super Efficace.</div>
         </div>
 
         <div class="grid-item">
             <table class="fandom-table mega-card">
                 <tr><td class="rank-cell">Méga 4</td></tr>
-                <tr><td><img src="images/CizayoxM.png" alt="Méga-Cizayox" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/CizayoxM.png" alt="Méga-Cizayox" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Méga-Cizayox</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <span id="megaciz-fast-atk"><strong>Pisto-Poing</strong></span><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <strong><span class="pokemon-name-normal">Méga-Cizayox</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <span id="megaciz-fast-atk"><strong>Pisto-Poing</strong></span><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
                             <button id="toggle-megaciz-btn" class="btn-insecte" onclick="toggleBuild('megaciz-details-row', 'toggle-megaciz-btn', '#a8b820', '#f7fede', '#a8b820', '#e6f7a1', '#808c11', 'megaciz-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Pisto-Poing</span> ➔ <strong>Taillade</strong>', '<strong>Pisto-Poing</strong>')">
-                                Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="megaciz-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Plaie Croix</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Plaie Croix</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">75 Bonbons + 75 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">75 Bonbons + 75 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -393,29 +426,32 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">10</td></tr>
-                <tr><td><img src="images/Minotaupe.png" alt="Minotaupe" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Minotaupe.png" alt="Minotaupe" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Minotaupe</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-normal">Minotaupe</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
                             <button id="toggle-mino-btn" class="btn-sol" onclick="toggleBuild('mino-details-row', 'toggle-mino-btn', '#d4ac0d', '#fef9e7', '#d4ac0d', '#f9e79f', '#9a7d0a')">
-                                Également Top Sol <img src="images/sol.webp" alt="Type Sol" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Sol <img src="images/sol.webp" alt="Type Sol" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="mino-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Sable Ardent</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Sable Ardent</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">50 Bonbons + 50 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">50 Bonbons + 50 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -425,26 +461,29 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">11</td></tr>
-                <tr><td><img src="images/Jirachi.png" alt="Jirachi" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Jirachi.png" alt="Jirachi" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #10b981; display: inline-block; margin-bottom: 4px;">Jirachi</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <span id="jira-fast-atk"><strong>Rayon Chargé</strong> <img src="images/electrik.webp" alt="Type Électrik" style="height: 16px; width: auto; vertical-align: middle;"></span><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Carnareket</strong>
+                        <strong><span class="pokemon-name-rare">Jirachi</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <span id="jira-fast-atk"><strong>Rayon Chargé</strong> <img src="images/electrik.webp" alt="Type Électrik" class="type-icon-btn"></span><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Carnareket</strong>
                         </div>
                         <div>
                             <button id="toggle-jira-btn" class="btn-psy" onclick="toggleBuild('jira-details-row', 'toggle-jira-btn', '#8e44ad', '#f5eef8', '#9b59b6', '#e8daef', '#7d3c98', 'jira-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Rayon Chargé</span> ➔ <strong>Choc Mental</strong>', '<strong>Rayon Chargé</strong> <img src=\'images/electrik.webp\' alt=\'Type Électrik\' style=\'height: 16px; width: auto; vertical-align: middle;\'>')">
-                                Également Top Psy <img src="images/psy.webp" alt="Type Psy" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="jira-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Psyko</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Psyko</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -454,26 +493,29 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">12</td></tr>
-                <tr><td><img src="images/Scalpereur.png" alt="Scalpereur" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Scalpereur.png" alt="Scalpereur" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Scalpereur</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <strong><span class="pokemon-name-normal">Scalpereur</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
                             <button id="toggle-scalp-btn" class="btn-tenebres" onclick="toggleBuild('scalp-details-row', 'toggle-scalp-btn', '#705848', '#f4f1ef', '#705848', '#e1dad5', '#524034')">
-                                Également Top Ténèbres <img src="images/tenebres.webp" alt="Type Ténèbres" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Ténèbres <img src="images/tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="scalp-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Tricherie</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Tricherie</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">75 Bonbons + 75 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">75 Bonbons + 75 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -483,26 +525,29 @@
         <div class="grid-item">
             <table class="fandom-table mega-card">
                 <tr><td class="rank-cell">Méga 5</td></tr>
-                <tr><td><img src="images/SteelixM.png" alt="Méga-Steelix" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/SteelixM.png" alt="Méga-Steelix" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Méga-Steelix</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Queue de Fer</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tacle Lourd</strong>
+                        <strong><span class="pokemon-name-normal">Méga-Steelix</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Queue de Fer</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tacle Lourd</strong>
                         </div>
                         <div>
                             <button id="toggle-mstee-btn" class="btn-sol" onclick="toggleBuild('mstee-details-row', 'toggle-mstee-btn', '#d4ac0d', '#fef9e7', '#d4ac0d', '#f9e79f', '#9a7d0a')">
-                                Également Top Sol <img src="images/sol.webp" alt="Type Sol" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Sol <img src="images/sol.webp" alt="Type Sol" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="mstee-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Séisme</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Séisme</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">75 Bonbons + 75 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">75 Bonbons + 75 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -512,15 +557,15 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">13</td></tr>
-                <tr><td><img src="images/Duralugon.png" alt="Duralugon" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Duralugon.png" alt="Duralugon" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Duralugon</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Luminocanon</strong>
+                        <strong><span class="pokemon-name-normal">Duralugon</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Luminocanon</strong>
                         </div>
-                        <div style="height: 29px;"></div>
+                        
                     </td>
                 </tr>
             </table>
@@ -530,29 +575,32 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">14</td></tr>
-                <tr><td><img src="images/Pingoleon.png" alt="Pingoléon" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Pingoleon.png" alt="Pingoléon" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Pingoléon</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-normal">Pingoléon</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Ailes d'Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Luminocanon</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Ailes d'Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Luminocanon</strong>
                         </div>
                         <div>
-                            <button id="toggle-pingo-btn" class="btn-dragon" style="color: #0284c7; background: #e0f2fe; border-color: #bae6fd;" onclick="toggleBuild('pingo-details-row', 'toggle-pingo-btn', '#0284c7', '#e0f2fe', '#0284c7', '#bae6fd', '#0369a1')">
-                                Également Top Eau <img src="images/eau.webp" alt="Type Eau" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                            <button id="toggle-pingo-btn" class="btn-dragon" onclick="toggleBuild('pingo-details-row', 'toggle-pingo-btn', '#0284c7', '#e0f2fe', '#0284c7', '#bae6fd', '#0369a1')">
+                                Également Top Eau <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="pingo-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Hydroblast</strong><span class="legacy-indicator">L</span>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Hydroblast</strong><span class="legacy-indicator">L</span>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">25 Bonbons + 10 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">25 Bonbons + 10 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -562,29 +610,32 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">15</td></tr>
-                <tr><td><img src="images/Galeking.png" alt="Galeking" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Galeking.png" alt="Galeking" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Galeking</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-normal">Galeking</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Queue de Fer</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tacle Lourd</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Queue de Fer</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tacle Lourd</strong>
                         </div>
                         <div>
-                            <button id="toggle-gale-btn" style="color: #b8a038; background: #fdfbf2; border-color: #f5f0cd;" onclick="toggleBuild('gale-details-row', 'toggle-gale-btn', '#b8a038', '#fdfbf2', '#b8a038', '#f5f0cd', '#857322')">
-                                Également Top Roche <img src="images/roche.webp" alt="Type Roche" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                            <button id="toggle-gale-btn" class="btn-roche" onclick="toggleBuild('gale-details-row', 'toggle-gale-btn', '#b8a038', '#fdfbf2', '#b8a038', '#f5f0cd', '#857322')">
+                                Également Top Roche <img src="images/roche.webp" alt="Type Roche" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="gale-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Laser Météore</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Laser Météore</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">25 Bonbons + 10 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">25 Bonbons + 10 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -594,29 +645,32 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">16</td></tr>
-                <tr><td><img src="images/Cizayox.png" alt="Cizayox" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Cizayox.png" alt="Cizayox" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Cizayox</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-normal">Cizayox</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <span id="ciz-fast-atk"><strong>Pisto-Poing</strong></span><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <span id="ciz-fast-atk"><strong>Pisto-Poing</strong></span><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
                             <button id="toggle-ciz-btn" class="btn-insecte" onclick="toggleBuild('ciz-details-row', 'toggle-ciz-btn', '#a8b820', '#f7fede', '#a8b820', '#e6f7a1', '#808c11', 'ciz-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Pisto-Poing</span> ➔ <strong>Taillade</strong>', '<strong>Pisto-Poing</strong>')">
-                                Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="ciz-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Plaie Croix</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Plaie Croix</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">25 Bonbons + 10 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">25 Bonbons + 10 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -626,29 +680,32 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">17</td></tr>
-                <tr><td><img src="images/Heatran.png" alt="Heatran" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Heatran.png" alt="Heatran" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Heatran</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-legendary">Heatran</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Danse Flammes</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Danse Flammes</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
-                            <button id="toggle-heat-btn" style="color: #e65c00; background: #fff3eb; border-color: #fcd7bf;" onclick="toggleBuild('heat-details-row', 'toggle-heat-btn', '#e65c00', '#fff3eb', '#e65c00', '#fcd7bf', '#b34700')">
-                                Également Top Feu <img src="images/feu.webp" alt="Type Feu" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                            <button id="toggle-heat-btn" class="btn-feu" onclick="toggleBuild('heat-details-row', 'toggle-heat-btn', '#e65c00', '#fff3eb', '#e65c00', '#fcd7bf', '#b34700')">
+                                Également Top Feu <img src="images/feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="heat-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Vortex Magma</strong><span class="legacy-indicator">L</span>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Vortex Magma</strong><span class="legacy-indicator">L</span>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -658,27 +715,30 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">18</td></tr>
-                <tr><td><img src="images/Fermite.png" alt="Fermite" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Fermite.png" alt="Fermite" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Fermite</span></strong><br>
-                        <div style="margin: 4px 0 6px 0; font-size: 11px; color: #e53e3e; font-style: italic; font-weight: bold;">Hémisphère Ouest Uniquement</div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <strong><span class="pokemon-name-normal">Fermite</span></strong><br>
+                        <div class="badge-hemisphere">Hémisphère Ouest Uniquement</div>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
                             <button id="toggle-ferm-btn" class="btn-insecte" onclick="toggleBuild('ferm-details-row', 'toggle-ferm-btn', '#a8b820', '#f7fede', '#a8b820', '#e6f7a1', '#808c11')">
-                                Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="ferm-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Plaie Croix</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Plaie Croix</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">50 Bonbons + 50 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">50 Bonbons + 50 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -688,15 +748,15 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">19</td></tr>
-                <tr><td><img src="images/Solgaleo.png" alt="Solgaleo" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Solgaleo.png" alt="Solgaleo" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Solgaleo</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Psykoud'Boul</strong> <img src="images/psy.webp" alt="Type Psy" style="height: 16px; width: auto; vertical-align: middle;"><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <strong><span class="pokemon-name-legendary">Solgaleo</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Psykoud'Boul</strong> <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
-                        <div style="height: 29px;"></div>
+                        
                     </td>
                 </tr>
             </table>
@@ -706,26 +766,29 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">20</td></tr>
-                <tr><td><img src="images/Vrombotor.png" alt="Vrombotor" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Vrombotor.png" alt="Vrombotor" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Vrombotor</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <span id="vrom-fast-atk"><strong>Strido-Son</strong></span><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Gyroballe</strong>
+                        <strong><span class="pokemon-name-normal">Vrombotor</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <span id="vrom-fast-atk"><strong>Strido-Son</strong></span><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Gyroballe</strong>
                         </div>
                         <div>
                             <button id="toggle-vrom-btn" class="btn-poison" onclick="toggleBuild('vrom-details-row', 'toggle-vrom-btn', '#a040a0', '#fdf2fd', '#a040a0', '#f9dbf9', '#702c70', 'vrom-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Strido-Son</span> ➔ <strong>Direct Toxic</strong>', '<strong>Strido-Son</strong>')">
-                                Également Top Poison <img src="images/poison.webp" alt="Type Poison" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Poison <img src="images/poison.webp" alt="Type Poison" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="vrom-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Détricanon</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Détricanon</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">50 Bonbons + 50 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">50 Bonbons + 50 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -735,26 +798,29 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">21</td></tr>
-                <tr><td><img src="images/Cobaltium.png" alt="Cobaltium" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Cobaltium.png" alt="Cobaltium" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Cobaltium</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <strong><span class="pokemon-name-legendary">Cobaltium</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
                         <div>
                             <button id="toggle-cob-btn" class="btn-combat" onclick="toggleBuild('cob-details-row', 'toggle-cob-btn', '#d35400', '#fdf3e7', '#d35400', '#f5cba7', '#a04000')">
-                                Également Top Combat <img src="images/combat.webp" alt="Type Combat" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Combat <img src="images/combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="cob-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Lame Sainte</strong><span class="legacy-indicator">L</span>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Lame Sainte</strong><span class="legacy-indicator">L</span>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">100 Bonbons + 100 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -764,29 +830,32 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">22</td></tr>
-                <tr><td><img src="images/Magnezone.png" alt="Magnézone" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Magnezone.png" alt="Magnézone" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Magnézone</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-normal">Magnézone</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <span id="mag-fast-atk"><strong>Strido-Son</strong></span><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Luminocanon</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <span id="mag-fast-atk"><strong>Strido-Son</strong></span><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Luminocanon</strong>
                         </div>
                         <div>
                             <button id="toggle-mag-btn" class="btn-electrik" onclick="toggleBuild('mag-details-row', 'toggle-mag-btn', '#d4ac0d', '#fef9e7', '#d4ac0d', '#f9e79f', '#9a7d0a', 'mag-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Strido-Son</span> ➔ <strong>Change Éclair</strong>', '<strong>Strido-Son</strong>')">
-                                Également Top Électrik <img src="images/electrik.webp" alt="Type Électrik" style="height: 16px; width: auto; vertical-align: middle;"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                                Également Top Électrik <img src="images/electrik.webp" alt="Type Électrik" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr id="mag-details-row" style="display: none;">
                     <td>
-                        <span style="text-decoration: underline;">Seconde Attaque Chargée</span> : <strong>Éclair Fou</strong>
+                        <span class="attack-label">Seconde Attaque Chargée</span> : <strong>Éclair Fou</strong>
                         <hr>
-                        <span style="text-decoration: underline;">Cout de la 2e Attaque</span> : <span style="white-space: nowrap;">50 Bonbons + 50 000 Poussières Étoiles</span>
+                        <div class="attack-cost-container">
+                            <span class="attack-cost-title">Coût de la 2e Attaque :</span>
+                            <span class="attack-cost-value">50 Bonbons + 50 000 Poussières Étoiles</span>
+                        </div>
                     </td>
                 </tr>
             </table>
@@ -796,18 +865,18 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">23</td></tr>
-                <tr><td><img src="images/Berserkatt.png" alt="Berserkatt" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Berserkatt.png" alt="Berserkatt" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Berserkatt</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-normal">Berserkatt</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tête de Fer</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tête de Fer</strong>
                         </div>
-                        <div style="height: 29px;"></div>
+                        
                     </td>
                 </tr>
             </table>
@@ -817,15 +886,15 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">24</td></tr>
-                <tr><td><img src="images/Bamboiselle.png" alt="Bamboiselle" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/Bamboiselle.png" alt="Bamboiselle" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: blue; display: inline-block; margin-bottom: 4px;">Bamboiselle</span></strong><br><br>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Lame d'Air</strong> <img src="images/vol.webp" alt="Type Vol" style="height: 16px; width: auto; vertical-align: middle;"><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Tacle Lourd</strong>
+                        <strong><span class="pokemon-name-legendary">Bamboiselle</span></strong><br><br>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Lame d'Air</strong> <img src="images/vol.webp" alt="Type Vol" class="type-icon-btn"><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Tacle Lourd</strong>
                         </div>
-                        <div style="height: 29px;"></div>
+                        
                     </td>
                 </tr>
             </table>
@@ -835,18 +904,18 @@
         <div class="grid-item">
             <table class="fandom-table">
                 <tr><td class="rank-cell">25</td></tr>
-                <tr><td><img src="images/SablaireauA.png" alt="Sablaireau d'Alola" style="height: 150px; width: auto; object-fit: contain;"></td></tr>
+                <tr><td><img src="images/SablaireauA.png" alt="Sablaireau d'Alola" class="card-img"></td></tr>
                 <tr>
                     <td>
-                        <strong><span style="font-size: 2em; color: #2d3748; display: inline-block; margin-bottom: 4px;">Sablaireau d'Alola</span></strong><br>
-                        <div style="margin: 4px 0 10px 0;">
-                            <span style="background: #555555; color: #ffffff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: bold; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 4px;">OBSCUR DISPONIBLE</span>
+                        <strong><span class="pokemon-name-normal">Sablaireau d'Alola</span></strong><br>
+                        <div class="badge-obscur-container">
+                            <span class="badge-obscur">OBSCUR DISPONIBLE</span>
                         </div>
-                        <div style="line-height: 1.8; margin-bottom: 15px;">
-                            <span style="text-decoration: underline;">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
-                            <span style="text-decoration: underline;">Attaque Chargée</span> : <strong>Gyroballe</strong>
+                        <div class="attack-block">
+                            <span class="attack-label">Attaque Immédiate</span> : <strong>Griffe Acier</strong><br>
+                            <span class="attack-label">Attaque Chargée</span> : <strong>Gyroballe</strong>
                         </div>
-                        <div style="height: 29px;"></div>
+                        
                     </td>
                 </tr>
             </table>
@@ -855,16 +924,16 @@
 
     </div> 
     
-    <hr style="border: 0; border-top: 1px solid var(--border-carte); margin: 40px 0;">
+    <hr class="section-divider">
     
-    <div style="text-align: center; margin-bottom: 50px; display: flex; align-items: center; justify-content: center; gap: 20px;">
-        <h3 style="color: var(--text-principal); margin: 0;">Plus d'informations</h3>
-        <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/steel" target="_blank" style="background-color: var(--text-secondaire); color: #ffffff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#6b46c1'" onmouseout="this.style.backgroundColor='var(--text-secondaire)'">Cliquez ici</a>
+    <div class="more-info-container">
+        <h3 class="more-info-title">Plus d'informations</h3>
+        <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/steel" target="_blank" class="more-info-link">Cliquez ici</a>
     </div>
 
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=2"></script>
 
 <script>
   // Moteur de déploiement universel paramétré avec gestion des switchs d'attaques dynamiques

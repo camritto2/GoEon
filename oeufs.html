@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Œufs</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <style>
+    .proba-container {
+      display: flex;
+      justify-content: center;
+      gap: 2px;
+      margin-top: 6px;
+    }
+    .proba-icon {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+    }
+    .pokemon-img[data-shiny] {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .pokemon-img[data-shiny]:hover { transform: scale(1.08); }
+    .pokemon-img.shiny-active { /* aura supprimée */ }
+  </style>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="images/icon-512.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+
+  <h1>Les Œufs du moment</h1>
+
+  <div class="intro-rules">
+    Un Pokémon en <span style="color: #16a34a; font-weight: bold;">vert</span> est un bon Pokémon en Raids (PvE).<br>
+    Les IV de ces Pokémon sont minimum 10-10-10.<br>
+    <br>
+    La probabilité est indiquée par <img src="images/ProbaOeuf.webp" style="width:14px; vertical-align:middle;"> — plus il y en a, plus le Pokémon est <strong>rare</strong>.
+  </div>
+
+  <p style="font-style: italic; margin: 0 0 20px 10px; color: #a0aec0; font-size: 14px;">
+    <span style="font-style: normal; margin-right: 5px;">💡</span>Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! ✨
+  </p>
+
+  <h1 class="category-title tier-1">Œufs 2 km</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Obtenus aux Pokéstops</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Ecrapince.png" data-shiny="images/EcrapinceS.png" alt="Écrapince" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Écrapince</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">703</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Melo.png" data-shiny="images/MeloS.png" alt="Mélo" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Mélo</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">383</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Noeunoeuf.png" data-shiny="images/NoeunoeufS.png" alt="Noeunoeuf" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Noeunoeuf</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">671</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Okeoke.png" data-shiny="images/OkeokeS.png" alt="Okéoké" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Okéoké</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">305</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Pichu.png" data-shiny="images/PichuS.png" alt="Pichu" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Pichu</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">270</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Togepi.png" data-shiny="images/TogepiS.png" alt="Togepi" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Togepi</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">375</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Pyronille.png" data-shiny="images/PyronilleS.png" alt="Pyronille" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Pyronille</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">855</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+  </div>
+
+    <h1 class="category-title tier-1">Œufs 5 km</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Obtenus aux Pokéstops</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Babimanta.png" data-shiny="images/BabimantaS.png" alt="Babimanta" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Babimanta</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">713</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"></div><img src="images/Flotillon.png" alt="Flotillon" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Flotillon</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">401</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"></div><img src="images/Frissonille.png" alt="Frissonille" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Frissonille</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">302</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Riolu.png" data-shiny="images/RioluS.png" alt="Riolu" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Riolu</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">567</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/WimessirF.png" data-shiny="images/WimessirFS.png" alt="Wimessir ♀" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Wimessir<br>♀</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 370</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/WimessirM.png" data-shiny="images/WimessirMS.png" alt="Wimessir ♂" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Wimessir<br>♂</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 396</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Pyronille.png" data-shiny="images/PyronilleS.png" alt="Pyronille" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Pyronille</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">855</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+  </div>
+
+    <h1 class="category-title tier-1">Œufs 10 km</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Obtenus aux Pokéstops</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Absol.png" data-shiny="images/AbsolS.png" alt="Absol" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Absol</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 443</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Charbambin.png" data-shiny="images/CharbambinS.png" alt="Charbambin" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Charbambin</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">418</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Forgerette.png" data-shiny="images/ForegetteS.png" alt="Forgerette" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Forgerette</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">491</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Frigodo.png" data-shiny="images/FrigodoS.png" alt="Frigodo" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Frigodo</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">712</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Monorpale.png" data-shiny="images/MonorpaleS.png" alt="Monorpale" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Monorpale</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">794</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Mysdibule.png" data-shiny="images/MysdibuleS.png" alt="Mysdibule" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Mysdibule</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">934</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Pyronille.png" data-shiny="images/PyronilleS.png" alt="Pyronille" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Pyronille</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">855</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+  </div>
+
+    <h1 class="category-title tier-1">Œufs 7 km — Cadeaux</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Obtenus en ouvrant les cadeaux de ses amis</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/CorayonG.png" data-shiny="images/CorayonGS.png" alt="Corayon de Galar" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Corayon de Galar</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">855</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/DarumarondG.png" data-shiny="images/DarumarondGS.png" alt="Darumarond de Galar" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Darumarond de Galar</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">823</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/LimondeG.png" data-shiny="images/LimondeGS.png" alt="Limonde de Galar" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Limonde de Galar</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 235</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/MiaoussG.png" data-shiny="images/MiaoussGS.png" alt="Miaouss de Galar" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Miaouss de Galar</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">591</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/RacaillouA.png" data-shiny="images/RacaillouAS.png" alt="Racaillou d'Alola" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Racaillou d'Alola</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">739</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/TaupiqueurA.png" data-shiny="images/TaupiqueurAS.png" alt="Taupiqueur d'Alola" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Taupiqueur d'Alola</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">389</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/ZigzatonG.png" data-shiny="images/ZigzatonGS.png" alt="Zigzaton de Galar" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Zigzaton de Galar</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">290</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+  </div>
+
+    <h1 class="category-title tier-1">Œufs 12 km — Team Go Rocket</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Obtenus en battant les chefs de la Team Go Rocket</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"></div><img src="images/Gribouraigne.png" alt="Gribouraigne" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Gribouraigne</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">531</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Mascaiman.png" data-shiny="images/MascaimanS.png" alt="Mascaïman" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Mascaïman</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">592</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Pandespiegle.png" data-shiny="images/PandespiegleS.webp" alt="Pandespiegle" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Pandespiegle</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">850</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Tritox.png" data-shiny="images/TritoxS.png" alt="Tritox" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Tritox</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">641</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Vostourno.png" data-shiny="images/VostournoS.png" alt="Vostourno" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Vostourno</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">726</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Vrombi.png" data-shiny="images/VrombiS.png" alt="Vrombi" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Vrombi</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">650</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+  </div>
+
+    <h1 class="category-title tier-1">Œufs 5 km — Récompense Semaine</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Obtenus le lundi matin après avoir marché 25 km la semaine précédente</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Debugant.png" data-shiny="images/DebugantS.png" alt="Debugant" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Debugant</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">281</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Korillon.png" data-shiny="images/KorillonS.png" alt="Korillon" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Korillon</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">574</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Ptiravi.png" data-shiny="images/PtiraviS.png" alt="Ptiravi" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Ptiravi</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">212</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Rozbouton.png" data-shiny="images/RozboutonS.png" alt="Rozbouton" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Rozbouton</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">489</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Tenefix.png" data-shiny="images/TenefixS.png" alt="Ténéfix" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Ténéfix</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">843</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+  </div>
+
+    <h1 class="category-title tier-1">Œufs 10 km — Récompense Semaine</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Obtenus le lundi matin après avoir marché 50 km la semaine précédente</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Draby.png" data-shiny="images/DrabyS.png" alt="Draby" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Draby</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">660</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Draieul.png" data-shiny="images/DraieulS.png" alt="Draïeul" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Draïeul</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 665</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Drakkarmin.png" data-shiny="images/DrakkarminS.png" alt="Drakkarmin" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Drakkarmin</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 665</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+  </div>
+
+    <h1 class="category-title tier-1">Œufs 7 km — Routes</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Donnés par Matéo à la fin d'une route</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/BargantuaBlanc.png" data-shiny="images/BargantuaBlancS.png" alt="Bargantua Blanc" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Bargantua Blanc</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 194</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/CaninosH.png" data-shiny="images/CaninosHS.png" alt="Caninos de Hisui" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Caninos de Hisui</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">755</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/CorayonG.png" data-shiny="images/CorayonGS.png" alt="Corayon de Galar" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-normal">Corayon de Galar</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">855</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/FarfuretH.png" data-shiny="images/FarfuretHS.png" alt="Farfuret de Hisui" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Farfuret de Hisui</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 172</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/RamolossG.png" data-shiny="images/RamolossGS.png" alt="Ramoloss de Galar" class="pokemon-img"></div>
+      <div class="card-content"><h2 class="pokemon-name pokemon-good">Ramoloss de Galar</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">700</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
+    </div>
+  </div>
+
+    <h1 class="category-title tier-1">Œufs 1 km — Quotidiens</h1>
+  <p style="font-style:italic; color:var(--text-secondaire); margin:-20px 0 15px 0; text-align:center;">Obtenus chaque jour à 0h (si l'œuf de la veille a bien éclos) — Probabilité identique pour tous</p>
+  <div class="pokemon-grid pokemon-grid-auto">
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Bulbizarre.png" data-shiny="images/BulbizarreS.png" alt="Bulbizarre" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Bulbizarre</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">637</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Salameche.png" data-shiny="images/SalamecheS.png" alt="Salamèche" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Salamèche</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">560</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Carapuce.png" data-shiny="images/CarapuceS.png" alt="Carapuce" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Carapuce</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">540</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Germignon.png" data-shiny="images/GermignonS.png" alt="Germignon" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-normal">Germignon</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">534</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Hericendre.png" data-shiny="images/HericendreS.png" alt="Héricendre" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Héricendre</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">560</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Kaiminus.png" data-shiny="images/KaiminusS.png" alt="Kaiminus" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Kaiminus</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">646</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Arcko.png" data-shiny="images/ArckoS.png" alt="Arcko" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Arcko</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">601</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Poussifeu.png" data-shiny="images/PoussifeauS.png" alt="Poussifeu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Poussifeu</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">624</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Gobou.png" data-shiny="images/GobouS.png" alt="Gobou" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Gobou</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">644</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Tortipouss.png" data-shiny="images/TortipoussS.png" alt="Tortipouss" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Tortipouss</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">678</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Ouisticram.png" data-shiny="images/OuisticramS.png" alt="Ouisticram" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Ouisticram</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">547</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Tiplouf.png" data-shiny="images/TiploufS.png" alt="Tiplouf" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Tiplouf</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">614</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Vipelierre.png" data-shiny="images/VipelierreS.png" alt="Vipélierre" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-normal">Vipélierre</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">485</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Gruikui.png" data-shiny="images/GruikuiS.png" alt="Gruikui" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Gruikui</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">618</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Moustillon.png" data-shiny="images/MoustillonS.png" alt="Moustillon" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Moustillon</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">597</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Marisson.png" data-shiny="images/MarissonS.png" alt="Marisson" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Marisson</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">626</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Feunnec.png" data-shiny="images/FeunnecS.png" alt="Feunnec" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Feunnec</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">587</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Grenousse.png" data-shiny="images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Grenousse</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">567</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Brindibou.png" data-shiny="images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Brindibou</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">604</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Flamiaou.png" data-shiny="images/FlamiaoiS.png" alt="Flamiaou" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Flamiaou</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">591</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Otaquin.png" data-shiny="images/OtaquinS.png" alt="Otaquin" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Otaquin</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">645</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Ouistempo.png" data-shiny="images/OuistempoS.png" alt="Ouistempo" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Ouistempo</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">620</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Flambino.png" data-shiny="images/FlambinoS.png" alt="Flambino" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Flambino</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">627</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/Larmeleon.png" alt="Larméléon" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Larméléon</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">627</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Poussacha.png" data-shiny="images/PoussachaS.png" alt="Poussacha" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Poussacha</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">579</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Chochodile.png" data-shiny="images/ChochodileS.png" alt="Chochodile" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Chochodile</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">644</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div>
+        <img src="images/Coiffeton.png" data-shiny="images/CoiffetonS.png" alt="Coiffeton" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name pokemon-good">Coiffeton</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">614</span></p>
+          <div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js?v=2"></script>
+<script>
+  document.querySelectorAll('.pokemon-img[data-shiny]').forEach(img => {
+    const srcNormale = img.src;
+    const srcShiny = img.getAttribute('data-shiny');
+    img.addEventListener('click', () => {
+      const container = img.closest('.image-container');
+      const emoji = container ? container.querySelector('.emoji-shiny') : null;
+      const isNormal = new URL(img.src, window.location.href).pathname === new URL(srcNormale, window.location.href).pathname;
+      img.src = isNormal ? srcShiny : srcNormale;
+      img.classList.toggle('shiny-active', isNormal);
+      if (emoji) emoji.classList.toggle('shiny-active', isNormal);
+    });
+  });
+</script>
+</body>
+</html>

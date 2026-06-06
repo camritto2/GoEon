@@ -1,6 +1,10 @@
 <nav class="navbar">
   <div class="nav-container">
-    <a href="index.html" class="nav-logo">GoEon ⚡</a>
+    <a href="index.html" class="nav-logo">GoEon</a>
+
+    <button id="theme-toggle-mobile" title="Changer le thème" aria-label="Changer le thème">
+      <img id="theme-icon-mobile" src="images/Noctali_icon.png" alt="Mode Sombre" style="width:24px; height:24px; object-fit:contain; vertical-align:middle;"><span class="theme-text-mobile">Mode Sombre</span>
+    </button>
 
     <button class="menu-toggle" id="mobile-menu" aria-label="Ouvrir le menu">
       <span class="bar"></span>
@@ -9,22 +13,35 @@
     </button>
 
     <ul class="nav-links">
-      <li><a href="#">Événements</a></li>
-      
+
+      <li class="nav-events">
+        <span class="nav-label">Évènements :</span>
+        <a href="evenement.html">En cours</a>
+        <span class="nav-separator">|</span>
+        <span class="dropdown">
+          <a href="#" class="dropdown-toggle">À venir <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Aucun évènement annoncé</a></li>
+          </ul>
+        </span>
+      </li>
+
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle">Combat <span class="arrow">▾</span></a>
+        <a href="#" class="dropdown-toggle">Saison en Cours <span class="arrow">▾</span></a>
         <ul class="dropdown-menu">
           <li><a href="raids.html">Raids</a></li>
           <li><a href="raids_obscurs.html">Raids Obscurs</a></li>
-          <li><a href="#">Dynamax</a></li>
+          <li><a href="oeufs.html">Œufs</a></li>
+          <li><a href="#">Tâches d'Étude</a></li>
+          <li><a href="#">Team Go Rocket</a></li>
         </ul>
       </li>
-      
+
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle">Meilleurs Pokémon par Type <span class="arrow">▾</span></a>
+        <a href="#" class="dropdown-toggle">Meilleurs Pokémon <span class="arrow">▾</span></a>
         <ul class="dropdown-menu">
           <li><a href="TopAcier.html">Acier</a></li>
-          <li><a href="#">Combat</a></li>
+          <li><a href="TopCombat.html">Combat</a></li>
           <li><a href="#">Dragon</a></li>
           <li><a href="#">Eau</a></li>
           <li><a href="#">Électrik</a></li>
@@ -43,12 +60,25 @@
         </ul>
       </li>
 
-      <li><a href="#">Autres Ressources</a></li>
-<li>
-        <button id="theme-toggle" title="Activer le mode sombre">
-          🌙<span class="theme-text">Mode Sombre</span>
-        </button>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Autres Ressources <span class="arrow">▾</span></a>
+        <ul class="dropdown-menu">
+          <li><a href="dynamax.html">Dynamax</a></li>
+          <li><a href="metamorph.html">Métamorph</a></li>
+          <li><a href="boost_poussiere.html">Boost Poussières Étoile</a></li>
+          <li><a href="regionaux.html">Pokémon Régionaux</a></li>
+        </ul>
       </li>
+
+      <li id="li-signaler-mobile">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScyUV3hPNevGP_1lsK5Abdi8KbKwwFN5XmGJHRHEAd_pDF7vA/viewform?usp=publish-editor" target="_blank">⚠️ Signaler une erreur</a>
+      </li>
+
     </ul>
+
+    <button id="theme-toggle" title="Activer le mode sombre">
+      <img id="theme-icon" src="images/Noctali_icon.png" alt="Mode Sombre" style="width:24px; height:24px; object-fit:contain; vertical-align:middle;"><span class="theme-text">Mode Sombre</span>
+    </button>
+
   </div>
 </nav>

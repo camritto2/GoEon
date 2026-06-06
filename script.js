@@ -6,13 +6,25 @@
 fetch('navbar.html')
   .then(response => response.text())
   .then(data => {
-    // Insère la barre de navigation dans la boîte HTML prévue
     document.getElementById('nav-placeholder').innerHTML = data;
     
-    // ÉTAPES SUIVANTES (Une fois que la barre de navigation est bien chargée)
+    // Ajouter l'icône après le texte GoEon
+    setTimeout(() => {
+      const logo = document.querySelector('.nav-logo');
+      if (logo) {
+        const icon = document.createElement('img');
+        icon.src = 'images/Icone.png';
+        icon.alt = 'GoEon';
+        icon.style.cssText = 'width:46px; height:46px; object-fit:contain; vertical-align:middle; margin-left:-2px;';
+        logo.appendChild(icon);
+      }
+    }, 50);
+
     gererPageActive();
     gererMenuMobile();
     gererModeSombre();
+    gererDropdowns();
+    initJohannEffect();
   })
   .catch(error => console.error("Erreur lors du chargement de la navbar :", error));
 
@@ -50,13 +62,14 @@ function gererPageActive() {
 
 // 3. GESTION DU MENU MOBILE ET DES CLICS SUR LES DROPDOWNS
 function gererMenuMobile() {
-  const mobileMenu = document.getElementById('mobile-menu');
+  const menuToggleBtn = document.querySelector('.menu-toggle');
   const navLinksContainer = document.querySelector('.nav-links');
   
-  if (mobileMenu && navLinksContainer) {
+  if (menuToggleBtn && navLinksContainer) {
     // Ouverture/Fermeture du menu burger global
-    mobileMenu.addEventListener('click', () => {
+    menuToggleBtn.addEventListener('click', () => {
       navLinksContainer.classList.toggle('active');
+      menuToggleBtn.classList.toggle('open');
     });
   }
 
@@ -64,12 +77,12 @@ function gererMenuMobile() {
   const dropdowns = document.querySelectorAll('.dropdown');
 
   dropdowns.forEach(dropdown => {
-    const toggle = dropdown.querySelector('.dropdown-toggle');
+    const toggle = dropdown.querySelector('.dropdown-toggle') || dropdown.querySelector('a');
     
     if (toggle) {
       toggle.addEventListener('click', (e) => {
         // Si on est sur un écran mobile (largeur < 768px)
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 960) {
           e.preventDefault(); // Empêche de recharger la page ou de suivre un lien vide
           
           // Ferme les autres dropdowns ouverts pour faire propre
@@ -87,40 +100,151 @@ function gererMenuMobile() {
 
 
 // 4. LOGIQUE DU MODE SOMBRE
-function gererModeSombre() {
+function basculerTheme() {
   const toggleBtn = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const themeIconMobile = document.getElementById('theme-icon-mobile');
+  const themeTextMobile = document.querySelector('.theme-text-mobile');
+  document.body.classList.toggle('dark-mode');
   
-  if (toggleBtn) {
-    // Vérifie si l'utilisateur avait déjà activé le mode sombre lors d'une visite précédente
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark-mode');
-      toggleBtn.innerHTML = '☀️<span class="theme-text">Mode Clair</span>';
+  if (document.body.classList.contains('dark-mode')) {
+    if (toggleBtn) {
       toggleBtn.title = "Activer le mode clair";
+      if (themeIcon) themeIcon.src = 'images/Mentali_icon.png';
+      const text = toggleBtn.querySelector('.theme-text');
+      if (text) text.textContent = 'Mode Clair';
     }
-
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      
-      if (document.body.classList.contains('dark-mode')) {
-        toggleBtn.innerHTML = '☀️<span class="theme-text">Mode Clair</span>';
-        toggleBtn.title = "Activer le mode clair";
-        localStorage.setItem('theme', 'dark');
-      } else {
-        toggleBtn.innerHTML = '🌙<span class="theme-text">Mode Sombre</span>';
-        toggleBtn.title = "Activer le mode sombre";
-        localStorage.setItem('theme', 'light');
-      }
-    });
+    if (themeIconMobile) themeIconMobile.src = 'images/Mentali_icon.png';
+    if (themeTextMobile) themeTextMobile.textContent = 'Mode Clair';
+    localStorage.setItem('theme', 'dark');
+  } else {
+    if (toggleBtn) {
+      toggleBtn.title = "Activer le mode sombre";
+      if (themeIcon) themeIcon.src = 'images/Noctali_icon.png';
+      const text = toggleBtn.querySelector('.theme-text');
+      if (text) text.textContent = 'Mode Sombre';
+    }
+    if (themeIconMobile) themeIconMobile.src = 'images/Noctali_icon.png';
+    if (themeTextMobile) themeTextMobile.textContent = 'Mode Sombre';
+    localStorage.setItem('theme', 'light');
   }
 }
 
-// CLIC SUR L'ÉMOJI SHINY -> DÉCLENCHE LE CLIC SUR L'IMAGE POKÉMON
-document.querySelectorAll('.emoji-shiny').forEach(emoji => {
-  emoji.addEventListener('click', (e) => {
-    // On trouve l'image du Pokémon située dans la même boîte
-    const cardImg = emoji.closest('.image-container').querySelector('.pokemon-img');
-    if (cardImg) {
-      cardImg.click(); // Déclenche virtuellement le Johann-effect !
+function gererModeSombre() {
+  const toggleBtn = document.getElementById('theme-toggle');
+  const toggleMobile = document.getElementById('theme-toggle-mobile');
+
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    if (toggleBtn) {
+      toggleBtn.title = "Activer le mode clair";
+      const themeIcon = document.getElementById('theme-icon');
+      if (themeIcon) themeIcon.src = 'images/Mentali_icon.png';
+      const text = toggleBtn.querySelector('.theme-text');
+      if (text) text.textContent = 'Mode Clair';
+    }
+    const themeIconMobile = document.getElementById('theme-icon-mobile');
+    const themeTextMobile = document.querySelector('.theme-text-mobile');
+    if (themeIconMobile) themeIconMobile.src = 'images/Mentali_icon.png';
+    if (themeTextMobile) themeTextMobile.textContent = 'Mode Clair';
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => { basculerTheme(); });
+  }
+
+  if (toggleMobile) {
+    toggleMobile.addEventListener('click', () => { basculerTheme(); });
+  }
+}
+
+
+// 5. CLIC SUR L'ÉMOJI SHINY -> DÉCLENCHE LE CLIC SUR L'IMAGE POKÉMON (JOHANN-EFFECT)
+function initJohannEffect() {
+  document.querySelectorAll('.emoji-shiny').forEach(emoji => {
+    emoji.addEventListener('click', (e) => {
+      const container = emoji.closest('.image-container');
+      if (container) {
+        const cardImg = container.querySelector('.pokemon-img');
+        if (cardImg) {
+          cardImg.click(); 
+        }
+      }
+    });
+  });
+}
+
+
+// 6. FERME LE MENU BURGER AUTOMATIQUEMENT AU SCROLL
+window.addEventListener('scroll', () => {
+  const navLinks = document.querySelector('.nav-links');
+  const menuToggle = document.querySelector('.menu-toggle');
+  
+  if (navLinks && navLinks.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    if (menuToggle) {
+      menuToggle.classList.remove('open'); 
+    }
+  }
+});
+
+// 7. GESTION DES DROPDOWNS AU CLIC (mobile uniquement)
+function gererDropdowns() {
+  // Fermer les dropdowns en cliquant ailleurs (mobile uniquement)
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth > 960) return;
+    if (!e.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
     }
   });
-});
+}
+
+
+// 7. (Bouton thème mobile géré dans gererModeSombre())
+
+// SERVICE WORKER
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .catch(err => console.log('SW error:', err));
+  });
+}
+
+// 8. BOUTON "SIGNALER UNE ERREUR"
+(function() {
+  const btn = document.createElement('a');
+  btn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScyUV3hPNevGP_1lsK5Abdi8KbKwwFN5XmGJHRHEAd_pDF7vA/viewform?usp=publish-editor';
+  btn.target = '_blank';
+  btn.id = 'btn-signaler';
+  btn.innerHTML = '<span class="signaler-texte">⚠️ Signaler une erreur</span><span class="signaler-mini">⚠️</span>';
+  btn.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--bg-carte);
+    color: var(--text-secondaire);
+    border: 1px solid var(--border-carte);
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: background 0.2s, transform 0.2s;
+  `;
+
+  // Style media query via feuille de style
+  const style = document.createElement('style');
+  style.textContent = `
+    .signaler-mini { display: none; }
+    @media (max-width: 960px) {
+      #btn-signaler { display: none !important; }
+    }
+  `;
+  document.head.appendChild(style);
+  btn.addEventListener('mouseenter', () => btn.style.transform = 'translateY(-2px)');
+  btn.addEventListener('mouseleave', () => btn.style.transform = 'translateY(0)');
+  document.body.appendChild(btn);
+})();

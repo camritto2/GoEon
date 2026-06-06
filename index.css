@@ -1,126 +1,296 @@
-/* --- DESIGN GÉNÉRAL (MODE CLAIR) --- */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f9fa;
-  color: #2a303d;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
+/* ==========================================
+   PAGE D'ACCUEIL — INDEX.CSS
+   ========================================== */
 
-.container {
-  max-width: 1200px;
+.index-container {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 65px 20px 40px 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* --- EN-TÊTE PROFESSIONNEL & MODERNE --- */
-.welcome-header {
-  margin: 50px 20px 30px 20px;
+/* HERO */
+.hero {
+  text-align: center;
+  margin: 30px 0 40px 0;
 }
 
-.main-title {
-  font-size: 3.5rem;
+.hero-title {
+  font-size: 4rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-principal);
   margin: 0 0 10px 0;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
-.welcome-subtitle {
+.hero-deco {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.hero-deco-right {
+  margin-left: -4px;
+}
+
+.hero-deco-left {
+  margin-right: 0;
+}
+
+.hero-subtitle {
   font-size: 1.1rem;
-  color: #666666;
+  font-weight: 300;
+  color: var(--text-secondaire);
   font-style: italic;
   margin: 0;
 }
 
-/* --- SECTIONS ET CARTES --- */
+/* Carte Règles Générales */
+.type-card-rules {
+  text-align: center;
+}
+
+.type-card-rules .rules-icon {
+  font-size: 28px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* SECTIONS */
 .home-section {
-  margin-top: 30px;
-  background: #ffffff;
-  padding: 10px 20px 25px 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 16px;
+  padding: 20px 25px 25px 25px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.home-section h2 {
-  color: #1a1a1a;
-  border-bottom: 2px solid #ffcb05;
-  padding-bottom: 8px;
-  margin-top: 5px;
-  margin-bottom: 20px;
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-principal);
+  margin: 0 0 20px 0;
+  padding-bottom: 1px;
+  border-bottom: 2px solid #29b6f6;
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 6px;
+  line-height: 1.2;
 }
 
-/* CONTENEUR DES BOUTONS (Pour les mettre côte à côte) */
-.grid-saison {
+.section-title .s-emoji {
+  line-height: 1;
+  font-style: normal;
+}
+
+/* GRILLE CARTES PRINCIPALES (Raids, Dynamax...) */
+.card-grid {
   display: flex;
-  justify-content: center; /* Centre le bloc de boutons */
-  gap: 20px;               /* Espace de 20px entre les deux boutons */
-  flex-wrap: wrap;         /* Passe à la ligne proprement sur mobile */
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
-/* Style de base des boutons de combat */
-.card-btn {
+.home-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 16px;
+  border-radius: 12px;
   text-decoration: none;
-  color: #2a303d;
-  font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.12);
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-  flex: 1;                 /* Permet aux deux boutons d'avoir la même largeur */
-  max-width: 200px;        /* Largeur max par bouton */
-  min-width: 150px;        /* Sécurité pour le responsive */
+  color: var(--text-principal);
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 130px;
+  max-width: 160px;
+  flex: 1;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid transparent;
 }
 
-.card-btn:hover {
+.home-card:hover:not(.disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-.card-btn img {
-  max-width: 100px;
-  max-height: 100px; 
-  margin-bottom: 12px;
+.home-card img {
+  width: 80px;
+  height: 80px;
   object-fit: contain;
+  margin-bottom: 10px;
 }
 
-/* --- COULEURS SPÉCIFIQUES DES BOUTONS --- */
-
-/* Bouton Raids Classiques (Jaune) */
-.yellow-light {
-  background-color: #fffde7;
-  border: 1px solid #ffcb05;
+/* Zone image fixe pour aligner les textes */
+.home-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-principal);
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 130px;
+  max-width: 160px;
+  flex: 1;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid transparent;
+  gap: 0;
+  text-align: center;
 }
-.yellow-light:hover {
-  background-color: #fff59d;
+
+.home-card .img-wrapper {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+/* Couleurs des cartes */
+.yellow-card { background-color: #fffde7; border-color: #ffcb05; }
+.purple-card { background-color: #f3e5f5; border-color: #e1bee7; }
+.blue-card   { background-color: #e3f2fd; border-color: #90caf9; }
+.green-card  { background-color: #e8f5e9; border-color: #a5d6a7; }
+.orange-card { background-color: #fff3e0; border-color: #ffcc80; }
+.grey-card   { background-color: var(--bg-image-container); border-color: var(--border-carte); }
+.red-card    { background-color: #fde8e8; border-color: #f5a0a0; }
+.violet-card { background-color: #ede7f6; border-color: #c5aee8; }
+
+/* Mode sombre */
+body.dark-mode .yellow-card { background-color: #2d2700; border-color: #5a4a00; }
+body.dark-mode .purple-card { background-color: #1e1028; border-color: #4a2060; }
+body.dark-mode .blue-card   { background-color: #0d1f2d; border-color: #1a4060; }
+body.dark-mode .green-card  { background-color: #0d2010; border-color: #1a4020; }
+body.dark-mode .orange-card { background-color: #2d1800; border-color: #5a3000; }
+
+/* CARTES DÉSACTIVÉES */
+.disabled {
+  opacity: 0.45;
+  cursor: pointer;
+  filter: grayscale(60%);
 }
 
-/* Bouton Raids Obscurs (Bordure éclaircie) */
-.purple-light {
-  background-color: #f3e5f5; /* Ton joli fond violet */
-  border: 1px solid #e1bee7; /* Une bordure violette très claire et douce */
+/* GRILLE TYPES — 6 colonnes fixes desktop */
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(75px, 90px));
+  gap: 22px;
+  justify-content: center;
 }
 
-.purple-light:hover {
-  background-color: #e1bee7; /* Fond qui se teinte un peu plus au survol */
-  border-color: #ce93d8;     /* Bordure qui suit la couleur au survol */
+/* Carte Règles Générales */
+.type-card-rules .rules-icon {
+  font-size: 28px;
+  margin-bottom: 6px;
+  display: block;
 }
 
-/* --- FOOTER / DISCORD --- */
+.type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-principal);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--bg-image-container);
+  border: 1px solid var(--border-carte);
+  width: 75px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.type-card:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Couleurs officielles des types */
+.type-normal   { background: #d4d4c8; border-color: #b8b8a8; }
+.type-combat   { background: #f4b89a; border-color: #e07050; }
+.type-vol      { background: #b0b0f0; border-color: #7070c8; }
+.type-poison   { background: #d8a0d8; border-color: #b060b0; }
+.type-sol      { background: #e8d090; border-color: #c8a840; }
+.type-roche    { background: #d4c878; border-color: #b0a020; }
+.type-insecte  { background: #c8d870; border-color: #90b000; }
+.type-spectre  { background: #b0a0c8; border-color: #705898; }
+.type-acier    { background: #b8c0c8; border-color: #808890; }
+.type-feu      { background: #f8c090; border-color: #f08030; }
+.type-eau      { background: #98c8f8; border-color: #6890f0; }
+.type-plante   { background: #b0e090; border-color: #78c850; }
+.type-electrik { background: #f8e060; border-color: #f8d030; }
+.type-psy      { background: #f8a0b8; border-color: #f85888; }
+.type-glace    { background: #b8e0e8; border-color: #98d8d8; }
+.type-dragon   { background: #c0a8f8; border-color: #7038f8; }
+.type-tenebres { background: #909090; border-color: #606060; }
+.type-fee      { background: #f8c0e0; border-color: #ee99ac; }
+
+/* Mode sombre */
+body.dark-mode .type-normal   { background: #4a4a40; border-color: #6a6a58; }
+body.dark-mode .type-combat   { background: #6a2810; border-color: #c03028; }
+body.dark-mode .type-vol      { background: #3a3068; border-color: #6858d0; }
+body.dark-mode .type-poison   { background: #502050; border-color: #9040a0; }
+body.dark-mode .type-sol      { background: #5a4010; border-color: #b8860b; }
+body.dark-mode .type-roche    { background: #4a4010; border-color: #908010; }
+body.dark-mode .type-insecte  { background: #304010; border-color: #688010; }
+body.dark-mode .type-spectre  { background: #302048; border-color: #503870; }
+body.dark-mode .type-acier    { background: #303050; border-color: #606080; }
+body.dark-mode .type-feu      { background: #6a2800; border-color: #c06010; }
+body.dark-mode .type-eau      { background: #102858; border-color: #2858c0; }
+body.dark-mode .type-plante   { background: #184818; border-color: #409030; }
+body.dark-mode .type-electrik { background: #585000; border-color: #c0a000; }
+body.dark-mode .type-psy      { background: #601828; border-color: #c03060; }
+body.dark-mode .type-glace    { background: #205058; border-color: #40a0a8; }
+body.dark-mode .type-dragon   { background: #201878; border-color: #5020c0; }
+body.dark-mode .type-tenebres { background: #302018; border-color: #503828; }
+body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
+
+.type-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 6px;
+}
+
+/* TOOLTIP PROCHAINEMENT */
+.coming-soon-tooltip {
+  position: absolute;
+  background: #2a2a2a;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 9999;
+  white-space: nowrap;
+}
+.coming-soon-tooltip.visible {
+  opacity: 1;
+}
+
+/* FOOTER */
 .home-footer {
-  margin: 50px 0;
-  font-size: 1.1rem;
-  color: #4a4a4a;
+  text-align: center;
+  margin: 10px 0 40px 0;
+  color: var(--text-secondaire);
+  font-size: 1rem;
 }
 
 .discord-btn {
@@ -131,21 +301,24 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 25px;
+  font-weight: 500;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .discord-btn:hover {
   background-color: #4752c4;
+  transform: translateY(-2px);
 }
 
-/* --- RESPONSIVE MOBILE --- */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .card-btn img { 
-    max-width: 80px;
-    max-height: 80px; 
-  }
-  .grid-saison {
-    gap: 15px;
+  .hero-title { font-size: 2.5rem; }
+  .home-card img { width: 60px; height: 60px; }
+  .type-card { width: 80px; font-size: 12px; }
+  .type-card img { width: 36px; height: 36px; }
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
