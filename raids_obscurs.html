@@ -13,7 +13,7 @@
   </style>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="images/icon-512.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
 </head>
 <body>
 
@@ -21,15 +21,15 @@
 
 <div class="pokemon-app">
   <h1>Raids Obscurs du moment</h1>
-  <p style="font-style: italic; font-weight: 600; margin: 10px 0 15px 10px; color: var(--text-secondaire); font-size: 20px;">
+  <p class="raids-date">
     Depuis le mercredi 3 juin 2026, 6h - Jusqu'au mardi 30 juin 2026, 22h
   </p>
-  <p style="font-style: italic; margin: 0 0 20px 10px; color: #a0aec0; font-size: 14px;">
-    <span style="font-style: normal; margin-right: 5px;">💡</span>Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! ✨
+  <p class="astuce-shiny">
+    <span style="font-style: normal;">💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! ✨</span>
   </p>
 
   <h1 class="category-title tier-1">Raids Obscurs 1 Étoile</h1>
-  <div class="pokemon-grid">
+  <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card">
       <div class="image-container">
@@ -93,7 +93,7 @@
           <p class="stat-range">PC du 100% : <span class="boost-value">982</span></p>
           <p class="stat-100">Boost Météo : <span class="boost-value">1 228</span></p>
           <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Quelques Nuages</span><img src="images/Quelques_Nuages.webp" alt="Quelques Nuages" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@
   </div>
 
   <h1 class="category-title tier-3">Raids Obscurs 3 Étoiles</h1>
-  <div class="pokemon-grid">
+  <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card">
       <div class="image-container">
@@ -201,7 +201,7 @@
   </div>
 
   <h1 class="category-title tier-legendary">Raids Obscurs Légendaires</h1>
-  <div class="pokemon-grid">
+  <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card">
       <div class="image-container">
@@ -225,7 +225,7 @@
           </div>
         </div>
         <hr class="separator">
-        <div class="raid-team-size">👥 <span class="team-text">4 à 5 dresseurs</span></div>
+        <div class="raid-team-size"><span class="team-text">4 à 5 dresseurs</span></div>
       </div>
     </div>
 

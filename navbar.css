@@ -312,7 +312,7 @@ body {
     padding: 4px 10px;
     cursor: pointer;
     position: fixed !important;
-    right: 75px !important;
+    right: 62px !important;
     top: 13px !important;
     z-index: 10000 !important;
     transition: background-color 0.2s, border-color 0.2s;
