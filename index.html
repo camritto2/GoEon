@@ -28,6 +28,32 @@
     <p class="hero-subtitle">Toutes les ressources de Pokémon Go pour les joueurs francophones !</p>
   </header>
 
+  <!-- TUTO PWA -->
+  <div class="pwa-banner" id="pwa-banner">
+    <button class="pwa-toggle" onclick="togglePwa()">
+      Installer GoEon sur votre téléphone
+      <span class="pwa-arrow" id="pwa-arrow">▾</span>
+    </button>
+    <div class="pwa-content" id="pwa-content">
+      <div class="pwa-tabs">
+        <button class="pwa-tab" onclick="switchTab('android', this)">Android</button>
+        <button class="pwa-tab" onclick="switchTab('ios', this)">iOS</button>
+      </div>
+      <ul class="pwa-steps" id="pwa-android" style="display:none">
+        <li>Ouvrez GoEon dans Chrome</li>
+        <li>Appuyez sur les 3 points en haut à droite</li>
+        <li>Sélectionnez "Ajouter à l'écran d'accueil"</li>
+        <li>Confirmez en appuyant sur "Ajouter"</li>
+      </ul>
+      <ul class="pwa-steps" id="pwa-ios" style="display:none">
+        <li>Ouvrez GoEon dans Safari</li>
+        <li>Appuyez sur le bouton Partager (rectangle avec une flèche)</li>
+        <li>Faites défiler et sélectionnez "Sur l'écran d'accueil"</li>
+        <li>Confirmez en appuyant sur "Ajouter"</li>
+      </ul>
+    </div>
+  </div>
+
   <!-- SECTION SAISON EN COURS -->
   <section class="home-section">
     <h2 class="section-title">Saison en Cours</h2>
@@ -213,6 +239,20 @@
 
 <script src="script.js?v=2"></script>
 <script>
+  function switchTab(os, btn) {
+    document.getElementById('pwa-android').style.display = os === 'android' ? 'block' : 'none';
+    document.getElementById('pwa-ios').style.display = os === 'ios' ? 'block' : 'none';
+    document.querySelectorAll('.pwa-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  function togglePwa() {
+    const content = document.getElementById('pwa-content');
+    const arrow = document.getElementById('pwa-arrow');
+    content.classList.toggle('open');
+    arrow.textContent = content.classList.contains('open') ? '▴' : '▾';
+  }
+
   function showComingSoon(e) {
     e.preventDefault();
     const tooltip = document.getElementById('coming-soon-tooltip');

@@ -18,6 +18,9 @@
       height: 16px;
       object-fit: contain;
     }
+    body.dark-mode .proba-icon {
+      filter: invert(1);
+    }
     .pokemon-img[data-shiny] {
       cursor: pointer;
       transition: transform 0.2s ease;
@@ -41,7 +44,7 @@
     Un Pokémon en <span style="color: #16a34a; font-weight: bold;">vert</span> est un bon Pokémon en Raids (PvE).<br>
     Les IV de ces Pokémon sont minimum 10-10-10.<br>
     <br>
-    La probabilité est indiquée par <img src="images/ProbaOeuf.webp" style="width:14px; vertical-align:middle;"> — plus il y en a, plus le Pokémon est <strong>rare</strong>.
+    La probabilité est indiquée par <img src="images/ProbaOeuf.webp" class="proba-icon" style="width:14px; vertical-align:middle;"> — plus il y en a, plus le Pokémon est <strong>rare</strong>.
   </div>
 
   <p class="astuce-shiny">
@@ -49,7 +52,7 @@
   </p>
 
   <h1 class="category-title tier-1">Œufs 2 km</h1>
-  <p class="oeufs-sous-titre">Obtenus aux Pokéstop</p>
+  <p class="section-sous-titre">Obtenus aux Pokéstop</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Ecrapince.png" data-shiny="images/EcrapinceS.png" alt="Écrapince" class="pokemon-img"></div>
@@ -82,7 +85,7 @@
   </div>
 
     <h1 class="category-title tier-1">Œufs 5 km</h1>
-  <p class="oeufs-sous-titre">Obtenus aux Pokéstop</p>
+  <p class="section-sous-titre">Obtenus aux Pokéstop</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Babimanta.png" data-shiny="images/BabimantaS.png" alt="Babimanta" class="pokemon-img"></div>
@@ -115,7 +118,7 @@
   </div>
 
     <h1 class="category-title tier-1">Œufs 10 km</h1>
-  <p class="oeufs-sous-titre">Obtenus aux Pokéstop</p>
+  <p class="section-sous-titre">Obtenus aux Pokéstop</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Absol.png" data-shiny="images/AbsolS.png" alt="Absol" class="pokemon-img"></div>
@@ -148,7 +151,7 @@
   </div>
 
     <h1 class="category-title tier-1">Œufs 7 km — Cadeaux</h1>
-  <p class="oeufs-sous-titre">Obtenus en ouvrant les cadeaux de ses amis</p>
+  <p class="section-sous-titre">Obtenus en ouvrant les cadeaux de ses amis</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/CorayonG.png" data-shiny="images/CorayonGS.png" alt="Corayon de Galar" class="pokemon-img"></div>
@@ -181,7 +184,7 @@
   </div>
 
     <h1 class="category-title tier-1">Œufs 12 km — Team Go Rocket</h1>
-  <p class="oeufs-sous-titre">Obtenus en battant les chefs de la Team Go Rocket</p>
+  <p class="section-sous-titre">Obtenus en battant les chefs de la Team Go Rocket</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container"><div class="badges"></div><img src="images/Gribouraigne.png" alt="Gribouraigne" class="pokemon-img"></div>
@@ -210,7 +213,7 @@
   </div>
 
     <h1 class="category-title tier-1">Œufs 5 km — Récompense Semaine</h1>
-  <p class="oeufs-sous-titre">Obtenus le lundi matin après avoir marché 25 km la semaine précédente</p>
+  <p class="section-sous-titre">Obtenus le lundi matin après avoir marché 25 km la semaine précédente</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Debugant.png" data-shiny="images/DebugantS.png" alt="Debugant" class="pokemon-img"></div>
@@ -235,7 +238,7 @@
   </div>
 
     <h1 class="category-title tier-1">Œufs 10 km — Récompense Semaine</h1>
-  <p class="oeufs-sous-titre">Obtenus le lundi matin après avoir marché 50 km la semaine précédente</p>
+  <p class="section-sous-titre">Obtenus le lundi matin après avoir marché 50 km la semaine précédente</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/Draby.png" data-shiny="images/DrabyS.png" alt="Draby" class="pokemon-img"></div>
@@ -252,7 +255,7 @@
   </div>
 
     <h1 class="category-title tier-1">Œufs 7 km — Routes</h1>
-  <p class="oeufs-sous-titre">Donnés par Matéo à la fin d'une route</p>
+  <p class="section-sous-titre">Donnés par Matéo à la fin d'une route</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container"><div class="badges"><span class="emoji-shiny" title="Shiny disponible">✨</span></div><img src="images/BargantuaBlanc.png" data-shiny="images/BargantuaBlancS.png" alt="Bargantua Blanc" class="pokemon-img"></div>
@@ -277,7 +280,7 @@
   </div>
 
     <h1 class="category-title tier-1">Œufs 1 km — Quotidiens</h1>
-  <p class="oeufs-sous-titre">Obtenus chaque jour à 0h (si l'œuf de la veille a bien éclos) — Probabilité identique pour tous</p>
+  <p class="section-sous-titre">Obtenus chaque jour à 0h (si l'œuf de la veille a bien éclos) — Probabilité identique pour tous</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card">
       <div class="image-container">

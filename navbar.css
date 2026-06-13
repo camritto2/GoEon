@@ -99,7 +99,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
-  padding: 6px 8px;
+  padding: 2px 8px;
   border-radius: 4px;
   transition: background-color 0.2s;
 }
@@ -281,10 +281,10 @@ body {
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
     background-color: var(--bg-navbar);
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
   }
   
@@ -299,7 +299,17 @@ body {
 
   /* --- BOUTON SIGNALER ERREUR MOBILE --- */
   #btn-signaler-mobile { display: none !important; }
-  #li-signaler-mobile { display: block; border-top: 1px solid var(--hr-separator); margin-top: 8px; padding-top: 8px; }
+  #li-signaler-mobile { 
+    display: block;
+    border-bottom: 1px solid var(--hr-separator);
+    margin-bottom: 0;
+    padding-bottom: 4px;
+  }
+
+  .signaler-link {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+  }
 
   /* --- VRAI BOUTON THÈME MOBILE --- */
   #theme-toggle-mobile {

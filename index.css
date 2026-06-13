@@ -376,3 +376,92 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   }
 
 }
+
+/* ==========================================
+   TUTO PWA
+   ========================================== */
+
+.pwa-banner {
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pwa-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-principal);
+  text-align: left;
+}
+
+.pwa-arrow {
+  font-size: 12px;
+  color: var(--text-secondaire);
+}
+
+.pwa-content {
+  display: none;
+  padding: 0 12px 5px 12px;
+  border-top: 1px solid var(--border-carte);
+}
+
+.pwa-content.open {
+  display: block;
+}
+
+.pwa-tabs {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0 8px 0;
+  justify-content: center;
+}
+
+.pwa-tab {
+  background: none;
+  border: 1px solid var(--border-carte);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pwa-tab.active {
+  background: #29b6f6;
+  border-color: #29b6f6;
+  color: #fff;
+}
+
+.pwa-steps {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  color: var(--text-secondaire);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.pwa-steps li::before {
+  content: '▸ ';
+  color: #29b6f6;
+}
+
+@media (min-width: 769px) {
+  .pwa-banner { display: none; }
+}

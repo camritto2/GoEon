@@ -1,0 +1,572 @@
+/* ==========================================
+   TOP.CSS — PAGES CLASSEMENTS PAR TYPE
+   ========================================== */
+
+/* Conteneur principal */
+.ranking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 65px 16px 0 16px;
+  box-sizing: border-box;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Grille des cartes — mobile-first : 2 colonnes */
+.ranking-container .pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Chaque cellule de grille */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* La carte */
+.fandom-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  background-color: var(--bg-carte);
+  text-align: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-carte);
+  color: var(--text-principal);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+/* Barres séparatrices */
+.fandom-card .card-image,
+.fandom-card .card-name,
+.fandom-card .card-attacks,
+.fandom-card .card-build {
+  border-bottom: none !important;
+  position: relative;
+}
+.fandom-card .card-rank {
+  border-bottom: none !important;
+}
+.fandom-card .card-button {
+  border-bottom: none !important;
+  position: relative;
+}
+.fandom-card .card-image::after,
+.fandom-card .card-name::after,
+.fandom-card .card-build.open::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--hr-separator);
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.fandom-card .card-button:has(~ .card-note:not(:empty))::after {
+  display: none;
+}
+
+/* Méga : fond rosé */
+.fandom-card.mega-card {
+  border-color: #f9a8d4;
+  background: linear-gradient(to bottom, #fff0f6, var(--bg-carte));
+}
+.fandom-card.mega-card .card-rank {
+  background-color: #fce7f3 !important;
+  color: #e53e3e !important;
+}
+
+/* Dark mode Méga */
+body.dark-mode .fandom-card.mega-card {
+  border-color: #742a2a;
+  background: linear-gradient(to bottom, #2d1515, var(--bg-carte));
+}
+body.dark-mode .fandom-card.mega-card .card-rank {
+  background-color: #451a1a !important;
+  color: #ff8787 !important;
+}
+
+/* Zone rang */
+.card-rank {
+  font-size: 1.4em;
+  font-weight: bold;
+  background-color: var(--bg-image-container);
+  color: var(--text-principal);
+  padding: 2px 6px 3px 6px;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--hr-separator);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Zone image */
+.card-image {
+  padding: 8px;
+  border-bottom: 1px solid var(--hr-separator);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* Zone nom */
+.card-name {
+  padding: 3px 8px;
+  border-bottom: 1px solid var(--hr-separator);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  line-height: 1.3;
+  min-height: 42px;
+}
+
+.card-name .pokemon-form {
+  font-size: 0.65em;
+  color: var(--text-secondaire);
+  font-style: italic;
+  margin-top: -2px;
+}
+
+/* Badges cachés */
+.card-badges {
+  display: none;
+}
+
+/* Zone bouton */
+.card-button {
+  padding: 2px 8px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-bottom: none;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card-button:has(button + button) button {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Zone attaques */
+.card-attacks {
+  padding: 2px 8px 0 8px;
+  border-bottom: none;
+  line-height: 1.5;
+  flex: 1;
+  font-size: 11px;
+}
+
+.card-attacks strong {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+/* Zone build alternatif */
+.card-build {
+  display: none;
+  padding: 2px 8px 6px 8px;
+  border-bottom: none;
+  text-align: center;
+  font-size: 11px;
+  margin-top: -5px;
+}
+.card-build.open {
+  display: block;
+}
+
+.card-build hr {
+  border: 0;
+  border-top: 1px dashed var(--border-carte);
+  margin: 5px 0 3px 0;
+  display: block;
+}
+
+.card-build:has(+ .card-note:not(:empty)) {
+  border-bottom: 1px solid var(--hr-separator);
+}
+
+.card-build:has(+ .card-note:empty) {
+  border-bottom: none;
+}
+
+.card-button:has(~ .card-note:not(:empty)):not(:has(+ .card-build.open)):not(:has(~ #shif-note)) {
+  border-bottom: 1px solid var(--hr-separator);
+  padding-bottom: 8px;
+}
+
+.card-button {
+  padding-bottom: 8px;
+}
+
+.card-note:empty {
+  min-height: 6px;
+  padding: 0 16px;
+}
+
+.card-note {
+  font-size: 13px;
+  color: var(--text-muet);
+  padding: 4px 16px 6px 16px;
+  min-height: 20px;
+  line-height: 1.4;
+  text-align: left;
+  transition: color 0.3s;
+}
+
+#shif-note, #courr-note {
+  font-size: 8px;
+}
+
+/* Image carte */
+.card-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Noms des Pokémon selon catégorie */
+.pokemon-name-legendary {
+  font-size: 1em;
+  color: blue;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.pokemon-name-normal {
+  font-size: 1em;
+  color: var(--text-principal);
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.pokemon-name-mega {
+  font-size: 1em;
+  color: red;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.pokemon-name-rare {
+  font-size: 1em;
+  color: #06b6d4;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/* Attaques */
+.attack-block {
+  line-height: 1.8;
+  margin-bottom: 2px;
+}
+
+.attack-label {
+  text-decoration: none;
+}
+
+.attack-cost-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.attack-cost-title {
+  font-weight: normal;
+  font-style: italic;
+  color: var(--text-principal);
+}
+
+.attack-cost-value {
+  font-size: 10px;
+  color: var(--text-principal);
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.4;
+  max-width: 100%;
+}
+
+/* Legacy */
+.legacy-indicator {
+  font-size: 0.75em;
+  font-weight: bold;
+  vertical-align: super;
+  margin-left: 2px;
+  color: var(--text-muet);
+  line-height: 0;
+}
+
+/* Icône type dans bouton */
+.type-icon-btn {
+  height: 12px;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Badge Obscur */
+.badge-obscur {
+  background: #555555;
+  color: #ffffff;
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin: 2px 0 0 0;
+}
+
+.badge-obscur-container {
+  margin: 4px 0 10px 0;
+}
+
+/* Légendes intro */
+.legend-blue { color: blue; font-weight: bold; }
+.legend-green { color: #10b981; font-weight: bold; }
+.legend-red { color: red; font-weight: bold; }
+.legend-cyan { color: #06b6d4; font-weight: bold; }
+.bullet-green { color: #10b981; }
+.bullet { display: inline-block; margin-right: 10px; font-weight: bold; }
+
+/* Titre Top 25 */
+.top-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-principal);
+}
+
+/* Forme Pokémon */
+.pokemon-form {
+  font-size: 0.75em;
+  color: var(--text-secondaire);
+}
+
+/* Note de bas */
+.footnote {
+  font-size: 11px;
+  color: var(--text-muet);
+  margin-top: 12px;
+  border-top: 1px dashed var(--border-carte);
+  padding-top: 8px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Note de stratégie */
+.note {
+  font-size: 13px;
+  color: var(--text-muet);
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding-left: 10px;
+  line-height: 1.4;
+  transition: color 0.3s;
+}
+
+/* Ligne boost météo */
+.weather-boost-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -20px 0 15px 10px;
+  font-size: 14px;
+  color: var(--text-secondaire);
+}
+.weather-boost-line .boost-label {
+  font-weight: 600;
+  color: var(--text-principal);
+}
+.weather-boost-line .boost-value {
+  font-weight: 700;
+  color: #f6ad55;
+}
+.weather-boost-line .boost-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Badge hémisphère */
+.badge-hemisphere {
+  margin: 0;
+  font-size: 0.75em;
+  color: var(--text-principal);
+  font-style: italic;
+}
+
+/* Section info bas de page */
+.section-divider {
+  border: 0;
+  border-top: 1px solid var(--border-carte);
+  margin: 40px 0;
+}
+
+.more-info-container {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.more-info-title {
+  color: var(--text-principal);
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.more-info-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.more-info-link:hover {
+  background-color: #6b46c1;
+}
+
+/* ==========================================
+   BOUTONS CONFIGURATIONS
+   ========================================== */
+
+.btn-fee, .btn-psy, .btn-combat, .btn-dragon, .btn-insecte, .btn-sol,
+.btn-poison, .btn-tenebres, .btn-electrik, .btn-roche, .btn-feu,
+.btn-acier, .btn-spectre, .btn-vol, .btn-plante, .btn-eau, .btn-glace, .btn-normal {
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 7px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border: 2px solid transparent;
+  transition: background-color 0.2s, border-color 0.2s;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-fee { background: #fce7f3; border-color: #fbcfe8; color: #9d174d; } .btn-fee:hover { background: #fbcfe8; }
+.btn-psy { background: #f5eef8; border-color: #e8daef; color: #8e44ad; } .btn-psy:hover { background: #e8daef; }
+.btn-combat { background: #fdf3e7; border-color: #f5cba7; color: #d35400; } .btn-combat:hover { background: #f5cba7; }
+.btn-acier { background: #f4f4f5; border-color: #e4e4e7; color: #71717a; } .btn-acier:hover { background: #e4e4e7; }
+.btn-spectre { background: #f5f0fb; border-color: #e8daf7; color: #705898; } .btn-spectre:hover { background: #e8daf7; }
+.btn-vol { background: #eef2ff; border-color: #d0d8fa; color: #6890f0; } .btn-vol:hover { background: #d0d8fa; }
+.btn-plante { background: #f0faf0; border-color: #c8eabf; color: #5d9e47; } .btn-plante:hover { background: #c8eabf; }
+.btn-eau { background: #e0f2fe; border-color: #bae6fd; color: #0284c7; } .btn-eau:hover { background: #bae6fd; }
+.btn-dragon { background: #f0f9ff; border-color: #bae6fd; color: #0284c7; } .btn-dragon:hover { background: #bae6fd; }
+.btn-insecte { background: #f7fede; border-color: #e6f7a1; color: #808c11; } .btn-insecte:hover { background: #e6f7a1; }
+.btn-sol { background: #fef9e7; border-color: #f9e79f; color: #d4ac0d; } .btn-sol:hover { background: #f9e79f; }
+.btn-poison { background: #fdf2fd; border-color: #f9dbf9; color: #a040a0; } .btn-poison:hover { background: #f9dbf9; }
+.btn-tenebres { background: #f4f1ef; border-color: #e1dad5; color: #705848; } .btn-tenebres:hover { background: #e1dad5; }
+.btn-electrik { background: #fef9e7; border-color: #f9e79f; color: #d4ac0d; } .btn-electrik:hover { background: #f9e79f; }
+.btn-roche { background: #fdfbf2; border-color: #f5f0cd; color: #b8a038; } .btn-roche:hover { background: #f5f0cd; }
+.btn-feu { background: #fff3eb; border-color: #fcd7bf; color: #e65c00; } .btn-feu:hover { background: #fcd7bf; }
+.btn-glace { background: #e8f8ff; border-color: #b8e8f8; color: #0080a0; } .btn-glace:hover { background: #b8e8f8; }
+.btn-normal { background: #f8f8f8; border-color: #e0e0e0; color: #606060; } .btn-normal:hover { background: #e0e0e0; }
+
+/* ==========================================
+   CORRECTIONS DARK MODE
+   ========================================== */
+
+body.dark-mode .fandom-table span[style*="color: #2d3748"],
+body.dark-mode .fandom-table span[style*="color:#2d3748"] {
+  color: #cbd5e1 !important;
+}
+body.dark-mode .fandom-table td { color: #cbd5e1 !important; }
+body.dark-mode .fandom-table a { color: #cbd5e1 !important; text-decoration: none; }
+body.dark-mode .intro-rules span[style*="color:#333"],
+body.dark-mode .intro-rules span[style*="color: #333"] { color: #cbd5e1 !important; }
+body.dark-mode h3[style*="color: #2d3748"] { color: #cbd5e1 !important; }
+body.dark-mode .fandom-table span[style*="color: blue"],
+body.dark-mode .fandom-table span[style*="color:blue"] { color: #60a5fa !important; }
+body.dark-mode .intro-rules span[style*="color:blue"] { color: #60a5fa !important; }
+body.dark-mode .intro-rules span[style*="color:#10b981"] { color: #34d399 !important; }
+body.dark-mode .fandom-table span[style*="color: #10b981"],
+body.dark-mode .fandom-table span[style*="color:#10b981"] { color: #34d399 !important; }
+
+.card-button:empty,
+.card-note:empty,
+.card-build:empty {
+  display: none;
+  padding: 0;
+  border: none;
+}
+
+.attack-cost-value {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+/* ==========================================
+   DESKTOP — min-width: 769px
+   ========================================== */
+
+@media (min-width: 769px) {
+  .ranking-container {
+    padding: 65px 20px 0 20px;
+  }
+
+  .ranking-container .pokemon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .card-rank { font-size: 3em; padding: 10px; min-height: 70px; }
+  .card-image { padding: 16px; min-height: 140px; }
+  .card-name { padding: 5px 16px; gap: 6px; line-height: 1.4; min-height: 94px; }
+  .card-button { flex-direction: row; padding: 4px 16px 10px 16px; min-height: 32px; gap: 6px; }
+  .card-attacks { padding: 10px 16px 4px 16px; line-height: 1.8; font-size: 18px; }
+  .card-build { padding: 8px 16px 10px 16px; font-size: 18px; }
+  .card-img { height: 150px; }
+  .pokemon-form { font-size: 1.1em; }
+  .card-name .pokemon-form { font-size: 1.3em; margin-top: -12px; }
+  .badge-obscur { padding: 4px 12px; font-size: 11px; letter-spacing: 0.5px; gap: 4px; }
+  .attack-cost-value { font-size: 16px; }
+  #shif-note, #courr-note { font-size: 13px; }
+
+  .pokemon-name-legendary,
+  .pokemon-name-normal,
+  .pokemon-name-mega,
+  .pokemon-name-rare { font-size: 2em; margin-bottom: 4px; }
+
+  .btn-fee, .btn-psy, .btn-combat, .btn-dragon, .btn-insecte, .btn-sol,
+  .btn-poison, .btn-tenebres, .btn-electrik, .btn-roche, .btn-feu,
+  .btn-acier, .btn-spectre, .btn-vol, .btn-plante, .btn-eau, .btn-glace, .btn-normal {
+    padding: 6px 14px;
+    font-size: 13px;
+    gap: 6px;
+  }
+}
