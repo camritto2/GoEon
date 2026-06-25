@@ -262,8 +262,8 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">5</div>
-                <div class="card-image"><img src="images/Brasegali.png" alt="Braségali" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Braségali</span></strong><span class="badge-obscur">Obscur Disponible</span></div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Brasegali.png" alt="Braségali" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Braségali</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Riposte</strong><br>
@@ -357,8 +357,8 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">7</div>
-                <div class="card-image"><img src="images/Betochef.png" alt="Bétochef" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Bétochef</span></strong><span class="badge-obscur">Obscur Disponible</span></div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Betochef.png" alt="Bétochef" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Bétochef</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Forte-Paume</strong><br>
@@ -401,11 +401,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Archéduc<br>de Hisui</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><span id="arch-fast-atk"><strong>Coupe Psycho</strong> <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="arch-imm">Coupe Psycho</strong> <span id="arch-imm-icon"><img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"></span><span id="arch-imm-alt" style="display:none"> → <strong>Feuille Magik</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Aurasphère</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-arch-btn" class="btn-plante" onclick="toggleBuild('arch-details', 'toggle-arch-btn', '#5d9e47', '#f0faf0', '#5d9e47', '#c8eabf', '#3d7a2e', 'arch-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Coupe Psycho</span> ➔ <strong>Feuille Magik</strong>', '<strong>Coupe Psycho</strong> <img src=\'images/psy.webp\' alt=\'Type Psy\' class=\'type-icon-btn\'>')">
+                    <button id="toggle-arch-btn" class="btn-plante" onclick="toggleBuild('arch-details', 'toggle-arch-btn', '#5d9e47', '#f0faf0', '#5d9e47', '#c8eabf', '#3d7a2e'); toggleAltImm('arch-imm', 'arch-imm-alt', 'arch-imm-icon')">
                         Également Top Plante <img src="images/plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
                     </button>
                 </div>
@@ -425,8 +425,8 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">10</div>
-                <div class="card-image"><img src="images/Mackogneur.png" alt="Mackogneur" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Mackogneur</span></strong><span class="badge-obscur">Obscur Disponible</span></div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Mackogneur.png" alt="Mackogneur" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Mackogneur</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Riposte</strong><br>
@@ -442,8 +442,8 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">11</div>
-                <div class="card-image"><img src="images/Hariyama.png" alt="Hariyama" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Hariyama</span></strong><span class="badge-obscur">Obscur Disponible</span></div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Hariyama.png" alt="Hariyama" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Hariyama</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Forte-Paume</strong><br>
@@ -667,8 +667,8 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">21</div>
-                <div class="card-image"><img src="images/Courrousinge.png" alt="Courrousinge" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Courrousinge</span></strong><span class="badge-obscur">Obscur Disponible</span></div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Courrousinge.png" alt="Courrousinge" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Courrousinge</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Riposte</strong><br>
@@ -695,8 +695,8 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">22</div>
-                <div class="card-image"><img src="images/Palarticho.png" alt="Palarticho" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Palarticho</span></strong><span class="badge-obscur">Obscur Disponible</span></div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Palarticho.png" alt="Palarticho" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Palarticho</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Riposte</strong><br>
@@ -712,8 +712,8 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">23</div>
-                <div class="card-image"><img src="images/Roitiflam.png" alt="Roitiflam" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Roitiflam</span></strong><span class="badge-obscur">Obscur Disponible</span></div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Roitiflam.png" alt="Roitiflam" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Roitiflam</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Balayage</strong><br>
@@ -739,8 +739,8 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">24</div>
-                <div class="card-image"><img src="images/Coatox.png" alt="Coatox" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Coatox</span></strong><span class="badge-obscur">Obscur Disponible</span></div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Coatox.png" alt="Coatox" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Coatox</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><span id="coat-fast-atk"><strong>Riposte</strong></span><br>
@@ -784,7 +784,7 @@
     <hr class="section-divider">
 
     <div class="more-info-container">
-        <span class="more-info-title">Plus d'informations : <a href="https://db.pokemongohub.net/pokemon-list/best-per-type/fighting" target="_blank" class="more-info-link">Cliquez ici</a></span>
+        <span class="more-info-title">Plus d'informations : <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/fighting" target="_blank" class="more-info-link">Cliquez ici</a></span>
     </div>
     </div>
 
@@ -871,20 +871,23 @@
     }
   }
 
-  function toggleAltImm(immId, altId) {
+  function toggleAltImm(immId, altId, iconId = null) {
     const imm = document.getElementById(immId);
     const alt = document.getElementById(altId);
+    const icon = iconId ? document.getElementById(iconId) : null;
     const isOpen = alt.style.display !== 'none';
     if (!isOpen) {
       imm.style.textDecoration = 'line-through';
       imm.style.color = '#a0aec0';
       imm.style.fontWeight = 'normal';
       alt.style.display = 'inline';
+      if (icon) icon.style.display = 'none';
     } else {
       imm.style.textDecoration = 'none';
       imm.style.color = '';
       imm.style.fontWeight = 'bold';
       alt.style.display = 'none';
+      if (icon) icon.style.display = '';
     }
   }
 </script>

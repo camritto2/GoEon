@@ -58,7 +58,9 @@
 }
 .fandom-card .card-image::after,
 .fandom-card .card-name::after,
-.fandom-card .card-build.open::after {
+.fandom-card .card-build.open:has(+ .card-note:not(:empty))::after,
+.fandom-card .card-button:has(~ .card-note:not(:empty)):not(:has(+ .card-build.open))::after,
+.fandom-card .card-attacks:has(~ .card-note:not(:empty)):has(~ .card-button:empty):has(~ .card-build:empty)::after {
   content: '';
   display: block;
   height: 1px;
@@ -70,7 +72,7 @@
   left: 16px;
 }
 
-.fandom-card .card-button:has(~ .card-note:not(:empty))::after {
+.fandom-card .card-button:has(~ .card-note:not(:empty)):has(+ .card-build.open)::after {
   display: none;
 }
 
@@ -92,6 +94,12 @@ body.dark-mode .fandom-card.mega-card {
 body.dark-mode .fandom-card.mega-card .card-rank {
   background-color: #451a1a !important;
   color: #ff8787 !important;
+}
+body.dark-mode .pokemon-name-legendary {
+  color: #3b82f6;
+}
+body.dark-mode .pokemon-name-mega {
+  color: #ff8787;
 }
 
 /* Zone rang */
@@ -121,7 +129,7 @@ body.dark-mode .fandom-card.mega-card .card-rank {
 
 /* Zone nom */
 .card-name {
-  padding: 3px 8px;
+  padding: 1px 8px 0 8px;
   border-bottom: 1px solid var(--hr-separator);
   display: flex;
   flex-direction: column;
@@ -140,8 +148,19 @@ body.dark-mode .fandom-card.mega-card .card-rank {
 }
 
 /* Badges cachés */
-.card-badges {
-  display: none;
+.card-image .card-badges {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  display: flex;
+  gap: 4px;
+  z-index: 1;
+}
+
+.card-image .card-badges img {
+  width: 15px;
+  height: 15px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
 /* Zone bouton */
@@ -207,7 +226,6 @@ body.dark-mode .fandom-card.mega-card .card-rank {
 }
 
 .card-button:has(~ .card-note:not(:empty)):not(:has(+ .card-build.open)):not(:has(~ #shif-note)) {
-  border-bottom: 1px solid var(--hr-separator);
   padding-bottom: 8px;
 }
 
@@ -230,8 +248,32 @@ body.dark-mode .fandom-card.mega-card .card-rank {
   transition: color 0.3s;
 }
 
-#shif-note, #courr-note {
+.card-note:not(.hidden-note) {
   font-size: 8px;
+}
+
+.build-footnote {
+  display: none;
+  font-size: 8px;
+  color: var(--text-muet);
+  text-align: left;
+  margin-top: -4px;
+  padding: 0 16px 6px 16px;
+  line-height: 1.4;
+}
+
+.build-note {
+  font-size: 8px;
+  color: var(--text-muet);
+  text-align: left;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--hr-separator);
+  line-height: 1.4;
+}
+
+#dialgao-details.open ~ #dialgaoL-note {
+  display: block;
 }
 
 /* Image carte */
@@ -347,6 +389,9 @@ body.dark-mode .fandom-card.mega-card .card-rank {
 .legend-green { color: #10b981; font-weight: bold; }
 .legend-red { color: red; font-weight: bold; }
 .legend-cyan { color: #06b6d4; font-weight: bold; }
+
+body.dark-mode .legend-blue { color: #3b82f6; }
+body.dark-mode .legend-red { color: #ff8787; }
 .bullet-green { color: #10b981; }
 .bullet { display: inline-block; margin-right: 10px; font-weight: bold; }
 
@@ -421,7 +466,7 @@ body.dark-mode .fandom-card.mega-card .card-rank {
 .section-divider {
   border: 0;
   border-top: 1px solid var(--border-carte);
-  margin: 40px 0;
+  margin: 10px 0;
 }
 
 .more-info-container {
@@ -509,8 +554,8 @@ body.dark-mode .intro-rules span[style*="color:#333"],
 body.dark-mode .intro-rules span[style*="color: #333"] { color: #cbd5e1 !important; }
 body.dark-mode h3[style*="color: #2d3748"] { color: #cbd5e1 !important; }
 body.dark-mode .fandom-table span[style*="color: blue"],
-body.dark-mode .fandom-table span[style*="color:blue"] { color: #60a5fa !important; }
-body.dark-mode .intro-rules span[style*="color:blue"] { color: #60a5fa !important; }
+body.dark-mode .fandom-table span[style*="color:blue"] { color: #3b82f6 !important; }
+body.dark-mode .intro-rules span[style*="color:blue"] { color: #3b82f6 !important; }
 body.dark-mode .intro-rules span[style*="color:#10b981"] { color: #34d399 !important; }
 body.dark-mode .fandom-table span[style*="color: #10b981"],
 body.dark-mode .fandom-table span[style*="color:#10b981"] { color: #34d399 !important; }
@@ -546,16 +591,21 @@ body.dark-mode .fandom-table span[style*="color:#10b981"] { color: #34d399 !impo
 
   .card-rank { font-size: 3em; padding: 10px; min-height: 70px; }
   .card-image { padding: 16px; min-height: 140px; }
-  .card-name { padding: 5px 16px; gap: 6px; line-height: 1.4; min-height: 94px; }
+  .card-name { padding: 4px 16px 0 16px; gap: 6px; line-height: 1.4; min-height: 94px; }
   .card-button { flex-direction: row; padding: 4px 16px 10px 16px; min-height: 32px; gap: 6px; }
   .card-attacks { padding: 10px 16px 4px 16px; line-height: 1.8; font-size: 18px; }
   .card-build { padding: 8px 16px 10px 16px; font-size: 18px; }
   .card-img { height: 150px; }
+  .type-icon-btn { height: 20px; }
+  .card-image .card-badges img { width: 22px; height: 22px; }
+  .more-info-title { font-size: 18px; }
   .pokemon-form { font-size: 1.1em; }
   .card-name .pokemon-form { font-size: 1.3em; margin-top: -12px; }
   .badge-obscur { padding: 4px 12px; font-size: 11px; letter-spacing: 0.5px; gap: 4px; }
   .attack-cost-value { font-size: 16px; }
-  #shif-note, #courr-note { font-size: 13px; }
+  .card-note:not(.hidden-note) { font-size: 13px; }
+  .build-footnote { font-size: 13px; }
+  .build-note { font-size: 13px; }
 
   .pokemon-name-legendary,
   .pokemon-name-normal,

@@ -224,7 +224,7 @@ body.dark-mode .violet-card { background-color: #1a0d2e; border-color: #3d1a60; 
 .type-electrik { background: #f8e060; border-color: #f8d030; }
 .type-psy      { background: #f8a0b8; border-color: #f85888; }
 .type-glace    { background: #b8e0e8; border-color: #98d8d8; }
-.type-dragon   { background: #c0a8f8; border-color: #7038f8; }
+.type-dragon   { background: #a8b8f8; border-color: #3050d8; }
 .type-tenebres { background: #909090; border-color: #606060; }
 .type-fee      { background: #f8c0e0; border-color: #ee99ac; }
 
@@ -244,7 +244,7 @@ body.dark-mode .type-plante   { background: #184818; border-color: #409030; }
 body.dark-mode .type-electrik { background: #585000; border-color: #c0a000; }
 body.dark-mode .type-psy      { background: #601828; border-color: #c03060; }
 body.dark-mode .type-glace    { background: #205058; border-color: #40a0a8; }
-body.dark-mode .type-dragon   { background: #201878; border-color: #5020c0; }
+body.dark-mode .type-dragon   { background: #182868; border-color: #3060d0; }
 body.dark-mode .type-tenebres { background: #302018; border-color: #503828; }
 body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
 

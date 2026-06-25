@@ -32,12 +32,222 @@ h1 {
 
 .category-title {
   font-size: 18px;
-  margin: 5px 0 4px 0;
+  margin: 5px 0 8px 0;
   font-weight: 700;
   text-align: center;
 }
 
 .tier-1, .tier-3, .tier-5, .tier-mega, .tier-legendary { color: #0984e3; }
+
+.category-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 11px;
+  font-style: italic;
+  color: var(--text-secondaire);
+  margin: 0 0 8px 0;
+}
+
+.category-link a {
+  color: #0984e3;
+  text-decoration: none;
+}
+
+.category-link a:hover {
+  text-decoration: underline;
+}
+
+.passe-go-intro {
+  font-size: 11px;
+  text-align: center;
+}
+
+.passe-go-pc {
+  margin: 2px 0 0 0;
+  font-size: 10px;
+  font-style: normal;
+  text-align: center;
+}
+
+.passe-go-deluxe-title {
+  font-size: 10px;
+  margin: 4px 0 2px 8px;
+}
+
+.passe-go-deluxe-item {
+  font-size: 10px;
+  margin: 1px 0 1px 16px;
+}
+
+.event-sous-titre {
+  font-size: 15px;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--text-principal);
+  text-align: center;
+  margin: 6px 0 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cartes Tâches d'Étude */
+.research-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  padding: 2px 0 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto 15px auto;
+}
+
+.research-task {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-principal);
+  text-align: center;
+  padding: 2px 8px;
+  margin: -2px -3px 0 -3px;
+  background-color: #e8f4fd;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid var(--hr-separator);
+}
+
+.passe-go-rank {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-principal);
+  text-align: center;
+  padding: 3px 8px;
+  background-color: #e8f4fd;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid var(--hr-separator);
+}
+
+body.dark-mode .passe-go-rank {
+  background-color: #1a2e3d;
+}
+
+.research-rewards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.research-reward-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 1px;
+  width: calc(100% / 6);
+  box-sizing: border-box;
+  border-right: 1px solid var(--hr-separator);
+}
+
+.research-reward-item:nth-of-type(6n),
+.research-reward-item:last-of-type {
+  border-right: none;
+}
+
+.research-rangee-sep {
+  width: 100%;
+  border: none;
+  border-top: 2px solid var(--border-carte);
+  margin: 0;
+}
+
+.research-image-container {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.research-image-container .pokemon-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.research-image-container .badges {
+  top: 2px;
+  left: -6px;
+}
+
+.research-image-container .emoji-shiny {
+  width: 10px;
+  height: 10px;
+}
+
+.research-reward-name {
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--text-principal);
+  text-align: center;
+  line-height: 1.2;
+  min-height: 2.8em;
+  padding-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--hr-separator);
+}
+
+.research-sep {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.research-reward-name.reward-good {
+  color: #16a34a;
+}
+
+.research-reward-form {
+  font-size: 8px;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--text-secondaire);
+  line-height: 1;
+}
+
+.research-cp {
+  font-size: 8px;
+  color: var(--text-secondaire);
+  text-align: center;
+  padding-top: 0;
+}
+
+.research-note {
+  font-size: 8px;
+  font-style: italic;
+  color: var(--text-secondaire);
+  text-align: center;
+  margin: 2px -3px 0 -3px;
+  padding: 2px 3px 0 3px;
+  border-top: 1px dashed var(--hr-separator);
+  box-sizing: border-box;
+}
 
 /* ==========================================
    CONTAINERS
@@ -125,27 +335,38 @@ h1 {
 
 .badges {
   position: absolute;
-  top: 4px;
-  left: 6px;
+  top: 6px;
+  left: 8px;
   display: flex;
   gap: 4px;
   font-size: 14px;
 }
 
+.astuce-shiny-icon {
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+}
+
 .emoji-shiny {
-  font-size: 14px;
+  width: 14px;
+  height: 14px;
   display: inline-block;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
   cursor: pointer;
 }
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+body.dark-mode .emoji-shiny {
+  filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+@keyframes twinkle {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.5; }
 }
 
 .emoji-shiny.shiny-active {
-  animation: spin 1.5s linear infinite;
+  animation: twinkle 1s ease-in-out infinite;
 }
 
 /* Zone Contenu */
@@ -285,6 +506,17 @@ h1 {
   color: var(--text-secondaire);
 }
 
+.pokemon-availability {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+  font-size: 9px;
+  font-style: italic;
+  color: var(--text-secondaire);
+}
+
 .team-text { font-weight: 600; }
 
 /* Cartes Raids standard (pokemon-grid sans grid-5/6) : 2 colonnes mobile */
@@ -354,13 +586,22 @@ h1 {
   font-size: 9px;
 }
 
+.research-helper {
+  text-align: center;
+  color: #a0aec0;
+  font-size: 9px;
+  margin: -4px 0 8px 0;
+}
+
 .section-sous-titre {
   font-style: italic;
   color: var(--text-secondaire);
   margin: -5px 0 8px 0;
   text-align: center;
   font-size: 11px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -369,8 +610,8 @@ h1 {
   max-width: 800px;
   margin: 0 auto 20px auto;
   background-color: var(--bg-carte);
-  border-left: 4px solid var(--text-secondaire);
-  padding: 10px 12px;
+  border-left: 4px solid #F4D995;
+  padding: 5px 12px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   font-size: 10px;
@@ -397,6 +638,13 @@ h1 {
   margin-left: 1px;
 }
 
+.research-saison-titre {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-secondaire);
+  margin: -10px 0 8px 0;
+}
+
 /* ==========================================
    DESKTOP — min-width: 769px
    ========================================== */
@@ -409,10 +657,38 @@ h1 {
   /* Titres */
   h1 { font-size: 42px; margin-bottom: 20px; }
   .category-title { font-size: 24px; margin: 20px 0 12px 0; }
+  .category-link { font-size: 15px; margin: -8px 0 12px 0; }
   .pokemon-subtitle { font-size: 13px; margin: -8px 0 4px 0; }
-  .raids-date { font-size: 20px; }
-  .astuce-shiny { font-size: 14px; }
-  .section-sous-titre { font-size: 16px; margin: -15px 0 15px 0; }
+  .raids-date { font-size: 20px; text-align: center; margin: 10px 0 15px 0; }
+  .astuce-shiny { font-size: 14px; text-align: center; margin: 0 0 8px 0; }
+  .research-helper { font-size: 16px; }
+  .research-list { max-width: 100%; }
+  .research-saison-titre { font-size: 18px; margin: -15px 0 16px 0; }
+  .research-rewards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+  .passe-go-rank { font-size: 16px; }
+  .passe-go-intro { font-size: 16px; }
+  .passe-go-pc { font-size: 14px; }
+  .pokemon-card:has(.passe-go-rank) .image-container { padding-bottom: 0; }
+  .pokemon-card:has(.passe-go-rank) .pokemon-name { margin-top: 0; margin-bottom: 0; }
+  .passe-go-deluxe-title { font-size: 15px; margin: 6px 0 4px 12px; text-align: center; }
+  .passe-go-deluxe-item { font-size: 15px; margin: 2px 0 2px 24px; text-align: center; }
+  .passe-go-deluxe-intro {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    background-color: var(--bg-carte);
+    border-left: 4px solid #F4D995;
+    padding: 5px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .section-sous-titre { font-size: 16px; margin: 0 0 15px 0; }
   .intro-rules { font-size: 15px; padding: 15px; margin: 0 auto 30px auto; line-height: 1.6; }
 
   /* Grilles */
@@ -459,8 +735,9 @@ h1 {
   /* Image */
   .image-container { height: 140px; padding: 5px 0 2px 0; }
   .pokemon-img { width: auto; height: 120px; max-width: 90%; }
-  .badges { top: 4px; left: 10px; font-size: 16px; }
-  .emoji-shiny { font-size: 22px; }
+  .badges { top: 8px; left: 10px; font-size: 16px; }
+  .emoji-shiny { width: 22px; height: 22px; }
+  .astuce-shiny-icon { width: 14px; height: 14px; }
 
   /* Contenu */
   .card-content { padding: 0 12px 8px 12px; }
@@ -474,7 +751,7 @@ h1 {
   .separator { margin: 5px 0; }
 
   /* Types */
-  .pokemon-types-container { gap: 15px; margin: 8px 0 6px 0; min-height: 35px; align-items: flex-start; }
+  .pokemon-types-container { gap: 12px; margin: 8px 0 6px 0; min-height: 35px; align-items: flex-start; }
   .type-block { gap: 4px; }
   .type-text { font-size: 11px; line-height: normal; }
   .type-icon { height: 24px; width: auto; }
@@ -492,5 +769,18 @@ h1 {
 
   /* Équipe */
   .raid-team-size { margin-top: 6px; font-size: 13px; }
+  .pokemon-availability { margin-top: 6px; font-size: 13px; }
+
+  .research-card { padding: 14px 0 0 0; }
+  .research-task { font-size: 16px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 0; margin-top: -14px; margin-left: 0; margin-right: 0; border-radius: 16px 16px 0 0; }
+  .research-reward-item { width: calc(100% / 6); align-items: center; box-sizing: border-box; }
+  .research-reward-name { font-size: 16px; align-self: stretch; }
+  .research-sep { display: none; }
+  .research-image-container { width: 100px; height: 100px; }
+  .research-image-container .emoji-shiny { width: 20px; height: 20px; }
+  .research-image-container .badges { top: 6px; left: -10px; }
+  .research-reward-form { font-size: 14px; }
+  .research-cp { font-size: 14px; padding-top: 0; padding-bottom: 2px !important; }
+  .research-note { font-size: 13px; }
 
 }

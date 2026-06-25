@@ -6,9 +6,9 @@
   <title>GoEon - Raids Obscurs</title>
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
   <style>
-    .pokemon-img[data-shiny] { cursor: pointer; transition: transform 0.2s ease; }
-    .pokemon-img[data-shiny]:hover { transform: scale(1.08); }
+    .pokemon-img[data-shiny] { cursor: pointer; }
     .pokemon-img.shiny-active { /* Aura supprimée */ }
   </style>
   <link rel="manifest" href="manifest.json">
@@ -25,19 +25,19 @@
     Depuis le mercredi 3 juin 2026, 6h - Jusqu'au mardi 30 juin 2026, 22h
   </p>
   <p class="astuce-shiny">
-    <span style="font-style: normal;">💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! ✨</span>
+    <span style="font-style: normal;">💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
 
   <h1 class="category-title tier-1">Raids Obscurs 1 Étoile</h1>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card">
+    <div class="pokemon-card pk-gringolem">
       <div class="image-container">
-        <div class="badges"><span class="emoji-shiny">✨</span></div>
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Gringolem.png" data-shiny="images/GringolemS.png" alt="Gringolem Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-good">Gringolem</h2>
+        <h2 class="pokemon-name">Gringolem</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Sol</span><img src="images/sol.webp" alt="Sol" class="type-icon"></div>
@@ -55,13 +55,13 @@
       </div>
     </div>
 
-    <div class="pokemon-card">
+    <div class="pokemon-card pk-hypotrempe">
       <div class="image-container">
-        <div class="badges"><span class="emoji-shiny">✨</span></div>
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Hypotrempe.png" data-shiny="images/HypotrempeS.png" alt="Hypotrempe Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Hypotrempe</h2>
+        <h2 class="pokemon-name">Hypotrempe</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Eau</span><img src="images/eau.webp" alt="Eau" class="type-icon"></div>
@@ -77,13 +77,13 @@
       </div>
     </div>
 
-    <div class="pokemon-card">
+    <div class="pokemon-card pk-porygon">
       <div class="image-container">
-        <div class="badges"><span class="emoji-shiny">✨</span></div>
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Porygon.png" data-shiny="images/PorygonS.png" alt="Porygon Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Porygon</h2>
+        <h2 class="pokemon-name">Porygon</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Normal</span><img src="images/normal.webp" alt="Normal" class="type-icon"></div>
@@ -99,13 +99,13 @@
       </div>
     </div>
 
-    <div class="pokemon-card">
+    <div class="pokemon-card pk-terhal">
       <div class="image-container">
-        <div class="badges"><span class="emoji-shiny">✨</span></div>
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Terhal.png" data-shiny="images/TerhalS.png" alt="Terhal Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-good">Terhal</h2>
+        <h2 class="pokemon-name">Terhal</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Acier</span><img src="images/acier.webp" alt="Acier" class="type-icon"></div>
@@ -128,13 +128,13 @@
   <h1 class="category-title tier-3">Raids Obscurs 3 Étoiles</h1>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card">
+    <div class="pokemon-card pk-kicklee">
       <div class="image-container">
-        <div class="badges"><span class="emoji-shiny">✨</span></div>
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Kicklee.png" data-shiny="images/KickleeS.png" alt="Kicklee Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Kicklee</h2>
+        <h2 class="pokemon-name">Kicklee</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Combat</span><img src="images/combat.webp" alt="Combat" class="type-icon"></div>
@@ -150,13 +150,13 @@
       </div>
     </div>
 
-    <div class="pokemon-card">
+    <div class="pokemon-card pk-ossatueur-a">
       <div class="image-container">
-        <div class="badges"><span class="emoji-shiny">✨</span></div>
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/OssatueurA.png" data-shiny="images/OssatueurAS.png" alt="Ossatueur d'Alola Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Ossatueur d'Alola</h2>
+        <h2 class="pokemon-name">Ossatueur d'Alola</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Feu</span><img src="images/feu.webp" alt="Feu" class="type-icon"></div>
@@ -174,13 +174,13 @@
       </div>
     </div>
 
-    <div class="pokemon-card">
+    <div class="pokemon-card pk-scorplane">
       <div class="image-container">
-        <div class="badges"><span class="emoji-shiny">✨</span></div>
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Scorplane.png" data-shiny="images/ScorplaneS.png" alt="Scorplane Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Scorplane</h2>
+        <h2 class="pokemon-name">Scorplane</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Sol</span><img src="images/sol.webp" alt="Sol" class="type-icon"></div>
@@ -203,13 +203,13 @@
   <h1 class="category-title tier-legendary">Raids Obscurs Légendaires</h1>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card">
+    <div class="pokemon-card pk-dialga">
       <div class="image-container">
-        <div class="badges"><span class="emoji-shiny">✨</span></div>
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Dialga.png" data-shiny="images/DialgaS.png" alt="Dialga Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-good">Dialga</h2>
+        <h2 class="pokemon-name">Dialga</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Acier</span><img src="images/acier.webp" alt="Acier" class="type-icon"></div>
@@ -241,6 +241,7 @@
     img.addEventListener('click', () => {
       const container = img.closest('.image-container');
       const emoji = container ? container.querySelector('.emoji-shiny') : null;
+      if (emoji && window.getComputedStyle(emoji).display === 'none') return;
       const isNormal = new URL(img.src, window.location.href).pathname === new URL(srcNormale, window.location.href).pathname;
       img.src = isNormal ? srcShiny : srcNormale;
       img.classList.toggle('shiny-active', isNormal);

@@ -1,0 +1,291 @@
+/* ============================================================
+   pokemon.css — GoEon
+   Source de vérité par Pokémon : couleur du nom, shiny, etc.
+   
+   Attributs :
+     .pokemon-name  → couleur du nom (vert si bon, inherit sinon)
+     .emoji-shiny   → affiché si shiny dispo, masqué sinon
+
+   Convention de nommage :
+     Forme normale   → pk-nomduPokemon
+     Forme régionale → pk-nomduPokemon-[initiale région] (ex: -h Hisui, -a Alola)
+     Méga            → pk-nomduPokemon-m
+   ============================================================ */
+
+
+/* --- Valeurs par défaut (toujours déclarées en premier) --- */
+.pokemon-card .emoji-shiny   { display: none; }
+.pokemon-card .pokemon-name  { color: inherit; }
+
+
+/* ============================================================
+   POKÉMON — A
+   ============================================================ */
+
+/* Altaria — Bon / Shiny */
+.pk-altaria .pokemon-name  { color: #16a34a; }
+.pk-altaria .emoji-shiny   { display: inline; }
+
+/* Méga-Altaria — Bon / Shiny */
+.pk-altaria-m .pokemon-name { color: #16a34a; }
+.pk-altaria-m .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — B
+   ============================================================ */
+
+/* Bamboiselle — Bon / Shiny */
+.pk-bamboiselle .pokemon-name { color: #16a34a; }
+.pk-bamboiselle .emoji-shiny  { display: inline; }
+
+/* Bazoucan — Bon / Shiny */
+.pk-bazoucan .pokemon-name { color: #16a34a; }
+.pk-bazoucan .emoji-shiny  { display: inline; }
+
+/* Bleuseille — Normal / Shiny */
+.pk-bleuseille .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — C
+   ============================================================ */
+
+/* Colombeau — Bon / Shiny */
+.pk-colombeau .pokemon-name { color: #16a34a; }
+.pk-colombeau .emoji-shiny  { display: inline; }
+
+/* Corvaillus — Normal / Shiny */
+.pk-corvaillus .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — D
+   ============================================================ */
+
+/* Déflaisan — Bon / Shiny */
+.pk-deflaisan .pokemon-name { color: #16a34a; }
+.pk-deflaisan .emoji-shiny  { display: inline; }
+
+/* Dialga — Bon / Shiny */
+.pk-dialga .pokemon-name { color: #16a34a; }
+.pk-dialga .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — É
+   ============================================================ */
+
+/* Étourmi — Bon / Shiny */
+.pk-etourmi .pokemon-name  { color: #16a34a; }
+.pk-etourmi .emoji-shiny   { display: inline; }
+
+/* Étouraptor — Bon / Shiny */
+.pk-etouraptor .pokemon-name { color: #16a34a; }
+.pk-etouraptor .emoji-shiny  { display: inline; }
+
+/* Étourvol — Bon / Shiny */
+.pk-etourvol .pokemon-name { color: #16a34a; }
+.pk-etourvol .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — F
+   ============================================================ */
+
+/* Fulgulairo — Bon / Pas de shiny */
+.pk-fulgulairo .pokemon-name { color: #16a34a; }
+
+/* Furaiglon — Bon / Shiny */
+.pk-furaiglon .pokemon-name { color: #16a34a; }
+.pk-furaiglon .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — G
+   ============================================================ */
+
+/* Golemastoc — Bon / Shiny */
+.pk-golemastoc .pokemon-name { color: #16a34a; }
+.pk-golemastoc .emoji-shiny  { display: inline; }
+
+/* Gringolem — Bon / Shiny */
+.pk-gringolem .pokemon-name { color: #16a34a; }
+.pk-gringolem .emoji-shiny  { display: inline; }
+
+/* Guériaigle de Hisui — Bon / Shiny */
+.pk-gueriaigle-h .pokemon-name { color: #16a34a; }
+.pk-gueriaigle-h .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — H
+   ============================================================ */
+
+/* Hoothoot — Normal / Shiny */
+.pk-hoothoot .emoji-shiny { display: inline; }
+
+/* Hypocéan — Normal / Shiny */
+.pk-hypocean .emoji-shiny { display: inline; }
+
+/* Hyporoi — Normal / Shiny */
+.pk-hyporoi .emoji-shiny { display: inline; }
+
+/* Hypotrempe — Normal / Shiny */
+.pk-hypotrempe .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — K
+   ============================================================ */
+
+/* Katagami — Bon / Shiny */
+.pk-katagami .pokemon-name { color: #16a34a; }
+.pk-katagami .emoji-shiny  { display: inline; }
+
+/* Kicklee — Normal / Shiny */
+.pk-kicklee .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — L
+   ============================================================ */
+
+/* Lestombaile — Bon / Shiny */
+.pk-lestombaile .pokemon-name { color: #16a34a; }
+.pk-lestombaile .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — M
+   ============================================================ */
+
+/* Métalosse — Bon / Shiny */
+.pk-metalosse .pokemon-name { color: #16a34a; }
+.pk-metalosse .emoji-shiny  { display: inline; }
+
+/* Méga-Métalosse — Bon / Shiny */
+.pk-metalosse-m .pokemon-name { color: #16a34a; }
+.pk-metalosse-m .emoji-shiny  { display: inline; }
+
+/* Métang — Bon / Shiny */
+.pk-metang .pokemon-name { color: #16a34a; }
+.pk-metang .emoji-shiny  { display: inline; }
+
+/* Minisange — Normal / Shiny */
+.pk-minisange .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — N
+   ============================================================ */
+
+/* Noarfang — Normal / Shiny */
+.pk-noarfang .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — O
+   ============================================================ */
+
+/* Ossatueur d'Alola — Normal / Shiny */
+.pk-ossatueur-a .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — P
+   ============================================================ */
+
+/* Piafabec — Normal / Shiny */
+.pk-piafabec .emoji-shiny { display: inline; }
+
+/* Picassaut — Bon / Shiny */
+.pk-picassaut .pokemon-name { color: #16a34a; }
+.pk-picassaut .emoji-shiny  { display: inline; }
+
+/* Piclairon — Bon / Shiny */
+.pk-piclairon .pokemon-name { color: #16a34a; }
+.pk-piclairon .emoji-shiny  { display: inline; }
+
+/* Poichigeon — Bon / Shiny */
+.pk-poichigeon .pokemon-name { color: #16a34a; }
+.pk-poichigeon .emoji-shiny  { display: inline; }
+
+/* Porygon — Normal / Shiny */
+.pk-porygon .emoji-shiny { display: inline; }
+
+/* Porygon-2 — Normal / Shiny */
+.pk-porygon-2 .emoji-shiny { display: inline; }
+
+/* Porygon-Z — Normal / Shiny */
+.pk-porygon-z .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — R
+   ============================================================ */
+
+/* Rapasdepic — Normal / Shiny */
+.pk-rapasdepic .emoji-shiny { display: inline; }
+
+/* Roucool — Bon / Shiny */
+.pk-roucool .pokemon-name { color: #16a34a; }
+.pk-roucool .emoji-shiny  { display: inline; }
+
+/* Roucoups — Bon / Shiny */
+.pk-roucoups .pokemon-name { color: #16a34a; }
+.pk-roucoups .emoji-shiny  { display: inline; }
+
+/* Roucarnage — Bon / Shiny */
+.pk-roucarnage .pokemon-name { color: #16a34a; }
+.pk-roucarnage .emoji-shiny  { display: inline; }
+
+/* Méga-Roucarnage — Bon / Shiny */
+.pk-roucarnage-m .pokemon-name { color: #16a34a; }
+.pk-roucarnage-m .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — S
+   ============================================================ */
+
+/* Scorplane — Normal / Shiny */
+.pk-scorplane .emoji-shiny { display: inline; }
+
+/* Scorvol — Normal / Shiny */
+.pk-scorvol .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — T
+   ============================================================ */
+
+/* Tapatoès — Normal / Pas de shiny */
+.pk-tapatoes .pokemon-name { color: inherit; }
+
+/* Terhal — Bon / Shiny */
+.pk-terhal .pokemon-name { color: #16a34a; }
+.pk-terhal .emoji-shiny  { display: inline; }
+
+/* Tylton — Bon / Shiny */
+.pk-tylton .pokemon-name { color: #16a34a; }
+.pk-tylton .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — V
+   ============================================================ */
+
+/* Vaututrice — Normal / Shiny */
+.pk-vaututrice .emoji-shiny { display: inline; }
+
+/* Vostourno — Normal / Shiny */
+.pk-vostourno .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — Z
+   ============================================================ */
+
+/* Zapétrel — Bon / Pas de shiny */
+.pk-zapetrel .pokemon-name { color: #16a34a; }
