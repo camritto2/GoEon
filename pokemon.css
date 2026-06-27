@@ -15,20 +15,76 @@
 
 /* --- Valeurs par défaut (toujours déclarées en premier) --- */
 .pokemon-card .emoji-shiny   { display: none; }
-.pokemon-card .pokemon-name  { color: inherit; }
+.pokemon-card .pokemon-name  { color: var(--text-principal); }
 
 
 /* ============================================================
    POKÉMON — A
    ============================================================ */
 
-/* Altaria — Bon / Shiny */
+/* Absol — Bon / Shiny (couvre Méga-Absol) */
+.pk-absol .pokemon-name { color: #16a34a; }
+.pk-absol .emoji-shiny  { display: inline; }
+
+/* Abra — Bon / Shiny */
+.pk-abra .pokemon-name { color: #16a34a; }
+.pk-abra .emoji-shiny  { display: inline; }
+
+/* Alakazam — Bon / Shiny (couvre Méga-Alakazam) */
+.pk-alakazam .pokemon-name { color: #16a34a; }
+.pk-alakazam .emoji-shiny  { display: inline; }
+
+/* Aligatueur — Bon / Shiny */
+.pk-aligatueur .pokemon-name { color: #16a34a; }
+.pk-aligatueur .emoji-shiny  { display: inline; }
+
+/* Amonita — Bon / Shiny */
+.pk-amonita .pokemon-name { color: #16a34a; }
+.pk-amonita .emoji-shiny  { display: inline; }
+
+/* Amonistar — Bon / Shiny */
+.pk-amonistar .pokemon-name { color: #16a34a; }
+.pk-amonistar .emoji-shiny  { display: inline; }
+
+/* Amphinobi — Bon / Shiny */
+.pk-amphinobi .pokemon-name { color: #16a34a; }
+.pk-amphinobi .emoji-shiny  { display: inline; }
+
+/* Archéduc — Bon / Shiny */
+.pk-archeduc .pokemon-name { color: #16a34a; }
+.pk-archeduc .emoji-shiny  { display: inline; }
+
+/* Artikodin — Bon / Shiny */
+.pk-artikodin .pokemon-name { color: #16a34a; }
+.pk-artikodin .emoji-shiny  { display: inline; }
+
+/* Arrozard — Bon / Pas de shiny */
+.pk-arrozard .pokemon-name { color: #16a34a; }
+
+/* Altaria — Bon / Shiny (couvre Méga-Altaria) */
 .pk-altaria .pokemon-name  { color: #16a34a; }
 .pk-altaria .emoji-shiny   { display: inline; }
 
-/* Méga-Altaria — Bon / Shiny */
-.pk-altaria-m .pokemon-name { color: #16a34a; }
-.pk-altaria-m .emoji-shiny  { display: inline; }
+/* Apitrini — Normal / Shiny */
+.pk-apitrini .emoji-shiny { display: inline; }
+
+/* Apireine — Normal / Shiny */
+.pk-apireine .emoji-shiny { display: inline; }
+
+/* Arcanin — Normal / Shiny */
+.pk-arcanin .emoji-shiny { display: inline; }
+
+/* Arcanin de Hisui — Bon / Shiny */
+.pk-arcanin-h .pokemon-name { color: #16a34a; }
+.pk-arcanin-h .emoji-shiny  { display: inline; }
+
+/* Aquali — Bon / Shiny */
+.pk-aquali .pokemon-name { color: #16a34a; }
+.pk-aquali .emoji-shiny  { display: inline; }
+
+/* Arcko — Bon / Shiny */
+.pk-arcko .pokemon-name { color: #16a34a; }
+.pk-arcko .emoji-shiny  { display: inline; }
 
 
 /* ============================================================
@@ -39,42 +95,300 @@
 .pk-bamboiselle .pokemon-name { color: #16a34a; }
 .pk-bamboiselle .emoji-shiny  { display: inline; }
 
+/* Babimanta — Normal / Shiny */
+.pk-babimanta .emoji-shiny { display: inline; }
+
+/* Badabouin — Bon / Shiny */
+.pk-badabouin .pokemon-name { color: #16a34a; }
+.pk-badabouin .emoji-shiny  { display: inline; }
+
+/* Bargantua — Normal / Shiny (toutes couleurs) */
+.pk-bargantua .emoji-shiny { display: inline; }
+
 /* Bazoucan — Bon / Shiny */
 .pk-bazoucan .pokemon-name { color: #16a34a; }
 .pk-bazoucan .emoji-shiny  { display: inline; }
 
+/* Beldeneige — Bon / Shiny */
+.pk-beldeneige .pokemon-name { color: #16a34a; }
+.pk-beldeneige .emoji-shiny  { display: inline; }
+
+/* Berserkatt — Bon / Shiny */
+.pk-berserkatt .pokemon-name { color: #16a34a; }
+.pk-berserkatt .emoji-shiny  { display: inline; }
+
 /* Bleuseille — Normal / Shiny */
 .pk-bleuseille .emoji-shiny { display: inline; }
+
+/* Bibichut — Bon / Shiny */
+.pk-bibichut .pokemon-name { color: #16a34a; }
+.pk-bibichut .emoji-shiny  { display: inline; }
+
+/* Blindépique — Bon / Shiny */
+.pk-blindepique .pokemon-name { color: #16a34a; }
+.pk-blindepique .emoji-shiny  { display: inline; }
+
+/* Boguérisse — Bon / Shiny */
+.pk-boguerisse .pokemon-name { color: #16a34a; }
+.pk-boguerisse .emoji-shiny  { display: inline; }
+
+/* Boskara — Bon / Shiny */
+.pk-boskara .pokemon-name { color: #16a34a; }
+.pk-boskara .emoji-shiny  { display: inline; }
+
+/* Braségali — Bon / Shiny (couvre Méga-Braségali) */
+.pk-brasegali .pokemon-name { color: #16a34a; }
+.pk-brasegali .emoji-shiny  { display: inline; }
+
+/* Brindibou — Bon / Shiny */
+.pk-brindibou .pokemon-name { color: #16a34a; }
+.pk-brindibou .emoji-shiny  { display: inline; }
+
+/* Bulbizarre — Bon / Shiny */
+.pk-bulbizarre .pokemon-name { color: #16a34a; }
+.pk-bulbizarre .emoji-shiny  { display: inline; }
 
 
 /* ============================================================
    POKÉMON — C
    ============================================================ */
 
+/* Canarbello — Bon / Shiny */
+.pk-canarbello .pokemon-name { color: #16a34a; }
+.pk-canarbello .emoji-shiny  { display: inline; }
+
+/* Caninos — Normal / Shiny */
+.pk-caninos .emoji-shiny { display: inline; }
+
+/* Caninos de Hisui — Bon / Shiny */
+.pk-caninos-h .pokemon-name { color: #16a34a; }
+.pk-caninos-h .emoji-shiny  { display: inline; }
+
+/* Candine — Bon / Shiny */
+.pk-candine .pokemon-name { color: #16a34a; }
+.pk-candine .emoji-shiny  { display: inline; }
+
+/* Carapuce — Bon / Shiny */
+.pk-carapuce .pokemon-name { color: #16a34a; }
+.pk-carapuce .emoji-shiny  { display: inline; }
+
+/* Caratroc — Normal / Shiny */
+.pk-caratroc .emoji-shiny { display: inline; }
+
+/* Carmadura — Bon / Shiny */
+.pk-carmadura .pokemon-name { color: #16a34a; }
+.pk-carmadura .emoji-shiny  { display: inline; }
+
+/* Charbambin — Bon / Shiny */
+.pk-charbambin .pokemon-name { color: #16a34a; }
+.pk-charbambin .emoji-shiny  { display: inline; }
+
+/* Chapotus — Bon / Shiny */
+.pk-chapotus .pokemon-name { color: #16a34a; }
+.pk-chapotus .emoji-shiny  { display: inline; }
+
+/* Chenipan — Normal / Shiny */
+.pk-chenipan .emoji-shiny { display: inline; }
+
+/* Chimpenfeu — Bon / Shiny */
+.pk-chimpenfeu .pokemon-name { color: #16a34a; }
+.pk-chimpenfeu .emoji-shiny  { display: inline; }
+
+/* Chochodile — Bon / Shiny */
+.pk-chochodile .pokemon-name { color: #16a34a; }
+.pk-chochodile .emoji-shiny  { display: inline; }
+
+/* Chovsourir — Normal / Shiny */
+.pk-chovsourir .emoji-shiny { display: inline; }
+
+/* Chrysacier — Normal / Shiny */
+.pk-chrysacier .emoji-shiny { display: inline; }
+
+/* Clamiral — Bon / Shiny */
+.pk-clamiral .pokemon-name { color: #16a34a; }
+.pk-clamiral .emoji-shiny  { display: inline; }
+
+/* Clamiral de Hisui — Bon / Shiny */
+.pk-clamiral-h .pokemon-name { color: #16a34a; }
+.pk-clamiral-h .emoji-shiny  { display: inline; }
+
+/* Coiffeton — Bon / Shiny */
+.pk-coiffeton .pokemon-name { color: #16a34a; }
+.pk-coiffeton .emoji-shiny  { display: inline; }
+
+/* Cléopsytra — Normal / Shiny */
+.pk-cleopsytra .emoji-shiny { display: inline; }
+
+/* Colhomard — Bon / Shiny */
+.pk-colhomard .pokemon-name { color: #16a34a; }
+.pk-colhomard .emoji-shiny  { display: inline; }
+
 /* Colombeau — Bon / Shiny */
 .pk-colombeau .pokemon-name { color: #16a34a; }
 .pk-colombeau .emoji-shiny  { display: inline; }
 
+/* Corayon de Galar — Normal / Shiny */
+.pk-corayon-g .emoji-shiny { display: inline; }
+
+/* Corayôme — Normal / Shiny */
+.pk-corayome .emoji-shiny { display: inline; }
+
 /* Corvaillus — Normal / Shiny */
 .pk-corvaillus .emoji-shiny { display: inline; }
+
+/* Crocrodil — Bon / Shiny */
+.pk-crocrodil .pokemon-name { color: #16a34a; }
+.pk-crocrodil .emoji-shiny  { display: inline; }
+
+/* Croâporal — Bon / Shiny */
+.pk-croaporal .pokemon-name { color: #16a34a; }
+.pk-croaporal .emoji-shiny  { display: inline; }
+
+/* Crocogril — Bon / Shiny */
+.pk-crocogril .pokemon-name { color: #16a34a; }
+.pk-crocogril .emoji-shiny  { display: inline; }
+
+/* Crocorible — Bon / Shiny */
+.pk-crocorible .pokemon-name { color: #16a34a; }
+.pk-crocorible .emoji-shiny  { display: inline; }
+
+/* Croquine — Bon / Shiny */
+.pk-croquine .pokemon-name { color: #16a34a; }
+.pk-croquine .emoji-shiny  { display: inline; }
+
+/* Cryodo — Bon / Shiny */
+.pk-cryodo .pokemon-name { color: #16a34a; }
+.pk-cryodo .emoji-shiny  { display: inline; }
 
 
 /* ============================================================
    POKÉMON — D
    ============================================================ */
 
+/* Darumacho — Bon / Shiny */
+.pk-darumacho .pokemon-name { color: #16a34a; }
+.pk-darumacho .emoji-shiny  { display: inline; }
+
+/* Darumacho de Galar — Bon / Shiny */
+.pk-darumacho-g .pokemon-name { color: #16a34a; }
+.pk-darumacho-g .emoji-shiny  { display: inline; }
+
+/* Darumarond — Bon / Shiny */
+.pk-darumarond .pokemon-name { color: #16a34a; }
+.pk-darumarond .emoji-shiny  { display: inline; }
+
+/* Darumarond de Galar — Bon / Shiny */
+.pk-darumarond-g .pokemon-name { color: #16a34a; }
+.pk-darumarond-g .emoji-shiny  { display: inline; }
+
+/* Debugant — Normal / Shiny */
+.pk-debugant .emoji-shiny { display: inline; }
+
 /* Déflaisan — Bon / Shiny */
 .pk-deflaisan .pokemon-name { color: #16a34a; }
 .pk-deflaisan .emoji-shiny  { display: inline; }
+
+/* Démanta — Normal / Shiny */
+.pk-demanta .emoji-shiny { display: inline; }
 
 /* Dialga — Bon / Shiny */
 .pk-dialga .pokemon-name { color: #16a34a; }
 .pk-dialga .emoji-shiny  { display: inline; }
 
+/* Dimoclès — Normal / Shiny */
+.pk-dimocles .emoji-shiny { display: inline; }
+
+/* Dracaufeu — Bon / Shiny */
+.pk-dracaufeu .pokemon-name { color: #16a34a; }
+.pk-dracaufeu .emoji-shiny  { display: inline; }
+
+/* Méga-Dracaufeu-X — Normal / Shiny */
+.pk-dracaufeu-mx .emoji-shiny { display: inline; }
+
+/* Méga-Dracaufeu-Y — Bon / Shiny */
+.pk-dracaufeu-my .pokemon-name { color: #16a34a; }
+.pk-dracaufeu-my .emoji-shiny  { display: inline; }
+
+/* Doudouvet — Normal / Shiny */
+.pk-doudouvet .emoji-shiny { display: inline; }
+
+/* Duralugon — Bon / Shiny */
+.pk-duralugon .pokemon-name { color: #16a34a; }
+.pk-duralugon .emoji-shiny  { display: inline; }
+
+/* Draby — Bon / Shiny */
+.pk-draby .pokemon-name { color: #16a34a; }
+.pk-draby .emoji-shiny  { display: inline; }
+
+/* Drackhaus — Bon / Shiny */
+.pk-drackhaus .pokemon-name { color: #16a34a; }
+.pk-drackhaus .emoji-shiny  { display: inline; }
+
+/* Drakkarmin — Normal / Shiny */
+.pk-drakkarmin .emoji-shiny { display: inline; }
+
+/* Drattak — Bon / Shiny */
+.pk-drattak .pokemon-name { color: #16a34a; }
+.pk-drattak .emoji-shiny  { display: inline; }
+
+/* Draïeul — Normal / Shiny */
+.pk-draieul .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — E
+   ============================================================ */
+
+/* Eoko — Normal / Shiny */
+.pk-eoko .emoji-shiny { display: inline; }
+
+/* Ectoplasma — Bon / Shiny (couvre Méga-Ectoplasma) */
+.pk-ectoplasma .pokemon-name { color: #16a34a; }
+.pk-ectoplasma .emoji-shiny  { display: inline; }
+
+/* Efflèche — Bon / Shiny */
+.pk-effleche .pokemon-name { color: #16a34a; }
+.pk-effleche .emoji-shiny  { display: inline; }
+
+/* Élekable — Bon / Shiny */
+.pk-elekable .pokemon-name { color: #16a34a; }
+.pk-elekable .emoji-shiny  { display: inline; }
+
+/* Élekid — Bon / Shiny */
+.pk-elekid .pokemon-name { color: #16a34a; }
+.pk-elekid .emoji-shiny  { display: inline; }
+
+/* Élektek — Bon / Shiny */
+.pk-elektek .pokemon-name { color: #16a34a; }
+.pk-elektek .emoji-shiny  { display: inline; }
+
+/* Électhor — Bon / Shiny */
+.pk-electhor .pokemon-name { color: #16a34a; }
+.pk-electhor .emoji-shiny  { display: inline; }
+
+/* Entei — Bon / Shiny */
+.pk-entei .pokemon-name { color: #16a34a; }
+.pk-entei .emoji-shiny  { display: inline; }
+
+/* Eoko — Normal / Shiny */
+.pk-eoko .emoji-shiny { display: inline; }
+
+/* Escroco — Bon / Shiny */
+.pk-escroco .pokemon-name { color: #16a34a; }
+.pk-escroco .emoji-shiny  { display: inline; }
+
+/* Évoli — Bon / Shiny */
+.pk-evoli .pokemon-name { color: #16a34a; }
+.pk-evoli .emoji-shiny  { display: inline; }
+
 
 /* ============================================================
    POKÉMON — É
    ============================================================ */
+
+/* Écrapince — Bon / Shiny */
+.pk-ecrapince .pokemon-name { color: #16a34a; }
+.pk-ecrapince .emoji-shiny  { display: inline; }
 
 /* Étourmi — Bon / Shiny */
 .pk-etourmi .pokemon-name  { color: #16a34a; }
@@ -93,8 +407,81 @@
    POKÉMON — F
    ============================================================ */
 
-/* Fulgulairo — Bon / Pas de shiny */
-.pk-fulgulairo .pokemon-name { color: #16a34a; }
+/* Farfaduvet — Normal / Shiny */
+.pk-farfaduvet .emoji-shiny { display: inline; }
+
+/* Farfuret de Hisui — Bon / Shiny */
+.pk-farfuret-h .pokemon-name { color: #16a34a; }
+.pk-farfuret-h .emoji-shiny  { display: inline; }
+
+/* Farfurex — Bon / Shiny */
+.pk-farfurex .pokemon-name { color: #16a34a; }
+.pk-farfurex .emoji-shiny  { display: inline; }
+
+/* Fantominus — Bon / Shiny */
+.pk-fantominus .pokemon-name { color: #16a34a; }
+.pk-fantominus .emoji-shiny  { display: inline; }
+
+/* Félinferno — Bon / Shiny */
+.pk-felinferno .pokemon-name { color: #16a34a; }
+.pk-felinferno .emoji-shiny  { display: inline; }
+
+/* Feunnec — Bon / Shiny */
+.pk-feunnec .pokemon-name { color: #16a34a; }
+.pk-feunnec .emoji-shiny  { display: inline; }
+
+/* Feurisson — Bon / Shiny */
+.pk-feurisson .pokemon-name { color: #16a34a; }
+.pk-feurisson .emoji-shiny  { display: inline; }
+
+/* Flagadoss de Galar — Bon / Shiny */
+.pk-flagadoss-g .pokemon-name { color: #16a34a; }
+.pk-flagadoss-g .emoji-shiny  { display: inline; }
+
+/* Flamiaou — Bon / Shiny */
+.pk-flamiaou .pokemon-name { color: #16a34a; }
+.pk-flamiaou .emoji-shiny  { display: inline; }
+
+/* Flambino — Bon / Shiny */
+.pk-flambino .pokemon-name { color: #16a34a; }
+.pk-flambino .emoji-shiny  { display: inline; }
+
+/* Flâmigator — Bon / Shiny */
+.pk-flamigator .pokemon-name { color: #16a34a; }
+.pk-flamigator .emoji-shiny  { display: inline; }
+
+/* Flobio — Bon / Shiny */
+.pk-flobio .pokemon-name { color: #16a34a; }
+.pk-flobio .emoji-shiny  { display: inline; }
+
+/* Florizarre — Bon / Shiny (couvre Méga-Florizarre) */
+.pk-florizarre .pokemon-name { color: #16a34a; }
+.pk-florizarre .emoji-shiny  { display: inline; }
+
+/* Flotillon — Normal / Shiny */
+.pk-flotillon .emoji-shiny { display: inline; }
+
+/* Forgella — Bon / Shiny */
+.pk-forgella .pokemon-name { color: #16a34a; }
+.pk-forgella .emoji-shiny  { display: inline; }
+
+/* Forgelina — Bon / Shiny */
+.pk-forgelina .pokemon-name { color: #16a34a; }
+.pk-forgelina .emoji-shiny  { display: inline; }
+
+/* Forgerette — Bon / Shiny */
+.pk-forgerette .pokemon-name { color: #16a34a; }
+.pk-forgerette .emoji-shiny  { display: inline; }
+
+/* Frigodo — Bon / Shiny */
+.pk-frigodo .pokemon-name { color: #16a34a; }
+.pk-frigodo .emoji-shiny  { display: inline; }
+
+/* Frissonille — Bon / Shiny */
+.pk-frissonille .pokemon-name { color: #16a34a; }
+.pk-frissonille .emoji-shiny  { display: inline; }
+
+/* Fulgulairo — Normal / Pas de shiny */
 
 /* Furaiglon — Bon / Shiny */
 .pk-furaiglon .pokemon-name { color: #16a34a; }
@@ -105,13 +492,80 @@
    POKÉMON — G
    ============================================================ */
 
+/* Galifeu — Bon / Shiny */
+.pk-galifeu .pokemon-name { color: #16a34a; }
+.pk-galifeu .emoji-shiny  { display: inline; }
+
+/* Gallame — Bon / Shiny (couvre Méga-Gallame) */
+.pk-gallame .pokemon-name { color: #16a34a; }
+.pk-gallame .emoji-shiny  { display: inline; }
+
+/* Gardevoir — Bon / Shiny (couvre Méga-Gardevoir) */
+.pk-gardevoir .pokemon-name { color: #16a34a; }
+.pk-gardevoir .emoji-shiny  { display: inline; }
+
+/* Germignon — Normal / Shiny */
+.pk-germignon .emoji-shiny { display: inline; }
+
+/* Géolithe — Bon / Shiny */
+.pk-geolithe .pokemon-name { color: #16a34a; }
+.pk-geolithe .emoji-shiny  { display: inline; }
+
+/* Gigalithe — Bon / Shiny */
+.pk-gigalithe .pokemon-name { color: #16a34a; }
+.pk-gigalithe .emoji-shiny  { display: inline; }
+
+/* Glaivodo — Bon / Shiny */
+.pk-glaivodo .pokemon-name { color: #16a34a; }
+.pk-glaivodo .emoji-shiny  { display: inline; }
+
+/* Givrali — Bon / Shiny */
+.pk-givrali .pokemon-name { color: #16a34a; }
+.pk-givrali .emoji-shiny  { display: inline; }
+
+/* Gobou — Bon / Shiny */
+.pk-gobou .pokemon-name { color: #16a34a; }
+.pk-gobou .emoji-shiny  { display: inline; }
+
 /* Golemastoc — Bon / Shiny */
 .pk-golemastoc .pokemon-name { color: #16a34a; }
 .pk-golemastoc .emoji-shiny  { display: inline; }
 
+/* Gorythmic — Bon / Shiny */
+.pk-gorythmic .pokemon-name { color: #16a34a; }
+.pk-gorythmic .emoji-shiny  { display: inline; }
+
+/* Goupelin — Bon / Shiny */
+.pk-goupelin .pokemon-name { color: #16a34a; }
+.pk-goupelin .emoji-shiny  { display: inline; }
+
+/* Grenousse — Bon / Shiny */
+.pk-grenousse .pokemon-name { color: #16a34a; }
+.pk-grenousse .emoji-shiny  { display: inline; }
+
+/* Gravalanch d'Alola — Bon / Shiny */
+.pk-gravalanch-a .pokemon-name { color: #16a34a; }
+.pk-gravalanch-a .emoji-shiny  { display: inline; }
+
+/* Gribouraigne — Bon / Shiny */
+.pk-gribouraigne .pokemon-name { color: #16a34a; }
+.pk-gribouraigne .emoji-shiny  { display: inline; }
+
 /* Gringolem — Bon / Shiny */
 .pk-gringolem .pokemon-name { color: #16a34a; }
 .pk-gringolem .emoji-shiny  { display: inline; }
+
+/* Grotichon — Bon / Shiny */
+.pk-grotichon .pokemon-name { color: #16a34a; }
+.pk-grotichon .emoji-shiny  { display: inline; }
+
+/* Grolem d'Alola — Bon / Shiny */
+.pk-grolem-a .pokemon-name { color: #16a34a; }
+.pk-grolem-a .emoji-shiny  { display: inline; }
+
+/* Gruikui — Bon / Shiny */
+.pk-gruikui .pokemon-name { color: #16a34a; }
+.pk-gruikui .emoji-shiny  { display: inline; }
 
 /* Guériaigle de Hisui — Bon / Shiny */
 .pk-gueriaigle-h .pokemon-name { color: #16a34a; }
@@ -121,6 +575,28 @@
 /* ============================================================
    POKÉMON — H
    ============================================================ */
+
+/* Herbizarre — Bon / Shiny */
+.pk-herbizarre .pokemon-name { color: #16a34a; }
+.pk-herbizarre .emoji-shiny  { display: inline; }
+
+/* Héricendre — Bon / Shiny */
+.pk-hericendre .pokemon-name { color: #16a34a; }
+.pk-hericendre .emoji-shiny  { display: inline; }
+
+/* Hexadron — Normal / Shiny */
+.pk-hexadron .emoji-shiny { display: inline; }
+
+/* Hexagel — Bon / Shiny */
+.pk-hexagel .pokemon-name { color: #16a34a; }
+.pk-hexagel .emoji-shiny  { display: inline; }
+
+/* Hexagide — Normal / Shiny */
+.pk-hexagide .emoji-shiny { display: inline; }
+
+/* Ho-Oh — Bon / Shiny */
+.pk-ho-oh .pokemon-name { color: #16a34a; }
+.pk-ho-oh .emoji-shiny  { display: inline; }
 
 /* Hoothoot — Normal / Shiny */
 .pk-hoothoot .emoji-shiny { display: inline; }
@@ -136,8 +612,45 @@
 
 
 /* ============================================================
+   POKÉMON — I
+   ============================================================ */
+
+/* Ixon — Normal / Shiny */
+.pk-ixon .emoji-shiny { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — J
+   ============================================================ */
+
+/* Jungko — Bon / Shiny (couvre Méga-Jungko) */
+.pk-jungko .pokemon-name { color: #16a34a; }
+.pk-jungko .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
    POKÉMON — K
    ============================================================ */
+
+/* Kabuto — Normal / Shiny */
+.pk-kabuto .emoji-shiny { display: inline; }
+
+/* Kabutops — Normal / Shiny */
+.pk-kabutops .emoji-shiny { display: inline; }
+
+/* Kadabra — Bon / Shiny */
+.pk-kadabra .pokemon-name { color: #16a34a; }
+.pk-kadabra .emoji-shiny  { display: inline; }
+
+/* Kaiminus — Bon / Shiny */
+.pk-kaiminus .pokemon-name { color: #16a34a; }
+.pk-kaiminus .emoji-shiny  { display: inline; }
+
+/* Kaimorse — Normal / Shiny */
+.pk-kaimorse .emoji-shiny { display: inline; }
+
+/* Kapoera — Normal / Shiny */
+.pk-kapoera .emoji-shiny { display: inline; }
 
 /* Katagami — Bon / Shiny */
 .pk-katagami .pokemon-name { color: #16a34a; }
@@ -146,27 +659,182 @@
 /* Kicklee — Normal / Shiny */
 .pk-kicklee .emoji-shiny { display: inline; }
 
+/* Kirlia — Bon / Shiny */
+.pk-kirlia .pokemon-name { color: #16a34a; }
+.pk-kirlia .emoji-shiny  { display: inline; }
+
+/* Korillon — Normal / Shiny */
+.pk-korillon .emoji-shiny { display: inline; }
+
+/* Krabby — Bon / Shiny */
+.pk-krabby .pokemon-name { color: #16a34a; }
+.pk-krabby .emoji-shiny  { display: inline; }
+
+/* Krabboss — Bon / Shiny */
+.pk-krabboss .pokemon-name { color: #16a34a; }
+.pk-krabboss .emoji-shiny  { display: inline; }
+
+/* Kraknoix — Bon / Shiny */
+.pk-kraknoix .pokemon-name { color: #16a34a; }
+.pk-kraknoix .emoji-shiny  { display: inline; }
+
 
 /* ============================================================
    POKÉMON — L
    ============================================================ */
 
+/* Laggron — Bon / Shiny (couvre Méga-Laggron) */
+.pk-laggron .pokemon-name { color: #16a34a; }
+.pk-laggron .emoji-shiny  { display: inline; }
+
+/* Lapyro — Bon / Shiny */
+.pk-lapyro .pokemon-name { color: #16a34a; }
+.pk-lapyro .emoji-shiny  { display: inline; }
+
+/* Larméléon — Bon / Pas de shiny */
+.pk-larmeleon .pokemon-name { color: #16a34a; }
+
+/* Latias — Bon / Shiny (couvre Méga-Latias) */
+.pk-latias .pokemon-name { color: #16a34a; }
+.pk-latias .emoji-shiny  { display: inline; }
+
+/* Latios — Bon / Shiny (couvre Méga-Latios) */
+.pk-latios .pokemon-name { color: #16a34a; }
+.pk-latios .emoji-shiny  { display: inline; }
+
 /* Lestombaile — Bon / Shiny */
 .pk-lestombaile .pokemon-name { color: #16a34a; }
 .pk-lestombaile .emoji-shiny  { display: inline; }
+
+/* Leuphorie — Normal / Shiny */
+.pk-leuphorie .emoji-shiny { display: inline; }
+
+/* Leveinard — Normal / Shiny */
+.pk-leveinard .emoji-shiny { display: inline; }
+
+/* Lianaja — Normal / Shiny */
+.pk-lianaja .emoji-shiny { display: inline; }
+
+/* Libégon — Bon / Shiny */
+.pk-libegon .pokemon-name { color: #16a34a; }
+.pk-libegon .emoji-shiny  { display: inline; }
+
+/* Lézargus — Bon / Pas de shiny */
+.pk-lezargus .pokemon-name { color: #16a34a; }
+
+/* Limonde de Galar — Normal / Shiny */
+.pk-limonde-g .emoji-shiny { display: inline; }
+
+/* Linéon de Galar — Normal / Shiny */
+.pk-lineon-g .emoji-shiny { display: inline; }
+
+/* Lugia — Bon / Shiny */
+.pk-lugia .pokemon-name { color: #16a34a; }
+.pk-lugia .emoji-shiny  { display: inline; }
+
+/* Lucario — Bon / Shiny (couvre Méga-Lucario et Méga-Lucario-Z) */
+.pk-lucario .pokemon-name { color: #16a34a; }
+.pk-lucario .emoji-shiny  { display: inline; }
 
 
 /* ============================================================
    POKÉMON — M
    ============================================================ */
 
-/* Métalosse — Bon / Shiny */
+/* Machoc — Bon / Shiny */
+.pk-machoc .pokemon-name { color: #16a34a; }
+.pk-machoc .emoji-shiny  { display: inline; }
+
+/* Machopeur — Bon / Shiny */
+.pk-machopeur .pokemon-name { color: #16a34a; }
+.pk-machopeur .emoji-shiny  { display: inline; }
+
+/* Mackogneur — Bon / Shiny */
+.pk-mackogneur .pokemon-name { color: #16a34a; }
+.pk-mackogneur .emoji-shiny  { display: inline; }
+
+/* Macronium — Normal / Shiny */
+.pk-macronium .emoji-shiny { display: inline; }
+
+/* Majaspic — Normal / Shiny */
+.pk-majaspic .emoji-shiny { display: inline; }
+
+/* Malamandre — Bon / Shiny */
+.pk-malamandre .pokemon-name { color: #16a34a; }
+.pk-malamandre .emoji-shiny  { display: inline; }
+
+/* Malvalame — Bon / Shiny */
+.pk-malvalame .pokemon-name { color: #16a34a; }
+.pk-malvalame .emoji-shiny  { display: inline; }
+
+/* Marisson — Bon / Shiny */
+.pk-marisson .pokemon-name { color: #16a34a; }
+.pk-marisson .emoji-shiny  { display: inline; }
+
+/* Matourgeon — Bon / Shiny */
+.pk-matourgeon .pokemon-name { color: #16a34a; }
+.pk-matourgeon .emoji-shiny  { display: inline; }
+
+/* Mascaïman — Bon / Shiny */
+.pk-mascaiman .pokemon-name { color: #16a34a; }
+.pk-mascaiman .emoji-shiny  { display: inline; }
+
+/* Massko — Bon / Shiny */
+.pk-massko .pokemon-name { color: #16a34a; }
+.pk-massko .emoji-shiny  { display: inline; }
+
+/* Mateloutre — Bon / Shiny */
+.pk-mateloutre .pokemon-name { color: #16a34a; }
+.pk-mateloutre .emoji-shiny  { display: inline; }
+
+/* Matoufeu — Bon / Shiny */
+.pk-matoufeu .pokemon-name { color: #16a34a; }
+.pk-matoufeu .emoji-shiny  { display: inline; }
+
+/* Méganium — Normal / Shiny */
+.pk-meganium .emoji-shiny { display: inline; }
+
+/* Miamiasme — Normal / Shiny */
+.pk-miamiasme .emoji-shiny { display: inline; }
+
+/* Miascarade — Bon / Shiny */
+.pk-miascarade .pokemon-name { color: #16a34a; }
+.pk-miascarade .emoji-shiny  { display: inline; }
+
+/* Miaouss de Galar — Bon / Shiny */
+.pk-miaouss-g .pokemon-name { color: #16a34a; }
+.pk-miaouss-g .emoji-shiny  { display: inline; }
+
+/* Miasmax — Normal / Shiny */
+.pk-miasmax .emoji-shiny { display: inline; }
+
+/* Minotaupe — Bon / Shiny */
+.pk-minotaupe .pokemon-name { color: #16a34a; }
+.pk-minotaupe .emoji-shiny  { display: inline; }
+
+/* Mentali — Bon / Shiny */
+.pk-mentali .pokemon-name { color: #16a34a; }
+.pk-mentali .emoji-shiny  { display: inline; }
+
+/* Métalosse — Bon / Shiny (couvre Méga-Métalosse) */
 .pk-metalosse .pokemon-name { color: #16a34a; }
 .pk-metalosse .emoji-shiny  { display: inline; }
 
-/* Méga-Métalosse — Bon / Shiny */
-.pk-metalosse-m .pokemon-name { color: #16a34a; }
-.pk-metalosse-m .emoji-shiny  { display: inline; }
+/* Mélo — Bon / Shiny */
+.pk-melo .pokemon-name { color: #16a34a; }
+.pk-melo .emoji-shiny  { display: inline; }
+
+/* Mélodelfe — Bon / Shiny */
+.pk-melodelfe .pokemon-name { color: #16a34a; }
+.pk-melodelfe .emoji-shiny  { display: inline; }
+
+/* Mélofée — Bon / Shiny */
+.pk-melofee .pokemon-name { color: #16a34a; }
+.pk-melofee .emoji-shiny  { display: inline; }
+
+/* Moustillon — Bon / Shiny */
+.pk-moustillon .pokemon-name { color: #16a34a; }
+.pk-moustillon .emoji-shiny  { display: inline; }
 
 /* Métang — Bon / Shiny */
 .pk-metang .pokemon-name { color: #16a34a; }
@@ -174,6 +842,18 @@
 
 /* Minisange — Normal / Shiny */
 .pk-minisange .emoji-shiny { display: inline; }
+
+/* Monorpale — Normal / Shiny */
+.pk-monorpale .emoji-shiny { display: inline; }
+
+/* Moumouflon — Normal / Shiny */
+.pk-moumouflon .emoji-shiny { display: inline; }
+
+/* Moumouton — Normal / Shiny */
+.pk-moumouton .emoji-shiny { display: inline; }
+
+/* Mysdibule — Normal / Shiny */
+.pk-mysdibule .emoji-shiny { display: inline; }
 
 
 /* ============================================================
@@ -183,21 +863,96 @@
 /* Noarfang — Normal / Shiny */
 .pk-noarfang .emoji-shiny { display: inline; }
 
+/* Noadkoko — Bon / Shiny */
+.pk-noadkoko .pokemon-name { color: #16a34a; }
+.pk-noadkoko .emoji-shiny  { display: inline; }
+
+/* Noadkoko d'Alola — Bon / Shiny */
+.pk-noadkoko-a .pokemon-name { color: #16a34a; }
+.pk-noadkoko-a .emoji-shiny  { display: inline; }
+
+/* Nodulithe — Bon / Shiny */
+.pk-nodulithe .pokemon-name { color: #16a34a; }
+.pk-nodulithe .emoji-shiny  { display: inline; }
+
+/* Noctali — Normal / Shiny */
+.pk-noctali .emoji-shiny { display: inline; }
+
+/* Noeunoeuf — Bon / Shiny */
+.pk-noeunoeuf .pokemon-name { color: #16a34a; }
+.pk-noeunoeuf .emoji-shiny  { display: inline; }
+
+
+/* Nymphali — Bon / Shiny */
+.pk-nymphali .pokemon-name { color: #16a34a; }
+.pk-nymphali .emoji-shiny  { display: inline; }
 
 /* ============================================================
    POKÉMON — O
    ============================================================ */
 
+/* Obalie — Normal / Shiny */
+.pk-obalie .emoji-shiny { display: inline; }
+
+/* Okéoké — Normal / Shiny */
+.pk-okeoke .emoji-shiny { display: inline; }
+
+/* Oratoria — Bon / Shiny */
+.pk-oratoria .pokemon-name { color: #16a34a; }
+.pk-oratoria .emoji-shiny  { display: inline; }
+
 /* Ossatueur d'Alola — Normal / Shiny */
 .pk-ossatueur-a .emoji-shiny { display: inline; }
+
+/* Otaquin — Bon / Shiny */
+.pk-otaquin .pokemon-name { color: #16a34a; }
+.pk-otaquin .emoji-shiny  { display: inline; }
+
+/* Otarlette — Bon / Shiny */
+.pk-otarlette .pokemon-name { color: #16a34a; }
+.pk-otarlette .emoji-shiny  { display: inline; }
+
+/* Ouisticram — Bon / Shiny */
+.pk-ouisticram .pokemon-name { color: #16a34a; }
+.pk-ouisticram .emoji-shiny  { display: inline; }
+
+/* Ouistempo — Bon / Shiny */
+.pk-ouistempo .pokemon-name { color: #16a34a; }
+.pk-ouistempo .emoji-shiny  { display: inline; }
 
 
 /* ============================================================
    POKÉMON — P
    ============================================================ */
 
+/* Palmaval — Bon / Shiny */
+.pk-palmaval .pokemon-name { color: #16a34a; }
+.pk-palmaval .emoji-shiny  { display: inline; }
+
+/* Papilusion — Normal / Shiny */
+.pk-papilusion .emoji-shiny { display: inline; }
+
+/* Pandarbare — Bon / Shiny */
+.pk-pandarbare .pokemon-name { color: #16a34a; }
+.pk-pandarbare .emoji-shiny  { display: inline; }
+
+/* Pandespiègle — Bon / Shiny */
+.pk-pandespiegle .pokemon-name { color: #16a34a; }
+.pk-pandespiegle .emoji-shiny  { display: inline; }
+
+/* Phogleur — Normal / Shiny */
+.pk-phogleur .emoji-shiny { display: inline; }
+
+/* Phyllali — Bon / Shiny */
+.pk-phyllali .pokemon-name { color: #16a34a; }
+.pk-phyllali .emoji-shiny  { display: inline; }
+
 /* Piafabec — Normal / Shiny */
 .pk-piafabec .emoji-shiny { display: inline; }
+
+/* Pichu — Bon / Shiny */
+.pk-pichu .pokemon-name { color: #16a34a; }
+.pk-pichu .emoji-shiny  { display: inline; }
 
 /* Picassaut — Bon / Shiny */
 .pk-picassaut .pokemon-name { color: #16a34a; }
@@ -206,6 +961,14 @@
 /* Piclairon — Bon / Shiny */
 .pk-piclairon .pokemon-name { color: #16a34a; }
 .pk-piclairon .emoji-shiny  { display: inline; }
+
+/* Pikachu — Bon / Shiny */
+.pk-pikachu .pokemon-name { color: #16a34a; }
+.pk-pikachu .emoji-shiny  { display: inline; }
+
+/* Pingoléon — Bon / Shiny */
+.pk-pingeleon .pokemon-name { color: #16a34a; }
+.pk-pingeleon .emoji-shiny  { display: inline; }
 
 /* Poichigeon — Bon / Shiny */
 .pk-poichigeon .pokemon-name { color: #16a34a; }
@@ -220,13 +983,130 @@
 /* Porygon-Z — Normal / Shiny */
 .pk-porygon-z .emoji-shiny { display: inline; }
 
+/* Poussacha — Bon / Shiny */
+.pk-poussacha .pokemon-name { color: #16a34a; }
+.pk-poussacha .emoji-shiny  { display: inline; }
+
+/* Poussifeu — Bon / Shiny */
+.pk-poussifeu .pokemon-name { color: #16a34a; }
+.pk-poussifeu .emoji-shiny  { display: inline; }
+
+/* Prinplouf — Bon / Shiny */
+.pk-prinplouf .pokemon-name { color: #16a34a; }
+.pk-prinplouf .emoji-shiny  { display: inline; }
+
+/* Ptiravi — Normal / Shiny */
+.pk-ptiravi .emoji-shiny { display: inline; }
+
+/* Pyrax — Bon / Shiny */
+.pk-pyrax .pokemon-name { color: #16a34a; }
+.pk-pyrax .emoji-shiny  { display: inline; }
+
+/* Pyroli — Bon / Shiny */
+.pk-pyroli .pokemon-name { color: #16a34a; }
+.pk-pyroli .emoji-shiny  { display: inline; }
+
+/* Pyronille — Bon / Shiny */
+.pk-pyronille .pokemon-name { color: #16a34a; }
+.pk-pyronille .emoji-shiny  { display: inline; }
+
+/* Pyrobut — Bon / Shiny */
+.pk-pyrobut .pokemon-name { color: #16a34a; }
+.pk-pyrobut .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — Q
+   ============================================================ */
+
+/* Quartermac — Normal / Shiny */
+.pk-quartermac .emoji-shiny { display: inline; }
+
+/* Qulbutoké — Normal / Shiny */
+.pk-qulbutoke .emoji-shiny { display: inline; }
+
 
 /* ============================================================
    POKÉMON — R
    ============================================================ */
 
+/* Raikou — Bon / Shiny */
+.pk-raikou .pokemon-name { color: #16a34a; }
+.pk-raikou .emoji-shiny  { display: inline; }
+
+/* Racaillou d'Alola — Bon / Shiny */
+.pk-racaillou-a .pokemon-name { color: #16a34a; }
+.pk-racaillou-a .emoji-shiny  { display: inline; }
+
+/* Raichu — Bon / Shiny */
+.pk-raichu .pokemon-name { color: #16a34a; }
+.pk-raichu .emoji-shiny  { display: inline; }
+
+/* Méga-Raichu-X — Normal / Shiny */
+.pk-raichu-mx .emoji-shiny { display: inline; }
+
+/* Méga-Raichu-Y — Bon / Shiny */
+.pk-raichu-my .pokemon-name { color: #16a34a; }
+.pk-raichu-my .emoji-shiny  { display: inline; }
+
+/* Ramoloss de Galar — Bon / Shiny */
+.pk-ramoloss-g .pokemon-name { color: #16a34a; }
+.pk-ramoloss-g .emoji-shiny  { display: inline; }
+
 /* Rapasdepic — Normal / Shiny */
 .pk-rapasdepic .emoji-shiny { display: inline; }
+
+/* Regice — Bon / Shiny */
+.pk-regice .pokemon-name { color: #16a34a; }
+.pk-regice .emoji-shiny  { display: inline; }
+
+/* Regirock — Bon / Shiny */
+.pk-regirock .pokemon-name { color: #16a34a; }
+.pk-regirock .emoji-shiny  { display: inline; }
+
+/* Registeel — Normal / Shiny */
+.pk-registeel .emoji-shiny { display: inline; }
+
+/* Reptincel — Bon / Shiny */
+.pk-reptincel .pokemon-name { color: #16a34a; }
+.pk-reptincel .emoji-shiny  { display: inline; }
+
+/* Rhinolove — Normal / Shiny */
+.pk-rhinolove .emoji-shiny { display: inline; }
+
+/* Riolu — Bon / Shiny */
+.pk-riolu .pokemon-name { color: #16a34a; }
+.pk-riolu .emoji-shiny  { display: inline; }
+
+/* Roigada de Galar — Bon / Shiny */
+.pk-roigada-g .pokemon-name { color: #16a34a; }
+.pk-roigada-g .emoji-shiny  { display: inline; }
+
+/* Roitiflam — Bon / Shiny */
+.pk-roitiflam .pokemon-name { color: #16a34a; }
+.pk-roitiflam .emoji-shiny  { display: inline; }
+
+/* Rongourmand — Normal / Shiny */
+.pk-rongourmand .emoji-shiny { display: inline; }
+
+/* Rongrigou — Normal / Shiny */
+.pk-rongrigou .emoji-shiny { display: inline; }
+
+/* Roserade — Bon / Shiny */
+.pk-roserade .pokemon-name { color: #16a34a; }
+.pk-roserade .emoji-shiny  { display: inline; }
+
+/* Rosélia — Bon / Shiny */
+.pk-roselia .pokemon-name { color: #16a34a; }
+.pk-roselia .emoji-shiny  { display: inline; }
+
+/* Rozbouton — Bon / Shiny */
+.pk-rozbouton .pokemon-name { color: #16a34a; }
+.pk-rozbouton .emoji-shiny  { display: inline; }
+
+/* Rototaupe — Bon / Shiny */
+.pk-rototaupe .pokemon-name { color: #16a34a; }
+.pk-rototaupe .emoji-shiny  { display: inline; }
 
 /* Roucool — Bon / Shiny */
 .pk-roucool .pokemon-name { color: #16a34a; }
@@ -249,23 +1129,120 @@
    POKÉMON — S
    ============================================================ */
 
+/* Roussil — Bon / Shiny */
+.pk-roussil .pokemon-name { color: #16a34a; }
+.pk-roussil .emoji-shiny  { display: inline; }
+
+/* Salarsen — Bon / Shiny */
+.pk-salarsen .pokemon-name { color: #16a34a; }
+.pk-salarsen .emoji-shiny  { display: inline; }
+
+/* Salamèche — Bon / Shiny */
+.pk-salameche .pokemon-name { color: #16a34a; }
+.pk-salameche .emoji-shiny  { display: inline; }
+
 /* Scorplane — Normal / Shiny */
 .pk-scorplane .emoji-shiny { display: inline; }
 
 /* Scorvol — Normal / Shiny */
 .pk-scorvol .emoji-shiny { display: inline; }
 
+/* Sepiatop — Normal / Shiny */
+.pk-sepiatop .emoji-shiny { display: inline; }
+
+/* Sepiatroce — Normal / Shiny */
+.pk-sepiatroce .emoji-shiny { display: inline; }
+
+/* Shifours — Bon / Shiny */
+.pk-shifours .pokemon-name { color: #16a34a; }
+.pk-shifours .emoji-shiny  { display: inline; }
+
+/* Simiabraz — Bon / Shiny */
+.pk-simiabraz .pokemon-name { color: #16a34a; }
+.pk-simiabraz .emoji-shiny  { display: inline; }
+
+/* Sulfura — Bon / Shiny */
+.pk-sulfura .pokemon-name { color: #16a34a; }
+.pk-sulfura .emoji-shiny  { display: inline; }
+
+/* Sorcilence — Bon / Shiny */
+.pk-sorcilence .pokemon-name { color: #16a34a; }
+.pk-sorcilence .emoji-shiny  { display: inline; }
+
+/* Spectrum — Bon / Shiny */
+.pk-spectrum .pokemon-name { color: #16a34a; }
+.pk-spectrum .emoji-shiny  { display: inline; }
+
 
 /* ============================================================
    POKÉMON — T
    ============================================================ */
 
+/* Suicune — Bon / Shiny */
+.pk-suicune .pokemon-name { color: #16a34a; }
+.pk-suicune .emoji-shiny  { display: inline; }
+
+/* Sucreine — Bon / Shiny */
+.pk-sucreine .pokemon-name { color: #16a34a; }
+.pk-sucreine .emoji-shiny  { display: inline; }
+
+/* Tag-Tag — Bon / Shiny */
+.pk-tag-tag .pokemon-name { color: #16a34a; }
+.pk-tag-tag .emoji-shiny  { display: inline; }
+
 /* Tapatoès — Normal / Pas de shiny */
-.pk-tapatoes .pokemon-name { color: inherit; }
+
+/* Tarsal — Bon / Shiny */
+.pk-tarsal .pokemon-name { color: #16a34a; }
+.pk-tarsal .emoji-shiny  { display: inline; }
+
+/* Taupiqueur d'Alola — Normal / Shiny */
+.pk-taupiqueur-a .emoji-shiny { display: inline; }
+
+/* Ténéfix — Normal / Shiny (couvre Méga-Ténéfix) */
+.pk-tenefix .emoji-shiny { display: inline; }
 
 /* Terhal — Bon / Shiny */
 .pk-terhal .pokemon-name { color: #16a34a; }
 .pk-terhal .emoji-shiny  { display: inline; }
+
+/* Tiplouf — Bon / Shiny */
+.pk-tiplouf .pokemon-name { color: #16a34a; }
+.pk-tiplouf .emoji-shiny  { display: inline; }
+
+/* Togekiss — Bon / Shiny */
+.pk-togekiss .pokemon-name { color: #16a34a; }
+.pk-togekiss .emoji-shiny  { display: inline; }
+
+/* Togepi — Bon / Shiny */
+.pk-togepi .pokemon-name { color: #16a34a; }
+.pk-togepi .emoji-shiny  { display: inline; }
+
+/* Togetic — Bon / Shiny */
+.pk-togetic .pokemon-name { color: #16a34a; }
+.pk-togetic .emoji-shiny  { display: inline; }
+
+/* Tortipouss — Bon / Shiny */
+.pk-tortipouss .pokemon-name { color: #16a34a; }
+.pk-tortipouss .emoji-shiny  { display: inline; }
+
+/* Torterra — Bon / Shiny */
+.pk-torterra .pokemon-name { color: #16a34a; }
+.pk-torterra .emoji-shiny  { display: inline; }
+
+/* Triopikeur d'Alola — Normal / Shiny */
+.pk-triopikeur-a .emoji-shiny { display: inline; }
+
+/* Tritox — Bon / Shiny */
+.pk-tritox .pokemon-name { color: #16a34a; }
+.pk-tritox .emoji-shiny  { display: inline; }
+
+/* Tygnon — Normal / Shiny */
+.pk-tygnon .emoji-shiny { display: inline; }
+
+/* Typhlosion — Bon / Shiny */
+.pk-typhlosion .pokemon-name { color: #16a34a; }
+.pk-typhlosion .emoji-shiny  { display: inline; }
 
 /* Tylton — Bon / Shiny */
 .pk-tylton .pokemon-name { color: #16a34a; }
@@ -279,13 +1256,61 @@
 /* Vaututrice — Normal / Shiny */
 .pk-vaututrice .emoji-shiny { display: inline; }
 
+/* Vibraninf — Bon / Shiny */
+.pk-vibraninf .pokemon-name { color: #16a34a; }
+.pk-vibraninf .emoji-shiny  { display: inline; }
+
+/* Voltali — Bon / Shiny */
+.pk-voltali .pokemon-name { color: #16a34a; }
+.pk-voltali .emoji-shiny  { display: inline; }
+
+/* Vipélierre — Normal / Shiny */
+.pk-vipelierre .emoji-shiny { display: inline; }
+
 /* Vostourno — Normal / Shiny */
 .pk-vostourno .emoji-shiny { display: inline; }
+
+/* Vrombi — Bon / Shiny */
+.pk-vrombi .pokemon-name { color: #16a34a; }
+.pk-vrombi .emoji-shiny  { display: inline; }
+
+/* Vrombotor — Bon / Shiny */
+.pk-vrombotor .pokemon-name { color: #16a34a; }
+.pk-vrombotor .emoji-shiny  { display: inline; }
+
+
+/* ============================================================
+   POKÉMON — W
+   ============================================================ */
+
+/* Wailmer — Normal / Shiny */
+.pk-wailmer .emoji-shiny { display: inline; }
+
+/* Wailord — Normal / Shiny */
+.pk-wailord .emoji-shiny { display: inline; }
+
+/* Wimessir — Normal / Shiny (mâle et femelle) */
+.pk-wimessir .emoji-shiny { display: inline; }
+
+/* Wushours — Bon / Shiny */
+.pk-wushours .pokemon-name { color: #16a34a; }
+.pk-wushours .emoji-shiny  { display: inline; }
 
 
 /* ============================================================
    POKÉMON — Z
    ============================================================ */
 
-/* Zapétrel — Bon / Pas de shiny */
-.pk-zapetrel .pokemon-name { color: #16a34a; }
+/* Zapétrel — Normal / Pas de shiny */
+
+
+/* ============================================================
+   CAS SPÉCIAUX — Pokémon bons uniquement dans certains contextes
+   ============================================================ */
+
+/* Leveinard — Bon uniquement en Dynamax */
+.pk-leveinard-dynamax .pokemon-name { color: #16a34a; }
+.pk-leveinard-dynamax .emoji-shiny  { display: inline; }
+
+/* Zigzaton de Galar — Normal / Shiny */
+.pk-zigzaton-g .emoji-shiny { display: inline; }
