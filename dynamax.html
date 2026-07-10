@@ -8,20 +8,12 @@
   <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="pokemon.css">
   <style>
-    .pokemon-img[data-shiny] {
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .pokemon-img[data-shiny]:hover {
-      transform: scale(1.08);
-    }
-    .pokemon-img.shiny-active {
-      /* Aura supprimée */
-    }
+    .texte-vert   { color: var(--accent-vert-bon); font-weight: bold; }
+    .texte-orange { color: #e8894a; font-weight: bold; }
   </style>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="images/icon-512.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
 </head>
 <body>
 
@@ -32,8 +24,8 @@
   <h1>Dynamax Disponibles</h1>
 
   <div class="intro-rules">
-    Un Pokémon en <span style="color: #16a34a; font-weight: bold;">vert</span> est un bon Pokémon pour les Dynamax ou en Raids.<br>
-    Un Pokémon <span style="color: #e8894a; font-weight: bold;">avec un fond orange</span> possède aussi une forme Gigamax, plus puissante, mais uniquement disponible pendant des évènements spéciaux.<br>
+    Un Pokémon en <span class="texte-vert">vert</span> est un bon Pokémon pour les Dynamax ou en Raids.<br>
+    Un Pokémon <span class="texte-orange">avec un fond orange</span> possède aussi une forme Gigamax, plus puissante, mais uniquement disponible pendant des évènements spéciaux.<br>
     <br>
     Tous ces Pokémon (sauf indication contraire) peuvent être disponibles aux sources d'énergie.<br>
     Le Dynamax Vedette du lundi est plus fréquent durant la semaine qui suit.<br>
@@ -43,14 +35,14 @@
   </div>
 
   <p class="astuce-shiny">
-    <span style="font-style: normal;">💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
 
   <!-- NIVEAU 1 -->
-  <h1 class="category-title tier-1">Niveau 1 — 250 Particules Max</h1>
+  <h2 class="category-title tier-1">Niveau 1 — 250 Particules Max</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-bulbizarre" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-bulbizarre">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Bulbizarre.png" data-shiny="images/BulbizarreS.png" alt="Bulbizarre" class="pokemon-img">
@@ -67,7 +59,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-salameche" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-salameche">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Salameche.png" data-shiny="images/SalamecheS.png" alt="Salamèche" class="pokemon-img">
@@ -83,7 +75,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-carapuce" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-carapuce">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Carapuce.png" data-shiny="images/CarapuceS.png" alt="Carapuce" class="pokemon-img">
@@ -131,7 +123,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-ouistempo" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-ouistempo">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Ouistempo.png" data-shiny="images/OuistempoS.png" alt="Ouistempo" class="pokemon-img">
@@ -147,7 +139,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-flambino" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-flambino">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Flambino.png" data-shiny="images/FlambinoS.png" alt="Flambino" class="pokemon-img">
@@ -163,10 +155,10 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-larmeleon" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-larmeleon">
       <div class="image-container">
-        <div class="badges"></div>
-        <img src="images/Larmeleon.png" alt="Larméléon" class="pokemon-img">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Larmeleon.png" data-shiny="images/LarmeleonS.png" alt="Larméléon" class="pokemon-img">
       </div>
       <div class="card-content">
         <h2 class="pokemon-name">Larméléon</h2>
@@ -179,7 +171,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-fantominus" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-fantominus">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Fantominus.png" data-shiny="images/FantominusS.png" alt="Fantominus" class="pokemon-img">
@@ -212,7 +204,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-krabby" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-krabby">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Krabby.png" data-shiny="images/KrabbyS.png" alt="Krabby" class="pokemon-img">
@@ -245,7 +237,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-chenipan" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-chenipan">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Chenipan.png" data-shiny="images/ChenipanS.png" alt="Chenipan" class="pokemon-img">
@@ -261,7 +253,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-minisange" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-minisange">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Minisange.png" data-shiny="images/MinisangeS.png" alt="Minisange" class="pokemon-img">
@@ -277,7 +269,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-bibichut" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-bibichut">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Bibichut.png" data-shiny="images/BibichutS.png" alt="Bibichut" class="pokemon-img">
@@ -327,7 +319,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-miamiasme" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-miamiasme">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Miamiasme.png" data-shiny="images/MiamiasmeS.png" alt="Miamiasme" class="pokemon-img">
@@ -475,7 +467,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-pikachu" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-pikachu">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Pikachu.png" data-shiny="images/PikachuS.png" alt="Pikachu" class="pokemon-img">
@@ -487,7 +479,7 @@
           <div class="type-block"><span class="type-text">Électrik</span><img src="images/electrik.webp" alt="Électrik" class="type-icon"></div>
         </div>
         <hr class="separator">
-        <div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">536</span></p><hr class="separator"><p style="font-size: 10px; color: var(--text-muet); margin: 0; line-height: 1.4; white-space: normal; word-wrap: break-word;"><span class="footnote-ref">1</span> : Pikachu possède une forme Gigamax. Mais Raichu Dynamax reste meilleur.</p></div>
+        <div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">536</span></p><hr class="separator"><p class="stats-note"><span class="footnote-ref">1</span> : Pikachu possède une forme Gigamax. Mais Raichu Dynamax reste meilleur.</p></div>
       </div>
     </div>
 
@@ -561,10 +553,10 @@
   </div>
 
   <!-- NIVEAU 2 -->
-  <h1 class="category-title tier-1">Niveau 2 — 400 Particules Max</h1>
+  <h2 class="category-title tier-1">Niveau 2 — 400 Particules Max</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-machoc" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-machoc">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Machoc.png" data-shiny="images/MachocS.png" alt="Machoc" class="pokemon-img">
@@ -629,7 +621,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-evoli" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-evoli">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Evoli.png" data-shiny="images/EvoliS.png" alt="Évoli" class="pokemon-img">
@@ -641,14 +633,14 @@
           <div class="type-block"><span class="type-text">Normal</span><img src="images/normal.webp" alt="Normal" class="type-icon"></div>
         </div>
         <hr class="separator">
-        <div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">612</span></p><hr class="separator"><p style="font-size: 10px; color: var(--text-muet); margin: 0; line-height: 1.4; white-space: normal; word-wrap: break-word;"><span class="footnote-ref">2</span> : Évoli possède une forme Gigamax (non disponible pour le moment). Mais ses évolutions en Dynamax restent meilleures.</p></div>
+        <div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">612</span></p><hr class="separator"><p class="stats-note"><span class="footnote-ref">2</span> : Évoli possède une forme Gigamax (non disponible pour le moment). Mais ses évolutions en Dynamax restent meilleures.</p></div>
       </div>
     </div>
 
   </div>
 
   <!-- NIVEAU 3 -->
-  <h1 class="category-title tier-1">Niveau 3 — 400 Particules Max</h1>
+  <h2 class="category-title tier-1">Niveau 3 — 400 Particules Max</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card pk-terhal">
@@ -817,11 +809,11 @@
   </div>
 
   <!-- NIVEAU 4 -->
-  <h1 class="category-title tier-1">Niveau 4 — 800 Particules Max</h1>
+  <h2 class="category-title tier-1">Niveau 4 — 800 Particules Max</h2>
   <p class="section-sous-titre">Évènement uniquement</p>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-salarsen" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-salarsen">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/SalarsenA.png" data-shiny="images/SalarsenAS.png" alt="Salarsen Forme Aiguë" class="pokemon-img">
@@ -839,7 +831,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-salarsen" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-salarsen">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/SalarsenG.png" data-shiny="images/SalarsenGS.png" alt="Salarsen Forme Grave" class="pokemon-img">
@@ -857,7 +849,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-duralugon" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-duralugon">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Duralugon.png" data-shiny="images/DuralugonS.png" alt="Duralugon" class="pokemon-img">
@@ -878,14 +870,14 @@
   </div>
 
   <!-- NIVEAU 5 -->
-  <h1 class="category-title tier-1">Niveau 5 — 800 Particules Max</h1>
+  <h2 class="category-title tier-1">Niveau 5 — 800 Particules Max</h2>
   <p class="section-sous-titre">Évènement uniquement</p>
   <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card pk-artikodin">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Artikodin.png" data-shiny="images/ArtiodinS.png" alt="Artikodin" class="pokemon-img">
+        <img src="images/Artikodin.png" data-shiny="images/ArtikodinS.png" alt="Artikodin" class="pokemon-img">
       </div>
       <div class="card-content">
         <h2 class="pokemon-name">Artikodin</h2>
@@ -1100,10 +1092,10 @@
   </div>
 
   <!-- ÉTUDE SPÉCIALE -->
-  <h1 class="category-title tier-1">Offert en Étude Spéciale</h1>
+  <h2 class="category-title tier-1">Offert en Étude Spéciale</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-wushours" style="background-color: var(--bg-gigamax);">
+    <div class="pokemon-card gigamax pk-wushours">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="images/Wushours.png" data-shiny="images/WushoursS.png" alt="Wushours" class="pokemon-img">
@@ -1123,29 +1115,7 @@
 
 </div>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 
-<script>
-  document.querySelectorAll('.pokemon-img[data-shiny]').forEach(img => {
-    const srcNormale = img.src;
-    const srcShiny = img.getAttribute('data-shiny');
-    img.addEventListener('click', () => {
-      const container = img.closest('.image-container');
-      const emoji = container ? container.querySelector('.emoji-shiny') : null;
-      const currentURL = new URL(img.src, window.location.href).pathname;
-      const normalURL = new URL(srcNormale, window.location.href).pathname;
-      if (emoji && window.getComputedStyle(emoji).display === 'none') return;
-      if (currentURL === normalURL) {
-        img.src = srcShiny;
-        img.classList.add('shiny-active');
-        if (emoji) emoji.classList.add('shiny-active');
-      } else {
-        img.src = srcNormale;
-        img.classList.remove('shiny-active');
-        if (emoji) emoji.classList.remove('shiny-active');
-      }
-    });
-  });
-</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 .index-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 65px 12px 40px 12px;
+  padding: 58px 12px 40px 12px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -13,7 +13,7 @@
 /* HERO */
 .hero {
   text-align: center;
-  margin: 20px 0 30px 0;
+  margin: 10px 0 18px 0;
 }
 
 .hero-title {
@@ -21,7 +21,7 @@
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
   color: var(--text-principal);
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
@@ -34,9 +34,6 @@
   height: 44px;
   object-fit: contain;
 }
-
-.hero-deco-right { margin-left: 0; }
-.hero-deco-left  { margin-right: 0; }
 
 .hero-subtitle {
   font-size: 0.95rem;
@@ -51,8 +48,8 @@
   background: var(--bg-carte);
   border: 1px solid var(--border-carte);
   border-radius: 16px;
-  padding: 16px 14px 18px 14px;
-  margin-bottom: 16px;
+  padding: 6px 14px 10px 14px;
+  margin-bottom: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: background-color 0.3s, border-color 0.3s;
 }
@@ -62,7 +59,7 @@
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   color: var(--text-principal);
-  margin: 0 0 14px 0;
+  margin: 0 0 10px 0;
   padding-bottom: 1px;
   border-bottom: 2px solid #29b6f6;
   display: inline-flex;
@@ -74,6 +71,82 @@
 .section-title .s-emoji {
   line-height: 1;
   font-style: normal;
+}
+
+/* NOUVEAUTÉS */
+.news-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.news-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.news-date {
+  align-self: flex-start;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #29b6f6;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.news-date-upcoming {
+  background-color: var(--text-muet);
+}
+
+.news-items {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.news-items li {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+.news-items li::before {
+  content: '▸';
+  color: #29b6f6;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.news-list a {
+  color: var(--text-principal);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.news-list a:hover {
+  color: #29b6f6;
+  text-decoration: underline;
+}
+
+.news-note {
+  color: var(--text-secondaire);
+  font-style: italic;
+}
+
+.news-text {
+  color: var(--text-principal);
+  font-weight: 500;
 }
 
 /* GRILLE CARTES */
@@ -94,7 +167,6 @@
   text-decoration: none;
   color: var(--text-principal);
   font-weight: 600;
-  font-size: 13px;
   min-width: 70px;
   max-width: 110px;
   flex: 1;
@@ -158,7 +230,7 @@ body.dark-mode .violet-card { background-color: #1a0d2e; border-color: #3d1a60; 
 /* CARTES DÉSACTIVÉES */
 .disabled {
   opacity: 0.45;
-  cursor: pointer;
+  cursor: not-allowed;
   filter: grayscale(60%);
 }
 
@@ -221,10 +293,10 @@ body.dark-mode .violet-card { background-color: #1a0d2e; border-color: #3d1a60; 
 .type-feu      { background: #f8c090; border-color: #f08030; }
 .type-eau      { background: #98c8f8; border-color: #6890f0; }
 .type-plante   { background: #b0e090; border-color: #78c850; }
-.type-electrik { background: #f8e060; border-color: #f8d030; }
+.type-electrik { background: #f8e060; border-color: #d4a900; }
 .type-psy      { background: #f8a0b8; border-color: #f85888; }
 .type-glace    { background: #b8e0e8; border-color: #98d8d8; }
-.type-dragon   { background: #a8b8f8; border-color: #3050d8; }
+.type-dragon   { background: #a8b8f8; border-color: #7888e8; }
 .type-tenebres { background: #909090; border-color: #606060; }
 .type-fee      { background: #f8c0e0; border-color: #ee99ac; }
 
@@ -299,11 +371,11 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
 @media (min-width: 769px) {
 
   .index-container {
-    padding: 65px 20px 40px 20px;
+    padding: 50px 20px 40px 20px;
   }
 
   .hero {
-    margin: 30px 0 40px 0;
+    margin: 20px 0 20px 0;
   }
 
   .hero-title {
@@ -320,7 +392,7 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   }
 
   .home-section {
-    padding: 20px 25px 25px 25px;
+    padding: 15px 25px 15px 25px;
     margin-bottom: 24px;
   }
 
@@ -330,6 +402,15 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   }
 
   .card-grid { gap: 16px; }
+
+  .news-items li {
+    font-size: 14px;
+  }
+
+  .news-date {
+    font-size: 11px;
+    padding: 3px 9px;
+  }
 
   .home-card {
     padding: 20px 16px;
@@ -378,10 +459,11 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
 }
 
 /* ==========================================
-   TUTO PWA
+   BANDEAUX REPLIABLES (Tuto PWA + Légende)
    ========================================== */
 
-.pwa-banner {
+.pwa-banner,
+.legend-banner {
   background: var(--bg-carte);
   border: 1px solid var(--border-carte);
   border-radius: 12px;
@@ -391,7 +473,12 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-.pwa-toggle {
+.pwa-banner {
+  margin-bottom: 12px;
+}
+
+.pwa-toggle,
+.legend-toggle {
   width: 100%;
   background: none;
   border: none;
@@ -407,20 +494,25 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   text-align: left;
 }
 
-.pwa-arrow {
+.pwa-arrow,
+.legend-arrow {
   font-size: 12px;
   color: var(--text-secondaire);
 }
 
-.pwa-content {
+.pwa-content,
+.legend-content {
   display: none;
   padding: 0 12px 5px 12px;
   border-top: 1px solid var(--border-carte);
 }
 
-.pwa-content.open {
+.pwa-content.open,
+.legend-content.open {
   display: block;
 }
+
+/* --- Spécifique Tuto PWA --- */
 
 .pwa-tabs {
   display: flex;
@@ -464,4 +556,64 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
 
 @media (min-width: 769px) {
   .pwa-banner { display: none; }
+}
+
+/* --- Spécifique Légende --- */
+
+.legend-items {
+  margin: 8px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+  color: var(--text-secondaire);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.legend-items li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-swatch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.legend-swatch-good::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #16a34a;
+}
+
+.legend-text-good {
+  color: #16a34a;
+}
+
+.legend-swatch-shiny .emoji-shiny {
+  width: 14px;
+  height: 14px;
+  cursor: default;
+}
+
+@media (min-width: 769px) {
+  .legend-toggle {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .legend-content {
+    padding: 0 16px 8px 16px;
+  }
+
+  .legend-items {
+    font-size: 12px;
+  }
 }

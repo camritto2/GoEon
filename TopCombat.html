@@ -17,17 +17,23 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span style="display:inline-flex; align-items:center; gap:8px;"><img src="images/combat.webp" alt="Combat" style="width:32px; height:32px; object-fit:contain;">Type Combat<img src="images/combat.webp" alt="Combat" style="width:32px; height:32px; object-fit:contain;"></span>
+      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="images/combat.webp" alt="Combat" class="top-title-icon">Type Combat<img src="images/combat.webp" alt="Combat" class="top-title-icon"></span>
     </h1>
 
     <div class="intro-rules">
-        <div class="intro-item"><span class="bullet" style="color: blue;">•</span> Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
-        <div class="intro-item"><span style="color: #06b6d4; font-weight: bold; margin-right: 10px;">•</span>Les Pokémon en <span style="color: #06b6d4; font-weight: bold;">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
-        <div class="intro-item"><span class="bullet" style="color: red;">•</span> Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
+        <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
+            Comprendre le classement
+            <span class="intro-arrow" id="intro-arrow">▾</span>
+        </button>
+        <div class="intro-content" id="intro-content">
+        <div class="intro-item"><span class="bullet legend-blue">•</span> Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
+        <div class="intro-item"><span class="bullet legend-cyan">•</span>Les Pokémon en <span class="legend-cyan">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
+        <div class="intro-item"><span class="bullet legend-red">•</span> Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
         <div class="intro-item"><span class="bullet">•</span> <span class="legacy-indicator">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
-        Plus de détails sur ce classement : <a href="MeilleursPokemon.html">Règles Générales</a><br><br>
-        💡 Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
+        Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
+        💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
+        </div>
     </div>
 
     <h2 class="top-title">Top 25</h2>
@@ -46,8 +52,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Aurasphère</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mlc-btn" class="btn-acier" onclick="toggleBuild('mlc-details', 'toggle-mlc-btn', '#71717a', '#f4f4f5', '#71717a', '#e4e4e7', '#52525b')">
-                        Également Top Acier <img src="images/acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-mlc-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('mlc-details', 'toggle-mlc-btn')">
+                        Également Top Acier <img src="images/acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="mlc-details">
@@ -74,8 +80,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Aurasphère</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mbras-btn" class="btn-feu" onclick="toggleBuild('mbras-details', 'toggle-mbras-btn', '#e65c00', '#fff3eb', '#e65c00', '#fcd7bf', '#b34700')">
-                        Également Top Feu <img src="images/feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-mbras-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('mbras-details', 'toggle-mbras-btn')">
+                        Également Top Feu <img src="images/feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="mbras-details">
@@ -102,8 +108,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Ointe</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-keldeod-btn" class="btn-eau" onclick="toggleBuild('keldeod-details', 'toggle-keldeod-btn', '#0284c7', '#e0f2fe', '#0284c7', '#bae6fd', '#0369a1')">
-                        Également Top Eau <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-keldeod-btn" class="btn-eau" aria-expanded="false" onclick="toggleBuild('keldeod-details', 'toggle-keldeod-btn')">
+                        Également Top Eau <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="keldeod-details">
@@ -130,8 +136,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Exploforce</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mmx-btn" class="btn-psy" onclick="toggleBuild('mmx-details', 'toggle-mmx-btn', '#8e44ad', '#f5eef8', '#8e44ad', '#e8daef', '#6c3483')">
-                        Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-mmx-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('mmx-details', 'toggle-mmx-btn')">
+                        Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="mmx-details">
@@ -158,8 +164,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Close Combat</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mscar-btn" class="btn-insecte" onclick="toggleBuild('mscar-details', 'toggle-mscar-btn', '#a8b820', '#f7fede', '#a8b820', '#e6f7a1', '#808c11'); toggleAltImm('mscar-imm', 'mscar-imm-alt')">
-                        Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-mscar-btn" class="btn-insecte" aria-expanded="false" onclick="toggleBuild('mscar-details', 'toggle-mscar-btn'); toggleAltImm('mscar-imm', 'mscar-imm-alt')">
+                        Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="mscar-details">
@@ -186,8 +192,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Sainte</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-terra-btn" class="btn-roche" onclick="toggleBuild('terra-details', 'toggle-terra-btn', '#b8a038', '#fdfbf2', '#b8a038', '#f5f0cd', '#857322')">
-                        Également Top Roche <img src="images/roche.webp" alt="Type Roche" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-terra-btn" class="btn-roche" aria-expanded="false" onclick="toggleBuild('terra-details', 'toggle-terra-btn')">
+                        Également Top Roche <img src="images/roche.webp" alt="Type Roche" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="terra-details">
@@ -214,8 +220,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Aurasphère</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-luc-btn" class="btn-acier" onclick="toggleBuild('luc-details', 'toggle-luc-btn', '#71717a', '#f4f4f5', '#71717a', '#e4e4e7', '#52525b', 'luc-fast-atk', '<strong>Pisto-Poing</strong>', '<strong>Forte-Paume</strong><span class=\'legacy-indicator\'>L</span>')">
-                        Également Top Acier <img src="images/acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-luc-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('luc-details', 'toggle-luc-btn', 'luc-fast-atk', '<strong>Pisto-Poing</strong>', '<strong>Forte-Paume</strong><span class=\'legacy-indicator\'>L</span>')">
+                        Également Top Acier <img src="images/acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="luc-details">
@@ -242,8 +248,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Sainte</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-keldeon-btn" class="btn-eau" onclick="toggleBuild('keldeon-details', 'toggle-keldeon-btn', '#0284c7', '#e0f2fe', '#0284c7', '#bae6fd', '#0369a1')">
-                        Également Top Eau <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-keldeon-btn" class="btn-eau" aria-expanded="false" onclick="toggleBuild('keldeon-details', 'toggle-keldeon-btn')">
+                        Également Top Eau <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="keldeon-details">
@@ -270,8 +276,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Aurasphère</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-bras-btn" class="btn-feu" onclick="toggleBuild('bras-details', 'toggle-bras-btn', '#e65c00', '#fff3eb', '#e65c00', '#fcd7bf', '#b34700')">
-                        Également Top Feu <img src="images/feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-bras-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('bras-details', 'toggle-bras-btn')">
+                        Également Top Feu <img src="images/feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="bras-details">
@@ -298,8 +304,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Close Combat</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mgall-btn" class="btn-psy" onclick="toggleBuild('mgall-details', 'toggle-mgall-btn', '#8e44ad', '#f5eef8', '#9b59b6', '#e8daef', '#7d3c98'); toggleAltImm('mgall-imm', 'mgall-imm-alt')">
-                        Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-mgall-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('mgall-details', 'toggle-mgall-btn'); toggleAltImm('mgall-imm', 'mgall-imm-alt')">
+                        Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="mgall-details">
@@ -326,11 +332,11 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Dynamo-Poing</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-shif-ten-btn" class="btn-tenebres" onclick="toggleShifours('ten')">
-                        Également Top Ténèbres <img src="images/tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"> <span class="arrow-indicator" id="shif-ten-arrow" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-shif-ten-btn" class="btn-tenebres" aria-expanded="false" onclick="toggleShifours('ten')">
+                        Également Top Ténèbres <img src="images/tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"> <span class="arrow-indicator" id="shif-ten-arrow">▼</span>
                     </button>
-                    <button id="toggle-shif-eau-btn" class="btn-eau" onclick="toggleShifours('eau')">
-                        Également Top Eau <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator" id="shif-eau-arrow" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-shif-eau-btn" class="btn-eau" aria-expanded="false" onclick="toggleShifours('eau')">
+                        Également Top Eau <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator" id="shif-eau-arrow">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="shif-ten-details">
@@ -382,8 +388,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Close Combat</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-marsh-btn" class="btn-spectre" onclick="toggleBuild('marsh-details', 'toggle-marsh-btn', '#705898', '#f5f0fb', '#705898', '#e8daf7', '#4a3d6b')">
-                        Également Top Spectre <img src="images/spectre.webp" alt="Type Spectre" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-marsh-btn" class="btn-spectre" aria-expanded="false" onclick="toggleBuild('marsh-details', 'toggle-marsh-btn')">
+                        Également Top Spectre <img src="images/spectre.webp" alt="Type Spectre" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="marsh-details">
@@ -405,8 +411,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Aurasphère</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-arch-btn" class="btn-plante" onclick="toggleBuild('arch-details', 'toggle-arch-btn', '#5d9e47', '#f0faf0', '#5d9e47', '#c8eabf', '#3d7a2e'); toggleAltImm('arch-imm', 'arch-imm-alt', 'arch-imm-icon')">
-                        Également Top Plante <img src="images/plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-arch-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('arch-details', 'toggle-arch-btn'); toggleAltImm('arch-imm', 'arch-imm-alt', 'arch-imm-icon')">
+                        Également Top Plante <img src="images/plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="arch-details">
@@ -467,8 +473,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Close Combat</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-elecg-btn" class="btn-vol" onclick="toggleBuild('elecg-details', 'toggle-elecg-btn', '#6890f0', '#eef2ff', '#6890f0', '#d0d8fa', '#4060c0')">
-                        Également Top Vol <img src="images/vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-elecg-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('elecg-details', 'toggle-elecg-btn')">
+                        Également Top Vol <img src="images/vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="elecg-details">
@@ -495,8 +501,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Surpuissance</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mous-btn" class="btn-insecte" onclick="toggleBuild('mous-details', 'toggle-mous-btn', '#a8b820', '#f7fede', '#a8b820', '#e6f7a1', '#808c11')">
-                        Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-mous-btn" class="btn-insecte" aria-expanded="false" onclick="toggleBuild('mous-details', 'toggle-mous-btn')">
+                        Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="mous-details">
@@ -540,8 +546,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Sainte</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-cobc-btn" class="btn-acier" onclick="toggleBuild('cobc-details', 'toggle-cobc-btn', '#71717a', '#f4f4f5', '#71717a', '#e4e4e7', '#52525b', 'cob-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Double Pied</span> ➔ <strong>Griffe Acier</strong>', '<strong>Double Pied</strong>')">
-                        Également Top Acier <img src="images/acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-cobc-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('cobc-details', 'toggle-cobc-btn', 'cob-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Double Pied</span> ➔ <strong>Griffe Acier</strong>', '<strong>Double Pied</strong>')">
+                        Également Top Acier <img src="images/acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="cobc-details">
@@ -568,8 +574,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Dynamo-Poing</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-chap-btn" class="btn-plante" onclick="toggleBuild('chap-details', 'toggle-chap-btn', '#5d9e47', '#f0faf0', '#5d9e47', '#c8eabf', '#3d7a2e')">
-                        Également Top Plante <img src="images/plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-chap-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('chap-details', 'toggle-chap-btn')">
+                        Également Top Plante <img src="images/plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="chap-details">
@@ -647,8 +653,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Close Combat</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-scar-btn" class="btn-insecte" onclick="toggleBuild('scar-details', 'toggle-scar-btn', '#a8b820', '#f7fede', '#a8b820', '#e6f7a1', '#808c11'); toggleAltImm('scar-imm', 'scar-imm-alt');">
-                        Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-scar-btn" class="btn-insecte" aria-expanded="false" onclick="toggleBuild('scar-details', 'toggle-scar-btn'); toggleAltImm('scar-imm', 'scar-imm-alt');">
+                        Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="scar-details">
@@ -675,8 +681,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Close Combat</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-courr-btn" class="btn-spectre" onclick="toggleBuild('courr-details', 'toggle-courr-btn', '#705898', '#f5f0fb', '#705898', '#e8daf7', '#4a3d6b')">
-                        Également Top Spectre <img src="images/spectre.webp" alt="Type Spectre" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-courr-btn" class="btn-spectre" aria-expanded="false" onclick="toggleBuild('courr-details', 'toggle-courr-btn')">
+                        Également Top Spectre <img src="images/spectre.webp" alt="Type Spectre" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="courr-details">
@@ -720,8 +726,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Exploforce</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-roit-btn" class="btn-feu" onclick="toggleBuild('roit-details', 'toggle-roit-btn', '#e65c00', '#fff3eb', '#e65c00', '#fcd7bf', '#b34700')">
-                        Également Top Feu <img src="images/feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-roit-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('roit-details', 'toggle-roit-btn')">
+                        Également Top Feu <img src="images/feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="roit-details">
@@ -747,8 +753,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Dynamo-Poing</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-coat-btn" class="btn-poison" onclick="toggleBuild('coat-details', 'toggle-coat-btn', '#a040a0', '#fdf2fd', '#a040a0', '#f9dbf9', '#702c70', 'coat-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Riposte</span> ➔ <strong>Direct Toxic</strong>', '<strong>Riposte</strong>')">
-                        Également Top Poison <img src="images/poison.webp" alt="Type Poison" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-coat-btn" class="btn-poison" aria-expanded="false" onclick="toggleBuild('coat-details', 'toggle-coat-btn', 'coat-fast-atk', '<span style=\'text-decoration: line-through; color: #a0aec0;\'>Riposte</span> ➔ <strong>Direct Toxic</strong>', '<strong>Riposte</strong>')">
+                        Également Top Poison <img src="images/poison.webp" alt="Type Poison" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="coat-details">
@@ -790,7 +796,7 @@
 
 </div>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 
 <script>
   function toggleShifours(type) {
@@ -810,10 +816,12 @@
     // Fermer les deux d'abord
     tenDiv.classList.remove('open');
     eauDiv.classList.remove('open');
-    tenArrow.innerHTML = '▼';
-    eauArrow.innerHTML = '▼';
-    tenBtn.style.background = '#f4f1ef'; tenBtn.style.color = '#705848'; tenBtn.style.borderColor = '#e1dad5';
-    eauBtn.style.background = '#e0f2fe'; eauBtn.style.color = '#0284c7'; eauBtn.style.borderColor = '#bae6fd';
+    tenArrow.innerHTML = '\u25bc';
+    eauArrow.innerHTML = '\u25bc';
+    tenBtn.classList.remove('active');
+    eauBtn.classList.remove('active');
+    tenBtn.setAttribute('aria-expanded', 'false');
+    eauBtn.setAttribute('aria-expanded', 'false');
     eauBtn.style.borderBottom = '';
     fastAtk.innerHTML = '<strong>Riposte</strong>';
     note.innerHTML = '';
@@ -823,17 +831,19 @@
     if (!isOpen) {
       if (type === 'ten') {
         tenDiv.classList.add('open');
-        tenArrow.innerHTML = '▲';
-        tenBtn.style.background = '#524034'; tenBtn.style.color = '#ffffff'; tenBtn.style.borderColor = '#524034';
-        forme.innerHTML = '<span style="text-decoration: line-through; color: #a0aec0;">Les 2 formes</span> ➔ <em>Style Poing Final</em>';
+        tenArrow.innerHTML = '\u25b2';
+        tenBtn.classList.add('active');
+        tenBtn.setAttribute('aria-expanded', 'true');
+        forme.innerHTML = '<span style="text-decoration: line-through; color: #a0aec0;">Les 2 formes</span> \u2794 <em>Style Poing Final</em>';
         img.src = 'images/ShifoursPF.png';
       } else {
         eauDiv.classList.add('open');
-        eauArrow.innerHTML = '▲';
-        eauBtn.style.background = '#0369a1'; eauBtn.style.color = '#ffffff'; eauBtn.style.borderColor = '#0369a1';
+        eauArrow.innerHTML = '\u25b2';
+        eauBtn.classList.add('active');
+        eauBtn.setAttribute('aria-expanded', 'true');
         eauBtn.style.borderBottom = 'none';
-        note.innerHTML = '<span class="footnote-ref">1</span> : Dynamo-Poing fera toutefois plus de dégâts qu\'un Aqua-Jet Super Efficace.';
-        forme.innerHTML = '<span style="text-decoration: line-through; color: #a0aec0;">Les 2 formes</span> ➔ <em>Style Mille Poings</em>';
+        note.innerHTML = '<span class="footnote-ref">1</span> : Dynamo-Poing fera toutefois plus de d\u00e9g\u00e2ts qu\'un Aqua-Jet Super Efficace.';
+        forme.innerHTML = '<span style="text-decoration: line-through; color: #a0aec0;">Les 2 formes</span> \u2794 <em>Style Mille Poings</em>';
         img.src = 'images/ShifoursMP.png';
       }
     }
@@ -848,48 +858,6 @@
       : '';
   });
 
-  function toggleBuild(divId, btnId, activeBg, normalBg, activeColor, normalBorder, activeBorder, targetSpanId = null, activeHtml = '', normalHtml = '') {
-    const btn = document.getElementById(btnId);
-    const div = document.getElementById(divId);
-    const arrow = btn.querySelector('.arrow-indicator');
-    const targetSpan = targetSpanId ? document.getElementById(targetSpanId) : null;
-    const isOpen = div.classList.contains('open');
-    if (!isOpen) {
-      div.classList.add('open');
-      btn.style.background = activeBg;
-      btn.style.color = '#ffffff';
-      btn.style.borderColor = activeBorder;
-      arrow.innerHTML = '▲';
-      if (targetSpan) targetSpan.innerHTML = activeHtml;
-    } else {
-      div.classList.remove('open');
-      btn.style.background = normalBg;
-      btn.style.color = activeColor;
-      btn.style.borderColor = normalBorder;
-      arrow.innerHTML = '▼';
-      if (targetSpan) targetSpan.innerHTML = normalHtml;
-    }
-  }
-
-  function toggleAltImm(immId, altId, iconId = null) {
-    const imm = document.getElementById(immId);
-    const alt = document.getElementById(altId);
-    const icon = iconId ? document.getElementById(iconId) : null;
-    const isOpen = alt.style.display !== 'none';
-    if (!isOpen) {
-      imm.style.textDecoration = 'line-through';
-      imm.style.color = '#a0aec0';
-      imm.style.fontWeight = 'normal';
-      alt.style.display = 'inline';
-      if (icon) icon.style.display = 'none';
-    } else {
-      imm.style.textDecoration = 'none';
-      imm.style.color = '';
-      imm.style.fontWeight = 'bold';
-      alt.style.display = 'none';
-      if (icon) icon.style.display = '';
-    }
-  }
 </script>
 
 </body>

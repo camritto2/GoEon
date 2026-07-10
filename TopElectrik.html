@@ -17,17 +17,23 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span style="display:inline-flex; align-items:center; gap:8px;"><img src="images/electrik.webp" alt="Électrik" style="width:32px; height:32px; object-fit:contain;">Type Électrik<img src="images/electrik.webp" alt="Électrik" style="width:32px; height:32px; object-fit:contain;"></span>
+      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="images/electrik.webp" alt="Électrik" class="top-title-icon">Type Électrik<img src="images/electrik.webp" alt="Électrik" class="top-title-icon"></span>
     </h1>
     
     <div class="intro-rules">
-        <div class="intro-item"><span class="bullet" >•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
+        <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
+            Comprendre le classement
+            <span class="intro-arrow" id="intro-arrow">▾</span>
+        </button>
+        <div class="intro-content" id="intro-content">
+        <div class="intro-item"><span class="bullet legend-blue">•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
         <div class="intro-item"><span class="bullet legend-cyan">•</span>Les Pokémon en <span class="legend-cyan">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
-        <div class="intro-item"><span class="bullet" >•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
+        <div class="intro-item"><span class="bullet legend-red">•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
         <div class="intro-item"><span class="bullet" >•</span><span class="legacy-indicator" >L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
-        Plus de détails sur ce classement : <a href="MeilleursPokemon.html">Règles Générales</a><br><br>
+        Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
         💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
+        </div>
     </div>
 
     <h2 class="top-title">Top 25</h2>
@@ -62,8 +68,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-zekr-btn" class="btn-dragon" onclick="toggleBuild('zekr-details', 'toggle-zekr-btn', '#0284c7', '#f0f9ff', '#0284c7', '#bae6fd', '#0369a1'); toggleAltImm('zekr-imm', 'zekr-imm-alt')">
-                    Également Top Dragon <img src="images/dragon.webp" alt="Type Dragon" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-zekr-btn" class="btn-dragon" aria-expanded="false" onclick="toggleBuild('zekr-details', 'toggle-zekr-btn'); toggleAltImm('zekr-imm', 'zekr-imm-alt')">
+                    Également Top Dragon <img src="images/dragon.webp" alt="Type Dragon" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="zekr-details">
@@ -99,7 +105,7 @@
         <div class="grid-item">
             <div class="fandom-card mega-card">
                 <div class="card-rank">M1</div>
-                <div class="card-image"><img src="images/ElecsrintM.png" alt="Méga-Élecsprint" class="card-img"></div>
+                <div class="card-image"><img src="images/ElecsprintM.png" alt="Méga-Élecsprint" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Élecsprint</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
@@ -192,8 +198,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Tonnerre</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-elec-btn" class="btn-vol" onclick="toggleBuild('elec-details', 'toggle-elec-btn', '#6890f0', '#eef2ff', '#6890f0', '#d0d8fa', '#4060c0')">
-                    Également Top Vol <img src="images/vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-elec-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('elec-details', 'toggle-elec-btn')">
+                    Également Top Vol <img src="images/vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="elec-details">
@@ -237,8 +243,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-magn-btn" class="btn-acier" onclick="toggleBuild('magn-details', 'toggle-magn-btn', '#71717a', '#f4f4f5', '#71717a', '#e4e4e7', '#52525b')">
-                    Également Top Acier <img src="images/acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-magn-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('magn-details', 'toggle-magn-btn')">
+                    Également Top Acier <img src="images/acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="magn-details">
@@ -265,8 +271,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Tonnerre</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-toko-btn" class="btn-fee" onclick="toggleBuild('toko-details', 'toggle-toko-btn', '#9d174d', '#fce7f3', '#9d174d', '#fbcfe8', '#9d174d')">
-                    Également Top Fée <img src="images/fee.webp" alt="Type Fée" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-toko-btn" class="btn-fee" aria-expanded="false" onclick="toggleBuild('toko-details', 'toggle-toko-btn')">
+                    Également Top Fée <img src="images/fee.webp" alt="Type Fée" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="toko-details">
@@ -327,8 +333,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-grol-btn" class="btn-roche" onclick="toggleBuild('grol-details', 'toggle-grol-btn', '#b5a217', '#fdfbe8', '#b5a217', '#f5ef9a', '#8a7a10'); toggleAltImm('grol-imm', 'grol-imm-alt')">
-                    Également Top Roche <img src="images/roche.webp" alt="Type Roche" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-grol-btn" class="btn-roche" aria-expanded="false" onclick="toggleBuild('grol-details', 'toggle-grol-btn'); toggleAltImm('grol-imm', 'grol-imm-alt')">
+                    Également Top Roche <img src="images/roche.webp" alt="Type Roche" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="grol-details">
@@ -372,8 +378,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Coup d'Jus</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-luca-btn" class="btn-insecte" onclick="toggleBuild('luca-details', 'toggle-luca-btn', '#808c11', '#f7fede', '#808c11', '#e6f7a1', '#5a6309'); toggleAltImm('luca-imm', 'luca-imm-alt')">
-                    Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-luca-btn" class="btn-insecte" aria-expanded="false" onclick="toggleBuild('luca-details', 'toggle-luca-btn'); toggleAltImm('luca-imm', 'luca-imm-alt')">
+                    Également Top Insecte <img src="images/insecte.webp" alt="Type Insecte" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="luca-details">
@@ -417,8 +423,8 @@
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-sala-btn" class="btn-poison" onclick="toggleBuild('sala-details', 'toggle-sala-btn', '#7b3f9e', '#f5ebff', '#7b3f9e', '#e2c4f7', '#5a2c75'); toggleAltImm('sala-imm', 'sala-imm-alt')">
-                    Également Top Poison <img src="images/poison.webp" alt="Type Poison" class="type-icon-btn"> <span class="arrow-indicator" style="font-size: 10px; margin-left: 2px;">▼</span>
+                    <button id="toggle-sala-btn" class="btn-poison" aria-expanded="false" onclick="toggleBuild('sala-details', 'toggle-sala-btn'); toggleAltImm('sala-imm', 'sala-imm-alt')">
+                    Également Top Poison <img src="images/poison.webp" alt="Type Poison" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="sala-details">
@@ -580,52 +586,8 @@
 
 </div>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 
-<script>
-  function toggleBuild(divId, btnId, activeBg, normalBg, activeColor, normalBorder, activeBorder, targetSpanId = null, activeHtml = '', normalHtml = '') {
-    const btn = document.getElementById(btnId);
-    const div = document.getElementById(divId);
-    const arrow = btn.querySelector('.arrow-indicator');
-    const targetSpan = targetSpanId ? document.getElementById(targetSpanId) : null;
-    const isOpen = div.classList.contains('open');
-    if (!isOpen) {
-      div.classList.add('open');
-      btn.style.background = activeBg;
-      btn.style.color = '#ffffff';
-      btn.style.borderColor = activeBorder;
-      arrow.innerHTML = '▲';
-      if (targetSpan) targetSpan.innerHTML = activeHtml;
-    } else {
-      div.classList.remove('open');
-      btn.style.background = normalBg;
-      btn.style.color = activeColor;
-      btn.style.borderColor = normalBorder;
-      arrow.innerHTML = '▼';
-      if (targetSpan) targetSpan.innerHTML = normalHtml;
-    }
-  }
-
-  function toggleAltImm(immId, altId, iconId = null) {
-    const imm = document.getElementById(immId);
-    const alt = document.getElementById(altId);
-    const icon = iconId ? document.getElementById(iconId) : null;
-    const isOpen = alt.style.display !== 'none';
-    if (!isOpen) {
-      imm.style.textDecoration = 'line-through';
-      imm.style.color = '#a0aec0';
-      imm.style.fontWeight = 'normal';
-      alt.style.display = 'inline';
-      if (icon) icon.style.display = 'none';
-    } else {
-      imm.style.textDecoration = 'none';
-      imm.style.color = '';
-      imm.style.fontWeight = 'bold';
-      alt.style.display = 'none';
-      if (icon) icon.style.display = '';
-    }
-  }
-</script>
 
 </body>
 </html>

@@ -8,7 +8,10 @@ const FILES_TO_CACHE = [
   '/navbar.css',
   '/global.css',
   '/index.css',
+  '/pokemon.css',
   '/script.js',
+  '/manifest.json',
+  '/images/icon-192.png',
   '/images/icon-512.png'
 ];
 
@@ -33,11 +36,25 @@ self.addEventListener('fetch', e => {
   e.respondWith(
     fetch(e.request)
       .then(response => {
-        // On met à jour le cache avec la version fraîche
-        const clone = response.clone();
-        caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
+        // On ne met en cache que les réponses valides :
+        // - requêtes GET uniquement (pas de POST, etc.)
+        // - schéma http(s) uniquement (évite chrome-extension:// qui fait planter cache.put)
+        // - réponse OK uniquement (évite de mettre en cache un 404 pendant un déploiement)
+        if (e.request.method === 'GET' && e.request.url.startsWith('http') && response.ok) {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(e.request, clone));
+        }
         return response;
       })
-      .catch(() => caches.match(e.request)) // Hors-ligne : on sert le cache
+      .catch(() => {
+        // Hors-ligne : on sert le cache
+        return caches.match(e.request).then(reponseCache => {
+          if (reponseCache) return reponseCache;
+          // Page jamais visitée : on retombe sur l'accueil plutôt qu'une erreur navigateur
+          if (e.request.mode === 'navigate') {
+            return caches.match('/index.html');
+          }
+        });
+      })
   );
 });

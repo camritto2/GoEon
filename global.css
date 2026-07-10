@@ -1,6 +1,7 @@
 /* ==========================================
    GLOBAL.CSS — MOBILE-FIRST
    Variables héritées de navbar.css
+   (y compris les couleurs d'accent du site)
    ========================================== */
 
 /* ==========================================
@@ -8,8 +9,6 @@
    ========================================== */
 
 body {
-  background-color: var(--bg-site);
-  transition: background-color 0.3s ease;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -20,7 +19,6 @@ body {
    ========================================== */
 
 h1 {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 800;
   text-align: center;
@@ -35,9 +33,11 @@ h1 {
   margin: 5px 0 8px 0;
   font-weight: 700;
   text-align: center;
+  color: var(--text-principal);
+  letter-spacing: -0.5px;
 }
 
-.tier-1, .tier-3, .tier-5, .tier-mega, .tier-legendary { color: #0984e3; }
+.tier-1, .tier-3, .tier-5, .tier-mega, .tier-legendary { color: var(--accent-bleu); }
 
 .category-link {
   display: flex;
@@ -51,7 +51,7 @@ h1 {
 }
 
 .category-link a {
-  color: #0984e3;
+  color: var(--accent-bleu);
   text-decoration: none;
 }
 
@@ -121,9 +121,9 @@ h1 {
   color: var(--text-principal);
   text-align: center;
   padding: 2px 8px;
-  margin: -2px -3px 0 -3px;
-  background-color: #e8f4fd;
-  border-radius: 12px 12px 0 0;
+  margin: -2px 0 0 0;
+  background-color: var(--bg-bandeau-tache);
+  border-radius: 16px 16px 0 0;
   border-bottom: 1px solid var(--hr-separator);
 }
 
@@ -133,13 +133,9 @@ h1 {
   color: var(--text-principal);
   text-align: center;
   padding: 3px 8px;
-  background-color: #e8f4fd;
+  background-color: var(--bg-bandeau-tache);
   border-radius: 16px 16px 0 0;
   border-bottom: 1px solid var(--hr-separator);
-}
-
-body.dark-mode .passe-go-rank {
-  background-color: #1a2e3d;
 }
 
 .research-rewards {
@@ -220,7 +216,7 @@ body.dark-mode .passe-go-rank {
 }
 
 .research-reward-name.reward-good {
-  color: #16a34a;
+  color: var(--accent-vert-bon);
 }
 
 .research-reward-form {
@@ -273,24 +269,15 @@ body.dark-mode .passe-go-rank {
   width: 100%;
 }
 
-/* Cartes grid-5/6 : 3 colonnes sur mobile */
-.pokemon-grid-5 .pokemon-card,
+/* Cartes grid-6 : 3 colonnes sur mobile */
 .pokemon-grid-6 .pokemon-card {
   width: calc(33.33% - 4px);
   max-width: calc(33.33% - 4px);
   box-sizing: border-box;
 }
 
-.pokemon-grid-5,
 .pokemon-grid-6 {
   gap: 6px;
-}
-
-/* Grid-auto : largeur auto sur mobile */
-.pokemon-grid-auto .pokemon-card {
-  flex-grow: 0;
-  flex-shrink: 0;
-  box-sizing: border-box;
 }
 
 /* ==========================================
@@ -322,9 +309,12 @@ body.dark-mode .passe-go-rank {
 }
 
 /* Gigamax : fond orange */
-.pokemon-card[style*="bg-gigamax"] .image-container,
-.pokemon-card[style*="#FFF4E6"] .image-container {
-  background-color: var(--bg-gigamax) !important;
+.pokemon-card.gigamax {
+  background-color: var(--bg-gigamax);
+}
+
+.pokemon-card.gigamax .image-container {
+  background-color: var(--bg-gigamax);
 }
 
 .pokemon-img {
@@ -451,11 +441,19 @@ body.dark-mode .emoji-shiny {
   line-height: 1.2;
 }
 
-/* Note bas de carte (Pikachu/Évoli) */
-.pokemon-stats p[style] {
-  font-size: 7px;
-  margin-top: 4px;
-  line-height: 1.2;
+/* Image cliquable quand une version shiny existe */
+.pokemon-img[data-shiny] {
+  cursor: pointer;
+}
+
+/* Note bas de carte (Pikachu/Évoli) — 8px mobile, 10px desktop */
+.pokemon-stats .stats-note {
+  font-size: 8px;
+  color: var(--text-muet);
+  margin: 0;
+  line-height: 1.4;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .boost-value {
@@ -517,55 +515,6 @@ body.dark-mode .emoji-shiny {
 
 .team-text { font-weight: 600; }
 
-/* Cartes Raids standard (pokemon-grid sans grid-5/6) : 2 colonnes mobile */
-.pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) .pokemon-card {
-  max-width: 100%;
-}
-
-.pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) .image-container {
-  padding: 4px 0 2px 0;
-}
-
-.pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) .pokemon-img {
-  height: 70px;
-  width: auto;
-}
-
-.pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) .pokemon-name {
-  font-size: 15px;
-  min-height: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) .boost-value {
-  font-size: 13px;
-}
-
-.pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) .weather-container {
-  gap: 14px;
-  margin-top: 0;
-  padding: 0 0 2px 0;
-}
-
-.pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) .raid-team-size {
-  font-size: 9px;
-  margin-top: 2px;
-}
-
-/* Dernière carte impaire centrée */
-.pokemon-app .pokemon-grid .pokemon-card:last-child:nth-child(odd) {
-  grid-column: span 2;
-  justify-self: center;
-  max-width: 100%;
-}
-
 /* ==========================================
    TEXTES ET LABELS
    ========================================== */
@@ -580,13 +529,13 @@ body.dark-mode .emoji-shiny {
 
 .astuce-shiny {
   margin: 0 0 8px 10px;
-  color: #a0aec0;
+  color: var(--text-astuce);
   font-size: 9px;
 }
 
 .research-helper {
   text-align: center;
-  color: #a0aec0;
+  color: var(--text-astuce);
   font-size: 9px;
   margin: -4px 0 8px 0;
 }
@@ -603,12 +552,13 @@ body.dark-mode .emoji-shiny {
   width: 100%;
 }
 
-/* Intro règles */
-.intro-rules {
+/* Encadrés d'intro (règles + Passe Go Deluxe) */
+.intro-rules,
+.passe-go-deluxe-intro {
   max-width: 800px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 10px auto;
   background-color: var(--bg-carte);
-  border-left: 4px solid #F4D995;
+  border-left: 4px solid var(--accent-or);
   padding: 5px 12px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -619,7 +569,7 @@ body.dark-mode .emoji-shiny {
 }
 
 .intro-rules a {
-  color: #6b46c1;
+  color: var(--accent-violet);
   font-weight: 600;
   text-decoration: none;
 }
@@ -662,12 +612,6 @@ body.dark-mode .emoji-shiny {
   .research-helper { font-size: 16px; }
   .research-list { max-width: 100%; }
   .research-saison-titre { font-size: 18px; margin: -15px 0 16px 0; }
-  .research-rewards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0;
-  }
   .passe-go-rank { font-size: 16px; }
   .passe-go-intro { font-size: 16px; }
   .passe-go-pc { font-size: 14px; }
@@ -675,17 +619,7 @@ body.dark-mode .emoji-shiny {
   .pokemon-card:has(.passe-go-rank) .pokemon-name { margin-top: 0; margin-bottom: 0; }
   .passe-go-deluxe-title { font-size: 15px; margin: 6px 0 4px 12px; text-align: center; }
   .passe-go-deluxe-item { font-size: 15px; margin: 2px 0 2px 24px; text-align: center; }
-  .passe-go-deluxe-intro {
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    background-color: var(--bg-carte);
-    border-left: 4px solid #F4D995;
-    padding: 5px 12px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    font-size: 15px;
-    line-height: 1.5;
-  }
+  .passe-go-deluxe-intro { font-size: 15px; }
   .section-sous-titre { font-size: 16px; margin: 0 0 15px 0; }
   .intro-rules { font-size: 15px; padding: 15px; margin: 0 auto 30px auto; line-height: 1.6; }
 
@@ -695,35 +629,13 @@ body.dark-mode .emoji-shiny {
     margin-bottom: 24px;
   }
 
-  .pokemon-grid-5 .pokemon-card {
-    width: calc(20% - 20px);
-    max-width: calc(20% - 20px);
-  }
-
   .pokemon-grid-6 .pokemon-card {
     width: calc(16.66% - 20px);
     max-width: calc(16.66% - 20px);
   }
 
-  .pokemon-grid-5,
   .pokemon-grid-6 {
     gap: 16px;
-  }
-
-  .pokemon-grid-auto .pokemon-card {
-    width: 155px;
-    min-width: 155px;
-    max-width: 155px;
-  }
-
-  /* Cartes Raids standard desktop */
-  .pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) {
-    display: flex;
-    grid-template-columns: unset;
-  }
-
-  .pokemon-app .pokemon-grid:not(.pokemon-grid-5):not(.pokemon-grid-6):not(.pokemon-grid-auto) .pokemon-card {
-    max-width: 265px;
   }
 
   /* Carte */
@@ -742,8 +654,6 @@ body.dark-mode .emoji-shiny {
 
   /* Nom */
   .pokemon-name { font-size: 22px; margin: 4px 0; min-height: 67px; }
-  .pokemon-grid-5 .pokemon-name,
-  .pokemon-grid-6 .pokemon-name { font-size: 22px; margin: 4px 0; min-height: 67px; display: flex; align-items: center; justify-content: center; }
 
   /* Séparateur */
   .separator { margin: 5px 0; }
@@ -757,7 +667,7 @@ body.dark-mode .emoji-shiny {
   /* Stats */
   .pokemon-stats { margin-top: 6px; }
   .pokemon-stats p { font-size: 13px; margin: 0 0 2px 0; line-height: 18px; white-space: nowrap; }
-  .pokemon-stats p[style] { font-size: 10px; margin-top: 4px; line-height: 1.4; }
+  .pokemon-stats .stats-note { font-size: 10px; }
   .boost-value { font-size: 18px; }
 
   /* Météo */
@@ -773,7 +683,6 @@ body.dark-mode .emoji-shiny {
   .research-task { font-size: 16px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 0; margin-top: -14px; margin-left: 0; margin-right: 0; border-radius: 16px 16px 0 0; }
   .research-reward-item { width: calc(100% / 6); align-items: center; box-sizing: border-box; }
   .research-reward-name { font-size: 16px; align-self: stretch; }
-  .research-sep { display: none; }
   .research-image-container { width: 100px; height: 100px; }
   .research-image-container .emoji-shiny { width: 20px; height: 20px; }
   .research-image-container .badges { top: 6px; left: -10px; }

@@ -7,21 +7,9 @@
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="pokemon.css">
-  <style>
-    .pokemon-img[data-shiny] {
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .pokemon-img[data-shiny]:hover {
-      transform: scale(1.08);
-    }
-    .pokemon-img.shiny-active {
-      /* Aura supprimée */
-    }
-  </style>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="images/icon-512.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
 </head>
 <body>
 
@@ -30,173 +18,90 @@
 <div class="pokemon-app">
   <h1>Raids du moment</h1>
   <p class="raids-date">
-    Depuis le mardi 10 juin, 6h - Jusqu'au mardi 17 juin, 6h
+    Depuis le mercredi 1er juillet, 6h - Jusqu'au lundi 6 juillet, 6h
   </p>
   <p class="astuce-shiny">
-    <span style="font-style: normal;">💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
 
-  <h1 class="category-title tier-1">Raids 1 Étoile</h1>
+  <h2 class="category-title tier-1">Raids 1 Étoile</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-etourmi">
+    <div class="pokemon-card pk-goupix">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Etourmi.png" data-shiny="images/EtourmiS.png" alt="Étourmi" class="pokemon-img">
+        <img src="images/Goupix.png" data-shiny="images/GoupixS.png" alt="Goupix" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Étourmi</h2>
+        <h2 class="pokemon-name">Goupix</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Normal</span><img src="images/normal.webp" alt="Normal" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Feu</span><img src="images/feu.webp" alt="Feu" class="type-icon"></div>
         </div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">410</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">513</span></p>
+          <p class="stat-range">PC du 100% : <span class="boost-value">504</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">631</span></p>
           <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
-            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="images/ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-tylton">
+    <div class="pokemon-card pk-goupix-a">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Tylton.png" data-shiny="images/TyltonS.png" alt="Tylton" class="pokemon-img">
+        <img src="images/GoupixA.png" data-shiny="images/GoupixAS.png" alt="Goupix d'Alola" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Tylton</h2>
+        <h2 class="pokemon-name">Goupix d'Alola</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Normal</span><img src="images/normal.webp" alt="Normal" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Glace</span><img src="images/glace.webp" alt="Glace" class="type-icon"></div>
         </div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">470</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">588</span></p>
+          <p class="stat-range">PC du 100% : <span class="boost-value">504</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">631</span></p>
           <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
-            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Neige</span><img src="images/Neige.webp" alt="Neige" class="weather-icon"></div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-vostourno">
+    <div class="pokemon-card pk-fantominus">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Vostourno.png" data-shiny="images/VostournoS.png" alt="Vostourno" class="pokemon-img">
+        <img src="images/Fantominus.png" data-shiny="images/FantominusS.png" alt="Fantominus" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Vostourno</h2>
+        <h2 class="pokemon-name">Fantominus</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Ténèbres</span><img src="images/tenebres.webp" alt="Ténèbres" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Spectre</span><img src="images/spectre.webp" alt="Spectre" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Poison</span><img src="images/poison.webp" alt="Poison" class="type-icon"></div>
         </div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">726</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">908</span></p>
+          <p class="stat-range">PC du 100% : <span class="boost-value">702</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">878</span></p>
           <div class="weather-container">
             <div class="weather-block"><span class="weather-text">Brouillard</span><img src="images/Brouillard.webp" alt="Brouillard" class="weather-icon"></div>
-            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Couvert</span><img src="images/Couvert.webp" alt="Couvert" class="weather-icon"></div>
           </div>
         </div>
       </div>
     </div>
 
-  </div>
-
-  <h1 class="category-title tier-3">Raids 3 Étoiles</h1>
-  <div class="pokemon-grid pokemon-grid-6">
-
-    <div class="pokemon-card pk-bleuseille">
+    <div class="pokemon-card pk-furaiglon">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Bleuseille.png" data-shiny="images/BleuseilleS.png" alt="Bleuseille" class="pokemon-img">
+        <img src="images/Furaiglon.png" data-shiny="images/FuraiglonS.png" alt="Furaiglon" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Bleuseille</h2>
-        <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
-        </div>
-        <hr class="separator">
-        <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">779</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">974</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pokemon-card pk-gueriaigle-h">
-      <div class="image-container">
-        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/GueriaigleH.png" data-shiny="images/GueriaigleHS.png" alt="Gueriaigle de Hisui" class="pokemon-img">
-      </div>
-      <div class="card-content">
-        <h2 class="pokemon-name">Gueriaigle<br>de Hisui</h2>
-        <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Psy</span><img src="images/psy.webp" alt="Psy" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
-        </div>
-        <hr class="separator">
-        <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">1 608</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">2 010</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pokemon-card pk-lestombaile">
-      <div class="image-container">
-        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Lestombaile.png" data-shiny="images/LestombaileS.png" alt="Lestombaile" class="pokemon-img">
-      </div>
-      <div class="card-content">
-        <h2 class="pokemon-name">Lestombaile</h2>
-        <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Ténèbres</span><img src="images/tenebres.webp" alt="Ténèbres" class="type-icon"></div>
-        </div>
-        <hr class="separator">
-        <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">1 421</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">1 777</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
-            <div class="weather-block"><span class="weather-text">Brouillard</span><img src="images/Brouillard.webp" alt="Brouillard" class="weather-icon"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <h1 class="category-title tier-mega">Méga-Raids</h1>
-  <div class="pokemon-grid pokemon-grid-6">
-
-    <div class="pokemon-card pk-roucarnage-m">
-      <div class="image-container">
-        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/RoucarnageM.png" data-shiny="images/RoucarnageMS.png" alt="Méga-Roucarnage" class="pokemon-img">
-      </div>
-      <div class="card-content">
-        <h2 class="pokemon-name">Méga-Roucarnage</h2>
+        <h2 class="pokemon-name">Furaiglon</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
           <div class="type-block"><span class="type-text">Normal</span><img src="images/normal.webp" alt="Normal" class="type-icon"></div>
@@ -204,42 +109,114 @@
         </div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">1 216</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">1 521</span></p>
+          <p class="stat-range">PC du 100% : <span class="boost-value">852</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">1 065</span></p>
           <div class="weather-container">
             <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
             <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
           </div>
         </div>
-        <hr class="separator">
-        <div class="raid-team-size"><span class="team-text">3 à 5 dresseurs</span></div>
       </div>
     </div>
 
   </div>
 
-  <h1 class="category-title tier-legendary">Raids Légendaires</h1>
+  <h2 class="category-title tier-3">Raids 3 Étoiles</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-katagami">
+    <div class="pokemon-card pk-insecateur">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Katagami.png" data-shiny="images/KatagamiS.png" alt="Katagami" class="pokemon-img">
+        <img src="images/Insecateur.png" data-shiny="images/InsecateurS.png" alt="Insécateur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Katagami</h2>
-        <p class="pokemon-subtitle">Hémisphère Nord Uniq.</p>
+        <h2 class="pokemon-name">Insécateur</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Plante</span><img src="images/plante.webp" alt="Plante" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Insecte</span><img src="images/insecte.webp" alt="Insecte" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
+        </div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">1 546</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">1 933</span></p>
+          <div class="weather-container">
+            <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="images/pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-leviator">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Leviator.png" data-shiny="images/LeviatorS.png" alt="Léviator" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Léviator</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Eau</span><img src="images/eau.webp" alt="Eau" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
+        </div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">1 937</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">2 422</span></p>
+          <div class="weather-container">
+            <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="images/pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-ronflex">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Ronflex.png" data-shiny="images/RonflexS.png" alt="Ronflex" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Ronflex</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Normal</span><img src="images/normal.webp" alt="Normal" class="type-icon"></div>
+        </div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">1 843</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">2 304</span></p>
+          <div class="weather-container">
+            <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="category-title tier-mega">Méga-Raids</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-lucario-m">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/LucarioM.png" data-shiny="images/LucarioMS.png" alt="Méga-Lucario" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Lucario</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Combat</span><img src="images/combat.webp" alt="Combat" class="type-icon"></div>
           <div class="type-block"><span class="type-text">Acier</span><img src="images/acier.webp" alt="Acier" class="type-icon"></div>
         </div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">2 101</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">2 626</span></p>
+          <p class="stat-range">PC du 100% : <span class="boost-value">1 544</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">1 930</span></p>
           <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="images/ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Couvert</span><img src="images/Couvert.webp" alt="Couvert" class="weather-icon"></div>
             <div class="weather-block"><span class="weather-text">Neige</span><img src="images/Neige.webp" alt="Neige" class="weather-icon"></div>
           </div>
         </div>
@@ -248,30 +225,86 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-bamboiselle">
+  </div>
+
+  <h2 class="category-title tier-legendary">Raids Légendaires</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-artikodin">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Bamboiselle.png" data-shiny="images/BamboiselleS.png" alt="Bamboiselle" class="pokemon-img">
+        <img src="images/Artikodin.png" data-shiny="images/ArtikodinS.png" alt="Artikodin" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Bamboiselle</h2>
-        <p class="pokemon-subtitle">Hémisphère Sud Uniq.</p>
+        <h2 class="pokemon-name">Artikodin</h2>
         <hr class="separator">
         <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Acier</span><img src="images/acier.webp" alt="Acier" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Glace</span><img src="images/glace.webp" alt="Glace" class="type-icon"></div>
           <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
         </div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p class="stat-range">PC du 100% : <span class="boost-value">1 772</span></p>
-          <p class="stat-100">Boost Météo : <span class="boost-value">2 216</span></p>
+          <p class="stat-range">PC du 100% : <span class="boost-value">1 743</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">2 179</span></p>
           <div class="weather-container">
             <div class="weather-block"><span class="weather-text">Neige</span><img src="images/Neige.webp" alt="Neige" class="weather-icon"></div>
             <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
           </div>
         </div>
         <hr class="separator">
-        <div class="raid-team-size"><span class="team-text">3 à 5 dresseurs</span></div>
+        <div class="raid-team-size"><span class="team-text">2 à 5 dresseurs</span></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-electhor">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Electhor.png" data-shiny="images/ElecthorS.png" alt="Électhor" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Électhor</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Électrik</span><img src="images/electrik.webp" alt="Électrik" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
+        </div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">2 015</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">2 519</span></p>
+          <div class="weather-container">
+            <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="images/pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
+          </div>
+        </div>
+        <hr class="separator">
+        <div class="raid-team-size"><span class="team-text">3 à 6 dresseurs</span></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-sulfura">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Sulfura.png" data-shiny="images/SulfuraS.png" alt="Sulfura" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Sulfura</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Feu</span><img src="images/feu.webp" alt="Feu" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
+        </div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">1 980</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">2 475</span></p>
+          <div class="weather-container">
+            <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="images/ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
+          </div>
+        </div>
+        <hr class="separator">
+        <div class="raid-team-size"><span class="team-text">3 à 6 dresseurs</span></div>
       </div>
     </div>
 
@@ -279,31 +312,8 @@
 
 </div>
 
-<script src="script.js?v=2">
+<script src="script.js?v=3">
 </script>
 
-<script>
-  const pokemonImages = document.querySelectorAll('.pokemon-img[data-shiny]');
-  pokemonImages.forEach(img => {
-    const srcNormale = img.src;
-    const srcShiny = img.getAttribute('data-shiny');
-    img.addEventListener('click', () => {
-      const container = img.closest('.image-container');
-      const emoji = container ? container.querySelector('.emoji-shiny') : null;
-      if (emoji && window.getComputedStyle(emoji).display === 'none') return;
-      const currentURL = new URL(img.src, window.location.href).pathname;
-      const normalURL = new URL(srcNormale, window.location.href).pathname;
-      if (currentURL === normalURL) {
-        img.src = srcShiny;
-        img.classList.add('shiny-active');
-        if (emoji) emoji.classList.add('shiny-active');
-      } else {
-        img.src = srcNormale;
-        img.classList.remove('shiny-active');
-        if (emoji) emoji.classList.remove('shiny-active');
-      }
-    });
-  });
-</script>
 </body>
 </html>

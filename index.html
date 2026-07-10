@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GoEon — Ressources Pokémon Go</title>
+  <title>GoEon - Ressources Pokémon Go</title>
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;800&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
   <link rel="apple-touch-icon" href="images/icon-192.png">
@@ -30,7 +29,7 @@
 
   <!-- TUTO PWA -->
   <div class="pwa-banner" id="pwa-banner">
-    <button class="pwa-toggle" onclick="togglePwa()">
+    <button class="pwa-toggle" aria-expanded="false" onclick="toggleBanner(this, 'pwa-content', 'pwa-arrow')">
       Installer GoEon sur votre téléphone
       <span class="pwa-arrow" id="pwa-arrow">▾</span>
     </button>
@@ -53,6 +52,27 @@
       </ul>
     </div>
   </div>
+
+  <!-- SECTION NOUVEAUTÉS -->
+  <section class="home-section news-section">
+    <h2 class="section-title">Nouveautés</h2>
+    <ul class="news-list">
+      <li class="news-group">
+        <span class="news-date">10/07</span>
+        <ul class="news-items">
+          <li><a href="#meilleurs-pokemon">Ajout des meilleurs Pokémon de type Fée, Feu, Glace &amp; Insecte</a></li>
+          <li><a href="TachesEtude.html">Mise à jour des Tâches d'Étude</a></li>
+          <li><span class="news-note">Les raids seront remis à jour après le GoFest !</span></li>
+        </ul>
+      </li>
+      <li class="news-group">
+        <span class="news-date news-date-upcoming">À venir</span>
+        <ul class="news-items">
+          <li><span class="news-text">Team Go Rocket : Sbires &amp; Chefs</span></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
   <!-- SECTION SAISON EN COURS -->
   <section class="home-section">
@@ -88,7 +108,7 @@
   </section>
 
   <!-- SECTION MEILLEURS POKÉMON -->
-  <section class="home-section">
+  <section class="home-section" id="meilleurs-pokemon">
     <h2 class="section-title">Meilleurs Pokémon</h2>
     <div class="type-grid">
 
@@ -111,7 +131,7 @@
         <span>Dragon</span>
       </a>
 
-      <a href="TopEau.html" class="type-card type-eau grey-card">
+      <a href="TopEau.html" class="type-card type-eau">
         <img src="images/eau.webp" alt="Eau">
         <span>Eau</span>
       </a>
@@ -121,22 +141,22 @@
         <span>Électrik</span>
       </a>
 
-      <a href="#" class="type-card type-fee disabled" onclick="showComingSoon(event)">
+      <a href="TopFee.html" class="type-card type-fee">
         <img src="images/fee.webp" alt="Fée">
         <span>Fée</span>
       </a>
 
-      <a href="#" class="type-card type-feu disabled" onclick="showComingSoon(event)">
+      <a href="TopFeu.html" class="type-card type-feu">
         <img src="images/feu.webp" alt="Feu">
         <span>Feu</span>
       </a>
 
-      <a href="#" class="type-card type-glace disabled" onclick="showComingSoon(event)">
+      <a href="TopGlace.html" class="type-card type-glace">
         <img src="images/glace.webp" alt="Glace">
         <span>Glace</span>
       </a>
 
-      <a href="#" class="type-card type-insecte disabled" onclick="showComingSoon(event)">
+      <a href="TopInsecte.html" class="type-card type-insecte">
         <img src="images/insecte.webp" alt="Insecte">
         <span>Insecte</span>
       </a>
@@ -204,7 +224,7 @@
         <span>Boost Poussières</span>
       </a>
 
-      <a href="regionaux.html" class="home-card blue-card">
+      <a href="#" class="home-card blue-card disabled" onclick="showComingSoon(event)">
         <div class="img-wrapper"><img src="images/Monde.png" alt="Pokémon Régionaux"></div>
         <span>Pokémon Régionaux</span>
       </a>
@@ -212,18 +232,25 @@
     </div>
   </section>
 
-  <!-- SECTION ÉVÈNEMENTS -->
-  <section class="home-section">
-    <h2 class="section-title">Évènements</h2>
-    <div class="card-grid">
-
-      <a href="TaxiVolant.html" class="home-card grey-card">
-        <div class="img-wrapper"><img src="images/TapatoesJ.png" alt="Taxi Volant"></div>
-        <span>Taxi Volant</span>
-      </a>
-
+  <!-- LÉGENDE DU SITE -->
+  <div class="legend-banner" id="legend-banner">
+    <button class="legend-toggle" aria-expanded="false" onclick="toggleBanner(this, 'legend-content', 'legend-arrow')">
+      Comprendre le site
+      <span class="legend-arrow" id="legend-arrow">▾</span>
+    </button>
+    <div class="legend-content" id="legend-content">
+      <ul class="legend-items">
+        <li>
+          <span class="legend-swatch legend-swatch-good"></span>
+          <span><strong class="legend-text-good">Nom en vert</strong> = Bon Pokémon (voir "Meilleurs Pokémon")</span>
+        </li>
+        <li>
+          <span class="legend-swatch legend-swatch-shiny"><img src="images/Shiny.png" alt="Shiny" class="emoji-shiny"></span>
+          <span><strong>Badge Shiny</strong> = Chromatique disponible (cliquez sur le Pokémon pour voir la version chromatique)</span>
+        </li>
+      </ul>
     </div>
-  </section>
+  </div>
 
   <!-- FOOTER -->
   <footer class="home-footer">
@@ -237,7 +264,7 @@
 
 <div id="coming-soon-tooltip" class="coming-soon-tooltip">Disponible prochainement !</div>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 <script>
   function switchTab(os, btn) {
     document.getElementById('pwa-android').style.display = os === 'android' ? 'block' : 'none';
@@ -246,17 +273,15 @@
     btn.classList.add('active');
   }
 
-  function togglePwa() {
-    const content = document.getElementById('pwa-content');
-    const arrow = document.getElementById('pwa-arrow');
-    content.classList.toggle('open');
-    arrow.textContent = content.classList.contains('open') ? '▴' : '▾';
-  }
-
   function showComingSoon(e) {
     e.preventDefault();
     const tooltip = document.getElementById('coming-soon-tooltip');
-    tooltip.style.left = (e.pageX - 80) + 'px';
+    const marge = 8;
+    const largeurTooltip = tooltip.offsetWidth;
+    const maxGauche = document.documentElement.clientWidth - largeurTooltip - marge;
+    let gauche = e.pageX - largeurTooltip / 2;
+    gauche = Math.max(marge, Math.min(gauche, maxGauche + window.scrollX));
+    tooltip.style.left = gauche + 'px';
     tooltip.style.top = (e.pageY - 45) + 'px';
     tooltip.classList.add('visible');
     setTimeout(() => tooltip.classList.remove('visible'), 1800);

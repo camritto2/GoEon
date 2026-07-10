@@ -1,0 +1,269 @@
+/* ==========================================
+   ROCKET.CSS — PAGE TEAM GO ROCKET : CHEFS
+   Surcharges de global.css pour layout 1/3
+   ========================================== */
+
+/* Liste des chefs */
+.rocket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto 15px auto;
+}
+
+/* ==========================================
+   INTRO
+   ========================================== */
+
+.rocket-highlight-red {
+  color: #e53e3e;
+  font-weight: 700;
+}
+
+.rocket-intro-list {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.rocket-intro-list li {
+  margin: 2px 0;
+}
+
+/* ==========================================
+   BANDEAU CHEF (image + nom)
+   ========================================== */
+
+.rocket-chef-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  padding: 2px 8px;
+  margin: -2px 0 0 0;
+  background-color: #3a3a3a;
+  border-radius: 16px 16px 0 0;
+}
+
+body.dark-mode .rocket-chef-banner {
+  background-color: #2e2e2e;
+}
+
+.rocket-chef-banner img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ==========================================
+   BANDEAU SLOT ("1er Pokémon", "2e Pokémon"…)
+   ========================================== */
+
+.rocket-slot-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  text-align: center;
+  padding: 2px 0;
+  background-color: var(--bg-image-container);
+  border-bottom: 1px solid var(--hr-separator);
+}
+
+/* ==========================================
+   RANGÉES À 3 COLONNES
+   ========================================== */
+
+.rocket-row .research-reward-item {
+  width: calc(100% / 3);
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+.rocket-row .research-reward-item:last-of-type {
+  border-right: none;
+}
+
+/* Images : forcer la taille (sans overflow:hidden pour ne pas rogner le badge) */
+.rocket-list .rocket-row .research-image-container {
+  width: 50px;
+  height: 52px;
+  padding-top: 2px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.rocket-list .rocket-row .research-image-container img.pokemon-img {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Noms */
+.rocket-list .rocket-row .research-reward-name {
+  font-size: 9px;
+  margin: 0;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* ==========================================
+   SÉPARATEURS ÉPAISSIS ENTRE LES SLOTS
+   ========================================== */
+
+.rocket-list .research-rangee-sep {
+  border-top-width: 3px;
+}
+
+/* ==========================================
+   BADGE OBSCUR (dans research-image-container)
+   ========================================== */
+
+.rocket-row .research-image-container .badges img.badge-obscur-icon {
+  width: 12px;
+  height: 12px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+/* ==========================================
+   POKÉMON CAPTURABLE (1er de chaque chef)
+   ========================================== */
+
+.rocket-capturable {
+  position: relative;
+  background-color: rgba(229, 62, 62, 0.06);
+  border: 2px solid #e53e3e;
+  border-radius: 8px;
+  margin: 1px 4px;
+  padding: 4px 0;
+}
+
+/* La règle :last-of-type écrase border-right : on la réaffirme ici pour les cases capturables */
+.rocket-row .research-reward-item.rocket-capturable:last-of-type {
+  border-right: 2px solid #e53e3e;
+}
+
+.rocket-shiny-corner {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1;
+}
+
+/* ==========================================
+   TYPES SOUS CHAQUE POKÉMON
+   ========================================== */
+
+.rocket-types {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+  margin: 2px auto 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.rocket-types .type-block {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1px;
+}
+
+.rocket-types .type-text {
+  font-size: 7px;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  margin: 0;
+  line-height: 1;
+}
+
+.rocket-types .type-icon {
+  height: 12px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ==========================================
+   DESKTOP — min-width: 769px
+   ========================================== */
+
+@media (min-width: 769px) {
+
+  .rocket-list {
+    max-width: 600px;
+  }
+
+  .rocket-chef-banner {
+    font-size: 26px;
+    gap: 12px;
+    padding: 6px 12px;
+    margin-top: -14px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .rocket-chef-banner img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .rocket-slot-label {
+    font-size: 14px;
+    padding: 3px 0;
+  }
+
+  .rocket-list .rocket-row .research-reward-item {
+    padding-bottom: 9px;
+  }
+
+  .rocket-list .rocket-row .research-image-container {
+    width: 100px;
+    height: 102px;
+    padding-top: 2px;
+    box-sizing: border-box;
+    align-items: flex-start;
+  }
+
+  .rocket-list .rocket-row .research-image-container img.pokemon-img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+  }
+
+  .rocket-list .rocket-row .research-reward-name {
+    font-size: 16px;
+  }
+
+  .rocket-row .research-image-container .badges img.badge-obscur-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .rocket-capturable {
+    margin: 2px 6px;
+    padding: 6px 0;
+  }
+
+  .rocket-shiny-corner {
+    top: 10px;
+    right: 10px;
+  }
+
+  .rocket-types .type-text {
+    font-size: 10px;
+  }
+
+  .rocket-types .type-icon {
+    height: 20px;
+  }
+
+}

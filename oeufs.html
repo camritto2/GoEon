@@ -22,16 +22,10 @@
     body.dark-mode .proba-icon {
       filter: invert(1);
     }
-    .pokemon-img[data-shiny] {
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .pokemon-img[data-shiny]:hover { transform: scale(1.08); }
-    .pokemon-img.shiny-active { /* aura supprimée */ }
   </style>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="images/icon-512.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
 </head>
 <body>
 
@@ -42,17 +36,16 @@
   <h1>Les Œufs de la Saison</h1>
 
   <div class="intro-rules">
-    Un Pokémon en <span style="color: #16a34a; font-weight: bold;">vert</span> est un bon Pokémon en Raids (PvE).<br>
     Les IV de ces Pokémon sont minimum 10-10-10.<br>
     <br>
-    La probabilité est indiquée par <img src="images/ProbaOeuf.webp" class="proba-icon" style="width:14px; vertical-align:middle;"> — plus il y en a, plus le Pokémon est <strong>rare</strong>.
+    La probabilité est indiquée par <img src="images/ProbaOeuf.webp" alt="●" class="proba-icon" style="width:14px; vertical-align:middle;"> — plus il y en a, plus le Pokémon est <strong>rare</strong>.
   </div>
 
   <p class="astuce-shiny">
-    <span style="font-style: normal;">💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
 
-  <h1 class="category-title tier-1">Œufs 2 km</h1>
+  <h2 class="category-title tier-1">Œufs 2 km</h2>
   <p class="section-sous-titre">Obtenus aux Pokéstop</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-ecrapince">
@@ -85,7 +78,7 @@
     </div>
   </div>
 
-    <h1 class="category-title tier-1">Œufs 5 km</h1>
+    <h2 class="category-title tier-1">Œufs 5 km</h2>
   <p class="section-sous-titre">Obtenus aux Pokéstop</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-babimanta">
@@ -118,7 +111,7 @@
     </div>
   </div>
 
-    <h1 class="category-title tier-1">Œufs 10 km</h1>
+    <h2 class="category-title tier-1">Œufs 10 km</h2>
   <p class="section-sous-titre">Obtenus aux Pokéstop</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-absol">
@@ -130,7 +123,7 @@
       <div class="card-content"><h2 class="pokemon-name">Charbambin</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">418</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
     </div>
     <div class="pokemon-card pk-forgerette">
-      <div class="image-container"><div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div><img src="images/Forgerette.png" data-shiny="images/ForegetteS.png" alt="Forgerette" class="pokemon-img"></div>
+      <div class="image-container"><div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div><img src="images/Forgerette.png" data-shiny="images/ForgeretteS.png" alt="Forgerette" class="pokemon-img"></div>
       <div class="card-content"><h2 class="pokemon-name">Forgerette</h2><hr class="separator"><div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">491</span></p><div class="proba-container"><img src="images/ProbaOeuf.webp" alt="●" class="proba-icon"></div></div></div>
     </div>
     <div class="pokemon-card pk-frigodo">
@@ -151,7 +144,7 @@
     </div>
   </div>
 
-    <h1 class="category-title tier-1">Œufs 7 km — Cadeaux</h1>
+    <h2 class="category-title tier-1">Œufs 7 km — Cadeaux</h2>
   <p class="section-sous-titre">Obtenus en ouvrant les cadeaux de ses amis</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-corayon-g">
@@ -184,7 +177,7 @@
     </div>
   </div>
 
-    <h1 class="category-title tier-1">Œufs 12 km — Team Go Rocket</h1>
+    <h2 class="category-title tier-1">Œufs 12 km — Team Go Rocket</h2>
   <p class="section-sous-titre">Obtenus en battant les chefs de la Team Go Rocket</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-gribouraigne">
@@ -213,7 +206,7 @@
     </div>
   </div>
 
-    <h1 class="category-title tier-1">Œufs 5 km — Récompense Semaine</h1>
+    <h2 class="category-title tier-1">Œufs 5 km — Récompense Semaine</h2>
   <p class="section-sous-titre">Obtenus le lundi matin après avoir marché 25 km la semaine précédente</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-debugant">
@@ -238,7 +231,7 @@
     </div>
   </div>
 
-    <h1 class="category-title tier-1">Œufs 10 km — Récompense Semaine</h1>
+    <h2 class="category-title tier-1">Œufs 10 km — Récompense Semaine</h2>
   <p class="section-sous-titre">Obtenus le lundi matin après avoir marché 50 km la semaine précédente</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-draby">
@@ -255,7 +248,7 @@
     </div>
   </div>
 
-    <h1 class="category-title tier-1">Œufs 7 km — Routes</h1>
+    <h2 class="category-title tier-1">Œufs 7 km — Routes</h2>
   <p class="section-sous-titre">Donnés par Matéo à la fin d'une route</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-bargantua">
@@ -280,7 +273,7 @@
     </div>
   </div>
 
-    <h1 class="category-title tier-1">Œufs 1 km — Quotidiens</h1>
+    <h2 class="category-title tier-1">Œufs 1 km — Quotidiens</h2>
   <p class="section-sous-titre">Obtenus chaque jour à 0h (si l'œuf de la veille a bien éclos) — Probabilité identique pour tous</p>
   <div class="pokemon-grid pokemon-grid-6">
     <div class="pokemon-card pk-bulbizarre">
@@ -384,7 +377,7 @@
     <div class="pokemon-card pk-poussifeu">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Poussifeu.png" data-shiny="images/PoussifeauS.png" alt="Poussifeu" class="pokemon-img">
+        <img src="images/Poussifeu.png" data-shiny="images/PoussifeuS.png" alt="Poussifeu" class="pokemon-img">
       </div>
       <div class="card-content">
         <h2 class="pokemon-name">Poussifeu</h2>
@@ -552,7 +545,7 @@
     <div class="pokemon-card pk-flamiaou">
       <div class="image-container">
         <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="images/Flamiaou.png" data-shiny="images/FlamiaoiS.png" alt="Flamiaou" class="pokemon-img">
+        <img src="images/Flamiaou.png" data-shiny="images/FlamiaouS.png" alt="Flamiaou" class="pokemon-img">
       </div>
       <div class="card-content">
         <h2 class="pokemon-name">Flamiaou</h2>
@@ -665,21 +658,6 @@
 
 </div>
 
-<script src="script.js?v=2"></script>
-<script>
-  document.querySelectorAll('.pokemon-img[data-shiny]').forEach(img => {
-    const srcNormale = img.src;
-    const srcShiny = img.getAttribute('data-shiny');
-    img.addEventListener('click', () => {
-      const container = img.closest('.image-container');
-      const emoji = container ? container.querySelector('.emoji-shiny') : null;
-      if (emoji && window.getComputedStyle(emoji).display === 'none') return;
-      const isNormal = new URL(img.src, window.location.href).pathname === new URL(srcNormale, window.location.href).pathname;
-      img.src = isNormal ? srcShiny : srcNormale;
-      img.classList.toggle('shiny-active', isNormal);
-      if (emoji) emoji.classList.toggle('shiny-active', isNormal);
-    });
-  });
-</script>
+<script src="script.js?v=3"></script>
 </body>
 </html>

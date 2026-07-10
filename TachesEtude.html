@@ -6,20 +6,10 @@
   <title>GoEon - Tâches d'Étude</title>
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="global.css">
-  <style>
-    .pokemon-img[data-shiny] {
-      cursor: pointer;
-    }
-    .pokemon-img.shiny-active {
-      /* Aura supprimée */
-    }
-    body.dark-mode .research-task {
-      background-color: #1a2e3d;
-    }
-  </style>
+  <link rel="stylesheet" href="pokemon.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="images/icon-512.png">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
 </head>
 <body>
 
@@ -28,34 +18,34 @@
 <div class="pokemon-app">
   <h1>Tâches d'Étude</h1>
   <p class="research-saison-titre">Toutes les Tâches d'Étude de la saison <u>Toujours en Avant</u></p>
-  <p class="research-helper">💡 Les valeurs indiquées correspondent à la PC du 100%.</p>
+  <p class="research-helper">💡 Les valeurs indiquées correspondent aux PC du 100%.</p>
 
-  <h1 class="category-title tier-1">Récompense des 7 Jours</h1>
+  <h2 class="category-title tier-1">Récompense des 7 Jours</h2>
   <div class="research-list">
 
     <div class="research-card">
       <span class="research-task">Récompense des 7 jours</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-dracolosse">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Dracolosse.png" data-shiny="images/DracolosseS.png" alt="Dracolosse" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Dracolosse</span>
+          <span class="research-reward-name">Dracolosse</span>
           <span class="research-cp">1 625</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-coupenotte">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Coupenotte.png" data-shiny="images/CoupenotteS.png" alt="Coupenotte" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Coupenotte</span>
+          <span class="research-reward-name">Coupenotte</span>
           <span class="research-cp">586</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-monorpale">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Monorpale.png" data-shiny="images/MonorpaleS.png" alt="Monorpale" class="pokemon-img">
@@ -64,7 +54,7 @@
           <span class="research-cp">595</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-bebecaille">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Bebecaille.png" data-shiny="images/BebecailleS.png" alt="Bébécaille" class="pokemon-img">
@@ -73,7 +63,7 @@
           <span class="research-cp">415</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-wimessir">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/WimessirM.png" data-shiny="images/WimessirMS.png" alt="Wimessir mâle" class="pokemon-img">
@@ -82,7 +72,7 @@
           <span class="research-cp">1 047</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-craparoi">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Craparoi.png" data-shiny="images/CraparoiS.png" alt="Craparoi" class="pokemon-img">
@@ -96,37 +86,37 @@
 
   </div>
 
-  <h1 class="category-title tier-1">Tâches de Capture</h1>
+  <h2 class="category-title tier-1">Tâches de Capture</h2>
   <div class="research-list">
 
     <div class="research-card">
       <span class="research-task">Attrape 7 Pokémon</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-magicarpe">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Magicarpe.png" data-shiny="images/MagicarpeS.png" alt="Magicarpe" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Magicarpe</span>
+          <span class="research-reward-name">Magicarpe</span>
           <span class="research-cp">117</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-nounourson">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Nounourson.png" data-shiny="images/NounoursonS.png" alt="Nounourson" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Nounourson</span>
+          <span class="research-reward-name">Nounourson</span>
           <span class="research-cp">579</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-sovkipou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Sovkipou.png" data-shiny="images/SovkipouS.png" alt="Sovkipou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Sovkipou</span>
+          <span class="research-reward-name">Sovkipou</span>
           <span class="research-cp">215</span>
         </div>
 
@@ -137,7 +127,7 @@
       <span class="research-task">Attrape 7 espèces différentes de Pokémon</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-psykokwak">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Psykokwak.png" data-shiny="images/PsykokwakS.png" alt="Psykokwak" class="pokemon-img">
@@ -146,7 +136,7 @@
           <span class="research-cp">474</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-poissoroy">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Poissoroy.png" data-shiny="images/PoissoroyS.png" alt="Poissoroy" class="pokemon-img">
@@ -155,7 +145,7 @@
           <span class="research-cp">926</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-marill">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Marill.png" data-shiny="images/MarillS.png" alt="Marill" class="pokemon-img">
@@ -164,16 +154,16 @@
           <span class="research-cp">197</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-teddiursa">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Teddiursa.png" data-shiny="images/TeddiursaS.png" alt="Teddiursa" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Teddiursa</span>
+          <span class="research-reward-name">Teddiursa</span>
           <span class="research-cp">569</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-lombre">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Lombre.png" data-shiny="images/LombreS.png" alt="Lombre" class="pokemon-img">
@@ -182,16 +172,16 @@
           <span class="research-cp">513</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-moufouette">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Moufouette.png" data-shiny="images/MoufouetteS.png" alt="Moufouette" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Moufouette</span>
+          <span class="research-reward-name">Moufouette</span>
           <span class="research-cp">493</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-leopardus">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Leopardus.png" data-shiny="images/LeopardusS.png" alt="Léopardus" class="pokemon-img">
@@ -200,25 +190,25 @@
           <span class="research-cp">791</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-darumarond">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Darumarond.png" data-shiny="images/DarumarondS.png" alt="Darumarond" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Darumarond</span>
+          <span class="research-reward-name">Darumarond</span>
           <span class="research-cp">618</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-flingouste">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Flingouste.png" data-shiny="images/FlingousteS.png" alt="Flingouste" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Flingouste</span>
+          <span class="research-reward-name">Flingouste</span>
           <span class="research-cp">466</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-dedenne">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Dedenne.png" data-shiny="images/DedenneS.png" alt="Dedenne" class="pokemon-img">
@@ -227,21 +217,21 @@
           <span class="research-cp">789</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-bombydou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Bombydou.png" data-shiny="images/BombydouS.png" alt="Bombydou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Bombydou</span>
+          <span class="research-reward-name">Bombydou</span>
           <span class="research-cp">380</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-olivini">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Olivini.png" data-shiny="images/OliviniS.png" alt="Olivini" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Olivini</span>
+          <span class="research-reward-name">Olivini</span>
           <span class="research-cp">366</span>
         </div>
 
@@ -252,7 +242,7 @@
       <span class="research-task">Attrape 5 Pokémon boostés par la météo</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-goupix">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Goupix.png" data-shiny="images/GoupixS.png" alt="Goupix" class="pokemon-img">
@@ -261,16 +251,16 @@
           <span class="research-cp">378</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ptitard">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ptitard.png" data-shiny="images/PtitardS.png" alt="Ptitard" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ptitard</span>
+          <span class="research-reward-name">Ptitard</span>
           <span class="research-cp">355</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-goelise">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Goelise.png" data-shiny="images/GoeliseS.png" alt="Goélise" class="pokemon-img">
@@ -279,39 +269,39 @@
           <span class="research-cp">328</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-hippopotas">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Hippopotas.png" data-shiny="images/HippopotasS.png" alt="Hippopotas" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Hippopotas</span>
+          <span class="research-reward-name">Hippopotas</span>
           <span class="research-cp">528</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-blizzi">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Blizzi.png" data-shiny="images/BlizziS.png" alt="Blizzi" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Blizzi</span>
+          <span class="research-reward-name">Blizzi</span>
           <span class="research-cp">497</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-nodulithe">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Nodulithe.png" data-shiny="images/NodulitheS.png" alt="Nodulithe" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Nodulithe</span>
+          <span class="research-reward-name">Nodulithe</span>
           <span class="research-cp">516</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-sorbebe">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Sorbebe.png" data-shiny="images/SorbebeS.png" alt="Sorbébé" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Sorbébé</span>
+          <span class="research-reward-name">Sorbébé</span>
           <span class="research-cp">443</span>
         </div>
 
@@ -322,16 +312,16 @@
       <span class="research-task">Attrape 10 Pokémon de type Plante</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-bulbizarre">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Bulbizarre.png" data-shiny="images/BulbizarreS.png" alt="Bulbizarre" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Bulbizarre</span>
+          <span class="research-reward-name">Bulbizarre</span>
           <span class="research-cp">477</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-germignon">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Germignon.png" data-shiny="images/GermignonS.png" alt="Germignon" class="pokemon-img">
@@ -340,25 +330,25 @@
           <span class="research-cp">400</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-arcko">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Arcko.png" data-shiny="images/ArckoS.png" alt="Arcko" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Arcko</span>
+          <span class="research-reward-name">Arcko</span>
           <span class="research-cp">451</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-tortipouss">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-            <img src="images/Tortipouss.png" data-shiny="images/TortipousS.png" alt="Tortipouss" class="pokemon-img">
+            <img src="images/Tortipouss.png" data-shiny="images/TortipoussS.png" alt="Tortipouss" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Tortipouss</span>
+          <span class="research-reward-name">Tortipouss</span>
           <span class="research-cp">508</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-vipelierre">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Vipelierre.png" data-shiny="images/VipelierreS.png" alt="Vipélierre" class="pokemon-img">
@@ -367,39 +357,39 @@
           <span class="research-cp">364</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-marisson">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Marisson.png" data-shiny="images/MarissonS.png" alt="Marisson" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Marisson</span>
+          <span class="research-reward-name">Marisson</span>
           <span class="research-cp">469</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-brindibou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Brindibou.png" data-shiny="images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Brindibou</span>
+          <span class="research-reward-name">Brindibou</span>
           <span class="research-cp">453</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ouistempo">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ouistempo.png" data-shiny="images/OuistempoS.png" alt="Ouistempo" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ouistempo</span>
+          <span class="research-reward-name">Ouistempo</span>
           <span class="research-cp">465</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-poussacha">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Poussacha.png" data-shiny="images/PoussachaS.png" alt="Poussacha" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Poussacha</span>
+          <span class="research-reward-name">Poussacha</span>
           <span class="research-cp">435</span>
         </div>
 
@@ -410,84 +400,84 @@
       <span class="research-task">Attrape 10 Pokémon de type Feu</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-salameche">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Salameche.png" data-shiny="images/SalamecheS.png" alt="Salamèche" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Salamèche</span>
+          <span class="research-reward-name">Salamèche</span>
           <span class="research-cp">420</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-hericendre">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Hericendre.png" data-shiny="images/HericendreS.png" alt="Héricendre" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Héricendre</span>
+          <span class="research-reward-name">Héricendre</span>
           <span class="research-cp">420</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-poussifeu">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Poussifeu.png" data-shiny="images/PoussifeuS.png" alt="Poussifeu" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Poussifeu</span>
+          <span class="research-reward-name">Poussifeu</span>
           <span class="research-cp">468</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ouisticram">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ouisticram.png" data-shiny="images/OuisticramS.png" alt="Ouisticram" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ouisticram</span>
+          <span class="research-reward-name">Ouisticram</span>
           <span class="research-cp">410</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-gruikui">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Gruikui.png" data-shiny="images/GruikuiS.png" alt="Gruikui" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Gruikui</span>
+          <span class="research-reward-name">Gruikui</span>
           <span class="research-cp">464</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-feunnec">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Feunnec.png" data-shiny="images/FeunnecS.png" alt="Feunnec" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Feunnec</span>
+          <span class="research-reward-name">Feunnec</span>
           <span class="research-cp">440</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-flamiaou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Flamiaou.png" data-shiny="images/FlamiaouS.png" alt="Flamiaou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Flamiaou</span>
+          <span class="research-reward-name">Flamiaou</span>
           <span class="research-cp">443</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-flambino">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Flambino.png" data-shiny="images/FlambinoS.png" alt="Flambino" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Flambino</span>
+          <span class="research-reward-name">Flambino</span>
           <span class="research-cp">470</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-chochodile">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Chochodile.png" data-shiny="images/ChochodileS.png" alt="Chochodile" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Chochodile</span>
+          <span class="research-reward-name">Chochodile</span>
           <span class="research-cp">483</span>
         </div>
 
@@ -498,84 +488,84 @@
       <span class="research-task">Attrape 10 Pokémon de type Eau</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-carapuce">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Carapuce.png" data-shiny="images/CarapuceS.png" alt="Carapuce" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Carapuce</span>
+          <span class="research-reward-name">Carapuce</span>
           <span class="research-cp">405</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-kaiminus">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Kaiminus.png" data-shiny="images/KaiminusS.png" alt="Kaiminus" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Kaiminus</span>
+          <span class="research-reward-name">Kaiminus</span>
           <span class="research-cp">485</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-gobou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Gobou.png" data-shiny="images/GobouS.png" alt="Gobou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Gobou</span>
+          <span class="research-reward-name">Gobou</span>
           <span class="research-cp">483</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-tiplouf">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Tiplouf.png" data-shiny="images/TiploufS.png" alt="Tiplouf" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Tiplouf</span>
+          <span class="research-reward-name">Tiplouf</span>
           <span class="research-cp">460</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-moustillon">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Moustillon.png" data-shiny="images/MoustillonS.png" alt="Moustillon" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Moustillon</span>
+          <span class="research-reward-name">Moustillon</span>
           <span class="research-cp">448</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-grenousse">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Grenousse.png" data-shiny="images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Grenousse</span>
+          <span class="research-reward-name">Grenousse</span>
           <span class="research-cp">425</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-otaquin">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Otaquin.png" data-shiny="images/OtaquinS.png" alt="Otaquin" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Otaquin</span>
+          <span class="research-reward-name">Otaquin</span>
           <span class="research-cp">483</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-larmeleon">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Larmeleon.png" data-shiny="images/LarmeleonS.png" alt="Larméléon" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Larméléon</span>
+          <span class="research-reward-name">Larméléon</span>
           <span class="research-cp">470</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-coiffeton">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Coiffeton.png" data-shiny="images/CoiffetonS.png" alt="Coiffeton" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Coiffeton</span>
+          <span class="research-reward-name">Coiffeton</span>
           <span class="research-cp">460</span>
         </div>
 
@@ -586,30 +576,30 @@
       <span class="research-task">Attrape un Pokémon de type Dragon</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-minidraco">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Minidraco.png" data-shiny="images/MinidracoS.png" alt="Minidraco" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Minidraco</span>
+          <span class="research-reward-name">Minidraco</span>
           <span class="research-cp">430</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-draby">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Draby.png" data-shiny="images/DrabyS.png" alt="Draby" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Draby</span>
+          <span class="research-reward-name">Draby</span>
           <span class="research-cp">495</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-coupenotte">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Coupenotte.png" data-shiny="images/CoupenotteS.png" alt="Coupenotte" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Coupenotte</span>
+          <span class="research-reward-name">Coupenotte</span>
           <span class="research-cp">586</span>
         </div>
 
@@ -618,50 +608,50 @@
 
   </div>
 
-  <h1 class="category-title tier-1">Tâches de Lancers</h1>
+  <h2 class="category-title tier-1">Tâches de Lancers</h2>
   <div class="research-list">
 
     <div class="research-card">
       <span class="research-task">Fais 10 Lancers à effet</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-racaillou-a">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/RacaillouA.png" data-shiny="images/RacaillouAS.png" alt="Racaillou d'Alola" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Racaillou<br>d'Alola</span>
+          <span class="research-reward-name">Racaillou<br>d'Alola</span>
           <span class="research-cp">554</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-elektek">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Elektek.png" data-shiny="images/ElektekS.png" alt="Élektek" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Élektek</span>
+          <span class="research-reward-name">Élektek</span>
           <span class="research-cp">1 000</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-makuhita">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Makuhita.png" data-shiny="images/MakuhitaS.png" alt="Makuhita" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Makuhita</span>
+          <span class="research-reward-name">Makuhita</span>
           <span class="research-cp">350</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-tylton">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Tylton.png" data-shiny="images/TyltonS.png" alt="Tylton" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Tylton</span>
+          <span class="research-reward-name">Tylton</span>
           <span class="research-cp">353</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-balbuto">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Balbuto.png" data-shiny="images/BalbutoS.png" alt="Balbuto" class="pokemon-img">
@@ -670,25 +660,25 @@
           <span class="research-cp">337</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-teraclope">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Teraclope.png" data-shiny="images/TeraclopeS.png" alt="Téraclope" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Téraclope</span>
+          <span class="research-reward-name">Téraclope</span>
           <span class="research-cp">628</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-etourvol">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Etourvol.png" data-shiny="images/EtourvolS.png" alt="Étourvol" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Étourvol</span>
+          <span class="research-reward-name">Étourvol</span>
           <span class="research-cp">556</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-emolga">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Emolga.png" data-shiny="images/EmolgaS.png" alt="Emolga" class="pokemon-img">
@@ -697,7 +687,7 @@
           <span class="research-cp">700</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-grindur">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Grindur.png" data-shiny="images/GrindurS.png" alt="Grindur" class="pokemon-img">
@@ -706,7 +696,7 @@
           <span class="research-cp">403</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-gourmelet">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Gourmelet.png" data-shiny="images/GourmeletS.png" alt="Gourmelet" class="pokemon-img">
@@ -722,7 +712,7 @@
       <span class="research-task">Fais 5 Jolis Lancers</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-taupiqueur">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Taupiqueur.png" data-shiny="images/TaupiqueurS.png" alt="Taupiqueur" class="pokemon-img">
@@ -731,7 +721,7 @@
           <span class="research-cp">286</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-taupiqueur-a">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/TaupiqueurA.png" data-shiny="images/TaupiqueurAS.png" alt="Taupiqueur d'Alola" class="pokemon-img">
@@ -740,7 +730,7 @@
           <span class="research-cp">292</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-simularbre">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Simularbre.png" data-shiny="images/SimularbreS.png" alt="Simularbre" class="pokemon-img">
@@ -756,43 +746,43 @@
       <span class="research-task">Fais 10 Jolis Lancers</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-sabelette-a">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/SabeletteA.png" data-shiny="images/SabeletteAS.png" alt="Sabelette d'Alola" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Sabelette<br>d'Alola</span>
+          <span class="research-reward-name">Sabelette<br>d'Alola</span>
           <span class="research-cp">554</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-machoc">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Machoc.png" data-shiny="images/MachocS.png" alt="Machoc" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Machoc</span>
+          <span class="research-reward-name">Machoc</span>
           <span class="research-cp">548</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-magmar">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Magmar.png" data-shiny="images/MagmarS.png" alt="Magmar" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Magmar</span>
+          <span class="research-reward-name">Magmar</span>
           <span class="research-cp">1 026</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-magicarpe">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Magicarpe.png" data-shiny="images/MagicarpeS.png" alt="Magicarpe" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Magicarpe</span>
+          <span class="research-reward-name">Magicarpe</span>
           <span class="research-cp">117</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-tournegrin">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Tournegrin.png" data-shiny="images/TournegrinS.png" alt="Tournegrin" class="pokemon-img">
@@ -801,16 +791,16 @@
           <span class="research-cp">169</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-pifeuil">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Pifeuil.png" data-shiny="images/PifeuilS.png" alt="Pifeuil" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Pifeuil</span>
+          <span class="research-reward-name">Pifeuil</span>
           <span class="research-cp">526</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-limonde">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Limonde.png" data-shiny="images/LimondeS.png" alt="Limonde" class="pokemon-img">
@@ -819,16 +809,16 @@
           <span class="research-cp">926</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-piclairon">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Piclairon.png" data-shiny="images/PiclaironS.png" alt="Piclairon" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Piclairon</span>
+          <span class="research-reward-name">Piclairon</span>
           <span class="research-cp">633</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-vorasterie">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Vorasterie.png" data-shiny="images/VorasterieS.png" alt="Vorastérie" class="pokemon-img">
@@ -837,12 +827,12 @@
           <span class="research-cp">416</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-lilliterelle">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Lilliterelle.png" data-shiny="images/LilliterelleS.png" alt="Lilliterelle" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Lilliterelle</span>
+          <span class="research-reward-name">Lilliterelle</span>
           <span class="research-cp">253</span>
         </div>
 
@@ -853,16 +843,16 @@
       <span class="research-task">Fais 3 Supers Lancers</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-amonita">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Amonita.png" data-shiny="images/AmonitaS.png" alt="Amonita" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Amonita</span>
+          <span class="research-reward-name">Amonita</span>
           <span class="research-cp">662</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-kabuto">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Kabuto.png" data-shiny="images/KabutoS.png" alt="Kabuto" class="pokemon-img">
@@ -871,7 +861,7 @@
           <span class="research-cp">587</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-coquiperl">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Coquiperl.png" data-shiny="images/CoquiperlS.png" alt="Coquiperl" class="pokemon-img">
@@ -880,21 +870,21 @@
           <span class="research-cp">544</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-lewsor">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Lewsor.png" data-shiny="images/LewsorS.png" alt="Lewsor" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Lewsor</span>
+          <span class="research-reward-name">Lewsor</span>
           <span class="research-cp">593</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-opermine">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Opermine.png" data-shiny="images/OpermineS.png" alt="Opermine" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Opermine</span>
+          <span class="research-reward-name">Opermine</span>
           <span class="research-cp">405</span>
         </div>
 
@@ -905,7 +895,7 @@
       <span class="research-task">Fais 3 Supers Lancers à la suite</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-lilia">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Lilia.png" data-shiny="images/LiliaS.png" alt="Lilia" class="pokemon-img">
@@ -914,12 +904,12 @@
           <span class="research-cp">553</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-anorith">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Anorith.png" data-shiny="images/AnorithS.png" alt="Anorith" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Anorith</span>
+          <span class="research-reward-name">Anorith</span>
           <span class="research-cp">655</span>
         </div>
 
@@ -930,7 +920,7 @@
       <span class="research-task">Fais 5 Supers Lancers à effet à la suite</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-spinda">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Spinda.png" data-shiny="images/SpindaS.png" alt="Spinda" class="pokemon-img">
@@ -946,7 +936,7 @@
       <span class="research-task">Fais 2 Excellents Lancers</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-mucuscule">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Mucuscule.png" data-shiny="images/MucusculeS.png" alt="Mucuscule" class="pokemon-img">
@@ -962,30 +952,30 @@
       <span class="research-task">Fais 3 Excellents Lancers à la suite</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-embrylex">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Embrylex.png" data-shiny="images/EmbrylexS.png" alt="Embrylex" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Embrylex</span>
+          <span class="research-reward-name">Embrylex</span>
           <span class="research-cp">445</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-terhal">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Terhal.png" data-shiny="images/TerhalS.png" alt="Terhal" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Terhal</span>
+          <span class="research-reward-name">Terhal</span>
           <span class="research-cp">418</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-griknot">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Griknot.png" data-shiny="images/GriknotS.png" alt="Griknot" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Griknot</span>
+          <span class="research-reward-name">Griknot</span>
           <span class="research-cp">477</span>
         </div>
 
@@ -994,14 +984,14 @@
 
   </div>
 
-  <h1 class="category-title tier-1">Tâches d'Exploration</h1>
+  <h2 class="category-title tier-1">Tâches d'Exploration</h2>
   <div class="research-list">
 
     <div class="research-card">
       <span class="research-task">Explore 2 km</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-paras">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Paras.png" data-shiny="images/ParasS.png" alt="Paras" class="pokemon-img">
@@ -1010,16 +1000,16 @@
           <span class="research-cp">436</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ferosinge">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ferosinge.png" data-shiny="images/FerosingeS.png" alt="Férosinge" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Férosinge</span>
+          <span class="research-reward-name">Férosinge</span>
           <span class="research-cp">499</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ponyta">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ponyta.png" data-shiny="images/PonytaS.png" alt="Ponyta" class="pokemon-img">
@@ -1028,16 +1018,16 @@
           <span class="research-cp">727</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ponyta-g">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/PonytaG.png" data-shiny="images/PonytaGS.png" alt="Ponyta de Galar" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ponyta<br>de Galar</span>
+          <span class="research-reward-name">Ponyta<br>de Galar</span>
           <span class="research-cp">727</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-lokhlass">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Lokhlass.png" data-shiny="images/LokhlassS.png" alt="Lokhlass" class="pokemon-img">
@@ -1046,7 +1036,7 @@
           <span class="research-cp">1 131</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-demanta">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Demanta.png" data-shiny="images/DemantaS.png" alt="Démanta" class="pokemon-img">
@@ -1055,16 +1045,16 @@
           <span class="research-cp">903</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-malosse">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Malosse.png" data-shiny="images/MalosseS.png" alt="Malosse" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Malosse</span>
+          <span class="research-reward-name">Malosse</span>
           <span class="research-cp">529</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-wailmer">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Wailmer.png" data-shiny="images/WailmerS.png" alt="Wailmer" class="pokemon-img">
@@ -1073,7 +1063,7 @@
           <span class="research-cp">629</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ponchien">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ponchien.png" data-shiny="images/PonchienS.png" alt="Ponchien" class="pokemon-img">
@@ -1082,12 +1072,12 @@
           <span class="research-cp">678</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-pohm">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Pohm.png" data-shiny="images/PohmS.png" alt="Pohm" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Pohm</span>
+          <span class="research-reward-name">Pohm</span>
           <span class="research-cp">272</span>
         </div>
 
@@ -1098,7 +1088,7 @@
       <span class="research-task">Fais Éclore 1 Œuf</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ossatueur-a">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/OssatueurA.png" data-shiny="images/OssatueurAS.png" alt="Ossatueur d'Alola" class="pokemon-img">
@@ -1107,25 +1097,25 @@
           <span class="research-cp">786</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-insecateur">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Insecateur.png" data-shiny="images/InsecateurS.png" alt="Insécateur" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Insécateur</span>
+          <span class="research-reward-name">Insécateur</span>
           <span class="research-cp">1 160</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-minidraco">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Minidraco.png" data-shiny="images/MinidracoS.png" alt="Minidraco" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Minidraco</span>
+          <span class="research-reward-name">Minidraco</span>
           <span class="research-cp">430</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-noarfang">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Noarfang.png" data-shiny="images/NoarfangS.png" alt="Noarfang" class="pokemon-img">
@@ -1134,7 +1124,7 @@
           <span class="research-cp">867</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-simularbre">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Simularbre.png" data-shiny="images/SimularbreS.png" alt="Simularbre" class="pokemon-img">
@@ -1143,16 +1133,16 @@
           <span class="research-cp">920</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ningale">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ningale.png" data-shiny="images/NingaleS.png" alt="Ningale" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ningale</span>
+          <span class="research-reward-name">Ningale</span>
           <span class="research-cp">329</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-apitrini">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Apitrini.png" data-shiny="images/ApitriniS.png" alt="Apitrini" class="pokemon-img">
@@ -1161,7 +1151,7 @@
           <span class="research-cp">212</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-nanmeouie">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Nanmeouie.png" data-shiny="images/NanmeouieS.png" alt="Nanméouïe" class="pokemon-img">
@@ -1170,48 +1160,48 @@
           <span class="research-cp">721</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-polarhume">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Polarhume.png" data-shiny="images/PolarhumeS.png" alt="Polarhume" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Polarhume</span>
+          <span class="research-reward-name">Polarhume</span>
           <span class="research-cp">458</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ptyranidur">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ptyranidur.png" data-shiny="images/PtyranidurS.png" alt="Ptyranidur" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ptyranidur</span>
+          <span class="research-reward-name">Ptyranidur</span>
           <span class="research-cp">700</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-amagara">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Amagara.png" data-shiny="images/AmagaraS.png" alt="Amagara" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Amagara</span>
+          <span class="research-reward-name">Amagara</span>
           <span class="research-cp">584</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-nounourson">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Nounourson.png" data-shiny="images/NounoursonS.png" alt="Nounourson" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Nounourson</span>
+          <span class="research-reward-name">Nounourson</span>
           <span class="research-cp">579</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-sovkipou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Sovkipou.png" data-shiny="images/SovkipouS.png" alt="Sovkipou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Sovkipou</span>
+          <span class="research-reward-name">Sovkipou</span>
           <span class="research-cp">215</span>
         </div>
 
@@ -1222,16 +1212,16 @@
       <span class="research-task">Fais Éclore 2 Œufs</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-farfuret">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Farfuret.png" data-shiny="images/FarfuretS.png" alt="Farfuret" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Farfuret</span>
+          <span class="research-reward-name">Farfuret</span>
           <span class="research-cp">879</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-mysdibule">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Mysdibule.png" data-shiny="images/MysdibuleS.png" alt="Mysdibule" class="pokemon-img">
@@ -1240,12 +1230,12 @@
           <span class="research-cp">700</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-barpau">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Barpau.png" data-shiny="images/BarpauS.png" alt="Barpau" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Barpau</span>
+          <span class="research-reward-name">Barpau</span>
           <span class="research-cp">117</span>
         </div>
 
@@ -1256,16 +1246,16 @@
       <span class="research-task">Fais tourner 3 Pokéstops ou Arènes</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-doduo">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Doduo.png" data-shiny="images/DoduoS.png" alt="Doduo" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Doduo</span>
+          <span class="research-reward-name">Doduo</span>
           <span class="research-cp">514</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-remoraid">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Remoraid.png" data-shiny="images/RemoraidS.png" alt="Rémoraid" class="pokemon-img">
@@ -1274,21 +1264,21 @@
           <span class="research-cp">391</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-tarsal">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Tarsal.png" data-shiny="images/TarsalS.png" alt="Tarsal" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Tarsal</span>
+          <span class="research-reward-name">Tarsal</span>
           <span class="research-cp">231</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-galekid">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Galekid.png" data-shiny="images/GalekidS.png" alt="Galekid" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Galekid</span>
+          <span class="research-reward-name">Galekid</span>
           <span class="research-cp">560</span>
         </div>
 
@@ -1299,7 +1289,7 @@
       <span class="research-task">Fais tourner 5 Pokéstops ou Arènes</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-rattata">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Rattata.png" data-shiny="images/RattataS.png" alt="Rattata" class="pokemon-img">
@@ -1308,7 +1298,7 @@
           <span class="research-cp">315</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-rattata-a">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/RattataA.png" data-shiny="images/RattataAS.png" alt="Rattata d'Alola" class="pokemon-img">
@@ -1317,7 +1307,7 @@
           <span class="research-cp">315</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-caninos">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Caninos.png" data-shiny="images/CaninosS.png" alt="Caninos" class="pokemon-img">
@@ -1326,34 +1316,34 @@
           <span class="research-cp">533</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-caninos-h">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/CaninosH.png" data-shiny="images/CaninosHS.png" alt="Caninos de Hisui" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Caninos<br>de Hisui</span>
+          <span class="research-reward-name">Caninos<br>de Hisui</span>
           <span class="research-cp">566</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ramoloss">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ramoloss.png" data-shiny="images/RamolossS.png" alt="Ramoloss" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ramoloss</span>
+          <span class="research-reward-name">Ramoloss</span>
           <span class="research-cp">525</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ramoloss-g">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/RamolossG.png" data-shiny="images/RamolossGS.png" alt="Ramoloss de Galar" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ramoloss<br>de Galar</span>
+          <span class="research-reward-name">Ramoloss<br>de Galar</span>
           <span class="research-cp">525</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-insolourdo">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Insolourdo.png" data-shiny="images/InsolourdoS.png" alt="Insolourdo" class="pokemon-img">
@@ -1362,16 +1352,16 @@
           <span class="research-cp">724</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-farfuret">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Farfuret.png" data-shiny="images/FarfuretS.png" alt="Farfuret" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Farfuret</span>
+          <span class="research-reward-name">Farfuret</span>
           <span class="research-cp">879</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-zigzaton">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Zigzaton.png" data-shiny="images/ZigzatonS.png" alt="Zigzaton" class="pokemon-img">
@@ -1380,7 +1370,7 @@
           <span class="research-cp">218</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-zigzaton-g">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/ZigzatonG.png" data-shiny="images/ZigzatonGS.png" alt="Zigzaton de Galar" class="pokemon-img">
@@ -1389,16 +1379,16 @@
           <span class="research-cp">218</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-stalgamin">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Stalgamin.png" data-shiny="images/StalgaminS.png" alt="Stalgamin" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Stalgamin</span>
+          <span class="research-reward-name">Stalgamin</span>
           <span class="research-cp">380</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-keunotor">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Keunotor.png" data-shiny="images/KeunotorS.png" alt="Keunotor" class="pokemon-img">
@@ -1407,16 +1397,16 @@
           <span class="research-cp">309</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-hippopotas">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Hippopotas.png" data-shiny="images/HippopotasS.png" alt="Hippopotas" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Hippopotas</span>
+          <span class="research-reward-name">Hippopotas</span>
           <span class="research-cp">582</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-miamiasme">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Miamiasme.png" data-shiny="images/MiamiasmeS.png" alt="Miamiasme" class="pokemon-img">
@@ -1425,7 +1415,7 @@
           <span class="research-cp">428</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-couaneton">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Couaneton.png" data-shiny="images/CouanetonS.png" alt="Couaneton" class="pokemon-img">
@@ -1434,7 +1424,7 @@
           <span class="research-cp">367</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-araqua">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Araqua.png" data-shiny="images/AraquaS.png" alt="Araqua" class="pokemon-img">
@@ -1443,12 +1433,12 @@
           <span class="research-cp">306</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-rongourmand">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Rongourmand.png" data-shiny="images/RongourmandS.png" alt="Rongourmand" class="pokemon-img">
           </div>
-          <span class="research-reward-name">Rongourmand</span>
+          <span class="research-reward-name">Rongour-<br>mand</span>
           <span class="research-cp">404</span>
         </div>
 
@@ -1460,7 +1450,7 @@
           <span class="research-cp">306</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-moumouton">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Moumouton.png" data-shiny="images/MoumoutonS.png" alt="Moumouton" class="pokemon-img">
@@ -1492,25 +1482,25 @@
       <span class="research-task">Prends une Photo d'un Pokémon sauvage</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-kraknoix">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Kraknoix.png" data-shiny="images/KraknoixS.png" alt="Kraknoix" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Kraknoix</span>
+          <span class="research-reward-name">Kraknoix</span>
           <span class="research-cp">546</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-cradopaud">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Cradopaud.png" data-shiny="images/CradopaudS.png" alt="Cradopaud" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Cradopaud</span>
+          <span class="research-reward-name">Cradopaud</span>
           <span class="research-cp">408</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-doudouvet">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Doudouvet.png" data-shiny="images/DoudouvetS.png" alt="Doudouvet" class="pokemon-img">
@@ -1526,16 +1516,16 @@
       <span class="research-task">Gagne 2 Bonbons en marchant avec ton Copain</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-rondoudou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Rondoudou.png" data-shiny="images/RondoudouS.png" alt="Rondoudou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Rondoudou</span>
+          <span class="research-reward-name">Rondoudou</span>
           <span class="research-cp">310</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-laporeille">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Laporeille.png" data-shiny="images/LaporeilleS.png" alt="Laporeille" class="pokemon-img">
@@ -1544,7 +1534,7 @@
           <span class="research-cp">539</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-chaglam">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Chaglam.png" data-shiny="images/ChaglamS.png" alt="Chaglam" class="pokemon-img">
@@ -1553,7 +1543,7 @@
           <span class="research-cp">400</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-sapereau">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Sapereau.png" data-shiny="images/SapereauS.png" alt="Sapereau" class="pokemon-img">
@@ -1562,7 +1552,7 @@
           <span class="research-cp">237</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-helionceau">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Helionceau.png" data-shiny="images/HelionceauS.png" alt="Hélionceau" class="pokemon-img">
@@ -1571,7 +1561,7 @@
           <span class="research-cp">611</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-dedenne">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Dedenne.png" data-shiny="images/DedenneS.png" alt="Dedenne" class="pokemon-img">
@@ -1587,7 +1577,7 @@
       <span class="research-task">Gagne 3 Bonbons en marchant avec ton Copain</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-limonde">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Limonde.png" data-shiny="images/LimondeS.png" alt="Limonde" class="pokemon-img">
@@ -1596,7 +1586,7 @@
           <span class="research-cp">926</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-limonde-g">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/LimondeG.png" data-shiny="images/LimondeGS.png" alt="Limonde de Galar" class="pokemon-img">
@@ -1610,50 +1600,50 @@
 
   </div>
 
-  <h1 class="category-title tier-1">Tâches de Combat</h1>
+  <h2 class="category-title tier-1">Tâches de Combat</h2>
   <div class="research-list">
 
     <div class="research-card">
       <span class="research-task">Gagne 1 Raid</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-onix">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Onix.png" data-shiny="images/OnixS.png" alt="Onix" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Onix</span>
+          <span class="research-reward-name">Onix</span>
           <span class="research-cp">472</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-aquali">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Aquali.png" data-shiny="images/AqualiS.png" alt="Aquali" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Aquali</span>
+          <span class="research-reward-name">Aquali</span>
           <span class="research-cp">1 335</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-voltali">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Voltali.png" data-shiny="images/VoltaliS.png" alt="Voltali" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Voltali</span>
+          <span class="research-reward-name">Voltali</span>
           <span class="research-cp">1 238</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-pyroli">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Pyroli.png" data-shiny="images/PyroliS.png" alt="Pyroli" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Pyroli</span>
+          <span class="research-reward-name">Pyroli</span>
           <span class="research-cp">1 298</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ronflex">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ronflex.png" data-shiny="images/RonflexS.png" alt="Ronflex" class="pokemon-img">
@@ -1662,16 +1652,16 @@
           <span class="research-cp">1 398</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-cochignon">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Cochignon.png" data-shiny="images/CochignonS.png" alt="Cochignon" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Cochignon</span>
+          <span class="research-reward-name">Cochignon</span>
           <span class="research-cp">1 005</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-phogleur">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Phogleur.png" data-shiny="images/PhogleurS.png" alt="Phogleur" class="pokemon-img">
@@ -1680,43 +1670,43 @@
           <span class="research-cp">735</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-metang">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Metang.png" data-shiny="images/MetangS.png" alt="Métang" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Métang</span>
+          <span class="research-reward-name">Métang</span>
           <span class="research-cp">738</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-luxio">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Luxio.png" data-shiny="images/LuxioS.png" alt="Luxio" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Luxio</span>
+          <span class="research-reward-name">Luxio</span>
           <span class="research-cp">636</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-carmache">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Carmache.png" data-shiny="images/CarmacheS.png" alt="Carmache" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Carmache</span>
+          <span class="research-reward-name">Carmache</span>
           <span class="research-cp">803</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-melancolux">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Melancolux.png" data-shiny="images/MelancoluxS.png" alt="Mélancolux" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Mélancolux</span>
+          <span class="research-reward-name">Mélancolux</span>
           <span class="research-cp">732</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-braisillon">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Braisillon.png" data-shiny="images/BraisillonS.png" alt="Braisillon" class="pokemon-img">
@@ -1732,7 +1722,7 @@
       <span class="research-task">Gagne un Raid de niveau 3 ou plus</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-carapagos">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Carapagos.png" data-shiny="images/CarapagosS.png" alt="Carapagos" class="pokemon-img">
@@ -1741,12 +1731,12 @@
           <span class="research-cp">638</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-arkeapti">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Arkeapti.png" data-shiny="images/ArkeaptiS.png" alt="Arkéapti" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Arkéapti</span>
+          <span class="research-reward-name">Arkéapti</span>
           <span class="research-cp">789</span>
         </div>
 
@@ -1757,16 +1747,16 @@
       <span class="research-task">Gagne 5 Raids</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-noadkoko-a">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/NoadkokoA.png" data-shiny="images/NoadkokoAS.png" alt="Noadkoko d'Alola" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Noadkoko<br>d'Alola</span>
+          <span class="research-reward-name">Noadkoko<br>d'Alola</span>
           <span class="research-cp">1 292</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ossatueur-a">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/OssatueurA.png" data-shiny="images/OssatueurAS.png" alt="Ossatueur d'Alola" class="pokemon-img">
@@ -1775,12 +1765,12 @@
           <span class="research-cp">786</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-ptera">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Ptera.png" data-shiny="images/PteraS.png" alt="Ptéra" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Ptéra</span>
+          <span class="research-reward-name">Ptéra</span>
           <span class="research-cp">1 193</span>
         </div>
 
@@ -1791,7 +1781,7 @@
       <span class="research-task">Bats un Sbire de la Team Go Rocket</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-miaouss">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Miaouss.png" data-shiny="images/MiaoussS.png" alt="Miaouss" class="pokemon-img">
@@ -1800,7 +1790,7 @@
           <span class="research-cp">320</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-qulbutoke">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Qulbutoke.png" data-shiny="images/QulbutokeS.png" alt="Qulbutoké" class="pokemon-img">
@@ -1809,7 +1799,7 @@
           <span class="research-cp">440</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-tutafeh">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Tutafeh.png" data-shiny="images/TutafehS.png" alt="Tutafeh" class="pokemon-img">
@@ -1823,14 +1813,14 @@
 
   </div>
 
-  <h1 class="category-title tier-1">Autres Tâches</h1>
+  <h2 class="category-title tier-1">Autres Tâches</h2>
   <div class="research-list">
 
     <div class="research-card">
       <span class="research-task">Fais Évoluer un Pokémon</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-hypocean">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Hypocean.png" data-shiny="images/HypoceanS.png" alt="Hypocéan" class="pokemon-img">
@@ -1839,7 +1829,7 @@
           <span class="research-cp">897</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-staross">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Staross.png" data-shiny="images/StarossS.png" alt="Staross" class="pokemon-img">
@@ -1848,16 +1838,16 @@
           <span class="research-cp">1 107</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-evoli">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Evoli.png" data-shiny="images/EvoliS.png" alt="Évoli" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Évoli</span>
+          <span class="research-reward-name">Évoli</span>
           <span class="research-cp">459</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-volcaropod">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Volcaropod.png" data-shiny="images/VolcaropodS.png" alt="Volcaropod" class="pokemon-img">
@@ -1866,7 +1856,7 @@
           <span class="research-cp">729</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-groret">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Groret.png" data-shiny="images/GroretS.png" alt="Groret" class="pokemon-img">
@@ -1875,25 +1865,25 @@
           <span class="research-cp">1 015</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-scobolide">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Scobolide.png" data-shiny="images/ScobolideS.png" alt="Scobolide" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Scobolide</span>
+          <span class="research-reward-name">Scobolide</span>
           <span class="research-cp">490</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-lamperoie">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Lamperoie.png" data-shiny="images/LamperoieS.png" alt="Lampéroie" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Lampéroie</span>
+          <span class="research-reward-name">Lampéroie</span>
           <span class="research-cp">735</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-excavarenne">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Excavarenne.png" data-shiny="images/ExcavarenneS.png" alt="Excavarenne" class="pokemon-img">
@@ -1909,30 +1899,30 @@
       <span class="research-task">Recharge un Pokémon 3 fois</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-bulbizarre">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Bulbizarre.png" data-shiny="images/BulbizarreS.png" alt="Bulbizarre" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Bulbizarre</span>
+          <span class="research-reward-name">Bulbizarre</span>
           <span class="research-cp">477</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-salameche">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Salameche.png" data-shiny="images/SalamecheS.png" alt="Salamèche" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Salamèche</span>
+          <span class="research-reward-name">Salamèche</span>
           <span class="research-cp">420</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-carapuce">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Carapuce.png" data-shiny="images/CarapuceS.png" alt="Carapuce" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Carapuce</span>
+          <span class="research-reward-name">Carapuce</span>
           <span class="research-cp">405</span>
         </div>
 
@@ -1943,7 +1933,7 @@
       <span class="research-task">Recharge un Pokémon 5 fois</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-vipelierre">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Vipelierre.png" data-shiny="images/VipelierreS.png" alt="Vipélierre" class="pokemon-img">
@@ -1952,21 +1942,21 @@
           <span class="research-cp">364</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-gruikui">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Gruikui.png" data-shiny="images/GruikuiS.png" alt="Gruikui" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Gruikui</span>
+          <span class="research-reward-name">Gruikui</span>
           <span class="research-cp">464</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-moustillon">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Moustillon.png" data-shiny="images/MoustillonS.png" alt="Moustillon" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Moustillon</span>
+          <span class="research-reward-name">Moustillon</span>
           <span class="research-cp">448</span>
         </div>
 
@@ -1977,30 +1967,30 @@
       <span class="research-task">Recharge un Pokémon 7 fois</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-brindibou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Brindibou.png" data-shiny="images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Brindibou</span>
+          <span class="research-reward-name">Brindibou</span>
           <span class="research-cp">453</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-flamiaou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Flamiaou.png" data-shiny="images/FlamiaouS.png" alt="Flamiaou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Flamiaou</span>
+          <span class="research-reward-name">Flamiaou</span>
           <span class="research-cp">443</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-otaquin">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Otaquin.png" data-shiny="images/OtaquinS.png" alt="Otaquin" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Otaquin</span>
+          <span class="research-reward-name">Otaquin</span>
           <span class="research-cp">483</span>
         </div>
 
@@ -2011,48 +2001,48 @@
       <span class="research-task">Échange un Pokémon</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-tetarte">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Tetarte.png" data-shiny="images/TetarteS.png" alt="Têtarte" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Têtarte</span>
+          <span class="research-reward-name">Têtarte</span>
           <span class="research-cp">608</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-machopeur">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Machopeur.png" data-shiny="images/MachopeurS.png" alt="Machopeur" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Machopeur</span>
+          <span class="research-reward-name">Machopeur</span>
           <span class="research-cp">870</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-spectrum">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Spectrum.png" data-shiny="images/SpectrumS.png" alt="Spectrum" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Spectrum</span>
+          <span class="research-reward-name">Spectrum</span>
           <span class="research-cp">841</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-carabing">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Carabing.png" data-shiny="images/CarabingS.png" alt="Carabing" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Carabing</span>
+          <span class="research-reward-name">Carabing</span>
           <span class="research-cp">506</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-escargaume">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Escargaume.png" data-shiny="images/EscargaumeS.png" alt="Escargaume" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Escargaume</span>
+          <span class="research-reward-name">Escargaume</span>
           <span class="research-cp">357</span>
         </div>
 
@@ -2063,39 +2053,39 @@
       <span class="research-task">Envoie 3 Cadeaux et ajoute un Sticker</span>
       <div class="research-rewards">
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-melofee">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Melofee.png" data-shiny="images/MelofeeS.png" alt="Mélofée" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Mélofée</span>
+          <span class="research-reward-name">Mélofée</span>
           <span class="research-cp">495</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-rondoudou">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Rondoudou.png" data-shiny="images/RondoudouS.png" alt="Rondoudou" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Rondoudou</span>
+          <span class="research-reward-name">Rondoudou</span>
           <span class="research-cp">310</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-evoli">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Evoli.png" data-shiny="images/EvoliS.png" alt="Évoli" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Évoli</span>
+          <span class="research-reward-name">Évoli</span>
           <span class="research-cp">459</span>
         </div>
 
-        <div class="research-reward-item">
+        <div class="research-reward-item pk-togetic">
           <div class="research-image-container">
             <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
             <img src="images/Togetic.png" data-shiny="images/TogeticS.png" alt="Togetic" class="pokemon-img">
           </div>
-          <span class="research-reward-name reward-good">Togetic</span>
+          <span class="research-reward-name">Togetic</span>
           <span class="research-cp">732</span>
         </div>
 
@@ -2106,7 +2096,7 @@
 
 </div>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 
 <script>
   // Insertion d'un séparateur entre la 1ère et 2ème rangée si 7+ items (mobile uniquement)
@@ -2126,27 +2116,5 @@
   window.addEventListener('resize', insererSeparateurRangee);
 </script>
 
-<script>
-  const pokemonImages = document.querySelectorAll('.pokemon-img[data-shiny]');
-  pokemonImages.forEach(img => {
-    const srcNormale = img.src;
-    const srcShiny = img.getAttribute('data-shiny');
-    img.addEventListener('click', () => {
-      const container = img.closest('.research-image-container');
-      const emoji = container ? container.querySelector('.emoji-shiny') : null;
-      const currentURL = new URL(img.src, window.location.href).pathname;
-      const normalURL = new URL(srcNormale, window.location.href).pathname;
-      if (currentURL === normalURL) {
-        img.src = srcShiny;
-        img.classList.add('shiny-active');
-        if (emoji) emoji.classList.add('shiny-active');
-      } else {
-        img.src = srcNormale;
-        img.classList.remove('shiny-active');
-        if (emoji) emoji.classList.remove('shiny-active');
-      }
-    });
-  });
-</script>
 </body>
 </html>
