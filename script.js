@@ -172,9 +172,10 @@ function gererModeSombre() {
 function initJohannEffect() {
   document.querySelectorAll('.emoji-shiny').forEach(emoji => {
     emoji.addEventListener('click', (e) => {
-      const container = emoji.closest('.image-container, .research-image-container');
-      if (container) {
-        const cardImg = container.querySelector('.pokemon-img');
+      // Niveau carte : couvre les badges dans l'image ET en coin de case (page Rocket)
+      const carte = emoji.closest('.pokemon-card, .research-reward-item');
+      if (carte) {
+        const cardImg = carte.querySelector('.pokemon-img');
         if (cardImg) {
           cardImg.click(); 
         }
@@ -192,8 +193,8 @@ function initShinyToggle() {
     const srcNormale = img.src;
     const srcShiny = img.getAttribute('data-shiny');
     img.addEventListener('click', () => {
-      const container = img.closest('.image-container, .research-image-container');
-      const emoji = container ? container.querySelector('.emoji-shiny') : null;
+      const carte = img.closest('.pokemon-card, .research-reward-item');
+      const emoji = carte ? carte.querySelector('.emoji-shiny') : null;
       // Si le badge shiny est masqué (pokemon.css), le clic est désactivé
       if (emoji && window.getComputedStyle(emoji).display === 'none') return;
       const estNormale = new URL(img.src, window.location.href).pathname === new URL(srcNormale, window.location.href).pathname;
@@ -443,8 +444,8 @@ if ('serviceWorker' in navigator) {
     { nom: 'Feu',      icone: 'feu',      page: 'TopFeu.html' },
     { nom: 'Glace',    icone: 'glace',    page: 'TopGlace.html' },
     { nom: 'Insecte',  icone: 'insecte',  page: 'TopInsecte.html' },
-    { nom: 'Plante',   icone: 'plante',   page: null },
-    { nom: 'Poison',   icone: 'poison',   page: null },
+    { nom: 'Plante',   icone: 'plante',   page: 'TopPlante.html' },
+    { nom: 'Poison',   icone: 'poison',   page: 'TopPoison.html' },
     { nom: 'Psy',      icone: 'psy',      page: null },
     { nom: 'Roche',    icone: 'roche',    page: null },
     { nom: 'Sol',      icone: 'sol',      page: null },

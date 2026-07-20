@@ -359,6 +359,41 @@ body.dark-mode .emoji-shiny {
   animation: twinkle 1s ease-in-out infinite;
 }
 
+/* Nouveau shiny : badge affiché et scintillant en permanence.
+   (ne pas utiliser shiny-active en statique : le script la retire au clic)
+   Le sélecteur img... (0,2,1) bat les règles de masquage de pokemon.css (0,2,0)
+   quel que soit l'ordre de chargement */
+img.emoji-shiny.nouveau-shiny {
+  display: inline;
+  animation: twinkle 1s ease-in-out infinite;
+}
+
+/* Badge costume / gigamax (même taille que shiny, pas d'inversion dark mode) */
+.emoji-costume {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+/* Cercle shiny boosté */
+.shiny-boost-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #DAA520;
+  border-radius: 50%;
+  padding: 3px 2px 3px 3px;
+}
+
+body.dark-mode .shiny-boost-circle {
+  border-color: #FFD700;
+}
+
+.shiny-boost-circle:has(.shiny-active) {
+  animation: twinkle 1s ease-in-out infinite;
+}
+
 /* Zone Contenu */
 .card-content {
   padding: 0 4px 4px 4px;
@@ -525,10 +560,11 @@ body.dark-mode .emoji-shiny {
   margin: 10px 0 15px 10px;
   color: var(--text-secondaire);
   font-size: 12px;
+  text-align: center;
 }
 
 .astuce-shiny {
-  margin: 0 0 8px 10px;
+  margin: 0 0 10px 10px;
   color: var(--text-astuce);
   font-size: 9px;
 }
@@ -550,6 +586,20 @@ body.dark-mode .emoji-shiny {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+/* Texte vert "bon Pokémon" dans les intros et listes */
+.texte-vert {
+  color: var(--accent-vert-bon);
+}
+
+/* Paragraphes des encadrés d'intro */
+.intro-rules p {
+  margin: 0 0 8px 0;
+}
+
+.intro-rules p:last-child {
+  margin-bottom: 0;
 }
 
 /* Encadrés d'intro (règles + Passe Go Deluxe) */
@@ -647,6 +697,7 @@ body.dark-mode .emoji-shiny {
   .pokemon-img { width: auto; height: 120px; max-width: 90%; }
   .badges { top: 8px; left: 10px; font-size: 16px; }
   .emoji-shiny { width: 22px; height: 22px; }
+  .emoji-costume { width: 26px; height: 26px; }
   .astuce-shiny-icon { width: 14px; height: 14px; }
 
   /* Contenu */

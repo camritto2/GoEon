@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Atteindre la Couche d'Ozone</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Atteindre la Couche d'Ozone</h1>
+  <p class="raids-date">
+    Du samedi 25 juillet, 10h — Jusqu'au dimanche 26 juillet, 20h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <div class="intro-rules">
+    <p><em>Rien de plus n'a été annoncé sur cet évènement. On ne sait pas s'il y aura des Pokémon Sauvages particuliers ou des Raids exclusifs à l'évènement.</em></p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           ÉTUDE PONCTUELLE              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1">Étude Ponctuelle</h2>
+  <div class="intro-rules">
+    <p>Une Étude Ponctuelle sera disponible pendant cet évènement pour permettre d'obtenir un <strong>Rayquaza</strong> ainsi qu'une Météorite.</p>
+    <p>La Météorite permet d'apprendre l'Attaque <strong>Draco Ascension</strong> à Rayquaza, ce qui lui permet ensuite de <strong>Méga-Évoluer</strong>.</p>
+    <p>Sans cette Attaque, la Méga-Évolution est impossible pour Rayquaza.</p>
+    <p><em>L'Étude Ponctuelle devra être terminée avant 20h le dimanche.</em></p>
+  </div>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-rayquaza">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Rayquaza.png" data-shiny="images/RayquazaS.png" alt="Rayquaza" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Rayquaza</h2>
+        <hr class="separator">
+        <div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 643</span></p></div>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; color: var(--text-principal);">+</div>
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <img src="images/meteorite.webp" alt="Météorite" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Météorite</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            TICKET PAYANT                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1">Ticket Payant</h2>
+  <p class="section-sous-titre"><em>5€49</em></p>
+  <div class="intro-rules">
+    <p>Ce ticket permet d'obtenir une deuxième Étude, offrant un 2e Rayquaza, une 2e Météorite et de la Méga-Énergie Rayquaza.</p>
+  </div>
+
+</div>
+
+<script src="script.js?v=3"></script>
+
+</body>
+</html>

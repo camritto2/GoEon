@@ -1031,9 +1031,11 @@
 .pk-frigodo .research-reward-name { color: #16a34a; }
 .pk-frigodo .emoji-shiny  { display: inline; }
 
-/* Frissonille — Bon */
+/* Frissonille — Bon (Shiny à partir du 4 août 2026, évènement Braises Arctiques :
+   décommenter la ligne emoji-shiny ce jour-là) */
 .pk-frissonille .pokemon-name { color: #16a34a; }
 .pk-frissonille .research-reward-name { color: #16a34a; }
+/* .pk-frissonille .emoji-shiny { display: inline; } */
 
 /* Fulgulairo — Normal / Pas de shiny */
 
@@ -1542,10 +1544,8 @@
 .pk-latios .research-reward-name { color: #16a34a; }
 .pk-latios .emoji-shiny  { display: inline; }
 
-/* Lewsor — Bon / Shiny */
-.pk-lewsor .pokemon-name { color: #16a34a; }
-.pk-lewsor .research-reward-name { color: #16a34a; }
-.pk-lewsor .emoji-shiny  { display: inline; }
+/* Lewsor — Normal / Shiny */
+.pk-lewsor .emoji-shiny { display: inline; }
 
 /* Léopardus — Normal / Shiny */
 .pk-leopardus .emoji-shiny { display: inline; }
@@ -1986,10 +1986,8 @@
 /* Nanméouïe — Normal / Shiny (couvre Méga-Nanméouïe) */
 .pk-nanmeouie .emoji-shiny { display: inline; }
 
-/* Neitram — Bon / Shiny */
-.pk-neitram .pokemon-name { color: #16a34a; }
-.pk-neitram .research-reward-name { color: #16a34a; }
-.pk-neitram .emoji-shiny  { display: inline; }
+/* Neitram — Normal / Shiny */
+.pk-neitram .emoji-shiny { display: inline; }
 
 /* Némélios — Normal / Shiny */
 .pk-nemelios .emoji-shiny { display: inline; }
@@ -2006,6 +2004,11 @@
 .pk-ninjask .pokemon-name { color: #16a34a; }
 .pk-ninjask .research-reward-name { color: #16a34a; }
 .pk-ninjask .emoji-shiny  { display: inline; }
+
+/* Nidorino — Bon / Shiny */
+.pk-nidorino .pokemon-name { color: #16a34a; }
+.pk-nidorino .research-reward-name { color: #16a34a; }
+.pk-nidorino .emoji-shiny { display: inline; }
 
 /* Noacier — Normal / Shiny */
 .pk-noacier .emoji-shiny { display: inline; }
@@ -2424,10 +2427,8 @@
 .pk-ramoloss .research-reward-name { color: #16a34a; }
 .pk-ramoloss .emoji-shiny  { display: inline; }
 
-/* Ramoloss de Galar — Bon / Shiny */
-.pk-ramoloss-g .pokemon-name { color: #16a34a; }
-.pk-ramoloss-g .research-reward-name { color: #16a34a; }
-.pk-ramoloss-g .emoji-shiny  { display: inline; }
+/* Ramoloss de Galar — Normal / Shiny */
+.pk-ramoloss-g .emoji-shiny { display: inline; }
 
 /* Rapasdepic — Normal / Shiny */
 .pk-rapasdepic .emoji-shiny { display: inline; }
@@ -2496,10 +2497,8 @@
 /* Roigada — Normal / Shiny */
 .pk-roigada .emoji-shiny { display: inline; }
 
-/* Roigada de Galar — Bon / Shiny */
-.pk-roigada-g .pokemon-name { color: #16a34a; }
-.pk-roigada-g .research-reward-name { color: #16a34a; }
-.pk-roigada-g .emoji-shiny  { display: inline; }
+/* Roigada de Galar — Normal / Shiny */
+.pk-roigada-g .emoji-shiny { display: inline; }
 
 /* Roitiflam — Bon / Shiny */
 .pk-roitiflam .pokemon-name { color: #16a34a; }
@@ -2663,6 +2662,11 @@
 .pk-shaofouine .research-reward-name { color: #16a34a; }
 .pk-shaofouine .emoji-shiny  { display: inline; }
 
+/* Shaymin — Bon / Shiny */
+.pk-shaymin .pokemon-name { color: #16a34a; }
+.pk-shaymin .research-reward-name { color: #16a34a; }
+.pk-shaymin .emoji-shiny { display: inline; }
+
 /* Shifours — Bon */
 .pk-shifours .pokemon-name { color: #16a34a; }
 .pk-shifours .research-reward-name { color: #16a34a; }
@@ -2782,6 +2786,11 @@
    POKÉMON — T
    ============================================================ */
 
+
+/* Tadmorv — Bon / Shiny */
+.pk-tadmorv .pokemon-name { color: #16a34a; }
+.pk-tadmorv .research-reward-name { color: #16a34a; }
+.pk-tadmorv .emoji-shiny { display: inline; }
 
 /* Tag-Tag — Bon / Shiny */
 .pk-tag-tag .pokemon-name { color: #16a34a; }

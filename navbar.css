@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap');
 
 /* ==========================================
    VARIABLES DE COULEURS (THÈME CLAIR / SOMBRE)
@@ -20,11 +20,14 @@
   --text-muet: #a0aec0;
   --hr-separator: #e4eaef;
   --bg-image-container: #f8fafc;
-  --text-astuce: #64748b;
-  --accent-bleu: #29b6f6;
-  --accent-vert-bon: #16a34a;
-  --accent-violet: #8b5cf6;
-  --accent-or: #F4D995;
+
+  /* Couleurs d'accent du site */
+  --accent-bleu: #29b6f6;        /* Tiers, liens de catégorie (bleu GoEon) */
+  --accent-violet: #8b5cf6;      /* Liens dans les encadrés d'intro */
+  --accent-or: #F4D995;          /* Bordure des encadrés d'intro */
+  --accent-vert-bon: #16a34a;    /* Bon Pokémon (nom en vert) */
+  --text-astuce: #64748b;        /* Textes d'astuce gris */
+  --bg-bandeau-tache: #e8f4fd;   /* Bandeau des tâches / rangs Passe Go */
 }
 
 body.dark-mode {
@@ -43,11 +46,14 @@ body.dark-mode {
   --text-muet: #9ca3af;
   --hr-separator: #484848;
   --bg-image-container: #2d2d2d; /* Zone de l'image légèrement plus claire */
+
+  /* Couleurs d'accent du site */
   --text-astuce: #9ca3af;
   --accent-bleu: #29b6f6;
   --accent-vert-bon: #16a34a;
   --accent-violet: #a78bfa;
   --accent-or: #F4D995;
+  --bg-bandeau-tache: #1a2e3d;
 }
 
 /* Application dynamique du fond du site global */
@@ -92,13 +98,6 @@ body {
   text-decoration: none;
 }
 
-.icone-theme {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  vertical-align: middle;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -114,7 +113,7 @@ body {
   color: var(--text-navbar);
   text-decoration: none;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300; /* Poppins Light — rendu historique de la navbar */
   font-family: 'Poppins', sans-serif;
   padding: 2px 8px;
   border-radius: 4px;
@@ -131,7 +130,7 @@ body {
 .nav-label {
   color: var(--text-navbar);
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 300;
   font-family: 'Poppins', sans-serif;
   white-space: nowrap;
   opacity: 0.7;
@@ -184,7 +183,7 @@ body {
   text-decoration: none;
   font-size: 14px;
   text-align: left;
-  font-weight: 500;
+  font-weight: 300;
   transition: background-color 0.2s, color 0.2s;
 }
 
@@ -197,12 +196,20 @@ body {
   display: none;
 }
 
-#btn-signaler-mobile { display: none; }
 #li-signaler-mobile { display: none; }
+
+/* Icônes Noctali/Mentali des boutons thème */
+.icone-theme {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
 
 .theme-text-mobile {
   font-family: 'Poppins', sans-serif;
   font-size: 13px;
+  font-weight: 300;
   margin-left: 6px;
   color: var(--text-navbar);
   white-space: nowrap;
@@ -231,7 +238,7 @@ body {
 /* Style du texte à l'intérieur du bouton */
 .theme-text {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 300;
   color: #ffffff;
   margin-left: 4px; /* Rapproche le texte à seulement 4px de l'émoji */
   font-family: inherit;
@@ -261,13 +268,11 @@ body {
   transform: rotate(180deg);
 }
 
-@media (min-width: 769px) {
-  #theme-toggle-mobile {
-    display: none !important;
-  }
-}
-
-/* Hover sur desktop uniquement */
+/* Hover sur desktop uniquement.
+   ⚠️ La navbar a son PROPRE breakpoint (960px), différent du reste
+   du site (769px) : les liens desktop ont besoin d'environ 1000px
+   de large. En dessous, on bascule sur le menu hamburger.
+   Si tu changes cette valeur, change aussi les "960" dans script.js. */
 @media (min-width: 961px) {
   .dropdown:hover .dropdown-menu {
     display: block;
@@ -279,6 +284,7 @@ body {
 
 /* ==========================================
    CORRECTIONS RESPONSIVE MOBILE (NAVBAR)
+   ⚠️ Breakpoint navbar : 960px (voir commentaire plus haut)
    ========================================== */
 
 @media (max-width: 960px) {
@@ -318,8 +324,7 @@ body {
     display: none !important;
   }
 
-  /* --- BOUTON SIGNALER ERREUR MOBILE --- */
-  #btn-signaler-mobile { display: none !important; }
+  /* --- LIEN SIGNALER ERREUR (menu mobile) --- */
   #li-signaler-mobile { 
     display: block;
     border-bottom: 1px solid var(--hr-separator);
@@ -329,7 +334,7 @@ body {
 
   .signaler-link {
     color: #ffffff !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
   }
 
   /* --- VRAI BOUTON THÈME MOBILE --- */
@@ -375,13 +380,5 @@ body {
     min-width: 100%;
     padding: 5px 0;
     padding-left: 15px; 
-  }
-  
-  .dropdown.open .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown.open .arrow {
-    transform: rotate(180deg);
   }
 }

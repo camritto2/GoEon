@@ -81,7 +81,7 @@ body.dark-mode .rocket-chef-banner {
 .rocket-row .research-reward-item {
   width: calc(100% / 3);
   justify-content: center;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 
 .rocket-row .research-reward-item:last-of-type {
@@ -90,24 +90,25 @@ body.dark-mode .rocket-chef-banner {
 
 /* Images : forcer la taille (sans overflow:hidden pour ne pas rogner le badge) */
 .rocket-list .rocket-row .research-image-container {
-  width: 50px;
-  height: 52px;
+  width: 70px;
+  height: 72px;
   padding-top: 2px;
   box-sizing: border-box;
   align-items: flex-start;
 }
 
 .rocket-list .rocket-row .research-image-container img.pokemon-img {
-  width: 50px;
-  height: 50px;
-  max-width: 50px;
-  max-height: 50px;
+  width: 70px;
+  height: 70px;
+  max-width: 70px;
+  max-height: 70px;
   object-fit: contain;
 }
 
 /* Noms */
 .rocket-list .rocket-row .research-reward-name {
-  font-size: 9px;
+  font-size: 11px;
+  font-weight: 700; /* aligné sur .pokemon-name des cartes Raids */
   margin: 0;
   overflow: hidden;
   word-break: break-word;
@@ -174,21 +175,78 @@ body.dark-mode .rocket-chef-banner {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  gap: 1px;
+  gap: 2px;
 }
 
 .rocket-types .type-text {
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 600;
   color: var(--text-secondaire);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.rocket-types .type-icon {
+  height: 14px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ==========================================
+   MEILLEURS CONTRE
+   ========================================== */
+
+.rocket-counters-label {
+  color: var(--accent-vert-bon);
+  background-color: rgba(22, 163, 74, 0.08);
+}
+
+body.dark-mode .rocket-counters-label {
+  background-color: rgba(22, 163, 74, 0.15);
+}
+
+.rocket-counters {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 5px 0 5px 0;
+  background-color: rgba(22, 163, 74, 0.08);
+  border-radius: 0 0 16px 16px;
+}
+
+body.dark-mode .rocket-counters {
+  background-color: rgba(22, 163, 74, 0.15);
+}
+
+.rocket-counters .type-block {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 3px;
+}
+
+.rocket-counters .type-text {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-principal);
   margin: 0;
   line-height: 1;
 }
 
-.rocket-types .type-icon {
-  height: 12px;
+.rocket-counters .type-icon {
+  height: 18px;
   width: auto;
   object-fit: contain;
+}
+
+/* Le "+" reprend la structure d'un bloc de type (label fantôme + signe) :
+   il s'aligne géométriquement sur la zone des icônes à tous les breakpoints */
+.rocket-counters-plus .rocket-plus-signe {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondaire);
+  line-height: 18px; /* = hauteur des icônes */
 }
 
 /* ==========================================
@@ -198,7 +256,7 @@ body.dark-mode .rocket-chef-banner {
 @media (min-width: 769px) {
 
   .rocket-list {
-    max-width: 600px;
+    max-width: 700px;
   }
 
   .rocket-chef-banner {
@@ -215,32 +273,32 @@ body.dark-mode .rocket-chef-banner {
   }
 
   .rocket-slot-label {
-    font-size: 14px;
+    font-size: 17px;
     padding: 3px 0;
   }
 
   .rocket-list .rocket-row .research-reward-item {
-    padding-bottom: 9px;
+    padding-bottom: 6px;
   }
 
   .rocket-list .rocket-row .research-image-container {
-    width: 100px;
-    height: 102px;
+    width: 120px;
+    height: 122px;
     padding-top: 2px;
     box-sizing: border-box;
     align-items: flex-start;
   }
 
   .rocket-list .rocket-row .research-image-container img.pokemon-img {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
+    width: 120px;
+    height: 120px;
+    max-width: 120px;
+    max-height: 120px;
     object-fit: contain;
   }
 
   .rocket-list .rocket-row .research-reward-name {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .rocket-row .research-image-container .badges img.badge-obscur-icon {
@@ -258,12 +316,39 @@ body.dark-mode .rocket-chef-banner {
     right: 10px;
   }
 
+  .rocket-types {
+    gap: 12px;
+    margin-top: 6px;
+  }
+
+  .rocket-types .type-block {
+    gap: 4px;
+  }
+
   .rocket-types .type-text {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .rocket-types .type-icon {
-    height: 20px;
+    height: 24px;
+  }
+
+  .rocket-counters {
+    gap: 16px;
+    padding: 14px 0 16px 0;
+  }
+
+  .rocket-counters .type-text {
+    font-size: 13px;
+  }
+
+  .rocket-counters .type-icon {
+    height: 30px;
+  }
+
+  .rocket-counters-plus .rocket-plus-signe {
+    font-size: 18px;
+    line-height: 30px; /* = hauteur des icônes desktop */
   }
 
 }
