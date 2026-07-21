@@ -10,6 +10,54 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
   <link rel="apple-touch-icon" href="images/icon-192.png">
+  <style>
+    /* Mini-navbar de sections (spécifique à cette page) */
+    .section-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 9998;
+      background-color: var(--bg-site);
+      border-bottom: 1px solid var(--border-carte);
+      padding: 5px 8px;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+    }
+    .section-nav::-webkit-scrollbar { display: none; }
+    .section-nav a {
+      flex-shrink: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--text-secondaire);
+      text-decoration: none;
+      padding: 3px 6px;
+      border-radius: 20px;
+      border: 1px solid var(--border-carte);
+      background: var(--bg-carte);
+      white-space: nowrap;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .section-nav a:hover {
+      background-color: var(--accent-navbar);
+      color: var(--accent-text-navbar);
+    }
+    @media (min-width: 769px) {
+      .section-nav {
+        justify-content: center;
+        padding: 8px 10px;
+      }
+      .section-nav a {
+        font-size: 13px;
+        padding: 5px 14px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,11 +72,21 @@
     <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
 
+  <nav class="section-nav">
+    <a href="#bonus">Bonus</a>
+    <a href="#sauvages">Pokémon sauvages</a>
+    <a href="#raids">Raids</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#passe-go">Passe Go</a>
+    <a href="#ponctuelle">Étude Ponctuelle</a>
+    <a href="#magistrale">Étude Magistrale</a>
+  </nav>
+
   <!-- ═══════════════════════════════════════ -->
   <!--                  BONUS                  -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Bonus</h2>
+  <h2 class="category-title tier-1" id="bonus" >Bonus</h2>
   <div class="intro-rules">
     <div class="intro-item"><span class="bullet">• </span>Nouveaux Objets d'avatar</div>
     <div class="intro-item" style="margin-bottom: 10px;"><span class="bullet">• </span>Les Starters pourront avoir un Fond Spécial d'Équipe</div>
@@ -42,7 +100,7 @@
   <!--           POKÉMON SAUVAGES              -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Pokémon Sauvages</h2>
+  <h2 class="category-title tier-1" id="sauvages" >Pokémon Sauvages</h2>
 
   <!-- --- Du mardi 21/07 à 10h au jeudi 23/07 à 10h --- -->
   <p class="section-sous-titre"><em>Du mardi 21/07 à 10h au jeudi 23/07 à 10h</em></p>
@@ -372,7 +430,7 @@
   <!--                 RAIDS                   -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Raids</h2>
+  <h2 class="category-title tier-1" id="raids" >Raids</h2>
 
   <p class="section-sous-titre">Raids 1 Étoile</p>
   <div class="pokemon-grid pokemon-grid-6">
@@ -456,7 +514,7 @@
   <!--           TÂCHES D'ÉTUDE                -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Tâches d'Étude</h2>
+  <h2 class="category-title tier-1" id="taches" >Tâches d'Étude</h2>
   <p class="research-helper">💡 Les valeurs indiquées correspondent aux PC du 100%.</p>
 
   <p class="section-sous-titre"><em>Tout le long de l'évènement</em></p>
@@ -804,7 +862,7 @@
   <!--               PASSE GO                  -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Passe Go</h2>
+  <h2 class="category-title tier-1" id="passe-go" >Passe Go</h2>
   <div class="intro-rules">
     <strong>Bonus aux échelons suivants :</strong>
     <div class="intro-item"><span class="bullet">• </span>Rang 10 : Double Bonbons de capture</div>
@@ -823,6 +881,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Bulbizarre</h2>
         <p class="pokemon-subtitle">Portant un chapeau de fêtes</p>
+        <hr class="separator">
+        <p class="passe-go-pc">477</p>
       </div>
     </div>
 
@@ -835,6 +895,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Salamèche</h2>
         <p class="pokemon-subtitle">Portant un chapeau de fêtes</p>
+        <hr class="separator">
+        <p class="passe-go-pc">420</p>
       </div>
     </div>
 
@@ -847,6 +909,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Carapuce</h2>
         <p class="pokemon-subtitle">Portant un chapeau de fêtes</p>
+        <hr class="separator">
+        <p class="passe-go-pc">405</p>
       </div>
     </div>
 
@@ -859,6 +923,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Pikachu</h2>
         <p class="pokemon-subtitle">Assistant du Professeur Willow</p>
+        <hr class="separator">
+        <p class="passe-go-pc">402</p>
       </div>
     </div>
 
@@ -871,6 +937,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Pikachu</h2>
         <p class="pokemon-subtitle">Assistant du Professeur Willow</p>
+        <hr class="separator">
+        <p class="passe-go-pc">402</p>
       </div>
     </div>
 
@@ -883,6 +951,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Mordudor</h2>
         <p class="pokemon-subtitle">Avec la pièce du 10e Anniversaire</p>
+        <hr class="separator">
+        <p class="passe-go-pc">473</p>
       </div>
     </div>
 
@@ -895,6 +965,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Pikachu</h2>
         <p class="pokemon-subtitle">Assistant du Professeur Willow</p>
+        <hr class="separator">
+        <p class="passe-go-pc">402</p>
       </div>
     </div>
 
@@ -907,6 +979,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Pikachu</h2>
         <p class="pokemon-subtitle">Assistant du Professeur Willow</p>
+        <hr class="separator">
+        <p class="passe-go-pc">402</p>
       </div>
     </div>
 
@@ -919,6 +993,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Bulbizarre</h2>
         <p class="pokemon-subtitle">Portant un chapeau de fêtes</p>
+        <hr class="separator">
+        <p class="passe-go-pc">477</p>
       </div>
     </div>
 
@@ -931,6 +1007,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Salamèche</h2>
         <p class="pokemon-subtitle">Portant un chapeau de fêtes</p>
+        <hr class="separator">
+        <p class="passe-go-pc">420</p>
       </div>
     </div>
 
@@ -943,6 +1021,8 @@
       <div class="card-content">
         <h2 class="pokemon-name">Carapuce</h2>
         <p class="pokemon-subtitle">Portant un chapeau de fêtes</p>
+        <hr class="separator">
+        <p class="passe-go-pc">405</p>
       </div>
     </div>
 
@@ -968,7 +1048,7 @@
 
   </div>
 
-  <p class="event-sous-titre">Passe Go Deluxe</p>
+  <p class="section-sous-titre">Passe Go Deluxe</p>
   <div class="intro-rules">
     <p class="passe-go-intro" style="margin: 0 0 6px 0;"><em>Consultez la boutique en ligne pour les différentes offres</em></p>
     <div class="intro-item"><span class="bullet">• </span>Double rencontres avec les Pokémon aux rangs indiqués</div>
@@ -982,7 +1062,7 @@
   <!--       ÉTUDE PONCTUELLE GRATUITE         -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Étude Ponctuelle Gratuite</h2>
+  <h2 class="category-title tier-1" id="ponctuelle" >Étude Ponctuelle Gratuite</h2>
   <div class="intro-rules">
     <strong>Étape 1 :</strong>
     <div class="intro-item"><span class="bullet">• </span>Attrape 10 Pokémon</div>
@@ -1012,7 +1092,7 @@
         <h2 class="pokemon-name">Pikachu</h2>
         <p class="pokemon-subtitle">Assistant du Professeur Willow</p>
         <hr class="separator">
-        <div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">402</span></p></div>
+        <p class="passe-go-pc">402</p>
       </div>
     </div>
 
@@ -1022,7 +1102,7 @@
   <!--          ÉTUDE MAGISTRALE               -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Étude Magistrale</h2>
+  <h2 class="category-title tier-1" id="magistrale" >Étude Magistrale</h2>
   <p class="section-sous-titre"><em>5€59</em></p>
   <div class="intro-rules">
     <p style="margin: 0;">Retour de l'Étude Magistrale permettant d'obtenir <strong>Shaymin</strong> Shiny !</p>
@@ -1037,7 +1117,7 @@
       <div class="card-content">
         <h2 class="pokemon-name">Shaymin</h2>
         <hr class="separator">
-        <div class="pokemon-stats"><p class="stat-range">PC du 100% : <span class="boost-value">1 399</span></p></div>
+        <p class="passe-go-pc">1 399</p>
       </div>
     </div>
 

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Journée de Super Méga-Raids Méga-Staross</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <style>
+    /* Mini-navbar de sections (spécifique à cette page) */
+    .section-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 9998;
+      background-color: var(--bg-site);
+      border-bottom: 1px solid var(--border-carte);
+      padding: 5px 8px;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+    }
+    .section-nav::-webkit-scrollbar { display: none; }
+    .section-nav a {
+      flex-shrink: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--text-secondaire);
+      text-decoration: none;
+      padding: 3px 6px;
+      border-radius: 20px;
+      border: 1px solid var(--border-carte);
+      background: var(--bg-carte);
+      white-space: nowrap;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .section-nav a:hover {
+      background-color: var(--accent-navbar);
+      color: var(--accent-text-navbar);
+    }
+    @media (min-width: 769px) {
+      .section-nav {
+        justify-content: center;
+        padding: 8px 10px;
+      }
+      .section-nav a {
+        font-size: 13px;
+        padding: 5px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Journée de Super Méga-Raids Staross</h1>
+  <p class="raids-date">
+    Le samedi 22 août, de 14h à 17h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#honneur">Pokémon à l'Honneur</a>
+    <a href="#nouveautes">Nouveautés</a>
+    <a href="#bonus">Bonus</a>
+    <a href="#ticket">Ticket Payant</a>
+    <a href="#infos">Infos Supplémentaires</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--         POKÉMON À L'HONNEUR             -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="honneur">Pokémon à l'Honneur</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-staross">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/StarossM.png" data-shiny="images/StarossMS.png" alt="Méga-Staross" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name" style="color: var(--text-principal);">Méga-Staross</h2>
+        <p class="pokemon-subtitle">Shiny boosté !</p>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Eau</span><img src="images/eau.webp" alt="Eau" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Psy</span><img src="images/psy.webp" alt="Psy" class="type-icon"></div>
+        </div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">1 476</span></p>
+          <p class="stat-100">Boost Météo : <span class="boost-value">1 846</span></p>
+          <div class="weather-container">
+            <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
+            <div class="weather-block"><span class="weather-text">Vent</span><img src="images/Vent.webp" alt="Vent" class="weather-icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--             NOUVEAUTÉS                  -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="nouveautes">Nouveautés</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Staross pourra <strong>Méga-Évoluer</strong> pour la première fois dans le jeu !</div>
+    <div class="intro-item"><span class="bullet">• </span>Il pourra probablement atteindre le <strong>Super Niveau Max</strong> <em>(info non confirmée)</em></div>
+    <div class="intro-item"><span class="bullet">• </span>Il faudra probablement être minimum <strong>7 dresseurs</strong> pour faire ces Raids <em>(information non précisée sur le blog officiel)</em></div>
+    <div class="intro-item"><span class="bullet">• </span>Les Raids ne seront probablement <strong>pas sur toutes les Arènes</strong></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               BONUS                     -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Plus de chance d'obtenir un <strong>Staross</strong> Shiny</div>
+    <div class="intro-item"><span class="bullet">• </span>6 Passes de Raid supplémentaires gratuits <em>(7 au total)</em></div>
+    <div class="intro-item"><span class="bullet">• </span>Limite de Passes à distance augmentée à 20 <em>(du samedi 21, 2h au dimanche 22, 5h)</em></div>
+  </div>
+
+  <p class="section-sous-titre">Étude Ponctuelle</p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <img src="images/PassePremium.webp" alt="Passe de Raid Premium" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name" style="color: var(--text-principal);">Passe de Raid Premium</h2>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; color: var(--text-principal);">+</div>
+
+    <div class="pokemon-card pk-cizayox">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Cizayox.png" data-shiny="images/CizayoxS.png" alt="Cizayox" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Cizayox</h2>
+        <p class="pokemon-subtitle">+ Méga-Énergie</p>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p class="stat-range">PC du 100% : <span class="boost-value">1 286</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            TICKET PAYANT                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="ticket">Ticket Payant</h2>
+  <p class="section-sous-titre"><em>5€49 / Disponible en ligne avec 1 Passe Premium supplémentaire</em></p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>8 Passes de Raid supplémentaires <em>(14 au total)</em></div>
+    <div class="intro-item"><span class="bullet">• </span>Plus de chance d'obtenir des <strong>Super Bonbons L</strong> par Raid</div>
+    <div class="intro-item"><span class="bullet">• </span>5 000 PX supplémentaires par Raid</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--         INFOS SUPPLÉMENTAIRES           -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="infos">Infos Supplémentaires</h2>
+  <div class="intro-rules">
+    <p style="margin: 0;">Il est fort probable que <strong>Méga-Staross</strong> ne soit pas du tout au niveau de <strong>Primo-Kyogre</strong>, <strong>Méga-Laggron</strong> et compagnie…</p>
+  </div>
+
+</div>
+
+<script src="script.js?v=3"></script>
+
+</body>
+</html>

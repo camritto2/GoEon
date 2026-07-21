@@ -132,9 +132,7 @@
 /* Apireine — Normal / Shiny */
 .pk-apireine .emoji-shiny { display: inline; }
 
-/* Arcanin — Bon / Shiny */
-.pk-arcanin .pokemon-name { color: #16a34a; }
-.pk-arcanin .research-reward-name { color: #16a34a; }
+/* Arcanin — Shiny */
 .pk-arcanin .emoji-shiny  { display: inline; }
 
 /* Arcanin de Hisui — Bon / Shiny */
@@ -329,9 +327,7 @@
 .pk-canarticho-g .research-reward-name { color: #16a34a; }
 .pk-canarticho-g .emoji-shiny  { display: inline; }
 
-/* Caninos — Bon / Shiny */
-.pk-caninos .pokemon-name { color: #16a34a; }
-.pk-caninos .research-reward-name { color: #16a34a; }
+/* Caninos — Shiny */
 .pk-caninos .emoji-shiny  { display: inline; }
 
 /* Caninos de Hisui — Bon / Shiny */
@@ -385,9 +381,7 @@
 .pk-carmache .research-reward-name { color: #16a34a; }
 .pk-carmache .emoji-shiny  { display: inline; }
 
-/* Carmadura — Bon / Shiny */
-.pk-carmadura .pokemon-name { color: #16a34a; }
-.pk-carmadura .research-reward-name { color: #16a34a; }
+/* Carmadura — Shiny */
 .pk-carmadura .emoji-shiny  { display: inline; }
 
 /* Charbambin — Bon / Shiny */
@@ -2125,6 +2119,9 @@
 .pk-otarlette .research-reward-name { color: #16a34a; }
 .pk-otarlette .emoji-shiny  { display: inline; }
 
+/* Oyacata — Normal / Shiny */
+.pk-oyacata .emoji-shiny { display: inline; }
+
 /* Ouisticram — Bon / Shiny */
 .pk-ouisticram .pokemon-name { color: #16a34a; }
 .pk-ouisticram .research-reward-name { color: #16a34a; }
@@ -2825,6 +2822,9 @@
 
 /* Taupiqueur d'Alola — Normal / Shiny */
 .pk-taupiqueur-a .emoji-shiny { display: inline; }
+
+/* Taupikeau — Normal / Shiny */
+.pk-taupikeau .emoji-shiny { display: inline; }
 
 /* Ténéfix — Normal / Shiny (couvre Méga-Ténéfix) */
 .pk-tenefix .emoji-shiny { display: inline; }

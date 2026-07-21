@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Festival Aquatique</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <style>
+    /* Mini-navbar de sections (spécifique à cette page) */
+    .section-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 9998;
+      background-color: var(--bg-site);
+      border-bottom: 1px solid var(--border-carte);
+      padding: 5px 8px;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+    }
+    .section-nav::-webkit-scrollbar { display: none; }
+    .section-nav a {
+      flex-shrink: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--text-secondaire);
+      text-decoration: none;
+      padding: 3px 6px;
+      border-radius: 20px;
+      border: 1px solid var(--border-carte);
+      background: var(--bg-carte);
+      white-space: nowrap;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .section-nav a:hover {
+      background-color: var(--accent-navbar);
+      color: var(--accent-text-navbar);
+    }
+    @media (min-width: 769px) {
+      .section-nav {
+        justify-content: center;
+        padding: 8px 10px;
+      }
+      .section-nav a {
+        font-size: 13px;
+        padding: 5px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Festival Aquatique</h1>
+  <p class="raids-date">
+    Du mardi 18 août, 10h — Jusqu'au lundi 24 août, 20h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#bonus">Bonus</a>
+    <a href="#nouveaux">Nouveaux Pokémon</a>
+    <a href="#sauvages">Pokémon Sauvages</a>
+    <a href="#raids">Raids</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#passe-go">Passe Go</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               BONUS                     -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-couaneton">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Couaneton.png" data-shiny="images/CouanetonS.png" alt="Couaneton" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Couaneton</h2>
+        <p class="pokemon-subtitle">Shiny boosté !</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-araqua">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Araqua.png" data-shiny="images/AraquaS.png" alt="Araqua" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Araqua</h2>
+        <p class="pokemon-subtitle">Shiny boosté !</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- --- Bonus par période --- -->
+  <p class="section-sous-titre"><em>Du 18 août, 10h au 20 août, 10h</em></p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>PX multipliés par 2 par Capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Poussières Étoile multipliées par 3 par Capture</div>
+  </div>
+
+  <p class="section-sous-titre"><em>Du 20 août, 10h au 22 août, 10h</em></p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>PX multipliés par 3 par Capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Poussières Étoile multipliées par 4 par Capture</div>
+  </div>
+
+  <p class="section-sous-titre"><em>Du 22 août, 10h au 24 août, 20h</em></p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>PX multipliés par 4 par Capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Poussières Étoile multipliées par 5 par Capture</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           NOUVEAUX POKÉMON              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="nouveaux">Nouveaux Pokémon</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-embrochet">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/Embrochet.png" alt="Embrochet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Embrochet</h2>
+        <p class="pokemon-subtitle">Étude de terrain · Passe Go · Module Leurre Pluvieux</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-hastacuda">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/Hastacuda.png" alt="Hastacuda" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Hastacuda</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-nigosier">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/Nigosier.png" alt="Nigosier" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Nigosier</h2>
+        <p class="pokemon-subtitle">Œufs · Passe Go · Ligue Go (à partir du rang 16)</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-nigosier">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/NigosierE.png" alt="Nigosier Forme Gobe-Tout" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Nigosier</h2>
+        <p class="pokemon-subtitle">Forme Gobe-Tout</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-nigosier">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/NigosierP.png" alt="Nigosier Forme Gobe-Chu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Nigosier</h2>
+        <p class="pokemon-subtitle">Forme Gobe-Chu</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Embrochet évoluera en Hastacuda avec 50 Bonbons.</div>
+    <div class="intro-item"><span class="bullet">• </span>Nigosier pourra changer de forme en combat. <em>(Mécanique non-connue pour le moment)</em></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           POKÉMON SAUVAGES              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-sovkipou">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Sovkipou.png" data-shiny="images/SovkipouS.png" alt="Sovkipou" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Sovkipou</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-psykokwak">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Psykokwak.png" data-shiny="images/PsykokwakS.png" alt="Psykokwak" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Psykokwak</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-poissirene">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Poissirene.png" data-shiny="images/PoissireneS.png" alt="Poissirène" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Poissirène</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-vorasterie">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Vorasterie.png" data-shiny="images/VorasteriES.png" alt="Vorastérie" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Vorastérie</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-barpau">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Barpau.png" data-shiny="images/BarpauS.png" alt="Barpau" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Barpau</h2>
+        <p class="pokemon-subtitle">Rare</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-coquiperl">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Coquiperl.png" data-shiny="images/CoquiperlS.png" alt="Coquiperl" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Coquiperl</h2>
+        <p class="pokemon-subtitle">Rare</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-taupikeau">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Taupikeau.png" data-shiny="images/TaupikeauS.png" alt="Taupikeau" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Taupikeau</h2>
+        <p class="pokemon-subtitle">Uniquement dans son biome (Plage)</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 RAIDS                   -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="raids">Raids</h2>
+
+  <!-- --- Raids 1 Étoile --- -->
+  <p class="section-sous-titre">Raids 1 Étoile</p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-nigirigon">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/NigirigonC.png" alt="Nigirigon Forme Courbée" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Nigirigon</h2>
+        <p class="pokemon-subtitle">Forme Courbée — Europe, Moyen-Orient, Afrique</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-nigirigon">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/NigirigonA.png" alt="Nigirigon Forme Affalée" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Nigirigon</h2>
+        <p class="pokemon-subtitle">Forme Affalée — Amérique</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-nigirigon">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="images/NigirigonR.png" alt="Nigirigon Forme Raide" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Nigirigon</h2>
+        <p class="pokemon-subtitle">Forme Raide —<br>Asie-Pacifique</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-psykokwak">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="images/costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="images/Psykokwak.png" data-shiny="images/PsykokwakS.png" alt="Psykokwak portant une bouée" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name" style="color: var(--text-principal);">Psykokwak</h2>
+        <p class="pokemon-subtitle">Portant une bouée</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- --- Raids 3 Étoiles --- -->
+  <p class="section-sous-titre">Raids 3 Étoiles</p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-lokhlass">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="images/costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="images/Lokhlass.png" data-shiny="images/LokhlassS.png" alt="Lokhlass portant une écharpe" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name" style="color: var(--text-principal);">Lokhlass</h2>
+        <p class="pokemon-subtitle">Portant une écharpe</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-clamiral-h">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/ClamiralH.png" data-shiny="images/ClamiralHS.png" alt="Clamiral de Hisui" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Clamiral de Hisui</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-oyacata">
+      <div class="image-container">
+        <div class="badges"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Oyacata.png" data-shiny="images/OyacataS.png" alt="Oyacata" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Oyacata</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           TÂCHES D'ÉTUDE                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
+  <p class="research-helper">Les tâches exactes seront ajoutées dès qu'elles seront connues.</p>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               PASSE GO                  -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="passe-go">Passe Go</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Des rencontres avec les Pokémon de l'Évènement</div>
+    <div class="intro-item"><span class="bullet">• </span>Un Module Leurre Pluvieux</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Super Bonbons</div>
+    <div class="intro-item" style="margin-bottom: 10px;"><span class="bullet">• </span>Des Baies Framby Dorées</div>
+    <div class="intro-item" style="margin-bottom: 10px;"><span class="bullet">• </span>Et bien plus encore !</div>
+    <strong>Bonus aux échelons suivants :</strong>
+    <div class="intro-item"><span class="bullet">• </span>Rang 10 : Double Bonbons par Capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Rang 20 : Distance d'éclosion divisée par 2</div>
+  </div>
+
+  <p class="section-sous-titre">Passe Go Deluxe</p>
+  <div class="intro-rules">
+    <p class="passe-go-intro" style="margin: 0 0 6px 0;"><em>Consultez la boutique en ligne pour les différentes offres</em></p>
+    <div class="intro-item"><span class="bullet">• </span>Plus de rencontres avec les Pokémon de l'Évènement</div>
+    <div class="intro-item"><span class="bullet">• </span>Un Objet d'Avatar</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Baies Nanana Argentées</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Super Bonbons L</div>
+    <div class="intro-item"><span class="bullet">• </span>Un Incubateur</div>
+    <div class="intro-item" style="margin-bottom: 10px;"><span class="bullet">• </span>Et bien plus encore !</div>
+  </div>
+
+</div>
+
+<script src="script.js?v=3"></script>
+
+</body>
+</html>

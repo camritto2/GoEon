@@ -10,6 +10,54 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
   <link rel="apple-touch-icon" href="images/icon-192.png">
+  <style>
+    /* Mini-navbar de sections (spécifique à cette page) */
+    .section-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 9998;
+      background-color: var(--bg-site);
+      border-bottom: 1px solid var(--border-carte);
+      padding: 5px 8px;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+    }
+    .section-nav::-webkit-scrollbar { display: none; }
+    .section-nav a {
+      flex-shrink: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--text-secondaire);
+      text-decoration: none;
+      padding: 3px 6px;
+      border-radius: 20px;
+      border: 1px solid var(--border-carte);
+      background: var(--bg-carte);
+      white-space: nowrap;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .section-nav a:hover {
+      background-color: var(--accent-navbar);
+      color: var(--accent-text-navbar);
+    }
+    @media (min-width: 769px) {
+      .section-nav {
+        justify-content: center;
+        padding: 8px 10px;
+      }
+      .section-nav a {
+        font-size: 13px;
+        padding: 5px 14px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -24,11 +72,19 @@
     <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
 
+  <nav class="section-nav">
+    <a href="#sauvages">Pokémon Sauvages</a>
+    <a href="#oeufs">Œufs 5km</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#ponctuelle">Étude Ponctuelle</a>
+    <a href="#passe-go">Passe Go</a>
+  </nav>
+
   <!-- ═══════════════════════════════════════ -->
   <!--           POKÉMON SAUVAGES              -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Pokémon Sauvages</h2>
+  <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
 
   <div class="pokemon-grid pokemon-grid-6">
 
@@ -144,7 +200,7 @@
   <!--              OEUFS 5KM                  -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Œufs 5km</h2>
+  <h2 class="category-title tier-1" id="oeufs">Œufs 5km</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card pk-farfuret">
@@ -204,7 +260,7 @@
   <!--           TÂCHES D'ÉTUDE                -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Tâches d'Étude</h2>
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
   <p class="research-helper">Les tâches exactes seront ajoutées dès qu'elles seront connues.</p>
 
   <p class="section-sous-titre">Pokémon disponibles en récompense</p>
@@ -260,7 +316,7 @@
   <!--          ÉTUDE PONCTUELLE               -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Étude Ponctuelle</h2>
+  <h2 class="category-title tier-1" id="ponctuelle">Étude Ponctuelle</h2>
   <div class="intro-rules">
     <div class="intro-item"><span class="bullet">• </span>16 800 PX</div>
     <div class="intro-item"><span class="bullet">• </span>Une rencontre avec un Pikachu portant une visière de marathon</div>
@@ -284,7 +340,7 @@
   <!--               PASSE GO                  -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1">Passe Go</h2>
+  <h2 class="category-title tier-1" id="passe-go">Passe Go</h2>
   <div class="intro-rules">
     <div class="intro-item"><span class="bullet">• </span>Des rencontres avec les Pokémon de l'Évènement</div>
     <div class="intro-item"><span class="bullet">• </span>PX, Poussières Étoile, Super Bonbons &amp; Hyper Balls</div>
@@ -294,7 +350,7 @@
     <div class="intro-item"><span class="bullet">• </span>Rang 20 : Distance d'éclosion divisée par 2</div>
   </div>
 
-  <p class="event-sous-titre">Passe Go Deluxe</p>
+  <p class="section-sous-titre">Passe Go Deluxe</p>
   <div class="intro-rules">
     <p class="passe-go-intro" style="margin: 0 0 6px 0;"><em>Consultez la boutique en ligne pour les différentes offres</em></p>
     <div class="intro-item"><span class="bullet">• </span>Plus de rencontres avec les Pokémon de l'Évènement</div>

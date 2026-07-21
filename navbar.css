@@ -313,6 +313,8 @@ body {
     background-color: var(--bg-navbar);
     padding: 10px;
     box-sizing: border-box;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
   }
   
   .nav-links.active {

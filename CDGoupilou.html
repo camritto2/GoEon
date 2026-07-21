@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Journée de Communauté Goupilou</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <style>
+    /* Mini-navbar de sections (spécifique à cette page) */
+    .section-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 9998;
+      background-color: var(--bg-site);
+      border-bottom: 1px solid var(--border-carte);
+      padding: 5px 8px;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+    }
+    .section-nav::-webkit-scrollbar { display: none; }
+    .section-nav a {
+      flex-shrink: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--text-secondaire);
+      text-decoration: none;
+      padding: 3px 6px;
+      border-radius: 20px;
+      border: 1px solid var(--border-carte);
+      background: var(--bg-carte);
+      white-space: nowrap;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .section-nav a:hover {
+      background-color: var(--accent-navbar);
+      color: var(--accent-text-navbar);
+    }
+    @media (min-width: 769px) {
+      .section-nav {
+        justify-content: center;
+        padding: 8px 10px;
+      }
+      .section-nav a {
+        font-size: 13px;
+        padding: 5px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Journée de Communauté Goupilou</h1>
+  <p class="raids-date">
+    Dimanche 16 août, de 14h à 17h/21h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#honneur">Pokémon à l'honneur</a>
+    <a href="#bonus">Bonus</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#attaques">Attaques Spéciales</a>
+    <a href="#ticket">Ticket Payant</a>
+  </nav>
+
+  <div class="intro-rules">
+    <p>Ayant gagné le vote sur YouTube, Goupilou sera à l'honneur du Community Day du mois d'août !</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          POKÉMON À L'HONNEUR            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="honneur">Pokémon à l'honneur</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-goupilou">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny nouveau-shiny"></span></div>
+        <img src="images/Goupilou.png" data-shiny="images/GoupilouS.png" alt="Goupilou" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Goupilou</h2>
+        <p class="pokemon-subtitle">Nouveau Shiny !</p>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Ténèbres</span><img src="images/tenebres.webp" alt="Ténèbres" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; color: var(--text-principal);">+</div>
+
+    <div class="pokemon-card pk-roublenard">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny nouveau-shiny"></span></div>
+        <img src="images/Roublenard.png" data-shiny="images/RoublenardS.png" alt="Roublenard" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Roublenard</h2>
+        <p class="pokemon-subtitle">Nouveau Shiny !</p>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Ténèbres</span><img src="images/tenebres.webp" alt="Ténèbres" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                BONUS                    -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span><strong>Triple Poussières Étoile</strong> de Capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Taux de <strong>shiny boosté à 1/25</strong></div>
+    <div class="intro-item"><span class="bullet">• </span>Double Bonbons par capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Plus de chance d'obtenir des Bonbons L par capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Les Encens durent 3h (sauf encens quotidien)</div>
+    <div class="intro-item"><span class="bullet">• </span>Les Modules Leurre dureront 1h, et attireront des Goupilou — <em>jusqu'à 21h</em></div>
+    <div class="intro-item"><span class="bullet">• </span>5 Photobombs de Goupilou</div>
+    <div class="intro-item"><span class="bullet">• </span>1 Échange supplémentaire, avec un coût divisé par 2 — <em>jusqu'à 21h</em></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          TÂCHES D'ÉTUDE                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
+  <p class="research-helper">💡 Les valeurs indiquées correspondent aux PC du 100%.</p>
+
+  <div class="research-list">
+
+    <div class="research-card">
+      <span class="research-task">Attrape 3 Goupilou<br>Attrape 5 Pokémon en équipe<br>Attrape 50 Pokémon</span>
+      <div class="research-rewards">
+        <div class="research-reward-item pk-goupilou">
+          <div class="research-image-container">
+            <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" class="emoji-shiny nouveau-shiny"></span></div>
+            <img src="images/Goupilou.png" data-shiny="images/GoupilouS.png" alt="Goupilou" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Goupilou</span>
+          <span class="research-cp">306</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--         ATTAQUES SPÉCIALES              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="attaques">Attaques Spéciales</h2>
+  <div class="intro-rules">
+    <p style="margin: 0 0 8px 0;"><em>Faire évoluer Goupilou en Roublenard entre 14h et 21h permet d'obtenir l'Attaque Chargée suivante :</em></p>
+    <p style="margin: 0 0 8px 0; text-align: center;"><strong>Vent Glace</strong> <img src="images/glace.webp" alt="Glace" style="width: 18px; height: 18px; vertical-align: middle;"></p>
+    <div class="intro-item"><span class="bullet">• </span>Puissance en PvP : 60 + Baisse l'Attaque du lanceur d'un niveau</div>
+    <div class="intro-item"><span class="bullet">• </span>Puissance en Raids : 60</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            TICKET PAYANT                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="ticket">Ticket Payant</h2>
+  <p class="section-sous-titre"><em>2€19 / Disponible dans la boutique en ligne avec 5 Hyper Balls offertes</em></p>
+  <div class="intro-rules">
+    <p style="margin: 0 0 8px 0;">Une Étude Spéciale avec :</p>
+    <div class="intro-item"><span class="bullet">• </span>Des rencontres supplémentaires avec des Goupilou et Roublenard</div>
+    <div class="intro-item"><span class="bullet">• </span>1 Passe Premium</div>
+    <div class="intro-item"><span class="bullet">• </span>1 Super Bonbon L</div>
+    <div class="intro-item"><span class="bullet">• </span>Et bien d'autres surprises !</div>
+  </div>
+
+</div>
+
+<script src="script.js?v=3"></script>
+
+</body>
+</html>

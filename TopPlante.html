@@ -272,11 +272,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Archéduc</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="arche-imm">Feuille Magik</strong><span id="arche-imm-alt" style="display:none"> → <strong>Étonnement</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Feuille Magik</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Végé-Attaque</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-arche-btn" class="btn-spectre" aria-expanded="false" onclick="toggleBuild('arche-details', 'toggle-arche-btn'); toggleAltImm('arche-imm', 'arche-imm-alt')">
+                    <button id="toggle-arche-btn" class="btn-spectre" aria-expanded="false" onclick="toggleBuild('arche-details', 'toggle-arche-btn')">
                     Également Top Spectre <img src="images/spectre.webp" alt="Type Spectre" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -472,19 +472,8 @@
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Feuille Magik</strong><span class="legacy-indicator">L</span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Tempête Verte</strong>
                 </div>
-                <div class="card-button">
-                    <button id="toggle-celeb-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('celeb-details', 'toggle-celeb-btn')">
-                    Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="celeb-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Psyko</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
-                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
@@ -542,7 +531,7 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Noadkoko</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="noadk-imm">Balle Graine</strong><span id="noadk-imm-alt" style="display:none"> → <strong>Extrasenseur</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="noadk-imm">Balle Graine</strong><span id="noadk-imm-alt" style="display:none"> → <strong>Choc Mental</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lance-Soleil</strong>
                 </div>
                 <div class="card-button">
@@ -621,11 +610,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Blizzaroi</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Feuillage</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mbliz-imm">Tranch'Herbe</strong><span id="mbliz-imm-alt" style="display:none"> → <strong>Poudreuse</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Éco-Sphère</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mbliz-btn" class="btn-glace" aria-expanded="false" onclick="toggleBuild('mbliz-details', 'toggle-mbliz-btn')">
+                    <button id="toggle-mbliz-btn" class="btn-glace" aria-expanded="false" onclick="toggleBuild('mbliz-details', 'toggle-mbliz-btn'); toggleAltImm('mbliz-imm', 'mbliz-imm-alt')">
                     Également Top Glace <img src="images/glace.webp" alt="Type Glace" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
