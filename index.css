@@ -217,6 +217,7 @@
 .grey-card   { background-color: var(--bg-image-container); border-color: var(--border-carte); }
 .red-card    { background-color: #fde8e8; border-color: #f5a0a0; }
 .violet-card { background-color: #ede7f6; border-color: #c5aee8; }
+.gold-card   { background-color: #fdf6e3; border-color: #DAA520; }
 
 /* Mode sombre */
 body.dark-mode .yellow-card { background-color: #2d2700; border-color: #5a4a00; }
@@ -226,6 +227,7 @@ body.dark-mode .green-card  { background-color: #0d2010; border-color: #1a4020; 
 body.dark-mode .orange-card { background-color: #2d1800; border-color: #5a3000; }
 body.dark-mode .red-card    { background-color: #2d0a0a; border-color: #6a1a1a; }
 body.dark-mode .violet-card { background-color: #1a0d2e; border-color: #3d1a60; }
+body.dark-mode .gold-card   { background-color: #2d2200; border-color: #8B6914; }
 
 /* CARTES DÉSACTIVÉES */
 .disabled {

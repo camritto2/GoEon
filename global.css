@@ -192,6 +192,11 @@ h1 {
   height: 10px;
 }
 
+.research-image-container .emoji-costume {
+  width: 10px;
+  height: 10px;
+}
+
 .research-reward-name {
   font-size: 8px;
   font-weight: 600;
@@ -736,6 +741,7 @@ body.dark-mode .shiny-boost-circle {
   .research-reward-name { font-size: 16px; align-self: stretch; }
   .research-image-container { width: 100px; height: 100px; }
   .research-image-container .emoji-shiny { width: 20px; height: 20px; }
+  .research-image-container .emoji-costume { width: 20px; height: 20px; }
   .research-image-container .badges { top: 6px; left: -10px; }
   .research-reward-form { font-size: 14px; }
   .research-cp { font-size: 14px; padding-top: 0; padding-bottom: 2px !important; }
