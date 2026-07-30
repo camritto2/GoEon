@@ -10,7 +10,65 @@
   <meta name="theme-color" content="#29b6f6">
   <link rel="apple-touch-icon" href="images/icon-192.png">
   <style>
-    /* Timeline de récupération des PM (spécifique à cette page) */
+    /* ═══════════════════════════════════════ */
+    /*   Mise en page du texte (intro-rules)   */
+    /* ═══════════════════════════════════════ */
+
+    .intro-rules p  { margin: 0 0 10px 0; }
+    .intro-rules ol { margin: 0 0 10px 0; padding-left: 20px; }
+
+    .intro-rules > p:last-child,
+    .intro-rules > ol:last-child { margin-bottom: 0; }
+
+    /* Rétablit l'espace au-dessus d'un paragraphe qui suit une liste d'intro-item */
+    .intro-rules .intro-item + p { margin-top: 10px; }
+
+    /* Paragraphe collé au suivant (note italique de précision) */
+    .intro-rules p.pm-serre { margin-bottom: 4px; }
+    .intro-rules p.pm-note  { font-style: italic; }
+
+    .pm-marche {
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 6px;
+    }
+
+    .pm-logo { text-align: center; margin: 0 0 10px 0; }
+
+    .pm-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .pm-total {
+      color: #10b981;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    /* 60px de navbar fixe + 12px de respiration */
+    .pm-timeline-intro {
+      margin-top: 15px;
+      scroll-margin-top: 72px;
+    }
+
+    .pm-footnote {
+      font-size: 11px;
+      color: var(--text-secondaire);
+      margin: -10px 0 20px 0;
+    }
+
+    .pm-variant-note {
+      font-size: 12px;
+      color: var(--text-secondaire);
+      margin: -8px 0 14px 0;
+    }
+
+    /* ═══════════════════════════════════════ */
+    /*     Timeline de récupération des PM     */
+    /* ═══════════════════════════════════════ */
+
     .pm-timeline {
       display: flex;
       flex-direction: column;
@@ -63,8 +121,9 @@
       border-left: 1px solid var(--border-carte);
     }
 
-    .pm-plus  { color: #16a34a; font-weight: 700; }
-    .pm-minus { color: #dc2626; font-weight: 700; }
+    /* Gain / perte de PM — volontairement distincts du vert "Bon" (#16a34a) */
+    .pm-plus  { color: #10b981; font-weight: 700; }
+    .pm-minus { color: #ef4444; font-weight: 700; }
 
     .pm-table td.pm-full {
       text-align: left;
@@ -75,10 +134,13 @@
       padding-left: 10px;
     }
 
-    .pm-struck {
-      text-decoration: line-through;
-      opacity: 0.5;
-    }
+    /* text-decoration ne se propage pas d'un <tr> vers ses <td> : on cible les cellules */
+    .pm-struck { opacity: 0.5; }
+    .pm-struck td { text-decoration: line-through; }
+
+    /* ═══════════════════════════════════════ */
+    /*          Variantes (cases à cocher)     */
+    /* ═══════════════════════════════════════ */
 
     .pm-variant-toggle {
       display: flex;
@@ -104,14 +166,50 @@
       flex-shrink: 0;
     }
 
-    @media (min-width: 769px) {
-      .pm-variant-toggle { font-size: 14px; padding: 12px 18px; }
+    /* Confirmation affichée sous la case cochée */
+    .pm-toast {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      background: rgba(41, 182, 246, 0.12);
+      border: 1px solid #29b6f6;
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin: -4px 0 14px 0;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-principal);
+      animation: pmToastIn 0.25s ease-out;
+    }
+
+    .pm-toast[hidden] { display: none; }
+
+    .pm-toast button {
+      background: #29b6f6;
+      color: #0b2027;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    @keyframes pmToastIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to   { opacity: 1; transform: none; }
     }
 
     @media (min-width: 769px) {
+      .pm-variant-toggle  { font-size: 14px; padding: 12px 18px; }
+      .pm-toast           { font-size: 14px; padding: 12px 18px; }
+      .pm-toast button    { font-size: 14px; }
       .pm-table th        { font-size: 17px; padding: 12px 14px 8px 14px; }
-      .pm-table th em      { font-size: 13px; }
-      .pm-table td         { font-size: 15px; padding: 10px 14px; }
+      .pm-table th em     { font-size: 13px; }
+      .pm-table td        { font-size: 15px; padding: 10px 14px; }
     }
   </style>
 </head>
@@ -126,10 +224,10 @@
   <h2 class="category-title tier-1">Règles Générales</h2>
 
   <div class="intro-rules">
-    <p style="margin: 0 0 10px 0;"><strong>PM</strong> = Particules Max</p>
+    <p><strong>PM</strong> = Particules Max</p>
     <div class="intro-item"><span class="bullet">• </span>À savoir, une Source offre 120 PM par jour.</div>
     <div class="intro-item"><span class="bullet">• </span>Toutes les Sources ne sont pas disponibles tous les jours.</div>
-    <div class="intro-item"><span class="bullet">• </span>Il y a plus de Sources le lundi, et lors des Évènements Dynamax/Gigamax</div>
+    <div class="intro-item"><span class="bullet">• </span>Il y a plus de Sources le lundi et lors des Évènements Dynamax/Gigamax.</div>
   </div>
 
   <!-- ═══════════════════════════════════════ -->
@@ -139,15 +237,15 @@
   <h2 class="category-title tier-1">Optimisation Quotidienne</h2>
 
   <div class="intro-rules">
-    <p style="text-align: center; font-size: 24px; letter-spacing: 6px; margin: 0 0 10px 0;">🚶 📍 📍 📍 📍 🚶</p>
-    <p style="margin: 0 0 10px 0;">Le jeu indique qu'il est possible de récupérer 800 Particules Max par jour. En réalité, on peut en obtenir plus en suivant la méthode suivante :</p>
-    <ol style="margin: 0 0 10px 0; padding-left: 20px;">
-      <li>Récupérer 300 PM en marchant 2 km. (Ces 2 km peuvent avoir été réalisés la veille)</li>
-      <li>Récupérer les PM de 4 nouvelles sources. (4 x 120 = 480 PM)</li>
+    <p class="pm-marche">🚶 📍 📍 📍 📍 🚶</p>
+    <p>Le jeu indique qu'il est possible de récupérer 800 Particules Max par jour. En réalité, on peut en obtenir plus en suivant la méthode suivante :</p>
+    <ol>
+      <li>Récupérer 300 PM en marchant 2 km (ces 2 km peuvent avoir été réalisés la veille).</li>
+      <li>Récupérer les PM de 4 nouvelles Sources (4 × 120 = 480 PM).</li>
       <li>Récupérer de nouveau 300 PM après avoir marché 2 km.</li>
     </ol>
-    <p style="margin: 0 0 10px 0;">De cette manière, vous aurez récupéré <span class="texte-vert" style="text-decoration: underline;">1 080 PM</span> en une journée !</p>
-    <p style="margin: 0;">💡 À savoir, la récupération des PM se réinitialise à 5h du matin.</p>
+    <p>De cette manière, vous aurez récupéré <span class="pm-total">1&nbsp;080 PM</span> en une journée !</p>
+    <p>💡 À savoir, la récupération des PM se réinitialise à 5h du matin.</p>
   </div>
 
   <!-- ═══════════════════════════════════════ -->
@@ -156,22 +254,22 @@
 
   <h2 class="category-title tier-1">Optimisation Journée Gigamax</h2>
 
-  <div style="text-align: center; margin: 0 0 10px 0;">
-    <img src="images/Gigamax.webp" alt="Gigamax" style="width: 44px; height: 44px; object-fit: contain;">
+  <div class="pm-logo">
+    <img src="images/Gigamax.webp" alt="Gigamax">
   </div>
 
   <div class="intro-rules">
-    <p style="margin: 0 0 10px 0;">Traditionnellement, lors des Journées de Combat Gigamax, les bonus suivants sont actifs, <em>à partir de 0h</em> (sans Ticket Payant) :</p>
-    <div class="intro-item"><span class="bullet">➡️ </span>Récupérer 600 PM en marchant 500m (uniquement après avoir récupéré les 300 PM "mises de côté" la veille)</div>
-    <div class="intro-item"><span class="bullet">➡️ </span>Limite de PM à récupérer augmentée à 1 600</div>
-    <div class="intro-item"><span class="bullet">➡️ </span>820 PM à récupérer sur chaque source</div>
-    <p style="margin: 10px 0 0 0;">Pour optimiser ses PM et faire le plus de Combat Gigamax possible, il faut tirer profit de ces bonus qui s'appliquent dès 0h et de la réinitialisation qui elle a lieu à 5h.</p>
-    <p style="margin: 10px 0 0 0;">Les calculs suivants permettent de réaliser <strong>6 Combats Gigamax gratuits</strong></p>
-    <p style="margin: 4px 0 0 0; font-style: italic;">Cela s'applique uniquement pour la version gratuite du Passe du mois, et sans ticket d'évènement</p>
-    <p style="margin: 10px 0 0 0;"><strong>Pour que cela fonctionne, il ne faut pas récupérer les 500 PM offerts dans le Passe du mois, aux rangs 19, 49, 74 et 86.</strong></p>
+    <p>Traditionnellement, lors des Journées de Combat Gigamax, les bonus suivants sont actifs <em>à partir de 0h</em> (sans ticket payant) :</p>
+    <div class="intro-item"><span class="bullet">➡️ </span>Récupérer 600 PM en marchant 500 m (uniquement après avoir récupéré les 300 PM «&nbsp;mises de côté&nbsp;» la veille).</div>
+    <div class="intro-item"><span class="bullet">➡️ </span>Limite de PM à récupérer augmentée à 1&nbsp;600.</div>
+    <div class="intro-item"><span class="bullet">➡️ </span>820 PM à récupérer sur chaque Source.</div>
+    <p>Pour optimiser ses PM et faire le plus de Combats Gigamax possible, il faut tirer profit de ces bonus qui s'appliquent dès 0h et de la réinitialisation qui, elle, a lieu à 5h.</p>
+    <p class="pm-serre">Les calculs suivants permettent de réaliser <strong>6 Combats Gigamax gratuits</strong>.</p>
+    <p class="pm-note">Cela s'applique uniquement à la version gratuite du Passe du mois, et sans ticket d'évènement.</p>
+    <p><strong>Pour que cela fonctionne, il ne faut pas récupérer les 500 PM offertes dans le Passe du mois, aux rangs 19, 49, 74 et 86.</strong></p>
   </div>
 
-  <p class="section-sous-titre" style="margin-top: 15px;">Voici le récapitulatif des actions à réaliser pour faire le plus de Combats Gigamax possible durant la Journée.</p>
+  <p class="section-sous-titre pm-timeline-intro">Voici le récapitulatif des actions à réaliser pour faire le plus de Combats Gigamax possible durant la Journée.</p>
 
   <div class="pm-timeline">
 
@@ -189,8 +287,8 @@
         <tr><th colspan="2">J-1<br><em>Souvent le vendredi</em></th></tr>
       </thead>
       <tbody>
-        <tr><td>Récupérer les PM de 4 nouvelles Sources (<span class="pm-plus">+480</span>)</td><td data-default="1 160 – 1 190 PM" data-variant="860 – 1 190 PM">1 160 – 1 190 PM</td></tr>
-        <tr><td colspan="2" class="pm-full">Terminer la journée avec 300 PM prêtes à être récupérées</td></tr>
+        <tr><td>Récupérer les PM de 4 nouvelles Sources (<span class="pm-plus">+480</span>)</td><td data-default="1&nbsp;160 – 1&nbsp;190 PM" data-variant="860 – 1&nbsp;190 PM">1&nbsp;160 – 1&nbsp;190 PM</td></tr>
+        <tr><td colspan="2" class="pm-full">Terminer la journée avec 300 PM prêtes à être récupérées.</td></tr>
       </tbody>
     </table>
 
@@ -199,8 +297,8 @@
         <tr><th colspan="2">Jour J<br><em>Entre 0h01 et 4h59 — Souvent le samedi</em></th></tr>
       </thead>
       <tbody>
-        <tr><td>Récupérer les 300PM mises de côté (<span class="pm-plus">+300</span>)</td><td data-default="1 460 – 1 490 PM" data-variant="1 160 – 1 490 PM">1 460 – 1 490 PM</td></tr>
-        <tr><td>Marcher 500m pour récupérer 600 PM (<span class="pm-plus">+600</span>) [bonus actifs après 0h]</td><td data-default="2 060 – 2 090 PM" data-variant="1 760 – 2 090 PM">2 060 – 2 090 PM</td></tr>
+        <tr><td>Récupérer les 300 PM mises de côté (<span class="pm-plus">+300</span>)</td><td data-default="1&nbsp;460 – 1&nbsp;490 PM" data-variant="1&nbsp;160 – 1&nbsp;490 PM">1&nbsp;460 – 1&nbsp;490 PM</td></tr>
+        <tr><td>Marcher 500 m pour récupérer 600 PM (<span class="pm-plus">+600</span>) [bonus actifs après 0h]</td><td data-default="2&nbsp;060 – 2&nbsp;090 PM" data-variant="1&nbsp;760 – 2&nbsp;090 PM">2&nbsp;060 – 2&nbsp;090 PM</td></tr>
       </tbody>
     </table>
 
@@ -209,47 +307,52 @@
         <tr><th colspan="2">Jour J<br><em>Entre 14h et 17h</em></th></tr>
       </thead>
       <tbody>
-        <tr><td>1️⃣ Premier Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="1 260 – 1 290 PM" data-variant="960 – 1 290 PM">1 260 – 1 290 PM</td></tr>
-        <tr><td>Marcher 500m pour récupérer 600 PM (<span class="pm-plus">+600</span>)<span class="footnote-ref">1</span></td><td data-default="1 860 – 1 890 PM" data-variant="1 560 – 1 890 PM">1 860 – 1 890 PM</td></tr>
-        <tr><td>2️⃣ Deuxième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="1 060 – 1 090 PM" data-variant="760 – 1 090 PM">1 060 – 1 090 PM</td></tr>
-        <tr><td>Récupérer les PM d'une Source (<span class="pm-plus">+820</span>)<span class="footnote-ref">1</span></td><td data-default="1 880 – 1 910 PM" data-variant="1 580 – 1 910 PM">1 880 – 1 910 PM</td></tr>
-        <tr><td>3️⃣ Troisième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="1 080 – 1 110 PM" data-variant="780 – 1 110 PM">1 080 – 1 110 PM</td></tr>
-        <tr><td>Récupérer les PM d'une Source (<span class="pm-plus">+820</span>)</td><td data-default="1 900 – 1 930 PM" data-variant="1 600 – 1 930 PM">1 900 – 1 930 PM</td></tr>
-        <tr class="pm-strike-passe"><td>Récupérer les 500 PM du Passe du mois (<span class="pm-plus">+500</span>)</td><td data-default="2 400 – 2 430 PM" data-variant="-">2 400 – 2 430 PM</td></tr>
-        <tr><td>4️⃣ Quatrième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="1 600 – 1 630 PM" data-variant="800 – 1 130 PM">1 600 – 1 630 PM</td></tr>
+        <tr><td>1️⃣ Premier Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="1&nbsp;260 – 1&nbsp;290 PM" data-variant="960 – 1&nbsp;290 PM">1&nbsp;260 – 1&nbsp;290 PM</td></tr>
+        <tr><td>Marcher 500 m pour récupérer 600 PM (<span class="pm-plus">+600</span>)<span class="footnote-ref">1</span></td><td data-default="1&nbsp;860 – 1&nbsp;890 PM" data-variant="1&nbsp;560 – 1&nbsp;890 PM">1&nbsp;860 – 1&nbsp;890 PM</td></tr>
+        <tr><td>2️⃣ Deuxième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="1&nbsp;060 – 1&nbsp;090 PM" data-variant="760 – 1&nbsp;090 PM">1&nbsp;060 – 1&nbsp;090 PM</td></tr>
+        <tr><td>Récupérer les PM d'une Source (<span class="pm-plus">+820</span>)<span class="footnote-ref">1</span></td><td data-default="1&nbsp;880 – 1&nbsp;910 PM" data-variant="1&nbsp;580 – 1&nbsp;910 PM">1&nbsp;880 – 1&nbsp;910 PM</td></tr>
+        <tr><td>3️⃣ Troisième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="1&nbsp;080 – 1&nbsp;110 PM" data-variant="780 – 1&nbsp;110 PM">1&nbsp;080 – 1&nbsp;110 PM</td></tr>
+        <tr><td>Récupérer les PM d'une Source (<span class="pm-plus">+820</span>)</td><td data-default="1&nbsp;900 – 1&nbsp;930 PM" data-variant="1&nbsp;600 – 1&nbsp;930 PM">1&nbsp;900 – 1&nbsp;930 PM</td></tr>
+        <tr class="pm-strike-passe"><td>Récupérer les 500 PM du Passe du mois (<span class="pm-plus">+500</span>)</td><td data-default="2&nbsp;400 – 2&nbsp;430 PM" data-variant="-">2&nbsp;400 – 2&nbsp;430 PM</td></tr>
+        <tr><td>4️⃣ Quatrième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="1&nbsp;600 – 1&nbsp;630 PM" data-variant="800 – 1&nbsp;130 PM">1&nbsp;600 – 1&nbsp;630 PM</td></tr>
         <tr><td>5️⃣ Cinquième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="800 – 830 PM" data-variant="0 – 330 PM">800 – 830 PM</td></tr>
         <tr id="row-combat6"><td>6️⃣ Sixième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td>0 – 30 PM</td></tr>
-        <tr id="row-ambassadeur-recup" class="pm-ambassadeur-row" style="display: none;"><td>Récupérer les 800 PM de l'Étude Spéciale Ambassadeur (<span class="pm-plus">+800</span>)</td><td>800 – 830 PM</td></tr>
+        <tr id="row-ambassadeur-recup" class="pm-ambassadeur-row" style="display: none;"><td>Récupérer les 800 PM de l'Étude Spéciale Ambassadeur (<span class="pm-plus">+800</span>)</td><td data-default="800 – 830 PM" data-variant="800 – 1&nbsp;130 PM">800 – 830 PM</td></tr>
         <tr class="pm-ambassadeur-row pm-strike-passe" style="display: none;"><td>7️⃣ Septième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td data-default="0 – 30 PM" data-variant="-">0 – 30 PM</td></tr>
       </tbody>
     </table>
 
   </div>
 
-  <p style="font-size: 11px; color: var(--text-secondaire); margin: -10px 0 20px 0;"><span class="footnote-ref">1</span> : Ces 2 étapes sont interchangeables.</p>
+  <p class="pm-footnote"><span class="footnote-ref">1</span> : Ces 2 étapes sont interchangeables.</p>
 
   <h2 class="category-title tier-1">Variantes</h2>
 
   <label class="pm-variant-toggle">
-    <input type="checkbox" id="chk-passe-recupere" onchange="updateVariants()">
-    Oops, j'ai déjà récupéré les PM du Passe !
+    <input type="checkbox" id="chk-passe-recupere" onchange="updateVariants(this)">
+    Oups, j'ai déjà récupéré les PM du Passe !
   </label>
 
-  <p style="font-size: 12px; color: var(--text-secondaire); margin: -8px 0 14px 0;">Que vous ayez récupéré les 500 PM ou seulement 100, ça ne change rien : le 6e Combat Gigamax devient impossible (sans acheter un pack de PM).</p>
+  <p class="pm-variant-note">Que vous ayez récupéré les 500 PM ou seulement 100, cela ne change rien : le 6<sup>e</sup> Combat Gigamax devient impossible (sans acheter un pack de PM).</p>
 
   <label class="pm-variant-toggle">
-    <input type="checkbox" id="chk-ambassadeur" onchange="updateVariants()">
+    <input type="checkbox" id="chk-ambassadeur" onchange="updateVariants(this)">
     J'ai la chance d'avoir un Ambassadeur de Communauté
   </label>
 
+  <div id="pm-toast" class="pm-toast" hidden>
+    <span>✓ Le tableau a été mis à jour.</span>
+    <button type="button" onclick="scrollToPmTable()">Voir le tableau ↑</button>
+  </div>
+
   <div class="intro-rules">
-    <p style="margin: 0;">Versions avec Passe du Mois payant et Ticket d'évènement à venir.</p>
+    <p>Versions avec Passe du mois payant et ticket d'évènement à venir.</p>
   </div>
 
 </div>
 
 <script>
-  function updateVariants() {
+  function updateVariants(source) {
     var passeChecked = document.getElementById('chk-passe-recupere').checked;
     var ambassadeurChecked = document.getElementById('chk-ambassadeur').checked;
 
@@ -257,6 +360,7 @@
     document.querySelectorAll('[data-default]').forEach(function (el) {
       el.textContent = passeChecked ? el.dataset.variant : el.dataset.default;
     });
+
     document.querySelectorAll('.pm-strike-passe').forEach(function (row) {
       row.classList.toggle('pm-struck', passeChecked);
     });
@@ -269,6 +373,7 @@
     // 6e Combat : dépend des 2 cases à la fois
     var combat6 = document.getElementById('row-combat6');
     var combat6Val = combat6.querySelector('td:last-child');
+
     if (passeChecked && ambassadeurChecked) {
       combat6.classList.remove('pm-struck');
       combat6Val.textContent = '0 – 330 PM';
@@ -283,12 +388,34 @@
     // Réordonner la ligne Ambassadeur avant le 6e combat si les 2 cases sont cochées
     var ambassadeurRow = document.getElementById('row-ambassadeur-recup');
     var tbody = combat6.parentNode;
+
     if (passeChecked && ambassadeurChecked) {
       tbody.insertBefore(ambassadeurRow, combat6);
     } else {
       tbody.insertBefore(ambassadeurRow, combat6.nextSibling);
     }
+
+    if (source) showPmToast(source);
   }
+
+  function showPmToast(source) {
+    var toast = document.getElementById('pm-toast');
+    var label = source.closest('.pm-variant-toggle');
+
+    label.insertAdjacentElement('afterend', toast);
+    toast.hidden = false;
+
+    clearTimeout(toast.pmTimer);
+    toast.pmTimer = setTimeout(function () { toast.hidden = true; }, 8000);
+  }
+
+  function scrollToPmTable() {
+    document.getElementById('pm-toast').hidden = true;
+    document.querySelector('.pm-timeline-intro').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Resynchronise l'affichage si le navigateur a restauré l'état des cases (F5)
+  updateVariants();
 </script>
 
 <script src="script.js?v=3"></script>
