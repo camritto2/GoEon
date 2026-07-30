@@ -27,6 +27,35 @@
     <p class="hero-subtitle">Toutes les ressources de Pokémon Go pour les joueurs francophones !</p>
   </header>
 
+  <!-- SECTION NOUVEAUTÉS -->
+  <section class="home-section news-section">
+    <h2 class="section-title">Nouveautés</h2>
+    <ul class="news-list">
+      <li class="news-group">
+        <span class="news-date">29/07</span>
+        <ul class="news-items">
+          <li><span class="news-text">Mise à jour des raids</span></li>
+          <li><span class="news-text">Mise à jour des évènements</span></li>
+        </ul>
+      </li>
+      <li class="news-group">
+        <span class="news-date">28/07</span>
+        <ul class="news-items">
+          <li><span class="news-text">La catégorie Évènement est prête et fonctionnelle</span></li>
+          <li>Meilleurs Pokémon de type <a href="TopPoison.html">Poison</a>, <a href="TopPsy.html">Psy</a> et <a href="TopRoche.html">Roche</a></li>
+          <li><span class="news-text">Organisation du site</span></li>
+        </ul>
+      </li>
+      <li class="news-group">
+        <span class="news-date news-date-upcoming">À venir</span>
+        <ul class="news-items">
+          <li><span class="news-text">Team Go Rocket : Sbires &amp; Chefs</span></li>
+          <li><span class="news-text">La suite des meilleurs Pokémon par Type</span></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
   <!-- TUTO PWA -->
   <div class="pwa-banner" id="pwa-banner">
     <button class="pwa-toggle" aria-expanded="false" onclick="toggleBanner(this, 'pwa-content', 'pwa-arrow')">
@@ -57,17 +86,6 @@
     <h2 class="section-title">Évènements</h2>
     <div class="card-grid">
 
-      <a href="DixiemeAnniversaire.html" class="home-card gold-card event-en-cours">
-        <span class="badge-en-cours">En cours !</span>
-        <div class="img-wrapper"><img src="images/Pikachu.png" alt="10e Anniversaire"></div>
-        <span class="event-label">Ultra Bonus : 10e anniversaire<span class="event-date">Du mar. 21/07 - 10h<br>Au lun. 27/07 - 20h</span></span>
-      </a>
-
-      <a href="CoucheOzone.html" class="home-card green-card">
-        <div class="img-wrapper"><img src="images/Rayquaza.png" alt="Couche d'Ozone"></div>
-        <span class="event-label">Atteindre la Couche d'Ozone<span class="event-date">Du sam. 25/07 - 10h<br>Au dim. 26/07 - 20h</span></span>
-      </a>
-
       <a href="GorythmicGigamax.html" class="home-card red-card">
         <div class="img-wrapper"><img src="images/GorythmicG.png" alt="Gorythmic Gigamax"></div>
         <span class="event-label">Journée Gorythmic Gigamax<span class="event-date">Le samedi 01/08<br>De 14h à 17h</span></span>
@@ -96,6 +114,16 @@
       <a href="MegaStaross.html" class="home-card staross-card">
         <div class="img-wrapper"><img src="images/StarossM.png" alt="Super Méga-Raids Staross"></div>
         <span class="event-label">Super-Méga-Raids<br>Staross<span class="event-date">Le samedi 22/08<br>De 14h à 17h</span></span>
+      </a>
+
+      <a href="GoFestMegaFinale.html" class="home-card purple-card">
+        <div class="img-wrapper"><img src="images/GoFestFinale.webp" alt="GoFest : Méga Finale"></div>
+        <span class="event-label">GoFest :<br>Méga Finale<span class="event-date">Le samedi 05/09<br>et dimanche 06/09</span></span>
+      </a>
+
+      <a href="TerresSauvages2026.html" class="home-card green-card">
+        <div class="img-wrapper"><img src="images/TerresSauvages.png" alt="Terres Sauvages Mondial 2026"></div>
+        <span class="event-label">Terres Sauvages<br>Mondial 2026<span class="event-date">Le samedi 14/11<br>et dimanche 15/11</span></span>
       </a>
 
     </div>
@@ -202,7 +230,7 @@
         <span>Psy</span>
       </a>
 
-      <a href="#" class="type-card type-roche disabled" onclick="showComingSoon(event)">
+      <a href="TopRoche.html" class="type-card type-roche">
         <img src="images/roche.webp" alt="Roche">
         <span>Roche</span>
       </a>
@@ -248,6 +276,11 @@
       <a href="boost_poussiere.html" class="home-card violet-card">
         <div class="img-wrapper"><img src="images/Poussieres.webp" alt="Boost Poussière Étoile"></div>
         <span>Boost Poussières</span>
+      </a>
+
+      <a href="OptiPM.html" class="home-card pink-card">
+        <div class="img-wrapper"><img src="images/pm.webp" alt="Optimisation des Particules Max"></div>
+        <span>Optimisation des Particules Max</span>
       </a>
 
       <a href="#" class="home-card blue-card disabled" onclick="showComingSoon(event)">

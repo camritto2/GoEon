@@ -47,11 +47,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Gardevoir</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mgard-imm">Charme</strong><span id="mgard-imm-alt" style="display:none"> → <strong>Choc Mental</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mgard-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('mgard-details', 'toggle-mgard-btn'); toggleAltImm('mgard-imm', 'mgard-imm-alt')">
+                    <button id="toggle-mgard-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('mgard-details', 'toggle-mgard-btn')">
                     Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -66,6 +66,9 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
+
+
+        
 
 
         <div class="grid-item">
@@ -97,6 +100,9 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">2</div>
@@ -125,9 +131,43 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">3</div>
+                <div class="card-image"><img src="images/Tokorico.png" alt="Tokorico" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Tokorico</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="tokori-imm">Vive-Attaque</strong><img id="tokori-imm-icon" src="images/normal.webp" alt="Type Normal" class="type-icon-btn icone-imm"><span id="tokori-imm-alt" style="display:none"> → <strong>Change Éclair</strong></span><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-tokori-btn" class="btn-electrik" aria-expanded="false" onclick="toggleBuild('tokori-details', 'toggle-tokori-btn'); toggleAltImm('tokori-imm', 'tokori-imm-alt', 'tokori-imm-icon')">
+                    Également Top Électrik <img src="images/electrik.webp" alt="Type Électrik" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="tokori-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Tonnerre</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">4</div>
                 <div class="card-image"><img src="images/Tokopiyon.png" alt="Tokopiyon" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Tokopiyon</span></strong></div>
                 <div class="card-badges"></div>
@@ -153,9 +193,12 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">4</div>
+                <div class="card-rank">5</div>
                 <div class="card-image"><img src="images/Xerneas.png" alt="Xerneas" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Xerneas</span></strong></div>
                 <div class="card-badges"></div>
@@ -170,32 +213,7 @@
         </div>
 
 
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">5</div>
-                <div class="card-image"><img src="images/Tokorico.png" alt="Tokorico" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-legendary">Tokorico</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="tokori-imm">Vive-Attaque</strong><img id="tokori-imm-icon" src="images/normal.webp" alt="Type Normal" class="type-icon-btn icone-imm"><span id="tokori-imm-alt" style="display:none"> → <strong>Change Éclair</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-tokori-btn" class="btn-electrik" aria-expanded="false" onclick="toggleBuild('tokori-details', 'toggle-tokori-btn'); toggleAltImm('tokori-imm', 'tokori-imm-alt', 'tokori-imm-icon')">
-                    Également Top Électrik <img src="images/electrik.webp" alt="Type Électrik" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="tokori-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Tonnerre</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
+        
 
 
         <div class="grid-item">
@@ -226,6 +244,9 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">7</div>
@@ -254,9 +275,43 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">8</div>
+                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Gardevoir.png" alt="Gardevoir" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Gardevoir</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-gard-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('gard-details', 'toggle-gard-btn')">
+                    Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="gard-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Psyko</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">9</div>
                 <div class="card-image"><img src="images/Togekiss.png" alt="Togekiss" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Togekiss</span></strong></div>
                 <div class="card-badges"></div>
@@ -282,94 +337,7 @@
         </div>
 
 
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">9</div>
-                <div class="card-image"><div class="card-badges"><img src="images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="images/Gardevoir.png" alt="Gardevoir" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Gardevoir</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="gard-imm">Charme</strong><span id="gard-imm-alt" style="display:none"> → <strong>Choc Mental</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-gard-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('gard-details', 'toggle-gard-btn'); toggleAltImm('gard-imm', 'gard-imm-alt')">
-                    Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="gard-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Psyko</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">10</div>
-                <div class="card-image"><img src="images/ZacianHA.png" alt="Zacian Héros Aguerri" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-legendary">Zacian</span></strong><span class="pokemon-form"><em>Héros Aguerri</em></span></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong> <img src="images/tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Câlinerie</strong>
-                </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">11</div>
-                <div class="card-image"><img src="images/Sorcilence.png" alt="Sorcilence" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Sorcilence</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="sorc-imm">Charme</strong><span id="sorc-imm-alt" style="display:none"> → <strong>Coupe Psycho</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-sorc-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('sorc-details', 'toggle-sorc-btn'); toggleAltImm('sorc-imm', 'sorc-imm-alt')">
-                    Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="sorc-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Psyko</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">12</div>
-                <div class="card-image"><img src="images/Nymphali.png" alt="Nymphali" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Nymphali</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
-                </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
+        
 
 
         <div class="grid-item">
@@ -400,9 +368,63 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">13</div>
+                <div class="card-rank">10</div>
+                <div class="card-image"><img src="images/ZacianHA.png" alt="Zacian Héros Aguerri" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Zacian</span></strong><span class="pokemon-form"><em>Héros Aguerri</em></span></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong> <img src="images/tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Câlinerie</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">11</div>
+                <div class="card-image"><img src="images/Sorcilence.png" alt="Sorcilence" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Sorcilence</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-sorc-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('sorc-details', 'toggle-sorc-btn')">
+                    Également Top Psy <img src="images/psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="sorc-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Psyko</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">12</div>
                 <div class="card-image"><img src="images/Oratoria.png" alt="Oratoria" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Oratoria</span></strong></div>
                 <div class="card-badges"></div>
@@ -428,14 +450,17 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">M3</div>
-                <div class="card-image"><img src="images/AltariaM.png" alt="Méga-Altaria" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Altaria</span></strong></div>
+            <div class="fandom-card">
+                <div class="card-rank">13</div>
+                <div class="card-image"><img src="images/Nymphali.png" alt="Nymphali" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Nymphali</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Draco-Souffle</strong> <img src="images/dragon.webp" alt="Type Dragon" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
                 </div>
                 <div class="card-button"></div>
@@ -443,6 +468,9 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
+
+
+        
 
 
         <div class="grid-item">
@@ -460,6 +488,29 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
+
+
+        
+
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">M3</div>
+                <div class="card-image"><img src="images/AltariaM.png" alt="Méga-Altaria" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Altaria</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Draco-Souffle</strong> <img src="images/dragon.webp" alt="Type Dragon" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        
 
 
         <div class="grid-item">
@@ -490,6 +541,9 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">16</div>
@@ -513,9 +567,12 @@
                     <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note"><span class="footnote-ref">2</span> : Marteau Mastoc sera toujours meilleur que Câlinerie.</div>
+                <div class="card-note"><span class="footnote-ref">2</span> : Marteau Mastoc fera toujours plus de dégâts que Câlinerie.</div>
             </div>
         </div>
+
+
+        
 
 
         <div class="grid-item">
@@ -535,6 +592,9 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">18</div>
@@ -552,15 +612,18 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">19</div>
-                <div class="card-image"><img src="images/Melodelfe.png" alt="Mélodelfe" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Mélodelfe</span></strong></div>
+                <div class="card-image"><img src="images/Tokopisco.png" alt="Tokopisco" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Tokopisco</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Pistolet à O</strong> <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
@@ -569,21 +632,7 @@
         </div>
 
 
-        <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">M4</div>
-                <div class="card-image"><img src="images/MysdibuleM.png" alt="Méga-Mysdibule" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Mysdibule</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Vent Féérique</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Câlinerie</strong>
-                </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
+        
 
 
         <div class="grid-item">
@@ -614,21 +663,47 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">21</div>
-                <div class="card-image"><img src="images/Tokopisco.png" alt="Tokopisco" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-legendary">Tokopisco</span></strong></div>
+                <div class="card-image"><img src="images/Melodelfe.png" alt="Mélodelfe" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Mélodelfe</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Pistolet à O</strong> <img src="images/eau.webp" alt="Type Eau" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
+
+
+        
+
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">M4</div>
+                <div class="card-image"><img src="images/MysdibuleM.png" alt="Méga-Mysdibule" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Mysdibule</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Vent Féérique</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Câlinerie</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        
 
 
         <div class="grid-item">
@@ -648,6 +723,9 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">23</div>
@@ -655,11 +733,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Feunard d'Alola</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="feun-imm">Charme</strong><span id="feun-imm-alt" style="display:none"> → <strong>Poudreuse</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-feun-btn" class="btn-glace" aria-expanded="false" onclick="toggleBuild('feun-details', 'toggle-feun-btn')">
+                    <button id="toggle-feun-btn" class="btn-glace" aria-expanded="false" onclick="toggleBuild('feun-details', 'toggle-feun-btn'); toggleAltImm('feun-imm', 'feun-imm-alt')">
                     Également Top Glace <img src="images/glace.webp" alt="Type Glace" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -674,6 +752,9 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
+
+
+        
 
 
         <div class="grid-item">
@@ -693,15 +774,18 @@
         </div>
 
 
+        
+
+
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">25</div>
-                <div class="card-image"><img src="images/Cocotine.png" alt="Cocotine" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Cocotine</span></strong></div>
+                <div class="card-image"><img src="images/Grodoudou.png" alt="Grodoudou" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Grodoudou</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charme</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Pouvoir Lunaire</strong>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclat Magique</strong>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>

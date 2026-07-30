@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - City Safari : Marseille</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <style>
+    /* Mini-navbar de sections (spécifique à cette page) */
+    .section-nav {
+      position: sticky;
+      top: 60px;
+      z-index: 9998;
+      background-color: var(--bg-site);
+      border-bottom: 1px solid var(--border-carte);
+      padding: 5px 8px;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+    }
+    .section-nav::-webkit-scrollbar { display: none; }
+    .section-nav a {
+      flex-shrink: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 8px;
+      font-weight: 500;
+      color: var(--text-secondaire);
+      text-decoration: none;
+      padding: 3px 6px;
+      border-radius: 20px;
+      border: 1px solid var(--border-carte);
+      background: var(--bg-carte);
+      white-space: nowrap;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .section-nav a:hover {
+      background-color: var(--accent-navbar);
+      color: var(--accent-text-navbar);
+    }
+    @media (min-width: 769px) {
+      .section-nav {
+        justify-content: center;
+        padding: 8px 10px;
+      }
+      .section-nav a {
+        font-size: 13px;
+        padding: 5px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>City Safari : Marseille</h1>
+  <p class="raids-date">
+    Samedi 26 et dimanche 27 septembre, de 10h à 18h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+  <p style="text-align: center; margin: 0 0 15px 0;">
+    <a href="https://pokemongo.com/featured-in-person-events/citysafari/marseille" target="_blank" rel="noopener">Plus d'informations et achat de billets</a>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#bonus">Bonus</a>
+    <a href="#sauvages">Pokémon sauvages</a>
+    <a href="#oeufs">Œufs</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#billets">Extension de Ticket</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                  BONUS                  -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+  <p class="section-sous-titre"><em>Billet : 10€</em></p>
+  <div class="intro-rules">
+    <p style="margin: 0 0 10px 0;">Le City Safari revient en France, et aura lieu cette fois à Marseille !</p>
+    <p style="margin: 0 0 10px 0;">Voici les bonus pour cet évènement :</p>
+    <div class="intro-item"><span class="bullet">• </span>Une chasse au tampon à travers la ville !</div>
+    <div class="intro-item"><span class="bullet">• </span>Un taux de shiny boosté pour tous les Pokémon !</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Modules Leurre qui dureront 4h !</div>
+    <div class="intro-item"><span class="bullet">• </span>Le Jeu en Équipe durera 8h !</div>
+    <div class="intro-item"><span class="bullet">• </span>Le Copain Pokémon pourra trouver une Mini-Boussole !</div>
+    <div class="intro-item"><span class="bullet">• </span>Jusqu'à 5 Échanges Spéciaux avec un coût divisé par 2</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           POKÉMON SAUVAGES              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-tiboudet">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Tiboudet.png" data-shiny="images/TiboudetS.png" alt="Tiboudet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Tiboudet</h2>
+        <p class="pokemon-subtitle">Exclusivité Safari !</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-brutalibre">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Brutalibre.png" data-shiny="images/BrutalibreS.png" alt="Brutalibré" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Brutalibré</h2>
+        <p class="pokemon-subtitle">Normalement au Mexique !</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-abra">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Abra.png" data-shiny="images/AbraS.png" alt="Abra" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Abra</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-ramoloss">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Ramoloss.png" data-shiny="images/RamolossS.png" alt="Ramoloss" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Ramoloss</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-kaiminus">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Kaiminus.png" data-shiny="images/KaiminusS.png" alt="Kaiminus" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Kaiminus</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-wattouat">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Wattouat.png" data-shiny="images/WattouatS.png" alt="Wattouat" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Wattouat</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-flabebe">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/FlabebeO.png" data-shiny="images/FlabebeOS.png" alt="Flabébé" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Flabébé</h2>
+        <p class="pokemon-subtitle">Fleur Orange</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-opermine">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Opermine.png" data-shiny="images/OpermineS.png" alt="Opermine" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Opermine</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-flingouste">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Flingouste.png" data-shiny="images/FlingousteS.png" alt="Flingouste" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Flingouste</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-rondoudou">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Rondoudou.png" data-shiny="images/RondoudouS.png" alt="Rondoudou" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Rondoudou</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-marill">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Marill.png" data-shiny="images/MarillS.png" alt="Marill" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Marill</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-granivol">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Granivol.png" data-shiny="images/GranivolS.png" alt="Granivol" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Granivol</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-cerfrousse">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Cerfrousse.png" data-shiny="images/CerfrousseS.png" alt="Cerfrousse" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Cerfrousse</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-ecremeuh">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Ecremeuh.png" data-shiny="images/EcremeuhS.png" alt="Écrémeuh" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Écrémeuh</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-goelise">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Goelise.png" data-shiny="images/GoeliseS.png" alt="Goélise" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Goélise</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-balbuto">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Balbuto.png" data-shiny="images/BalbutoS.png" alt="Balbuto" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Balbuto</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-mustebouee">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Mustebouee.png" data-shiny="images/MusteboueeS.png" alt="Mustébouée" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Mustébouée</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-ponchiot">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Ponchiot.png" data-shiny="images/PonchiotS.png" alt="Ponchiot" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Ponchiot</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-chlorobule">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Chlorobule.png" data-shiny="images/ChlorobuleS.png" alt="Chlorobule" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Chlorobule</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-tutafeh">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Tutafeh.png" data-shiny="images/TutafehS.png" alt="Tutafeh" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Tutafeh</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-scrutella">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Scrutella.png" data-shiny="images/ScrutellaS.png" alt="Scrutella" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Scrutella</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-gouroutan">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Gouroutan.png" data-shiny="images/GouroutanS.png" alt="Gouroutan" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Gouroutan</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-dodoala">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Dodoala.png" data-shiny="images/DodoalaS.png" alt="Dodoala" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Dodoala</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-zarbi">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/ZarbiB.png" data-shiny="images/ZarbiBS.png" alt="Zarbi B" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zarbi B</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-zarbi">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/ZarbiL.png" data-shiny="images/ZarbiLS.png" alt="Zarbi L" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zarbi L</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-zarbi">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/ZarbiM.png" data-shiny="images/ZarbiMS.png" alt="Zarbi M" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zarbi M</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-zarbi">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/ZarbiR.png" data-shiny="images/ZarbiRS.png" alt="Zarbi R" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zarbi R</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <img src="images/Flamenroule.png" alt="Flamenroule" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Flamenroule</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               ŒUFS 7 KM                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="oeufs">Œufs 7 km</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-tiboudet">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Tiboudet.png" data-shiny="images/TiboudetS.png" alt="Tiboudet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Tiboudet</h2>
+        <p class="pokemon-subtitle">Exclusivité Safari !</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-brutalibre">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Brutalibre.png" data-shiny="images/BrutalibreS.png" alt="Brutalibré" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Brutalibré</h2>
+        <p class="pokemon-subtitle">Normalement au Mexique !</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-flabebe">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/FlabebeO.png" data-shiny="images/FlabebeOS.png" alt="Flabébé" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Flabébé</h2>
+        <p class="pokemon-subtitle">Fleur Orange</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-dodoala">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="images/Dodoala.png" data-shiny="images/DodoalaS.png" alt="Dodoala" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Dodoala</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            TÂCHES D'ÉTUDE               -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
+  <div class="intro-rules">
+    <p style="margin: 0;">Des Tâches d'Étude offriront un <strong>Évoli <em>coiffé d'un chapeau d'explorateur</em></strong> qui peut évoluer en gardant son chapeau !</p>
+  </div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-evoli">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span><img src="images/costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="images/Evoli.png" data-shiny="images/EvoliS.png" alt="Évoli" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Évoli</h2>
+        <p class="pokemon-subtitle">Coiffé d'un chapeau d'explorateur</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          EXTENSION DE TICKET            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="billets">Extension de Ticket</h2>
+
+  <p class="section-sous-titre">Amoureux des Raids /&nbsp;<em>6€</em></p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Jusqu'à 12 Passes de Raids gratuits par jour</div>
+    <div class="intro-item"><span class="bullet">• </span>5 000 PX, 3 Bonbons et 1 Bonbon L supplémentaires par Raid</div>
+  </div>
+
+  <p class="section-sous-titre">Bien-œufs-reux /&nbsp;<em>6€</em></p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Distance d'éclosion divisée par 2</div>
+    <div class="intro-item"><span class="bullet">• </span>Poussières Étoile, PX et Bonbons d'éclosion doublés</div>
+  </div>
+
+  <p class="section-sous-titre">Journée Supplémentaire /&nbsp;<em>8€</em></p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Profitez de tous les bonus pendant les 2 jours d'évènement !</div>
+  </div>
+
+</div>
+
+<script src="script.js?v=3"></script>
+
+</body>
+</html>

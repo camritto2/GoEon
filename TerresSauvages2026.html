@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Terres Sauvages Mondial 2026</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <style>
+    /* Le clic sur l'image sert ici à afficher le Gigamax, pas le Shiny :
+       on désactive donc l'animation de clignotement du badge Shiny, sur cette page uniquement. */
+    .emoji-shiny {
+      animation: none !important;
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Terres Sauvages Mondial 2026</h1>
+  <p class="raids-date">
+    Le samedi 14 et dimanche 15 novembre
+  </p>
+
+  <div class="intro-rules">
+    <p style="margin: 0;">Aucune info n'a encore été donnée.<br>
+    Nous avons seulement les dates de l'évènement : le samedi 14 et dimanche 15 novembre !<br>
+    (Les évènements en personne auront lieu à Sendai au Japon et à Mexico au Mexique le weekend d'avant, du 6 au 8 novembre)</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               MON ANALYSE               -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="analyse">Mon Analyse</h2>
+
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Gigamax ! <img src="images/Gigamax.webp" alt="Gigamax" class="astuce-shiny-icon"></span>
+  </p>
+
+  <div class="intro-rules">
+    <p style="margin: 0 0 6px 0;">Pour les <em>Terres Sauvages 2024 et 2025</em>, le focus était mis sur un Pokémon avec les caractéristiques suivantes :</p>
+    <div class="intro-item"><span class="bullet">• </span>Possède un Gigamax</div>
+    <div class="intro-item"><span class="bullet">• </span>N'a pas encore été introduit dans le jeu</div>
+    <div class="intro-item" style="margin-bottom: 6px;"><span class="bullet">• </span>Possède un double type</div>
+    <p style="margin: 0;">Il ne reste qu'un seul Pokémon répondant à ces critères :</p>
+  </div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"></div>
+        <img src="images/Torgamord.png" data-shiny="images/TorgamordG.png" alt="Torgamord" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Torgamord</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Eau</span><img src="images/eau.webp" alt="Eau" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Roche</span><img src="images/roche.webp" alt="Roche" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="intro-rules">
+    <p style="margin: 0;">Si on enlève le critère "N'a pas encore été introduit dans le jeu", les possibilités sont plus grandes :</p>
+  </div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-corvaillus">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Corvaillus.png" data-shiny="images/CorvaillusG.png" alt="Corvaillus" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Corvaillus</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Vol</span><img src="images/vol.webp" alt="Vol" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Acier</span><img src="images/acier.webp" alt="Acier" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"></div>
+        <img src="images/Astronelle.png" data-shiny="images/AstronelleG.png" alt="Astronelle" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Astronelle</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Insecte</span><img src="images/insecte.webp" alt="Insecte" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Psy</span><img src="images/psy.webp" alt="Psy" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"></div>
+        <img src="images/Monthracite.png" data-shiny="images/MonthraciteG.png" alt="Monthracite" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Monthracite</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Roche</span><img src="images/roche.webp" alt="Roche" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Feu</span><img src="images/feu.webp" alt="Feu" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"></div>
+        <img src="images/Pomdrapi.png" data-shiny="images/PomdrapiG.png" alt="Pomdrapi" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Pomdrapi</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Plante</span><img src="images/plante.webp" alt="Plante" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Dragon</span><img src="images/dragon.webp" alt="Dragon" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"></div>
+        <img src="images/Dratatin.png" data-shiny="images/DratatinG.png" alt="Dratatin" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Dratatin</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Plante</span><img src="images/plante.webp" alt="Plante" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Dragon</span><img src="images/dragon.webp" alt="Dragon" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-scolocendre">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Scolocendre.png" data-shiny="images/ScolocendreG.png" alt="Scolocendre" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Scolocendre</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Insecte</span><img src="images/insecte.webp" alt="Insecte" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Feu</span><img src="images/feu.webp" alt="Feu" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-sorcilence">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Sorcilence.png" data-shiny="images/SorcilenceG.png" alt="Sorcilence" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Sorcilence</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Psy</span><img src="images/psy.webp" alt="Psy" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Fée</span><img src="images/fee.webp" alt="Fée" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-duralugon">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Duralugon.png" data-shiny="images/DuralugonG.png" alt="Duralugon" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Duralugon</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Acier</span><img src="images/acier.webp" alt="Acier" class="type-icon"></div>
+          <div class="type-block"><span class="type-text">Dragon</span><img src="images/dragon.webp" alt="Dragon" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="intro-rules">
+    <p style="margin: 0;">Il manque Shifours, mais je pense qu'il ne faut pas rêver non plus !<br>
+    Si on enlève le critère "Possède un double type", on a :</p>
+  </div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"></div>
+        <img src="images/Pachyradjah.png" data-shiny="images/PachyradjahG.png" alt="Pachyradjah" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Pachyradjah</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Acier</span><img src="images/acier.webp" alt="Acier" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"></div>
+        <img src="images/Charmilly.png" data-shiny="images/CharmillyG.png" alt="Charmilly" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Charmilly</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Fée</span><img src="images/fee.webp" alt="Fée" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="intro-rules">
+    <p style="margin: 0;">Et si on enlève les 2 critères, il reste :</p>
+  </div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"></div>
+        <img src="images/Dunaconda.png" data-shiny="images/DunacondaG.png" alt="Dunaconda" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Dunaconda</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Sol</span><img src="images/sol.webp" alt="Sol" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-melmetal">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Melmetal.png" data-shiny="images/MelmetalG.png" alt="Melmetal" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Melmetal</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Acier</span><img src="images/acier.webp" alt="Acier" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-evoli">
+      <div class="image-container">
+        <div class="badges"><img src="images/Gigamax.webp" alt="Gigamax" title="Gigamax" class="emoji-costume"><img src="images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="images/Evoli.png" data-shiny="images/EvoliG.png" alt="Évoli" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Évoli</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Normal</span><img src="images/normal.webp" alt="Normal" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="intro-rules">
+    <p style="margin: 0;">Et si on enlève le critère "Possède un Gigamax", ben là on a tout le reste du Pokédex !</p>
+  </div>
+
+</div>
+
+<script src="script.js?v=3"></script>
+
+</body>
+</html>

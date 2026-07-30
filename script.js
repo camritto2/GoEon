@@ -447,7 +447,7 @@ if ('serviceWorker' in navigator) {
     { nom: 'Plante',   icone: 'plante',   page: 'TopPlante.html' },
     { nom: 'Poison',   icone: 'poison',   page: 'TopPoison.html' },
     { nom: 'Psy',      icone: 'psy',      page: 'TopPsy.html' },
-    { nom: 'Roche',    icone: 'roche',    page: null },
+    { nom: 'Roche',    icone: 'roche',    page: 'TopRoche.html' },
     { nom: 'Sol',      icone: 'sol',      page: null },
     { nom: 'Spectre',  icone: 'spectre',  page: null },
     { nom: 'Ténèbres', icone: 'tenebres', page: null },
