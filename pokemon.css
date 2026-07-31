@@ -1198,7 +1198,9 @@
 .pk-goupelin .research-reward-name { color: #16a34a; }
 .pk-goupelin .emoji-shiny  { display: inline; }
 
-/* Goupilou — Normal / Pas de shiny */
+/* Goupilou — Normal / Pas de shiny (Shiny à partir du 16 août 2026,
+   Journée Communauté Goupilou : décommenter la ligne emoji-shiny ce jour-là) */
+/* .pk-goupilou .emoji-shiny  { display: inline; } */
 
 /* Goupix — Normal / Shiny */
 .pk-goupix .emoji-shiny { display: inline; }
@@ -2637,6 +2639,10 @@
 .pk-rototaupe .pokemon-name { color: #16a34a; }
 .pk-rototaupe .research-reward-name { color: #16a34a; }
 .pk-rototaupe .emoji-shiny  { display: inline; }
+
+/* Roublenard — Normal / Pas de shiny (Shiny à partir du 16 août 2026,
+   Journée Communauté Goupilou : décommenter la ligne emoji-shiny ce jour-là) */
+/* .pk-roublenard .emoji-shiny  { display: inline; } */
 
 /* Rubombelle — Bon / Shiny */
 .pk-rubombelle .pokemon-name { color: #16a34a; }

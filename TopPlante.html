@@ -593,11 +593,22 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Noadkoko d'Alola</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Balle Graine</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="noadka-imm">Balle Graine</strong><span id="noadka-imm-alt" style="display:none"> → <strong>Draco-Queue</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lance-Soleil</strong>
                 </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
+                <div class="card-button">
+                    <button id="toggle-noadka-btn" class="btn-dragon" aria-expanded="false" onclick="toggleBuild('noadka-details', 'toggle-noadka-btn'); toggleAltImm('noadka-imm', 'noadka-imm-alt')">
+                    Également Top Dragon <img src="images/dragon.webp" alt="Type Dragon" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="noadka-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Draco-Météore</strong><span class="legacy-indicator">L</span>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
@@ -638,11 +649,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Sinistrail</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="sinis-imm">Étonnement</strong> <img src="images/spectre.webp" alt="Type Spectre" class="type-icon-btn"><span id="sinis-imm-alt" style="display:none"> → <strong>Griffe Ombre</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="sinis-imm">Étonnement</strong><img id="sinis-imm-icon" src="images/spectre.webp" alt="Type Spectre" class="type-icon-btn icone-imm"><span id="sinis-imm-alt" style="display:none"> → <strong>Griffe Ombre</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Mégafouet</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-sinis-btn" class="btn-spectre" aria-expanded="false" onclick="toggleBuild('sinis-details', 'toggle-sinis-btn'); toggleAltImm('sinis-imm', 'sinis-imm-alt')">
+                    <button id="toggle-sinis-btn" class="btn-spectre" aria-expanded="false" onclick="toggleBuild('sinis-details', 'toggle-sinis-btn'); toggleAltImm('sinis-imm', 'sinis-imm-alt', 'sinis-imm-icon')">
                     Également Top Spectre <img src="images/spectre.webp" alt="Type Spectre" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>

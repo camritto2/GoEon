@@ -94,10 +94,11 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 ### Images
 
 - `NomSansAccents.png`, shiny = `NomS.png`, formes **avant** le S (`GoupixAS.png`).
-- Suffixes : **A** Alola, **G** Galar *et* Gigamax, **H** Hisui, **M** Méga, **C** / **T** formes spéciales, **B** / **N** fusions Kyurem.
+- Suffixes : **A** Alola, **G** Galar *et* Gigamax, **H** Hisui, **M** Méga, **P** Primo (`GroudonP.png`), **C** / **T** formes spéciales, **B** / **N** fusions Kyurem.
 - La collision Galar/Gigamax sur `G` est **assumée** : aucun Gigamax de Galar n'existe. Si le cas survenait, ce serait `GG`.
 - **L'extension suit le fichier source** (`.png` ou `.webp` selon ce que Cam a trouvé). Aucune règle : ne jamais « corriger » une extension sans demander — erreur déjà commise sur Shaymin et sur l'œuf d'Éclosion.
-- Exceptions de nommage constatées : `Ho-Oh.png` (avec tiret), `NigirigonR.png`.
+- Exceptions de nommage constatées : `Ho-Oh.png` (avec tiret), `NigirigonR.png`, `TritosorR.png`.
+  Le suffixe **R** apparait maintenant deux fois, sur deux Pokémon multi-formes dont une seule image représente l'ensemble. À surveiller : c'est peut-être une convention qui s'ignore plutôt que deux exceptions.
 - Zarbi : classe `pk-zarbi`, libellé complet (« Zarbi B », pas « Lettre B »).
 
 ### Badges
@@ -137,7 +138,9 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 - Les Méga s'ajoutent aux 25 → 27 à 30 cartes selon le type. **Placées exactement où Cam les positionne**, jamais regroupées.
 - Chaque carte porte un `div.card-badges` après le nom, même vide.
 - Boutons de build : `toggleBuild('xxx-details', 'toggle-xxx-btn')` **sans couleur** (elles vivent dans `.btn-X.active`) + `aria-expanded="false"` initial.
-- Bascule d'attaque immédiate : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué pour l'alternative.
+- **Bascule d'attaque immédiate — la logique, souvent mal comprise.** La face avant d'une page Top[X] porte la meilleure attaque immédiate *pour jouer le Pokémon en type X*. Le bouton « Également Top Y » ouvre le build bi-type ; la bascule affiche alors la meilleure attaque **dans l'absolu**, celle qu'on prend pour couvrir les deux types ou frapper un type neutre. **S'il n'y a pas de bascule sur une carte à bouton, c'est que l'attaque de la face avant est déjà la meilleure dans l'absolu** — ce n'est pas un oubli, et parler de l'autre attaque n'aurait aucun intérêt.
+  Exemple canonique, Éthernatos : Draco-Queue sur `TopDragon` **sans bascule** (elle est déjà la meilleure des deux), Direct Toxik sur `TopPoison` **barré au profit de Draco-Queue** au clic. Autre cas, Noadkoko d'Alola : Draco-Queue sans bascule sur `TopDragon`, Balle Graine barrée au profit de Draco-Queue sur `TopPlante`.
+  Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué pour l'alternative. Si l'attaque de la face avant porte une icône de type, lui donner un id et le passer en 3e argument pour qu'elle disparaisse au clic.
 - `<span class="footnote-ref">` se place **après** le nom d'attaque et l'indicateur Legacy, mais **avant** l'icône de type.
 - Puces d'intro colorées comme leur ligne (`bullet legend-blue/cyan/red`), puce Legacy neutre.
 
@@ -238,7 +241,7 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 ### Daté
 
 - **📅 4 août 2026** — décommenter la ligne shiny de Frissonille dans `pokemon.css` (commentaire daté sur place, ~ligne 1044) + retirer `nouveau-shiny` de sa carte sur `BraisesArctiques.html` si souhaité.
-- **📅 16 août 2026** — activer `pk-goupilou` (existe en « Normal / Pas de shiny », à passer en Bon + Shiny) et **créer `pk-roublenard`** (absent). Retirer `nouveau-shiny` de `CDGoupilou.html`. ⚠️ Aucun commentaire daté n'est encore posé dans `pokemon.css` : à faire.
+- **📅 16 août 2026** — Journée Communauté Goupilou. Goupilou et Roublenard deviennent **Shiny, et non « Bon »** (la v2 de ce document disait « Bon + Shiny », c'était faux). Décommenter la ligne `emoji-shiny` de `pk-goupilou` et de `pk-roublenard` dans `pokemon.css`, puis retirer les trois `nouveau-shiny` de `CDGoupilou.html`. ✅ Les deux commentaires datés sont posés depuis le 31 juillet, `pk-roublenard` a été créée à cette occasion.
 - **Demain (rotation raids)** — poser le badge Obscur sur `raids_obscurs.html` (il n'y en a aujourd'hui **aucun**) + créer la règle de base `badge-obscur-icon` dans `global.css` à 14/22px.
 
 ### Contenu
@@ -287,6 +290,6 @@ Règles clés à rappeler dans le prompt :
 
 **Seconde quinzaine de juillet** : une douzaine de pages d'évènement (DixiemeAnniversaire, CoucheOzone, GorythmicGigamax, BraisesArctiques, EclosionFeuGlace, FestivalAquatique, MegaStaross, CDGoupilou, CitySafariMarseille, GoFestMegaFinale, TerresSauvages2026) ; pages ressource `OptiPM.html` ; 8 pages Top supplémentaires (Psy, Feu, Glace, Insecte, Plante, Poison, Roche, Sol) ; système `shiny-boost-circle` ; rectangles de difficulté des raids ; section Nouveautés de l'accueil.
 
-**31 juillet 2026 (soir)** : `TopSol.html` (30 cartes, 5 Méga) livrée et activée ; 12 entrées ajoutées ou modifiées dans `pokemon.css` (709 classes) ; **harmonisation des rangs Méga sur les 9 pages Top qui utilisaient `M1`** ; pages `TaxiVolant`, `DixiemeAnniversaire` et `CoucheOzone` constatées supprimées du dépôt ; ce document corrigé sur cinq points.
+**31 juillet 2026 (soir)** : `TopSol.html` (30 cartes, 5 Méga) livrée et activée ; 12 entrées ajoutées ou modifiées dans `pokemon.css` (709 classes) ; commentaires datés du 16 août posés pour Goupilou et Roublenard ; **harmonisation des rangs Méga sur les 9 pages Top qui utilisaient `M1`** ; pages `TaxiVolant`, `DixiemeAnniversaire` et `CoucheOzone` constatées supprimées du dépôt ; ce document corrigé sur cinq points.
 
 **31 juillet 2026** : audit des 7 fichiers partagés ; `section-nav` centralisée dans `global.css` (6 pages, blocs strictement identiques) + correction du bug d'ancre (`scroll-margin-top`) ; Badging API étudié puis écarté ; refonte de ce document.
