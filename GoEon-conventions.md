@@ -1,6 +1,6 @@
 # GoEon — Conventions & Décisions
 
-*Version 2 — 31 juillet 2026. Remplace la v1 du 18 juillet (qui ne couvrait que les pages Top).*
+*Version 2.1 — 31 juillet 2026 (révision du soir). Remplace la v1 du 18 juillet (qui ne couvrait que les pages Top).*
 *Chaque affirmation de ce document a été vérifiée sur les fichiers du dépôt à cette date.*
 
 > **Règle n°1 pour toute conversation Claude reprenant ce projet : ne jamais travailler de mémoire.**
@@ -120,7 +120,7 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 
 ### Formats de texte
 
-- Rangs Méga : « Méga 1 », « Méga 2 » — jamais « M1 ».
+- **Rangs Méga : « Méga 1 », « Méga 2 » — jamais « M1 »**, y compris dans le `card-rank` des pages Top. La règle avait dérivé : 9 pages sur 13 étaient passées à `M1` (35 occurrences). **Les 14 pages Top ont été harmonisées le 31 juillet 2026.** À noter : `M1` reste l'abréviation de travail de Cam quand il transmet un classement, ce n'est pas ce qui doit être écrit dans le HTML.
 - Fourchettes : tiret demi-cadratin espacé « – ».
 - Billets : « Nom / X € » avec espace insécable après la barre.
 - « Bien-œufs-reux » s'écrit avec la ligature œ.
@@ -152,9 +152,11 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 7. Paires shiny (`NomX.png` / `NomXS.png`) ; `alt` sur toutes les images ; pas d'ID dupliqué
 8. Classes `btn-*` toutes parmi les 18
 
-### Les 3 activations
+### Les 2 activations
 
-(a) `script.js` section 14, ligne du type → `page: 'TopX.html'` · (b) `navbar.html`, lien du menu · (c) `index.html`, carte du type (retirer `disabled` + `onclick`, poser le `href`).
+(a) `script.js` section 14, ligne du type → `page: 'TopX.html'` · (b) `index.html`, carte du type (retirer `disabled` + `onclick`, poser le `href`) **et** une entrée dans la section Nouveautés.
+
+⚠️ La v1 mentionnait une troisième activation dans `navbar.html` : **elle n'existe plus.** La navbar ne contient aucun lien par type, seulement « Meilleurs Pokémon » → `index.html#types`.
 Puis rappeler à Cam : vérifier les images, relire la méta.
 
 ---
@@ -204,7 +206,7 @@ Ordre de sections observé : Pokémon à l'honneur → Bonus → Nouveaux Pokém
 - **Nouveautés** : `news-group` daté au format `JJ/MM`, un `news-items li` par entrée. Mettre à jour à chaque livraison de contenu.
 - **Ancres** : `scroll-margin-top: 70px` sur `.home-section` et `.type-grid`. Les liens navbar « À venir » et « Meilleurs Pokémon » pointent directement sur `index.html#evenements` et `index.html#types` (l'ancre `#types` est sur la `.type-grid`, pas sur la section, pour dépasser le titre).
 - **Menu mobile** : `max-height: calc(100vh - 60px)` + `overflow-y: auto` + `overscroll-behavior: contain` (le scroll interne ne referme plus le menu).
-- **Pages ressource** (`raids`, `raids_obscurs`, `oeufs`, `dynamax`, `TachesEtude`, `OptiPM`, `TaxiVolant`) : mêmes conventions de cartes et de badges. `OptiPM` a son propre jeu de classes `pm-*` **encore local à la page** (cf. §10).
+- **Pages ressource** (`raids`, `raids_obscurs`, `oeufs`, `dynamax`, `metamorph`, `boost_poussiere`, `TachesEtude`, `OptiPM`) : mêmes conventions de cartes et de badges. `OptiPM` a son propre jeu de classes `pm-*` **encore local à la page** (cf. §10).
 - **Difficulté des raids** : `raid-difficulty-label` (« Dresseurs Nécessaires ») + `raid-difficulty` contenant des `diff-bubble diff-1…5` (rouge → orange → jaune → vert clair → vert foncé, texte blanc unifié par `text-shadow`). Un Méga typique utilise 1/3/4/5, un Légendaire les cinq.
 
 ---
@@ -241,7 +243,7 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 
 ### Contenu
 
-- **4 types Top restants** : Sol, Spectre, Ténèbres, Vol.
+- **3 types Top restants** : Spectre, Ténèbres, Vol. (`TopSol` livrée et activée le 31 juillet.)
 - **ChefRocket** : ajouter Cliff & Arlo (empiler dans `.rocket-list`) ; puis chantier séparation Sbires/Chefs avant activation navbar/accueil.
 - **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 13 pages Top + activer la carte d'accueil + le lien navbar.
 - **SEO / Open Graph** : meta description + og:tags (priorité pages Top) ; attend l'image 1200×630 de Cam.
@@ -283,6 +285,8 @@ Règles clés à rappeler dans le prompt :
 
 **Juillet 2026 — le grand refactor** : audit complet du site ; centralisation shiny / builds / bandeaux dans `script.js` ; suppression du code mort ; variables d'accent rapatriées dans `navbar.css` ; ~10 coquilles de fichiers shiny corrigées ; faux shinies retirés (Shifours, Wushours, Craparoi) ; service worker sécurisé ; barre des types créée ; refactor `.active` des 127 boutons Top ; navbar fusionnée après conflit de versions.
 
-**Seconde quinzaine de juillet** : une douzaine de pages d'évènement (DixiemeAnniversaire, CoucheOzone, GorythmicGigamax, BraisesArctiques, EclosionFeuGlace, FestivalAquatique, MegaStaross, CDGoupilou, CitySafariMarseille, GoFestMegaFinale, TerresSauvages2026) ; pages ressource `OptiPM.html` ; 6 pages Top supplémentaires (Psy, Feu, Glace, Insecte, Plante, Poison, Roche) ; système `shiny-boost-circle` ; rectangles de difficulté des raids ; section Nouveautés de l'accueil.
+**Seconde quinzaine de juillet** : une douzaine de pages d'évènement (DixiemeAnniversaire, CoucheOzone, GorythmicGigamax, BraisesArctiques, EclosionFeuGlace, FestivalAquatique, MegaStaross, CDGoupilou, CitySafariMarseille, GoFestMegaFinale, TerresSauvages2026) ; pages ressource `OptiPM.html` ; 8 pages Top supplémentaires (Psy, Feu, Glace, Insecte, Plante, Poison, Roche, Sol) ; système `shiny-boost-circle` ; rectangles de difficulté des raids ; section Nouveautés de l'accueil.
+
+**31 juillet 2026 (soir)** : `TopSol.html` (30 cartes, 5 Méga) livrée et activée ; 12 entrées ajoutées ou modifiées dans `pokemon.css` (709 classes) ; **harmonisation des rangs Méga sur les 9 pages Top qui utilisaient `M1`** ; pages `TaxiVolant`, `DixiemeAnniversaire` et `CoucheOzone` constatées supprimées du dépôt ; ce document corrigé sur cinq points.
 
 **31 juillet 2026** : audit des 7 fichiers partagés ; `section-nav` centralisée dans `global.css` (6 pages, blocs strictement identiques) + correction du bug d'ancre (`scroll-margin-top`) ; Badging API étudié puis écarté ; refonte de ce document.

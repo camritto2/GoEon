@@ -730,6 +730,14 @@
 .pk-duralugon .research-reward-name { color: #16a34a; }
 .pk-duralugon .emoji-shiny  { display: inline; }
 
+/* Dunaja — Bon */
+.pk-dunaja .pokemon-name { color: #16a34a; }
+.pk-dunaja .research-reward-name { color: #16a34a; }
+
+/* Dunaconda — Bon */
+.pk-dunaconda .pokemon-name { color: #16a34a; }
+.pk-dunaconda .research-reward-name { color: #16a34a; }
+
 /* Draco — Bon / Shiny */
 .pk-draco .pokemon-name { color: #16a34a; }
 .pk-draco .research-reward-name { color: #16a34a; }
@@ -2047,10 +2055,20 @@
 .pk-nigirigon .pokemon-name { color: #16a34a; }
 .pk-nigirigon .research-reward-name { color: #16a34a; }
 
+/* Nidoran Mâle — Bon / Shiny */
+.pk-nidoranm .pokemon-name { color: #16a34a; }
+.pk-nidoranm .research-reward-name { color: #16a34a; }
+.pk-nidoranm .emoji-shiny  { display: inline; }
+
 /* Nidorino — Bon / Shiny */
 .pk-nidorino .pokemon-name { color: #16a34a; }
 .pk-nidorino .research-reward-name { color: #16a34a; }
 .pk-nidorino .emoji-shiny { display: inline; }
+
+/* Nidoking — Bon / Shiny */
+.pk-nidoking .pokemon-name { color: #16a34a; }
+.pk-nidoking .research-reward-name { color: #16a34a; }
+.pk-nidoking .emoji-shiny  { display: inline; }
 
 /* Noacier — Normal / Shiny */
 .pk-noacier .emoji-shiny { display: inline; }
@@ -2109,13 +2127,19 @@
 .pk-nostenfer .research-reward-name { color: #16a34a; }
 .pk-nostenfer .emoji-shiny  { display: inline; }
 
-/* Nidoran Femelle — Normal / Shiny */
+/* Nidoran Femelle — Bon / Shiny */
+.pk-nidoranf .pokemon-name { color: #16a34a; }
+.pk-nidoranf .research-reward-name { color: #16a34a; }
 .pk-nidoranf .emoji-shiny { display: inline; }
 
-/* Nidorina — Normal / Shiny */
+/* Nidorina — Bon / Shiny */
+.pk-nidorina .pokemon-name { color: #16a34a; }
+.pk-nidorina .research-reward-name { color: #16a34a; }
 .pk-nidorina .emoji-shiny { display: inline; }
 
-/* Nidoqueen — Normal / Shiny */
+/* Nidoqueen — Bon / Shiny */
+.pk-nidoqueen .pokemon-name { color: #16a34a; }
+.pk-nidoqueen .research-reward-name { color: #16a34a; }
 .pk-nidoqueen .emoji-shiny { display: inline; }
 
 /* ============================================================
@@ -2666,6 +2690,11 @@
 .pk-salameche .research-reward-name { color: #16a34a; }
 .pk-salameche .emoji-shiny  { display: inline; }
 
+/* Sancoki — Bon / Shiny */
+.pk-sancoki .pokemon-name { color: #16a34a; }
+.pk-sancoki .research-reward-name { color: #16a34a; }
+.pk-sancoki .emoji-shiny  { display: inline; }
+
 /* Sapereau — Normal / Shiny */
 .pk-sapereau .emoji-shiny { display: inline; }
 
@@ -3029,6 +3058,11 @@
 .pk-tritox .research-reward-name { color: #16a34a; }
 .pk-tritox .emoji-shiny  { display: inline; }
 
+/* Tritosor — Bon / Shiny */
+.pk-tritosor .pokemon-name { color: #16a34a; }
+.pk-tritosor .research-reward-name { color: #16a34a; }
+.pk-tritosor .emoji-shiny  { display: inline; }
+
 /* Tygnon — Normal / Shiny */
 .pk-tygnon .emoji-shiny { display: inline; }
 
@@ -3237,6 +3271,9 @@
 
 /* Zigzaton — Normal / Shiny */
 .pk-zigzaton .emoji-shiny { display: inline; }
+
+/* Zygarde — Shiny */
+.pk-zygarde .emoji-shiny  { display: inline; }
 
 
 /* ============================================================
