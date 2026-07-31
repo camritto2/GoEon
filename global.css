@@ -582,9 +582,15 @@ body.dark-mode .shiny-boost-circle {
   width: 100%;
 }
 
-/* Texte vert "bon Pokémon" dans les intros et listes */
+/* Textes de légende des codes couleur (intros, listes) */
 .texte-vert {
   color: var(--accent-vert-bon);
+  font-weight: bold;
+}
+
+.texte-orange {
+  color: #e8894a;
+  font-weight: bold;
 }
 
 /* Paragraphes des encadrés d'intro */
