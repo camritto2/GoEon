@@ -109,54 +109,40 @@ function gererMenuMobile() {
 
 
 // 4. LOGIQUE DU MODE SOMBRE
-function basculerTheme() {
+// Met à jour icônes (Noctali/Mentali), textes et titres des 2 boutons thème
+function appliquerAffichageTheme(sombre) {
+  const icone = sombre ? 'images/Mentali_icon.png' : 'images/Noctali_icon.png';
+  const libelle = sombre ? 'Mode Clair' : 'Mode Sombre';
+
   const toggleBtn = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
+  if (toggleBtn) {
+    toggleBtn.title = sombre ? "Activer le mode clair" : "Activer le mode sombre";
+    const themeIcon = document.getElementById('theme-icon');
+    if (themeIcon) themeIcon.src = icone;
+    const text = toggleBtn.querySelector('.theme-text');
+    if (text) text.textContent = libelle;
+  }
+
   const themeIconMobile = document.getElementById('theme-icon-mobile');
   const themeTextMobile = document.querySelector('.theme-text-mobile');
-  document.body.classList.toggle('dark-mode');
-  
-  if (document.body.classList.contains('dark-mode')) {
-    if (toggleBtn) {
-      toggleBtn.title = "Activer le mode clair";
-      if (themeIcon) themeIcon.src = 'images/Mentali_icon.png';
-      const text = toggleBtn.querySelector('.theme-text');
-      if (text) text.textContent = 'Mode Clair';
-    }
-    if (themeIconMobile) themeIconMobile.src = 'images/Mentali_icon.png';
-    if (themeTextMobile) themeTextMobile.textContent = 'Mode Clair';
-    localStorage.setItem('theme', 'dark');
-  } else {
-    if (toggleBtn) {
-      toggleBtn.title = "Activer le mode sombre";
-      if (themeIcon) themeIcon.src = 'images/Noctali_icon.png';
-      const text = toggleBtn.querySelector('.theme-text');
-      if (text) text.textContent = 'Mode Sombre';
-    }
-    if (themeIconMobile) themeIconMobile.src = 'images/Noctali_icon.png';
-    if (themeTextMobile) themeTextMobile.textContent = 'Mode Sombre';
-    localStorage.setItem('theme', 'light');
-  }
+  if (themeIconMobile) themeIconMobile.src = icone;
+  if (themeTextMobile) themeTextMobile.textContent = libelle;
+}
+
+function basculerTheme() {
+  const sombre = document.body.classList.toggle('dark-mode');
+  appliquerAffichageTheme(sombre);
+  localStorage.setItem('theme', sombre ? 'dark' : 'light');
 }
 
 function gererModeSombre() {
-  const toggleBtn = document.getElementById('theme-toggle');
-  const toggleMobile = document.getElementById('theme-toggle-mobile');
-
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
-    if (toggleBtn) {
-      toggleBtn.title = "Activer le mode clair";
-      const themeIcon = document.getElementById('theme-icon');
-      if (themeIcon) themeIcon.src = 'images/Mentali_icon.png';
-      const text = toggleBtn.querySelector('.theme-text');
-      if (text) text.textContent = 'Mode Clair';
-    }
-    const themeIconMobile = document.getElementById('theme-icon-mobile');
-    const themeTextMobile = document.querySelector('.theme-text-mobile');
-    if (themeIconMobile) themeIconMobile.src = 'images/Mentali_icon.png';
-    if (themeTextMobile) themeTextMobile.textContent = 'Mode Clair';
+    appliquerAffichageTheme(true);
   }
+
+  const toggleBtn = document.getElementById('theme-toggle');
+  const toggleMobile = document.getElementById('theme-toggle-mobile');
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => { basculerTheme(); });
@@ -229,7 +215,7 @@ function toggleAltImm(immId, altId, iconId = null) {
   const isOpen = alt.style.display !== 'none';
   if (!isOpen) {
     imm.style.textDecoration = 'line-through';
-    imm.style.color = '#a0aec0';
+    imm.style.color = 'var(--text-muet)';
     imm.style.fontWeight = 'normal';
     alt.style.display = 'inline';
     if (icon) icon.style.display = 'none';
@@ -285,6 +271,7 @@ function gererDropdowns() {
 // 11. LIENS MORTS DE LA NAVBAR → TOOLTIP "DISPONIBLE PROCHAINEMENT"
 function gererLiensMorts() {
   // Tooltip partagé : réutilise celui de la page s'il existe (index.html), sinon le crée
+  // (le style vit dans navbar.css, chargée sur toutes les pages)
   let tooltip = document.getElementById('coming-soon-tooltip');
   if (!tooltip) {
     tooltip = document.createElement('div');
@@ -292,26 +279,6 @@ function gererLiensMorts() {
     tooltip.className = 'coming-soon-tooltip';
     tooltip.textContent = 'Disponible prochainement !';
     document.body.appendChild(tooltip);
-
-    const style = document.createElement('style');
-    style.textContent = `
-      .coming-soon-tooltip {
-        position: absolute;
-        background: #2a2a2a;
-        color: #fff;
-        padding: 8px 14px;
-        border-radius: 8px;
-        font-size: 13px;
-        font-weight: 500;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.2s;
-        z-index: 9999;
-        white-space: nowrap;
-      }
-      .coming-soon-tooltip.visible { opacity: 1; }
-    `;
-    document.head.appendChild(style);
   }
 
   document.querySelectorAll('.dropdown-menu a[href="#"], a.lien-a-venir').forEach(lien => {
@@ -319,18 +286,36 @@ function gererLiensMorts() {
       e.preventDefault();
       // Pas de tooltip pour les entrées informatives ("Aucun évènement annoncé")
       if (lien.textContent.trim().startsWith('Aucun')) return;
-
-      const marge = 8;
-      const largeurTooltip = tooltip.offsetWidth;
-      const maxGauche = document.documentElement.clientWidth - largeurTooltip - marge;
-      let gauche = e.pageX - largeurTooltip / 2;
-      gauche = Math.max(marge, Math.min(gauche, maxGauche + window.scrollX));
-      tooltip.style.left = gauche + 'px';
-      tooltip.style.top = (e.pageY + 20) + 'px';
-      tooltip.classList.add('visible');
-      setTimeout(() => tooltip.classList.remove('visible'), 1800);
+      afficherComingSoon(e, 20);
     });
   });
+}
+
+// 11 bis. AFFICHAGE DU TOOLTIP "DISPONIBLE PROCHAINEMENT"
+// decalageY : 20 sous le curseur (navbar), -45 au-dessus (cartes de l'accueil)
+function afficherComingSoon(e, decalageY) {
+  const tooltip = document.getElementById('coming-soon-tooltip');
+  if (!tooltip) return;
+
+  // Repli si l'évènement n'a pas de coordonnées (activation au clavier)
+  let x = e.pageX;
+  let y = e.pageY;
+  if (!x && !y && e.currentTarget && e.currentTarget.getBoundingClientRect) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    x = rect.left + rect.width / 2 + window.scrollX;
+    y = rect.top + rect.height / 2 + window.scrollY;
+  }
+
+  const marge = 8;
+  const largeurTooltip = tooltip.offsetWidth;
+  const maxGauche = document.documentElement.clientWidth - largeurTooltip - marge;
+  let gauche = x - largeurTooltip / 2;
+  gauche = Math.max(marge, Math.min(gauche, maxGauche + window.scrollX));
+  tooltip.style.left = gauche + 'px';
+  tooltip.style.top = (y + decalageY) + 'px';
+  tooltip.classList.add('visible');
+  clearTimeout(tooltip.timerComingSoon);
+  tooltip.timerComingSoon = setTimeout(() => tooltip.classList.remove('visible'), 1800);
 }
 
 // SERVICE WORKER
@@ -347,7 +332,7 @@ if ('serviceWorker' in navigator) {
   btn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScyUV3hPNevGP_1lsK5Abdi8KbKwwFN5XmGJHRHEAd_pDF7vA/viewform?usp=publish-editor';
   btn.target = '_blank';
   btn.id = 'btn-signaler';
-  btn.innerHTML = '<span class="signaler-texte">⚠️ Signaler une erreur</span><span class="signaler-mini">⚠️</span>';
+  btn.innerHTML = '<span class="signaler-texte">⚠️ Signaler une erreur</span>';
   btn.style.cssText = `
     position: fixed;
     bottom: 20px;
@@ -366,10 +351,9 @@ if ('serviceWorker' in navigator) {
     transition: background 0.2s, transform 0.2s;
   `;
 
-  // Style media query via feuille de style
+  // Masquage sur mobile via media query
   const style = document.createElement('style');
   style.textContent = `
-    .signaler-mini { display: none; }
     @media (max-width: 960px) {
       #btn-signaler { display: none !important; }
     }
@@ -483,3 +467,16 @@ if ('serviceWorker' in navigator) {
 
   titre.insertAdjacentElement('afterend', nav);
 })();
+
+// 15. PAGE D'ACCUEIL (index.html)
+function switchTab(os, btn) {
+  document.getElementById('pwa-android').classList.toggle('active', os === 'android');
+  document.getElementById('pwa-ios').classList.toggle('active', os === 'ios');
+  document.querySelectorAll('.pwa-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function showComingSoon(e) {
+  e.preventDefault();
+  afficherComingSoon(e, -45);
+}

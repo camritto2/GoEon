@@ -691,6 +691,57 @@ body.dark-mode .shiny-boost-circle {
 .diff-bubble.diff-5 { background-color: #16a34a; }
 
 /* ==========================================
+   NAVBAR DE SECTIONS (pages évènement)
+   Barre collante sous la navbar principale (60px).
+   Le mask-image signale le débordement horizontal en mobile.
+   ========================================== */
+
+.section-nav {
+  position: sticky;
+  top: 60px;
+  z-index: 9998;
+  background-color: var(--bg-site);
+  border-bottom: 1px solid var(--border-carte);
+  padding: 5px 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
+}
+
+.section-nav::-webkit-scrollbar { display: none; }
+
+.section-nav a {
+  flex-shrink: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  color: var(--text-secondaire);
+  text-decoration: none;
+  padding: 3px 6px;
+  border-radius: 20px;
+  border: 1px solid var(--border-carte);
+  background: var(--bg-carte);
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.section-nav a:hover {
+  background-color: var(--accent-navbar);
+  color: var(--accent-text-navbar);
+}
+
+/* Cible d'ancre : dégager la navbar fixe + la barre de sections,
+   uniquement sur les pages qui ont cette barre. */
+body:has(.section-nav) .category-title {
+  scroll-margin-top: 95px;
+}
+
+/* ==========================================
    DESKTOP — min-width: 769px
    ========================================== */
 
@@ -793,5 +844,10 @@ body.dark-mode .shiny-boost-circle {
   .raid-difficulty-label { font-size: 13px; margin: 4px 0 6px 0; }
   .raid-difficulty { gap: 5px; margin-top: 4px; }
   .diff-bubble { width: 26px; height: 26px; border-radius: 6px; font-size: 14px; }
+
+  /* Navbar de sections */
+  .section-nav { justify-content: center; padding: 8px 10px; }
+  .section-nav a { font-size: 13px; padding: 5px 14px; }
+  body:has(.section-nav) .category-title { scroll-margin-top: 115px; }
 
 }

@@ -10,54 +10,6 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
   <link rel="apple-touch-icon" href="images/icon-192.png">
-  <style>
-    /* Mini-navbar de sections (spécifique à cette page) */
-    .section-nav {
-      position: sticky;
-      top: 60px;
-      z-index: 9998;
-      background-color: var(--bg-site);
-      border-bottom: 1px solid var(--border-carte);
-      padding: 5px 8px;
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 4px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 93%, transparent 100%);
-    }
-    .section-nav::-webkit-scrollbar { display: none; }
-    .section-nav a {
-      flex-shrink: 0;
-      font-family: 'Poppins', sans-serif;
-      font-size: 8px;
-      font-weight: 500;
-      color: var(--text-secondaire);
-      text-decoration: none;
-      padding: 3px 6px;
-      border-radius: 20px;
-      border: 1px solid var(--border-carte);
-      background: var(--bg-carte);
-      white-space: nowrap;
-      transition: background-color 0.2s, color 0.2s;
-    }
-    .section-nav a:hover {
-      background-color: var(--accent-navbar);
-      color: var(--accent-text-navbar);
-    }
-    @media (min-width: 769px) {
-      .section-nav {
-        justify-content: center;
-        padding: 8px 10px;
-      }
-      .section-nav a {
-        font-size: 13px;
-        padding: 5px 14px;
-      }
-    }
-  </style>
 </head>
 <body>
 

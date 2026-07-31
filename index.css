@@ -69,11 +69,6 @@
   line-height: 1.2;
 }
 
-.section-title .s-emoji {
-  line-height: 1;
-  font-style: normal;
-}
-
 /* NOUVEAUTÉS */
 .news-list {
   margin: 0;
@@ -119,6 +114,7 @@
   gap: 6px;
   font-size: 10.5px;
   line-height: 1.4;
+  color: var(--text-principal);
 }
 
 .news-items li::before {
@@ -138,11 +134,6 @@
 .news-list a:hover {
   color: #29b6f6;
   text-decoration: underline;
-}
-
-.news-note {
-  color: var(--text-secondaire);
-  font-style: italic;
 }
 
 .news-text {
@@ -171,7 +162,7 @@
   min-width: 70px;
   max-width: 110px;
   flex: 1;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: box-shadow 0.2s;
   border: 1px solid transparent;
   gap: 0;
   text-align: center;
@@ -244,6 +235,7 @@
   line-height: 1.4;
   color: var(--text-secondaire);
 }
+
 .yellow-card { background-color: #fffde7; border-color: #ffcb05; }
 .purple-card { background-color: #f3e5f5; border-color: #e1bee7; }
 .blue-card   { background-color: #e3f2fd; border-color: #90caf9; }
@@ -281,11 +273,6 @@ body.dark-mode .pink-card   { background-color: #2d0a1e; border-color: #8a1560; 
 
 /* Carte Règles Générales */
 .type-card-rules { text-align: center; }
-.type-card-rules .rules-icon {
-  font-size: 24px;
-  margin-bottom: 6px;
-  display: block;
-}
 
 /* GRILLE TYPES — 3 colonnes mobile */
 .type-grid {
@@ -327,7 +314,6 @@ body.dark-mode .pink-card   { background-color: #2d0a1e; border-color: #8a1560; 
 }
 
 /* Couleurs officielles des types */
-.type-normal   { background: #d4d4c8; border-color: #b8b8a8; }
 .type-combat   { background: #f4b89a; border-color: #e07050; }
 .type-vol      { background: #b0b0f0; border-color: #7070c8; }
 .type-poison   { background: #d8a0d8; border-color: #b060b0; }
@@ -347,7 +333,6 @@ body.dark-mode .pink-card   { background-color: #2d0a1e; border-color: #8a1560; 
 .type-fee      { background: #f8c0e0; border-color: #ee99ac; }
 
 /* Mode sombre types */
-body.dark-mode .type-normal   { background: #4a4a40; border-color: #6a6a58; }
 body.dark-mode .type-combat   { background: #6a2810; border-color: #c03028; }
 body.dark-mode .type-vol      { background: #3a3068; border-color: #6858d0; }
 body.dark-mode .type-poison   { background: #502050; border-color: #9040a0; }
@@ -365,23 +350,6 @@ body.dark-mode .type-glace    { background: #205058; border-color: #40a0a8; }
 body.dark-mode .type-dragon   { background: #182868; border-color: #3060d0; }
 body.dark-mode .type-tenebres { background: #302018; border-color: #503828; }
 body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
-
-/* TOOLTIP */
-.coming-soon-tooltip {
-  position: absolute;
-  background: #2a2a2a;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s;
-  z-index: 9999;
-  white-space: nowrap;
-}
-.coming-soon-tooltip.visible { opacity: 1; }
 
 /* FOOTER */
 .home-footer {
@@ -408,6 +376,152 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
 .discord-btn:hover {
   background-color: #4752c4;
   transform: translateY(-2px);
+}
+
+/* ==========================================
+   BANDEAUX REPLIABLES (Tuto PWA + Légende)
+   ========================================== */
+
+.pwa-banner,
+.legend-banner {
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pwa-banner {
+  margin-bottom: 12px;
+}
+
+.pwa-toggle,
+.legend-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-principal);
+  text-align: left;
+}
+
+.pwa-arrow,
+.legend-arrow {
+  font-size: 12px;
+  color: var(--text-secondaire);
+}
+
+.pwa-content,
+.legend-content {
+  display: none;
+  padding: 0 12px 5px 12px;
+  border-top: 1px solid var(--border-carte);
+}
+
+.pwa-content.open,
+.legend-content.open {
+  display: block;
+}
+
+/* --- Spécifique Tuto PWA --- */
+
+.pwa-tabs {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0 8px 0;
+  justify-content: center;
+}
+
+.pwa-tab {
+  background: none;
+  border: 1px solid var(--border-carte);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pwa-tab.active {
+  background: #29b6f6;
+  border-color: #29b6f6;
+  color: #fff;
+}
+
+.pwa-steps {
+  display: none;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  color: var(--text-secondaire);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.pwa-steps.active {
+  display: block;
+}
+
+.pwa-steps li::before {
+  content: '▸ ';
+  color: #29b6f6;
+}
+
+/* --- Spécifique Légende --- */
+
+.legend-items {
+  margin: 8px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+  color: var(--text-secondaire);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.legend-items li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-swatch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+.legend-swatch-good::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #16a34a;
+}
+
+.legend-text-good {
+  color: #16a34a;
+}
+
+.legend-swatch-shiny .emoji-shiny {
+  width: 14px;
+  height: 14px;
+  cursor: default;
 }
 
 /* ==========================================
@@ -497,163 +611,14 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
     margin-bottom: 6px;
   }
 
-  .type-card-rules .rules-icon {
-    font-size: 28px;
-  }
-
   .discord-btn {
     padding: 12px 25px;
     font-size: inherit;
   }
 
-}
-
-/* ==========================================
-   BANDEAUX REPLIABLES (Tuto PWA + Légende)
-   ========================================== */
-
-.pwa-banner,
-.legend-banner {
-  background: var(--bg-carte);
-  border: 1px solid var(--border-carte);
-  border-radius: 12px;
-  margin-bottom: 16px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-.pwa-banner {
-  margin-bottom: 12px;
-}
-
-.pwa-toggle,
-.legend-toggle {
-  width: 100%;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-principal);
-  text-align: left;
-}
-
-.pwa-arrow,
-.legend-arrow {
-  font-size: 12px;
-  color: var(--text-secondaire);
-}
-
-.pwa-content,
-.legend-content {
-  display: none;
-  padding: 0 12px 5px 12px;
-  border-top: 1px solid var(--border-carte);
-}
-
-.pwa-content.open,
-.legend-content.open {
-  display: block;
-}
-
-/* --- Spécifique Tuto PWA --- */
-
-.pwa-tabs {
-  display: flex;
-  gap: 6px;
-  margin: 8px 0 8px 0;
-  justify-content: center;
-}
-
-.pwa-tab {
-  background: none;
-  border: 1px solid var(--border-carte);
-  border-radius: 20px;
-  padding: 3px 10px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  color: var(--text-secondaire);
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.pwa-tab.active {
-  background: #29b6f6;
-  border-color: #29b6f6;
-  color: #fff;
-}
-
-.pwa-steps {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-  color: var(--text-secondaire);
-  font-size: 10px;
-  line-height: 1.8;
-}
-
-.pwa-steps li::before {
-  content: '▸ ';
-  color: #29b6f6;
-}
-
-@media (min-width: 769px) {
+  /* --- Bandeaux repliables --- */
   .pwa-banner { display: none; }
-}
 
-/* --- Spécifique Légende --- */
-
-.legend-items {
-  margin: 8px 0 0 0;
-  padding-left: 0;
-  list-style: none;
-  color: var(--text-secondaire);
-  font-size: 10px;
-  line-height: 1.8;
-}
-
-.legend-items li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.legend-swatch {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 14px;
-  height: 14px;
-}
-
-.legend-swatch-good::after {
-  content: '';
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #16a34a;
-}
-
-.legend-text-good {
-  color: #16a34a;
-}
-
-.legend-swatch-shiny .emoji-shiny {
-  width: 14px;
-  height: 14px;
-  cursor: default;
-}
-
-@media (min-width: 769px) {
   .legend-toggle {
     font-size: 13px;
     padding: 8px 16px;
@@ -666,4 +631,5 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   .legend-items {
     font-size: 12px;
   }
+
 }
