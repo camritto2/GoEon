@@ -284,7 +284,7 @@ body.dark-mode .pokemon-name-mega {
 
 .pokemon-name-rare {
   font-size: 1em;
-  color: #06b6d4;
+  color: var(--accent-cyan);
   display: inline-block;
   margin-bottom: 0;
 }
@@ -397,7 +397,7 @@ body.dark-mode .pokemon-name-mega {
 /* Légendes intro */
 .legend-blue { color: #3b82f6; font-weight: bold; }
 .legend-red { color: #e53e3e; font-weight: bold; }
-.legend-cyan { color: #06b6d4; font-weight: bold; }
+.legend-cyan { color: var(--accent-cyan); font-weight: bold; }
 
 body.dark-mode .legend-red { color: #ff8787; }
 /* .bullet déplacée dans global.css le 1er août 2026 */
@@ -542,7 +542,7 @@ body.dark-mode .legend-red { color: #ff8787; }
 }
 
 .type-nav-current {
-  border-color: #29b6f6;
+  border-color: var(--accent-bleu);
   box-shadow: 0 0 0 2px rgba(41, 182, 246, 0.35);
 }
 

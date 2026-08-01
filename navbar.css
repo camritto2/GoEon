@@ -26,6 +26,7 @@
   --accent-violet: #8b5cf6;      /* Liens dans les encadrés d'intro */
   --accent-or: #F4D995;          /* Bordure des encadrés d'intro */
   --accent-vert-bon: #16a34a;    /* Bon Pokémon (nom en vert) */
+  --accent-cyan: #06b6d4;        /* Pokémon obtenus une ou deux fois (pages Top) */
   --text-astuce: #64748b;        /* Textes d'astuce gris */
   --bg-bandeau-tache: #e8f4fd;   /* Bandeau des tâches / rangs Passe Go */
 }
@@ -51,6 +52,7 @@ body.dark-mode {
   --text-astuce: #9ca3af;
   --accent-bleu: #29b6f6;
   --accent-vert-bon: #16a34a;
+  --accent-cyan: #06b6d4;
   --accent-violet: #a78bfa;
   --accent-or: #F4D995;
   --bg-bandeau-tache: #1a2e3d;

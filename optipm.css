@@ -75,7 +75,7 @@
 
 .pm-table th {
   background: rgba(41, 182, 246, 0.1);
-  color: #29b6f6;
+  color: var(--accent-bleu);
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -108,7 +108,7 @@
   border-left: 1px solid var(--border-carte);
 }
 
-/* Gain / perte de PM — volontairement distincts du vert "Bon" (#16a34a) */
+/* Gain / perte de PM — volontairement distincts du vert "Bon" (var(--accent-vert-bon)) */
 .pm-plus  { color: #10b981; font-weight: 700; }
 .pm-minus { color: #ef4444; font-weight: 700; }
 
@@ -160,13 +160,13 @@
   font-family: inherit;
   font-size: 13px;
   font-weight: 600;
-  color: #29b6f6;
+  color: var(--accent-bleu);
   cursor: pointer;
 }
 
 .pm-passe-field select:focus {
   outline: none;
-  border-color: #29b6f6;
+  border-color: var(--accent-bleu);
 }
 
 .pm-table td.pm-optionnel {

@@ -1,6 +1,6 @@
 # GoEon — Conventions & Décisions
 
-*Version 2.1 — 31 juillet 2026 (révision du soir). Remplace la v1 du 18 juillet (qui ne couvrait que les pages Top).*
+*Version 2.2 — 1er août 2026 (soir). Remplace la v2.1 du 31 juillet.*
 *Chaque affirmation de ce document a été vérifiée sur les fichiers du dépôt à cette date.*
 
 > **Règle n°1 pour toute conversation Claude reprenant ce projet : ne jamais travailler de mémoire.**
@@ -49,7 +49,7 @@ GoEon : site de ressources Pokémon GO francophone. HTML/CSS/JS pur, mobile-firs
 
 ### JS
 
-**`script.js`** — ⭐ TOUTE la logique, en **16 sections numérotées** :
+**`script.js`** — ⭐ TOUTE la logique, en **17 sections numérotées** :
 
 | # | Rôle |
 |---|------|
@@ -70,6 +70,7 @@ GoEon : site de ressources Pokémon GO francophone. HTML/CSS/JS pur, mobile-firs
 | 14 | Barre des types (config `TYPES_TOP`, `page: null` = grisé + tooltip) |
 | 15 | Accueil : `switchTab`, `showComingSoon` |
 | 16 | OptiPM : menu déroulant des PM du Passe + recalcul du tableau (garde `if (document.getElementById('pm-passe'))`) |
+| 17 | `insererSeparateurRangee` — un `<hr class="research-rangee-sep">` toutes les 6 récompenses (garde `if (document.querySelector('.research-rewards'))`) |
 
 L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 
@@ -97,7 +98,10 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 
 ### Images
 
-- **Dossier `Images/` avec un I majuscule** — c'est le vrai nom sur le disque. La quasi-totalité des pages écrit encore `images/` en minuscule (héritage : Netlify est insensible à la casse, donc rien n'a jamais cassé en production). **Migration progressive décidée le 1er août 2026** : on passe à `Images/` sur chaque page qu'on touche, sans campagne dédiée. Ne jamais « corriger » vers la minuscule.
+- **Dossier `Images/` avec un I majuscule** — c'est le vrai nom sur le disque. Héritage : Netlify est insensible à la casse, donc rien n'a jamais cassé en production. Ne jamais « corriger » vers la minuscule.
+- **La règle vaut aussi pour les noms de fichiers.** Les icônes de type s'appellent `Spectre.webp`, `Feu.webp`, `Psy.webp`… avec une majuscule, alors que toutes les pages les écrivaient en minuscule. Quand on migre une page, on reprend la casse réelle du disque, pas seulement celle du dossier.
+- **Méthode de migration** : construire la table des fichiers réels de `Images/`, réécrire chaque `src`/`href` vers le nom exact, et **ne rien remplacer** si le nom n'existe pas tel quel — le signaler à Cam. Aucune extension n'est jamais devinée.
+- **Migration terminée le 1er août 2026** : la totalité du site est en `Images/` avec la casse réelle — 3 639 chemins au total, HTML, `script.js`, `navbar.html`, `manifest.json` et `service-worker.js` compris. La section 14 de `script.js` construit `'Images/' + t.icone + '.webp'` : les valeurs `icone` de `TYPES_TOP` sont donc capitalisées (`'Spectre'`, pas `'spectre'`). Seuls restent en minuscule les chemins dont le fichier **n'existe pas sur le disque** (voir §10).
 - `NomSansAccents.png`, shiny = `NomS.png`, formes **avant** le S (`GoupixAS.png`).
 - Suffixes : **A** Alola, **G** Galar *et* Gigamax, **H** Hisui, **M** Méga, **P** Primo (`GroudonP.png`), **C** / **T** formes spéciales, **B** / **N** fusions Kyurem.
 - La collision Galar/Gigamax sur `G` est **assumée** : aucun Gigamax de Galar n'existe. Si le cas survenait, ce serait `GG`.
@@ -105,6 +109,12 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 - Exceptions de nommage constatées : `Ho-Oh.png` (avec tiret), `NigirigonR.png`, `TritosorR.png`.
   Le suffixe **R** apparait maintenant deux fois, sur deux Pokémon multi-formes dont une seule image représente l'ensemble. À surveiller : c'est peut-être une convention qui s'ignore plutôt que deux exceptions.
 - Zarbi : classe `pk-zarbi`, libellé complet (« Zarbi B », pas « Lettre B »).
+
+### Deux classes utilitaires (créées le 1er août 2026)
+
+- **`nom-neutre`** — annule le vert « Bon » de `pokemon.css` sur une page donnée. Déclarée dans `global.css` en `h2.pokemon-name.nom-neutre`, spécificité **(0,2,1) obligatoire** puisque `pokemon.css` charge après et pèse (0,2,0). Un seul usage aujourd'hui : Pikachu costumé sur `BraisesArctiques.html`.
+  ⚠️ Avant de poser cette classe, **vérifier que le Pokémon est réellement « Bon » dans `pokemon.css`**. Quatre des cinq styles inline d'origine ne servaient à rien (Psykokwak et Staross sont « Normal ») ou masquaient à tort un vert légitime (Lokhlass).
+- **`intro-item-fin`** — `margin-bottom: 10px` sur le dernier item d'un groupe, pour dégager le sous-titre `<strong>` qui suit dans les listes de Passe Go.
 
 ### Badges
 
@@ -146,7 +156,14 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 - **Bascule d'attaque immédiate — la logique, souvent mal comprise.** La face avant d'une page Top[X] porte la meilleure attaque immédiate *pour jouer le Pokémon en type X*. Le bouton « Également Top Y » ouvre le build bi-type ; la bascule affiche alors la meilleure attaque **dans l'absolu**, celle qu'on prend pour couvrir les deux types ou frapper un type neutre. **S'il n'y a pas de bascule sur une carte à bouton, c'est que l'attaque de la face avant est déjà la meilleure dans l'absolu** — ce n'est pas un oubli, et parler de l'autre attaque n'aurait aucun intérêt.
   Exemple canonique, Éthernatos : Draco-Queue sur `TopDragon` **sans bascule** (elle est déjà la meilleure des deux), Direct Toxik sur `TopPoison` **barré au profit de Draco-Queue** au clic. Autre cas, Noadkoko d'Alola : Draco-Queue sans bascule sur `TopDragon`, Balle Graine barrée au profit de Draco-Queue sur `TopPlante`.
   Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué pour l'alternative. Si l'attaque de la face avant porte une icône de type, lui donner un id et le passer en 3e argument pour qu'elle disparaisse au clic.
-- `<span class="footnote-ref">` se place **après** le nom d'attaque et l'indicateur Legacy, mais **avant** l'icône de type.
+- **`toggleAltImm`, 3e argument** : si la face avant porte une icône de type, lui donner un id et le passer en 3e argument. L'icône disparait au clic **même quand l'attaque révélée est du même type** (Malvalame, Courrousinge) — décision du 1er août. Reste non tranché : faut-il donner sa propre icône à l'attaque révélée quand elle est hors-type ? `TopPoison` (Nidoking) le fait, le reste du site non.
+- **Le bouton « Également Top Y » n'existe que si le Pokémon figure vraiment dans le Top Y.** Sinon on retire bouton et build, en laissant `<div class="card-button"></div>` et `<div class="card-build"></div>` vides. Cas traités : Empiflor sur `TopPoison`, Marshadow sur `TopCombat`.
+- **Pas de bloc « Cout » quand il n'y a pas de 2e Attaque Chargée.** Le build se réduit alors à la ligne `2e Attaque Chargée : -`, sans `<hr>` ni `attack-cost-container`. Invariant vérifiable : `nombre de builds − cartes sans 2e attaque = nombre de blocs de cout`.
+- **L'absence de 2e attaque s'écrit avec un tiret court `-`**, jamais un tiret long `—`.
+- **Attaques toujours Legacy, sur toutes les pages** : Végé-Attaque, Rafale Feu, Hydroblast. Si on en trouve une sans `L`, c'est un oubli.
+- `<span class="footnote-ref">` se place **après** le nom d'attaque et l'indicateur Legacy, mais **avant** l'icône de type. Ordre strict : `nom` → `legacy-indicator` → `footnote-ref` → icône.
+- **Deux classes de note, à ne pas confondre.** `card-note` s'affiche en permanence sous la carte : elle sert aux renvois posés sur la face avant. `build-note` vit **à l'intérieur du build** et n'apparait qu'au déploiement : elle sert aux renvois posés sur la 2e Attaque Chargée. Un audit qui ne cherche que `card-note` conclura à tort que des notes manquent.
+- **Invariant croisé des bascules.** Pour un Pokémon présent sur plusieurs pages Top, chaque page implique une « meilleure attaque immédiate absolue » : l'attaque révélée s'il y a une bascule, celle de la face avant sinon. **Toutes les pages doivent impliquer la même.** Deux pages sans bascule affichant deux attaques différentes, ou deux bascules pointant l'une vers l'autre, sont contradictoires par construction.
 - Puces d'intro colorées comme leur ligne (`bullet legend-blue/cyan/red`), puce Legacy neutre.
 
 ### Checklist d'audit
@@ -159,6 +176,10 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 6. Intro repliable complète ; puces colorées ; lien Règles Générales en `lien-a-venir`
 7. Paires shiny (`NomX.png` / `NomXS.png`) ; `alt` sur toutes les images ; pas d'ID dupliqué
 8. Classes `btn-*` toutes parmi les 18
+9. Aucun `images/` en minuscule ; casse des fichiers conforme au disque
+10. Aucun bloc « Cout » sans 2e attaque ; aucun tiret long
+11. Ordre `legacy-indicator` puis `footnote-ref` ; aucun renvoi sans texte (chercher **`card-note` ET `build-note`**)
+12. Croisé avec les autres pages Top : bascules cohérentes, Legacy identique, réciprocité des boutons, mêmes badge Obscur / couleur de nom / libellé de forme / cout / image
 
 ### Les 2 activations
 
@@ -238,6 +259,8 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **Ne jamais corriger une extension d'image** de sa propre initiative (`.png` ↔ `.webp`) : Cam prend les fichiers là où il les trouve.
 - **Ne jamais deviner un nom de fichier** à partir d'une description orale (`HoOh` vs `Ho-Oh`) : demander.
 - **Réécrire un bloc `<script>` par regex emporte le suivant.** Un `.*` entre `<script>` et `</script>` est gourmand : il capture jusqu'au **dernier** `</script>` de la page et avale donc le `<script src="script.js">` final. Symptôme : la navbar disparaît alors que le HTML semble intact. Après toute réécriture de script : vérifier que `script.js` est toujours appelé en fin de fichier. (Erreur commise le 1er août sur `OptiPM.html`.)
+- **Chercher une classe, c'est déjà faire une hypothèse.** Le 1er août, un audit des renvois de note n'a interrogé que `card-note` et a conclu que six notes manquaient. Elles existaient toutes en `build-note`. Quatre pages ont été « corrigées » pour rien, avec du texte en double à la clé. Avant d'affirmer qu'une chose est absente, vérifier qu'on l'a cherchée sous toutes ses formes.
+- **Un remplacement par nom d'attaque frappe la première occurrence, pas la bonne.** Toujours découper la page par carte et cibler le rang. Deux erreurs le même jour : `Ire de la Nature` a atterri sur Tokorico au lieu de Tokopiyon, `Végé-Attaque` sur Méga-Florizarre au lieu de Florizarre.
 - **Le code dit la vérité, pas la mémoire.** Ce document a contenu pendant deux semaines des classes qui n'existaient pas.
 
 ---
@@ -252,20 +275,27 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 
 ### Contenu
 
-- **3 types Top restants** : Spectre, Ténèbres, Vol. (`TopSol` livrée et activée le 31 juillet.)
+- **2 types Top restants** : Ténèbres, Vol. (`TopSpectre` livrée et activée le 1er août.)
+- **`TopSpectre` — images manquantes** : 11 fichiers restent à produire (Branette, BranetteM, Gromago, Polthegeist, ZoroarkH, Theffroyable, Desseliande, Magireve, Exagide, Tomberro, Grodrive). Question ouverte : le suffixe `R` s'applique-t-il à Polthégeist et Théffroyable, tous deux en « 2 Formes » ?
+- **`TopCombat` — chantier ouvert** : ordre `footnote-ref`/`legacy-indicator` à inverser sur Courrousinge (rang 21), build de Marshadow à retirer, `<script>` inline à verser dans `script.js` (Shifours + note conditionnelle de Courrousinge), trois `toggleBuild` en 5 arguments avec couleurs inline (Lucario, Cobaltium, Coatox), migration `Images/`.
+- **`TopAcier`** : jamais auditée, toujours en `images/` minuscule.
 - **ChefRocket** : ajouter Cliff & Arlo (empiler dans `.rocket-list`) ; puis chantier séparation Sbires/Chefs avant activation navbar/accueil.
-- **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 13 pages Top + activer la carte d'accueil + le lien navbar.
+- **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 15 pages Top + activer la carte d'accueil + le lien navbar.
 - **`OptiPM.html` est considérée comme terminée** (1er août 2026). Le Passe payant est couvert par le menu déroulant ; le ticket d'évènement et l'Étude Ambassadeur sont traités par deux lignes « Optionnel » en fin de tableau. Plus de « versions à venir ».
 - **SEO / Open Graph** : meta description + og:tags (priorité pages Top) ; attend l'image 1200×630 de Cam.
 
 ### Dette technique
 
-- **`research-rangee-sep`** : la fonction JS est recopiée à la main de page en page → à verser dans `script.js`.
-- **Classe `nom-neutre`** à créer : le motif `style="color: var(--text-principal);"` sur un `pokemon-name` est apparu au moins 3 fois (Pikachu costumé, Méga-Staross, Passe Premium).
-- **`event-sous-titre`** toujours déclarée dans `global.css` alors qu'elle est dépréciée → vérifier qu'aucune page ne l'utilise, puis supprimer.
-- **Couleurs en dur** : `#29b6f6`, `#16a34a`, `#06b6d4` écrits une douzaine de fois dans `index.css`, `top.css` et `global.css` alors que `--accent-bleu` et `--accent-vert-bon` existent.
-- **`script.js?v=3`** sur toutes les pages : inutile, à retirer au fil de l'eau.
-- **Marges avant les titres « Bonus »** : `margin-bottom:10px` inline récurrent → mérite une classe.
+**Les six chantiers de la v2.1 sont soldés (1er août 2026).** `research-rangee-sep` versée en section 17 ; `nom-neutre` créée ; `event-sous-titre` était déjà absente du CSS et de toutes les pages ; les couleurs d'accent sont passées en variables (1026 valeurs dans `pokemon.css`, `global.css`, `top.css`, `index.css` et `optipm.css`, `--accent-cyan` créée au passage) ; `script.js?v=3` retiré des 33 pages ; les marges inline devenues `intro-item-fin`.
+
+Ce qui les remplace :
+
+- **`TopCombat` a un `</div>` de trop** — 340 ouvrants pour 341 fermants. Antérieur au 1er août. À régler avec le reste du chantier `TopCombat`.
+- **`regionaux.html`** — page inachevée, contient un `<script>` inline. Sera reprise entièrement.
+- **`TerresSauvages2026.html`** — un `margin-bottom: 6px` inline sur un `intro-item`, valeur isolée qui ne relève pas d'`intro-item-fin`.
+- **`FestivalAquatique.html`** — une marge de fin de groupe posée en plein milieu de liste. Laissée en l'état : la page sera retravaillée au lancement de l'évènement.
+- **Deux images cassées, à trancher** — `dynamax.html` pointe vers `QuartermacS.png`, qui n'existe pas (seul `Quartermac.png` est là) : le badge shiny de Quartermac renvoie une image morte. Et `oeufs.html` pointe vers `PandespiegleS.webp` alors que le fichier sur le disque est `PandespiegleS.png` — mauvaise extension. Rien n'a été corrigé : la règle « ne jamais corriger une extension de soi-même » s'applique.
+- **`regionaux.html`** — 75 fichiers image référencés n'existent pas dans `Images/`. Page inachevée, cohérent.
 
 ### Écarté
 
@@ -286,7 +316,8 @@ Règles clés à rappeler dans le prompt :
 5. Aucune classe `pk-` sur une page Top.
 6. Livrer **la seule page** demandée : les activations sont gérées ailleurs.
 7. Ne jamais inventer un nom de fichier image ni corriger une extension.
-8. Auto-vérification finale sur la checklist §5.
+   8. `Images/` avec la casse réelle des fichiers, icônes de type comprises.
+9. Auto-vérification finale sur la checklist §5.
 
 ---
 
@@ -297,6 +328,10 @@ Règles clés à rappeler dans le prompt :
 **Seconde quinzaine de juillet** : une douzaine de pages d'évènement (DixiemeAnniversaire, CoucheOzone, GorythmicGigamax, BraisesArctiques, EclosionFeuGlace, FestivalAquatique, MegaStaross, CDGoupilou, CitySafariMarseille, GoFestMegaFinale, TerresSauvages2026) ; pages ressource `OptiPM.html` ; 8 pages Top supplémentaires (Psy, Feu, Glace, Insecte, Plante, Poison, Roche, Sol) ; système `shiny-boost-circle` ; rectangles de difficulté des raids ; section Nouveautés de l'accueil.
 
 **1er août 2026** : refonte de l'interaction d'`OptiPM.html` — les deux cases à cocher (Passe récupéré / Ambassadeur) remplacées par un menu déroulant de 26 entrées (0 à 2 500 PM par pas de 100, libellés « X PM → Y Combats »), tableau entièrement recalculé par un moteur `data-delta` au lieu de valeurs figées `data-default`/`data-variant` ; lignes 7 et 8 ajoutées ; Ambassadeur et ticket payant devenus deux lignes « Optionnel » ; bloc Règles Générales complété (plafond de stockage, sous-puces) ; page passée à `Images/`. Le mécanisme a été validé par simulation Python contre les deux schémas de référence de Cam avant écriture. Page considérée comme terminée. Dans la foulée : `optipm.css` créée, JS versé en section 16 de `script.js` (OptiPM n'a plus ni `<style>` ni `<script>` inline), et `.bullet` rapatriée de `top.css` vers `global.css` — elle manquait à 9 pages hors Top, soit ~98 puces sans leur marge.
+
+**1er août 2026 (nuit)** : dette technique du §10 soldée en une passe — section 17 de `script.js`, classes `nom-neutre` et `intro-item-fin`, `?v=3` retiré des 33 pages (les alignant enfin sur le préchargement du service worker, qui vise `/script.js` sans paramètre), et 1026 couleurs d'accent passées en variables CSS avec création de `--accent-cyan`. Lot de 44 fichiers.
+
+**1er août 2026 (soir)** : `TopSpectre.html` livrée (27 cartes, 2 Méga) et activée. **Audit croisé des 12 pages Top hors Acier et Combat** — 350 cartes, 293 Pokémon, 57 présents sur plusieurs pages. Corrigés : 5 contradictions de bascule (Feunard d'Alola, Victini, Pyrax, Kyurem Blanc, Tokopiyon), 4 divergences de Legacy (Végé-Attaque sur Florizarre, Méga-Florizarre et Jungko, Taillade sur Nidoking, Spatio-Rift sur Palkia), 4 fautes d'orthographe d'attaque (Jet-Pierres, Draco-Souffle ×3), le build sans destination d'Empiflor, 11 blocs de cout orphelins, 3 tirets longs, 2 ordres note/Legacy inversés, et la migration `Images/` de 12 pages (767 chemins). `pokemon.css` : `pk-hexagide` — coquille jamais utilisée, rangée dans les H — remplacée par `pk-exagide` en Bon + Shiny ; Monorpale et Dimoclès passés en Bon + Shiny. Section Nouveautés de l'accueil allégée à trois groupes. Un faux positif documenté en §9 : six notes crues manquantes existaient en `build-note`.
 
 **31 juillet 2026 (soir)** : `TopSol.html` (30 cartes, 5 Méga) livrée et activée ; 12 entrées ajoutées ou modifiées dans `pokemon.css` (709 classes) ; commentaires datés du 16 août posés pour Goupilou et Roublenard ; **harmonisation des rangs Méga sur les 9 pages Top qui utilisaient `M1`** ; pages `TaxiVolant`, `DixiemeAnniversaire` et `CoucheOzone` constatées supprimées du dépôt ; ce document corrigé sur cinq points.
 

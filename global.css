@@ -394,6 +394,11 @@ body.dark-mode .shiny-boost-circle {
   text-align: center;
 }
 
+/* Nom neutre — annule le vert « Bon » de pokemon.css sur une page donnée.
+   Spécificité (0,2,1) obligatoire : pokemon.css est chargé après global.css
+   et ses sélecteurs .pk-x .pokemon-name pèsent (0,2,0). */
+h2.pokemon-name.nom-neutre { color: var(--text-principal); }
+
 /* Nom */
 .pokemon-name {
   font-size: 11px;
@@ -625,6 +630,9 @@ body.dark-mode .shiny-boost-circle {
 }
 .intro-rules a:hover { text-decoration: underline; }
 
+/* Dernier item d'un groupe : respiration avant le sous-titre suivant */
+.intro-item-fin { margin-bottom: 10px; }
+
 /* Puces des encadrés d'intro — déplacée de top.css le 1er août 2026 :
    9 pages hors Top l'utilisaient sans charger top.css. */
 .bullet { display: inline-block; margin-right: 10px; font-weight: bold; }
@@ -690,7 +698,7 @@ body.dark-mode .shiny-boost-circle {
 .diff-bubble.diff-2 { background-color: #f97316; }
 .diff-bubble.diff-3 { background-color: #f5b700; }
 .diff-bubble.diff-4 { background-color: #7cc00d; }
-.diff-bubble.diff-5 { background-color: #16a34a; }
+.diff-bubble.diff-5 { background-color: var(--accent-vert-bon); }
 
 /* ==========================================
    NAVBAR DE SECTIONS (pages évènement)

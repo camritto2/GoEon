@@ -16,7 +16,7 @@ fetch('navbar.html')
     const logo = document.querySelector('.nav-logo');
     if (logo) {
       const icon = document.createElement('img');
-      icon.src = 'images/Icone.png';
+      icon.src = 'Images/Icone.png';
       icon.alt = 'GoEon';
       icon.style.cssText = 'width:46px; height:46px; object-fit:contain; vertical-align:middle; margin-left:-2px;';
       logo.appendChild(icon);
@@ -111,7 +111,7 @@ function gererMenuMobile() {
 // 4. LOGIQUE DU MODE SOMBRE
 // Met à jour icônes (Noctali/Mentali), textes et titres des 2 boutons thème
 function appliquerAffichageTheme(sombre) {
-  const icone = sombre ? 'images/Mentali_icon.png' : 'images/Noctali_icon.png';
+  const icone = sombre ? 'Images/Mentali_icon.png' : 'Images/Noctali_icon.png';
   const libelle = sombre ? 'Mode Clair' : 'Mode Sombre';
 
   const toggleBtn = document.getElementById('theme-toggle');
@@ -419,23 +419,23 @@ if ('serviceWorker' in navigator) {
   if (!titre) return;
 
   const TYPES_TOP = [
-    { nom: 'Acier',    icone: 'acier',    page: 'TopAcier.html' },
-    { nom: 'Combat',   icone: 'combat',   page: 'TopCombat.html' },
-    { nom: 'Dragon',   icone: 'dragon',   page: 'TopDragon.html' },
-    { nom: 'Eau',      icone: 'eau',      page: 'TopEau.html' },
-    { nom: 'Électrik', icone: 'electrik', page: 'TopElectrik.html' },
-    { nom: 'Fée',      icone: 'fee',      page: 'TopFee.html' },
-    { nom: 'Feu',      icone: 'feu',      page: 'TopFeu.html' },
-    { nom: 'Glace',    icone: 'glace',    page: 'TopGlace.html' },
-    { nom: 'Insecte',  icone: 'insecte',  page: 'TopInsecte.html' },
-    { nom: 'Plante',   icone: 'plante',   page: 'TopPlante.html' },
-    { nom: 'Poison',   icone: 'poison',   page: 'TopPoison.html' },
-    { nom: 'Psy',      icone: 'psy',      page: 'TopPsy.html' },
-    { nom: 'Roche',    icone: 'roche',    page: 'TopRoche.html' },
-    { nom: 'Sol',      icone: 'sol',      page: 'TopSol.html' },
-    { nom: 'Spectre',  icone: 'spectre',  page: null },
-    { nom: 'Ténèbres', icone: 'tenebres', page: null },
-    { nom: 'Vol',      icone: 'vol',      page: null }
+    { nom: 'Acier',    icone: 'Acier',    page: 'TopAcier.html' },
+    { nom: 'Combat',   icone: 'Combat',   page: 'TopCombat.html' },
+    { nom: 'Dragon',   icone: 'Dragon',   page: 'TopDragon.html' },
+    { nom: 'Eau',      icone: 'Eau',      page: 'TopEau.html' },
+    { nom: 'Électrik', icone: 'Electrik', page: 'TopElectrik.html' },
+    { nom: 'Fée',      icone: 'Fee',      page: 'TopFee.html' },
+    { nom: 'Feu',      icone: 'Feu',      page: 'TopFeu.html' },
+    { nom: 'Glace',    icone: 'Glace',    page: 'TopGlace.html' },
+    { nom: 'Insecte',  icone: 'Insecte',  page: 'TopInsecte.html' },
+    { nom: 'Plante',   icone: 'Plante',   page: 'TopPlante.html' },
+    { nom: 'Poison',   icone: 'Poison',   page: 'TopPoison.html' },
+    { nom: 'Psy',      icone: 'Psy',      page: 'TopPsy.html' },
+    { nom: 'Roche',    icone: 'Roche',    page: 'TopRoche.html' },
+    { nom: 'Sol',      icone: 'Sol',      page: 'TopSol.html' },
+    { nom: 'Spectre',  icone: 'Spectre',  page: 'TopSpectre.html' },
+    { nom: 'Ténèbres', icone: 'Tenebres', page: null },
+    { nom: 'Vol',      icone: 'Vol',      page: null }
   ];
 
   const pageActuelle = window.location.pathname.split('/').pop();
@@ -459,7 +459,7 @@ if ('serviceWorker' in navigator) {
       lien.classList.add('type-nav-disabled', 'lien-a-venir'); // tooltip "Disponible prochainement"
     }
     const img = document.createElement('img');
-    img.src = 'images/' + t.icone + '.webp';
+    img.src = 'Images/' + t.icone + '.webp';
     img.alt = t.nom;
     lien.appendChild(img);
     nav.appendChild(lien);
@@ -579,4 +579,28 @@ function updatePmTable() {
 if (document.getElementById('pm-passe')) {
   remplitPmSelect();
   updatePmTable();
+}
+
+
+// 17. SÉPARATEUR DE RANGÉE DANS LES GRILLES DE RÉCOMPENSES
+// Insère un <hr class="research-rangee-sep"> toutes les 6 récompenses pour
+// matérialiser les rangées sur mobile. Récupérée du script inline de
+// TachesEtude.html le 1er août 2026. Sans effet sous 7 items.
+// Ne s'exécute que si la page contient une grille.
+function insererSeparateurRangee() {
+  document.querySelectorAll('.research-rewards').forEach(grid => {
+    grid.querySelectorAll('.research-rangee-sep').forEach(s => s.remove());
+    const items = grid.querySelectorAll('.research-reward-item');
+    const total = items.length;
+    for (let i = 5; i < total - 1; i += 6) {
+      const hr = document.createElement('hr');
+      hr.className = 'research-rangee-sep';
+      items[i].insertAdjacentElement('afterend', hr);
+    }
+  });
+}
+
+if (document.querySelector('.research-rewards')) {
+  insererSeparateurRangee();
+  window.addEventListener('resize', insererSeparateurRangee);
 }

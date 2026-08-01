@@ -62,7 +62,7 @@
   color: var(--text-principal);
   margin: 0 0 10px 0;
   padding-bottom: 1px;
-  border-bottom: 2px solid #29b6f6;
+  border-bottom: 2px solid var(--accent-bleu);
   display: inline-flex;
   align-items: flex-end;
   gap: 6px;
@@ -90,7 +90,7 @@
   font-size: 9px;
   font-weight: 700;
   color: #fff;
-  background-color: #29b6f6;
+  background-color: var(--accent-bleu);
   padding: 2px 6px;
   border-radius: 10px;
 }
@@ -119,7 +119,7 @@
 
 .news-items li::before {
   content: '▸';
-  color: #29b6f6;
+  color: var(--accent-bleu);
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -132,7 +132,7 @@
 }
 
 .news-list a:hover {
-  color: #29b6f6;
+  color: var(--accent-bleu);
   text-decoration: underline;
 }
 
@@ -216,7 +216,7 @@
   position: absolute;
   top: 4px;
   right: 4px;
-  background-color: #16a34a;
+  background-color: var(--accent-vert-bon);
   color: #fff;
   font-size: 7px;
   font-weight: 700;
@@ -455,8 +455,8 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
 }
 
 .pwa-tab.active {
-  background: #29b6f6;
-  border-color: #29b6f6;
+  background: var(--accent-bleu);
+  border-color: var(--accent-bleu);
   color: #fff;
 }
 
@@ -476,7 +476,7 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
 
 .pwa-steps li::before {
   content: '▸ ';
-  color: #29b6f6;
+  color: var(--accent-bleu);
 }
 
 /* --- Spécifique Légende --- */
@@ -511,11 +511,11 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #16a34a;
+  background-color: var(--accent-vert-bon);
 }
 
 .legend-text-good {
-  color: #16a34a;
+  color: var(--accent-vert-bon);
 }
 
 .legend-swatch-shiny .emoji-shiny {

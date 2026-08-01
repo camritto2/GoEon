@@ -24,94 +24,94 @@
    ============================================================ */
 
 /* Absol — Bon / Shiny (couvre Méga-Absol) */
-.pk-absol .pokemon-name { color: #16a34a; }
-.pk-absol .research-reward-name { color: #16a34a; }
+.pk-absol .pokemon-name { color: var(--accent-vert-bon); }
+.pk-absol .research-reward-name { color: var(--accent-vert-bon); }
 .pk-absol .emoji-shiny  { display: inline; }
 
 /* Abra — Bon / Shiny */
-.pk-abra .pokemon-name { color: #16a34a; }
-.pk-abra .research-reward-name { color: #16a34a; }
+.pk-abra .pokemon-name { color: var(--accent-vert-bon); }
+.pk-abra .research-reward-name { color: var(--accent-vert-bon); }
 .pk-abra .emoji-shiny  { display: inline; }
 
 /* Alakazam — Bon / Shiny (couvre Méga-Alakazam) */
-.pk-alakazam .pokemon-name { color: #16a34a; }
-.pk-alakazam .research-reward-name { color: #16a34a; }
+.pk-alakazam .pokemon-name { color: var(--accent-vert-bon); }
+.pk-alakazam .research-reward-name { color: var(--accent-vert-bon); }
 .pk-alakazam .emoji-shiny  { display: inline; }
 
 /* Aéroptéryx — Bon / Shiny */
-.pk-aeropteryx .pokemon-name { color: #16a34a; }
-.pk-aeropteryx .research-reward-name { color: #16a34a; }
+.pk-aeropteryx .pokemon-name { color: var(--accent-vert-bon); }
+.pk-aeropteryx .research-reward-name { color: var(--accent-vert-bon); }
 .pk-aeropteryx .emoji-shiny  { display: inline; }
 
 /* Akwakwak — Normal / Shiny */
 .pk-akwakwak .emoji-shiny { display: inline; }
 
 /* Aligatueur — Bon / Shiny */
-.pk-aligatueur .pokemon-name { color: #16a34a; }
-.pk-aligatueur .research-reward-name { color: #16a34a; }
+.pk-aligatueur .pokemon-name { color: var(--accent-vert-bon); }
+.pk-aligatueur .research-reward-name { color: var(--accent-vert-bon); }
 .pk-aligatueur .emoji-shiny  { display: inline; }
 
 /* Amonita — Bon / Shiny */
-.pk-amonita .pokemon-name { color: #16a34a; }
-.pk-amonita .research-reward-name { color: #16a34a; }
+.pk-amonita .pokemon-name { color: var(--accent-vert-bon); }
+.pk-amonita .research-reward-name { color: var(--accent-vert-bon); }
 .pk-amonita .emoji-shiny  { display: inline; }
 
 /* Amonistar — Bon / Shiny */
-.pk-amonistar .pokemon-name { color: #16a34a; }
-.pk-amonistar .research-reward-name { color: #16a34a; }
+.pk-amonistar .pokemon-name { color: var(--accent-vert-bon); }
+.pk-amonistar .research-reward-name { color: var(--accent-vert-bon); }
 .pk-amonistar .emoji-shiny  { display: inline; }
 
 /* Amagara — Bon / Shiny */
-.pk-amagara .pokemon-name { color: #16a34a; }
-.pk-amagara .research-reward-name { color: #16a34a; }
+.pk-amagara .pokemon-name { color: var(--accent-vert-bon); }
+.pk-amagara .research-reward-name { color: var(--accent-vert-bon); }
 .pk-amagara .emoji-shiny  { display: inline; }
 
 /* Ampibidou — Normal / Shiny */
 .pk-ampibidou .emoji-shiny { display: inline; }
 
 /* Amovénus — Bon / Shiny */
-.pk-amovenus .pokemon-name { color: #16a34a; }
-.pk-amovenus .research-reward-name { color: #16a34a; }
+.pk-amovenus .pokemon-name { color: var(--accent-vert-bon); }
+.pk-amovenus .research-reward-name { color: var(--accent-vert-bon); }
 .pk-amovenus .emoji-shiny  { display: inline; }
 
 /* Amphinobi — Bon / Shiny */
-.pk-amphinobi .pokemon-name { color: #16a34a; }
-.pk-amphinobi .research-reward-name { color: #16a34a; }
+.pk-amphinobi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-amphinobi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-amphinobi .emoji-shiny  { display: inline; }
 
 /* Archéduc — Bon / Shiny */
-.pk-archeduc .pokemon-name { color: #16a34a; }
-.pk-archeduc .research-reward-name { color: #16a34a; }
+.pk-archeduc .pokemon-name { color: var(--accent-vert-bon); }
+.pk-archeduc .research-reward-name { color: var(--accent-vert-bon); }
 .pk-archeduc .emoji-shiny  { display: inline; }
 
 /* Archéduc de Hisui — Bon / Shiny */
-.pk-archeduc-h .pokemon-name { color: #16a34a; }
-.pk-archeduc-h .research-reward-name { color: #16a34a; }
+.pk-archeduc-h .pokemon-name { color: var(--accent-vert-bon); }
+.pk-archeduc-h .research-reward-name { color: var(--accent-vert-bon); }
 .pk-archeduc-h .emoji-shiny  { display: inline; }
 
 /* Artikodin — Bon / Shiny */
-.pk-artikodin .pokemon-name { color: #16a34a; }
-.pk-artikodin .research-reward-name { color: #16a34a; }
+.pk-artikodin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-artikodin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-artikodin .emoji-shiny  { display: inline; }
 
 /* Arrozard — Bon / Shiny */
-.pk-arrozard .pokemon-name { color: #16a34a; }
-.pk-arrozard .research-reward-name { color: #16a34a; }
+.pk-arrozard .pokemon-name { color: var(--accent-vert-bon); }
+.pk-arrozard .research-reward-name { color: var(--accent-vert-bon); }
 .pk-arrozard .emoji-shiny  { display: inline; }
 
 /* Altaria — Bon / Shiny (couvre Méga-Altaria) */
-.pk-altaria .pokemon-name  { color: #16a34a; }
-.pk-altaria .research-reward-name { color: #16a34a; }
+.pk-altaria .pokemon-name  { color: var(--accent-vert-bon); }
+.pk-altaria .research-reward-name { color: var(--accent-vert-bon); }
 .pk-altaria .emoji-shiny   { display: inline; }
 
 /* Anchwatt — Bon / Shiny */
-.pk-anchwatt .pokemon-name { color: #16a34a; }
-.pk-anchwatt .research-reward-name { color: #16a34a; }
+.pk-anchwatt .pokemon-name { color: var(--accent-vert-bon); }
+.pk-anchwatt .research-reward-name { color: var(--accent-vert-bon); }
 .pk-anchwatt .emoji-shiny  { display: inline; }
 
 /* Angoliath — Bon / Shiny */
-.pk-angoliath .pokemon-name { color: #16a34a; }
-.pk-angoliath .research-reward-name { color: #16a34a; }
+.pk-angoliath .pokemon-name { color: var(--accent-vert-bon); }
+.pk-angoliath .research-reward-name { color: var(--accent-vert-bon); }
 .pk-angoliath .emoji-shiny  { display: inline; }
 
 /* Anorith — Normal / Shiny */
@@ -130,31 +130,31 @@
 .pk-arcanin .emoji-shiny  { display: inline; }
 
 /* Arcanin de Hisui — Bon / Shiny */
-.pk-arcanin-h .pokemon-name { color: #16a34a; }
-.pk-arcanin-h .research-reward-name { color: #16a34a; }
+.pk-arcanin-h .pokemon-name { color: var(--accent-vert-bon); }
+.pk-arcanin-h .research-reward-name { color: var(--accent-vert-bon); }
 .pk-arcanin-h .emoji-shiny  { display: inline; }
 
 /* Aquali — Bon / Shiny */
-.pk-aquali .pokemon-name { color: #16a34a; }
-.pk-aquali .research-reward-name { color: #16a34a; }
+.pk-aquali .pokemon-name { color: var(--accent-vert-bon); }
+.pk-aquali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-aquali .emoji-shiny  { display: inline; }
 
 /* Arboliva — Bon / Shiny */
-.pk-arboliva .pokemon-name { color: #16a34a; }
-.pk-arboliva .research-reward-name { color: #16a34a; }
+.pk-arboliva .pokemon-name { color: var(--accent-vert-bon); }
+.pk-arboliva .research-reward-name { color: var(--accent-vert-bon); }
 .pk-arboliva .emoji-shiny  { display: inline; }
 
 /* Arkéapti — Bon / Shiny */
-.pk-arkeapti .pokemon-name { color: #16a34a; }
-.pk-arkeapti .research-reward-name { color: #16a34a; }
+.pk-arkeapti .pokemon-name { color: var(--accent-vert-bon); }
+.pk-arkeapti .research-reward-name { color: var(--accent-vert-bon); }
 .pk-arkeapti .emoji-shiny  { display: inline; }
 
 /* Araqua — Normal / Shiny */
 .pk-araqua .emoji-shiny { display: inline; }
 
 /* Arcko — Bon / Shiny */
-.pk-arcko .pokemon-name { color: #16a34a; }
-.pk-arcko .research-reward-name { color: #16a34a; }
+.pk-arcko .pokemon-name { color: var(--accent-vert-bon); }
+.pk-arcko .research-reward-name { color: var(--accent-vert-bon); }
 .pk-arcko .emoji-shiny  { display: inline; }
 
 
@@ -162,13 +162,13 @@
 .pk-azumarill .emoji-shiny { display: inline; }
 
 /* Aspicot — Bon / Shiny */
-.pk-aspicot .pokemon-name { color: #16a34a; }
-.pk-aspicot .research-reward-name { color: #16a34a; }
+.pk-aspicot .pokemon-name { color: var(--accent-vert-bon); }
+.pk-aspicot .research-reward-name { color: var(--accent-vert-bon); }
 .pk-aspicot .emoji-shiny  { display: inline; }
 
 /* Aéromite — Bon / Shiny */
-.pk-aeromite .pokemon-name { color: #16a34a; }
-.pk-aeromite .research-reward-name { color: #16a34a; }
+.pk-aeromite .pokemon-name { color: var(--accent-vert-bon); }
+.pk-aeromite .research-reward-name { color: var(--accent-vert-bon); }
 .pk-aeromite .emoji-shiny  { display: inline; }
 
 /* ============================================================
@@ -180,39 +180,39 @@
 .pk-balbuto .emoji-shiny { display: inline; }
 
 /* Balbalèze — Bon / Shiny */
-.pk-balbaleze .pokemon-name { color: #16a34a; }
-.pk-balbaleze .research-reward-name { color: #16a34a; }
+.pk-balbaleze .pokemon-name { color: var(--accent-vert-bon); }
+.pk-balbaleze .research-reward-name { color: var(--accent-vert-bon); }
 .pk-balbaleze .emoji-shiny  { display: inline; }
 
 /* Balignon — Bon / Shiny */
-.pk-balignon .pokemon-name { color: #16a34a; }
-.pk-balignon .research-reward-name { color: #16a34a; }
+.pk-balignon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-balignon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-balignon .emoji-shiny  { display: inline; }
 
 /* Bamboiselle — Bon / Shiny */
-.pk-bamboiselle .pokemon-name { color: #16a34a; }
-.pk-bamboiselle .research-reward-name { color: #16a34a; }
+.pk-bamboiselle .pokemon-name { color: var(--accent-vert-bon); }
+.pk-bamboiselle .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bamboiselle .emoji-shiny  { display: inline; }
 
 /* Babimanta — Normal / Shiny */
 .pk-babimanta .emoji-shiny { display: inline; }
 
 /* Badabouin — Bon / Shiny */
-.pk-badabouin .pokemon-name { color: #16a34a; }
-.pk-badabouin .research-reward-name { color: #16a34a; }
+.pk-badabouin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-badabouin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-badabouin .emoji-shiny  { display: inline; }
 
 /* Bargantua — Normal / Shiny (toutes couleurs) */
 .pk-bargantua .emoji-shiny { display: inline; }
 
 /* Bazoucan — Bon / Shiny */
-.pk-bazoucan .pokemon-name { color: #16a34a; }
-.pk-bazoucan .research-reward-name { color: #16a34a; }
+.pk-bazoucan .pokemon-name { color: var(--accent-vert-bon); }
+.pk-bazoucan .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bazoucan .emoji-shiny  { display: inline; }
 
 /* Barpau — Bon / Shiny */
-.pk-barpau .pokemon-name { color: #16a34a; }
-.pk-barpau .research-reward-name { color: #16a34a; }
+.pk-barpau .pokemon-name { color: var(--accent-vert-bon); }
+.pk-barpau .research-reward-name { color: var(--accent-vert-bon); }
 .pk-barpau .emoji-shiny  { display: inline; }
 
 /* Bastiodon — Normal / Shiny */
@@ -225,83 +225,83 @@
 .pk-bekipan .emoji-shiny { display: inline; }
 
 /* Beldeneige — Bon */
-.pk-beldeneige .pokemon-name { color: #16a34a; }
-.pk-beldeneige .research-reward-name { color: #16a34a; }
+.pk-beldeneige .pokemon-name { color: var(--accent-vert-bon); }
+.pk-beldeneige .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Berserkatt — Bon / Shiny */
-.pk-berserkatt .pokemon-name { color: #16a34a; }
-.pk-berserkatt .research-reward-name { color: #16a34a; }
+.pk-berserkatt .pokemon-name { color: var(--accent-vert-bon); }
+.pk-berserkatt .research-reward-name { color: var(--accent-vert-bon); }
 .pk-berserkatt .emoji-shiny  { display: inline; }
 
 /* Bétochef — Bon / Shiny */
-.pk-betochef .pokemon-name { color: #16a34a; }
-.pk-betochef .research-reward-name { color: #16a34a; }
+.pk-betochef .pokemon-name { color: var(--accent-vert-bon); }
+.pk-betochef .research-reward-name { color: var(--accent-vert-bon); }
 .pk-betochef .emoji-shiny  { display: inline; }
 
 /* Bleuseille — Normal / Shiny */
 .pk-bleuseille .emoji-shiny { display: inline; }
 
 /* Bibichut — Bon / Shiny */
-.pk-bibichut .pokemon-name { color: #16a34a; }
-.pk-bibichut .research-reward-name { color: #16a34a; }
+.pk-bibichut .pokemon-name { color: var(--accent-vert-bon); }
+.pk-bibichut .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bibichut .emoji-shiny  { display: inline; }
 
 /* Blizzi — Bon / Shiny */
-.pk-blizzi .pokemon-name { color: #16a34a; }
-.pk-blizzi .research-reward-name { color: #16a34a; }
+.pk-blizzi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-blizzi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-blizzi .emoji-shiny  { display: inline; }
 
 /* Blizzaroi — Bon / Shiny (couvre Méga-Blizzaroi) */
-.pk-blizzaroi .pokemon-name { color: #16a34a; }
-.pk-blizzaroi .research-reward-name { color: #16a34a; }
+.pk-blizzaroi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-blizzaroi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-blizzaroi .emoji-shiny  { display: inline; }
 
 /* Blindépique — Bon / Shiny */
-.pk-blindepique .pokemon-name { color: #16a34a; }
-.pk-blindepique .research-reward-name { color: #16a34a; }
+.pk-blindepique .pokemon-name { color: var(--accent-vert-bon); }
+.pk-blindepique .research-reward-name { color: var(--accent-vert-bon); }
 .pk-blindepique .emoji-shiny  { display: inline; }
 
 /* Boguérisse — Bon / Shiny */
-.pk-boguerisse .pokemon-name { color: #16a34a; }
-.pk-boguerisse .research-reward-name { color: #16a34a; }
+.pk-boguerisse .pokemon-name { color: var(--accent-vert-bon); }
+.pk-boguerisse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-boguerisse .emoji-shiny  { display: inline; }
 
 /* Bombydou — Bon / Shiny */
-.pk-bombydou .pokemon-name { color: #16a34a; }
-.pk-bombydou .research-reward-name { color: #16a34a; }
+.pk-bombydou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-bombydou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bombydou .emoji-shiny  { display: inline; }
 
 /* Boskara — Bon / Shiny */
-.pk-boskara .pokemon-name { color: #16a34a; }
-.pk-boskara .research-reward-name { color: #16a34a; }
+.pk-boskara .pokemon-name { color: var(--accent-vert-bon); }
+.pk-boskara .research-reward-name { color: var(--accent-vert-bon); }
 .pk-boskara .emoji-shiny  { display: inline; }
 
 /* Braisillon — Normal / Shiny */
 .pk-braisillon .emoji-shiny { display: inline; }
 
 /* Braségali — Bon / Shiny (couvre Méga-Braségali) */
-.pk-brasegali .pokemon-name { color: #16a34a; }
-.pk-brasegali .research-reward-name { color: #16a34a; }
+.pk-brasegali .pokemon-name { color: var(--accent-vert-bon); }
+.pk-brasegali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-brasegali .emoji-shiny  { display: inline; }
 
 /* Brindibou — Bon / Shiny */
-.pk-brindibou .pokemon-name { color: #16a34a; }
-.pk-brindibou .research-reward-name { color: #16a34a; }
+.pk-brindibou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-brindibou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-brindibou .emoji-shiny  { display: inline; }
 
 /* Brutapode — Bon / Shiny */
-.pk-brutapode .pokemon-name { color: #16a34a; }
-.pk-brutapode .research-reward-name { color: #16a34a; }
+.pk-brutapode .pokemon-name { color: var(--accent-vert-bon); }
+.pk-brutapode .research-reward-name { color: var(--accent-vert-bon); }
 .pk-brutapode .emoji-shiny  { display: inline; }
 
 /* Brutalibré — Bon / Shiny */
-.pk-brutalibre .pokemon-name { color: #16a34a; }
-.pk-brutalibre .research-reward-name { color: #16a34a; }
+.pk-brutalibre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-brutalibre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-brutalibre .emoji-shiny  { display: inline; }
 
 /* Bulbizarre — Bon / Shiny */
-.pk-bulbizarre .pokemon-name { color: #16a34a; }
-.pk-bulbizarre .research-reward-name { color: #16a34a; }
+.pk-bulbizarre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-bulbizarre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bulbizarre .emoji-shiny  { display: inline; }
 
 
@@ -310,90 +310,90 @@
    ============================================================ */
 
 /* Câblifère — Bon / Shiny */
-.pk-cablifere .pokemon-name { color: #16a34a; }
-.pk-cablifere .research-reward-name { color: #16a34a; }
+.pk-cablifere .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cablifere .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cablifere .emoji-shiny  { display: inline; }
 
 /* Canarbello — Bon / Shiny */
-.pk-canarbello .pokemon-name { color: #16a34a; }
-.pk-canarbello .research-reward-name { color: #16a34a; }
+.pk-canarbello .pokemon-name { color: var(--accent-vert-bon); }
+.pk-canarbello .research-reward-name { color: var(--accent-vert-bon); }
 .pk-canarbello .emoji-shiny  { display: inline; }
 
 /* Canarticho de Galar — Bon / Shiny */
-.pk-canarticho-g .pokemon-name { color: #16a34a; }
-.pk-canarticho-g .research-reward-name { color: #16a34a; }
+.pk-canarticho-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-canarticho-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-canarticho-g .emoji-shiny  { display: inline; }
 
 /* Caninos — Shiny */
 .pk-caninos .emoji-shiny  { display: inline; }
 
 /* Caninos de Hisui — Bon / Shiny */
-.pk-caninos-h .pokemon-name { color: #16a34a; }
-.pk-caninos-h .research-reward-name { color: #16a34a; }
+.pk-caninos-h .pokemon-name { color: var(--accent-vert-bon); }
+.pk-caninos-h .research-reward-name { color: var(--accent-vert-bon); }
 .pk-caninos-h .emoji-shiny  { display: inline; }
 
 /* Cancrelove — Bon / Shiny */
-.pk-cancrelove .pokemon-name { color: #16a34a; }
-.pk-cancrelove .research-reward-name { color: #16a34a; }
+.pk-cancrelove .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cancrelove .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cancrelove .emoji-shiny  { display: inline; }
 
 /* Candine — Bon / Shiny */
-.pk-candine .pokemon-name { color: #16a34a; }
-.pk-candine .research-reward-name { color: #16a34a; }
+.pk-candine .pokemon-name { color: var(--accent-vert-bon); }
+.pk-candine .research-reward-name { color: var(--accent-vert-bon); }
 .pk-candine .emoji-shiny  { display: inline; }
 
 /* Camerupt — Bon / Shiny */
-.pk-camerupt .pokemon-name { color: #16a34a; }
-.pk-camerupt .research-reward-name { color: #16a34a; }
+.pk-camerupt .pokemon-name { color: var(--accent-vert-bon); }
+.pk-camerupt .research-reward-name { color: var(--accent-vert-bon); }
 .pk-camerupt .emoji-shiny  { display: inline; }
 
 /* Carabing — Bon / Shiny */
-.pk-carabing .pokemon-name { color: #16a34a; }
-.pk-carabing .research-reward-name { color: #16a34a; }
+.pk-carabing .pokemon-name { color: var(--accent-vert-bon); }
+.pk-carabing .research-reward-name { color: var(--accent-vert-bon); }
 .pk-carabing .emoji-shiny  { display: inline; }
 
 /* Carapagos — Normal / Shiny */
 .pk-carapagos .emoji-shiny { display: inline; }
 
 /* Carapuce — Bon / Shiny */
-.pk-carapuce .pokemon-name { color: #16a34a; }
-.pk-carapuce .research-reward-name { color: #16a34a; }
+.pk-carapuce .pokemon-name { color: var(--accent-vert-bon); }
+.pk-carapuce .research-reward-name { color: var(--accent-vert-bon); }
 .pk-carapuce .emoji-shiny  { display: inline; }
 
 /* Carabaffe — Bon / Shiny */
-.pk-carabaffe .pokemon-name { color: #16a34a; }
-.pk-carabaffe .research-reward-name { color: #16a34a; }
+.pk-carabaffe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-carabaffe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-carabaffe .emoji-shiny  { display: inline; }
 
 /* Caratroc — Normal / Shiny */
 .pk-caratroc .emoji-shiny { display: inline; }
 
 /* Carchacrok — Bon / Shiny (couvre Méga-Carchacrok) */
-.pk-carchacrok .pokemon-name { color: #16a34a; }
-.pk-carchacrok .research-reward-name { color: #16a34a; }
+.pk-carchacrok .pokemon-name { color: var(--accent-vert-bon); }
+.pk-carchacrok .research-reward-name { color: var(--accent-vert-bon); }
 .pk-carchacrok .emoji-shiny  { display: inline; }
 
 /* Carmache — Bon / Shiny */
-.pk-carmache .pokemon-name { color: #16a34a; }
-.pk-carmache .research-reward-name { color: #16a34a; }
+.pk-carmache .pokemon-name { color: var(--accent-vert-bon); }
+.pk-carmache .research-reward-name { color: var(--accent-vert-bon); }
 .pk-carmache .emoji-shiny  { display: inline; }
 
 /* Carvanha — Bon / Shiny */
-.pk-carvanha .pokemon-name { color: #16a34a; }
-.pk-carvanha .research-reward-name { color: #16a34a; }
+.pk-carvanha .pokemon-name { color: var(--accent-vert-bon); }
+.pk-carvanha .research-reward-name { color: var(--accent-vert-bon); }
 .pk-carvanha .emoji-shiny  { display: inline; }
 
 /* Carmadura — Shiny */
 .pk-carmadura .emoji-shiny  { display: inline; }
 
 /* Charbambin — Bon / Shiny */
-.pk-charbambin .pokemon-name { color: #16a34a; }
-.pk-charbambin .research-reward-name { color: #16a34a; }
+.pk-charbambin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-charbambin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-charbambin .emoji-shiny  { display: inline; }
 
 /* Cizayox — Bon / Shiny */
-.pk-cizayox .pokemon-name { color: #16a34a; }
-.pk-cizayox .research-reward-name { color: #16a34a; }
+.pk-cizayox .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cizayox .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cizayox .emoji-shiny  { display: inline; }
 
 /* Castorno — Normal / Shiny */
@@ -403,8 +403,8 @@
 .pk-chacripan .emoji-shiny { display: inline; }
 
 /* Chamallot — Bon / Shiny */
-.pk-chamallot .pokemon-name { color: #16a34a; }
-.pk-chamallot .research-reward-name { color: #16a34a; }
+.pk-chamallot .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chamallot .research-reward-name { color: var(--accent-vert-bon); }
 .pk-chamallot .emoji-shiny  { display: inline; }
 
 /* Chaglam — Normal / Shiny */
@@ -414,41 +414,41 @@
 .pk-chaffreux .emoji-shiny { display: inline; }
 
 /* Chapignon — Bon / Shiny */
-.pk-chapignon .pokemon-name { color: #16a34a; }
-.pk-chapignon .research-reward-name { color: #16a34a; }
+.pk-chapignon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chapignon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-chapignon .emoji-shiny  { display: inline; }
 
 /* Chapotus — Bon / Shiny */
-.pk-chapotus .pokemon-name { color: #16a34a; }
-.pk-chapotus .research-reward-name { color: #16a34a; }
+.pk-chapotus .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chapotus .research-reward-name { color: var(--accent-vert-bon); }
 .pk-chapotus .emoji-shiny  { display: inline; }
 
 /* Charkos — Bon / Shiny */
-.pk-charkos .pokemon-name { color: #16a34a; }
-.pk-charkos .research-reward-name { color: #16a34a; }
+.pk-charkos .pokemon-name { color: var(--accent-vert-bon); }
+.pk-charkos .research-reward-name { color: var(--accent-vert-bon); }
 .pk-charkos .emoji-shiny  { display: inline; }
 
 /* Charpenti — Bon / Shiny */
-.pk-charpenti .pokemon-name { color: #16a34a; }
-.pk-charpenti .research-reward-name { color: #16a34a; }
+.pk-charpenti .pokemon-name { color: var(--accent-vert-bon); }
+.pk-charpenti .research-reward-name { color: var(--accent-vert-bon); }
 .pk-charpenti .emoji-shiny  { display: inline; }
 
 /* Chenipan — Normal / Shiny */
 .pk-chenipan .emoji-shiny { display: inline; }
 
 /* Chelours — Bon / Shiny */
-.pk-chelours .pokemon-name { color: #16a34a; }
-.pk-chelours .research-reward-name { color: #16a34a; }
+.pk-chelours .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chelours .research-reward-name { color: var(--accent-vert-bon); }
 .pk-chelours .emoji-shiny  { display: inline; }
 
 /* Chimpenfeu — Bon / Shiny */
-.pk-chimpenfeu .pokemon-name { color: #16a34a; }
-.pk-chimpenfeu .research-reward-name { color: #16a34a; }
+.pk-chimpenfeu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chimpenfeu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-chimpenfeu .emoji-shiny  { display: inline; }
 
 /* Chochodile — Bon / Shiny */
-.pk-chochodile .pokemon-name { color: #16a34a; }
-.pk-chochodile .research-reward-name { color: #16a34a; }
+.pk-chochodile .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chochodile .research-reward-name { color: var(--accent-vert-bon); }
 .pk-chochodile .emoji-shiny  { display: inline; }
 
 /* Chovsourir — Normal / Shiny */
@@ -458,61 +458,61 @@
 .pk-chrysacier .emoji-shiny { display: inline; }
 
 /* Chrysapile — Bon / Shiny */
-.pk-chrysapile .pokemon-name { color: #16a34a; }
-.pk-chrysapile .research-reward-name { color: #16a34a; }
+.pk-chrysapile .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chrysapile .research-reward-name { color: var(--accent-vert-bon); }
 .pk-chrysapile .emoji-shiny  { display: inline; }
 
 /* Clamiral — Bon / Shiny */
-.pk-clamiral .pokemon-name { color: #16a34a; }
-.pk-clamiral .research-reward-name { color: #16a34a; }
+.pk-clamiral .pokemon-name { color: var(--accent-vert-bon); }
+.pk-clamiral .research-reward-name { color: var(--accent-vert-bon); }
 .pk-clamiral .emoji-shiny  { display: inline; }
 
 /* Clamiral de Hisui — Bon / Shiny */
-.pk-clamiral-h .pokemon-name { color: #16a34a; }
-.pk-clamiral-h .research-reward-name { color: #16a34a; }
+.pk-clamiral-h .pokemon-name { color: var(--accent-vert-bon); }
+.pk-clamiral-h .research-reward-name { color: var(--accent-vert-bon); }
 .pk-clamiral-h .emoji-shiny  { display: inline; }
 
 /* Cochignon — Bon / Shiny */
-.pk-cochignon .pokemon-name { color: #16a34a; }
-.pk-cochignon .research-reward-name { color: #16a34a; }
+.pk-cochignon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cochignon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cochignon .emoji-shiny  { display: inline; }
 
 /* Coconfort — Bon / Shiny */
-.pk-coconfort .pokemon-name { color: #16a34a; }
-.pk-coconfort .research-reward-name { color: #16a34a; }
+.pk-coconfort .pokemon-name { color: var(--accent-vert-bon); }
+.pk-coconfort .research-reward-name { color: var(--accent-vert-bon); }
 .pk-coconfort .emoji-shiny  { display: inline; }
 
 /* Cobaltium — Bon / Shiny */
-.pk-cobaltium .pokemon-name { color: #16a34a; }
-.pk-cobaltium .research-reward-name { color: #16a34a; }
+.pk-cobaltium .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cobaltium .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cobaltium .emoji-shiny  { display: inline; }
 
 /* Coiffeton — Bon / Shiny */
-.pk-coiffeton .pokemon-name { color: #16a34a; }
-.pk-coiffeton .research-reward-name { color: #16a34a; }
+.pk-coiffeton .pokemon-name { color: var(--accent-vert-bon); }
+.pk-coiffeton .research-reward-name { color: var(--accent-vert-bon); }
 .pk-coiffeton .emoji-shiny  { display: inline; }
 
 /* Cléopsytra — Normal / Shiny */
 .pk-cleopsytra .emoji-shiny { display: inline; }
 
 /* Colhomard — Bon / Shiny */
-.pk-colhomard .pokemon-name { color: #16a34a; }
-.pk-colhomard .research-reward-name { color: #16a34a; }
+.pk-colhomard .pokemon-name { color: var(--accent-vert-bon); }
+.pk-colhomard .research-reward-name { color: var(--accent-vert-bon); }
 .pk-colhomard .emoji-shiny  { display: inline; }
 
 /* Colombeau — Bon / Shiny */
-.pk-colombeau .pokemon-name { color: #16a34a; }
-.pk-colombeau .research-reward-name { color: #16a34a; }
+.pk-colombeau .pokemon-name { color: var(--accent-vert-bon); }
+.pk-colombeau .research-reward-name { color: var(--accent-vert-bon); }
 .pk-colombeau .emoji-shiny  { display: inline; }
 
 /* Colossinge — Bon / Shiny */
-.pk-colossinge .pokemon-name { color: #16a34a; }
-.pk-colossinge .research-reward-name { color: #16a34a; }
+.pk-colossinge .pokemon-name { color: var(--accent-vert-bon); }
+.pk-colossinge .research-reward-name { color: var(--accent-vert-bon); }
 .pk-colossinge .emoji-shiny  { display: inline; }
 
 /* Courrousinge — Bon / Shiny */
-.pk-courrousinge .pokemon-name { color: #16a34a; }
-.pk-courrousinge .research-reward-name { color: #16a34a; }
+.pk-courrousinge .pokemon-name { color: var(--accent-vert-bon); }
+.pk-courrousinge .research-reward-name { color: var(--accent-vert-bon); }
 .pk-courrousinge .emoji-shiny  { display: inline; }
 
 /* Corayon de Galar — Normal / Shiny */
@@ -522,8 +522,8 @@
 .pk-corayome .emoji-shiny { display: inline; }
 
 /* Coatox — Bon / Shiny */
-.pk-coatox .pokemon-name { color: #16a34a; }
-.pk-coatox .research-reward-name { color: #16a34a; }
+.pk-coatox .pokemon-name { color: var(--accent-vert-bon); }
+.pk-coatox .research-reward-name { color: var(--accent-vert-bon); }
 .pk-coatox .emoji-shiny  { display: inline; }
 
 /* Colimucus — Normal / Shiny */
@@ -539,75 +539,75 @@
 .pk-corvaillus .emoji-shiny { display: inline; }
 
 /* Crocrodil — Bon / Shiny */
-.pk-crocrodil .pokemon-name { color: #16a34a; }
-.pk-crocrodil .research-reward-name { color: #16a34a; }
+.pk-crocrodil .pokemon-name { color: var(--accent-vert-bon); }
+.pk-crocrodil .research-reward-name { color: var(--accent-vert-bon); }
 .pk-crocrodil .emoji-shiny  { display: inline; }
 
 /* Cradopaud — Bon / Shiny */
-.pk-cradopaud .pokemon-name { color: #16a34a; }
-.pk-cradopaud .research-reward-name { color: #16a34a; }
+.pk-cradopaud .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cradopaud .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cradopaud .emoji-shiny  { display: inline; }
 
 /* Croâporal — Bon / Shiny */
-.pk-croaporal .pokemon-name { color: #16a34a; }
-.pk-croaporal .research-reward-name { color: #16a34a; }
+.pk-croaporal .pokemon-name { color: var(--accent-vert-bon); }
+.pk-croaporal .research-reward-name { color: var(--accent-vert-bon); }
 .pk-croaporal .emoji-shiny  { display: inline; }
 
 /* Couaneton — Bon / Shiny */
-.pk-couaneton .pokemon-name { color: #16a34a; }
-.pk-couaneton .research-reward-name { color: #16a34a; }
+.pk-couaneton .pokemon-name { color: var(--accent-vert-bon); }
+.pk-couaneton .research-reward-name { color: var(--accent-vert-bon); }
 .pk-couaneton .emoji-shiny  { display: inline; }
 
 /* Couverdure — Bon / Shiny */
-.pk-couverdure .pokemon-name { color: #16a34a; }
-.pk-couverdure .research-reward-name { color: #16a34a; }
+.pk-couverdure .pokemon-name { color: var(--accent-vert-bon); }
+.pk-couverdure .research-reward-name { color: var(--accent-vert-bon); }
 .pk-couverdure .emoji-shiny  { display: inline; }
 
 /* Coupenotte — Bon / Shiny */
-.pk-coupenotte .pokemon-name { color: #16a34a; }
-.pk-coupenotte .research-reward-name { color: #16a34a; }
+.pk-coupenotte .pokemon-name { color: var(--accent-vert-bon); }
+.pk-coupenotte .research-reward-name { color: var(--accent-vert-bon); }
 .pk-coupenotte .emoji-shiny  { display: inline; }
 
 /* Cupcanaille — Bon / Shiny */
-.pk-cupcanaille .pokemon-name { color: #16a34a; }
-.pk-cupcanaille .research-reward-name { color: #16a34a; }
+.pk-cupcanaille .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cupcanaille .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cupcanaille .emoji-shiny  { display: inline; }
 
 /* Crabicoque — Bon / Shiny */
-.pk-crabicoque .pokemon-name { color: #16a34a; }
-.pk-crabicoque .research-reward-name { color: #16a34a; }
+.pk-crabicoque .pokemon-name { color: var(--accent-vert-bon); }
+.pk-crabicoque .research-reward-name { color: var(--accent-vert-bon); }
 .pk-crabicoque .emoji-shiny  { display: inline; }
 
 /* Crabaraque — Bon / Shiny */
-.pk-crabaraque .pokemon-name { color: #16a34a; }
-.pk-crabaraque .research-reward-name { color: #16a34a; }
+.pk-crabaraque .pokemon-name { color: var(--accent-vert-bon); }
+.pk-crabaraque .research-reward-name { color: var(--accent-vert-bon); }
 .pk-crabaraque .emoji-shiny  { display: inline; }
 
 /* Craparoi — Normal */
 
 /* Crocogril — Bon / Shiny */
-.pk-crocogril .pokemon-name { color: #16a34a; }
-.pk-crocogril .research-reward-name { color: #16a34a; }
+.pk-crocogril .pokemon-name { color: var(--accent-vert-bon); }
+.pk-crocogril .research-reward-name { color: var(--accent-vert-bon); }
 .pk-crocogril .emoji-shiny  { display: inline; }
 
 /* Crocorible — Bon / Shiny */
-.pk-crocorible .pokemon-name { color: #16a34a; }
-.pk-crocorible .research-reward-name { color: #16a34a; }
+.pk-crocorible .pokemon-name { color: var(--accent-vert-bon); }
+.pk-crocorible .research-reward-name { color: var(--accent-vert-bon); }
 .pk-crocorible .emoji-shiny  { display: inline; }
 
 /* Croquine — Bon / Shiny */
-.pk-croquine .pokemon-name { color: #16a34a; }
-.pk-croquine .research-reward-name { color: #16a34a; }
+.pk-croquine .pokemon-name { color: var(--accent-vert-bon); }
+.pk-croquine .research-reward-name { color: var(--accent-vert-bon); }
 .pk-croquine .emoji-shiny  { display: inline; }
 
 /* Crustabri — Bon / Shiny */
-.pk-crustabri .pokemon-name { color: #16a34a; }
-.pk-crustabri .research-reward-name { color: #16a34a; }
+.pk-crustabri .pokemon-name { color: var(--accent-vert-bon); }
+.pk-crustabri .research-reward-name { color: var(--accent-vert-bon); }
 .pk-crustabri .emoji-shiny  { display: inline; }
 
 /* Cryodo — Bon / Shiny */
-.pk-cryodo .pokemon-name { color: #16a34a; }
-.pk-cryodo .research-reward-name { color: #16a34a; }
+.pk-cryodo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cryodo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cryodo .emoji-shiny  { display: inline; }
 
 /* Cerfrousse — Normal / Shiny */
@@ -622,38 +622,38 @@
    ============================================================ */
 
 /* Diancie — Bon / Shiny */
-.pk-diancie .pokemon-name { color: #16a34a; }
-.pk-diancie .research-reward-name { color: #16a34a; }
+.pk-diancie .pokemon-name { color: var(--accent-vert-bon); }
+.pk-diancie .research-reward-name { color: var(--accent-vert-bon); }
 .pk-diancie .emoji-shiny  { display: inline; }
 
 /* Dynavolt — Bon / Shiny */
-.pk-dynavolt .pokemon-name { color: #16a34a; }
-.pk-dynavolt .research-reward-name { color: #16a34a; }
+.pk-dynavolt .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dynavolt .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dynavolt .emoji-shiny  { display: inline; }
 
 /* Dardargnan — Bon / Shiny */
-.pk-dardargnan .pokemon-name { color: #16a34a; }
-.pk-dardargnan .research-reward-name { color: #16a34a; }
+.pk-dardargnan .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dardargnan .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dardargnan .emoji-shiny  { display: inline; }
 
 /* Darumacho — Bon / Shiny */
-.pk-darumacho .pokemon-name { color: #16a34a; }
-.pk-darumacho .research-reward-name { color: #16a34a; }
+.pk-darumacho .pokemon-name { color: var(--accent-vert-bon); }
+.pk-darumacho .research-reward-name { color: var(--accent-vert-bon); }
 .pk-darumacho .emoji-shiny  { display: inline; }
 
 /* Darumacho de Galar — Bon / Shiny */
-.pk-darumacho-g .pokemon-name { color: #16a34a; }
-.pk-darumacho-g .research-reward-name { color: #16a34a; }
+.pk-darumacho-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-darumacho-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-darumacho-g .emoji-shiny  { display: inline; }
 
 /* Darumarond — Bon / Shiny */
-.pk-darumarond .pokemon-name { color: #16a34a; }
-.pk-darumarond .research-reward-name { color: #16a34a; }
+.pk-darumarond .pokemon-name { color: var(--accent-vert-bon); }
+.pk-darumarond .research-reward-name { color: var(--accent-vert-bon); }
 .pk-darumarond .emoji-shiny  { display: inline; }
 
 /* Darumarond de Galar — Bon / Shiny */
-.pk-darumarond-g .pokemon-name { color: #16a34a; }
-.pk-darumarond-g .research-reward-name { color: #16a34a; }
+.pk-darumarond-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-darumarond-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-darumarond-g .emoji-shiny  { display: inline; }
 
 /* Debugant — Normal / Shiny */
@@ -663,112 +663,114 @@
 .pk-dedenne .emoji-shiny { display: inline; }
 
 /* Déflaisan — Bon / Shiny */
-.pk-deflaisan .pokemon-name { color: #16a34a; }
-.pk-deflaisan .research-reward-name { color: #16a34a; }
+.pk-deflaisan .pokemon-name { color: var(--accent-vert-bon); }
+.pk-deflaisan .research-reward-name { color: var(--accent-vert-bon); }
 .pk-deflaisan .emoji-shiny  { display: inline; }
 
 /* Démolosse — Bon / Shiny (couvre Méga-Démolosse) */
-.pk-demolosse .pokemon-name { color: #16a34a; }
-.pk-demolosse .research-reward-name { color: #16a34a; }
+.pk-demolosse .pokemon-name { color: var(--accent-vert-bon); }
+.pk-demolosse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-demolosse .emoji-shiny  { display: inline; }
 
 /* Démanta — Normal / Shiny */
 .pk-demanta .emoji-shiny { display: inline; }
 
 /* Dialga — Bon / Shiny */
-.pk-dialga .pokemon-name { color: #16a34a; }
-.pk-dialga .research-reward-name { color: #16a34a; }
+.pk-dialga .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dialga .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dialga .emoji-shiny  { display: inline; }
 
 /* Deusolourdo — Normal / Shiny */
 .pk-deusolourdo .emoji-shiny { display: inline; }
 
-/* Dimoclès — Normal / Shiny */
-.pk-dimocles .emoji-shiny { display: inline; }
+/* Dimoclès — Bon / Shiny */
+.pk-dimocles .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dimocles .research-reward-name { color: var(--accent-vert-bon); }
+.pk-dimocles .emoji-shiny  { display: inline; }
 
 /* Dinoclier — Normal / Shiny */
 .pk-dinoclier .emoji-shiny { display: inline; }
 
 /* Dispareptil — Bon / Shiny */
-.pk-dispareptil .pokemon-name { color: #16a34a; }
-.pk-dispareptil .research-reward-name { color: #16a34a; }
+.pk-dispareptil .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dispareptil .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dispareptil .emoji-shiny  { display: inline; }
 
 /* Dimoret — Bon / Shiny */
-.pk-dimoret .pokemon-name { color: #16a34a; }
-.pk-dimoret .research-reward-name { color: #16a34a; }
+.pk-dimoret .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dimoret .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dimoret .emoji-shiny  { display: inline; }
 
 /* Dracaufeu — Bon / Shiny */
-.pk-dracaufeu .pokemon-name { color: #16a34a; }
-.pk-dracaufeu .research-reward-name { color: #16a34a; }
+.pk-dracaufeu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dracaufeu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dracaufeu .emoji-shiny  { display: inline; }
 
 /* Méga-Dracaufeu-X — Normal / Shiny */
 .pk-dracaufeu-mx .emoji-shiny { display: inline; }
 
 /* Méga-Dracaufeu-Y — Bon / Shiny */
-.pk-dracaufeu-my .pokemon-name { color: #16a34a; }
-.pk-dracaufeu-my .research-reward-name { color: #16a34a; }
+.pk-dracaufeu-my .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dracaufeu-my .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dracaufeu-my .emoji-shiny  { display: inline; }
 
 /* Dodrio — Bon / Shiny */
-.pk-dodrio .pokemon-name { color: #16a34a; }
-.pk-dodrio .research-reward-name { color: #16a34a; }
+.pk-dodrio .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dodrio .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dodrio .emoji-shiny  { display: inline; }
 
 /* Doduo — Bon / Shiny */
-.pk-doduo .pokemon-name { color: #16a34a; }
-.pk-doduo .research-reward-name { color: #16a34a; }
+.pk-doduo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-doduo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-doduo .emoji-shiny  { display: inline; }
 
 /* Doudouvet — Normal / Shiny */
 .pk-doudouvet .emoji-shiny { display: inline; }
 
 /* Duralugon — Bon / Shiny */
-.pk-duralugon .pokemon-name { color: #16a34a; }
-.pk-duralugon .research-reward-name { color: #16a34a; }
+.pk-duralugon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-duralugon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-duralugon .emoji-shiny  { display: inline; }
 
 /* Dunaja — Bon */
-.pk-dunaja .pokemon-name { color: #16a34a; }
-.pk-dunaja .research-reward-name { color: #16a34a; }
+.pk-dunaja .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dunaja .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Dunaconda — Bon */
-.pk-dunaconda .pokemon-name { color: #16a34a; }
-.pk-dunaconda .research-reward-name { color: #16a34a; }
+.pk-dunaconda .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dunaconda .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Draco — Bon / Shiny */
-.pk-draco .pokemon-name { color: #16a34a; }
-.pk-draco .research-reward-name { color: #16a34a; }
+.pk-draco .pokemon-name { color: var(--accent-vert-bon); }
+.pk-draco .research-reward-name { color: var(--accent-vert-bon); }
 .pk-draco .emoji-shiny  { display: inline; }
 
 /* Dracolosse — Bon / Shiny (couvre Méga-Dracolosse) */
-.pk-dracolosse .pokemon-name { color: #16a34a; }
-.pk-dracolosse .research-reward-name { color: #16a34a; }
+.pk-dracolosse .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dracolosse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dracolosse .emoji-shiny  { display: inline; }
 
 /* Dragmara — Bon / Shiny */
-.pk-dragmara .pokemon-name { color: #16a34a; }
-.pk-dragmara .research-reward-name { color: #16a34a; }
+.pk-dragmara .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dragmara .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dragmara .emoji-shiny  { display: inline; }
 
 /* Draby — Bon / Shiny */
-.pk-draby .pokemon-name { color: #16a34a; }
-.pk-draby .research-reward-name { color: #16a34a; }
+.pk-draby .pokemon-name { color: var(--accent-vert-bon); }
+.pk-draby .research-reward-name { color: var(--accent-vert-bon); }
 .pk-draby .emoji-shiny  { display: inline; }
 
 /* Drackhaus — Bon / Shiny */
-.pk-drackhaus .pokemon-name { color: #16a34a; }
-.pk-drackhaus .research-reward-name { color: #16a34a; }
+.pk-drackhaus .pokemon-name { color: var(--accent-vert-bon); }
+.pk-drackhaus .research-reward-name { color: var(--accent-vert-bon); }
 .pk-drackhaus .emoji-shiny  { display: inline; }
 
 /* Drakkarmin — Normal / Shiny */
 .pk-drakkarmin .emoji-shiny { display: inline; }
 
 /* Drattak — Bon / Shiny */
-.pk-drattak .pokemon-name { color: #16a34a; }
-.pk-drattak .research-reward-name { color: #16a34a; }
+.pk-drattak .pokemon-name { color: var(--accent-vert-bon); }
+.pk-drattak .research-reward-name { color: var(--accent-vert-bon); }
 .pk-drattak .emoji-shiny  { display: inline; }
 
 /* Draïeul — Normal / Shiny */
@@ -783,41 +785,46 @@
    ============================================================ */
 
 /* Ectoplasma — Bon / Shiny (couvre Méga-Ectoplasma) */
-.pk-ectoplasma .pokemon-name { color: #16a34a; }
-.pk-ectoplasma .research-reward-name { color: #16a34a; }
+.pk-ectoplasma .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ectoplasma .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ectoplasma .emoji-shiny  { display: inline; }
 
 /* Efflèche — Bon / Shiny */
-.pk-effleche .pokemon-name { color: #16a34a; }
-.pk-effleche .research-reward-name { color: #16a34a; }
+.pk-effleche .pokemon-name { color: var(--accent-vert-bon); }
+.pk-effleche .research-reward-name { color: var(--accent-vert-bon); }
 .pk-effleche .emoji-shiny  { display: inline; }
 
 
 /* Embrylex — Bon / Shiny */
-.pk-embrylex .pokemon-name { color: #16a34a; }
-.pk-embrylex .research-reward-name { color: #16a34a; }
+.pk-embrylex .pokemon-name { color: var(--accent-vert-bon); }
+.pk-embrylex .research-reward-name { color: var(--accent-vert-bon); }
 .pk-embrylex .emoji-shiny  { display: inline; }
 
 /* Emolga — Normal / Shiny */
 .pk-emolga .emoji-shiny { display: inline; }
 
 /* Entei — Bon / Shiny */
-.pk-entei .pokemon-name { color: #16a34a; }
-.pk-entei .research-reward-name { color: #16a34a; }
+.pk-entei .pokemon-name { color: var(--accent-vert-bon); }
+.pk-entei .research-reward-name { color: var(--accent-vert-bon); }
 .pk-entei .emoji-shiny  { display: inline; }
 
 /* Eoko — Normal / Shiny */
 .pk-eoko .emoji-shiny { display: inline; }
 
 /* Escargaume — Bon / Shiny */
-.pk-escargaume .pokemon-name { color: #16a34a; }
-.pk-escargaume .research-reward-name { color: #16a34a; }
+.pk-escargaume .pokemon-name { color: var(--accent-vert-bon); }
+.pk-escargaume .research-reward-name { color: var(--accent-vert-bon); }
 .pk-escargaume .emoji-shiny  { display: inline; }
 
 /* Escroco — Bon / Shiny */
-.pk-escroco .pokemon-name { color: #16a34a; }
-.pk-escroco .research-reward-name { color: #16a34a; }
+.pk-escroco .pokemon-name { color: var(--accent-vert-bon); }
+.pk-escroco .research-reward-name { color: var(--accent-vert-bon); }
 .pk-escroco .emoji-shiny  { display: inline; }
+
+/* Exagide — Bon / Shiny */
+.pk-exagide .pokemon-name { color: var(--accent-vert-bon); }
+.pk-exagide .research-reward-name { color: var(--accent-vert-bon); }
+.pk-exagide .emoji-shiny  { display: inline; }
 
 /* Excavarenne — Normal / Shiny */
 .pk-excavarenne .emoji-shiny { display: inline; }
@@ -831,67 +838,67 @@
 .pk-ecaid .emoji-shiny { display: inline; }
 
 /* Écrapince — Bon / Shiny */
-.pk-ecrapince .pokemon-name { color: #16a34a; }
-.pk-ecrapince .research-reward-name { color: #16a34a; }
+.pk-ecrapince .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ecrapince .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ecrapince .emoji-shiny  { display: inline; }
 
 /* Élecsprint — Bon / Shiny */
-.pk-elecsprint .pokemon-name { color: #16a34a; }
-.pk-elecsprint .research-reward-name { color: #16a34a; }
+.pk-elecsprint .pokemon-name { color: var(--accent-vert-bon); }
+.pk-elecsprint .research-reward-name { color: var(--accent-vert-bon); }
 .pk-elecsprint .emoji-shiny  { display: inline; }
 
 /* Ékaïser — Normal / Shiny */
 .pk-ekaiser .emoji-shiny { display: inline; }
 
 /* Élekable — Bon / Shiny */
-.pk-elekable .pokemon-name { color: #16a34a; }
-.pk-elekable .research-reward-name { color: #16a34a; }
+.pk-elekable .pokemon-name { color: var(--accent-vert-bon); }
+.pk-elekable .research-reward-name { color: var(--accent-vert-bon); }
 .pk-elekable .emoji-shiny  { display: inline; }
 
 /* Élekid — Bon / Shiny */
-.pk-elekid .pokemon-name { color: #16a34a; }
-.pk-elekid .research-reward-name { color: #16a34a; }
+.pk-elekid .pokemon-name { color: var(--accent-vert-bon); }
+.pk-elekid .research-reward-name { color: var(--accent-vert-bon); }
 .pk-elekid .emoji-shiny  { display: inline; }
 
 /* Élektek — Bon / Shiny */
-.pk-elektek .pokemon-name { color: #16a34a; }
-.pk-elektek .research-reward-name { color: #16a34a; }
+.pk-elektek .pokemon-name { color: var(--accent-vert-bon); }
+.pk-elektek .research-reward-name { color: var(--accent-vert-bon); }
 .pk-elektek .emoji-shiny  { display: inline; }
 
 /* Électhor — Bon / Shiny */
-.pk-electhor .pokemon-name { color: #16a34a; }
-.pk-electhor .research-reward-name { color: #16a34a; }
+.pk-electhor .pokemon-name { color: var(--accent-vert-bon); }
+.pk-electhor .research-reward-name { color: var(--accent-vert-bon); }
 .pk-electhor .emoji-shiny  { display: inline; }
 
 /* Électhor de Galar — Bon / Shiny */
-.pk-electhor-g .pokemon-name { color: #16a34a; }
-.pk-electhor-g .research-reward-name { color: #16a34a; }
+.pk-electhor-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-electhor-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-electhor-g .emoji-shiny  { display: inline; }
 
 /* Éthernatos — Bon / Shiny */
-.pk-ethernatos .pokemon-name { color: #16a34a; }
-.pk-ethernatos .research-reward-name { color: #16a34a; }
+.pk-ethernatos .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ethernatos .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ethernatos .emoji-shiny  { display: inline; }
 
 /* Étourmi — Bon / Shiny */
-.pk-etourmi .pokemon-name  { color: #16a34a; }
-.pk-etourmi .research-reward-name { color: #16a34a; }
+.pk-etourmi .pokemon-name  { color: var(--accent-vert-bon); }
+.pk-etourmi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-etourmi .emoji-shiny   { display: inline; }
 
 /* Étouraptor — Bon / Shiny */
-.pk-etouraptor .pokemon-name { color: #16a34a; }
-.pk-etouraptor .research-reward-name { color: #16a34a; }
+.pk-etouraptor .pokemon-name { color: var(--accent-vert-bon); }
+.pk-etouraptor .research-reward-name { color: var(--accent-vert-bon); }
 .pk-etouraptor .emoji-shiny  { display: inline; }
 
 /* Étourvol — Bon / Shiny */
-.pk-etourvol .pokemon-name { color: #16a34a; }
-.pk-etourvol .research-reward-name { color: #16a34a; }
+.pk-etourvol .pokemon-name { color: var(--accent-vert-bon); }
+.pk-etourvol .research-reward-name { color: var(--accent-vert-bon); }
 .pk-etourvol .emoji-shiny  { display: inline; }
 
 
 /* Évoli — Bon / Shiny */
-.pk-evoli .pokemon-name { color: #16a34a; }
-.pk-evoli .research-reward-name { color: #16a34a; }
+.pk-evoli .pokemon-name { color: var(--accent-vert-bon); }
+.pk-evoli .research-reward-name { color: var(--accent-vert-bon); }
 .pk-evoli .emoji-shiny  { display: inline; }
 
 /* Écrémeuh — Normal / Shiny */
@@ -902,117 +909,117 @@
    ============================================================ */
 
 /* Flabébé — Bon / Shiny */
-.pk-flabebe .pokemon-name { color: #16a34a; }
-.pk-flabebe .research-reward-name { color: #16a34a; }
+.pk-flabebe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-flabebe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-flabebe .emoji-shiny  { display: inline; }
 
 /* Floette — Bon / Shiny */
-.pk-floette .pokemon-name { color: #16a34a; }
-.pk-floette .research-reward-name { color: #16a34a; }
+.pk-floette .pokemon-name { color: var(--accent-vert-bon); }
+.pk-floette .research-reward-name { color: var(--accent-vert-bon); }
 .pk-floette .emoji-shiny  { display: inline; }
 
 /* Florges — Bon / Shiny */
-.pk-florges .pokemon-name { color: #16a34a; }
-.pk-florges .research-reward-name { color: #16a34a; }
+.pk-florges .pokemon-name { color: var(--accent-vert-bon); }
+.pk-florges .research-reward-name { color: var(--accent-vert-bon); }
 .pk-florges .emoji-shiny  { display: inline; }
 
 /* Farfaduvet — Normal / Shiny */
 .pk-farfaduvet .emoji-shiny { display: inline; }
 
 /* Farfuret — Bon / Shiny */
-.pk-farfuret .pokemon-name { color: #16a34a; }
-.pk-farfuret .research-reward-name { color: #16a34a; }
+.pk-farfuret .pokemon-name { color: var(--accent-vert-bon); }
+.pk-farfuret .research-reward-name { color: var(--accent-vert-bon); }
 .pk-farfuret .emoji-shiny  { display: inline; }
 
 /* Farfuret de Hisui — Bon / Shiny */
-.pk-farfuret-h .pokemon-name { color: #16a34a; }
-.pk-farfuret-h .research-reward-name { color: #16a34a; }
+.pk-farfuret-h .pokemon-name { color: var(--accent-vert-bon); }
+.pk-farfuret-h .research-reward-name { color: var(--accent-vert-bon); }
 .pk-farfuret-h .emoji-shiny  { display: inline; }
 
 /* Farfurex — Bon / Shiny */
-.pk-farfurex .pokemon-name { color: #16a34a; }
-.pk-farfurex .research-reward-name { color: #16a34a; }
+.pk-farfurex .pokemon-name { color: var(--accent-vert-bon); }
+.pk-farfurex .research-reward-name { color: var(--accent-vert-bon); }
 .pk-farfurex .emoji-shiny  { display: inline; }
 
 /* Fantominus — Bon / Shiny */
-.pk-fantominus .pokemon-name { color: #16a34a; }
-.pk-fantominus .research-reward-name { color: #16a34a; }
+.pk-fantominus .pokemon-name { color: var(--accent-vert-bon); }
+.pk-fantominus .research-reward-name { color: var(--accent-vert-bon); }
 .pk-fantominus .emoji-shiny  { display: inline; }
 
 /* Fantyrm — Bon / Shiny */
-.pk-fantyrm .pokemon-name { color: #16a34a; }
-.pk-fantyrm .research-reward-name { color: #16a34a; }
+.pk-fantyrm .pokemon-name { color: var(--accent-vert-bon); }
+.pk-fantyrm .research-reward-name { color: var(--accent-vert-bon); }
 .pk-fantyrm .emoji-shiny  { display: inline; }
 
 /* Félinferno — Bon / Shiny */
-.pk-felinferno .pokemon-name { color: #16a34a; }
-.pk-felinferno .research-reward-name { color: #16a34a; }
+.pk-felinferno .pokemon-name { color: var(--accent-vert-bon); }
+.pk-felinferno .research-reward-name { color: var(--accent-vert-bon); }
 .pk-felinferno .emoji-shiny  { display: inline; }
 
 /* Feunnec — Bon / Shiny */
-.pk-feunnec .pokemon-name { color: #16a34a; }
-.pk-feunnec .research-reward-name { color: #16a34a; }
+.pk-feunnec .pokemon-name { color: var(--accent-vert-bon); }
+.pk-feunnec .research-reward-name { color: var(--accent-vert-bon); }
 .pk-feunnec .emoji-shiny  { display: inline; }
 
 /* Feunard d'Alola — Bon / Shiny */
-.pk-feunard-a .pokemon-name { color: #16a34a; }
-.pk-feunard-a .research-reward-name { color: #16a34a; }
+.pk-feunard-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-feunard-a .research-reward-name { color: var(--accent-vert-bon); }
 .pk-feunard-a .emoji-shiny  { display: inline; }
 
 /* Feurisson — Bon / Shiny */
-.pk-feurisson .pokemon-name { color: #16a34a; }
-.pk-feurisson .research-reward-name { color: #16a34a; }
+.pk-feurisson .pokemon-name { color: var(--accent-vert-bon); }
+.pk-feurisson .research-reward-name { color: var(--accent-vert-bon); }
 .pk-feurisson .emoji-shiny  { display: inline; }
 
 /* Fermite — Bon / Shiny */
-.pk-fermite .pokemon-name { color: #16a34a; }
-.pk-fermite .research-reward-name { color: #16a34a; }
+.pk-fermite .pokemon-name { color: var(--accent-vert-bon); }
+.pk-fermite .research-reward-name { color: var(--accent-vert-bon); }
 .pk-fermite .emoji-shiny  { display: inline; }
 
 /* Férosinge — Bon / Shiny */
-.pk-ferosinge .pokemon-name { color: #16a34a; }
-.pk-ferosinge .research-reward-name { color: #16a34a; }
+.pk-ferosinge .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ferosinge .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ferosinge .emoji-shiny  { display: inline; }
 
 /* Flagadoss — Normal / Shiny */
 .pk-flagadoss .emoji-shiny { display: inline; }
 
 /* Flagadoss de Galar — Bon / Shiny */
-.pk-flagadoss-g .pokemon-name { color: #16a34a; }
-.pk-flagadoss-g .research-reward-name { color: #16a34a; }
+.pk-flagadoss-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-flagadoss-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-flagadoss-g .emoji-shiny  { display: inline; }
 
 /* Flamiaou — Bon / Shiny */
-.pk-flamiaou .pokemon-name { color: #16a34a; }
-.pk-flamiaou .research-reward-name { color: #16a34a; }
+.pk-flamiaou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-flamiaou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-flamiaou .emoji-shiny  { display: inline; }
 
 /* Flambino — Bon / Shiny */
-.pk-flambino .pokemon-name { color: #16a34a; }
-.pk-flambino .research-reward-name { color: #16a34a; }
+.pk-flambino .pokemon-name { color: var(--accent-vert-bon); }
+.pk-flambino .research-reward-name { color: var(--accent-vert-bon); }
 .pk-flambino .emoji-shiny  { display: inline; }
 
 /* Flâmigator — Bon / Shiny */
-.pk-flamigator .pokemon-name { color: #16a34a; }
-.pk-flamigator .research-reward-name { color: #16a34a; }
+.pk-flamigator .pokemon-name { color: var(--accent-vert-bon); }
+.pk-flamigator .research-reward-name { color: var(--accent-vert-bon); }
 .pk-flamigator .emoji-shiny  { display: inline; }
 
 /* Flambusard — Normal / Shiny */
 .pk-flambusard .emoji-shiny { display: inline; }
 
 /* Flobio — Bon / Shiny */
-.pk-flobio .pokemon-name { color: #16a34a; }
-.pk-flobio .research-reward-name { color: #16a34a; }
+.pk-flobio .pokemon-name { color: var(--accent-vert-bon); }
+.pk-flobio .research-reward-name { color: var(--accent-vert-bon); }
 .pk-flobio .emoji-shiny  { display: inline; }
 
 /* Florizarre — Bon / Shiny (couvre Méga-Florizarre) */
-.pk-florizarre .pokemon-name { color: #16a34a; }
-.pk-florizarre .research-reward-name { color: #16a34a; }
+.pk-florizarre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-florizarre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-florizarre .emoji-shiny  { display: inline; }
 
 /* Flingouste — Bon / Shiny */
-.pk-flingouste .pokemon-name { color: #16a34a; }
-.pk-flingouste .research-reward-name { color: #16a34a; }
+.pk-flingouste .pokemon-name { color: var(--accent-vert-bon); }
+.pk-flingouste .research-reward-name { color: var(--accent-vert-bon); }
 .pk-flingouste .emoji-shiny  { display: inline; }
 
 /* Flotillon — Normal / Shiny */
@@ -1022,62 +1029,62 @@
 .pk-fluvetin .emoji-shiny { display: inline; }
 
 /* Forgella — Bon / Shiny */
-.pk-forgella .pokemon-name { color: #16a34a; }
-.pk-forgella .research-reward-name { color: #16a34a; }
+.pk-forgella .pokemon-name { color: var(--accent-vert-bon); }
+.pk-forgella .research-reward-name { color: var(--accent-vert-bon); }
 .pk-forgella .emoji-shiny  { display: inline; }
 
 /* Forgelina — Bon / Shiny */
-.pk-forgelina .pokemon-name { color: #16a34a; }
-.pk-forgelina .research-reward-name { color: #16a34a; }
+.pk-forgelina .pokemon-name { color: var(--accent-vert-bon); }
+.pk-forgelina .research-reward-name { color: var(--accent-vert-bon); }
 .pk-forgelina .emoji-shiny  { display: inline; }
 
 /* Forgerette — Bon / Shiny */
-.pk-forgerette .pokemon-name { color: #16a34a; }
-.pk-forgerette .research-reward-name { color: #16a34a; }
+.pk-forgerette .pokemon-name { color: var(--accent-vert-bon); }
+.pk-forgerette .research-reward-name { color: var(--accent-vert-bon); }
 .pk-forgerette .emoji-shiny  { display: inline; }
 
 /* Fourbelin — Bon / Shiny */
-.pk-fourbelin .pokemon-name { color: #16a34a; }
-.pk-fourbelin .research-reward-name { color: #16a34a; }
+.pk-fourbelin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-fourbelin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-fourbelin .emoji-shiny  { display: inline; }
 
 /* Fragroin — Normal / Shiny */
 .pk-fragroin .emoji-shiny { display: inline; }
 
 /* Frigodo — Bon / Shiny */
-.pk-frigodo .pokemon-name { color: #16a34a; }
-.pk-frigodo .research-reward-name { color: #16a34a; }
+.pk-frigodo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-frigodo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-frigodo .emoji-shiny  { display: inline; }
 
 /* Frissonille — Bon (Shiny à partir du 4 août 2026, évènement Braises Arctiques :
    décommenter la ligne emoji-shiny ce jour-là) */
-.pk-frissonille .pokemon-name { color: #16a34a; }
-.pk-frissonille .research-reward-name { color: #16a34a; }
+.pk-frissonille .pokemon-name { color: var(--accent-vert-bon); }
+.pk-frissonille .research-reward-name { color: var(--accent-vert-bon); }
 /* .pk-frissonille .emoji-shiny { display: inline; } */
 
 /* Fulgulairo — Bon */
-.pk-fulgulairo .pokemon-name { color: #16a34a; }
-.pk-fulgulairo .research-reward-name { color: #16a34a; }
+.pk-fulgulairo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-fulgulairo .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Fulguris — Bon / Shiny */
-.pk-fulguris .pokemon-name { color: #16a34a; }
-.pk-fulguris .research-reward-name { color: #16a34a; }
+.pk-fulguris .pokemon-name { color: var(--accent-vert-bon); }
+.pk-fulguris .research-reward-name { color: var(--accent-vert-bon); }
 .pk-fulguris .emoji-shiny  { display: inline; }
 
 /* Funécire — Bon / Shiny */
-.pk-funecire .pokemon-name { color: #16a34a; }
-.pk-funecire .research-reward-name { color: #16a34a; }
+.pk-funecire .pokemon-name { color: var(--accent-vert-bon); }
+.pk-funecire .research-reward-name { color: var(--accent-vert-bon); }
 .pk-funecire .emoji-shiny  { display: inline; }
 
 /* Furaiglon — Bon / Shiny */
-.pk-furaiglon .pokemon-name { color: #16a34a; }
-.pk-furaiglon .research-reward-name { color: #16a34a; }
+.pk-furaiglon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-furaiglon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-furaiglon .emoji-shiny  { display: inline; }
 
 
 /* Floréclat — Bon / Shiny */
-.pk-floreclat .pokemon-name { color: #16a34a; }
-.pk-floreclat .research-reward-name { color: #16a34a; }
+.pk-floreclat .pokemon-name { color: var(--accent-vert-bon); }
+.pk-floreclat .research-reward-name { color: var(--accent-vert-bon); }
 .pk-floreclat .emoji-shiny  { display: inline; }
 
 /* ============================================================
@@ -1085,117 +1092,117 @@
    ============================================================ */
 
 /* Gambex — Bon / Shiny */
-.pk-gambex .pokemon-name { color: #16a34a; }
-.pk-gambex .research-reward-name { color: #16a34a; }
+.pk-gambex .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gambex .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gambex .emoji-shiny  { display: inline; }
 
 /* Gamblast — Bon / Shiny */
-.pk-gamblast .pokemon-name { color: #16a34a; }
-.pk-gamblast .research-reward-name { color: #16a34a; }
+.pk-gamblast .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gamblast .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gamblast .emoji-shiny  { display: inline; }
 
 /* Galopa — Normal / Shiny */
 .pk-galopa .emoji-shiny { display: inline; }
 
 /* Galopa de Galar — Bon / Shiny */
-.pk-galopa-g .pokemon-name { color: #16a34a; }
-.pk-galopa-g .research-reward-name { color: #16a34a; }
+.pk-galopa-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-galopa-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-galopa-g .emoji-shiny  { display: inline; }
 
 /* Galegon — Bon / Shiny */
-.pk-galegon .pokemon-name { color: #16a34a; }
-.pk-galegon .research-reward-name { color: #16a34a; }
+.pk-galegon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-galegon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-galegon .emoji-shiny  { display: inline; }
 
 /* Galekid — Bon / Shiny */
-.pk-galekid .pokemon-name { color: #16a34a; }
-.pk-galekid .research-reward-name { color: #16a34a; }
+.pk-galekid .pokemon-name { color: var(--accent-vert-bon); }
+.pk-galekid .research-reward-name { color: var(--accent-vert-bon); }
 .pk-galekid .emoji-shiny  { display: inline; }
 
 /* Galeking — Bon / Shiny (couvre Méga-Galeking) */
-.pk-galeking .pokemon-name { color: #16a34a; }
-.pk-galeking .research-reward-name { color: #16a34a; }
+.pk-galeking .pokemon-name { color: var(--accent-vert-bon); }
+.pk-galeking .research-reward-name { color: var(--accent-vert-bon); }
 .pk-galeking .emoji-shiny  { display: inline; }
 
 /* Galifeu — Bon / Shiny */
-.pk-galifeu .pokemon-name { color: #16a34a; }
-.pk-galifeu .research-reward-name { color: #16a34a; }
+.pk-galifeu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-galifeu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-galifeu .emoji-shiny  { display: inline; }
 
 /* Galvaran — Bon / Shiny */
-.pk-galvaran .pokemon-name { color: #16a34a; }
-.pk-galvaran .research-reward-name { color: #16a34a; }
+.pk-galvaran .pokemon-name { color: var(--accent-vert-bon); }
+.pk-galvaran .research-reward-name { color: var(--accent-vert-bon); }
 .pk-galvaran .emoji-shiny  { display: inline; }
 
 /* Gallame — Bon / Shiny (couvre Méga-Gallame) */
-.pk-gallame .pokemon-name { color: #16a34a; }
-.pk-gallame .research-reward-name { color: #16a34a; }
+.pk-gallame .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gallame .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gallame .emoji-shiny  { display: inline; }
 
 /* Gardevoir — Bon / Shiny (couvre Méga-Gardevoir) */
-.pk-gardevoir .pokemon-name { color: #16a34a; }
-.pk-gardevoir .research-reward-name { color: #16a34a; }
+.pk-gardevoir .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gardevoir .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gardevoir .emoji-shiny  { display: inline; }
 
 /* Genesect — Bon / Shiny */
-.pk-genesect .pokemon-name { color: #16a34a; }
-.pk-genesect .research-reward-name { color: #16a34a; }
+.pk-genesect .pokemon-name { color: var(--accent-vert-bon); }
+.pk-genesect .research-reward-name { color: var(--accent-vert-bon); }
 .pk-genesect .emoji-shiny  { display: inline; }
 
 /* Germignon — Normal / Shiny */
 .pk-germignon .emoji-shiny { display: inline; }
 
 /* Géolithe — Bon / Shiny */
-.pk-geolithe .pokemon-name { color: #16a34a; }
-.pk-geolithe .research-reward-name { color: #16a34a; }
+.pk-geolithe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-geolithe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-geolithe .emoji-shiny  { display: inline; }
 
 /* Gigalithe — Bon / Shiny */
-.pk-gigalithe .pokemon-name { color: #16a34a; }
-.pk-gigalithe .research-reward-name { color: #16a34a; }
+.pk-gigalithe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gigalithe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gigalithe .emoji-shiny  { display: inline; }
 
 /* Giratina — Bon / Shiny */
-.pk-giratina .pokemon-name { color: #16a34a; }
-.pk-giratina .research-reward-name { color: #16a34a; }
+.pk-giratina .pokemon-name { color: var(--accent-vert-bon); }
+.pk-giratina .research-reward-name { color: var(--accent-vert-bon); }
 .pk-giratina .emoji-shiny  { display: inline; }
 
 /* Glaivodo — Bon / Shiny */
-.pk-glaivodo .pokemon-name { color: #16a34a; }
-.pk-glaivodo .research-reward-name { color: #16a34a; }
+.pk-glaivodo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-glaivodo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-glaivodo .emoji-shiny  { display: inline; }
 
 /* Givrali — Bon / Shiny */
-.pk-givrali .pokemon-name { color: #16a34a; }
-.pk-givrali .research-reward-name { color: #16a34a; }
+.pk-givrali .pokemon-name { color: var(--accent-vert-bon); }
+.pk-givrali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-givrali .emoji-shiny  { display: inline; }
 
 /* Gobou — Bon / Shiny */
-.pk-gobou .pokemon-name { color: #16a34a; }
-.pk-gobou .research-reward-name { color: #16a34a; }
+.pk-gobou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gobou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gobou .emoji-shiny  { display: inline; }
 
 /* Goélise — Normal / Shiny */
 .pk-goelise .emoji-shiny { display: inline; }
 
 /* Golemastoc — Bon / Shiny */
-.pk-golemastoc .pokemon-name { color: #16a34a; }
-.pk-golemastoc .research-reward-name { color: #16a34a; }
+.pk-golemastoc .pokemon-name { color: var(--accent-vert-bon); }
+.pk-golemastoc .research-reward-name { color: var(--accent-vert-bon); }
 .pk-golemastoc .emoji-shiny  { display: inline; }
 
 /* Golgopathe — Bon / Shiny */
-.pk-golgopathe .pokemon-name { color: #16a34a; }
-.pk-golgopathe .research-reward-name { color: #16a34a; }
+.pk-golgopathe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-golgopathe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-golgopathe .emoji-shiny  { display: inline; }
 
 /* Gorythmic — Bon / Shiny */
-.pk-gorythmic .pokemon-name { color: #16a34a; }
-.pk-gorythmic .research-reward-name { color: #16a34a; }
+.pk-gorythmic .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gorythmic .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gorythmic .emoji-shiny  { display: inline; }
 
 /* Goupelin — Bon / Shiny */
-.pk-goupelin .pokemon-name { color: #16a34a; }
-.pk-goupelin .research-reward-name { color: #16a34a; }
+.pk-goupelin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-goupelin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-goupelin .emoji-shiny  { display: inline; }
 
 /* Goupilou — Normal / Pas de shiny (Shiny à partir du 16 août 2026,
@@ -1206,28 +1213,28 @@
 .pk-goupix .emoji-shiny { display: inline; }
 
 /* Goupix d'Alola — Bon / Shiny */
-.pk-goupix-a .pokemon-name { color: #16a34a; }
-.pk-goupix-a .research-reward-name { color: #16a34a; }
+.pk-goupix-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-goupix-a .research-reward-name { color: var(--accent-vert-bon); }
 .pk-goupix-a .emoji-shiny  { display: inline; }
 
 /* Grenousse — Bon / Shiny */
-.pk-grenousse .pokemon-name { color: #16a34a; }
-.pk-grenousse .research-reward-name { color: #16a34a; }
+.pk-grenousse .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grenousse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grenousse .emoji-shiny  { display: inline; }
 
 /* Gravalanch — Bon / Shiny */
-.pk-gravalanch .pokemon-name { color: #16a34a; }
-.pk-gravalanch .research-reward-name { color: #16a34a; }
+.pk-gravalanch .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gravalanch .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gravalanch .emoji-shiny  { display: inline; }
 
 /* Grainipiot — Bon / Shiny */
-.pk-grainipiot .pokemon-name { color: #16a34a; }
-.pk-grainipiot .research-reward-name { color: #16a34a; }
+.pk-grainipiot .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grainipiot .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grainipiot .emoji-shiny  { display: inline; }
 
 /* Gravalanch d'Alola — Bon / Shiny */
-.pk-gravalanch-a .pokemon-name { color: #16a34a; }
-.pk-gravalanch-a .research-reward-name { color: #16a34a; }
+.pk-gravalanch-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gravalanch-a .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gravalanch-a .emoji-shiny  { display: inline; }
 
 /* Gourmelet — Normal / Shiny */
@@ -1237,72 +1244,72 @@
 .pk-grindur .emoji-shiny { display: inline; }
 
 /* Grodoudou — Bon / Shiny */
-.pk-grodoudou .pokemon-name { color: #16a34a; }
-.pk-grodoudou .research-reward-name { color: #16a34a; }
+.pk-grodoudou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grodoudou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grodoudou .emoji-shiny  { display: inline; }
 
 /* Groudon — Bon / Shiny */
-.pk-groudon .pokemon-name { color: #16a34a; }
-.pk-groudon .research-reward-name { color: #16a34a; }
+.pk-groudon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-groudon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-groudon .emoji-shiny  { display: inline; }
 
 /* Gribouraigne — Bon / Shiny */
-.pk-gribouraigne .pokemon-name { color: #16a34a; }
-.pk-gribouraigne .research-reward-name { color: #16a34a; }
+.pk-gribouraigne .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gribouraigne .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gribouraigne .emoji-shiny  { display: inline; }
 
 /* Grillepattes — Bon / Shiny */
-.pk-grillepattes .pokemon-name { color: #16a34a; }
-.pk-grillepattes .research-reward-name { color: #16a34a; }
+.pk-grillepattes .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grillepattes .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grillepattes .emoji-shiny  { display: inline; }
 
 /* Griknot — Bon / Shiny */
-.pk-griknot .pokemon-name { color: #16a34a; }
-.pk-griknot .research-reward-name { color: #16a34a; }
+.pk-griknot .pokemon-name { color: var(--accent-vert-bon); }
+.pk-griknot .research-reward-name { color: var(--accent-vert-bon); }
 .pk-griknot .emoji-shiny  { display: inline; }
 
 /* Granbull — Bon / Shiny */
-.pk-granbull .pokemon-name { color: #16a34a; }
-.pk-granbull .research-reward-name { color: #16a34a; }
+.pk-granbull .pokemon-name { color: var(--accent-vert-bon); }
+.pk-granbull .research-reward-name { color: var(--accent-vert-bon); }
 .pk-granbull .emoji-shiny  { display: inline; }
 
 /* Grimalin — Bon / Shiny */
-.pk-grimalin .pokemon-name { color: #16a34a; }
-.pk-grimalin .research-reward-name { color: #16a34a; }
+.pk-grimalin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grimalin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grimalin .emoji-shiny  { display: inline; }
 
 /* Gringolem — Bon / Shiny */
-.pk-gringolem .pokemon-name { color: #16a34a; }
-.pk-gringolem .research-reward-name { color: #16a34a; }
+.pk-gringolem .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gringolem .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gringolem .emoji-shiny  { display: inline; }
 
 /* Groret — Normal / Shiny */
 .pk-groret .emoji-shiny { display: inline; }
 
 /* Grotichon — Bon / Shiny */
-.pk-grotichon .pokemon-name { color: #16a34a; }
-.pk-grotichon .research-reward-name { color: #16a34a; }
+.pk-grotichon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grotichon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grotichon .emoji-shiny  { display: inline; }
 
 /* Grolem d'Alola — Bon / Shiny */
-.pk-grolem-a .pokemon-name { color: #16a34a; }
-.pk-grolem-a .research-reward-name { color: #16a34a; }
+.pk-grolem-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grolem-a .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grolem-a .emoji-shiny  { display: inline; }
 
 /* Gruikui — Bon / Shiny */
-.pk-gruikui .pokemon-name { color: #16a34a; }
-.pk-gruikui .research-reward-name { color: #16a34a; }
+.pk-gruikui .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gruikui .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gruikui .emoji-shiny  { display: inline; }
 
 /* Guériaigle de Hisui — Bon / Shiny */
-.pk-gueriaigle-h .pokemon-name { color: #16a34a; }
-.pk-gueriaigle-h .research-reward-name { color: #16a34a; }
+.pk-gueriaigle-h .pokemon-name { color: var(--accent-vert-bon); }
+.pk-gueriaigle-h .research-reward-name { color: var(--accent-vert-bon); }
 .pk-gueriaigle-h .emoji-shiny  { display: inline; }
 
 
 /* Germéclat — Bon / Shiny */
-.pk-germeclat .pokemon-name { color: #16a34a; }
-.pk-germeclat .research-reward-name { color: #16a34a; }
+.pk-germeclat .pokemon-name { color: var(--accent-vert-bon); }
+.pk-germeclat .research-reward-name { color: var(--accent-vert-bon); }
 .pk-germeclat .emoji-shiny  { display: inline; }
 
 /* Granivol — Normal / Shiny */
@@ -1316,18 +1323,18 @@
    ============================================================ */
 
 /* Hachécateur — Bon / Shiny */
-.pk-hachecateur .pokemon-name { color: #16a34a; }
-.pk-hachecateur .research-reward-name { color: #16a34a; }
+.pk-hachecateur .pokemon-name { color: var(--accent-vert-bon); }
+.pk-hachecateur .research-reward-name { color: var(--accent-vert-bon); }
 .pk-hachecateur .emoji-shiny  { display: inline; }
 
 /* Hariyama — Bon / Shiny */
-.pk-hariyama .pokemon-name { color: #16a34a; }
-.pk-hariyama .research-reward-name { color: #16a34a; }
+.pk-hariyama .pokemon-name { color: var(--accent-vert-bon); }
+.pk-hariyama .research-reward-name { color: var(--accent-vert-bon); }
 .pk-hariyama .emoji-shiny  { display: inline; }
 
 /* Heatran — Bon / Shiny */
-.pk-heatran .pokemon-name { color: #16a34a; }
-.pk-heatran .research-reward-name { color: #16a34a; }
+.pk-heatran .pokemon-name { color: var(--accent-vert-bon); }
+.pk-heatran .research-reward-name { color: var(--accent-vert-bon); }
 .pk-heatran .emoji-shiny  { display: inline; }
 
 /* Hélionceau — Normal / Shiny */
@@ -1337,39 +1344,36 @@
 .pk-heliatronc .emoji-shiny { display: inline; }
 
 /* Herbizarre — Bon / Shiny */
-.pk-herbizarre .pokemon-name { color: #16a34a; }
-.pk-herbizarre .research-reward-name { color: #16a34a; }
+.pk-herbizarre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-herbizarre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-herbizarre .emoji-shiny  { display: inline; }
 
 /* Héricendre — Bon / Shiny */
-.pk-hericendre .pokemon-name { color: #16a34a; }
-.pk-hericendre .research-reward-name { color: #16a34a; }
+.pk-hericendre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-hericendre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-hericendre .emoji-shiny  { display: inline; }
 
 /* Hexadron — Normal / Shiny */
 .pk-hexadron .emoji-shiny { display: inline; }
 
 /* Hexagel — Bon / Shiny */
-.pk-hexagel .pokemon-name { color: #16a34a; }
-.pk-hexagel .research-reward-name { color: #16a34a; }
+.pk-hexagel .pokemon-name { color: var(--accent-vert-bon); }
+.pk-hexagel .research-reward-name { color: var(--accent-vert-bon); }
 .pk-hexagel .emoji-shiny  { display: inline; }
 
-/* Hexagide — Normal / Shiny */
-.pk-hexagide .emoji-shiny { display: inline; }
-
 /* Hippodocus — Bon / Shiny */
-.pk-hippodocus .pokemon-name { color: #16a34a; }
-.pk-hippodocus .research-reward-name { color: #16a34a; }
+.pk-hippodocus .pokemon-name { color: var(--accent-vert-bon); }
+.pk-hippodocus .research-reward-name { color: var(--accent-vert-bon); }
 .pk-hippodocus .emoji-shiny  { display: inline; }
 
 /* Hippopotas — Bon / Shiny */
-.pk-hippopotas .pokemon-name { color: #16a34a; }
-.pk-hippopotas .research-reward-name { color: #16a34a; }
+.pk-hippopotas .pokemon-name { color: var(--accent-vert-bon); }
+.pk-hippopotas .research-reward-name { color: var(--accent-vert-bon); }
 .pk-hippopotas .emoji-shiny  { display: inline; }
 
 /* Ho-Oh — Bon / Shiny */
-.pk-ho-oh .pokemon-name { color: #16a34a; }
-.pk-ho-oh .research-reward-name { color: #16a34a; }
+.pk-ho-oh .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ho-oh .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ho-oh .emoji-shiny  { display: inline; }
 
 /* Hoothoot — Normal / Shiny */
@@ -1390,18 +1394,18 @@
    ============================================================ */
 
 /* Insécateur — Bon / Shiny */
-.pk-insecateur .pokemon-name { color: #16a34a; }
-.pk-insecateur .research-reward-name { color: #16a34a; }
+.pk-insecateur .pokemon-name { color: var(--accent-vert-bon); }
+.pk-insecateur .research-reward-name { color: var(--accent-vert-bon); }
 .pk-insecateur .emoji-shiny  { display: inline; }
 
 /* Iguolta — Bon / Shiny */
-.pk-iguolta .pokemon-name { color: #16a34a; }
-.pk-iguolta .research-reward-name { color: #16a34a; }
+.pk-iguolta .pokemon-name { color: var(--accent-vert-bon); }
+.pk-iguolta .research-reward-name { color: var(--accent-vert-bon); }
 .pk-iguolta .emoji-shiny  { display: inline; }
 
 /* Incisache — Bon / Shiny */
-.pk-incisache .pokemon-name { color: #16a34a; }
-.pk-incisache .research-reward-name { color: #16a34a; }
+.pk-incisache .pokemon-name { color: var(--accent-vert-bon); }
+.pk-incisache .research-reward-name { color: var(--accent-vert-bon); }
 .pk-incisache .emoji-shiny  { display: inline; }
 
 /* Insolourdo — Normal / Shiny */
@@ -1416,13 +1420,13 @@
    ============================================================ */
 
 /* Jirachi — Bon / Shiny */
-.pk-jirachi .pokemon-name { color: #16a34a; }
-.pk-jirachi .research-reward-name { color: #16a34a; }
+.pk-jirachi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-jirachi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-jirachi .emoji-shiny  { display: inline; }
 
 /* Jungko — Bon / Shiny (couvre Méga-Jungko) */
-.pk-jungko .pokemon-name { color: #16a34a; }
-.pk-jungko .research-reward-name { color: #16a34a; }
+.pk-jungko .pokemon-name { color: var(--accent-vert-bon); }
+.pk-jungko .research-reward-name { color: var(--accent-vert-bon); }
 .pk-jungko .emoji-shiny  { display: inline; }
 
 
@@ -1437,18 +1441,18 @@
 .pk-kabutops .emoji-shiny { display: inline; }
 
 /* Kadabra — Bon / Shiny */
-.pk-kadabra .pokemon-name { color: #16a34a; }
-.pk-kadabra .research-reward-name { color: #16a34a; }
+.pk-kadabra .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kadabra .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kadabra .emoji-shiny  { display: inline; }
 
 /* Kaiminus — Bon / Shiny */
-.pk-kaiminus .pokemon-name { color: #16a34a; }
-.pk-kaiminus .research-reward-name { color: #16a34a; }
+.pk-kaiminus .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kaiminus .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kaiminus .emoji-shiny  { display: inline; }
 
 /* Kaimorse — Bon / Shiny */
-.pk-kaimorse .pokemon-name { color: #16a34a; }
-.pk-kaimorse .research-reward-name { color: #16a34a; }
+.pk-kaimorse .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kaimorse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kaimorse .emoji-shiny { display: inline; }
 
 /* Kaorine — Normal / Shiny */
@@ -1458,13 +1462,13 @@
 .pk-kapoera .emoji-shiny { display: inline; }
 
 /* Keldeo — Bon / Shiny */
-.pk-keldeo .pokemon-name { color: #16a34a; }
-.pk-keldeo .research-reward-name { color: #16a34a; }
+.pk-keldeo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-keldeo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-keldeo .emoji-shiny  { display: inline; }
 
 /* Katagami — Bon / Shiny */
-.pk-katagami .pokemon-name { color: #16a34a; }
-.pk-katagami .research-reward-name { color: #16a34a; }
+.pk-katagami .pokemon-name { color: var(--accent-vert-bon); }
+.pk-katagami .research-reward-name { color: var(--accent-vert-bon); }
 .pk-katagami .emoji-shiny  { display: inline; }
 
 /* Keunotor — Normal / Shiny */
@@ -1474,51 +1478,51 @@
 .pk-kicklee .emoji-shiny { display: inline; }
 
 /* Kirlia — Bon / Shiny */
-.pk-kirlia .pokemon-name { color: #16a34a; }
-.pk-kirlia .research-reward-name { color: #16a34a; }
+.pk-kirlia .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kirlia .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kirlia .emoji-shiny  { display: inline; }
 
 /* Kokiyas — Bon / Shiny */
-.pk-kokiyas .pokemon-name { color: #16a34a; }
-.pk-kokiyas .research-reward-name { color: #16a34a; }
+.pk-kokiyas .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kokiyas .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kokiyas .emoji-shiny  { display: inline; }
 
 /* Korillon — Normal / Shiny */
 .pk-korillon .emoji-shiny { display: inline; }
 
 /* Krabby — Bon / Shiny */
-.pk-krabby .pokemon-name { color: #16a34a; }
-.pk-krabby .research-reward-name { color: #16a34a; }
+.pk-krabby .pokemon-name { color: var(--accent-vert-bon); }
+.pk-krabby .research-reward-name { color: var(--accent-vert-bon); }
 .pk-krabby .emoji-shiny  { display: inline; }
 
 /* Krabboss — Bon / Shiny */
-.pk-krabboss .pokemon-name { color: #16a34a; }
-.pk-krabboss .research-reward-name { color: #16a34a; }
+.pk-krabboss .pokemon-name { color: var(--accent-vert-bon); }
+.pk-krabboss .research-reward-name { color: var(--accent-vert-bon); }
 .pk-krabboss .emoji-shiny  { display: inline; }
 
 /* Kraknoix — Bon / Shiny */
-.pk-kraknoix .pokemon-name { color: #16a34a; }
-.pk-kraknoix .research-reward-name { color: #16a34a; }
+.pk-kraknoix .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kraknoix .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kraknoix .emoji-shiny  { display: inline; }
 
 /* Kranidos — Bon / Shiny */
-.pk-kranidos .pokemon-name { color: #16a34a; }
-.pk-kranidos .research-reward-name { color: #16a34a; }
+.pk-kranidos .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kranidos .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kranidos .emoji-shiny  { display: inline; }
 
 /* Kungfouine — Bon / Shiny */
-.pk-kungfouine .pokemon-name { color: #16a34a; }
-.pk-kungfouine .research-reward-name { color: #16a34a; }
+.pk-kungfouine .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kungfouine .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kungfouine .emoji-shiny  { display: inline; }
 
 /* Kyogre — Bon / Shiny */
-.pk-kyogre .pokemon-name { color: #16a34a; }
-.pk-kyogre .research-reward-name { color: #16a34a; }
+.pk-kyogre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kyogre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kyogre .emoji-shiny  { display: inline; }
 
 /* Kyurem — Bon / Shiny */
-.pk-kyurem .pokemon-name { color: #16a34a; }
-.pk-kyurem .research-reward-name { color: #16a34a; }
+.pk-kyurem .pokemon-name { color: var(--accent-vert-bon); }
+.pk-kyurem .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kyurem .emoji-shiny  { display: inline; }
 
 
@@ -1527,66 +1531,66 @@
    ============================================================ */
 
 /* Laggron — Bon / Shiny (couvre Méga-Laggron) */
-.pk-laggron .pokemon-name { color: #16a34a; }
-.pk-laggron .research-reward-name { color: #16a34a; }
+.pk-laggron .pokemon-name { color: var(--accent-vert-bon); }
+.pk-laggron .research-reward-name { color: var(--accent-vert-bon); }
 .pk-laggron .emoji-shiny  { display: inline; }
 
 /* Lainergie — Bon / Shiny */
-.pk-lainergie .pokemon-name { color: #16a34a; }
-.pk-lainergie .research-reward-name { color: #16a34a; }
+.pk-lainergie .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lainergie .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lainergie .emoji-shiny  { display: inline; }
 
 /* Lakmécygne — Bon / Shiny */
-.pk-lakmecygne .pokemon-name { color: #16a34a; }
-.pk-lakmecygne .research-reward-name { color: #16a34a; }
+.pk-lakmecygne .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lakmecygne .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lakmecygne .emoji-shiny  { display: inline; }
 
 /* Lampéroie — Bon / Shiny */
-.pk-lamperoie .pokemon-name { color: #16a34a; }
-.pk-lamperoie .research-reward-name { color: #16a34a; }
+.pk-lamperoie .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lamperoie .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lamperoie .emoji-shiny  { display: inline; }
 
 /* Lançargot — Bon / Shiny */
-.pk-lancargot .pokemon-name { color: #16a34a; }
-.pk-lancargot .research-reward-name { color: #16a34a; }
+.pk-lancargot .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lancargot .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lancargot .emoji-shiny  { display: inline; }
 
 /* Lanssorien — Bon / Shiny */
-.pk-lanssorien .pokemon-name { color: #16a34a; }
-.pk-lanssorien .research-reward-name { color: #16a34a; }
+.pk-lanssorien .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lanssorien .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lanssorien .emoji-shiny  { display: inline; }
 
 /* Laporeille — Normal / Shiny */
 .pk-laporeille .emoji-shiny { display: inline; }
 
 /* Lapyro — Bon / Shiny */
-.pk-lapyro .pokemon-name { color: #16a34a; }
-.pk-lapyro .research-reward-name { color: #16a34a; }
+.pk-lapyro .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lapyro .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lapyro .emoji-shiny  { display: inline; }
 
 /* Larméléon — Bon / Shiny */
-.pk-larmeleon .pokemon-name { color: #16a34a; }
-.pk-larmeleon .research-reward-name { color: #16a34a; }
+.pk-larmeleon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-larmeleon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-larmeleon .emoji-shiny  { display: inline; }
 
 /* Larveyette — Bon / Shiny */
-.pk-larveyette .pokemon-name { color: #16a34a; }
-.pk-larveyette .research-reward-name { color: #16a34a; }
+.pk-larveyette .pokemon-name { color: var(--accent-vert-bon); }
+.pk-larveyette .research-reward-name { color: var(--accent-vert-bon); }
 .pk-larveyette .emoji-shiny  { display: inline; }
 
 /* Larvibule — Bon / Shiny */
-.pk-larvibule .pokemon-name { color: #16a34a; }
-.pk-larvibule .research-reward-name { color: #16a34a; }
+.pk-larvibule .pokemon-name { color: var(--accent-vert-bon); }
+.pk-larvibule .research-reward-name { color: var(--accent-vert-bon); }
 .pk-larvibule .emoji-shiny  { display: inline; }
 
 /* Latias — Bon / Shiny (couvre Méga-Latias) */
-.pk-latias .pokemon-name { color: #16a34a; }
-.pk-latias .research-reward-name { color: #16a34a; }
+.pk-latias .pokemon-name { color: var(--accent-vert-bon); }
+.pk-latias .research-reward-name { color: var(--accent-vert-bon); }
 .pk-latias .emoji-shiny  { display: inline; }
 
 /* Latios — Bon / Shiny (couvre Méga-Latios) */
-.pk-latios .pokemon-name { color: #16a34a; }
-.pk-latios .research-reward-name { color: #16a34a; }
+.pk-latios .pokemon-name { color: var(--accent-vert-bon); }
+.pk-latios .research-reward-name { color: var(--accent-vert-bon); }
 .pk-latios .emoji-shiny  { display: inline; }
 
 /* Lewsor — Normal / Shiny */
@@ -1599,18 +1603,18 @@
 .pk-lilia .emoji-shiny { display: inline; }
 
 /* Lilliterelle — Bon / Shiny */
-.pk-lilliterelle .pokemon-name { color: #16a34a; }
-.pk-lilliterelle .research-reward-name { color: #16a34a; }
+.pk-lilliterelle .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lilliterelle .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lilliterelle .emoji-shiny  { display: inline; }
 
 /* Lestombaile — Bon / Shiny */
-.pk-lestombaile .pokemon-name { color: #16a34a; }
-.pk-lestombaile .research-reward-name { color: #16a34a; }
+.pk-lestombaile .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lestombaile .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lestombaile .emoji-shiny  { display: inline; }
 
 /* Léviator — Bon / Shiny */
-.pk-leviator .pokemon-name { color: #16a34a; }
-.pk-leviator .research-reward-name { color: #16a34a; }
+.pk-leviator .pokemon-name { color: var(--accent-vert-bon); }
+.pk-leviator .research-reward-name { color: var(--accent-vert-bon); }
 .pk-leviator .emoji-shiny  { display: inline; }
 
 /* Leuphorie — Normal / Shiny */
@@ -1623,13 +1627,13 @@
 .pk-lianaja .emoji-shiny { display: inline; }
 
 /* Libégon — Bon / Shiny */
-.pk-libegon .pokemon-name { color: #16a34a; }
-.pk-libegon .research-reward-name { color: #16a34a; }
+.pk-libegon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-libegon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-libegon .emoji-shiny  { display: inline; }
 
 /* Lézargus — Bon / Shiny */
-.pk-lezargus .pokemon-name { color: #16a34a; }
-.pk-lezargus .research-reward-name { color: #16a34a; }
+.pk-lezargus .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lezargus .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lezargus .emoji-shiny  { display: inline; }
 
 /* Limonde — Normal / Shiny */
@@ -1648,23 +1652,23 @@
 .pk-lockpin .emoji-shiny { display: inline; }
 
 /* Lixy — Bon / Shiny */
-.pk-lixy .pokemon-name { color: #16a34a; }
-.pk-lixy .research-reward-name { color: #16a34a; }
+.pk-lixy .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lixy .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lixy .emoji-shiny  { display: inline; }
 
 /* Lippouti — Bon / Shiny */
-.pk-lippouti .pokemon-name { color: #16a34a; }
-.pk-lippouti .research-reward-name { color: #16a34a; }
+.pk-lippouti .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lippouti .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lippouti .emoji-shiny  { display: inline; }
 
 /* Lippoutou — Bon / Shiny */
-.pk-lippoutou .pokemon-name { color: #16a34a; }
-.pk-lippoutou .research-reward-name { color: #16a34a; }
+.pk-lippoutou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lippoutou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lippoutou .emoji-shiny  { display: inline; }
 
 /* Lokhlass — Bon / Shiny */
-.pk-lokhlass .pokemon-name { color: #16a34a; }
-.pk-lokhlass .research-reward-name { color: #16a34a; }
+.pk-lokhlass .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lokhlass .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lokhlass .emoji-shiny { display: inline; }
 
 /* Lombre — Normal / Shiny */
@@ -1674,41 +1678,41 @@
 .pk-limagma .emoji-shiny { display: inline; }
 
 /* Limaspeed — Bon / Shiny */
-.pk-limaspeed .pokemon-name { color: #16a34a; }
-.pk-limaspeed .research-reward-name { color: #16a34a; }
+.pk-limaspeed .pokemon-name { color: var(--accent-vert-bon); }
+.pk-limaspeed .research-reward-name { color: var(--accent-vert-bon); }
 .pk-limaspeed .emoji-shiny  { display: inline; }
 
 /* Ludicolo — Normal / Shiny */
 .pk-ludicolo .emoji-shiny { display: inline; }
 
 /* Lugulabre — Bon / Shiny */
-.pk-lugulabre .pokemon-name { color: #16a34a; }
-.pk-lugulabre .research-reward-name { color: #16a34a; }
+.pk-lugulabre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lugulabre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lugulabre .emoji-shiny  { display: inline; }
 
 /* Luxio — Bon / Shiny */
-.pk-luxio .pokemon-name { color: #16a34a; }
-.pk-luxio .research-reward-name { color: #16a34a; }
+.pk-luxio .pokemon-name { color: var(--accent-vert-bon); }
+.pk-luxio .research-reward-name { color: var(--accent-vert-bon); }
 .pk-luxio .emoji-shiny  { display: inline; }
 
 /* Luxray — Bon / Shiny */
-.pk-luxray .pokemon-name { color: #16a34a; }
-.pk-luxray .research-reward-name { color: #16a34a; }
+.pk-luxray .pokemon-name { color: var(--accent-vert-bon); }
+.pk-luxray .research-reward-name { color: var(--accent-vert-bon); }
 .pk-luxray .emoji-shiny  { display: inline; }
 
 /* Lugia — Bon / Shiny */
-.pk-lugia .pokemon-name { color: #16a34a; }
-.pk-lugia .research-reward-name { color: #16a34a; }
+.pk-lugia .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lugia .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lugia .emoji-shiny  { display: inline; }
 
 /* Lucario — Bon / Shiny (couvre Méga-Lucario et Méga-Lucario-Z) */
-.pk-lucario .pokemon-name { color: #16a34a; }
-.pk-lucario .research-reward-name { color: #16a34a; }
+.pk-lucario .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lucario .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lucario .emoji-shiny  { display: inline; }
 
 /* Lucanon — Bon / Shiny */
-.pk-lucanon .pokemon-name { color: #16a34a; }
-.pk-lucanon .research-reward-name { color: #16a34a; }
+.pk-lucanon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lucanon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-lucanon .emoji-shiny  { display: inline; }
 
 
@@ -1717,58 +1721,58 @@
    ============================================================ */
 
 /* Machoc — Bon / Shiny */
-.pk-machoc .pokemon-name { color: #16a34a; }
-.pk-machoc .research-reward-name { color: #16a34a; }
+.pk-machoc .pokemon-name { color: var(--accent-vert-bon); }
+.pk-machoc .research-reward-name { color: var(--accent-vert-bon); }
 .pk-machoc .emoji-shiny  { display: inline; }
 
 /* Machopeur — Bon / Shiny */
-.pk-machopeur .pokemon-name { color: #16a34a; }
-.pk-machopeur .research-reward-name { color: #16a34a; }
+.pk-machopeur .pokemon-name { color: var(--accent-vert-bon); }
+.pk-machopeur .research-reward-name { color: var(--accent-vert-bon); }
 .pk-machopeur .emoji-shiny  { display: inline; }
 
 /* Mackogneur — Bon / Shiny */
-.pk-mackogneur .pokemon-name { color: #16a34a; }
-.pk-mackogneur .research-reward-name { color: #16a34a; }
+.pk-mackogneur .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mackogneur .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mackogneur .emoji-shiny  { display: inline; }
 
 /* Magby — Bon / Shiny */
-.pk-magby .pokemon-name { color: #16a34a; }
-.pk-magby .research-reward-name { color: #16a34a; }
+.pk-magby .pokemon-name { color: var(--accent-vert-bon); }
+.pk-magby .research-reward-name { color: var(--accent-vert-bon); }
 .pk-magby .emoji-shiny  { display: inline; }
 
 /* Maganon — Bon / Shiny */
-.pk-maganon .pokemon-name { color: #16a34a; }
-.pk-maganon .research-reward-name { color: #16a34a; }
+.pk-maganon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-maganon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-maganon .emoji-shiny  { display: inline; }
 
 /* Magicarpe — Bon / Shiny */
-.pk-magicarpe .pokemon-name { color: #16a34a; }
-.pk-magicarpe .research-reward-name { color: #16a34a; }
+.pk-magicarpe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-magicarpe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-magicarpe .emoji-shiny  { display: inline; }
 
 /* Magmar — Bon / Shiny */
-.pk-magmar .pokemon-name { color: #16a34a; }
-.pk-magmar .research-reward-name { color: #16a34a; }
+.pk-magmar .pokemon-name { color: var(--accent-vert-bon); }
+.pk-magmar .research-reward-name { color: var(--accent-vert-bon); }
 .pk-magmar .emoji-shiny  { display: inline; }
 
 /* Magnéti — Bon / Shiny */
-.pk-magneti .pokemon-name { color: #16a34a; }
-.pk-magneti .research-reward-name { color: #16a34a; }
+.pk-magneti .pokemon-name { color: var(--accent-vert-bon); }
+.pk-magneti .research-reward-name { color: var(--accent-vert-bon); }
 .pk-magneti .emoji-shiny  { display: inline; }
 
 /* Magnéton — Bon / Shiny */
-.pk-magneton .pokemon-name { color: #16a34a; }
-.pk-magneton .research-reward-name { color: #16a34a; }
+.pk-magneton .pokemon-name { color: var(--accent-vert-bon); }
+.pk-magneton .research-reward-name { color: var(--accent-vert-bon); }
 .pk-magneton .emoji-shiny  { display: inline; }
 
 /* Magnézone — Bon / Shiny */
-.pk-magnezone .pokemon-name { color: #16a34a; }
-.pk-magnezone .research-reward-name { color: #16a34a; }
+.pk-magnezone .pokemon-name { color: var(--accent-vert-bon); }
+.pk-magnezone .research-reward-name { color: var(--accent-vert-bon); }
 .pk-magnezone .emoji-shiny  { display: inline; }
 
 /* Makuhita — Bon / Shiny */
-.pk-makuhita .pokemon-name { color: #16a34a; }
-.pk-makuhita .research-reward-name { color: #16a34a; }
+.pk-makuhita .pokemon-name { color: var(--accent-vert-bon); }
+.pk-makuhita .research-reward-name { color: var(--accent-vert-bon); }
 .pk-makuhita .emoji-shiny  { display: inline; }
 
 /* Macronium — Normal / Shiny */
@@ -1778,33 +1782,33 @@
 .pk-majaspic .emoji-shiny { display: inline; }
 
 /* Malamandre — Bon / Shiny */
-.pk-malamandre .pokemon-name { color: #16a34a; }
-.pk-malamandre .research-reward-name { color: #16a34a; }
+.pk-malamandre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-malamandre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-malamandre .emoji-shiny  { display: inline; }
 
 /* Malvalame — Bon / Shiny */
-.pk-malvalame .pokemon-name { color: #16a34a; }
-.pk-malvalame .research-reward-name { color: #16a34a; }
+.pk-malvalame .pokemon-name { color: var(--accent-vert-bon); }
+.pk-malvalame .research-reward-name { color: var(--accent-vert-bon); }
 .pk-malvalame .emoji-shiny  { display: inline; }
 
 /* Malosse — Bon / Shiny */
-.pk-malosse .pokemon-name { color: #16a34a; }
-.pk-malosse .research-reward-name { color: #16a34a; }
+.pk-malosse .pokemon-name { color: var(--accent-vert-bon); }
+.pk-malosse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-malosse .emoji-shiny  { display: inline; }
 
 /* Mammochon — Bon / Shiny */
-.pk-mammochon .pokemon-name { color: #16a34a; }
-.pk-mammochon .research-reward-name { color: #16a34a; }
+.pk-mammochon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mammochon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mammochon .emoji-shiny  { display: inline; }
 
 /* Manternel — Bon / Shiny */
-.pk-manternel .pokemon-name { color: #16a34a; }
-.pk-manternel .research-reward-name { color: #16a34a; }
+.pk-manternel .pokemon-name { color: var(--accent-vert-bon); }
+.pk-manternel .research-reward-name { color: var(--accent-vert-bon); }
 .pk-manternel .emoji-shiny  { display: inline; }
 
 /* Marcacrin — Bon / Shiny */
-.pk-marcacrin .pokemon-name { color: #16a34a; }
-.pk-marcacrin .research-reward-name { color: #16a34a; }
+.pk-marcacrin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-marcacrin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-marcacrin .emoji-shiny  { display: inline; }
 
 /* Marill — Normal / Shiny */
@@ -1814,41 +1818,41 @@
 .pk-manzai .emoji-shiny { display: inline; }
 
 /* Marisson — Bon / Shiny */
-.pk-marisson .pokemon-name { color: #16a34a; }
-.pk-marisson .research-reward-name { color: #16a34a; }
+.pk-marisson .pokemon-name { color: var(--accent-vert-bon); }
+.pk-marisson .research-reward-name { color: var(--accent-vert-bon); }
 .pk-marisson .emoji-shiny  { display: inline; }
 
 /* Marshadow — Bon / Shiny */
-.pk-marshadow .pokemon-name { color: #16a34a; }
-.pk-marshadow .research-reward-name { color: #16a34a; }
+.pk-marshadow .pokemon-name { color: var(--accent-vert-bon); }
+.pk-marshadow .research-reward-name { color: var(--accent-vert-bon); }
 .pk-marshadow .emoji-shiny  { display: inline; }
 
 /* Mastouffe — Normal / Shiny */
 .pk-mastouffe .emoji-shiny { display: inline; }
 
 /* Matourgeon — Bon / Shiny */
-.pk-matourgeon .pokemon-name { color: #16a34a; }
-.pk-matourgeon .research-reward-name { color: #16a34a; }
+.pk-matourgeon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-matourgeon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-matourgeon .emoji-shiny  { display: inline; }
 
 /* Mascaïman — Bon / Shiny */
-.pk-mascaiman .pokemon-name { color: #16a34a; }
-.pk-mascaiman .research-reward-name { color: #16a34a; }
+.pk-mascaiman .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mascaiman .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mascaiman .emoji-shiny  { display: inline; }
 
 /* Massko — Bon / Shiny */
-.pk-massko .pokemon-name { color: #16a34a; }
-.pk-massko .research-reward-name { color: #16a34a; }
+.pk-massko .pokemon-name { color: var(--accent-vert-bon); }
+.pk-massko .research-reward-name { color: var(--accent-vert-bon); }
 .pk-massko .emoji-shiny  { display: inline; }
 
 /* Mateloutre — Bon / Shiny */
-.pk-mateloutre .pokemon-name { color: #16a34a; }
-.pk-mateloutre .research-reward-name { color: #16a34a; }
+.pk-mateloutre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mateloutre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mateloutre .emoji-shiny  { display: inline; }
 
 /* Matoufeu — Bon / Shiny */
-.pk-matoufeu .pokemon-name { color: #16a34a; }
-.pk-matoufeu .research-reward-name { color: #16a34a; }
+.pk-matoufeu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-matoufeu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-matoufeu .emoji-shiny  { display: inline; }
 
 /* Méganium — Normal / Shiny */
@@ -1858,107 +1862,107 @@
 .pk-miamiasme .emoji-shiny { display: inline; }
 
 /* Miascarade — Bon / Shiny */
-.pk-miascarade .pokemon-name { color: #16a34a; }
-.pk-miascarade .research-reward-name { color: #16a34a; }
+.pk-miascarade .pokemon-name { color: var(--accent-vert-bon); }
+.pk-miascarade .research-reward-name { color: var(--accent-vert-bon); }
 .pk-miascarade .emoji-shiny  { display: inline; }
 
 /* Milobellus — Bon / Shiny */
-.pk-milobellus .pokemon-name { color: #16a34a; }
-.pk-milobellus .research-reward-name { color: #16a34a; }
+.pk-milobellus .pokemon-name { color: var(--accent-vert-bon); }
+.pk-milobellus .research-reward-name { color: var(--accent-vert-bon); }
 .pk-milobellus .emoji-shiny  { display: inline; }
 
 /* Mimitoss — Bon / Shiny */
-.pk-mimitoss .pokemon-name { color: #16a34a; }
-.pk-mimitoss .research-reward-name { color: #16a34a; }
+.pk-mimitoss .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mimitoss .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mimitoss .emoji-shiny  { display: inline; }
 
 /* Miaouss — Normal / Shiny */
 .pk-miaouss .emoji-shiny { display: inline; }
 
 /* Miaouss de Galar — Bon / Shiny */
-.pk-miaouss-g .pokemon-name { color: #16a34a; }
-.pk-miaouss-g .research-reward-name { color: #16a34a; }
+.pk-miaouss-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-miaouss-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-miaouss-g .emoji-shiny  { display: inline; }
 
 /* Miasmax — Normal / Shiny */
 .pk-miasmax .emoji-shiny { display: inline; }
 
 /* M. Mime de Galar — Bon / Shiny */
-.pk-mmime-g .pokemon-name { color: #16a34a; }
-.pk-mmime-g .research-reward-name { color: #16a34a; }
+.pk-mmime-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mmime-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mmime-g .emoji-shiny  { display: inline; }
 
 /* M. Glaquette — Bon / Shiny */
-.pk-mglaquette .pokemon-name { color: #16a34a; }
-.pk-mglaquette .research-reward-name { color: #16a34a; }
+.pk-mglaquette .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mglaquette .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mglaquette .emoji-shiny  { display: inline; }
 
 /* Minotaupe — Bon / Shiny */
-.pk-minotaupe .pokemon-name { color: #16a34a; }
-.pk-minotaupe .research-reward-name { color: #16a34a; }
+.pk-minotaupe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-minotaupe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-minotaupe .emoji-shiny  { display: inline; }
 
 /* Meltan — Bon / Shiny */
-.pk-meltan .pokemon-name { color: #16a34a; }
-.pk-meltan .research-reward-name { color: #16a34a; }
+.pk-meltan .pokemon-name { color: var(--accent-vert-bon); }
+.pk-meltan .research-reward-name { color: var(--accent-vert-bon); }
 .pk-meltan .emoji-shiny  { display: inline; }
 
 /* Melmetal — Bon / Shiny */
-.pk-melmetal .pokemon-name { color: #16a34a; }
-.pk-melmetal .research-reward-name { color: #16a34a; }
+.pk-melmetal .pokemon-name { color: var(--accent-vert-bon); }
+.pk-melmetal .research-reward-name { color: var(--accent-vert-bon); }
 .pk-melmetal .emoji-shiny  { display: inline; }
 
 /* Mentali — Bon / Shiny */
-.pk-mentali .pokemon-name { color: #16a34a; }
-.pk-mentali .research-reward-name { color: #16a34a; }
+.pk-mentali .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mentali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mentali .emoji-shiny  { display: inline; }
 
 /* Mewtwo — Bon / Shiny */
-.pk-mewtwo .pokemon-name { color: #16a34a; }
-.pk-mewtwo .research-reward-name { color: #16a34a; }
+.pk-mewtwo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mewtwo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mewtwo .emoji-shiny  { display: inline; }
 
 /* Métalosse — Bon / Shiny (couvre Méga-Métalosse) */
-.pk-metalosse .pokemon-name { color: #16a34a; }
-.pk-metalosse .research-reward-name { color: #16a34a; }
+.pk-metalosse .pokemon-name { color: var(--accent-vert-bon); }
+.pk-metalosse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-metalosse .emoji-shiny  { display: inline; }
 
 /* Mégapagos — Normal / Shiny */
 .pk-megapagos .emoji-shiny { display: inline; }
 
 /* Mélancolux — Bon / Shiny */
-.pk-melancolux .pokemon-name { color: #16a34a; }
-.pk-melancolux .research-reward-name { color: #16a34a; }
+.pk-melancolux .pokemon-name { color: var(--accent-vert-bon); }
+.pk-melancolux .research-reward-name { color: var(--accent-vert-bon); }
 .pk-melancolux .emoji-shiny  { display: inline; }
 
 /* Mélo — Bon / Shiny */
-.pk-melo .pokemon-name { color: #16a34a; }
-.pk-melo .research-reward-name { color: #16a34a; }
+.pk-melo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-melo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-melo .emoji-shiny  { display: inline; }
 
 /* Mélodelfe — Bon / Shiny */
-.pk-melodelfe .pokemon-name { color: #16a34a; }
-.pk-melodelfe .research-reward-name { color: #16a34a; }
+.pk-melodelfe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-melodelfe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-melodelfe .emoji-shiny  { display: inline; }
 
 /* Mélofée — Bon / Shiny */
-.pk-melofee .pokemon-name { color: #16a34a; }
-.pk-melofee .research-reward-name { color: #16a34a; }
+.pk-melofee .pokemon-name { color: var(--accent-vert-bon); }
+.pk-melofee .research-reward-name { color: var(--accent-vert-bon); }
 .pk-melofee .emoji-shiny  { display: inline; }
 
 /* Moustillon — Bon / Shiny */
-.pk-moustillon .pokemon-name { color: #16a34a; }
-.pk-moustillon .research-reward-name { color: #16a34a; }
+.pk-moustillon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-moustillon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-moustillon .emoji-shiny  { display: inline; }
 
 /* Métang — Bon / Shiny */
-.pk-metang .pokemon-name { color: #16a34a; }
-.pk-metang .research-reward-name { color: #16a34a; }
+.pk-metang .pokemon-name { color: var(--accent-vert-bon); }
+.pk-metang .research-reward-name { color: var(--accent-vert-bon); }
 .pk-metang .emoji-shiny  { display: inline; }
 
 /* Minidraco — Bon / Shiny */
-.pk-minidraco .pokemon-name { color: #16a34a; }
-.pk-minidraco .research-reward-name { color: #16a34a; }
+.pk-minidraco .pokemon-name { color: var(--accent-vert-bon); }
+.pk-minidraco .research-reward-name { color: var(--accent-vert-bon); }
 .pk-minidraco .emoji-shiny  { display: inline; }
 
 /* Minisange — Normal / Shiny */
@@ -1967,17 +1971,19 @@
 /* Momartik — Normal / Shiny */
 .pk-momartik .emoji-shiny { display: inline; }
 
-/* Monorpale — Normal / Shiny */
-.pk-monorpale .emoji-shiny { display: inline; }
+/* Monorpale — Bon / Shiny */
+.pk-monorpale .pokemon-name { color: var(--accent-vert-bon); }
+.pk-monorpale .research-reward-name { color: var(--accent-vert-bon); }
+.pk-monorpale .emoji-shiny  { display: inline; }
 
 /* Motisma Forme Lavage — Bon / Shiny */
-.pk-motisma-l .pokemon-name { color: #16a34a; }
-.pk-motisma-l .research-reward-name { color: #16a34a; }
+.pk-motisma-l .pokemon-name { color: var(--accent-vert-bon); }
+.pk-motisma-l .research-reward-name { color: var(--accent-vert-bon); }
 .pk-motisma-l .emoji-shiny  { display: inline; }
 
 /* Mouscoto — Bon / Shiny */
-.pk-mouscoto .pokemon-name { color: #16a34a; }
-.pk-mouscoto .research-reward-name { color: #16a34a; }
+.pk-mouscoto .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mouscoto .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mouscoto .emoji-shiny  { display: inline; }
 
 /* Moumouflon — Normal / Shiny */
@@ -1987,13 +1993,13 @@
 .pk-moumouton .emoji-shiny { display: inline; }
 
 /* Moufouette — Bon / Shiny */
-.pk-moufouette .pokemon-name { color: #16a34a; }
-.pk-moufouette .research-reward-name { color: #16a34a; }
+.pk-moufouette .pokemon-name { color: var(--accent-vert-bon); }
+.pk-moufouette .research-reward-name { color: var(--accent-vert-bon); }
 .pk-moufouette .emoji-shiny  { display: inline; }
 
 /* Moufflair — Bon / Shiny */
-.pk-moufflair .pokemon-name { color: #16a34a; }
-.pk-moufflair .research-reward-name { color: #16a34a; }
+.pk-moufflair .pokemon-name { color: var(--accent-vert-bon); }
+.pk-moufflair .research-reward-name { color: var(--accent-vert-bon); }
 .pk-moufflair .emoji-shiny  { display: inline; }
 
 /* Mucuscule — Normal / Shiny */
@@ -2006,13 +2012,13 @@
 .pk-muplodocus .emoji-shiny { display: inline; }
 
 /* Mysdibule — Bon / Shiny */
-.pk-mysdibule .pokemon-name { color: #16a34a; }
-.pk-mysdibule .research-reward-name { color: #16a34a; }
+.pk-mysdibule .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mysdibule .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mysdibule .emoji-shiny  { display: inline; }
 
 /* Mygavolt — Bon / Shiny */
-.pk-mygavolt .pokemon-name { color: #16a34a; }
-.pk-mygavolt .research-reward-name { color: #16a34a; }
+.pk-mygavolt .pokemon-name { color: var(--accent-vert-bon); }
+.pk-mygavolt .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mygavolt .emoji-shiny  { display: inline; }
 
 /* Mustébouée — Normal / Shiny */
@@ -2027,8 +2033,8 @@
 .pk-noarfang .emoji-shiny { display: inline; }
 
 /* Necrozma — Bon / Shiny */
-.pk-necrozma .pokemon-name { color: #16a34a; }
-.pk-necrozma .research-reward-name { color: #16a34a; }
+.pk-necrozma .pokemon-name { color: var(--accent-vert-bon); }
+.pk-necrozma .research-reward-name { color: var(--accent-vert-bon); }
 .pk-necrozma .emoji-shiny  { display: inline; }
 
 /* Nanméouïe — Normal / Shiny (couvre Méga-Nanméouïe) */
@@ -2044,104 +2050,104 @@
 .pk-nenupiot .emoji-shiny { display: inline; }
 
 /* Ningale — Bon / Shiny */
-.pk-ningale .pokemon-name { color: #16a34a; }
-.pk-ningale .research-reward-name { color: #16a34a; }
+.pk-ningale .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ningale .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ningale .emoji-shiny  { display: inline; }
 
 /* Ninjask — Bon / Shiny */
-.pk-ninjask .pokemon-name { color: #16a34a; }
-.pk-ninjask .research-reward-name { color: #16a34a; }
+.pk-ninjask .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ninjask .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ninjask .emoji-shiny  { display: inline; }
 
 /* Nigirigon — Bon */
-.pk-nigirigon .pokemon-name { color: #16a34a; }
-.pk-nigirigon .research-reward-name { color: #16a34a; }
+.pk-nigirigon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nigirigon .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Nidoran Mâle — Bon / Shiny */
-.pk-nidoranm .pokemon-name { color: #16a34a; }
-.pk-nidoranm .research-reward-name { color: #16a34a; }
+.pk-nidoranm .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nidoranm .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nidoranm .emoji-shiny  { display: inline; }
 
 /* Nidorino — Bon / Shiny */
-.pk-nidorino .pokemon-name { color: #16a34a; }
-.pk-nidorino .research-reward-name { color: #16a34a; }
+.pk-nidorino .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nidorino .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nidorino .emoji-shiny { display: inline; }
 
 /* Nidoking — Bon / Shiny */
-.pk-nidoking .pokemon-name { color: #16a34a; }
-.pk-nidoking .research-reward-name { color: #16a34a; }
+.pk-nidoking .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nidoking .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nidoking .emoji-shiny  { display: inline; }
 
 /* Noacier — Normal / Shiny */
 .pk-noacier .emoji-shiny { display: inline; }
 
 /* Noadkoko — Bon / Shiny */
-.pk-noadkoko .pokemon-name { color: #16a34a; }
-.pk-noadkoko .research-reward-name { color: #16a34a; }
+.pk-noadkoko .pokemon-name { color: var(--accent-vert-bon); }
+.pk-noadkoko .research-reward-name { color: var(--accent-vert-bon); }
 .pk-noadkoko .emoji-shiny  { display: inline; }
 
 /* Noadkoko d'Alola — Bon / Shiny */
-.pk-noadkoko-a .pokemon-name { color: #16a34a; }
-.pk-noadkoko-a .research-reward-name { color: #16a34a; }
+.pk-noadkoko-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-noadkoko-a .research-reward-name { color: var(--accent-vert-bon); }
 .pk-noadkoko-a .emoji-shiny  { display: inline; }
 
 /* Nounourson — Bon / Shiny */
-.pk-nounourson .pokemon-name { color: #16a34a; }
-.pk-nounourson .research-reward-name { color: #16a34a; }
+.pk-nounourson .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nounourson .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nounourson .emoji-shiny  { display: inline; }
 
 /* Noctali — Normal / Shiny */
 .pk-noctali .emoji-shiny { display: inline; }
 
 /* Noctunoir — Bon / Shiny */
-.pk-noctunoir .pokemon-name { color: #16a34a; }
-.pk-noctunoir .research-reward-name { color: #16a34a; }
+.pk-noctunoir .pokemon-name { color: var(--accent-vert-bon); }
+.pk-noctunoir .research-reward-name { color: var(--accent-vert-bon); }
 .pk-noctunoir .emoji-shiny  { display: inline; }
 
 /* Nodulithe — Bon / Shiny */
-.pk-nodulithe .pokemon-name { color: #16a34a; }
-.pk-nodulithe .research-reward-name { color: #16a34a; }
+.pk-nodulithe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nodulithe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nodulithe .emoji-shiny  { display: inline; }
 
 /* Noeunoeuf — Bon / Shiny */
-.pk-noeunoeuf .pokemon-name { color: #16a34a; }
-.pk-noeunoeuf .research-reward-name { color: #16a34a; }
+.pk-noeunoeuf .pokemon-name { color: var(--accent-vert-bon); }
+.pk-noeunoeuf .research-reward-name { color: var(--accent-vert-bon); }
 .pk-noeunoeuf .emoji-shiny  { display: inline; }
 
 
 /* Nymphali — Bon / Shiny */
-.pk-nymphali .pokemon-name { color: #16a34a; }
-.pk-nymphali .research-reward-name { color: #16a34a; }
+.pk-nymphali .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nymphali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nymphali .emoji-shiny  { display: inline; }
 
 /* Nosférapti — Bon / Shiny */
-.pk-nosferapti .pokemon-name { color: #16a34a; }
-.pk-nosferapti .research-reward-name { color: #16a34a; }
+.pk-nosferapti .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nosferapti .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nosferapti .emoji-shiny  { display: inline; }
 
 /* Nosféralto — Bon / Shiny */
-.pk-nosferalto .pokemon-name { color: #16a34a; }
-.pk-nosferalto .research-reward-name { color: #16a34a; }
+.pk-nosferalto .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nosferalto .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nosferalto .emoji-shiny  { display: inline; }
 
 /* Nostenfer — Bon / Shiny */
-.pk-nostenfer .pokemon-name { color: #16a34a; }
-.pk-nostenfer .research-reward-name { color: #16a34a; }
+.pk-nostenfer .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nostenfer .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nostenfer .emoji-shiny  { display: inline; }
 
 /* Nidoran Femelle — Bon / Shiny */
-.pk-nidoranf .pokemon-name { color: #16a34a; }
-.pk-nidoranf .research-reward-name { color: #16a34a; }
+.pk-nidoranf .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nidoranf .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nidoranf .emoji-shiny { display: inline; }
 
 /* Nidorina — Bon / Shiny */
-.pk-nidorina .pokemon-name { color: #16a34a; }
-.pk-nidorina .research-reward-name { color: #16a34a; }
+.pk-nidorina .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nidorina .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nidorina .emoji-shiny { display: inline; }
 
 /* Nidoqueen — Bon / Shiny */
-.pk-nidoqueen .pokemon-name { color: #16a34a; }
-.pk-nidoqueen .research-reward-name { color: #16a34a; }
+.pk-nidoqueen .pokemon-name { color: var(--accent-vert-bon); }
+.pk-nidoqueen .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nidoqueen .emoji-shiny { display: inline; }
 
 /* ============================================================
@@ -2149,85 +2155,85 @@
    ============================================================ */
 
 /* Obalie — Bon / Shiny */
-.pk-obalie .pokemon-name { color: #16a34a; }
-.pk-obalie .research-reward-name { color: #16a34a; }
+.pk-obalie .pokemon-name { color: var(--accent-vert-bon); }
+.pk-obalie .research-reward-name { color: var(--accent-vert-bon); }
 .pk-obalie .emoji-shiny { display: inline; }
 
 /* Octillery — Normal / Shiny */
 .pk-octillery .emoji-shiny { display: inline; }
 
 /* Ohmassacre — Bon / Shiny */
-.pk-ohmassacre .pokemon-name { color: #16a34a; }
-.pk-ohmassacre .research-reward-name { color: #16a34a; }
+.pk-ohmassacre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ohmassacre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ohmassacre .emoji-shiny  { display: inline; }
 
 /* Okéoké — Normal / Shiny */
 .pk-okeoke .emoji-shiny { display: inline; }
 
 /* Ouistricram — Bon / Shiny */
-.pk-ouistricram .pokemon-name { color: #16a34a; }
-.pk-ouistricram .research-reward-name { color: #16a34a; }
+.pk-ouistricram .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ouistricram .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ouistricram .emoji-shiny  { display: inline; }
 
 /* Ouvrifier — Bon / Shiny */
-.pk-ouvrifier .pokemon-name { color: #16a34a; }
-.pk-ouvrifier .research-reward-name { color: #16a34a; }
+.pk-ouvrifier .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ouvrifier .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ouvrifier .emoji-shiny  { display: inline; }
 
 /* Olivado — Bon / Shiny */
-.pk-olivado .pokemon-name { color: #16a34a; }
-.pk-olivado .research-reward-name { color: #16a34a; }
+.pk-olivado .pokemon-name { color: var(--accent-vert-bon); }
+.pk-olivado .research-reward-name { color: var(--accent-vert-bon); }
 .pk-olivado .emoji-shiny  { display: inline; }
 
 /* Olivini — Bon / Shiny */
-.pk-olivini .pokemon-name { color: #16a34a; }
-.pk-olivini .research-reward-name { color: #16a34a; }
+.pk-olivini .pokemon-name { color: var(--accent-vert-bon); }
+.pk-olivini .research-reward-name { color: var(--accent-vert-bon); }
 .pk-olivini .emoji-shiny  { display: inline; }
 
 /* Opermine — Bon / Shiny */
-.pk-opermine .pokemon-name { color: #16a34a; }
-.pk-opermine .research-reward-name { color: #16a34a; }
+.pk-opermine .pokemon-name { color: var(--accent-vert-bon); }
+.pk-opermine .research-reward-name { color: var(--accent-vert-bon); }
 .pk-opermine .emoji-shiny  { display: inline; }
 
 /* Onix — Bon / Shiny */
-.pk-onix .pokemon-name { color: #16a34a; }
-.pk-onix .research-reward-name { color: #16a34a; }
+.pk-onix .pokemon-name { color: var(--accent-vert-bon); }
+.pk-onix .research-reward-name { color: var(--accent-vert-bon); }
 .pk-onix .emoji-shiny  { display: inline; }
 
 /* Oniglali — Bon / Shiny (couvre Méga-Oniglali) */
-.pk-oniglali .pokemon-name { color: #16a34a; }
-.pk-oniglali .research-reward-name { color: #16a34a; }
+.pk-oniglali .pokemon-name { color: var(--accent-vert-bon); }
+.pk-oniglali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-oniglali .emoji-shiny  { display: inline; }
 
 /* Oratoria — Bon / Shiny */
-.pk-oratoria .pokemon-name { color: #16a34a; }
-.pk-oratoria .research-reward-name { color: #16a34a; }
+.pk-oratoria .pokemon-name { color: var(--accent-vert-bon); }
+.pk-oratoria .research-reward-name { color: var(--accent-vert-bon); }
 .pk-oratoria .emoji-shiny  { display: inline; }
 
 /* Ossatueur d'Alola — Normal / Shiny */
 .pk-ossatueur-a .emoji-shiny { display: inline; }
 
 /* Otaquin — Bon / Shiny */
-.pk-otaquin .pokemon-name { color: #16a34a; }
-.pk-otaquin .research-reward-name { color: #16a34a; }
+.pk-otaquin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-otaquin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-otaquin .emoji-shiny  { display: inline; }
 
 /* Otarlette — Bon / Shiny */
-.pk-otarlette .pokemon-name { color: #16a34a; }
-.pk-otarlette .research-reward-name { color: #16a34a; }
+.pk-otarlette .pokemon-name { color: var(--accent-vert-bon); }
+.pk-otarlette .research-reward-name { color: var(--accent-vert-bon); }
 .pk-otarlette .emoji-shiny  { display: inline; }
 
 /* Oyacata — Normal / Shiny */
 .pk-oyacata .emoji-shiny { display: inline; }
 
 /* Ouisticram — Bon / Shiny */
-.pk-ouisticram .pokemon-name { color: #16a34a; }
-.pk-ouisticram .research-reward-name { color: #16a34a; }
+.pk-ouisticram .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ouisticram .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ouisticram .emoji-shiny  { display: inline; }
 
 /* Ouistempo — Bon / Shiny */
-.pk-ouistempo .pokemon-name { color: #16a34a; }
-.pk-ouistempo .research-reward-name { color: #16a34a; }
+.pk-ouistempo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ouistempo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ouistempo .emoji-shiny  { display: inline; }
 
 
@@ -2236,41 +2242,41 @@
    ============================================================ */
 
 /* Palarticho — Bon / Shiny */
-.pk-palarticho .pokemon-name { color: #16a34a; }
-.pk-palarticho .research-reward-name { color: #16a34a; }
+.pk-palarticho .pokemon-name { color: var(--accent-vert-bon); }
+.pk-palarticho .research-reward-name { color: var(--accent-vert-bon); }
 .pk-palarticho .emoji-shiny  { display: inline; }
 
 /* Palkia — Bon / Shiny */
-.pk-palkia .pokemon-name { color: #16a34a; }
-.pk-palkia .research-reward-name { color: #16a34a; }
+.pk-palkia .pokemon-name { color: var(--accent-vert-bon); }
+.pk-palkia .research-reward-name { color: var(--accent-vert-bon); }
 .pk-palkia .emoji-shiny  { display: inline; }
 
 /* Palmaval — Bon / Shiny */
-.pk-palmaval .pokemon-name { color: #16a34a; }
-.pk-palmaval .research-reward-name { color: #16a34a; }
+.pk-palmaval .pokemon-name { color: var(--accent-vert-bon); }
+.pk-palmaval .research-reward-name { color: var(--accent-vert-bon); }
 .pk-palmaval .emoji-shiny  { display: inline; }
 
 /* Papilusion — Normal / Shiny */
 .pk-papilusion .emoji-shiny { display: inline; }
 
 /* Pandarbare — Bon / Shiny */
-.pk-pandarbare .pokemon-name { color: #16a34a; }
-.pk-pandarbare .research-reward-name { color: #16a34a; }
+.pk-pandarbare .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pandarbare .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pandarbare .emoji-shiny  { display: inline; }
 
 /* Pandespiègle — Bon / Shiny */
-.pk-pandespiegle .pokemon-name { color: #16a34a; }
-.pk-pandespiegle .research-reward-name { color: #16a34a; }
+.pk-pandespiegle .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pandespiegle .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pandespiegle .emoji-shiny  { display: inline; }
 
 /* Phanpy — Bon / Shiny */
-.pk-phanpy .pokemon-name { color: #16a34a; }
-.pk-phanpy .research-reward-name { color: #16a34a; }
+.pk-phanpy .pokemon-name { color: var(--accent-vert-bon); }
+.pk-phanpy .research-reward-name { color: var(--accent-vert-bon); }
 .pk-phanpy .emoji-shiny  { display: inline; }
 
 /* Pharamp — Bon / Shiny */
-.pk-pharamp .pokemon-name { color: #16a34a; }
-.pk-pharamp .research-reward-name { color: #16a34a; }
+.pk-pharamp .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pharamp .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pharamp .emoji-shiny  { display: inline; }
 
 /* Paras — Normal / Shiny */
@@ -2280,23 +2286,23 @@
 .pk-parasect .emoji-shiny { display: inline; }
 
 /* Phogleur — Bon / Shiny */
-.pk-phogleur .pokemon-name { color: #16a34a; }
-.pk-phogleur .research-reward-name { color: #16a34a; }
+.pk-phogleur .pokemon-name { color: var(--accent-vert-bon); }
+.pk-phogleur .research-reward-name { color: var(--accent-vert-bon); }
 .pk-phogleur .emoji-shiny { display: inline; }
 
 /* Phyllali — Bon / Shiny */
-.pk-phyllali .pokemon-name { color: #16a34a; }
-.pk-phyllali .research-reward-name { color: #16a34a; }
+.pk-phyllali .pokemon-name { color: var(--accent-vert-bon); }
+.pk-phyllali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-phyllali .emoji-shiny  { display: inline; }
 
 /* Pifeuil — Bon / Shiny */
-.pk-pifeuil .pokemon-name { color: #16a34a; }
-.pk-pifeuil .research-reward-name { color: #16a34a; }
+.pk-pifeuil .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pifeuil .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pifeuil .emoji-shiny  { display: inline; }
 
 /* Piétacé — Bon / Shiny */
-.pk-pietace .pokemon-name { color: #16a34a; }
-.pk-pietace .research-reward-name { color: #16a34a; }
+.pk-pietace .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pietace .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pietace .emoji-shiny  { display: inline; }
 
 /* Passerouge — Normal / Shiny */
@@ -2309,63 +2315,63 @@
 .pk-piafabec .emoji-shiny { display: inline; }
 
 /* Pichu — Bon / Shiny */
-.pk-pichu .pokemon-name { color: #16a34a; }
-.pk-pichu .research-reward-name { color: #16a34a; }
+.pk-pichu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pichu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pichu .emoji-shiny  { display: inline; }
 
 /* Picassaut — Bon / Shiny */
-.pk-picassaut .pokemon-name { color: #16a34a; }
-.pk-picassaut .research-reward-name { color: #16a34a; }
+.pk-picassaut .pokemon-name { color: var(--accent-vert-bon); }
+.pk-picassaut .research-reward-name { color: var(--accent-vert-bon); }
 .pk-picassaut .emoji-shiny  { display: inline; }
 
 /* Piclairon — Bon / Shiny */
-.pk-piclairon .pokemon-name { color: #16a34a; }
-.pk-piclairon .research-reward-name { color: #16a34a; }
+.pk-piclairon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-piclairon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-piclairon .emoji-shiny  { display: inline; }
 
 /* Pierroteknik — Bon / Shiny */
-.pk-pierroteknik .pokemon-name { color: #16a34a; }
-.pk-pierroteknik .research-reward-name { color: #16a34a; }
+.pk-pierroteknik .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pierroteknik .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pierroteknik .emoji-shiny  { display: inline; }
 
 /* Pikachu — Bon / Shiny */
-.pk-pikachu .pokemon-name { color: #16a34a; }
-.pk-pikachu .research-reward-name { color: #16a34a; }
+.pk-pikachu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pikachu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pikachu .emoji-shiny  { display: inline; }
 
 /* Pingoléon — Bon / Shiny */
-.pk-pingoleon .pokemon-name { color: #16a34a; }
-.pk-pingoleon .research-reward-name { color: #16a34a; }
+.pk-pingoleon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pingoleon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pingoleon .emoji-shiny  { display: inline; }
 
 /* Pohm — Bon / Shiny */
-.pk-pohm .pokemon-name { color: #16a34a; }
-.pk-pohm .research-reward-name { color: #16a34a; }
+.pk-pohm .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pohm .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pohm .emoji-shiny  { display: inline; }
 
 /* Pohmarmotte — Bon / Shiny */
-.pk-pohmarmotte .pokemon-name { color: #16a34a; }
-.pk-pohmarmotte .research-reward-name { color: #16a34a; }
+.pk-pohmarmotte .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pohmarmotte .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pohmarmotte .emoji-shiny  { display: inline; }
 
 /* Pohmotte — Bon / Shiny */
-.pk-pohmotte .pokemon-name { color: #16a34a; }
-.pk-pohmotte .research-reward-name { color: #16a34a; }
+.pk-pohmotte .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pohmotte .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pohmotte .emoji-shiny  { display: inline; }
 
 /* Pomdramour — Bon / Shiny */
-.pk-pomdramour .pokemon-name { color: #16a34a; }
-.pk-pomdramour .research-reward-name { color: #16a34a; }
+.pk-pomdramour .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pomdramour .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pomdramour .emoji-shiny  { display: inline; }
 
 /* Pomdorochi — Bon / Shiny */
-.pk-pomdorochi .pokemon-name { color: #16a34a; }
-.pk-pomdorochi .research-reward-name { color: #16a34a; }
+.pk-pomdorochi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pomdorochi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pomdorochi .emoji-shiny  { display: inline; }
 
 /* Poichigeon — Bon / Shiny */
-.pk-poichigeon .pokemon-name { color: #16a34a; }
-.pk-poichigeon .research-reward-name { color: #16a34a; }
+.pk-poichigeon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-poichigeon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-poichigeon .emoji-shiny  { display: inline; }
 
 /* Poissirène — Normal / Shiny */
@@ -2375,18 +2381,18 @@
 .pk-poissoroy .emoji-shiny { display: inline; }
 
 /* Polagriffe — Bon / Shiny */
-.pk-polagriffe .pokemon-name { color: #16a34a; }
-.pk-polagriffe .research-reward-name { color: #16a34a; }
+.pk-polagriffe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-polagriffe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-polagriffe .emoji-shiny  { display: inline; }
 
 /* Polarhume — Bon / Shiny */
-.pk-polarhume .pokemon-name { color: #16a34a; }
-.pk-polarhume .research-reward-name { color: #16a34a; }
+.pk-polarhume .pokemon-name { color: var(--accent-vert-bon); }
+.pk-polarhume .research-reward-name { color: var(--accent-vert-bon); }
 .pk-polarhume .emoji-shiny  { display: inline; }
 
 /* Polthégeist — Bon / Shiny */
-.pk-polthegeist .pokemon-name { color: #16a34a; }
-.pk-polthegeist .research-reward-name { color: #16a34a; }
+.pk-polthegeist .pokemon-name { color: var(--accent-vert-bon); }
+.pk-polthegeist .research-reward-name { color: var(--accent-vert-bon); }
 .pk-polthegeist .emoji-shiny  { display: inline; }
 
 /* Ponchien — Normal / Shiny */
@@ -2402,8 +2408,8 @@
 .pk-ponyta .emoji-shiny { display: inline; }
 
 /* Ponyta de Galar — Bon / Shiny */
-.pk-ponyta-g .pokemon-name { color: #16a34a; }
-.pk-ponyta-g .research-reward-name { color: #16a34a; }
+.pk-ponyta-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ponyta-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ponyta-g .emoji-shiny  { display: inline; }
 
 /* Porygon-2 — Normal / Shiny */
@@ -2413,18 +2419,18 @@
 .pk-porygon-z .emoji-shiny { display: inline; }
 
 /* Poussacha — Bon / Shiny */
-.pk-poussacha .pokemon-name { color: #16a34a; }
-.pk-poussacha .research-reward-name { color: #16a34a; }
+.pk-poussacha .pokemon-name { color: var(--accent-vert-bon); }
+.pk-poussacha .research-reward-name { color: var(--accent-vert-bon); }
 .pk-poussacha .emoji-shiny  { display: inline; }
 
 /* Poussifeu — Bon / Shiny */
-.pk-poussifeu .pokemon-name { color: #16a34a; }
-.pk-poussifeu .research-reward-name { color: #16a34a; }
+.pk-poussifeu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-poussifeu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-poussifeu .emoji-shiny  { display: inline; }
 
 /* Prinplouf — Bon / Shiny */
-.pk-prinplouf .pokemon-name { color: #16a34a; }
-.pk-prinplouf .research-reward-name { color: #16a34a; }
+.pk-prinplouf .pokemon-name { color: var(--accent-vert-bon); }
+.pk-prinplouf .research-reward-name { color: var(--accent-vert-bon); }
 .pk-prinplouf .emoji-shiny  { display: inline; }
 
 /* Prédastérie — Normal / Shiny */
@@ -2434,8 +2440,8 @@
 .pk-psykokwak .emoji-shiny { display: inline; }
 
 /* Ptéra — Bon / Shiny (couvre Méga-Ptéra) */
-.pk-ptera .pokemon-name { color: #16a34a; }
-.pk-ptera .research-reward-name { color: #16a34a; }
+.pk-ptera .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ptera .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ptera .emoji-shiny  { display: inline; }
 
 /* Ptiravi — Normal / Shiny */
@@ -2445,28 +2451,28 @@
 .pk-ptitard .emoji-shiny { display: inline; }
 
 /* Ptyranidur — Bon / Shiny */
-.pk-ptyranidur .pokemon-name { color: #16a34a; }
-.pk-ptyranidur .research-reward-name { color: #16a34a; }
+.pk-ptyranidur .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ptyranidur .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ptyranidur .emoji-shiny  { display: inline; }
 
 /* Pyrax — Bon / Shiny */
-.pk-pyrax .pokemon-name { color: #16a34a; }
-.pk-pyrax .research-reward-name { color: #16a34a; }
+.pk-pyrax .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pyrax .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pyrax .emoji-shiny  { display: inline; }
 
 /* Pyroli — Bon / Shiny */
-.pk-pyroli .pokemon-name { color: #16a34a; }
-.pk-pyroli .research-reward-name { color: #16a34a; }
+.pk-pyroli .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pyroli .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pyroli .emoji-shiny  { display: inline; }
 
 /* Pyronille — Bon / Shiny */
-.pk-pyronille .pokemon-name { color: #16a34a; }
-.pk-pyronille .research-reward-name { color: #16a34a; }
+.pk-pyronille .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pyronille .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pyronille .emoji-shiny  { display: inline; }
 
 /* Pyrobut — Bon / Shiny */
-.pk-pyrobut .pokemon-name { color: #16a34a; }
-.pk-pyrobut .research-reward-name { color: #16a34a; }
+.pk-pyrobut .pokemon-name { color: var(--accent-vert-bon); }
+.pk-pyrobut .research-reward-name { color: var(--accent-vert-bon); }
 .pk-pyrobut .emoji-shiny  { display: inline; }
 
 
@@ -2475,8 +2481,8 @@
    ============================================================ */
 
 /* Quartermac — Bon / Shiny */
-.pk-quartermac .pokemon-name { color: #16a34a; }
-.pk-quartermac .research-reward-name { color: #16a34a; }
+.pk-quartermac .pokemon-name { color: var(--accent-vert-bon); }
+.pk-quartermac .research-reward-name { color: var(--accent-vert-bon); }
 .pk-quartermac .emoji-shiny  { display: inline; }
 
 /* Qulbutoké — Normal / Shiny */
@@ -2488,67 +2494,67 @@
    ============================================================ */
 
 /* Raikou — Bon / Shiny */
-.pk-raikou .pokemon-name { color: #16a34a; }
-.pk-raikou .research-reward-name { color: #16a34a; }
+.pk-raikou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-raikou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-raikou .emoji-shiny  { display: inline; }
 
 /* Rayquaza — Bon / Shiny */
-.pk-rayquaza .pokemon-name { color: #16a34a; }
-.pk-rayquaza .research-reward-name { color: #16a34a; }
+.pk-rayquaza .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rayquaza .research-reward-name { color: var(--accent-vert-bon); }
 .pk-rayquaza .emoji-shiny  { display: inline; }
 
 /* Racaillou d'Alola — Bon / Shiny */
-.pk-racaillou-a .pokemon-name { color: #16a34a; }
-.pk-racaillou-a .research-reward-name { color: #16a34a; }
+.pk-racaillou-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-racaillou-a .research-reward-name { color: var(--accent-vert-bon); }
 .pk-racaillou-a .emoji-shiny  { display: inline; }
 
 /* Raichu — Bon / Shiny */
-.pk-raichu .pokemon-name { color: #16a34a; }
-.pk-raichu .research-reward-name { color: #16a34a; }
+.pk-raichu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-raichu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-raichu .emoji-shiny  { display: inline; }
 
 /* Raichu d'Alola — Bon / Shiny */
-.pk-raichu-a .pokemon-name { color: #16a34a; }
-.pk-raichu-a .research-reward-name { color: #16a34a; }
+.pk-raichu-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-raichu-a .research-reward-name { color: var(--accent-vert-bon); }
 .pk-raichu-a .emoji-shiny  { display: inline; }
 
 /* Méga-Raichu-X — Normal / Shiny */
 .pk-raichu-mx .emoji-shiny { display: inline; }
 
 /* Méga-Raichu-Y — Bon / Shiny */
-.pk-raichu-my .pokemon-name { color: #16a34a; }
-.pk-raichu-my .research-reward-name { color: #16a34a; }
+.pk-raichu-my .pokemon-name { color: var(--accent-vert-bon); }
+.pk-raichu-my .research-reward-name { color: var(--accent-vert-bon); }
 .pk-raichu-my .emoji-shiny  { display: inline; }
 
 /* Ramoloss — Normal / Shiny */
 .pk-ramoloss .emoji-shiny { display: inline; }
 
 /* Ramoloss de Galar — Bon / Shiny */
-.pk-ramoloss-g .pokemon-name { color: #16a34a; }
-.pk-ramoloss-g .research-reward-name { color: #16a34a; }
+.pk-ramoloss-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ramoloss-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ramoloss-g .emoji-shiny  { display: inline; }
 
 /* Rapasdepic — Normal / Shiny */
 .pk-rapasdepic .emoji-shiny { display: inline; }
 
 /* Regice — Bon / Shiny */
-.pk-regice .pokemon-name { color: #16a34a; }
-.pk-regice .research-reward-name { color: #16a34a; }
+.pk-regice .pokemon-name { color: var(--accent-vert-bon); }
+.pk-regice .research-reward-name { color: var(--accent-vert-bon); }
 .pk-regice .emoji-shiny  { display: inline; }
 
 /* Regirock — Bon / Shiny */
-.pk-regirock .pokemon-name { color: #16a34a; }
-.pk-regirock .research-reward-name { color: #16a34a; }
+.pk-regirock .pokemon-name { color: var(--accent-vert-bon); }
+.pk-regirock .research-reward-name { color: var(--accent-vert-bon); }
 .pk-regirock .emoji-shiny  { display: inline; }
 
 /* Regidrago — Bon / Shiny */
-.pk-regidrago .pokemon-name { color: #16a34a; }
-.pk-regidrago .research-reward-name { color: #16a34a; }
+.pk-regidrago .pokemon-name { color: var(--accent-vert-bon); }
+.pk-regidrago .research-reward-name { color: var(--accent-vert-bon); }
 .pk-regidrago .emoji-shiny  { display: inline; }
 
 /* Regieleki — Bon / Shiny */
-.pk-regieleki .pokemon-name { color: #16a34a; }
-.pk-regieleki .research-reward-name { color: #16a34a; }
+.pk-regieleki .pokemon-name { color: var(--accent-vert-bon); }
+.pk-regieleki .research-reward-name { color: var(--accent-vert-bon); }
 .pk-regieleki .emoji-shiny  { display: inline; }
 
 /* Registeel — Normal / Shiny */
@@ -2570,26 +2576,26 @@
 .pk-remoraid .emoji-shiny { display: inline; }
 
 /* Reshiram — Bon / Shiny */
-.pk-reshiram .pokemon-name { color: #16a34a; }
-.pk-reshiram .research-reward-name { color: #16a34a; }
+.pk-reshiram .pokemon-name { color: var(--accent-vert-bon); }
+.pk-reshiram .research-reward-name { color: var(--accent-vert-bon); }
 .pk-reshiram .emoji-shiny  { display: inline; }
 
 /* Reptincel — Bon / Shiny */
-.pk-reptincel .pokemon-name { color: #16a34a; }
-.pk-reptincel .research-reward-name { color: #16a34a; }
+.pk-reptincel .pokemon-name { color: var(--accent-vert-bon); }
+.pk-reptincel .research-reward-name { color: var(--accent-vert-bon); }
 .pk-reptincel .emoji-shiny  { display: inline; }
 
 /* Rexillius — Bon / Shiny */
-.pk-rexillius .pokemon-name { color: #16a34a; }
-.pk-rexillius .research-reward-name { color: #16a34a; }
+.pk-rexillius .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rexillius .research-reward-name { color: var(--accent-vert-bon); }
 .pk-rexillius .emoji-shiny  { display: inline; }
 
 /* Rhinolove — Normal / Shiny */
 .pk-rhinolove .emoji-shiny { display: inline; }
 
 /* Riolu — Bon / Shiny */
-.pk-riolu .pokemon-name { color: #16a34a; }
-.pk-riolu .research-reward-name { color: #16a34a; }
+.pk-riolu .pokemon-name { color: var(--accent-vert-bon); }
+.pk-riolu .research-reward-name { color: var(--accent-vert-bon); }
 .pk-riolu .emoji-shiny  { display: inline; }
 
 /* Roigada — Normal / Shiny */
@@ -2599,8 +2605,8 @@
 .pk-roigada-g .emoji-shiny { display: inline; }
 
 /* Roitiflam — Bon / Shiny */
-.pk-roitiflam .pokemon-name { color: #16a34a; }
-.pk-roitiflam .research-reward-name { color: #16a34a; }
+.pk-roitiflam .pokemon-name { color: var(--accent-vert-bon); }
+.pk-roitiflam .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roitiflam .emoji-shiny  { display: inline; }
 
 /* Ronflex — Normal / Shiny */
@@ -2616,28 +2622,28 @@
 .pk-rosabyss .emoji-shiny { display: inline; }
 
 /* Rondoudou — Bon / Shiny */
-.pk-rondoudou .pokemon-name { color: #16a34a; }
-.pk-rondoudou .research-reward-name { color: #16a34a; }
+.pk-rondoudou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rondoudou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-rondoudou .emoji-shiny  { display: inline; }
 
 /* Roserade — Bon / Shiny */
-.pk-roserade .pokemon-name { color: #16a34a; }
-.pk-roserade .research-reward-name { color: #16a34a; }
+.pk-roserade .pokemon-name { color: var(--accent-vert-bon); }
+.pk-roserade .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roserade .emoji-shiny  { display: inline; }
 
 /* Rosélia — Bon / Shiny */
-.pk-roselia .pokemon-name { color: #16a34a; }
-.pk-roselia .research-reward-name { color: #16a34a; }
+.pk-roselia .pokemon-name { color: var(--accent-vert-bon); }
+.pk-roselia .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roselia .emoji-shiny  { display: inline; }
 
 /* Rozbouton — Bon / Shiny */
-.pk-rozbouton .pokemon-name { color: #16a34a; }
-.pk-rozbouton .research-reward-name { color: #16a34a; }
+.pk-rozbouton .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rozbouton .research-reward-name { color: var(--accent-vert-bon); }
 .pk-rozbouton .emoji-shiny  { display: inline; }
 
 /* Rototaupe — Bon / Shiny */
-.pk-rototaupe .pokemon-name { color: #16a34a; }
-.pk-rototaupe .research-reward-name { color: #16a34a; }
+.pk-rototaupe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rototaupe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-rototaupe .emoji-shiny  { display: inline; }
 
 /* Roublenard — Normal / Pas de shiny (Shiny à partir du 16 août 2026,
@@ -2645,34 +2651,34 @@
 /* .pk-roublenard .emoji-shiny  { display: inline; } */
 
 /* Rubombelle — Bon / Shiny */
-.pk-rubombelle .pokemon-name { color: #16a34a; }
-.pk-rubombelle .research-reward-name { color: #16a34a; }
+.pk-rubombelle .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rubombelle .research-reward-name { color: var(--accent-vert-bon); }
 .pk-rubombelle .emoji-shiny  { display: inline; }
 
 /* Roucool — Bon / Shiny */
-.pk-roucool .pokemon-name { color: #16a34a; }
-.pk-roucool .research-reward-name { color: #16a34a; }
+.pk-roucool .pokemon-name { color: var(--accent-vert-bon); }
+.pk-roucool .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roucool .emoji-shiny  { display: inline; }
 
 /* Roucoups — Bon / Shiny */
-.pk-roucoups .pokemon-name { color: #16a34a; }
-.pk-roucoups .research-reward-name { color: #16a34a; }
+.pk-roucoups .pokemon-name { color: var(--accent-vert-bon); }
+.pk-roucoups .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roucoups .emoji-shiny  { display: inline; }
 
 /* Roucarnage — Bon / Shiny */
-.pk-roucarnage .pokemon-name { color: #16a34a; }
-.pk-roucarnage .research-reward-name { color: #16a34a; }
+.pk-roucarnage .pokemon-name { color: var(--accent-vert-bon); }
+.pk-roucarnage .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roucarnage .emoji-shiny  { display: inline; }
 
 /* Méga-Roucarnage — Bon / Shiny */
-.pk-roucarnage-m .pokemon-name { color: #16a34a; }
-.pk-roucarnage-m .research-reward-name { color: #16a34a; }
+.pk-roucarnage-m .pokemon-name { color: var(--accent-vert-bon); }
+.pk-roucarnage-m .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roucarnage-m .emoji-shiny  { display: inline; }
 
 
 /* Roussil — Bon / Shiny */
-.pk-roussil .pokemon-name { color: #16a34a; }
-.pk-roussil .research-reward-name { color: #16a34a; }
+.pk-roussil .pokemon-name { color: var(--accent-vert-bon); }
+.pk-roussil .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roussil .emoji-shiny  { display: inline; }
 
 /* ============================================================
@@ -2687,66 +2693,66 @@
 .pk-sablaireau-a .emoji-shiny  { display: inline; }
 
 /* Salarsen — Bon / Shiny */
-.pk-salarsen .pokemon-name { color: #16a34a; }
-.pk-salarsen .research-reward-name { color: #16a34a; }
+.pk-salarsen .pokemon-name { color: var(--accent-vert-bon); }
+.pk-salarsen .research-reward-name { color: var(--accent-vert-bon); }
 .pk-salarsen .emoji-shiny  { display: inline; }
 
 /* Salamèche — Bon / Shiny */
-.pk-salameche .pokemon-name { color: #16a34a; }
-.pk-salameche .research-reward-name { color: #16a34a; }
+.pk-salameche .pokemon-name { color: var(--accent-vert-bon); }
+.pk-salameche .research-reward-name { color: var(--accent-vert-bon); }
 .pk-salameche .emoji-shiny  { display: inline; }
 
 /* Sancoki — Bon / Shiny */
-.pk-sancoki .pokemon-name { color: #16a34a; }
-.pk-sancoki .research-reward-name { color: #16a34a; }
+.pk-sancoki .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sancoki .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sancoki .emoji-shiny  { display: inline; }
 
 /* Sapereau — Normal / Shiny */
 .pk-sapereau .emoji-shiny { display: inline; }
 
 /* Sarmuraï — Bon / Shiny */
-.pk-sarmurai .pokemon-name { color: #16a34a; }
-.pk-sarmurai .research-reward-name { color: #16a34a; }
+.pk-sarmurai .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sarmurai .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sarmurai .emoji-shiny  { display: inline; }
 
 /* Séracrawl — Bon / Shiny */
-.pk-seracrawl .pokemon-name { color: #16a34a; }
-.pk-seracrawl .research-reward-name { color: #16a34a; }
+.pk-seracrawl .pokemon-name { color: var(--accent-vert-bon); }
+.pk-seracrawl .research-reward-name { color: var(--accent-vert-bon); }
 .pk-seracrawl .emoji-shiny  { display: inline; }
 
 /* Scarhino — Bon / Shiny */
-.pk-scarhino .pokemon-name { color: #16a34a; }
-.pk-scarhino .research-reward-name { color: #16a34a; }
+.pk-scarhino .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scarhino .research-reward-name { color: var(--accent-vert-bon); }
 .pk-scarhino .emoji-shiny  { display: inline; }
 
 /* Scarabrute — Bon / Shiny */
-.pk-scarabrute .pokemon-name { color: #16a34a; }
-.pk-scarabrute .research-reward-name { color: #16a34a; }
+.pk-scarabrute .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scarabrute .research-reward-name { color: var(--accent-vert-bon); }
 .pk-scarabrute .emoji-shiny  { display: inline; }
 
 /* Scalpion — Bon / Shiny */
-.pk-scalpion .pokemon-name { color: #16a34a; }
-.pk-scalpion .research-reward-name { color: #16a34a; }
+.pk-scalpion .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scalpion .research-reward-name { color: var(--accent-vert-bon); }
 .pk-scalpion .emoji-shiny  { display: inline; }
 
 /* Scalproie — Bon / Shiny */
-.pk-scalproie .pokemon-name { color: #16a34a; }
-.pk-scalproie .research-reward-name { color: #16a34a; }
+.pk-scalproie .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scalproie .research-reward-name { color: var(--accent-vert-bon); }
 .pk-scalproie .emoji-shiny  { display: inline; }
 
 /* Scalpereur — Bon / Shiny */
-.pk-scalpereur .pokemon-name { color: #16a34a; }
-.pk-scalpereur .research-reward-name { color: #16a34a; }
+.pk-scalpereur .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scalpereur .research-reward-name { color: var(--accent-vert-bon); }
 .pk-scalpereur .emoji-shiny  { display: inline; }
 
 /* Scobolide — Bon / Shiny */
-.pk-scobolide .pokemon-name { color: #16a34a; }
-.pk-scobolide .research-reward-name { color: #16a34a; }
+.pk-scobolide .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scobolide .research-reward-name { color: var(--accent-vert-bon); }
 .pk-scobolide .emoji-shiny  { display: inline; }
 
 /* Scolocendre — Bon / Shiny */
-.pk-scolocendre .pokemon-name { color: #16a34a; }
-.pk-scolocendre .research-reward-name { color: #16a34a; }
+.pk-scolocendre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scolocendre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-scolocendre .emoji-shiny  { display: inline; }
 
 /* Scorplane — Normal / Shiny */
@@ -2767,85 +2773,85 @@
 .pk-serpang .emoji-shiny { display: inline; }
 
 /* Shaofouine — Bon / Shiny */
-.pk-shaofouine .pokemon-name { color: #16a34a; }
-.pk-shaofouine .research-reward-name { color: #16a34a; }
+.pk-shaofouine .pokemon-name { color: var(--accent-vert-bon); }
+.pk-shaofouine .research-reward-name { color: var(--accent-vert-bon); }
 .pk-shaofouine .emoji-shiny  { display: inline; }
 
 /* Sharpedo — Bon / Shiny (couvre Méga-Sharpedo) */
-.pk-sharpedo .pokemon-name { color: #16a34a; }
-.pk-sharpedo .research-reward-name { color: #16a34a; }
+.pk-sharpedo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sharpedo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sharpedo .emoji-shiny  { display: inline; }
 
 /* Shaymin — Bon / Shiny */
-.pk-shaymin .pokemon-name { color: #16a34a; }
-.pk-shaymin .research-reward-name { color: #16a34a; }
+.pk-shaymin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-shaymin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-shaymin .emoji-shiny { display: inline; }
 
 /* Shifours — Bon */
-.pk-shifours .pokemon-name { color: #16a34a; }
-.pk-shifours .research-reward-name { color: #16a34a; }
+.pk-shifours .pokemon-name { color: var(--accent-vert-bon); }
+.pk-shifours .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Smogogo de Galar — Bon / Shiny */
-.pk-smogogo-g .pokemon-name { color: #16a34a; }
-.pk-smogogo-g .research-reward-name { color: #16a34a; }
+.pk-smogogo-g .pokemon-name { color: var(--accent-vert-bon); }
+.pk-smogogo-g .research-reward-name { color: var(--accent-vert-bon); }
 .pk-smogogo-g .emoji-shiny  { display: inline; }
 
 /* Simiabraz — Bon / Shiny */
-.pk-simiabraz .pokemon-name { color: #16a34a; }
-.pk-simiabraz .research-reward-name { color: #16a34a; }
+.pk-simiabraz .pokemon-name { color: var(--accent-vert-bon); }
+.pk-simiabraz .research-reward-name { color: var(--accent-vert-bon); }
 .pk-simiabraz .emoji-shiny  { display: inline; }
 
 /* Sulfura — Bon / Shiny */
-.pk-sulfura .pokemon-name { color: #16a34a; }
-.pk-sulfura .research-reward-name { color: #16a34a; }
+.pk-sulfura .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sulfura .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sulfura .emoji-shiny  { display: inline; }
 
 /* Simularbre — Normal / Shiny */
 .pk-simularbre .emoji-shiny { display: inline; }
 
 /* Snubull — Bon / Shiny */
-.pk-snubull .pokemon-name { color: #16a34a; }
-.pk-snubull .research-reward-name { color: #16a34a; }
+.pk-snubull .pokemon-name { color: var(--accent-vert-bon); }
+.pk-snubull .research-reward-name { color: var(--accent-vert-bon); }
 .pk-snubull .emoji-shiny  { display: inline; }
 
 /* Sorcilence — Bon / Shiny */
-.pk-sorcilence .pokemon-name { color: #16a34a; }
-.pk-sorcilence .research-reward-name { color: #16a34a; }
+.pk-sorcilence .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sorcilence .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sorcilence .emoji-shiny  { display: inline; }
 
 /* Sorbébé — Bon / Shiny */
-.pk-sorbebe .pokemon-name { color: #16a34a; }
-.pk-sorbebe .research-reward-name { color: #16a34a; }
+.pk-sorbebe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sorbebe .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sorbebe .emoji-shiny  { display: inline; }
 
 /* Solgaleo — Bon / Shiny */
-.pk-solgaleo .pokemon-name { color: #16a34a; }
-.pk-solgaleo .research-reward-name { color: #16a34a; }
+.pk-solgaleo .pokemon-name { color: var(--accent-vert-bon); }
+.pk-solgaleo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-solgaleo .emoji-shiny  { display: inline; }
 
 /* Solochi — Bon / Shiny */
-.pk-solochi .pokemon-name { color: #16a34a; }
-.pk-solochi .research-reward-name { color: #16a34a; }
+.pk-solochi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-solochi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-solochi .emoji-shiny  { display: inline; }
 
 /* Sorboul — Bon / Shiny */
-.pk-sorboul .pokemon-name { color: #16a34a; }
-.pk-sorboul .research-reward-name { color: #16a34a; }
+.pk-sorboul .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sorboul .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sorboul .emoji-shiny  { display: inline; }
 
 /* Sorbouboul — Bon / Shiny */
-.pk-sorbouboul .pokemon-name { color: #16a34a; }
-.pk-sorbouboul .research-reward-name { color: #16a34a; }
+.pk-sorbouboul .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sorbouboul .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sorbouboul .emoji-shiny  { display: inline; }
 
 /* Skelénox — Bon / Shiny */
-.pk-skelenox .pokemon-name { color: #16a34a; }
-.pk-skelenox .research-reward-name { color: #16a34a; }
+.pk-skelenox .pokemon-name { color: var(--accent-vert-bon); }
+.pk-skelenox .research-reward-name { color: var(--accent-vert-bon); }
 .pk-skelenox .emoji-shiny  { display: inline; }
 
 /* Sovkipou — Bon / Shiny */
-.pk-sovkipou .pokemon-name { color: #16a34a; }
-.pk-sovkipou .research-reward-name { color: #16a34a; }
+.pk-sovkipou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sovkipou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sovkipou .emoji-shiny  { display: inline; }
 
 /* Spinda — Normal / Shiny */
@@ -2861,39 +2867,39 @@
 .pk-staross .emoji-shiny { display: inline; }
 
 /* Statitik — Bon / Shiny */
-.pk-statitik .pokemon-name { color: #16a34a; }
-.pk-statitik .research-reward-name { color: #16a34a; }
+.pk-statitik .pokemon-name { color: var(--accent-vert-bon); }
+.pk-statitik .research-reward-name { color: var(--accent-vert-bon); }
 .pk-statitik .emoji-shiny  { display: inline; }
 
 /* Spectrum — Bon / Shiny */
-.pk-spectrum .pokemon-name { color: #16a34a; }
-.pk-spectrum .research-reward-name { color: #16a34a; }
+.pk-spectrum .pokemon-name { color: var(--accent-vert-bon); }
+.pk-spectrum .research-reward-name { color: var(--accent-vert-bon); }
 .pk-spectrum .emoji-shiny  { display: inline; }
 
 
 /* Stalgamin — Bon / Shiny */
-.pk-stalgamin .pokemon-name { color: #16a34a; }
-.pk-stalgamin .research-reward-name { color: #16a34a; }
+.pk-stalgamin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-stalgamin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-stalgamin .emoji-shiny  { display: inline; }
 
 /* Steelix — Bon / Shiny */
-.pk-steelix .pokemon-name { color: #16a34a; }
-.pk-steelix .research-reward-name { color: #16a34a; }
+.pk-steelix .pokemon-name { color: var(--accent-vert-bon); }
+.pk-steelix .research-reward-name { color: var(--accent-vert-bon); }
 .pk-steelix .emoji-shiny  { display: inline; }
 
 /* Sucreine — Bon / Shiny */
-.pk-sucreine .pokemon-name { color: #16a34a; }
-.pk-sucreine .research-reward-name { color: #16a34a; }
+.pk-sucreine .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sucreine .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sucreine .emoji-shiny  { display: inline; }
 
 /* Sucroquin — Bon / Shiny */
-.pk-sucroquin .pokemon-name { color: #16a34a; }
-.pk-sucroquin .research-reward-name { color: #16a34a; }
+.pk-sucroquin .pokemon-name { color: var(--accent-vert-bon); }
+.pk-sucroquin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-sucroquin .emoji-shiny  { display: inline; }
 
 /* Suicune — Bon / Shiny */
-.pk-suicune .pokemon-name { color: #16a34a; }
-.pk-suicune .research-reward-name { color: #16a34a; }
+.pk-suicune .pokemon-name { color: var(--accent-vert-bon); }
+.pk-suicune .research-reward-name { color: var(--accent-vert-bon); }
 .pk-suicune .emoji-shiny  { display: inline; }
 
 /* Scrutella — Normal / Shiny */
@@ -2905,13 +2911,13 @@
 
 
 /* Tadmorv — Bon / Shiny */
-.pk-tadmorv .pokemon-name { color: #16a34a; }
-.pk-tadmorv .research-reward-name { color: #16a34a; }
+.pk-tadmorv .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tadmorv .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tadmorv .emoji-shiny { display: inline; }
 
 /* Tag-Tag — Bon / Shiny */
-.pk-tag-tag .pokemon-name { color: #16a34a; }
-.pk-tag-tag .research-reward-name { color: #16a34a; }
+.pk-tag-tag .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tag-tag .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tag-tag .emoji-shiny  { display: inline; }
 
 /* Tarpaud — Normal / Shiny */
@@ -2921,8 +2927,8 @@
 .pk-tartard .emoji-shiny { display: inline; }
 
 /* Teddiursa — Bon / Shiny */
-.pk-teddiursa .pokemon-name { color: #16a34a; }
-.pk-teddiursa .research-reward-name { color: #16a34a; }
+.pk-teddiursa .pokemon-name { color: var(--accent-vert-bon); }
+.pk-teddiursa .research-reward-name { color: var(--accent-vert-bon); }
 .pk-teddiursa .emoji-shiny  { display: inline; }
 
 /* Tapatoès — Normal / Pas de shiny */
@@ -2931,8 +2937,8 @@
 .pk-tarenbulle .emoji-shiny { display: inline; }
 
 /* Tarsal — Bon / Shiny */
-.pk-tarsal .pokemon-name { color: #16a34a; }
-.pk-tarsal .research-reward-name { color: #16a34a; }
+.pk-tarsal .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tarsal .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tarsal .emoji-shiny  { display: inline; }
 
 /* Taupiqueur — Normal / Shiny */
@@ -2948,23 +2954,23 @@
 .pk-tenefix .emoji-shiny { display: inline; }
 
 /* Tengalice — Bon / Shiny */
-.pk-tengalice .pokemon-name { color: #16a34a; }
-.pk-tengalice .research-reward-name { color: #16a34a; }
+.pk-tengalice .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tengalice .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tengalice .emoji-shiny  { display: inline; }
 
 /* Téraclope — Bon / Shiny */
-.pk-teraclope .pokemon-name { color: #16a34a; }
-.pk-teraclope .research-reward-name { color: #16a34a; }
+.pk-teraclope .pokemon-name { color: var(--accent-vert-bon); }
+.pk-teraclope .research-reward-name { color: var(--accent-vert-bon); }
 .pk-teraclope .emoji-shiny  { display: inline; }
 
 /* Terhal — Bon / Shiny */
-.pk-terhal .pokemon-name { color: #16a34a; }
-.pk-terhal .research-reward-name { color: #16a34a; }
+.pk-terhal .pokemon-name { color: var(--accent-vert-bon); }
+.pk-terhal .research-reward-name { color: var(--accent-vert-bon); }
 .pk-terhal .emoji-shiny  { display: inline; }
 
 /* Terrakium — Bon / Shiny */
-.pk-terrakium .pokemon-name { color: #16a34a; }
-.pk-terrakium .research-reward-name { color: #16a34a; }
+.pk-terrakium .pokemon-name { color: var(--accent-vert-bon); }
+.pk-terrakium .research-reward-name { color: var(--accent-vert-bon); }
 .pk-terrakium .emoji-shiny  { display: inline; }
 
 /* Têtarte — Normal / Shiny */
@@ -2974,83 +2980,83 @@
 .pk-tetampoule .emoji-shiny { display: inline; }
 
 /* Théffroi — Bon / Shiny */
-.pk-theffroi .pokemon-name { color: #16a34a; }
-.pk-theffroi .research-reward-name { color: #16a34a; }
+.pk-theffroi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-theffroi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-theffroi .emoji-shiny  { display: inline; }
 
 /* Tiplouf — Bon / Shiny */
-.pk-tiplouf .pokemon-name { color: #16a34a; }
-.pk-tiplouf .research-reward-name { color: #16a34a; }
+.pk-tiplouf .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tiplouf .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tiplouf .emoji-shiny  { display: inline; }
 
 /* Tissenboule — Normal / Pas de shiny */
 
 /* Togekiss — Bon / Shiny */
-.pk-togekiss .pokemon-name { color: #16a34a; }
-.pk-togekiss .research-reward-name { color: #16a34a; }
+.pk-togekiss .pokemon-name { color: var(--accent-vert-bon); }
+.pk-togekiss .research-reward-name { color: var(--accent-vert-bon); }
 .pk-togekiss .emoji-shiny  { display: inline; }
 
 /* Togepi — Bon / Shiny */
-.pk-togepi .pokemon-name { color: #16a34a; }
-.pk-togepi .research-reward-name { color: #16a34a; }
+.pk-togepi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-togepi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-togepi .emoji-shiny  { display: inline; }
 
 /* Tokorico — Bon / Shiny */
-.pk-tokorico .pokemon-name { color: #16a34a; }
-.pk-tokorico .research-reward-name { color: #16a34a; }
+.pk-tokorico .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tokorico .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tokorico .emoji-shiny  { display: inline; }
 
 /* Tokopiyon — Bon / Shiny */
-.pk-tokopiyon .pokemon-name { color: #16a34a; }
-.pk-tokopiyon .research-reward-name { color: #16a34a; }
+.pk-tokopiyon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tokopiyon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tokopiyon .emoji-shiny  { display: inline; }
 
 /* Tokopisco — Bon / Shiny */
-.pk-tokopisco .pokemon-name { color: #16a34a; }
-.pk-tokopisco .research-reward-name { color: #16a34a; }
+.pk-tokopisco .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tokopisco .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tokopisco .emoji-shiny  { display: inline; }
 
 /* Tokotoro — Bon / Shiny */
-.pk-tokotoro .pokemon-name { color: #16a34a; }
-.pk-tokotoro .research-reward-name { color: #16a34a; }
+.pk-tokotoro .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tokotoro .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tokotoro .emoji-shiny  { display: inline; }
 
 /* Togetic — Bon / Shiny */
-.pk-togetic .pokemon-name { color: #16a34a; }
-.pk-togetic .research-reward-name { color: #16a34a; }
+.pk-togetic .pokemon-name { color: var(--accent-vert-bon); }
+.pk-togetic .research-reward-name { color: var(--accent-vert-bon); }
 .pk-togetic .emoji-shiny  { display: inline; }
 
 /* Tortank — Bon / Shiny */
-.pk-tortank .pokemon-name { color: #16a34a; }
-.pk-tortank .research-reward-name { color: #16a34a; }
+.pk-tortank .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tortank .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tortank .emoji-shiny  { display: inline; }
 
 /* Tortipouss — Bon / Shiny */
-.pk-tortipouss .pokemon-name { color: #16a34a; }
-.pk-tortipouss .research-reward-name { color: #16a34a; }
+.pk-tortipouss .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tortipouss .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tortipouss .emoji-shiny  { display: inline; }
 
 /* Torterra — Bon / Shiny */
-.pk-torterra .pokemon-name { color: #16a34a; }
-.pk-torterra .research-reward-name { color: #16a34a; }
+.pk-torterra .pokemon-name { color: var(--accent-vert-bon); }
+.pk-torterra .research-reward-name { color: var(--accent-vert-bon); }
 .pk-torterra .emoji-shiny  { display: inline; }
 
 /* Tournegrin — Normal / Shiny */
 .pk-tournegrin .emoji-shiny { display: inline; }
 
 /* Toudoudou — Bon / Shiny */
-.pk-toudoudou .pokemon-name { color: #16a34a; }
-.pk-toudoudou .research-reward-name { color: #16a34a; }
+.pk-toudoudou .pokemon-name { color: var(--accent-vert-bon); }
+.pk-toudoudou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-toudoudou .emoji-shiny  { display: inline; }
 
 /* Toxizap — Bon / Shiny */
-.pk-toxizap .pokemon-name { color: #16a34a; }
-.pk-toxizap .research-reward-name { color: #16a34a; }
+.pk-toxizap .pokemon-name { color: var(--accent-vert-bon); }
+.pk-toxizap .research-reward-name { color: var(--accent-vert-bon); }
 .pk-toxizap .emoji-shiny  { display: inline; }
 
 /* Tranchodon — Bon / Shiny */
-.pk-tranchodon .pokemon-name { color: #16a34a; }
-.pk-tranchodon .research-reward-name { color: #16a34a; }
+.pk-tranchodon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tranchodon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tranchodon .emoji-shiny  { display: inline; }
 
 /* Triopikeur — Normal / Shiny */
@@ -3060,21 +3066,21 @@
 .pk-triopikeur-a .emoji-shiny { display: inline; }
 
 /* Tritox — Bon / Shiny */
-.pk-tritox .pokemon-name { color: #16a34a; }
-.pk-tritox .research-reward-name { color: #16a34a; }
+.pk-tritox .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tritox .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tritox .emoji-shiny  { display: inline; }
 
 /* Tritosor — Bon / Shiny */
-.pk-tritosor .pokemon-name { color: #16a34a; }
-.pk-tritosor .research-reward-name { color: #16a34a; }
+.pk-tritosor .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tritosor .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tritosor .emoji-shiny  { display: inline; }
 
 /* Tygnon — Normal / Shiny */
 .pk-tygnon .emoji-shiny { display: inline; }
 
 /* Tyranocif — Bon / Shiny (couvre Méga-Tyranocif) */
-.pk-tyranocif .pokemon-name { color: #16a34a; }
-.pk-tyranocif .research-reward-name { color: #16a34a; }
+.pk-tyranocif .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tyranocif .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tyranocif .emoji-shiny  { display: inline; }
 
 /* Tutafeh — Normal / Shiny */
@@ -3084,24 +3090,24 @@
 .pk-tutankafer .emoji-shiny { display: inline; }
 
 /* Typhlosion — Bon / Shiny */
-.pk-typhlosion .pokemon-name { color: #16a34a; }
-.pk-typhlosion .research-reward-name { color: #16a34a; }
+.pk-typhlosion .pokemon-name { color: var(--accent-vert-bon); }
+.pk-typhlosion .research-reward-name { color: var(--accent-vert-bon); }
 .pk-typhlosion .emoji-shiny  { display: inline; }
 
 /* Tylton — Bon / Shiny */
-.pk-tylton .pokemon-name { color: #16a34a; }
-.pk-tylton .research-reward-name { color: #16a34a; }
+.pk-tylton .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tylton .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tylton .emoji-shiny  { display: inline; }
 
 
 /* Togedemaru — Bon / Shiny */
-.pk-togedemaru .pokemon-name { color: #16a34a; }
-.pk-togedemaru .research-reward-name { color: #16a34a; }
+.pk-togedemaru .pokemon-name { color: var(--accent-vert-bon); }
+.pk-togedemaru .research-reward-name { color: var(--accent-vert-bon); }
 .pk-togedemaru .emoji-shiny  { display: inline; }
 
 /* Tiboudet — Bon / Shiny */
-.pk-tiboudet .pokemon-name { color: #16a34a; }
-.pk-tiboudet .research-reward-name { color: #16a34a; }
+.pk-tiboudet .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tiboudet .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tiboudet .emoji-shiny  { display: inline; }
 
 /* ============================================================
@@ -3109,13 +3115,13 @@
    ============================================================ */
 
 /* Ursaking — Bon / Shiny */
-.pk-ursaking .pokemon-name { color: #16a34a; }
-.pk-ursaking .research-reward-name { color: #16a34a; }
+.pk-ursaking .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ursaking .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ursaking .emoji-shiny  { display: inline; }
 
 /* Ursaring — Bon / Shiny */
-.pk-ursaring .pokemon-name { color: #16a34a; }
-.pk-ursaring .research-reward-name { color: #16a34a; }
+.pk-ursaring .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ursaring .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ursaring .emoji-shiny  { display: inline; }
 
 /* ============================================================
@@ -3126,47 +3132,47 @@
 .pk-vacilys .emoji-shiny { display: inline; }
 
 /* Victini — Bon / Shiny */
-.pk-victini .pokemon-name { color: #16a34a; }
-.pk-victini .research-reward-name { color: #16a34a; }
+.pk-victini .pokemon-name { color: var(--accent-vert-bon); }
+.pk-victini .research-reward-name { color: var(--accent-vert-bon); }
 .pk-victini .emoji-shiny  { display: inline; }
 
 /* Vaututrice — Normal / Shiny */
 .pk-vaututrice .emoji-shiny { display: inline; }
 
 /* Venipatte — Bon / Shiny */
-.pk-venipatte .pokemon-name { color: #16a34a; }
-.pk-venipatte .research-reward-name { color: #16a34a; }
+.pk-venipatte .pokemon-name { color: var(--accent-vert-bon); }
+.pk-venipatte .research-reward-name { color: var(--accent-vert-bon); }
 .pk-venipatte .emoji-shiny  { display: inline; }
 
 /* Verpom — Bon / Shiny */
-.pk-verpom .pokemon-name { color: #16a34a; }
-.pk-verpom .research-reward-name { color: #16a34a; }
+.pk-verpom .pokemon-name { color: var(--accent-vert-bon); }
+.pk-verpom .research-reward-name { color: var(--accent-vert-bon); }
 .pk-verpom .emoji-shiny  { display: inline; }
 
 /* Vibraninf — Bon / Shiny */
-.pk-vibraninf .pokemon-name { color: #16a34a; }
-.pk-vibraninf .research-reward-name { color: #16a34a; }
+.pk-vibraninf .pokemon-name { color: var(--accent-vert-bon); }
+.pk-vibraninf .research-reward-name { color: var(--accent-vert-bon); }
 .pk-vibraninf .emoji-shiny  { display: inline; }
 
 /* Viridium — Bon / Shiny */
-.pk-viridium .pokemon-name { color: #16a34a; }
-.pk-viridium .research-reward-name { color: #16a34a; }
+.pk-viridium .pokemon-name { color: var(--accent-vert-bon); }
+.pk-viridium .research-reward-name { color: var(--accent-vert-bon); }
 .pk-viridium .emoji-shiny  { display: inline; }
 
 /* Vorastérie — Normal / Shiny */
 .pk-vorasterie .emoji-shiny { display: inline; }
 
 /* Volcanion — Bon / Shiny */
-.pk-volcanion .pokemon-name { color: #16a34a; }
-.pk-volcanion .research-reward-name { color: #16a34a; }
+.pk-volcanion .pokemon-name { color: var(--accent-vert-bon); }
+.pk-volcanion .research-reward-name { color: var(--accent-vert-bon); }
 .pk-volcanion .emoji-shiny  { display: inline; }
 
 /* Volcaropod — Normal / Shiny */
 .pk-volcaropod .emoji-shiny { display: inline; }
 
 /* Voltali — Bon / Shiny */
-.pk-voltali .pokemon-name { color: #16a34a; }
-.pk-voltali .research-reward-name { color: #16a34a; }
+.pk-voltali .pokemon-name { color: var(--accent-vert-bon); }
+.pk-voltali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-voltali .emoji-shiny  { display: inline; }
 
 /* Vipélierre — Normal / Shiny */
@@ -3176,13 +3182,13 @@
 .pk-vostourno .emoji-shiny { display: inline; }
 
 /* Vrombi — Bon / Shiny */
-.pk-vrombi .pokemon-name { color: #16a34a; }
-.pk-vrombi .research-reward-name { color: #16a34a; }
+.pk-vrombi .pokemon-name { color: var(--accent-vert-bon); }
+.pk-vrombi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-vrombi .emoji-shiny  { display: inline; }
 
 /* Vrombotor — Bon / Shiny */
-.pk-vrombotor .pokemon-name { color: #16a34a; }
-.pk-vrombotor .research-reward-name { color: #16a34a; }
+.pk-vrombotor .pokemon-name { color: var(--accent-vert-bon); }
+.pk-vrombotor .research-reward-name { color: var(--accent-vert-bon); }
 .pk-vrombotor .emoji-shiny  { display: inline; }
 
 
@@ -3194,8 +3200,8 @@
 .pk-wailmer .emoji-shiny { display: inline; }
 
 /* Wattouat — Bon / Shiny */
-.pk-wattouat .pokemon-name { color: #16a34a; }
-.pk-wattouat .research-reward-name { color: #16a34a; }
+.pk-wattouat .pokemon-name { color: var(--accent-vert-bon); }
+.pk-wattouat .research-reward-name { color: var(--accent-vert-bon); }
 .pk-wattouat .emoji-shiny  { display: inline; }
 
 /* Wailord — Normal / Shiny */
@@ -3205,8 +3211,8 @@
 .pk-wimessir .emoji-shiny { display: inline; }
 
 /* Wushours — Bon */
-.pk-wushours .pokemon-name { color: #16a34a; }
-.pk-wushours .research-reward-name { color: #16a34a; }
+.pk-wushours .pokemon-name { color: var(--accent-vert-bon); }
+.pk-wushours .research-reward-name { color: var(--accent-vert-bon); }
 
 
 /* ============================================================
@@ -3214,8 +3220,8 @@
    ============================================================ */
 
 /* Xerneas — Bon / Shiny */
-.pk-xerneas .pokemon-name { color: #16a34a; }
-.pk-xerneas .research-reward-name { color: #16a34a; }
+.pk-xerneas .pokemon-name { color: var(--accent-vert-bon); }
+.pk-xerneas .research-reward-name { color: var(--accent-vert-bon); }
 .pk-xerneas .emoji-shiny  { display: inline; }
 
 
@@ -3224,18 +3230,18 @@
    ============================================================ */
 
 /* Yanma — Bon / Shiny */
-.pk-yanma .pokemon-name { color: #16a34a; }
-.pk-yanma .research-reward-name { color: #16a34a; }
+.pk-yanma .pokemon-name { color: var(--accent-vert-bon); }
+.pk-yanma .research-reward-name { color: var(--accent-vert-bon); }
 .pk-yanma .emoji-shiny  { display: inline; }
 
 /* Yanméga — Bon / Shiny */
-.pk-yanmega .pokemon-name { color: #16a34a; }
-.pk-yanmega .research-reward-name { color: #16a34a; }
+.pk-yanmega .pokemon-name { color: var(--accent-vert-bon); }
+.pk-yanmega .research-reward-name { color: var(--accent-vert-bon); }
 .pk-yanmega .emoji-shiny  { display: inline; }
 
 /* Ymphect — Bon / Shiny */
-.pk-ymphect .pokemon-name { color: #16a34a; }
-.pk-ymphect .research-reward-name { color: #16a34a; }
+.pk-ymphect .pokemon-name { color: var(--accent-vert-bon); }
+.pk-ymphect .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ymphect .emoji-shiny  { display: inline; }
 
 /* ============================================================
@@ -3243,37 +3249,37 @@
    ============================================================ */
 
 /* Zapétrel — Bon */
-.pk-zapetrel .pokemon-name { color: #16a34a; }
-.pk-zapetrel .research-reward-name { color: #16a34a; }
+.pk-zapetrel .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zapetrel .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Zébibron — Bon / Shiny */
-.pk-zebibron .pokemon-name { color: #16a34a; }
-.pk-zebibron .research-reward-name { color: #16a34a; }
+.pk-zebibron .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zebibron .research-reward-name { color: var(--accent-vert-bon); }
 .pk-zebibron .emoji-shiny  { display: inline; }
 
 /* Zéblitz — Bon / Shiny */
-.pk-zeblitz .pokemon-name { color: #16a34a; }
-.pk-zeblitz .research-reward-name { color: #16a34a; }
+.pk-zeblitz .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zeblitz .research-reward-name { color: var(--accent-vert-bon); }
 .pk-zeblitz .emoji-shiny  { display: inline; }
 
 /* Zacian — Bon / Shiny */
-.pk-zacian .pokemon-name { color: #16a34a; }
-.pk-zacian .research-reward-name { color: #16a34a; }
+.pk-zacian .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zacian .research-reward-name { color: var(--accent-vert-bon); }
 .pk-zacian .emoji-shiny  { display: inline; }
 
 /* Zamazenta — Bon / Shiny */
-.pk-zamazenta .pokemon-name { color: #16a34a; }
-.pk-zamazenta .research-reward-name { color: #16a34a; }
+.pk-zamazenta .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zamazenta .research-reward-name { color: var(--accent-vert-bon); }
 .pk-zamazenta .emoji-shiny  { display: inline; }
 
 /* Zekrom — Bon / Shiny */
-.pk-zekrom .pokemon-name { color: #16a34a; }
-.pk-zekrom .research-reward-name { color: #16a34a; }
+.pk-zekrom .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zekrom .research-reward-name { color: var(--accent-vert-bon); }
 .pk-zekrom .emoji-shiny  { display: inline; }
 
 /* Zeraora — Bon / Pas de shiny */
-.pk-zeraora .pokemon-name { color: #16a34a; }
-.pk-zeraora .research-reward-name { color: #16a34a; }
+.pk-zeraora .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zeraora .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Zigzaton — Normal / Shiny */
 .pk-zigzaton .emoji-shiny { display: inline; }
@@ -3287,8 +3293,8 @@
    ============================================================ */
 
 /* Leveinard — Bon uniquement en Dynamax */
-.pk-leveinard-dynamax .pokemon-name { color: #16a34a; }
-.pk-leveinard-dynamax .research-reward-name { color: #16a34a; }
+.pk-leveinard-dynamax .pokemon-name { color: var(--accent-vert-bon); }
+.pk-leveinard-dynamax .research-reward-name { color: var(--accent-vert-bon); }
 .pk-leveinard-dynamax .emoji-shiny  { display: inline; }
 
 /* Zigzaton de Galar — Normal / Shiny */
