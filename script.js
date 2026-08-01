@@ -480,3 +480,103 @@ function showComingSoon(e) {
   e.preventDefault();
   afficherComingSoon(e, -45);
 }
+
+// 16. PAGE OPTIPM (OptiPM.html)
+// Menu déroulant des PM du Passe du mois + recalcul du tableau.
+// Ne s'exécute que si la page contient le menu.
+var PM_STOCK_MAX_J2 = 710;   // au-delà, le plafond de 1500 bloque la marche du Jour J
+var PM_STOCK_MIN_J2 = 380;   // en dessous, taper une Source la vide d'office et bouleverse l'ordre
+var PM_COUT_COMBAT  = 800;   // coût d'un Combat Gigamax
+var PM_PASSE_MAX    = 2500;  // Passe payant : 3 × (100 + 400) au rangs 19/49/74, + (200 + 800) au rang 86
+var PM_PASSE_PAS    = 100;
+
+function pmLignes() {
+  return Array.prototype.slice.call(document.querySelectorAll('.pm-timeline tr[data-delta]'));
+}
+
+function pmPasse() {
+  return parseInt(document.getElementById('pm-passe').value, 10) || 0;
+}
+
+function pmDelta(ligne, passe) {
+  return ligne.dataset.role === 'passe' ? passe : parseInt(ligne.dataset.delta, 10);
+}
+
+// 1160 → « 1 160 » (espace insécable)
+function pmFormat(nombre) {
+  return String(nombre).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0');
+}
+
+// Revenus de la séquence hors Passe du mois (3 620 PM)
+function pmRevenusFixes() {
+  var total = 0;
+  pmLignes().forEach(function (ligne) {
+    var delta = parseInt(ligne.dataset.delta, 10);
+    if (ligne.dataset.role !== 'passe' && delta > 0) total += delta;
+  });
+  return total;
+}
+
+function pmNbCombats(passe) {
+  var maximum = pmLignes().filter(function (ligne) {
+    return parseInt(ligne.dataset.delta, 10) < 0;
+  }).length;
+  return Math.min(maximum, Math.floor((PM_STOCK_MAX_J2 + pmRevenusFixes() + passe) / PM_COUT_COMBAT));
+}
+
+// Stock à viser en fin de J-2, jamais sous le plancher
+function pmDepart(passe) {
+  return Math.max(PM_STOCK_MIN_J2, pmNbCombats(passe) * PM_COUT_COMBAT - pmRevenusFixes() - passe);
+}
+
+function remplitPmSelect() {
+  var select = document.getElementById('pm-passe');
+  var choisi = pmPasse();
+  var html = '';
+
+  for (var pm = 0; pm <= PM_PASSE_MAX; pm += PM_PASSE_PAS) {
+    html += '<option value="' + pm + '"' + (pm === choisi ? ' selected' : '') + '>'
+          + pmFormat(pm) + ' PM → ' + pmNbCombats(pm) + ' Combats</option>';
+  }
+  select.innerHTML = html;
+}
+
+function updatePmTable() {
+  var passe     = pmPasse();
+  var nbCombats = pmNbCombats(passe);
+  var mini      = pmDepart(passe);
+  var maxi      = PM_STOCK_MAX_J2;
+  var combat    = 0;
+
+  document.querySelectorAll('.pm-passe-montant').forEach(function (el) {
+    el.textContent = pmFormat(passe);
+  });
+
+  pmLignes().forEach(function (ligne) {
+    var cellule    = ligne.querySelector('td:last-child');
+    var delta      = pmDelta(ligne, passe);
+    var impossible = ligne.dataset.role === 'passe'
+      ? passe === 0
+      : delta < 0 && ++combat > nbCombats;
+
+    ligne.classList.toggle('pm-struck', impossible);
+
+    if (impossible) {
+      cellule.textContent = '-';
+      return;
+    }
+
+    mini += delta;
+    maxi += delta;
+
+    cellule.textContent = ligne.dataset.format === 'entre'
+      ? 'Entre ' + pmFormat(mini) + ' et ' + pmFormat(maxi) + ' PM'
+      : pmFormat(mini) + ' – ' + pmFormat(maxi) + ' PM';
+  });
+}
+
+// Garde : la section 16 ne s'exécute que sur OptiPM.html
+if (document.getElementById('pm-passe')) {
+  remplitPmSelect();
+  updatePmTable();
+}

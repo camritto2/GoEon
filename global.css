@@ -625,6 +625,13 @@ body.dark-mode .shiny-boost-circle {
 }
 .intro-rules a:hover { text-decoration: underline; }
 
+/* Puces des encadrés d'intro — déplacée de top.css le 1er août 2026 :
+   9 pages hors Top l'utilisaient sans charger top.css. */
+.bullet { display: inline-block; margin-right: 10px; font-weight: bold; }
+
+/* Sous-puce, décalée sous sa puce parente */
+.intro-sous-item { padding-left: 22px; }
+
 /* Exposant */
 .footnote-ref {
   font-size: 0.55em;

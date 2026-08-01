@@ -400,7 +400,7 @@ body.dark-mode .pokemon-name-mega {
 .legend-cyan { color: #06b6d4; font-weight: bold; }
 
 body.dark-mode .legend-red { color: #ff8787; }
-.bullet { display: inline-block; margin-right: 10px; font-weight: bold; }
+/* .bullet déplacée dans global.css le 1er août 2026 */
 
 /* Titre Top 25 */
 .top-title {

@@ -32,6 +32,7 @@ GoEon : site de ressources Pokémon GO francophone. HTML/CSS/JS pur, mobile-firs
 - système `research-*` (TachesEtude, Rocket, évènements)
 - badges : `emoji-shiny`, `emoji-costume`, `shiny-boost-circle`, `img.emoji-shiny.nouveau-shiny`
 - encadrés `intro-rules` / `passe-go-deluxe-intro`, `section-sous-titre`, `texte-vert`, `category-title`, `footnote-ref`, `stats-note`
+- puces d'intro : **`bullet`** (rapatriée de `top.css` le 01/08/2026 — 9 pages hors Top l'utilisaient sans charger ce fichier) et **`intro-sous-item`** (sous-puce `◦`, retrait 22 px)
 - difficulté des raids : `raid-difficulty`, `diff-bubble` + `diff-1` à `diff-5`
 - **`section-nav`** (barre de sections collante des pages évènement) — centralisée ici le 31/07/2026
 - animation `twinkle`
@@ -40,13 +41,15 @@ GoEon : site de ressources Pokémon GO francophone. HTML/CSS/JS pur, mobile-firs
 
 **`top.css`** — pages Top uniquement : `fandom-card`, les **18** palettes `.btn-X` + `.btn-X.active`, `.type-nav`, intro repliable, `.arrow-indicator`, `.badge-obscur`, `.top-title`.
 
+**`optipm.css`** — page OptiPM uniquement : classes `pm-*` (timeline, tableaux, menu du Passe). Extraite du bloc `<style>` local le 01/08/2026.
+
 **`rocket.css`** — page ChefRocket (layout 1/3, bandeaux chefs, counters verts). Versionné `?v=N` par tradition d'une autre conversation ; incohérent avec le reste, toléré.
 
 **`index.css`** — accueil : héros, section Nouveautés (`news-*`), cartes de la grille (`home-card` + les 13 couleurs), grille des types, bandeaux repliables PWA/légende.
 
 ### JS
 
-**`script.js`** — ⭐ TOUTE la logique, en **15 sections numérotées** :
+**`script.js`** — ⭐ TOUTE la logique, en **16 sections numérotées** :
 
 | # | Rôle |
 |---|------|
@@ -66,6 +69,7 @@ GoEon : site de ressources Pokémon GO francophone. HTML/CSS/JS pur, mobile-firs
 | 13 | Bouton « Retour en haut » |
 | 14 | Barre des types (config `TYPES_TOP`, `page: null` = grisé + tooltip) |
 | 15 | Accueil : `switchTab`, `showComingSoon` |
+| 16 | OptiPM : menu déroulant des PM du Passe + recalcul du tableau (garde `if (document.getElementById('pm-passe'))`) |
 
 L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 
@@ -93,6 +97,7 @@ L'enregistrement du service worker se trouve entre les sections 11 bis et 12.
 
 ### Images
 
+- **Dossier `Images/` avec un I majuscule** — c'est le vrai nom sur le disque. La quasi-totalité des pages écrit encore `images/` en minuscule (héritage : Netlify est insensible à la casse, donc rien n'a jamais cassé en production). **Migration progressive décidée le 1er août 2026** : on passe à `Images/` sur chaque page qu'on touche, sans campagne dédiée. Ne jamais « corriger » vers la minuscule.
 - `NomSansAccents.png`, shiny = `NomS.png`, formes **avant** le S (`GoupixAS.png`).
 - Suffixes : **A** Alola, **G** Galar *et* Gigamax, **H** Hisui, **M** Méga, **P** Primo (`GroudonP.png`), **C** / **T** formes spéciales, **B** / **N** fusions Kyurem.
 - La collision Galar/Gigamax sur `G` est **assumée** : aucun Gigamax de Galar n'existe. Si le cas survenait, ce serait `GG`.
@@ -209,7 +214,7 @@ Ordre de sections observé : Pokémon à l'honneur → Bonus → Nouveaux Pokém
 - **Nouveautés** : `news-group` daté au format `JJ/MM`, un `news-items li` par entrée. Mettre à jour à chaque livraison de contenu.
 - **Ancres** : `scroll-margin-top: 70px` sur `.home-section` et `.type-grid`. Les liens navbar « À venir » et « Meilleurs Pokémon » pointent directement sur `index.html#evenements` et `index.html#types` (l'ancre `#types` est sur la `.type-grid`, pas sur la section, pour dépasser le titre).
 - **Menu mobile** : `max-height: calc(100vh - 60px)` + `overflow-y: auto` + `overscroll-behavior: contain` (le scroll interne ne referme plus le menu).
-- **Pages ressource** (`raids`, `raids_obscurs`, `oeufs`, `dynamax`, `metamorph`, `boost_poussiere`, `TachesEtude`, `OptiPM`) : mêmes conventions de cartes et de badges. `OptiPM` a son propre jeu de classes `pm-*` **encore local à la page** (cf. §10).
+- **Pages ressource** (`raids`, `raids_obscurs`, `oeufs`, `dynamax`, `metamorph`, `boost_poussiere`, `TachesEtude`, `OptiPM`) : mêmes conventions de cartes et de badges. `OptiPM` a son propre jeu de classes `pm-*`, désormais dans `optipm.css` (extrait du `<style>` local le 01/08/2026).
 - **Difficulté des raids** : `raid-difficulty-label` (« Dresseurs Nécessaires ») + `raid-difficulty` contenant des `diff-bubble diff-1…5` (rouge → orange → jaune → vert clair → vert foncé, texte blanc unifié par `text-shadow`). Un Méga typique utilise 1/3/4/5, un Légendaire les cinq.
 
 ---
@@ -232,6 +237,7 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **Conversations génératrices** : récidive systématique du `theme-color` thématique. L'audit le vérifie **en premier**.
 - **Ne jamais corriger une extension d'image** de sa propre initiative (`.png` ↔ `.webp`) : Cam prend les fichiers là où il les trouve.
 - **Ne jamais deviner un nom de fichier** à partir d'une description orale (`HoOh` vs `Ho-Oh`) : demander.
+- **Réécrire un bloc `<script>` par regex emporte le suivant.** Un `.*` entre `<script>` et `</script>` est gourmand : il capture jusqu'au **dernier** `</script>` de la page et avale donc le `<script src="script.js">` final. Symptôme : la navbar disparaît alors que le HTML semble intact. Après toute réécriture de script : vérifier que `script.js` est toujours appelé en fin de fichier. (Erreur commise le 1er août sur `OptiPM.html`.)
 - **Le code dit la vérité, pas la mémoire.** Ce document a contenu pendant deux semaines des classes qui n'existaient pas.
 
 ---
@@ -249,11 +255,11 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **3 types Top restants** : Spectre, Ténèbres, Vol. (`TopSol` livrée et activée le 31 juillet.)
 - **ChefRocket** : ajouter Cliff & Arlo (empiler dans `.rocket-list`) ; puis chantier séparation Sbires/Chefs avant activation navbar/accueil.
 - **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 13 pages Top + activer la carte d'accueil + le lien navbar.
+- **`OptiPM.html` est considérée comme terminée** (1er août 2026). Le Passe payant est couvert par le menu déroulant ; le ticket d'évènement et l'Étude Ambassadeur sont traités par deux lignes « Optionnel » en fin de tableau. Plus de « versions à venir ».
 - **SEO / Open Graph** : meta description + og:tags (priorité pages Top) ; attend l'image 1200×630 de Cam.
 
 ### Dette technique
 
-- **Classes `pm-*`** d'`OptiPM.html` encore dans un bloc `<style>` local → à centraliser comme on vient de le faire pour `section-nav`.
 - **`research-rangee-sep`** : la fonction JS est recopiée à la main de page en page → à verser dans `script.js`.
 - **Classe `nom-neutre`** à créer : le motif `style="color: var(--text-principal);"` sur un `pokemon-name` est apparu au moins 3 fois (Pikachu costumé, Méga-Staross, Passe Premium).
 - **`event-sous-titre`** toujours déclarée dans `global.css` alors qu'elle est dépréciée → vérifier qu'aucune page ne l'utilise, puis supprimer.
@@ -289,6 +295,8 @@ Règles clés à rappeler dans le prompt :
 **Juillet 2026 — le grand refactor** : audit complet du site ; centralisation shiny / builds / bandeaux dans `script.js` ; suppression du code mort ; variables d'accent rapatriées dans `navbar.css` ; ~10 coquilles de fichiers shiny corrigées ; faux shinies retirés (Shifours, Wushours, Craparoi) ; service worker sécurisé ; barre des types créée ; refactor `.active` des 127 boutons Top ; navbar fusionnée après conflit de versions.
 
 **Seconde quinzaine de juillet** : une douzaine de pages d'évènement (DixiemeAnniversaire, CoucheOzone, GorythmicGigamax, BraisesArctiques, EclosionFeuGlace, FestivalAquatique, MegaStaross, CDGoupilou, CitySafariMarseille, GoFestMegaFinale, TerresSauvages2026) ; pages ressource `OptiPM.html` ; 8 pages Top supplémentaires (Psy, Feu, Glace, Insecte, Plante, Poison, Roche, Sol) ; système `shiny-boost-circle` ; rectangles de difficulté des raids ; section Nouveautés de l'accueil.
+
+**1er août 2026** : refonte de l'interaction d'`OptiPM.html` — les deux cases à cocher (Passe récupéré / Ambassadeur) remplacées par un menu déroulant de 26 entrées (0 à 2 500 PM par pas de 100, libellés « X PM → Y Combats »), tableau entièrement recalculé par un moteur `data-delta` au lieu de valeurs figées `data-default`/`data-variant` ; lignes 7 et 8 ajoutées ; Ambassadeur et ticket payant devenus deux lignes « Optionnel » ; bloc Règles Générales complété (plafond de stockage, sous-puces) ; page passée à `Images/`. Le mécanisme a été validé par simulation Python contre les deux schémas de référence de Cam avant écriture. Page considérée comme terminée. Dans la foulée : `optipm.css` créée, JS versé en section 16 de `script.js` (OptiPM n'a plus ni `<style>` ni `<script>` inline), et `.bullet` rapatriée de `top.css` vers `global.css` — elle manquait à 9 pages hors Top, soit ~98 puces sans leur marge.
 
 **31 juillet 2026 (soir)** : `TopSol.html` (30 cartes, 5 Méga) livrée et activée ; 12 entrées ajoutées ou modifiées dans `pokemon.css` (709 classes) ; commentaires datés du 16 août posés pour Goupilou et Roublenard ; **harmonisation des rangs Méga sur les 9 pages Top qui utilisaient `M1`** ; pages `TaxiVolant`, `DixiemeAnniversaire` et `CoucheOzone` constatées supprimées du dépôt ; ce document corrigé sur cinq points.
 

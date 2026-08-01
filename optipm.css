@@ -1,0 +1,190 @@
+/* ==========================================
+   OptiPM.html — Optimisation des Particules Max
+   Extrait du bloc <style> local le 1er août 2026
+   ========================================== */
+
+/* ═══════════════════════════════════════ */
+/*   Mise en page du texte (intro-rules)   */
+/* ═══════════════════════════════════════ */
+
+.intro-rules p  { margin: 0 0 10px 0; }
+.intro-rules ol { margin: 0 0 10px 0; padding-left: 20px; }
+
+.intro-rules > p:last-child,
+.intro-rules > ol:last-child { margin-bottom: 0; }
+
+/* Rétablit l'espace au-dessus d'un paragraphe qui suit une liste d'intro-item */
+.intro-rules .intro-item + p { margin-top: 10px; }
+
+/* Paragraphe collé au suivant (note italique de précision) */
+.intro-rules p.pm-serre { margin-bottom: 4px; }
+.intro-rules p.pm-note  { font-style: italic; }
+
+.pm-marche {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 6px;
+}
+
+.pm-logo { text-align: center; margin: 0 0 10px 0; }
+
+.pm-logo img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.pm-total {
+  color: #10b981;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* 60px de navbar fixe + 12px de respiration */
+.pm-timeline-intro {
+  margin-top: 15px;
+  scroll-margin-top: 72px;
+}
+
+.pm-footnote {
+  font-size: 11px;
+  color: var(--text-secondaire);
+  margin: -10px 0 20px 0;
+}
+
+/* ═══════════════════════════════════════ */
+/*     Timeline de récupération des PM     */
+/* ═══════════════════════════════════════ */
+
+.pm-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 10px 0 24px 0;
+}
+
+.pm-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pm-table th {
+  background: rgba(41, 182, 246, 0.1);
+  color: #29b6f6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 10px 6px 10px;
+  text-align: center;
+}
+
+.pm-table th em {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-secondaire);
+  margin-top: 2px;
+}
+
+.pm-table td {
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--text-principal);
+  border-top: 1px solid var(--border-carte);
+}
+
+.pm-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  white-space: nowrap;
+  padding-left: 14px;
+  border-left: 1px solid var(--border-carte);
+}
+
+/* Gain / perte de PM — volontairement distincts du vert "Bon" (#16a34a) */
+.pm-plus  { color: #10b981; font-weight: 700; }
+.pm-minus { color: #ef4444; font-weight: 700; }
+
+.pm-table td.pm-full {
+  text-align: left;
+  font-weight: 400;
+  color: var(--text-principal);
+  white-space: normal;
+  border-left: none;
+  padding-left: 10px;
+}
+
+/* text-decoration ne se propage pas d'un <tr> vers ses <td> : on cible les cellules */
+.pm-struck { opacity: 0.5; }
+.pm-struck td { text-decoration: line-through; }
+
+/* ═══════════════════════════════════════ */
+/*      Champ « PM du Passe du mois »      */
+/* ═══════════════════════════════════════ */
+
+.pm-passe-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 0 0 6px 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-principal);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pm-passe-field label {
+  flex: 1;
+  cursor: pointer;
+}
+
+.pm-passe-field select {
+  flex-shrink: 0;
+  max-width: 55%;
+  background: var(--bg-site);
+  border: 1px solid var(--border-carte);
+  border-radius: 8px;
+  padding: 7px 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #29b6f6;
+  cursor: pointer;
+}
+
+.pm-passe-field select:focus {
+  outline: none;
+  border-color: #29b6f6;
+}
+
+.pm-table td.pm-optionnel {
+  font-style: italic;
+  color: var(--text-secondaire);
+}
+
+.pm-passe-aide {
+  font-size: 11px;
+  color: var(--text-secondaire);
+  margin: 0 0 14px 0;
+  padding: 0 4px;
+}
+
+@media (min-width: 769px) {
+  .pm-passe-field     { font-size: 14px; padding: 12px 18px; }
+  .pm-passe-field select { font-size: 14px; }
+  .pm-table th        { font-size: 17px; padding: 12px 14px 8px 14px; }
+  .pm-table th em     { font-size: 13px; }
+  .pm-table td        { font-size: 15px; padding: 10px 14px; }
+}
