@@ -20,6 +20,9 @@
     .intro-rules > p:last-child,
     .intro-rules > ol:last-child { margin-bottom: 0; }
 
+    /* Sous-puce, décalée sous sa puce parente */
+    .intro-rules .intro-sous-item { padding-left: 22px; }
+
     /* Rétablit l'espace au-dessus d'un paragraphe qui suit une liste d'intro-item */
     .intro-rules .intro-item + p { margin-top: 10px; }
 
@@ -211,8 +214,10 @@
     <p><strong>PM</strong> = Particules Max</p>
     <div class="intro-item"><span class="bullet">• </span>À savoir, une Source offre 120 PM par jour.</div>
     <div class="intro-item"><span class="bullet">• </span>Toutes les Sources ne sont pas disponibles tous les jours.</div>
-    <div class="intro-item"><span class="bullet">• </span>Il y a plus de Sources le lundi et lors des Évènements Dynamax/Gigamax.</div>
-    <p>💡 À savoir, le stockage est plafonné à 1&nbsp;500 PM. On peut dépasser ce seuil, mais au-delà, plus aucune PM de Source ni de marche n'est récupérable. En dessous, cliquer sur une Source récupère d'office ses PM.</p>
+    <div class="intro-item intro-sous-item"><span class="bullet">◦ </span>Il y a plus de Sources le lundi et lors des Évènements Dynamax/Gigamax.</div>
+    <div class="intro-item"><span class="bullet">• </span>Le stockage est plafonné à 1&nbsp;500 PM. On peut dépasser ce seuil, mais au-delà, plus aucune PM de Source ni de marche n'est récupérable.</div>
+    <div class="intro-item intro-sous-item"><span class="bullet">◦ </span>En dessous de ce seuil, cliquer sur une Source récupèrera d'office vos PM.</div>
+    <div class="intro-item intro-sous-item"><span class="bullet">◦ </span>Les PM du Passe du mois et des Études sont, elles, récupérables à tout moment.</div>
   </div>
 
   <!-- ═══════════════════════════════════════ -->
@@ -251,7 +256,7 @@
     <p>Pour optimiser ses PM et faire le plus de Combats Gigamax possible, il faut tirer profit de ces bonus qui s'appliquent dès 0h et de la réinitialisation qui, elle, a lieu à 5h.</p>
     <p class="pm-serre">Les calculs suivants permettent de réaliser <strong>de 5 à 8 Combats Gigamax</strong>, selon les PM dont vous disposez.</p>
     <p class="pm-note">Cela s'applique sans ticket d'évènement.</p>
-    <p><strong>Pour que cela fonctionne, il ne faut pas récupérer à l'avance les PM offertes dans le Passe du mois : 100 PM aux rangs 19, 49 et 74 (+400 avec le Passe payant) et 200 PM au rang 86 (+800). Soit 500 PM au total, ou 2&nbsp;500 PM avec le Passe payant.</strong></p>
+    <p><strong>Pour une optimisation parfaite, il ne faut pas récupérer à l'avance les PM offertes dans le Passe du mois : 100 PM aux rangs 19, 49 et 74 (+400 avec le Passe payant) et 200 PM au rang 86 (+800). Soit 500 PM au total, ou 2&nbsp;500 PM avec le Passe payant.</strong></p>
   </div>
 
   <p class="section-sous-titre pm-timeline-intro">Voici le récapitulatif des actions à réaliser pour faire le plus de Combats Gigamax possible durant la Journée.</p>
@@ -311,8 +316,8 @@
         <tr data-delta="-800"><td>6️⃣ Sixième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td>0 – 30 PM</td></tr>
         <tr data-delta="-800"><td>7️⃣ Septième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td>-</td></tr>
         <tr data-delta="-800"><td>8️⃣ Huitième Combat Gigamax (<span class="pm-minus">-800</span>)</td><td>-</td></tr>
-        <tr><td colspan="2" class="pm-full pm-optionnel">Optionnel : la Tâche Spéciale Ambassadeur permet de faire un Combat supplémentaire.</td></tr>
-        <tr><td colspan="2" class="pm-full pm-optionnel">Optionnel : acheter le ticket payant de l'évènement permet de faire 8 Combats supplémentaires.</td></tr>
+        <tr><td colspan="2" class="pm-full pm-optionnel">Optionnel : L'Étude Spéciale Ambassadeur permet de faire un Combat supplémentaire.</td></tr>
+        <tr><td colspan="2" class="pm-full pm-optionnel">Optionnel : Le ticket payant de l'évènement permet de faire 8 Combats supplémentaires.</td></tr>
       </tbody>
     </table>
 
@@ -417,6 +422,8 @@
   remplitPmSelect();
   updatePmTable();
 </script>
+
+<script src="script.js?v=3"></script>
 
 </body>
 </html>
