@@ -1510,10 +1510,8 @@
 .pk-kranidos .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kranidos .emoji-shiny  { display: inline; }
 
-/* Kungfouine — Bon / Shiny */
-.pk-kungfouine .pokemon-name { color: var(--accent-vert-bon); }
-.pk-kungfouine .research-reward-name { color: var(--accent-vert-bon); }
-.pk-kungfouine .emoji-shiny  { display: inline; }
+/* Kungfouine — Normal / Shiny */
+.pk-kungfouine .emoji-shiny { display: inline; }
 
 /* Kyogre — Bon / Shiny */
 .pk-kyogre .pokemon-name { color: var(--accent-vert-bon); }
@@ -2772,10 +2770,8 @@
 /* Serpang — Normal / Shiny */
 .pk-serpang .emoji-shiny { display: inline; }
 
-/* Shaofouine — Bon / Shiny */
-.pk-shaofouine .pokemon-name { color: var(--accent-vert-bon); }
-.pk-shaofouine .research-reward-name { color: var(--accent-vert-bon); }
-.pk-shaofouine .emoji-shiny  { display: inline; }
+/* Shaofouine — Normal / Shiny */
+.pk-shaofouine .emoji-shiny { display: inline; }
 
 /* Sharpedo — Bon / Shiny (couvre Méga-Sharpedo) */
 .pk-sharpedo .pokemon-name { color: var(--accent-vert-bon); }

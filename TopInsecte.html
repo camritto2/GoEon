@@ -47,11 +47,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Scarhino</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Taillade</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mscar-imm">Taillade</strong><span id="mscar-imm-alt" style="display:none"> → <strong>Riposte</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Mégacorne</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mscar-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('mscar-details', 'toggle-mscar-btn')">
+                    <button id="toggle-mscar-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('mscar-details', 'toggle-mscar-btn'); toggleAltImm('mscar-imm', 'mscar-imm-alt')">
                     Également Top Combat <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -201,8 +201,19 @@
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Piqûre</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Bourdon</strong>
                 </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
+                <div class="card-button">
+                    <button id="toggle-canc-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('canc-details', 'toggle-canc-btn')">
+                    Également Top Combat <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="canc-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Exploforce</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
+                    </div>
+                </div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
@@ -295,11 +306,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Scarhino</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Taillade</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="scarh-imm">Taillade</strong><span id="scarh-imm-alt" style="display:none"> → <strong>Riposte</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Mégacorne</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-scarh-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('scarh-details', 'toggle-scarh-btn')">
+                    <button id="toggle-scarh-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('scarh-details', 'toggle-scarh-btn'); toggleAltImm('scarh-imm', 'scarh-imm-alt')">
                     Également Top Combat <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>

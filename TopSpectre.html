@@ -57,11 +57,6 @@
                 </div>
                 <div class="card-build" id="necau-details">
                     <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">1</span>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
                 </div>
                 <div class="card-note"><span class="footnote-ref">1</span> : Rayon Spectral fera toujours plus de dégâts qu'une Attaque Psy.</div>
             </div>
@@ -598,11 +593,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Archéduc</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Étonnement</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="arche-imm">Étonnement</strong><span id="arche-imm-alt" style="display:none"> → <strong>Feuille Magik</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Tisse Ombre</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-arche-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('arche-details', 'toggle-arche-btn')">
+                    <button id="toggle-arche-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('arche-details', 'toggle-arche-btn'); toggleAltImm('arche-imm', 'arche-imm-alt')">
                     Également Top Plante <img src="Images/Plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -644,7 +639,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong id="courr-imm">Balayage</strong><span id="courr-imm-alt" style="display:none"> → <strong>Riposte</strong></span> <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ball'Ombre</strong> / <strong>Poing de Colère</strong><span class="footnote-ref">2</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ball'Ombre</strong> / <strong>Poing de Colère</strong><span class="legacy-indicator">L</span><span class="footnote-ref">2</span>
                 </div>
                 <div class="card-button">
                     <button id="toggle-courr-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('courr-details', 'toggle-courr-btn'); toggleAltImm('courr-imm', 'courr-imm-alt')">

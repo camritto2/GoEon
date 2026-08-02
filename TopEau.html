@@ -525,11 +525,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-rare">Shifours</span></strong><span class="pokemon-form"><em>Style Mille Poings</em></span></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Cascade</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="shif-imm">Cascade</strong><span id="shif-imm-alt" style="display:none"> → <strong>Riposte</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Dynamo-Poing</strong><span class="footnote-ref">2</span>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-shif-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('shif-details', 'toggle-shif-btn')">
+                    <button id="toggle-shif-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('shif-details', 'toggle-shif-btn'); toggleAltImm('shif-imm', 'shif-imm-alt')">
                     Également Top Combat <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
