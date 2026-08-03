@@ -1,6 +1,6 @@
 # GoEon — Conventions & Décisions
 
-*Version 2.3 — 2 août 2026. Remplace la v2.2 du 1er août.*
+*Version 2.4 — 3 août 2026. Remplace la v2.3 du 2 août.*
 *Chaque affirmation de ce document a été vérifiée sur les fichiers du dépôt à cette date.*
 
 > **Règle n°1 pour toute conversation Claude reprenant ce projet : ne jamais travailler de mémoire.**
@@ -151,6 +151,7 @@ Détail d'écriture : les blocs Bon écrivent `.emoji-shiny  {` avec **deux** es
 - Billets : « Nom / X € » avec espace insécable après la barre.
 - La ligature œ est obligatoire : « Bien-œufs-reux », « Nœud Herbe ». (7 occurrences corrigées sur `TopPlante` et 1 sur `TopPoison` le 2 août 2026.)
 - Accents circonflexes retirés dans les noms de formes affichés (Déchainé, Enchainé).
+- **Cout d'une 2e Attaque Chargée : « N Bonbons », jamais le nom de l'espèce.** Trois cartes écrivaient « 100 Bonbons Zacian », « 75 Bonbons Terhal », « 75 Bonbons Riolu » ; corrigées le 3 août 2026. Les 224 blocs de cout du site sont désormais uniformes.
 
 ---
 
@@ -169,8 +170,10 @@ Détail d'écriture : les blocs Bon écrivent `.emoji-shiny  {` avec **deux** es
 - **`toggleAltImm`, 3e argument** : si la face avant porte une icône de type, lui donner un id et le passer en 3e argument. L'icône disparait au clic **même quand l'attaque révélée est du même type** (Malvalame, Courrousinge) — décision du 1er août. Reste non tranché : faut-il donner sa propre icône à l'attaque révélée quand elle est hors-type ? `TopPoison` (Nidoking) le fait, le reste du site non.
 - **Le bouton « Également Top Y » n'existe que si le Pokémon figure vraiment dans le Top Y.** Sinon on retire bouton et build, en laissant `<div class="card-button"></div>` et `<div class="card-build"></div>` vides. Cas traités : Empiflor sur `TopPoison`, Marshadow sur `TopCombat`, et Coatox sur `TopPoison` depuis sa sortie du Top Combat le 2 août.
   **Une exception assumée depuis le 2 août : Méga-Mewtwo X.** Il n'est pas au Top Psy (c'est Méga-Mewtwo Y qui y figure), mais Frappe Psy reste sa meilleure Attaque Psy et l'information a été jugée utile. Le bouton et le build sont donc conservés, avec une `build-note` — « Méga-Mewtwo Y est Top Psy. » — qui lève l'ambigüité au déploiement. Le libellé du bouton reste court : il n'a **pas** été allongé, faute de place sur une carte mobile.
+  **Contre-exemple, tranché le 3 août : Méga-Métalosse.** Il portait un bouton « Également Top Psy » alors qu'il ne figure pas dans `TopPsy` (seul Métalosse y est). Aucune information utile ne le justifiait : bouton et build **retirés**. L'exception Méga-Mewtwo X reste donc unique, et se justifie par l'intérêt de l'information, pas par la simple existence d'une attaque hors-type.
 - **Pas de bloc « Cout » quand il n'y a pas de 2e Attaque Chargée.** Le build se réduit alors à la ligne `2e Attaque Chargée : -`, sans `<hr>` ni `attack-cost-container`. Invariant vérifiable : `nombre de builds − cartes sans 2e attaque = nombre de blocs de cout`.
 - **L'absence de 2e attaque s'écrit avec un tiret court `-`**, jamais un tiret long `—`.
+- **Quand le `-` s'explique par la supériorité de l'attaque de face**, le même `footnote-ref` se pose **deux fois** : sur l'Attaque Chargée de la face avant *et* sur le tiret, avec une `card-note` unique. Modèles : Necrozma Crinière du Couchant (`TopPsy`), Forgelina (`TopFée`), Cobaltium (`TopAcier` et `TopCombat` depuis le 3 août). Une attaque de face hors-type porte en plus son icône de type, placée **après** le renvoi.
 - **Attaques toujours Legacy, sur toutes les pages** : Végé-Attaque, Rafale Feu, Hydroblast. Si on en trouve une sans `L`, c'est un oubli.
 - `<span class="footnote-ref">` se place **après** le nom d'attaque et l'indicateur Legacy, mais **avant** l'icône de type. Ordre strict : `nom` → `legacy-indicator` → `footnote-ref` → icône.
 - **Deux classes de note, à ne pas confondre.** `card-note` s'affiche en permanence sous la carte : elle sert aux renvois posés sur la face avant. `build-note` vit **à l'intérieur du build** et n'apparait qu'au déploiement : elle sert aux renvois posés sur la 2e Attaque Chargée. Un audit qui ne cherche que `card-note` conclura à tort que des notes manquent.
@@ -276,6 +279,7 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **Un remplacement par nom d'attaque frappe la première occurrence, pas la bonne.** Toujours découper la page par carte et cibler le rang. Deux erreurs le même jour : `Ire de la Nature` a atterri sur Tokorico au lieu de Tokopiyon, `Végé-Attaque` sur Méga-Florizarre au lieu de Florizarre.
 - **L'invariant croisé des bascules se vérifie par script, pas à l'œil.** Chaque page Top implique une « meilleure attaque immédiate absolue » par Pokémon : celle révélée s'il y a une bascule, celle de la face avant sinon. Extraire cette valeur sur les 15 pages et grouper par Pokémon fait tomber les contradictions en quelques secondes. La passe du 2 août en a sorti sept d'un coup, dont quatre qu'aucune relecture manuelle n'avait vues en trois audits.
 - **Une couleur de nom est une donnée croisée.** Cancrelove a failli entrer au Top Combat en noir alors que `TopInsecte` le classe en bleu. Avant de poser `pokemon-name-*` sur une carte, vérifier ce que font les autres pages Top pour ce Pokémon.
+- **Un décompte d'anomalies se déduplique avant d'être annoncé.** Le 3 août, le script d'audit a affiché 16 puis 10 lignes ; Cam s'est vu annoncer successivement « 16 », « 11 restantes » puis « 7 réelles » pour le même lot. En cause : une divergence d'orthographe produisait deux lignes (`AC croisée` **et** `orthographe`), et un cas légitime (« Feu Sacré+ » de Ho-Oh Apex) était compté comme faute. Un nombre communiqué doit être un nombre de **problèmes**, pas de lignes de sortie.
 - **Le code dit la vérité, pas la mémoire.** Ce document a contenu pendant deux semaines des classes qui n'existaient pas.
 
 ---
@@ -293,10 +297,8 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 
 ### Contenu
 
-- **2 types Top restants** : Ténèbres, Vol. Trois boutons pointent déjà vers ces pages inexistantes : Shifours Style Poing Final (`TopCombat` → Ténèbres), Électhor de Galar (`TopCombat` → Vol) et Méga-Rayquaza (`TopDragon` → Vol). C'est assumé, mais à recroiser au moment de la livraison.
-- **`TopAcier`** : jamais auditée, toujours en `images/` minuscule. L'audit croisé du 2 août y a déjà repéré trois anomalies à trancher avec Cam : **Galeking** (Queue de Fer ici, Anti-Air sur `TopRoche`, aucune bascule des deux côtés), **Minotaupe** (Griffe Acier ici, Tir de Boue sur `TopSol`, même configuration) et **Vrombotor** (« Direct Toxic » ici, « Direct Toxik » sur `TopPoison` — simple coquille).
-  ✅ Les 11 images manquantes de `TopSpectre` ont toutes été produites, et la question du suffixe `R` est tranchée (cf. §4) : pas de `R` pour Polthégeist ni Théffroyable, le HTML pointait déjà vers les bons fichiers.
-  ✅ Le chantier `TopCombat` est soldé (voir §12, 2 août 2026), `</div>` excédentaire compris.
+- **2 types Top restants** : Ténèbres, Vol. Quatre boutons pointent déjà vers ces pages inexistantes : Shifours Style Poing Final (`TopCombat` → Ténèbres), **Scalpereur (`TopAcier` → Ténèbres, ajouté le 3 août)**, Électhor de Galar (`TopCombat` → Vol) et Méga-Rayquaza (`TopDragon` → Vol). C'est assumé, mais à recroiser au moment de la livraison : la meilleure attaque immédiate absolue de Scalpereur est **Aboiement**, sa face avant Ténèbres ne doit donc porter aucune bascule.
+- ✅ **`TopAcier` soldée le 3 août 2026** (voir §12). Les trois anomalies ouvertes — Galeking, Minotaupe, Vrombotor — sont tranchées, et l'audit croisé des 15 pages Top ne remonte plus aucune contradiction.
 - **ChefRocket** : ajouter Cliff & Arlo (empiler dans `.rocket-list`) ; puis chantier séparation Sbires/Chefs avant activation navbar/accueil.
 - **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 15 pages Top + activer la carte d'accueil + le lien navbar.
 - **`OptiPM.html` est considérée comme terminée** (1er août 2026). Le Passe payant est couvert par le menu déroulant ; le ticket d'évènement et l'Étude Ambassadeur sont traités par deux lignes « Optionnel » en fin de tableau. Plus de « versions à venir ».
@@ -339,6 +341,12 @@ Règles clés à rappeler dans le prompt :
 ---
 
 ## 12. Historique express
+
+**3 août 2026 — refonte de `TopAcier` et audit croisé final.** Page reconstruite : 30 cartes (25 + 5 Méga). Entrent **Méga-Airmure** (Méga 3) et **Exagide** (24) ; sortent **Méga-Steelix** et **Bamboiselle**. Décisions de mécanique validées par Cam : Méga-Lucario et Lucario passent à Forte-Paume<sup>L</sup> en attaque immédiate, Pisto-Poing entièrement retiré ; Necrozma Crinière du Couchant, Forgelina et Cobaltium passent à `-` en 2e Attaque Chargée avec renvoi explicatif ; Cobaltium perd Tête de Fer au profit de Lame Sainte<sup>L</sup> en face avant ; Solgaleo passe à Danse Flammes ; Scalpereur et Galeking reçoivent une bascule (Aboiement, Anti-Air) ; Minotaupe conserve Griffe Acier comme meilleure attaque absolue. Corrections structurelles au passage : `btn-dragon` sur le bouton Top Eau de Pingoléon, ordre `footnote-ref`/`legacy-indicator` inversé sur Hurle-Temps, `card-badges` manquant sur Dialga, note fausse de Dialga Originel supprimée (« Hurle-Temps fera toujours plus de dégâts que Tête de Fer Super Efficace » — Tête de Fer lui est bien nécessaire).
+
+**Réciprocité et audit croisé.** `TopSol` : Minotaupe reçoit sa bascule Tir de Boue → Griffe Acier, et le build Acier de Méga-Steelix est retiré (bouton, build **et** bascule, qui en dépendait). `TopSpectre` : Exagide reçoit son build Acier réciproque. `TopCombat` : Cobaltium aligné sur `TopAcier` (2AC en `-`, renvoi, cout supprimé). Le script d'audit croisé, étendu ce jour aux attaques chargées croisées, aux couts, aux badges Obscur, aux couleurs de nom et aux images, est passé de **26 anomalies à 0** sur 437 cartes. Corrigés hors périmètre Acier : Grolem d'Alola (Lame de Roc, pas Boule Roc), Rhinastoc (Séisme, pas Tunnelier), Reshiram (Flamme Croix sans tiret), Éthernatos (Canon Dynamax sans tiret), Galeking (Laser Météore sans tiret), Jirachi (Carnareket avec un C), Forgelina (Marteau Mastoc est bien Legacy), Vrombotor (Détricanon, pas Bombe Beurk), et les trois libellés de cout nommant l'espèce. Méga-Métalosse perd son bouton Top Psy (cf. §5).
+
+`pokemon.css` : Bamboiselle repassée de Bon à Normal (sortie du classement, aucune pré-évolution concernée) et replacée après Babimanta, l'ordre alphabétique était faux — **499 blocs Bon pour 709 classes**. Pas d'entrée Nouveautés sur `index.html` : décision de Cam, comme le 2 août.
 
 **2 août 2026 — refonte de `TopCombat`**. Page reconstruite de zéro sur le modèle de `TopSpectre` : `<script>` inline supprimé (Shifours éclaté en deux cartes autonomes, Mille Poings et Poing Final ; note conditionnelle de Courrousinge devenue `build-note`), trois `toggleBuild` à 5 arguments éliminés, `</div>` excédentaire réglé, `<hr>` manquant de Roitiflam remis. Entrées et sorties : Cancrelove entre au rang 25, Coatox et Shaofouine sortent. Marshadow perd son bouton et son build.
 

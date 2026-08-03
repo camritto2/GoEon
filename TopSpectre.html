@@ -545,8 +545,19 @@
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coupe Psycho</strong> <img src="Images/Psy.webp" alt="Type Psy" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Ball'Ombre</strong>
                 </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
+                <div class="card-button">
+                    <button id="toggle-exag-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('exag-details', 'toggle-exag-btn')">
+                    Également Top Acier <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="exag-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Gyroballe</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
+                    </div>
+                </div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>

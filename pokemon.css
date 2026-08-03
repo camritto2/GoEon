@@ -189,13 +189,11 @@
 .pk-balignon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-balignon .emoji-shiny  { display: inline; }
 
-/* Bamboiselle — Bon / Shiny */
-.pk-bamboiselle .pokemon-name { color: var(--accent-vert-bon); }
-.pk-bamboiselle .research-reward-name { color: var(--accent-vert-bon); }
-.pk-bamboiselle .emoji-shiny  { display: inline; }
-
 /* Babimanta — Normal / Shiny */
 .pk-babimanta .emoji-shiny { display: inline; }
+
+/* Bamboiselle — Normal / Shiny */
+.pk-bamboiselle .emoji-shiny { display: inline; }
 
 /* Badabouin — Bon / Shiny */
 .pk-badabouin .pokemon-name { color: var(--accent-vert-bon); }

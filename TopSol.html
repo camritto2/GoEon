@@ -193,11 +193,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Minotaupe</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Tir de Boue</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mino-imm">Tir de Boue</strong><span id="mino-imm-alt" style="display:none"> → <strong>Griffe Acier</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Sable Ardent</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mino-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('mino-details', 'toggle-mino-btn')">
+                    <button id="toggle-mino-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('mino-details', 'toggle-mino-btn'); toggleAltImm('mino-imm', 'mino-imm-alt')">
                     Également Top Acier <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -683,22 +683,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Steelix</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mstee-imm">Crocs Éclair</strong><img id="mstee-imm-icon" src="Images/Electrik.webp" alt="Type Électrik" class="type-icon-btn icone-imm"><span id="mstee-imm-alt" style="display:none"> → <strong>Queue de Fer</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Crocs Éclair</strong> <img src="Images/Electrik.webp" alt="Type Électrik" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Séisme</strong>
                 </div>
-                <div class="card-button">
-                    <button id="toggle-mstee-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('mstee-details', 'toggle-mstee-btn'); toggleAltImm('mstee-imm', 'mstee-imm-alt', 'mstee-imm-icon')">
-                    Également Top Acier <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="mstee-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Tacle Lourd</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
-                    </div>
-                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
