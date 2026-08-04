@@ -222,9 +222,10 @@
 /* Békipan — Normal / Shiny */
 .pk-bekipan .emoji-shiny { display: inline; }
 
-/* Beldeneige — Bon */
+/* Beldeneige — Bon / Shiny */
 .pk-beldeneige .pokemon-name { color: var(--accent-vert-bon); }
 .pk-beldeneige .research-reward-name { color: var(--accent-vert-bon); }
+.pk-beldeneige .emoji-shiny  { display: inline; }
 
 /* Berserkatt — Bon / Shiny */
 .pk-berserkatt .pokemon-name { color: var(--accent-vert-bon); }
@@ -1054,11 +1055,10 @@
 .pk-frigodo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-frigodo .emoji-shiny  { display: inline; }
 
-/* Frissonille — Bon (Shiny à partir du 4 août 2026, évènement Braises Arctiques :
-   décommenter la ligne emoji-shiny ce jour-là) */
+/* Frissonille — Bon / Shiny */
 .pk-frissonille .pokemon-name { color: var(--accent-vert-bon); }
 .pk-frissonille .research-reward-name { color: var(--accent-vert-bon); }
-/* .pk-frissonille .emoji-shiny { display: inline; } */
+.pk-frissonille .emoji-shiny  { display: inline; }
 
 /* Fulgulairo — Bon */
 .pk-fulgulairo .pokemon-name { color: var(--accent-vert-bon); }

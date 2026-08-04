@@ -1,6 +1,6 @@
 # GoEon — Conventions & Décisions
 
-*Version 2.4 — 3 août 2026. Remplace la v2.3 du 2 août.*
+*Version 2.5 — 4 août 2026. Remplace la v2.4 du 3 août.*
 *Chaque affirmation de ce document a été vérifiée sur les fichiers du dépôt à cette date.*
 
 > **Règle n°1 pour toute conversation Claude reprenant ce projet : ne jamais travailler de mémoire.**
@@ -122,7 +122,7 @@ Détail d'écriture : les blocs Bon écrivent `.emoji-shiny  {` avec **deux** es
 
 ### Deux classes utilitaires (créées le 1er août 2026)
 
-- **`nom-neutre`** — annule le vert « Bon » de `pokemon.css` sur une page donnée. Déclarée dans `global.css` en `h2.pokemon-name.nom-neutre`, spécificité **(0,2,1) obligatoire** puisque `pokemon.css` charge après et pèse (0,2,0). Un seul usage aujourd'hui : Pikachu costumé sur `BraisesArctiques.html`.
+- **`nom-neutre`** — annule le vert « Bon » de `pokemon.css` sur une page donnée. Déclarée dans `global.css` en **deux** sélecteurs, tous deux en spécificité **(0,2,1) obligatoire** puisque `pokemon.css` charge après et pèse (0,2,0) : `h2.pokemon-name.nom-neutre` pour les cartes normales et `span.research-reward-name.nom-neutre` pour les cartes d'étude (ajouté le 4 août 2026 — la classe ne fonctionnait pas en contexte research). Un seul usage aujourd'hui : Pikachu costumé sur `BraisesArctiques.html`, en carte research.
   ⚠️ Avant de poser cette classe, **vérifier que le Pokémon est réellement « Bon » dans `pokemon.css`**. Quatre des cinq styles inline d'origine ne servaient à rien (Psykokwak et Staross sont « Normal ») ou masquaient à tort un vert légitime (Lokhlass).
 - **`intro-item-fin`** — `margin-bottom: 10px` sur le dernier item d'un groupe, pour dégager le sous-titre `<strong>` qui suit dans les listes de Passe Go.
 
@@ -141,6 +141,7 @@ Détail d'écriture : les blocs Bon écrivent `.emoji-shiny  {` avec **deux** es
 ### Cartes
 
 - **Ordre strict** : nom → sous-titre (`pokemon-subtitle`, son `margin-top: -6px` est fait pour coller au nom) → séparateur → types → stats. Jamais le sous-titre après les stats.
+  ⚠️ **Le `-6px` ne vaut que pour un nom tenant sur une ligne.** `pokemon-name` centre son texte dans un `min-height: 3.2em`, soit deux lignes réservées ; sur un nom court la moitié basse est vide et le sous-titre vient s'y loger. Sur un nom qui passe à la ligne, il n'y a plus de mou et le sous-titre mord sur la seconde ligne. Constaté le 4 août sur « Darumarond de Galar » — **seul cas du site** d'un nom assez long avec un sous-titre. Non corrigé : le piège dort dans `global.css` pour le prochain.
 - **Structure** : `pokemon-card` > `image-container` (badges + img) > `card-content` (`h2.pokemon-name`…). `data-shiny` et le badge sont **toujours** présents dans le HTML ; c'est `pokemon.css` qui décide de l'affichage.
 - **Séparateur « + » entre deux cartes** (pattern CoucheOzone) : une div flex de 24px, bold, centrée.
 
@@ -220,6 +221,9 @@ Ordre de sections observé : Pokémon à l'honneur → Bonus → Nouveaux Pokém
 - **`section-nav`** : `<nav class="section-nav">` avec un `<a href="#ancre">` par section, et l'`id` correspondant posé sur le `h2.category-title`. Le CSS est dans `global.css` depuis le 31/07 — **ne plus jamais le recopier dans un bloc `<style>`**.
 - **`section-sous-titre`** pour les sous-titres de section. La classe `event-sous-titre` est **dépréciée** (elle survit dans `global.css`, candidate à la suppression).
 - **Tâches d'étude** : un seul `research-card` quand plusieurs tâches partagent la même récompense, séparées par `<br>`.
+- **`research-reward-form`** est le sous-titre des cartes d'étude : italique 8px, gris secondaire, aucune bordure. `text-align: center` lui a été ajouté le 4 août 2026 — `research-reward-item` est un flex en colonne avec `align-items: stretch`, sans quoi le texte reste calé à gauche sous une image centrée. **Ne pas utiliser `research-note` à sa place** : elle porte un `border-top` pointillé, elle est faite pour une note de bas de carte. Elle n'est utilisée nulle part.
+- **Cartes du Passe Go** : le rang n'est **pas** un `pokemon-subtitle`, c'est un bandeau `passe-go-rank` en **premier enfant** de `.pokemon-card`, avant `.image-container` — même principe que `research-task`, même fond `--bg-bandeau-tache`, même `border-radius: 16px 16px 0 0`. Le PC va en `passe-go-pc` (avec `boost-value` pour le chiffre), pas en `pokemon-stats`/`stat-range`. Deux règles desktop `.pokemon-card:has(.passe-go-rank)` confirment cette structure.
+  ⚠️ **`passe-go-rank` s'écrit en `<div>`, jamais en `<p>`** : `.pokemon-card` a `overflow: hidden`, donc la marge par défaut d'un `<p>` ne peut pas s'échapper et décolle le bandeau du haut de la carte. Un `margin: 0` a été ajouté à la classe le 4 août pour blinder le cas. `passe-go-pc`, elle, déclare sa propre marge et est bien un `<p>`.
 - `research-sep` (`<hr>`) est `display: none` global : le forcer en inline quand un sous-titre `research-reward-form` a besoin d'un séparateur visible avant la valeur PC.
 - Les séparateurs de rangée `research-rangee-sep` sont insérés par une fonction JS **encore recopiée à la main** depuis `TachesEtude.html` (cf. §10).
 
@@ -247,7 +251,7 @@ Ordre de sections observé : Pokémon à l'honneur → Bonus → Nouveaux Pokém
 ## 7. Accueil, navigation et pages ressource
 
 - **`index.html`** : héros, Nouveautés, cartes d'évènements, grille des types, bandeaux PWA/légende.
-- **Cartes d'évènement** : une classe couleur par évènement (13 existantes : yellow, purple, blue, green, orange, grey, red, violet, gold, brown, teal, staross, pink), toujours **déclarée en clair ET en mode sombre**. `min-height: 70px` sur `.event-label`, `margin-top: auto` sur `.event-date` pour aligner les dates. Badge vert « En cours ! » via `.event-en-cours` + `.badge-en-cours`.
+- **Cartes d'évènement** : une classe couleur par évènement (13 existantes : yellow, purple, blue, green, orange, grey, red, violet, gold, brown, teal, staross, pink), toujours **déclarée en clair ET en mode sombre**. `min-height: 70px` sur `.event-label`, `margin-top: auto` sur `.event-date` pour aligner les dates. Badge vert « En cours ! » via `.event-en-cours` sur le `<a class="home-card">` + un `<span class="badge-en-cours">` en premier enfant. Le CSS existait depuis longtemps dans `index.css` mais **n'a été employé pour la première fois que le 4 août 2026**, sur Braises Arctiques. À retirer à la fin de chaque évènement, en même temps que la carte.
 - **Nouveautés** : `news-group` daté au format `JJ/MM`, un `news-items li` par entrée. Mettre à jour à chaque livraison de contenu.
 - **Ancres** : `scroll-margin-top: 70px` sur `.home-section` et `.type-grid`. Les liens navbar « À venir » et « Meilleurs Pokémon » pointent directement sur `index.html#evenements` et `index.html#types` (l'ancre `#types` est sur la `.type-grid`, pas sur la section, pour dépasser le titre).
 - **Menu mobile** : `max-height: calc(100vh - 60px)` + `overflow-y: auto` + `overscroll-behavior: contain` (le scroll interne ne referme plus le menu).
@@ -288,7 +292,8 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 
 ### Daté
 
-- **📅 4 août 2026** — décommenter la ligne shiny de Frissonille dans `pokemon.css` (commentaire daté sur place, ~ligne 1044) + retirer `nouveau-shiny` de sa carte sur `BraisesArctiques.html` si souhaité.
+- ✅ **4 août 2026 — fait.** Frissonille passé en Bon / Shiny dans `pokemon.css`, commentaire daté retiré, `nouveau-shiny` retiré de sa carte (le sous-titre « Nouveau Shiny ! » est conservé le temps de l'évènement). **Beldeneige a été traité en même temps** : son chromatique débute aussi pendant Braises Arctiques, par évolution — le chantier ne l'avait pas prévu. Leçon : quand un shiny débute, vérifier si son évolution débute avec lui.
+- **📅 10 août 2026, 20h — fin de Braises Arctiques.** Trois gestes sur `index.html` : retirer le `event-en-cours` et le `<span class="badge-en-cours">` de la carte, puis retirer la carte de l'évènement elle-même. Et sur `BraisesArctiques.html` : retirer le sous-titre « Nouveau Shiny ! » de Frissonille.
 - **📅 16 août 2026** — Journée Communauté Goupilou. Goupilou et Roublenard deviennent **Shiny, et non « Bon »** (la v2 de ce document disait « Bon + Shiny », c'était faux). Décommenter la ligne `emoji-shiny` de `pk-goupilou` et de `pk-roublenard` dans `pokemon.css`, puis retirer les trois `nouveau-shiny` de `CDGoupilou.html`. ✅ Les deux commentaires datés sont posés depuis le 31 juillet, `pk-roublenard` a été créée à cette occasion.
 - **📅 5 août 2026 (rotation des raids obscurs)** — poser le badge Obscur sur `raids_obscurs.html`, qui n'en contient toujours **aucun**, et créer la règle de base `.badge-obscur-icon` dans `global.css` **à 15/22px**.
   Décision du 2 août : le badge fait la **même taille sur les pages Top et sur `raids_obscurs`** ; ChefRocket le garde plus petit, ses cartes étant plus serrées.
@@ -311,10 +316,18 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 Ce qui les remplace :
 
 - **`regionaux.html`** — page inachevée, contient un `<script>` inline. Sera reprise entièrement.
-- **`TerresSauvages2026.html`** — un `margin-bottom: 6px` inline sur un `intro-item`, valeur isolée qui ne relève pas d'`intro-item-fin`.
-- **`FestivalAquatique.html`** — une marge de fin de groupe posée en plein milieu de liste. Laissée en l'état : la page sera retravaillée au lancement de l'évènement.
+- **Styles inline — inventaire refait le 4 août 2026.** La v2.4 en annonçait deux ; il y en a **42, sur 8 pages** : `regionaux` (20), `TerresSauvages2026` (8), `CDGoupilou` (5), `CitySafariMarseille` (4), `MegaStaross` (2), `oeufs` (1), `GorythmicGigamax` (1), `GoFestMegaFinale` (1). Presque tous des `margin` sur des `<p>` dans un `intro-rules`, plus deux dimensionnements d'icône dans `CDGoupilou`. **Décision de Cam du 4 août : on corrige page par page, au moment où chaque page est retravaillée.** Pas de passe globale. `GorythmicGigamax` sortira du dépôt de toute façon.
+  Soldés ce jour-là : le `passe-go-intro` de `BraisesArctiques` et celui de `FestivalAquatique`, identiques, dont la valeur est passée dans la classe `.passe-go-intro` de `global.css`.
 - **Deux images cassées, à trancher** — `dynamax.html` pointe vers `QuartermacS.png`, qui n'existe pas (seul `Quartermac.png` est là) : le badge shiny de Quartermac renvoie une image morte. Et `oeufs.html` pointe vers `PandespiegleS.webp` alors que le fichier sur le disque est `PandespiegleS.png` — mauvaise extension. Rien n'a été corrigé : la règle « ne jamais corriger une extension de soi-même » s'applique.
 - **`regionaux.html`** — 75 fichiers image référencés n'existent pas dans `Images/`. Page inachevée, cohérent.
+
+### Purge du 4 août 2026
+
+`passe-go-deluxe-title`, `passe-go-deluxe-item` et `passe-go-deluxe-intro` **supprimées de `global.css`** : jamais utilisées sur aucune page, y compris sur les deux sections Passe Go Deluxe existantes, qui reposent sur `intro-rules`. `passe-go-deluxe-intro` partageait le bloc groupé des encadrés d'intro, le sélecteur a été dégroupé.
+
+Reste `research-note`, toujours déclarée et toujours inutilisée — laissée en place, son rendu (filet pointillé) a un usage identifiable si le besoin d'une vraie note de bas de carte se présente.
+
+---
 
 ### Écarté
 
@@ -341,6 +354,12 @@ Règles clés à rappeler dans le prompt :
 ---
 
 ## 12. Historique express
+
+**4 août 2026 — `BraisesArctiques.html` complétée et mise en ligne.** Page reprise de bout en bout le jour du lancement, sur données fournies par Cam. Sauvages portés à 8 (Funécire, Polarhume et Hélionceau ajoutés, ordre revu) ; Pyronille ajouté aux Œufs 5 km ; Tâches d'Étude passées d'un texte d'attente à un `research-card` unique à deux tâches et quatre récompenses ; Étude Ponctuelle refaite en carte research (quatre distances de marathon, Pikachu à visière, PX retirés) ; Passe Go entièrement reconstruit — barème de points, tâches quotidiennes, plafond de 500 points levé les 8-9-10, bonus de rang, et une grille de 10 Pokémon à débloquer. PC du 100 % partout.
+
+**Trois découvertes au passage.** Un système de classes `passe-go-*` complet dormait dans `global.css` sans aucun usage : le rang est un bandeau, pas un sous-titre (cf. §6) — trouvé seulement après avoir inventé une présentation, exactement la leçon « chercher une classe, c'est déjà faire une hypothèse ». Le `margin-top: -6px` de `pokemon-subtitle` mord sur un nom passé à la ligne (cf. §4). Et une marge de `<p>` bloquée par l'`overflow: hidden` de la carte décollait le bandeau du haut. Également ce jour : `nom-neutre` étendue au contexte research, `research-reward-form` centrée, trois classes Deluxe purgées, `margin: 0` posé sur `passe-go-rank`, et premier usage réel du badge « En cours ! » sur l'accueil.
+
+`pokemon.css` : Frissonille et Beldeneige passés en Bon / Shiny (chantier daté du 4 août soldé, cf. §10). `index.html` : carte Braises Arctiques badgée « En cours ! », Nouveautés remises à jour au 04/08.
 
 **3 août 2026 — refonte de `TopAcier` et audit croisé final.** Page reconstruite : 30 cartes (25 + 5 Méga). Entrent **Méga-Airmure** (Méga 3) et **Exagide** (24) ; sortent **Méga-Steelix** et **Bamboiselle**. Décisions de mécanique validées par Cam : Méga-Lucario et Lucario passent à Forte-Paume<sup>L</sup> en attaque immédiate, Pisto-Poing entièrement retiré ; Necrozma Crinière du Couchant, Forgelina et Cobaltium passent à `-` en 2e Attaque Chargée avec renvoi explicatif ; Cobaltium perd Tête de Fer au profit de Lame Sainte<sup>L</sup> en face avant ; Solgaleo passe à Danse Flammes ; Scalpereur et Galeking reçoivent une bascule (Aboiement, Anti-Air) ; Minotaupe conserve Griffe Acier comme meilleure attaque absolue. Corrections structurelles au passage : `btn-dragon` sur le bouton Top Eau de Pingoléon, ordre `footnote-ref`/`legacy-indicator` inversé sur Hurle-Temps, `card-badges` manquant sur Dialga, note fausse de Dialga Originel supprimée (« Hurle-Temps fera toujours plus de dégâts que Tête de Fer Super Efficace » — Tête de Fer lui est bien nécessaire).
 

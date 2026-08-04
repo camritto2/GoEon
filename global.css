@@ -60,6 +60,7 @@ h1 {
 }
 
 .passe-go-intro {
+  margin: 0 0 6px 0;
   font-size: 11px;
   text-align: center;
 }
@@ -69,16 +70,6 @@ h1 {
   font-size: 10px;
   font-style: normal;
   text-align: center;
-}
-
-.passe-go-deluxe-title {
-  font-size: 10px;
-  margin: 4px 0 2px 8px;
-}
-
-.passe-go-deluxe-item {
-  font-size: 10px;
-  margin: 1px 0 1px 16px;
 }
 
 
@@ -117,6 +108,7 @@ h1 {
 }
 
 .passe-go-rank {
+  margin: 0;
   font-size: 11px;
   font-weight: 600;
   color: var(--text-principal);
@@ -218,6 +210,7 @@ h1 {
   font-weight: normal;
   font-style: italic;
   color: var(--text-secondaire);
+  text-align: center;
   line-height: 1;
 }
 
@@ -398,6 +391,7 @@ body.dark-mode .shiny-boost-circle {
    Spécificité (0,2,1) obligatoire : pokemon.css est chargé après global.css
    et ses sélecteurs .pk-x .pokemon-name pèsent (0,2,0). */
 h2.pokemon-name.nom-neutre { color: var(--text-principal); }
+span.research-reward-name.nom-neutre { color: var(--text-principal); }
 
 /* Nom */
 .pokemon-name {
@@ -607,9 +601,8 @@ h2.pokemon-name.nom-neutre { color: var(--text-principal); }
   margin-bottom: 0;
 }
 
-/* Encadrés d'intro (règles + Passe Go Deluxe) */
-.intro-rules,
-.passe-go-deluxe-intro {
+/* Encadrés d'intro */
+.intro-rules {
   max-width: 800px;
   margin: 0 auto 10px auto;
   background-color: var(--bg-carte);
@@ -775,9 +768,6 @@ body:has(.section-nav) .category-title {
   .passe-go-pc { font-size: 14px; }
   .pokemon-card:has(.passe-go-rank) .image-container { padding-bottom: 0; }
   .pokemon-card:has(.passe-go-rank) .pokemon-name { margin-top: 0; margin-bottom: 0; }
-  .passe-go-deluxe-title { font-size: 15px; margin: 6px 0 4px 12px; text-align: center; }
-  .passe-go-deluxe-item { font-size: 15px; margin: 2px 0 2px 24px; text-align: center; }
-  .passe-go-deluxe-intro { font-size: 15px; }
   .section-sous-titre { font-size: 16px; margin: 0 0 15px 0; }
   .intro-rules { font-size: 15px; padding: 15px; margin: 0 auto 30px auto; line-height: 1.6; }
 

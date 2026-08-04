@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoEon - Top Ténèbres</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="top.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#29b6f6">
+    <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="ranking-container">
+    <h1>
+      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Tenebres.webp" alt="Ténèbres" class="top-title-icon">Type Ténèbres<img src="Images/Tenebres.webp" alt="Ténèbres" class="top-title-icon"></span>
+    </h1>
+
+    <div class="intro-rules">
+        <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
+            Comprendre le classement
+            <span class="intro-arrow" id="intro-arrow">▾</span>
+        </button>
+        <div class="intro-content" id="intro-content">
+        <div class="intro-item"><span class="bullet legend-blue">•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
+        <div class="intro-item"><span class="bullet legend-cyan">•</span>Les Pokémon en <span class="legend-cyan">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
+        <div class="intro-item"><span class="bullet legend-red">•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
+        <div class="intro-item"><span class="bullet">•</span><span class="legacy-indicator">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
+        <br>
+        Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
+        💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
+        </div>
+    </div>
+
+    <h2 class="top-title">Top 25</h2>
+
+    <div class="pokemon-grid">
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 1</div>
+                <div class="card-image"><img src="Images/TyranocifM.png" alt="Méga-Tyranocif" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Tyranocif</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Morsure</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Centrifugifle</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-mtyra-btn" class="btn-roche" aria-expanded="false" onclick="toggleBuild('mtyra-details', 'toggle-mtyra-btn')">
+                    Également Top Roche <img src="Images/Roche.webp" alt="Type Roche" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mtyra-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lame de Roc</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 2</div>
+                <div class="card-image"><img src="Images/AbsolM.png" alt="Méga-Absol" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Absol</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Centrifugifle</strong><span class="legacy-indicator">L</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 3</div>
+                <div class="card-image"><img src="Images/DemolosseM.png" alt="Méga-Démolosse" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Démolosse</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tricherie</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-mdemo-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('mdemo-details', 'toggle-mdemo-btn')">
+                    Également Top Feu <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mdemo-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lance-Flammes</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">1</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Darkrai.png" alt="Darkrai" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Darkrai</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ball'Ombre</strong><span class="footnote-ref">1</span> <img src="Images/Spectre.webp" alt="Type Spectre" class="type-icon-btn">
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note"><span class="footnote-ref">1</span> : Ball'Ombre fera toujours plus de dégâts qu'une Attaque de type Ténèbres.</div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">2</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Trioxhydre.png" alt="Trioxhydre" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Trioxhydre</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Morsure</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Centrifugifle</strong><span class="legacy-indicator">L</span>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-trio-btn" class="btn-dragon" aria-expanded="false" onclick="toggleBuild('trio-details', 'toggle-trio-btn')">
+                    Également Top Dragon <img src="Images/Dragon.webp" alt="Type Dragon" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="trio-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Draco-Choc</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">3</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Tyranocif.png" alt="Tyranocif" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Tyranocif</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Morsure</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Centrifugifle</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-tyra-btn" class="btn-roche" aria-expanded="false" onclick="toggleBuild('tyra-details', 'toggle-tyra-btn')">
+                    Également Top Roche <img src="Images/Roche.webp" alt="Type Roche" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="tyra-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lame de Roc</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 4</div>
+                <div class="card-image"><img src="Images/LeviatorM.png" alt="Méga-Léviator" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Léviator</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Morsure</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Mâchouille</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-mlevi-btn" class="btn-eau" aria-expanded="false" onclick="toggleBuild('mlevi-details', 'toggle-mlevi-btn')">
+                    Également Top Eau <img src="Images/Eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mlevi-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Hydrocanon</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">25 Bonbons<br>+ 10 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">4</div>
+                <div class="card-image"><img src="Images/Scalpereur.png" alt="Scalpereur" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Scalpereur</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tricherie</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-scalp-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('scalp-details', 'toggle-scalp-btn')">
+                    Également Top Acier <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="scalp-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Tête de Fer</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">5</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Absol.png" alt="Absol" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Absol</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Centrifugifle</strong><span class="legacy-indicator">L</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">6</div>
+                <div class="card-image"><img src="Images/Felinferno.png" alt="Félinferno" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Félinferno</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Dark Lariat</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-felin-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('felin-details', 'toggle-felin-btn')">
+                    Également Top Feu <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="felin-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Rafale Feu</strong><span class="legacy-indicator">L</span>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">25 Bonbons<br>+ 10 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">7</div>
+                <div class="card-image"><img src="Images/HoopaD.png" alt="Hoopa" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Hoopa</span></strong><span class="pokemon-form"><em>Déchainé</em></span></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="hoopa-imm">Étonnement</strong> <span id="hoopa-imm-icon"><img src="Images/Spectre.webp" alt="Type Spectre" class="type-icon-btn"></span><span id="hoopa-imm-alt" style="display:none"> → <strong>Choc Mental</strong></span><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vibrobscur</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-hoopa-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('hoopa-details', 'toggle-hoopa-btn'); toggleAltImm('hoopa-imm', 'hoopa-imm-alt', 'hoopa-imm-icon')">
+                    Également Top Psy <img src="Images/Psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="hoopa-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Psyko</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">8</div>
+                <div class="card-image"><img src="Images/Yveltal.png" alt="Yveltal" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Yveltal</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vibrobscur</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-yvel-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('yvel-details', 'toggle-yvel-btn')">
+                    Également Top Vol <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="yvel-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Mort-Ailes</strong><span class="legacy-indicator">L</span>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 5</div>
+                <div class="card-image"><img src="Images/SharpedoM.png" alt="Méga-Sharpedo" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Sharpedo</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Morsure</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Mâchouille</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-msharp-btn" class="btn-eau" aria-expanded="false" onclick="toggleBuild('msharp-details', 'toggle-msharp-btn')">
+                    Également Top Eau <img src="Images/Eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="msharp-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Hydrocanon</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">9</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Dimoret.png" alt="Dimoret" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Dimoret</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tricherie</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-dimo-btn" class="btn-glace" aria-expanded="false" onclick="toggleBuild('dimo-details', 'toggle-dimo-btn')">
+                    Également Top Glace <img src="Images/Glace.webp" alt="Type Glace" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="dimo-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Triple Axel</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">10</div>
+                <div class="card-image"><img src="Images/Zoroark.png" alt="Zoroark" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Zoroark</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tricherie</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">11</div>
+                <div class="card-image"><img src="Images/ShifoursPF.png" alt="Shifours" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-rare">Shifours</span></strong><span class="pokemon-form"><em>Style Poing Final</em></span></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coup Bas</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Représailles</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-shif-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('shif-details', 'toggle-shif-btn')">
+                    Également Top Combat <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="shif-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Dynamo-Poing</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">12</div>
+                <div class="card-image"><img src="Images/Engloutyran.png" alt="Engloutyran" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Engloutyran</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Centrifugifle</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">13</div>
+                <div class="card-image"><img src="Images/Zarude.png" alt="Zarude" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-rare">Zarude</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Morsure</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vibrobscur</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-zaru-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('zaru-details', 'toggle-zaru-btn')">
+                    Également Top Plante <img src="Images/Plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="zaru-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Mégafouet</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">14</div>
+                <div class="card-image"><img src="Images/Angoliath.png" alt="Angoliath" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Angoliath</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coup Bas</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tricherie</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-ango-btn" class="btn-fee" aria-expanded="false" onclick="toggleBuild('ango-details', 'toggle-ango-btn')">
+                    Également Top Fée <img src="Images/Fee.webp" alt="Type Fée" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="ango-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Câlinerie</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">15</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Demolosse.png" alt="Démolosse" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Démolosse</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tricherie</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">16</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Corboss.png" alt="Corboss" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Corboss</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vibrobscur</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-corb-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('corb-details', 'toggle-corb-btn')">
+                    Également Top Vol <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="corb-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Piqué</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">17</div>
+                <div class="card-image"><img src="Images/ClamiralH.png" alt="Clamiral de Hisui" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Clamiral de Hisui</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vibrobscur</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-clam-btn" class="btn-eau" aria-expanded="false" onclick="toggleBuild('clam-details', 'toggle-clam-btn')">
+                    Également Top Eau <img src="Images/Eau.webp" alt="Type Eau" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="clam-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Coqui-Lame</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">25 Bonbons<br>+ 10 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">18</div>
+                <div class="card-image"><img src="Images/Crocorible.png" alt="Crocorible" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Crocorible</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Mâchouille</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-croco-btn" class="btn-sol" aria-expanded="false" onclick="toggleBuild('croco-details', 'toggle-croco-btn')">
+                    Également Top Sol <img src="Images/Sol.webp" alt="Type Sol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="croco-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Séisme</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">19</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Tengalice.png" alt="Tengalice" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Tengalice</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tricherie</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">20</div>
+                <div class="card-image"><img src="Images/MorpekoA.png" alt="Morpeko" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Morpeko</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Morsure</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Roue Libre</strong><span class="footnote-ref">2</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note"><span class="footnote-ref">2</span> : Le type de l'Attaque Roue Libre change au cours du combat.</div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">21</div>
+                <div class="card-image"><img src="Images/SulfuraG.png" alt="Sulfura de Galar" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Sulfura de Galar</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coup Bas</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Représailles</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-sulfg-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('sulfg-details', 'toggle-sulfg-btn')">
+                    Également Top Vol <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="sulfg-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Vol</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">22</div>
+                <div class="card-image"><img src="Images/Pandarbare.png" alt="Pandarbare" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Pandarbare</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tranche-Nuit</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">23</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Cacturne.png" alt="Cacturne" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Cacturne</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coup Bas</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vibrobscur</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">24</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/GrotadmorvA.png" alt="Grotadmorv d'Alola" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Grotadmorv d'Alola</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vibrobscur</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-grota-btn" class="btn-poison" aria-expanded="false" onclick="toggleBuild('grota-details', 'toggle-grota-btn')">
+                    Également Top Poison <img src="Images/Poison.webp" alt="Type Poison" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="grota-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Détricanon</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">25</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Sharpedo.png" alt="Sharpedo" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Sharpedo</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Morsure</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Mâchouille</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="more-info-container">
+        <span class="more-info-title">Plus d'informations : <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/dark" target="_blank" class="more-info-link">Cliquez ici</a></span>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

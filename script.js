@@ -434,7 +434,7 @@ if ('serviceWorker' in navigator) {
     { nom: 'Roche',    icone: 'Roche',    page: 'TopRoche.html' },
     { nom: 'Sol',      icone: 'Sol',      page: 'TopSol.html' },
     { nom: 'Spectre',  icone: 'Spectre',  page: 'TopSpectre.html' },
-    { nom: 'Ténèbres', icone: 'Tenebres', page: null },
+    { nom: 'Ténèbres', icone: 'Tenebres', page: 'TopTenebres.html' },
     { nom: 'Vol',      icone: 'Vol',      page: null }
   ];
 
