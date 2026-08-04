@@ -1,6 +1,6 @@
 # GoEon — Conventions & Décisions
 
-*Version 2.5 — 4 août 2026. Remplace la v2.4 du 3 août.*
+*Version 2.6 — 4 août 2026. Fusionne les deux v2.5 divergentes du 3 au soir et du 4 au matin (cf. §9).*
 *Chaque affirmation de ce document a été vérifiée sur les fichiers du dépôt à cette date.*
 
 > **Règle n°1 pour toute conversation Claude reprenant ce projet : ne jamais travailler de mémoire.**
@@ -15,7 +15,7 @@ GoEon : site de ressources Pokémon GO francophone. HTML/CSS/JS pur, mobile-firs
 
 **Workflow** : Cam fournit les données (il ne demande jamais de recherche — les classements, les rotations et les infos d'évènement viennent de lui, du blog officiel ou de Discord). Claude propose, Cam valide point par point, Claude livre des **fichiers complets téléchargeables** — jamais de fragments, jamais de fichier « ajouts » intermédiaire. Commits groupés logiques.
 
-**Répartition des conversations** : des conversations « génératrices » créent les pages à partir d'un prompt type + une page modèle ; une conversation « référente » audite, corrige et fait les activations. Ce document permet à n'importe quelle conversation de devenir référente.
+**Répartition des conversations** : il n'y en a plus. Chaque conversation crée la page, l'audite, la corrige et fait les activations. Ce document est ce qui le permet — il se lit en entier au début d'une session, avant toute lecture de fichier.
 
 **Ligne éditoriale** : contenu de sources officielles uniquement, jamais de datamine — l'objectif long terme inclut une éventuelle candidature ambassadeur auprès de Niantic.
 
@@ -32,18 +32,18 @@ GoEon : site de ressources Pokémon GO francophone. HTML/CSS/JS pur, mobile-firs
 - système `research-*` (TachesEtude, Rocket, évènements)
 - badges : `emoji-shiny`, `emoji-costume`, `shiny-boost-circle`, `img.emoji-shiny.nouveau-shiny`
 - encadrés `intro-rules` / `passe-go-deluxe-intro`, `section-sous-titre`, `texte-vert`, `category-title`, `footnote-ref`, `stats-note`
-- puces d'intro : **`bullet`** (rapatriée de `top.css` le 01/08/2026 — 9 pages hors Top l'utilisaient sans charger ce fichier) et **`intro-sous-item`** (sous-puce `◦`, retrait 22 px)
+- puces d'intro : **`bullet`** et **`intro-sous-item`** (sous-puce `◦`, retrait 22 px)
 - difficulté des raids : `raid-difficulty`, `diff-bubble` + `diff-1` à `diff-5`
-- **`section-nav`** (barre de sections collante des pages évènement) — centralisée ici le 31/07/2026
+- **`section-nav`** (barre de sections collante des pages évènement)
 - animation `twinkle`
 
-**`pokemon.css`** — source de vérité shiny/tiers. 709 classes `.pk-nomsansaccents` posées sur la carte : elles pilotent la couleur du nom (vert `#16a34a` = « Bon ») **et** la visibilité du badge shiny (`.emoji-shiny { display: inline }`). Défaut : badges masqués. Formes : suffixes `-a` (Alola), `-g` (Galar), `-h` (Hisui).
+**`pokemon.css`** — source de vérité shiny/tiers. Classes `.pk-nomsansaccents` posées sur la carte : elles pilotent la couleur du nom (vert `--accent-vert-bon` = « Bon ») **et** la visibilité du badge shiny (`.emoji-shiny { display: inline }`). Défaut : badges masqués. Formes : suffixes `-a` (Alola), `-g` (Galar), `-h` (Hisui).
 
 **`top.css`** — pages Top uniquement : `fandom-card`, les **18** palettes `.btn-X` + `.btn-X.active`, `.type-nav`, intro repliable, `.arrow-indicator`, `.badge-obscur`, `.top-title`.
 
-**`optipm.css`** — page OptiPM uniquement : classes `pm-*` (timeline, tableaux, menu du Passe). Extraite du bloc `<style>` local le 01/08/2026.
+**`optipm.css`** — page OptiPM uniquement : classes `pm-*` (timeline, tableaux, menu du Passe).
 
-**`rocket.css`** — page ChefRocket (layout 1/3, bandeaux chefs, counters verts). Versionné `?v=N` par tradition d'une autre conversation ; incohérent avec le reste, toléré.
+**`rocket.css`** — page ChefRocket (layout 1/3, bandeaux chefs, counters verts). Seul fichier CSS versionné `?v=N` : incohérent avec le reste, toléré.
 
 **`index.css`** — accueil : héros, section Nouveautés (`news-*`), cartes de la grille (`home-card` + les 13 couleurs), grille des types, bandeaux repliables PWA/légende.
 
@@ -169,7 +169,7 @@ Détail d'écriture : les blocs Bon écrivent `.emoji-shiny  {` avec **deux** es
   Exemple canonique, Éthernatos : Draco-Queue sur `TopDragon` **sans bascule** (elle est déjà la meilleure des deux), Direct Toxik sur `TopPoison` **barré au profit de Draco-Queue** au clic. Autre cas, Noadkoko d'Alola : Draco-Queue sans bascule sur `TopDragon`, Balle Graine barrée au profit de Draco-Queue sur `TopPlante`.
   Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué pour l'alternative. Si l'attaque de la face avant porte une icône de type, lui donner un id et le passer en 3e argument pour qu'elle disparaisse au clic.
 - **`toggleAltImm`, 3e argument** : si la face avant porte une icône de type, lui donner un id et le passer en 3e argument. L'icône disparait au clic **même quand l'attaque révélée est du même type** (Malvalame, Courrousinge) — décision du 1er août. Reste non tranché : faut-il donner sa propre icône à l'attaque révélée quand elle est hors-type ? `TopPoison` (Nidoking) le fait, le reste du site non.
-- **Le bouton « Également Top Y » n'existe que si le Pokémon figure vraiment dans le Top Y.** Sinon on retire bouton et build, en laissant `<div class="card-button"></div>` et `<div class="card-build"></div>` vides. Cas traités : Empiflor sur `TopPoison`, Marshadow sur `TopCombat`, et Coatox sur `TopPoison` depuis sa sortie du Top Combat le 2 août.
+- **Le bouton « Également Top Y » n'existe que si le Pokémon figure vraiment dans le Top Y.** Sinon on retire bouton et build, en laissant `<div class="card-button"></div>` et `<div class="card-build"></div>` vides. Le piège classique : une forme Méga est au Top Y sans que la forme de base y soit, ou l'inverse — vérifier la carte, pas l'espèce.
   **Une exception assumée depuis le 2 août : Méga-Mewtwo X.** Il n'est pas au Top Psy (c'est Méga-Mewtwo Y qui y figure), mais Frappe Psy reste sa meilleure Attaque Psy et l'information a été jugée utile. Le bouton et le build sont donc conservés, avec une `build-note` — « Méga-Mewtwo Y est Top Psy. » — qui lève l'ambigüité au déploiement. Le libellé du bouton reste court : il n'a **pas** été allongé, faute de place sur une carte mobile.
   **Contre-exemple, tranché le 3 août : Méga-Métalosse.** Il portait un bouton « Également Top Psy » alors qu'il ne figure pas dans `TopPsy` (seul Métalosse y est). Aucune information utile ne le justifiait : bouton et build **retirés**. L'exception Méga-Mewtwo X reste donc unique, et se justifie par l'intérêt de l'information, pas par la simple existence d'une attaque hors-type.
 - **Pas de bloc « Cout » quand il n'y a pas de 2e Attaque Chargée.** Le build se réduit alors à la ligne `2e Attaque Chargée : -`, sans `<hr>` ni `attack-cost-container`. Invariant vérifiable : `nombre de builds − cartes sans 2e attaque = nombre de blocs de cout`.
@@ -275,7 +275,7 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **Fragment CSS orphelin** = déclarations flottant hors de tout sélecteur (copier-coller raté). Le navigateur avale **la règle suivante** en se resynchronisant → symptôme trompeur : c'est la règle d'après qui disparaît (ex. `.card-content` perdu = tout le contenu des cartes désaligné à gauche). Après toute fusion manuelle : vérifier l'équilibre des accolades et chercher les déclarations hors bloc.
 - **Discipline de livraison — qui fait quoi.** Claude ne livre que les fichiers **réellement modifiés** depuis la dernière récupération de Cam : re-fournir un fichier bit à bit identique ne sert à rien et brouille la lecture de ce qui a bougé. Chaque livraison dit explicitement quels fichiers ont changé et pourquoi. En contrepartie, Cam reprend **tous** les fichiers du lot annoncé, même ceux dont il ne se souvient pas qu'ils aient changé — un fichier corrigé voyage souvent dans le même lot qu'un autre. *(Règle reformulée le 2 août 2026 : la version d'origine était ambigüe et avait conduit à re-livrer trois pages Top inchangées.)*
 - **Égalité de spécificité** : à (0,2,0) égal, c'est l'ordre de chargement qui tranche. Pour battre `pokemon.css` depuis `global.css`, viser (0,2,1)+ (ex. préfixe `img.`).
-- **Conversations génératrices** : récidive systématique du `theme-color` thématique. L'audit le vérifie **en premier**.
+- **`theme-color`** : récidive systématique de la valeur thématique au lieu de `#29b6f6`. L'audit le vérifie **en premier**.
 - **Ne jamais corriger une extension d'image** de sa propre initiative (`.png` ↔ `.webp`) : Cam prend les fichiers là où il les trouve.
 - **Ne jamais deviner un nom de fichier** à partir d'une description orale (`HoOh` vs `Ho-Oh`) : demander.
 - **Réécrire un bloc `<script>` par regex emporte le suivant.** Un `.*` entre `<script>` et `</script>` est gourmand : il capture jusqu'au **dernier** `</script>` de la page et avale donc le `<script src="script.js">` final. Symptôme : la navbar disparaît alors que le HTML semble intact. Après toute réécriture de script : vérifier que `script.js` est toujours appelé en fin de fichier. (Erreur commise le 1er août sur `OptiPM.html`.)
@@ -284,6 +284,8 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **L'invariant croisé des bascules se vérifie par script, pas à l'œil.** Chaque page Top implique une « meilleure attaque immédiate absolue » par Pokémon : celle révélée s'il y a une bascule, celle de la face avant sinon. Extraire cette valeur sur les 15 pages et grouper par Pokémon fait tomber les contradictions en quelques secondes. La passe du 2 août en a sorti sept d'un coup, dont quatre qu'aucune relecture manuelle n'avait vues en trois audits.
 - **Une couleur de nom est une donnée croisée.** Cancrelove a failli entrer au Top Combat en noir alors que `TopInsecte` le classe en bleu. Avant de poser `pokemon-name-*` sur une carte, vérifier ce que font les autres pages Top pour ce Pokémon.
 - **Un décompte d'anomalies se déduplique avant d'être annoncé.** Le 3 août, le script d'audit a affiché 16 puis 10 lignes ; Cam s'est vu annoncer successivement « 16 », « 11 restantes » puis « 7 réelles » pour le même lot. En cause : une divergence d'orthographe produisait deux lignes (`AC croisée` **et** `orthographe`), et un cas légitime (« Feu Sacré+ » de Ho-Oh Apex) était compté comme faute. Un nombre communiqué doit être un nombre de **problèmes**, pas de lignes de sortie.
+- **Un inventaire chiffré s'extrait par script au moment où on l'écrit.** Le §10 a annoncé pendant deux jours que « quatre boutons » pointaient vers des pages inexistantes. Il y en avait **trente-sept** : dix-huit vers Ténèbres, dix-neuf vers Vol. Seuls les quatre derniers ajoutés avaient été notés. Le 3 août au soir, la correction elle-même a reproduit la faute : « cinq boutons vers Vol », obtenus en additionnant la liste périmée et les trois nouveaux, au lieu des vingt-deux réels. Un décompte qu'on n'a pas extrait ne s'écrit pas.
+- **Une conversation ne voit que ce qui est sur `dev`.** Le 4 août, le travail de la veille au soir n'avait pas été poussé : la session du matin a bâti sur une base vieille de seize heures sans pouvoir le détecter, et a produit une seconde v2.5 de ce document, incompatible avec la première. Deux règles en sortent — pousser sur `dev` en fin de session, et annoncer en début de conversation la date du dernier commit lu (« j'ai lu le dev du JJ/MM à HHhMM »), seul moyen pour Cam de repérer une base périmée avant qu'on construise dessus. La date se récupère sur le tarball `codeload`, dont les fichiers portent la date du commit ; `raw.githubusercontent` ne renvoie pas de `Last-Modified` et l'API GitHub est en limite de taux.
 - **Le code dit la vérité, pas la mémoire.** Ce document a contenu pendant deux semaines des classes qui n'existaient pas.
 
 ---
@@ -298,14 +300,15 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **📅 5 août 2026 (rotation des raids obscurs)** — poser le badge Obscur sur `raids_obscurs.html`, qui n'en contient toujours **aucun**, et créer la règle de base `.badge-obscur-icon` dans `global.css` **à 15/22px**.
   Décision du 2 août : le badge fait la **même taille sur les pages Top et sur `raids_obscurs`** ; ChefRocket le garde plus petit, ses cartes étant plus serrées.
   ⚠️ La v2.2 annonçait 14/22px « pour s'aligner sur le shiny voisin » : **c'est faux.** `top.css` dimensionne déjà ces badges à **15px mobile / 22px desktop** via `.card-image .card-badges img`. C'est cette valeur qu'il faut reprendre.
-  Conséquence pratique : **ne pas toucher aux 15 pages Top.** Elles posent leur badge en `<img>` nu, mais `top.css` les couvre déjà, et son sélecteur (0,2,1) l'emporterait de toute façon sur `.badge-obscur-icon` (0,1,0). La classe ne sert donc qu'à `raids_obscurs.html`. `rocket.css` conserve son override à 12/18px.
+  Conséquence pratique : **ne pas toucher aux 16 pages Top.** Elles posent leur badge en `<img>` nu, mais `top.css` les couvre déjà, et son sélecteur (0,2,1) l'emporterait de toute façon sur `.badge-obscur-icon` (0,1,0). La classe ne sert donc qu'à `raids_obscurs.html`. `rocket.css` conserve son override à 12/18px.
 
 ### Contenu
 
-- **2 types Top restants** : Ténèbres, Vol. Quatre boutons pointent déjà vers ces pages inexistantes : Shifours Style Poing Final (`TopCombat` → Ténèbres), **Scalpereur (`TopAcier` → Ténèbres, ajouté le 3 août)**, Électhor de Galar (`TopCombat` → Vol) et Méga-Rayquaza (`TopDragon` → Vol). C'est assumé, mais à recroiser au moment de la livraison : la meilleure attaque immédiate absolue de Scalpereur est **Aboiement**, sa face avant Ténèbres ne doit donc porter aucune bascule.
-- ✅ **`TopAcier` soldée le 3 août 2026** (voir §12). Les trois anomalies ouvertes — Galeking, Minotaupe, Vrombotor — sont tranchées, et l'audit croisé des 15 pages Top ne remonte plus aucune contradiction.
+- **1 seul type Top restant : Vol.** Décompte extrait le 4 août : **22 boutons « Également Top Vol »** pointent vers cette page inexistante, sur 8 pages — `TopDragon` (6 : Rayquaza, Drattak, Dracolosse et leurs Méga), `TopFeu` (4 : Méga-Dracaufeu Y, Ho-Oh, Ho-Oh Apex, Sulfura), `TopFée` (3 : Amovénus Avatar et Totémique, Togekiss), `TopPsy` (3 : Artikodin de Galar, Lugia Apex, Guériaigle de Hisui), `TopTenebres` (3 : Yveltal, Corboss, Sulfura de Galar), `TopCombat` (Électhor de Galar), `TopElectrik` (Électhor), `TopInsecte` (Yanméga). C'est assumé, mais ça fait 22 cartes à recroiser au moment de la livraison — et ça dit que le Top Vol sera une grosse page. Il soldera la totalité des boutons pendants du site.
+- ✅ **`TopAcier` soldée le 3 août 2026** (voir §12). Les trois anomalies ouvertes — Galeking, Minotaupe, Vrombotor — sont tranchées.
+- ✅ **`TopTenebres` soldée le 3 août 2026 au soir** (voir §12). L'audit croisé des **16** pages Top ne remonte aucune contradiction.
 - **ChefRocket** : ajouter Cliff & Arlo (empiler dans `.rocket-list`) ; puis chantier séparation Sbires/Chefs avant activation navbar/accueil.
-- **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 15 pages Top + activer la carte d'accueil + le lien navbar.
+- **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 16 pages Top + activer la carte d'accueil + le lien navbar.
 - **`OptiPM.html` est considérée comme terminée** (1er août 2026). Le Passe payant est couvert par le menu déroulant ; le ticket d'évènement et l'Étude Ambassadeur sont traités par deux lignes « Optionnel » en fin de tableau. Plus de « versions à venir ».
 - **SEO / Open Graph** : meta description + og:tags (priorité pages Top) ; attend l'image 1200×630 de Cam.
 
@@ -336,7 +339,7 @@ Reste `research-note`, toujours déclarée et toujours inutilisée — laissée 
 
 ---
 
-## 11. Prompt type — conversation génératrice (page Top)
+## 11. Prompt type — nouvelle page Top
 
 Joindre : la page Top la plus récente + `top.css` + `script.js` (versions du dépôt).
 
@@ -360,6 +363,14 @@ Règles clés à rappeler dans le prompt :
 **Trois découvertes au passage.** Un système de classes `passe-go-*` complet dormait dans `global.css` sans aucun usage : le rang est un bandeau, pas un sous-titre (cf. §6) — trouvé seulement après avoir inventé une présentation, exactement la leçon « chercher une classe, c'est déjà faire une hypothèse ». Le `margin-top: -6px` de `pokemon-subtitle` mord sur un nom passé à la ligne (cf. §4). Et une marge de `<p>` bloquée par l'`overflow: hidden` de la carte décollait le bandeau du haut. Également ce jour : `nom-neutre` étendue au contexte research, `research-reward-form` centrée, trois classes Deluxe purgées, `margin: 0` posé sur `passe-go-rank`, et premier usage réel du badge « En cours ! » sur l'accueil.
 
 `pokemon.css` : Frissonille et Beldeneige passés en Bon / Shiny (chantier daté du 4 août soldé, cf. §10). `index.html` : carte Braises Arctiques badgée « En cours ! », Nouveautés remises à jour au 04/08.
+
+**3 août 2026 (soir) — `TopTenebres.html` livrée et activée.** 30 cartes (25 + 5 Méga), construite sur le modèle de `TopAcier`. Huit images ajoutées au dépôt : `Darkrai`, `Yveltal`, `Engloutyran`, `Corboss`, `Tengalice`, `MorpekoA`, `Pandarbare`, `Cacturne` — et bien **`MorpekoA`**, le suffixe `A` ne valant pas Alola dans ce cas précis.
+
+Décisions de mécanique validées par Cam : Dimoret garde **Triple Axel** en 2e Attaque Chargée ; Démolosse non-Méga perd son bouton Top Feu, où seul **Méga**-Démolosse figure — deuxième application du contre-exemple Méga-Métalosse ; Hoopa Déchainé reçoit une bascule **Étonnement → Choc Mental** avec l'icône Spectre en 3e argument de `toggleAltImm`, et son bouton pointe vers **Psy**. Attention en relisant : `TopSpectre` #8 est Hoopa **Enchainé**, une autre forme, et son bouton pointe lui aussi vers Psy — ce n'est pas la carte réciproque.
+
+`TopEau` : **Amphinobi** (#5) et **Colhomard** (#18) annonçaient un Top Ténèbres où ils ne figurent pas. Bouton, build et cout retirés ; Colhomard perd aussi sa bascule Cascade → Aboiement, portée par le `onclick` du bouton — même piège que Méga-Steelix sur `TopSol` le matin même.
+
+Audit croisé étendu à **16 pages, 467 cartes** : zéro anomalie. `pokemon.css` **inchangé** : aucun entrant du Top Ténèbres n'avait de classe existante à repasser en Bon, et aucun sortant. Activations faites : `script.js` §14 et `index.html` (carte du type + groupe Nouveautés du 03/08). Ce document a été dégraissé au passage — §2 et §5 purgés de leurs dates de déménagement et de leur catalogue de cas traités.
 
 **3 août 2026 — refonte de `TopAcier` et audit croisé final.** Page reconstruite : 30 cartes (25 + 5 Méga). Entrent **Méga-Airmure** (Méga 3) et **Exagide** (24) ; sortent **Méga-Steelix** et **Bamboiselle**. Décisions de mécanique validées par Cam : Méga-Lucario et Lucario passent à Forte-Paume<sup>L</sup> en attaque immédiate, Pisto-Poing entièrement retiré ; Necrozma Crinière du Couchant, Forgelina et Cobaltium passent à `-` en 2e Attaque Chargée avec renvoi explicatif ; Cobaltium perd Tête de Fer au profit de Lame Sainte<sup>L</sup> en face avant ; Solgaleo passe à Danse Flammes ; Scalpereur et Galeking reçoivent une bascule (Aboiement, Anti-Air) ; Minotaupe conserve Griffe Acier comme meilleure attaque absolue. Corrections structurelles au passage : `btn-dragon` sur le bouton Top Eau de Pingoléon, ordre `footnote-ref`/`legacy-indicator` inversé sur Hurle-Temps, `card-badges` manquant sur Dialga, note fausse de Dialga Originel supprimée (« Hurle-Temps fera toujours plus de dégâts que Tête de Fer Super Efficace » — Tête de Fer lui est bien nécessaire).
 
