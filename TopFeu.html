@@ -313,7 +313,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Calcination</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Feu Sacré+</strong><span class="footnote-ref">2</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Feu Sacré+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">2</span>
                 </div>
                 <div class="card-button">
                     <button id="toggle-hooha-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('hooha-details', 'toggle-hooha-btn')">
@@ -461,8 +461,15 @@
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Danse Flammes</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Rafale Feu</strong><span class="legacy-indicator">L</span>
                 </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
+                <div class="card-button">
+                    <button id="toggle-dracau-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('dracau-details', 'toggle-dracau-btn')">
+                    Également Top Vol <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="dracau-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">1</span>
+                    <div class="build-note"><span class="footnote-ref">1</span> : Rafale Feu fera toujours plus de dégâts que Tranch'Air.</div>
+                </div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>

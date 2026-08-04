@@ -261,8 +261,19 @@
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Ailes d'Acier</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Luminocanon</strong>
                 </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
+                <div class="card-button">
+                    <button id="toggle-mairm-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('mairm-details', 'toggle-mairm-btn')">
+                    Également Top Vol <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mairm-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Piqué</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
+                    </div>
+                </div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>

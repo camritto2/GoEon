@@ -435,7 +435,7 @@ if ('serviceWorker' in navigator) {
     { nom: 'Sol',      icone: 'Sol',      page: 'TopSol.html' },
     { nom: 'Spectre',  icone: 'Spectre',  page: 'TopSpectre.html' },
     { nom: 'Ténèbres', icone: 'Tenebres', page: 'TopTenebres.html' },
-    { nom: 'Vol',      icone: 'Vol',      page: null }
+    { nom: 'Vol',      icone: 'Vol',      page: 'TopVol.html' }
   ];
 
   const pageActuelle = window.location.pathname.split('/').pop();

@@ -660,8 +660,14 @@
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Extrasenseur</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Vol</strong><span class="footnote-ref">8</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
                 </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
+                <div class="card-button">
+                    <button id="toggle-lugia-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('lugia-details', 'toggle-lugia-btn')">
+                    Également Top Vol <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="lugia-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">8</span>
+                </div>
                 <div class="card-note"><span class="footnote-ref">8</span> : Vol fera toujours plus de dégâts que Prescience.</div>
             </div>
         </div>

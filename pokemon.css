@@ -713,15 +713,11 @@
 .pk-dracaufeu-my .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dracaufeu-my .emoji-shiny  { display: inline; }
 
-/* Dodrio — Bon / Shiny */
-.pk-dodrio .pokemon-name { color: var(--accent-vert-bon); }
-.pk-dodrio .research-reward-name { color: var(--accent-vert-bon); }
-.pk-dodrio .emoji-shiny  { display: inline; }
+/* Dodrio — Normal / Shiny */
+.pk-dodrio .emoji-shiny { display: inline; }
 
-/* Doduo — Bon / Shiny */
-.pk-doduo .pokemon-name { color: var(--accent-vert-bon); }
-.pk-doduo .research-reward-name { color: var(--accent-vert-bon); }
-.pk-doduo .emoji-shiny  { display: inline; }
+/* Doduo — Normal / Shiny */
+.pk-doduo .emoji-shiny { display: inline; }
 
 /* Doudouvet — Normal / Shiny */
 .pk-doudouvet .emoji-shiny { display: inline; }
@@ -1005,6 +1001,10 @@
 
 /* Flambusard — Normal / Shiny */
 .pk-flambusard .emoji-shiny { display: inline; }
+
+/* Flamenroule — Bon */
+.pk-flamenroule .pokemon-name { color: var(--accent-vert-bon); }
+.pk-flamenroule .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Flobio — Bon / Shiny */
 .pk-flobio .pokemon-name { color: var(--accent-vert-bon); }

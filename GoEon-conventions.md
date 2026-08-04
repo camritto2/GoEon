@@ -1,6 +1,6 @@
 # GoEon — Conventions & Décisions
 
-*Version 2.6 — 4 août 2026. Fusionne les deux v2.5 divergentes du 3 au soir et du 4 au matin (cf. §9).*
+*Version 2.7 — 4 août 2026 (soir). Livraison de `TopVol.html` : les **17** classements par type sont complets.*
 *Chaque affirmation de ce document a été vérifiée sur les fichiers du dépôt à cette date.*
 
 > **Règle n°1 pour toute conversation Claude reprenant ce projet : ne jamais travailler de mémoire.**
@@ -179,6 +179,9 @@ Détail d'écriture : les blocs Bon écrivent `.emoji-shiny  {` avec **deux** es
 - `<span class="footnote-ref">` se place **après** le nom d'attaque et l'indicateur Legacy, mais **avant** l'icône de type. Ordre strict : `nom` → `legacy-indicator` → `footnote-ref` → icône.
 - **Deux classes de note, à ne pas confondre.** `card-note` s'affiche en permanence sous la carte : elle sert aux renvois posés sur la face avant. `build-note` vit **à l'intérieur du build** et n'apparait qu'au déploiement : elle sert aux renvois posés sur la 2e Attaque Chargée. Un audit qui ne cherche que `card-note` conclura à tort que des notes manquent.
 - **Invariant croisé des bascules.** Pour un Pokémon présent sur plusieurs pages Top, chaque page implique une « meilleure attaque immédiate absolue » : l'attaque révélée s'il y a une bascule, celle de la face avant sinon. **Toutes les pages doivent impliquer la même.** Deux pages sans bascule affichant deux attaques différentes, ou deux bascules pointant l'une vers l'autre, sont contradictoires par construction.
+- **Les formes Apex sont en cyan** (`pokemon-name-rare`), pas en bleu : elles relèvent du « obtenu une ou deux fois dans le jeu » de l'intro. Vérifié sur Lugia Apex (`TopPsy`, `TopVol`) et Ho-Oh Apex (`TopFeu`, `TopVol`). Le bleu légendaire reste pour la forme de base, qui coexiste souvent sur la même page.
+- **Une icône de type accompagne toute attaque hors-type de la face avant**, immédiate comme chargée — pas seulement celles portées par une bascule. Sur `TopVol` : Crocs Feu (Drattak), Vent Féérique (Amovénus), Coupe Psycho (Artikodin de Galar), Balayage (Électhor de Galar), Éclair (Électhor), Extrasenseur (Lugia), Rafale Feu (Dracaufeu).
+- **Numérotation des renvois.** Séquentielle dans l'ordre des cartes. Un numéro se **réutilise tel quel entre la forme Méga et la forme de base d'une même espèce** (Rayquaza et Draco Ascension, Dracaufeu et Rafale Feu). En revanche **deux espèces différentes gardent deux numéros distincts, même si le texte est mot pour mot identique** — `TopPsy` porte la même phrase en 4 et en 8, `TopVol` en 7 et en 8. Ne pas « factoriser ».
 - Puces d'intro colorées comme leur ligne (`bullet legend-blue/cyan/red`), puce Legacy neutre.
 
 ### Checklist d'audit
@@ -282,6 +285,7 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **Chercher une classe, c'est déjà faire une hypothèse.** Le 1er août, un audit des renvois de note n'a interrogé que `card-note` et a conclu que six notes manquaient. Elles existaient toutes en `build-note`. Quatre pages ont été « corrigées » pour rien, avec du texte en double à la clé. Avant d'affirmer qu'une chose est absente, vérifier qu'on l'a cherchée sous toutes ses formes.
 - **Un remplacement par nom d'attaque frappe la première occurrence, pas la bonne.** Toujours découper la page par carte et cibler le rang. Deux erreurs le même jour : `Ire de la Nature` a atterri sur Tokorico au lieu de Tokopiyon, `Végé-Attaque` sur Méga-Florizarre au lieu de Florizarre.
 - **L'invariant croisé des bascules se vérifie par script, pas à l'œil.** Chaque page Top implique une « meilleure attaque immédiate absolue » par Pokémon : celle révélée s'il y a une bascule, celle de la face avant sinon. Extraire cette valeur sur les 15 pages et grouper par Pokémon fait tomber les contradictions en quelques secondes. La passe du 2 août en a sorti sept d'un coup, dont quatre qu'aucune relecture manuelle n'avait vues en trois audits.
+- **Une image référencée n'est pas une image présente.** `TopAcier` appelait `Images/AirmureM.png` depuis le 3 août : le fichier n'a jamais existé dans le dépôt, et l'image était cassée en production sans que personne le voie. Découvert le 4 août en préparant `TopVol`, qui appelait la même. Toute page neuve se termine par une vérification des `src` **contre la liste réelle de `Images/`**, pas contre la convention de nommage — celle-ci dit seulement quel nom le fichier *devrait* porter.
 - **Une couleur de nom est une donnée croisée.** Cancrelove a failli entrer au Top Combat en noir alors que `TopInsecte` le classe en bleu. Avant de poser `pokemon-name-*` sur une carte, vérifier ce que font les autres pages Top pour ce Pokémon.
 - **Un décompte d'anomalies se déduplique avant d'être annoncé.** Le 3 août, le script d'audit a affiché 16 puis 10 lignes ; Cam s'est vu annoncer successivement « 16 », « 11 restantes » puis « 7 réelles » pour le même lot. En cause : une divergence d'orthographe produisait deux lignes (`AC croisée` **et** `orthographe`), et un cas légitime (« Feu Sacré+ » de Ho-Oh Apex) était compté comme faute. Un nombre communiqué doit être un nombre de **problèmes**, pas de lignes de sortie.
 - **Un inventaire chiffré s'extrait par script au moment où on l'écrit.** Le §10 a annoncé pendant deux jours que « quatre boutons » pointaient vers des pages inexistantes. Il y en avait **trente-sept** : dix-huit vers Ténèbres, dix-neuf vers Vol. Seuls les quatre derniers ajoutés avaient été notés. Le 3 août au soir, la correction elle-même a reproduit la faute : « cinq boutons vers Vol », obtenus en additionnant la liste périmée et les trois nouveaux, au lieu des vingt-deux réels. Un décompte qu'on n'a pas extrait ne s'écrit pas.
@@ -300,15 +304,16 @@ Trois entorses assumées à la règle « aucun CSS hors des fichiers partagés �
 - **📅 5 août 2026 (rotation des raids obscurs)** — poser le badge Obscur sur `raids_obscurs.html`, qui n'en contient toujours **aucun**, et créer la règle de base `.badge-obscur-icon` dans `global.css` **à 15/22px**.
   Décision du 2 août : le badge fait la **même taille sur les pages Top et sur `raids_obscurs`** ; ChefRocket le garde plus petit, ses cartes étant plus serrées.
   ⚠️ La v2.2 annonçait 14/22px « pour s'aligner sur le shiny voisin » : **c'est faux.** `top.css` dimensionne déjà ces badges à **15px mobile / 22px desktop** via `.card-image .card-badges img`. C'est cette valeur qu'il faut reprendre.
-  Conséquence pratique : **ne pas toucher aux 16 pages Top.** Elles posent leur badge en `<img>` nu, mais `top.css` les couvre déjà, et son sélecteur (0,2,1) l'emporterait de toute façon sur `.badge-obscur-icon` (0,1,0). La classe ne sert donc qu'à `raids_obscurs.html`. `rocket.css` conserve son override à 12/18px.
+  Conséquence pratique : **ne pas toucher aux 17 pages Top.** Elles posent leur badge en `<img>` nu, mais `top.css` les couvre déjà, et son sélecteur (0,2,1) l'emporterait de toute façon sur `.badge-obscur-icon` (0,1,0). La classe ne sert donc qu'à `raids_obscurs.html`. `rocket.css` conserve son override à 12/18px.
 
 ### Contenu
 
-- **1 seul type Top restant : Vol.** Décompte extrait le 4 août : **22 boutons « Également Top Vol »** pointent vers cette page inexistante, sur 8 pages — `TopDragon` (6 : Rayquaza, Drattak, Dracolosse et leurs Méga), `TopFeu` (4 : Méga-Dracaufeu Y, Ho-Oh, Ho-Oh Apex, Sulfura), `TopFée` (3 : Amovénus Avatar et Totémique, Togekiss), `TopPsy` (3 : Artikodin de Galar, Lugia Apex, Guériaigle de Hisui), `TopTenebres` (3 : Yveltal, Corboss, Sulfura de Galar), `TopCombat` (Électhor de Galar), `TopElectrik` (Électhor), `TopInsecte` (Yanméga). C'est assumé, mais ça fait 22 cartes à recroiser au moment de la livraison — et ça dit que le Top Vol sera une grosse page. Il soldera la totalité des boutons pendants du site.
+- ✅ **`TopVol` soldée le 4 août 2026 au soir** (voir §12). **Les 17 types sont couverts** : plus aucun bouton « Également Top X » ne pointe vers une page inexistante, et `TYPES_TOP` n'a plus d'entrée `page: null`.
+- **Audit global des blocs `Bon` de `pokemon.css` contre les 17 Top.** Les classements sont désormais figés : c'est le moment de passer les 500 blocs verts au crible pour repérer ceux qui ne sont plus justifiés par aucun classement, et les pré-évolutions qui les suivent. Deux sortants ont déjà été traités à la main le 4 août (Doduo, Dodrio). Non fait.
 - ✅ **`TopAcier` soldée le 3 août 2026** (voir §12). Les trois anomalies ouvertes — Galeking, Minotaupe, Vrombotor — sont tranchées.
 - ✅ **`TopTenebres` soldée le 3 août 2026 au soir** (voir §12). L'audit croisé des **16** pages Top ne remonte aucune contradiction.
 - **ChefRocket** : ajouter Cliff & Arlo (empiler dans `.rocket-list`) ; puis chantier séparation Sbires/Chefs avant activation navbar/accueil.
-- **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 16 pages Top + activer la carte d'accueil + le lien navbar.
+- **MeilleursPokemon.html** (Règles Générales) : à créer ; ensuite remplacer les `lien-a-venir` des 17 pages Top + activer la carte d'accueil + le lien navbar.
 - **`OptiPM.html` est considérée comme terminée** (1er août 2026). Le Passe payant est couvert par le menu déroulant ; le ticket d'évènement et l'Étude Ambassadeur sont traités par deux lignes « Optionnel » en fin de tableau. Plus de « versions à venir ».
 - **SEO / Open Graph** : meta description + og:tags (priorité pages Top) ; attend l'image 1200×630 de Cam.
 
@@ -357,6 +362,18 @@ Règles clés à rappeler dans le prompt :
 ---
 
 ## 12. Historique express
+
+**4 août 2026 (soir) — `TopVol.html` livrée et activée : les 17 classements sont complets.** 30 cartes (25 + 5 Méga), la plus grosse page Top du site en boutons : **21 builds bi-type**, 14 bascules, 12 badges Obscur. Elle solde les 22 boutons « Également Top Vol » qui pendaient depuis des semaines.
+
+**Quatre boutons retirés ailleurs**, leurs Pokémon n'entrant pas au classement : Méga-Dracolosse et Dracolosse (`TopDragon`), Togekiss (`TopFée`), Yanméga (`TopInsecte`). **Trois boutons réciproques ajoutés** : Méga-Airmure (`TopAcier`), Dracaufeu (`TopFeu`, 2AC en `-` reprenant le renvoi de Méga-Dracaufeu Y), Lugia (`TopPsy` #22, 2AC en `-`).
+
+**Décisions de mécanique validées par Cam.** Drattak passe de Colère<sup>L</sup> à **Draco-Météore** sur `TopDragon` (la Méga l'avait déjà). **Draco Ascension s'écrit sans tiret** et **est Legacy** — corrigé aux quatre emplacements de `TopDragon`. **Feu Sacré et Feu Sacré+ sont Legacy** : le `L` manquait sur Ho-Oh Apex dans `TopFeu`. **Guériaigle de Hisui passe à `-` en 2e Attaque Chargée** avec renvoi, alignant `TopVol` sur `TopPsy` (Vol l'emporte sur Psyko). Typhon Hivernal est bien de type Vol : pas d'icône.
+
+`pokemon.css` **710 classes** : Flamenroule créé en **Bon sans shiny** (son chromatique n'existe pas), Doduo et Dodrio repassés de Bon à **Normal / Shiny** — sortis des classements, et Doduo n'était vert que par Dodrio. Attention, Passerouge et Braisillon **ne sont pas de la famille de Flamenroule** (c'est Flambusard) : ils restent Normal.
+
+Activations faites : `script.js` §14 (`page: 'TopVol.html'`) et `index.html` — carte du type activée, entrée Nouveautés du 04/08, et **retrait de « La suite des meilleurs Pokémon par Type » des À venir**, devenu sans objet. Audit croisé final : **17 pages, 497 cartes, 0 anomalie.**
+
+Six images manquaient au dépôt au moment de la livraison (`AirmureM`, `Bazoucan`, `Etouraptor`, `Deflaisan`, `BoreasA`, `BoreasT`) ; Cam les ajoute. Leçon tirée en §9.
 
 **4 août 2026 — `BraisesArctiques.html` complétée et mise en ligne.** Page reprise de bout en bout le jour du lancement, sur données fournies par Cam. Sauvages portés à 8 (Funécire, Polarhume et Hélionceau ajoutés, ordre revu) ; Pyronille ajouté aux Œufs 5 km ; Tâches d'Étude passées d'un texte d'attente à un `research-card` unique à deux tâches et quatre récompenses ; Étude Ponctuelle refaite en carte research (quatre distances de marathon, Pikachu à visière, PX retirés) ; Passe Go entièrement reconstruit — barème de points, tâches quotidiennes, plafond de 500 points levé les 8-9-10, bonus de rang, et une grille de 10 Pokémon à débloquer. PC du 100 % partout.
 
