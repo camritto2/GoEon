@@ -49,7 +49,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 
 ## 2. Règles globales de page
 
-- **`theme-color: #29b6f6` sur toutes les pages, jamais la couleur du type.** Point récidiviste : à vérifier en premier dans tout audit.
+- **`theme-color: #29b6f6` sur toutes les pages.** Point récidiviste : à vérifier en premier dans tout audit.
 - Un seul `<h1>` par page. Catégories en `<h2 class="category-title tier-X">`. Titre d'onglet : `GoEon - Nom`, tiret court.
 - `icon-192` déclarée ; aucun lien Google Fonts (la police vient de `navbar.css`).
 - **Aucun emoji dans les titres de section.**
@@ -66,7 +66,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 - **Ne jamais inventer un nom de fichier ni corriger une extension** (`.png` ↔ `.webp`). Cam prend les fichiers là où il les trouve, il n'y a aucune règle déductible. En cas de doute : demander.
 - **Une image référencée n'est pas une image présente.** Toute page neuve ou retravaillée se termine par une vérification des `src` **contre la liste réelle de `Images/`** — pas contre la convention de nommage, qui dit seulement quel nom le fichier *devrait* porter.
 - Nommage : `NomSansAccents.png`, shiny `NomS.png`, forme **avant** le S (`GoupixAS.png`).
-- Suffixes de forme : **A** Alola, **G** Galar *et* Gigamax, **H** Hisui, **M** Méga, **P** Primo, **C**/**T** formes spéciales, **B**/**N** fusions Kyurem. La collision Galar/Gigamax est assumée ; si le cas survenait, ce serait `GG`.
+- Suffixes de forme : **A** Alola, **G** Galar *et* Gigamax, **H** Hisui, **M** Méga, **P** Primo. La collision Galar/Gigamax est assumée ; si le cas survenait, ce serait `GG`.
 - Des fichiers dérogent au nommage (tirets, suffixes isolés). Ce sont des cas particuliers, **pas des conventions à généraliser** : vérifier le disque, demander à Cam.
 
 ---
@@ -77,7 +77,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 
 Le vert de `pokemon.css` signifie **« ce Pokémon figure dans un Top »**, pas « il est bon dans l'absolu ».
 
-- Un Pokémon qui **sort** d'un classement : vérifier s'il figure encore dans un autre Top ; sinon le repasser en `/* Nom — Normal / Shiny */` et supprimer ses lignes de couleur.
+- Un Pokémon qui **sort** d'un classement : vérifier s'il figure encore dans un autre Top ; sinon le repasser en `/* Nom — Normal / Shiny */` et supprimer ses lignes de couleur, après l'avoir signalé et validé avec Cam.
 - **La règle remonte aux pré-évolutions** : elles sont vertes parce que leur évolution l'est, et perdent le vert avec elle.
 - Un Pokémon qui **entre** dans un Top en figurant déjà dans un autre n'a besoin de rien.
 - Détail d'écriture : les blocs Bon écrivent `.emoji-shiny  {` avec **deux** espaces, les blocs Normal avec **une**. Respecter l'espacement du bloc d'arrivée lors d'une conversion.
@@ -103,10 +103,9 @@ Le vert de `pokemon.css` signifie **« ce Pokémon figure dans un Top »**, pas 
 ### Formats de texte
 
 - **Rangs Méga : « Méga 1 », « Méga 2 » — jamais « M1 »**, y compris dans `card-rank`. `M1` est l'abréviation de Cam à la saisie, pas ce qui s'écrit.
-- **Cout d'une 2e Attaque Chargée : « N Bonbons », jamais le nom de l'espèce.**
 - Fourchettes : tiret demi-cadratin espacé « – ». Billets : « Nom / X € », espace insécable après la barre.
-- Ligature œ obligatoire (« Nœud Herbe »). Accents circonflexes retirés des noms de formes (Déchainé, Enchainé).
-- Dates sans année. Tiret long « — » toléré sur les évènements.
+- Ligature œ obligatoire (« Nœud Herbe »). Orthographe rectifiée à appliquer sur tout le site.
+- Dates sans année.
 
 ---
 
@@ -133,7 +132,7 @@ Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué. S
 
 ### Builds et boutons
 
-- **Le bouton « Également Top Y » n'existe que si le Pokémon figure vraiment dans le Top Y.** Sinon retirer bouton et build, en laissant `<div class="card-button"></div>` et `<div class="card-build"></div>` vides. Piège : une Méga peut y être sans sa forme de base, ou l'inverse — **vérifier la carte, pas l'espèce**. Un bouton retiré emporte aussi la bascule que son `onclick` portait.
+- **Le bouton « Également Top Y » n'existe que si le Pokémon figure vraiment dans le Top Y.** Sinon retirer bouton et build, en laissant `<div class="card-button"></div>` et `<div class="card-build"></div>` vides. Piège : une Méga peut y être sans sa forme de base, ou l'inverse — **vérifier la carte, pas l'espèce**. Un bouton retiré emporte aussi la bascule que son `onclick` portait. Vérifier et confirmer avec Cam avant toute suppression.
 - Il existe des conservations volontaires, commentées sur place : ne pas les retirer, cf. règle de travail n°3.
 - **Pas de bloc « Cout » sans 2e Attaque Chargée** : le build se réduit à `2e Attaque Chargée : -`, sans `<hr>` ni `attack-cost-container`. Invariant vérifiable : `builds − cartes sans 2e attaque = blocs de cout`.
 - **L'absence de 2e attaque s'écrit `-`**, tiret court, jamais `—`.
@@ -142,7 +141,7 @@ Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué. S
 
 - Ordre strict : `nom` → `legacy-indicator` → `footnote-ref` → icône de type.
 - **Une icône de type accompagne toute attaque hors-type de la face avant**, immédiate comme chargée, pas seulement celles portées par une bascule.
-- Certaines attaques sont **Legacy sur toutes les pages** : Végé-Attaque, Rafale Feu, Hydroblast, Draco Ascension, Feu Sacré et Feu Sacré+. Sans `L`, c'est un oubli.
+- **Le statut Legacy appartient au couple attaque + Pokémon**, pas à l'attaque seule : une même attaque peut être Legacy pour un Pokémon et pas pour un autre. En conséquence, **un Pokémon présent sur deux pages Top y porte exactement le même statut Legacy** — une divergence est forcément une erreur.
 - **Quand le `-` s'explique par la supériorité de l'attaque de face**, le même `footnote-ref` se pose **deux fois** : sur l'Attaque Chargée de la face avant *et* sur le tiret, avec une note unique.
 - **Deux classes de note, à ne pas confondre.** `card-note` s'affiche en permanence sous la carte (renvois de la face avant) ; `build-note` vit dans le build et n'apparait qu'au déploiement (renvois de la 2e Attaque Chargée). **Un audit qui ne cherche que `card-note` conclura à tort que des notes manquent.**
 - **Numérotation des renvois** : séquentielle dans l'ordre des cartes. Un numéro se **réutilise entre la forme Méga et la forme de base d'une même espèce** ; **deux espèces différentes gardent deux numéros distincts, même à texte identique**. Ne pas factoriser.
@@ -162,10 +161,10 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
 
 **Structure** : `h1` → `raids-date` → `astuce-shiny` (si des shinies sont cliquables) → `section-nav` (si ≥ 4 sections) → `intro-rules` → les sections.
 
-Ordre des sections, toutes optionnelles : Pokémon à l'honneur → Bonus → Nouveaux Pokémon → Pokémon Sauvages → Raids → Tâches d'Étude → Attaques Spéciales → Passe Go / Ticket Payant → Infos Supplémentaires.
+**Ordre des sections**, toutes optionnelles : Pokémon à l'honneur → Bonus → Nouveaux Pokémon → Pokémon Sauvages → Raids → Tâches d'Étude → Attaques Spéciales → Passe Go / Ticket Payant → Infos Supplémentaires. Les présences varient d'un évènement à l'autre, l'ordre relatif non — **sauf indication contraire de Cam**, qui peut vouloir mettre les Raids en avant.
 
-- **Couleur des noms** : vert via `pk-` pour les bons Pokémon, noir par défaut. **Le cyan est interdit ici**, il appartient aux pages Top.
-- **Tout Pokémon de la page a sa classe dans `pokemon.css`.**
+- **Couleur des noms** : vert via `pk-` pour les bons Pokémon, noir par défaut. **Le cyan et le bleu sont interdits ici**, ils appartiennent aux pages Top.
+- **Tout Pokémon de la page a sa classe dans `pokemon.css`.** Si ce n'est pas le cas, le signaler à Cam, qui la créera.
 - **Pokémon costumé qui ne peut pas évoluer** : pas de classe `pk-`, et forcer l'affichage du badge shiny. S'il porte quand même un `pk-`, neutraliser le nom avec `nom-neutre`.
 - **`section-nav`** : un `<a href="#ancre">` par section, l'`id` correspondant sur le `h2.category-title`. Le CSS est dans `global.css` — **ne jamais le recopier dans un `<style>`**.
 - `section-sous-titre` pour les sous-titres de section.
@@ -175,7 +174,7 @@ Ordre des sections, toutes optionnelles : Pokémon à l'honneur → Bonus → No
   ⚠️ **`passe-go-rank` s'écrit en `<div>`, jamais en `<p>`** : `.pokemon-card` a `overflow: hidden`, la marge par défaut d'un `<p>` ne peut pas s'échapper et décolle le bandeau.
 - `research-sep` est masquée globalement : la forcer en inline quand un sous-titre a besoin d'un séparateur visible.
 
-**Activation** : `index.html` uniquement — carte d'évènement + classe couleur, et entrée dans les Nouveautés. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. Badge « En cours ! » via `event-en-cours` + `<span class="badge-en-cours">` en premier enfant. **À la fin de l'évènement** : retirer le badge, puis la carte.
+**Activation** : `index.html` uniquement — carte d'évènement + classe couleur, et entrée dans les Nouveautés. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. Badge « En cours ! » via `event-en-cours` + `<span class="badge-en-cours">` en premier enfant. **À la fin de l'évènement** : retirer le badge, puis la carte, quand Cam le signale.
 
 **Aucune activation dans `navbar.html`** : son lien « À venir » pointe sur `index.html#evenements`.
 

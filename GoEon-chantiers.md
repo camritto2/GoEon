@@ -14,13 +14,12 @@
 - **ChefRocket** : ajouter Cliff, Arlo et Giovanni. Puis chantier séparation Sbires/Chefs, avant activation navbar et accueil.
 - **MeilleursPokemon.html** (Règles Générales) : à créer. Ensuite, remplacer les `lien-a-venir` des 17 pages Top, activer la carte d'accueil et le lien navbar.
 - **SEO / Open Graph** : meta description et og:tags, priorité aux pages Top. Attend l'image 1200×630 de Cam.
+- Et tellement plus qui se trouve pour le moment dans la tête de Cam !
 
 ## Dette technique
 
 - **`regionaux.html`** — page inachevée : un `<script>` inline, des styles inline, et de nombreuses images référencées absentes de `Images/`. Sera reprise entièrement.
 - **Styles inline** — il en reste sur une poignée de pages, presque tous des marges sur des `<p>` dans un `intro-rules`. **Décision de Cam : on corrige page par page, au moment où chaque page est retravaillée.** Pas de passe globale.
-- **Deux images cassées, à trancher par Cam** — `dynamax.html` appelle un shiny de Quartermac qui n'existe pas sur le disque ; `oeufs.html` appelle un shiny de Pandespiègle avec la mauvaise extension. Non corrigées : la règle « ne jamais corriger une extension de soi-même » s'applique.
-- `research-note` reste déclarée et inutilisée. Laissée en place : son rendu a un usage identifiable si le besoin d'une vraie note de bas de carte se présente.
 
 ## Écarté
 
