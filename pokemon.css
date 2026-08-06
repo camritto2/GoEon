@@ -615,6 +615,23 @@
 /* Chlorobule — Normal / Shiny */
 .pk-chlorobule .emoji-shiny { display: inline; }
 
+/* Capumain — Normal / Shiny */
+.pk-capumain .emoji-shiny { display: inline; }
+
+/* Cerbyllin — Normal / Shiny */
+.pk-cerbyllin .emoji-shiny { display: inline; }
+
+/* Créfadet — Bon / Shiny */
+.pk-crefadet .pokemon-name { color: var(--accent-vert-bon); }
+.pk-crefadet .research-reward-name { color: var(--accent-vert-bon); }
+.pk-crefadet .emoji-shiny  { display: inline; }
+
+/* Créfollet — Normal / Shiny */
+.pk-crefollet .emoji-shiny { display: inline; }
+
+/* Créhelf — Normal / Shiny */
+.pk-crehelf .emoji-shiny { display: inline; }
+
 
 /* ============================================================
    POKÉMON — D
@@ -2715,6 +2732,11 @@
 .pk-seracrawl .pokemon-name { color: var(--accent-vert-bon); }
 .pk-seracrawl .research-reward-name { color: var(--accent-vert-bon); }
 .pk-seracrawl .emoji-shiny  { display: inline; }
+
+/* Séracrawl de Hisui — Bon / Shiny */
+.pk-seracrawl-h .pokemon-name { color: var(--accent-vert-bon); }
+.pk-seracrawl-h .research-reward-name { color: var(--accent-vert-bon); }
+.pk-seracrawl-h .emoji-shiny  { display: inline; }
 
 /* Scarhino — Bon / Shiny */
 .pk-scarhino .pokemon-name { color: var(--accent-vert-bon); }

@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 4.0 — 4 août 2026.*
+*Version 4.1 — 6 août 2026.*
 
 ## Ce qu'est ce document
 
@@ -39,7 +39,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 
 **Règles d'architecture :**
 
-- **Zéro `<script>` inline, zéro `<style>`, zéro style inline** — sauf les `display:none` fonctionnels. Trois exceptions structurelles, cf. §7.
+- **Zéro `<script>` inline, zéro `<style>`, zéro style inline** — sauf les `display:none` fonctionnels. Trois exceptions structurelles, cf. §8.
 - Une couleur ne s'écrit jamais en dur : elle passe par une variable de `navbar.css`. Créer la variable si elle manque.
 - Une valeur utilisée par plus d'une page appartient à `global.css`, pas à la feuille de la page.
 - Pas de cache-busting : le service worker est en réseau-d'abord, les suffixes `?v=` n'apportent rien et désalignent le préchargement. Ne pas en introduire.
@@ -180,7 +180,46 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
 
 ---
 
-## 7. Exceptions structurelles
+## 7. Pages Raids
+
+Concerne `raids.html` et `raids_obscurs.html`. Structure de carte identique aux pages Évènement, plus deux blocs propres aux raids, toujours dans cet ordre : **Dresseurs Nécessaires**, puis **Types à utiliser**. Chacun est précédé de son `<hr class="separator">`.
+
+**Dates** : `raids-date` en haut, format `Depuis le [jour] [date], [heure] - Jusqu'au [jour] [date], [heure]`. Vérifier le jour de la semaine, ne jamais le supposer.
+
+### Dresseurs Nécessaires
+
+Une bulle `diff-bubble` par nombre de dresseurs, du plus dur au plus facile. Cinq paliers : `diff-1` rouge (Extrême), `diff-2` orange (Difficile), `diff-3` jaune (Modéré), `diff-4` vert clair (Facile), `diff-5` vert foncé (Très facile).
+
+- **La dernière bulle porte toujours un `+`** — c'est un seuil, pas une valeur exacte — et donc toujours `diff-wide`.
+- **`diff-wide` élargit une bulle** dont le contenu dépasse un caractère.
+- **Fusionner deux paliers identiques (`3-4`) uniquement si la rangée dépasse 5 bulles.** Ce n'est pas une règle de style : à 5 bulles ou moins, une bulle par nombre.
+- La rangée doit tenir dans ~105 px (largeur utile d'une carte en mobile).
+
+⚠️ **La palette est déclarée une seule fois**, en sélecteurs groupés couvrant `.diff-bubble` et `.diff-legende-item`. Ne jamais la dupliquer : les bulles de carte et la légende ne doivent pas pouvoir diverger.
+
+### Types à utiliser
+
+Icônes de type cliquables vers la page `Top[Type]` correspondante. **Jamais de libellé texte** : l'icône suffit, le `title` du lien porte l'intitulé.
+
+Deux lignes `raid-types-ligne`, dont le sens est strict :
+- **Ligne 1** : types contre lesquels le boss n'a **aucune** attaque super efficace.
+- **Ligne 2** : types contre lesquels il en a.
+
+La ligne 2 a **volontairement le même traitement visuel** que la ligne 1 — même taille, même opacité. La hiérarchie passe par la position seule, et le sens est porté par la note de bas de page.
+
+Une seule ligne suffit quand la ligne 2 serait vide. Le critère dépend des **attaques réelles du boss**, pas de sa table de types.
+
+### Bas de page
+
+Deux blocs, dans l'ordre : la légende `diff-legende` (pilules colorées avec leur libellé, précédées de `Légende :`), puis la note `raid-note` expliquant le classement des types. **Texte identique sur les deux pages.**
+
+### Spécifique aux Raids Obscurs
+
+Badge Obscur sur **toutes** les cartes, dans `.badges`, **après** le shiny : `<img src="Images/Obscur.png" class="badge-obscur-icon">`. Contrairement à `emoji-shiny`, il n'est **pas inversé en mode sombre** : l'icône est déjà sombre.
+
+---
+
+## 8. Exceptions structurelles
 
 Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles sont commentées sur place ; ne pas les « corriger ».
 
@@ -190,18 +229,19 @@ Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles s
 
 ---
 
-## 8. Pièges connus
+## 9. Pièges connus
 
 - **Fragment CSS orphelin** = déclarations flottant hors de tout sélecteur. Le navigateur avale **la règle suivante** en se resynchronisant : c'est donc la règle d'après qui disparaît, ce qui égare le diagnostic. Après toute fusion manuelle : vérifier l'équilibre des accolades et chercher les déclarations hors bloc.
 - **Spécificité** : à égalité, l'ordre de chargement tranche. Pour battre `pokemon.css` depuis `global.css`, viser une spécificité supérieure (préfixe `img.`, `h2.`, `span.`).
 - **Réécrire un `<script>` par regex emporte le suivant.** Un `.*` entre `<script>` et `</script>` capture jusqu'au **dernier** `</script>` de la page et avale le `<script src="script.js">` final. Symptôme : la navbar disparaît alors que le HTML semble intact. Toujours vérifier ensuite que `script.js` est appelé en fin de fichier.
 - **Un remplacement par nom d'attaque frappe la première occurrence, pas la bonne.** Découper la page par carte et cibler le rang.
 - **Chercher une classe, c'est déjà faire une hypothèse.** Avant d'affirmer qu'une chose est absente, vérifier qu'on l'a cherchée sous toutes ses formes.
+- **Grouper une règle mobile ne groupe pas sa jumelle desktop.** Deux sélecteurs réunis dans la règle de base peuvent rester dissociés dans la media query, où l'un seul est redéfini. Symptôme : deux éléments censés être identiques divergent uniquement au-dessus du breakpoint. Après tout groupage : chercher le sélecteur dans **tout** le fichier, pas seulement à l'endroit modifié.
 - **Un décompte s'extrait par script au moment où on l'écrit**, et se déduplique avant d'être annoncé. Un nombre communiqué est un nombre de **problèmes**, pas de lignes de sortie.
 
 ---
 
-## 9. Checklist d'audit
+## 10. Checklist d'audit
 
 **Toute page :**
 1. `theme-color` = `#29b6f6`

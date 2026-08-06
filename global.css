@@ -326,6 +326,16 @@ body.dark-mode .emoji-shiny {
   filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
+/* Badge Obscur — dans .badges d'une .pokemon-card (pages Raids Obscurs).
+   Mêmes dimensions que .emoji-shiny, mais jamais inversé en mode sombre :
+   l'icône est déjà sombre par nature. */
+.badge-obscur-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
 @keyframes twinkle {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.3); opacity: 0.5; }
@@ -509,29 +519,6 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
 }
 
 /* Équipe */
-.raid-team-size {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  margin-top: 2px;
-  font-size: 9px;
-  color: var(--text-secondaire);
-}
-
-.pokemon-availability {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  margin-top: 2px;
-  font-size: 9px;
-  font-style: italic;
-  color: var(--text-secondaire);
-}
-
-.team-text { font-weight: 600; }
-
 /* ==========================================
    TEXTES ET LABELS
    ========================================== */
@@ -644,7 +631,8 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
    DIFFICULTÉ DES RAIDS (Dresseurs Nécessaires)
    ========================================== */
 
-.raid-difficulty-label {
+.raid-difficulty-label,
+.raid-types-label {
   font-family: 'Poppins', sans-serif;
   font-size: 8px;
   color: var(--text-secondaire);
@@ -652,9 +640,41 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   white-space: nowrap;
   margin: 2px 0 3px 0;
 }
+
+/* Types conseillés contre un boss — icônes cliquables vers la page Top
+   du type correspondant. Pas de libellé texte : l'icône suffit.
+   Ligne 1 = types sûrs (encaissent peu). Ligne 2 = types puissants mais
+   fragiles face aux attaques du boss. Les deux lignes ont volontairement
+   le même traitement visuel : la hiérarchie passe par la position seule,
+   car la ligne 2 frappe plus fort, elle n'est pas « moins bonne ». */
+.raid-types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+}
+
+.raid-types-ligne {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.raid-types a {
+  display: inline-flex;
+  line-height: 0;
+  transition: transform 0.15s ease;
+}
+
+.raid-types a:hover,
+.raid-types a:focus-visible {
+  transform: scale(1.15);
+}
 .raid-difficulty {
   display: flex;
-  gap: 2px;
+  gap: 1px;
   justify-content: center;
   flex-wrap: nowrap;
   margin-top: 2px;
@@ -676,11 +696,73 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   text-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.45);
   flex-shrink: 0;
 }
-.diff-bubble.diff-1 { background-color: #ef4444; }
-.diff-bubble.diff-2 { background-color: #f97316; }
-.diff-bubble.diff-3 { background-color: #f5b700; }
-.diff-bubble.diff-4 { background-color: #7cc00d; }
-.diff-bubble.diff-5 { background-color: var(--accent-vert-bon); }
+/* Palette des paliers, partagée par les bulles de carte (.diff-bubble)
+   et les pilules de la légende (.diff-legende-item). */
+.diff-bubble.diff-1, .diff-legende-item.diff-1 { background-color: #ef4444; }
+.diff-bubble.diff-2, .diff-legende-item.diff-2 { background-color: #f97316; }
+.diff-bubble.diff-3, .diff-legende-item.diff-3 { background-color: #f5b700; }
+.diff-bubble.diff-4, .diff-legende-item.diff-4 { background-color: #7cc00d; }
+.diff-bubble.diff-5, .diff-legende-item.diff-5 { background-color: var(--accent-vert-bon); }
+
+/* Bulle fusionnée : plusieurs nombres de dresseurs pour un même palier
+   (ex. « 3-4 »). Largeur auto pour absorber le caractère supplémentaire. */
+.diff-bubble.diff-wide {
+  width: auto;
+  min-width: 17px;
+  padding: 1px 2px 0 2px;
+}
+
+/* Note explicative sous la légende (bas de page Raids / Raids Obscurs) */
+.raid-note {
+  max-width: 520px;
+  margin: 10px auto 0 auto;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--text-secondaire);
+  text-align: center;
+}
+
+/* Légende des paliers de difficulté (bas de page Raids / Raids Obscurs).
+   Pilules colorées portant leur libellé, sur une à deux lignes. */
+.diff-legende {
+  margin: 20px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.diff-legende-titre {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-secondaire);
+  margin: 0 3px 0 0;
+}
+
+.diff-legende-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Même traitement typographique que .diff-bubble, mais largeur libre */
+.diff-legende-item {
+  box-sizing: border-box;
+  padding: 3px 8px 2px 8px;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+}
 
 /* ==========================================
    NAVBAR DE SECTIONS (pages évènement)
@@ -784,6 +866,7 @@ body:has(.section-nav) .category-title {
   .pokemon-img { width: auto; height: 120px; max-width: 90%; }
   .badges { top: 8px; left: 10px; font-size: 16px; }
   .emoji-shiny { width: 22px; height: 22px; }
+  .badge-obscur-icon { width: 22px; height: 22px; }
   .emoji-costume { width: 26px; height: 26px; }
   .astuce-shiny-icon { width: 14px; height: 14px; }
 
@@ -801,6 +884,8 @@ body:has(.section-nav) .category-title {
   .type-block { gap: 4px; }
   .type-text { font-size: 11px; line-height: normal; }
   .type-icon { height: 24px; width: auto; }
+  .raid-types { gap: 5px; margin-top: 4px; }
+  .raid-types-ligne { gap: 8px; }
 
   /* Stats */
   .pokemon-stats { margin-top: 6px; }
@@ -812,10 +897,6 @@ body:has(.section-nav) .category-title {
   .weather-container { gap: 12px; margin-top: 6px; padding: 0; }
   .weather-text { font-size: 11px; }
   .weather-icon { height: 28px; }
-
-  /* Équipe */
-  .raid-team-size { margin-top: 6px; font-size: 13px; }
-  .pokemon-availability { margin-top: 6px; font-size: 13px; }
 
   .research-card { padding: 14px 0 0 0; }
   .research-task { font-size: 16px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 0; margin-top: -14px; margin-left: 0; margin-right: 0; border-radius: 16px 16px 0 0; }
@@ -829,9 +910,17 @@ body:has(.section-nav) .category-title {
   .research-cp { font-size: 14px; padding-top: 0; padding-bottom: 2px !important; }
 
   /* Difficulté des raids */
-  .raid-difficulty-label { font-size: 13px; margin: 4px 0 6px 0; }
+  .raid-difficulty-label,
+  .raid-types-label { font-size: 13px; margin: 4px 0 6px 0; }
   .raid-difficulty { gap: 5px; margin-top: 4px; }
   .diff-bubble { width: 26px; height: 26px; border-radius: 6px; font-size: 14px; }
+  .diff-bubble.diff-wide { width: auto; min-width: 26px; padding: 1px 5px 0 5px; }
+
+  .diff-legende { margin-top: 28px; gap: 8px; }
+  .raid-note { font-size: 13px; margin-top: 14px; }
+  .diff-legende-titre { font-size: 14px; margin-right: 5px; }
+  .diff-legende-liste { gap: 8px; }
+  .diff-legende-item { padding: 5px 12px 4px 12px; border-radius: 6px; font-size: 14px; }
 
   /* Navbar de sections */
   .section-nav { justify-content: center; padding: 8px 10px; }

@@ -1,10 +1,9 @@
 # GoEon — Chantiers
 
-*Mis à jour le 4 août 2026. Ce fichier bouge souvent ; le manuel de fabrication (`GoEon-conventions.md`) presque jamais.*
+*Mis à jour le 6 août 2026. Ce fichier bouge souvent ; le manuel de fabrication (`GoEon-conventions.md`) presque jamais.*
 
 ## Datés
 
-- **5 août 2026 — rotation des raids obscurs.** Poser le badge Obscur sur `raids_obscurs.html`, qui n'en contient aucun, et créer la règle de base `.badge-obscur-icon` dans `global.css` **à 15/22px** (valeur alignée sur celle de `top.css`). Ne pas toucher aux pages Top : leur `<img>` nu est déjà couvert par `top.css`, dont le sélecteur l'emporterait de toute façon. `rocket.css` conserve son propre dimensionnement, ses cartes étant plus serrées.
 - **10 août 2026, 20h — fin de Braises Arctiques.** Sur `index.html` : retirer `event-en-cours`, le `<span class="badge-en-cours">`, puis la carte de l'évènement. Sur `BraisesArctiques.html` : retirer le sous-titre « Nouveau Shiny ! » de Frissonille.
 - **16 août 2026 — Journée Communauté Goupilou.** Goupilou et Roublenard deviennent **Shiny, et non « Bon »**. Décommenter leur ligne `emoji-shiny` dans `pokemon.css`, puis retirer les trois `nouveau-shiny` de `CDGoupilou.html`. Les commentaires datés sont déjà posés.
 
