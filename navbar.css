@@ -122,28 +122,6 @@ body {
   transition: background-color 0.2s;
 }
 
-/* Groupe Évènements : label + liens inline */
-.nav-events {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.nav-label {
-  color: var(--text-navbar);
-  font-size: 15px;
-  font-weight: 300;
-  font-family: 'Poppins', sans-serif;
-  white-space: nowrap;
-  opacity: 0.7;
-}
-
-.nav-separator {
-  color: var(--text-navbar);
-  opacity: 0.4;
-  font-size: 14px;
-}
-
 .nav-links a:hover, .nav-links a.active {
   background-color: var(--accent-navbar);
   color: var(--accent-text-navbar);

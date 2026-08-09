@@ -406,11 +406,15 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
 }
 
 
+/* La marge haute négative récupère le vide laissé sous un nom court dans le
+   min-height de .pokemon-name. Elle est volontairement moins agressive que la
+   place disponible : un nom qui passe sur deux lignes ne laisse qu'environ 4px
+   de jeu, et une valeur plus forte collerait le sous-titre au nom. */
 .pokemon-subtitle {
   font-size: 8px;
   font-style: italic;
   color: var(--text-secondaire);
-  margin: -6px 0 2px 0;
+  margin: -3px 0 2px 0;
   text-align: center;
 }
 
@@ -452,6 +456,17 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   height: 14px;
   width: auto;
   object-fit: contain;
+}
+
+/* Icône de type accolée à un nom d'attaque dans un .pokemon-subtitle
+   (section Attaques Spéciales des pages évènement).
+   Distincte de .type-icon, calibrée sur la taille du sous-titre. */
+.attaque-type-icon {
+  height: 10px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: -1px;
+  margin-left: 2px;
 }
 
 /* Stats */
@@ -557,6 +572,16 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   width: 100%;
 }
 
+/* Variante deux lignes. .section-sous-titre est un conteneur flex : un <br>
+   y est sans effet, les fragments deviennent des éléments flex alignés en
+   ligne. Cette variante les empile — ne pas mettre de <br> à l'intérieur.
+   (Ne pas basculer .section-sous-titre elle-même en colonne : les
+   sous-titres de billets « Nom / prix » comptent sur l'alignement en ligne.) */
+.section-sous-titre-double {
+  flex-direction: column;
+  gap: 2px;
+}
+
 /* Textes de légende des codes couleur (intros, listes) */
 .texte-vert {
   color: var(--accent-vert-bon);
@@ -605,6 +630,33 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
 /* Puces des encadrés d'intro — déplacée de top.css le 1er août 2026 :
    9 pages hors Top l'utilisaient sans charger top.css. */
 .bullet { display: inline-block; margin-right: 10px; font-weight: bold; }
+
+/* Bandeau d'intro repliable — déplacé de top.css le 7 août 2026 :
+   les pages évènement l'utilisent sans charger top.css.
+   Replié en mobile, toujours ouvert en desktop. */
+.intro-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-principal);
+  text-align: left;
+}
+
+.intro-arrow {
+  font-size: 12px;
+  color: var(--text-secondaire);
+}
+
+.intro-content { display: none; }
+.intro-content.open { display: block; }
 
 /* Sous-puce, décalée sous sa puce parente */
 .intro-sous-item { padding-left: 22px; }
@@ -828,7 +880,7 @@ body:has(.section-nav) .category-title {
   h1 { font-size: 42px; margin-bottom: 20px; }
   .category-title { font-size: 24px; margin: 20px 0 12px 0; }
   .category-link { font-size: 15px; margin: -8px 0 12px 0; }
-  .pokemon-subtitle { font-size: 13px; margin: -8px 0 4px 0; }
+  .pokemon-subtitle { font-size: 13px; margin: -5px 0 4px 0; }
   .raids-date { font-size: 20px; text-align: center; margin: 10px 0 15px 0; }
   .astuce-shiny { font-size: 14px; text-align: center; margin: 0 0 8px 0; }
   .research-helper { font-size: 16px; }
@@ -841,6 +893,9 @@ body:has(.section-nav) .category-title {
   .pokemon-card:has(.passe-go-rank) .pokemon-name { margin-top: 0; margin-bottom: 0; }
   .section-sous-titre { font-size: 16px; margin: 0 0 15px 0; }
   .intro-rules { font-size: 15px; padding: 15px; margin: 0 auto 30px auto; line-height: 1.6; }
+  /* Desktop : intro toujours visible, bouton masqué */
+  .intro-toggle { display: none; }
+  .intro-content { display: block; }
 
   /* Grilles */
   .pokemon-grid {
@@ -884,6 +939,7 @@ body:has(.section-nav) .category-title {
   .type-block { gap: 4px; }
   .type-text { font-size: 11px; line-height: normal; }
   .type-icon { height: 24px; width: auto; }
+  .attaque-type-icon { height: 15px; vertical-align: -2px; margin-left: 4px; }
   .raid-types { gap: 5px; margin-top: 4px; }
   .raid-types-ligne { gap: 8px; }
 

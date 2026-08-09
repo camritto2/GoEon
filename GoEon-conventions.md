@@ -176,7 +176,7 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
 
 **Activation** : `index.html` uniquement — carte d'évènement + classe couleur, et entrée dans les Nouveautés. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. Badge « En cours ! » via `event-en-cours` + `<span class="badge-en-cours">` en premier enfant. **À la fin de l'évènement** : retirer le badge, puis la carte, quand Cam le signale.
 
-**Aucune activation dans `navbar.html`** : son lien « À venir » pointe sur `index.html#evenements`.
+**Aucune activation dans `navbar.html`** : son lien « Évènements » pointe sur `index.html#evenements`.
 
 ---
 
