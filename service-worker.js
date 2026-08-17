@@ -11,8 +11,8 @@ const FILES_TO_CACHE = [
   '/pokemon.css',
   '/script.js',
   '/manifest.json',
-  '/images/icon-192.png',
-  '/images/icon-512.png'
+  '/Images/icon-192.png',
+  '/Images/icon-512.png'
 ];
 
 self.addEventListener('install', e => {
