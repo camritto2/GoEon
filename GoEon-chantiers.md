@@ -1,11 +1,11 @@
 # GoEon — Chantiers
 
-*Mis à jour le 17 août 2026. Ce fichier bouge souvent ; le manuel de fabrication (`GoEon-conventions.md`) presque jamais.*
+*Mis à jour le 24 août 2026. Ce fichier bouge souvent ; le manuel de fabrication (`GoEon-conventions.md`) presque jamais.*
 
 ## Datés
 
-- **EN RETARD — 10 août 2026, 20h : fin de Braises Arctiques.** Sur `index.html` : retirer `event-en-cours`, le `<span class="badge-en-cours">`, puis la carte de l'évènement. Sur `BraisesArctiques.html` : retirer le sous-titre « Nouveau Shiny ! » de Frissonille. *Vérifié le 17/08 : rien n'est fait, le site affiche encore « En cours ! ».*
-- **EN RETARD — 16 août 2026 : Journée Communauté Goupilou.** Goupilou et Roublenard deviennent **Shiny, et non « Bon »**. Décommenter leur ligne `emoji-shiny` dans `pokemon.css`, puis retirer les trois `nouveau-shiny` de `CDGoupilou.html`. Les commentaires datés sont déjà posés. *Vérifié le 17/08 : les deux lignes sont toujours commentées et les trois `nouveau-shiny` toujours en place.*
+- **EN RETARD — 10 août 2026, 20h : fin de Braises Arctiques.** Sur `BraisesArctiques.html` : retirer le sous-titre « Nouveau Shiny ! » de Frissonille (ligne 255). *Vérifié le 24/08 sur le `dev` du 17/08 : la partie `index.html` est faite — la carte a disparu et `event-en-cours` / `badge-en-cours` sont passés sur Festival Aquatique. Seul le sous-titre Frissonille reste.*
+- **EN RETARD — 16 août 2026 : Journée Communauté Goupilou.** Goupilou et Roublenard deviennent **Shiny, et non « Bon »**. Décommenter leur ligne `emoji-shiny` dans `pokemon.css`, puis retirer les trois `nouveau-shiny` de `CDGoupilou.html`. Les commentaires datés sont déjà posés (`pokemon.css` l. 1242 et 2684). *Vérifié le 24/08 sur le `dev` du 17/08 : les deux lignes sont toujours commentées et les trois `nouveau-shiny` toujours en place — 8 jours de retard.*
 
 - **25–30 août 2026 — Championnats XP.** `ChampionnatsXP.html` est en place et lié depuis `index.html`. Reste à activer le lien navbar et la section `script.js` §14 le moment venu.
 
@@ -59,6 +59,14 @@ Les préférences se stockent à côté de l'abonnement dans KV, le Worker filtr
 ## Contenu
 
 - **Bascule automatique par date.** Mettre les états « à venir / en cours / terminé » dans le HTML avec les bornes en attributs `data-`, et laisser `script.js` choisir selon `Date.now()`. Supprime la plupart des publications d'entretien : plus besoin d'un déploiement pour annoncer le début d'un évènement puis d'un autre pour sa fin. `new Date('2026-08-25T10:00:00')` sans `Z` se résout dans le fuseau de l'appareil, ce qui est le comportement voulu pour Pokémon GO. Brique commune avec `Calendrier.html` et les notifications.
+- **Filtre « Montrer que ce qui m'intéresse » sur les pages évènement.** *Idée du 24 août 2026.* L'utilisateur coche les Pokémon qui l'intéressent, ils se démarquent visuellement, et un bouton bascule la page en vue filtrée. Intérêt : sur une page évènement longue, on ne vient souvent que pour cinq ou six entrées.
+
+  **Décisions de conception.** Le bouton est une barre **sticky en bas d'écran**, pas un bloc en pied de page : sinon il faut scroller jusqu'en bas pour appliquer ce qu'on a coché en haut. Elle n'apparaît qu'à partir du premier Pokémon coché et porte le compteur (« Voir mes 6 Pokémon ») — ce qui règle du même coup la découvrabilité, personne ne devinant seul qu'on peut cocher. La case est une **cible dédiée en coin de carte**, jamais un tap sur la carte entière : `toggleBuild` et `toggleAltImm` occupent déjà la surface. Persistance en `localStorage`, **une clé par évènement** (`goeon-interet-[Evenement]`), pour que la sélection survive à la fermeture de la PWA sur toute la durée de l'évènement. Pour la mise en évidence, contour + halo léger plutôt que simple bordure bleue : `--accent-bleu` sert déjà ailleurs et la confusion avec un statut existant serait immédiate.
+
+  **Le vrai travail n'est pas le filtre.** Il est dans les effets de bord du masquage : recalculer les `<hr class="research-rangee-sep">` injectés par JS après chaque bascule, masquer les titres de section devenus vides, traiter les ancres de section-nav qui pointent vers du vide, et prévoir le cas « 0 coché » (message, pas page blanche). La partie visible — case, classe CSS, `localStorage`, barre sticky — est du JS vanille sans dépendance, de l'ordre de l'heure.
+
+  **À arbitrer avant d'écrire la première ligne : une page ou toutes ?** Si c'est appelé à devenir un standard des pages évènement, l'écrire d'emblée comme **module générique de `script.js`** qui scanne les cartes présentes et s'auto-active sur un `data-event-id` déclaré par la page — surcoût initial faible, et pas de recollage du même bout de code à chaque nouvel évènement.
+
 - **`Calendrier.html`** — calendrier des évènements récurrents du mois (Heures Vedette, Heures de Raid, journées d'Étude Limitée, bonus du week-end), une trentaine d'entrées mensuelles. Page complète d'abord, puis éventuellement un aperçu « cette semaine » sur l'accueil. **En attente de la référence Google Sheets de Cam.** Structure de données à arbitrer avec `evenements.json` : une seule source si possible.
 - **Audit des blocs « Bon » de `pokemon.css` contre les 17 Top.** Les classements sont figés : c'est le moment de passer les blocs verts au crible pour repérer ceux qu'aucun classement ne justifie plus, ainsi que les pré-évolutions qui les suivent.
 - **ChefRocket** : ajouter Cliff, Arlo et Giovanni. Puis chantier séparation Sbires/Chefs, avant activation navbar et accueil.
@@ -81,8 +89,10 @@ Les préférences se stockent à côté de l'abonnement dans KV, le Worker filtr
 
 ## À pousser sur `dev`
 
-*`dev` date du 09/08 à 21h34. Fichiers corrigés le 17/08 en attente :*
+*`dev` date du 17/08 à 19h52. Les corrections du 17/08 (`service-worker.js`, `regionaux.html`) sont poussées et vérifiées le 24/08.*
 
-- **`service-worker.js`** — deux chemins d'icônes `images/` corrigés en `Images/`. **Correction critique** : `cache.addAll` échoue en bloc dès qu'un seul fichier renvoie 404, ce qui empêche l'installation du service worker, donc le mode hors-ligne.
-- **`regionaux.html`** — `Crefollet.png` et `Crehelf.png` corrigés. Les 39 autres références minuscules pointent vers des fichiers inexistants et relèvent de la reprise complète de la page.
+**En attente :**
+
 - **`GoEon-chantiers.md`** — ce fichier.
+
+*Réserve relevée le 24/08 sur `regionaux.html` : seuls les attributs `src` de Créfollet et Créhelf ont été corrigés. Leurs `data-shiny` et les entrées correspondantes du tableau JS pointent toujours vers `images/` en minuscules — sans effet sur Netlify, mais 404 garanti après la bascule Cloudflare. Relève de la reprise complète de la page, à condition qu'elle intervienne avant la migration.*
