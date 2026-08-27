@@ -158,6 +158,12 @@
 .pk-arcko .emoji-shiny  { display: inline; }
 
 
+/* Axoloto — Normal / Shiny */
+.pk-axoloto .emoji-shiny { display: inline; }
+
+/* Axoloto de Paldea — Normal / Shiny */
+.pk-axoloto-p .emoji-shiny { display: inline; }
+
 /* Azumarill — Normal / Shiny */
 .pk-azumarill .emoji-shiny { display: inline; }
 
@@ -215,6 +221,11 @@
 
 /* Bastiodon — Normal / Shiny */
 .pk-bastiodon .emoji-shiny { display: inline; }
+
+/* Baudrive — Bon / Shiny */
+.pk-baudrive .pokemon-name { color: var(--accent-vert-bon); }
+.pk-baudrive .research-reward-name { color: var(--accent-vert-bon); }
+.pk-baudrive .emoji-shiny  { display: inline; }
 
 /* Bébécaille — Normal / Shiny */
 .pk-bebecaille .emoji-shiny { display: inline; }
@@ -557,6 +568,9 @@
 .pk-couaneton .research-reward-name { color: var(--accent-vert-bon); }
 .pk-couaneton .emoji-shiny  { display: inline; }
 
+/* Coudlangue — Normal / Shiny */
+.pk-coudlangue .emoji-shiny { display: inline; }
+
 /* Couverdure — Bon / Shiny */
 .pk-couverdure .pokemon-name { color: var(--accent-vert-bon); }
 .pk-couverdure .research-reward-name { color: var(--accent-vert-bon); }
@@ -837,6 +851,9 @@
 .pk-exagide .pokemon-name { color: var(--accent-vert-bon); }
 .pk-exagide .research-reward-name { color: var(--accent-vert-bon); }
 .pk-exagide .emoji-shiny  { display: inline; }
+
+/* Excelangue — Normal / Shiny */
+.pk-excelangue .emoji-shiny { display: inline; }
 
 /* Excavarenne — Normal / Shiny */
 .pk-excavarenne .emoji-shiny { display: inline; }
@@ -1818,6 +1835,9 @@
 .pk-manternel .pokemon-name { color: var(--accent-vert-bon); }
 .pk-manternel .research-reward-name { color: var(--accent-vert-bon); }
 .pk-manternel .emoji-shiny  { display: inline; }
+
+/* Maraiste — Normal / Shiny */
+.pk-maraiste .emoji-shiny { display: inline; }
 
 /* Marcacrin — Bon / Shiny */
 .pk-marcacrin .pokemon-name { color: var(--accent-vert-bon); }
@@ -3080,6 +3100,14 @@
 
 /* Triopikeur d'Alola — Normal / Shiny */
 .pk-triopikeur-a .emoji-shiny { display: inline; }
+
+/* Trioxhydre — Bon / Shiny */
+.pk-trioxhydre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-trioxhydre .research-reward-name { color: var(--accent-vert-bon); }
+.pk-trioxhydre .emoji-shiny  { display: inline; }
+
+/* Trompignon — Normal / Shiny */
+.pk-trompignon .emoji-shiny { display: inline; }
 
 /* Tritox — Bon / Shiny */
 .pk-tritox .pokemon-name { color: var(--accent-vert-bon); }

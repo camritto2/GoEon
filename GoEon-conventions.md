@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 4.1 — 6 août 2026.*
+*Version 4.4 — 9 août 2026.*
 
 ## Ce qu'est ce document
 
@@ -10,16 +10,20 @@ Il ne contient pas l'historique du projet, pas la liste des chantiers, pas le ca
 
 **Il ne se modifie pas à chaque session.** On y touche uniquement quand une **règle nouvelle** apparaît. Une décision qui ne concerne qu'une page ou qu'une carte se commente dans le code, pas ici.
 
+## La contrainte de base
+
+**Le site est en HTML, CSS et JavaScript purs, mobile-first, hébergé sur Netlify via Git.** Aucun framework, aucun bundler, aucun préprocesseur : toute solution proposée doit tenir dans cette contrainte.
+
 ## Les quatre règles de travail
 
-1. **Ne jamais travailler de mémoire.** Source de vérité : le dépôt, branche `dev`. Ce document dit ce qui *devrait* être vrai ; seuls les fichiers disent ce qui *est* vrai.
+1. **Ne jamais travailler de mémoire.** Source de vérité : le dépôt, branche `dev`. Ce document dit ce qui *devrait* être vrai ; seuls les fichiers disent ce qui *est* vrai. Si un fichier est introuvable ou si le dépôt semble en retard sur ce que décrit Cam, le lui dire plutôt que de supposer.
 2. **Annoncer en ouverture la date du dernier commit lu** (« j'ai lu le dev du JJ/MM à HHhMM »), seul moyen pour Cam de repérer une base périmée avant qu'on bâtisse dessus. Elle se récupère sur le tarball `codeload`, dont les fichiers portent la date du commit — `raw.githubusercontent` ne renvoie pas de `Last-Modified`, l'API GitHub est en limite de taux. **Rappeler à Cam de pousser sur `dev` en fin de session.**
 3. **Tout doute se signale à Cam, qui tranche.** En audit, une anomalie apparente ne se corrige jamais d'office : un bouton, un tiret, une note ou une couleur qui semble contredire ce manuel peut être une décision validée. Seules les fautes mécaniques se corrigent sans demander — casse de fichier, tiret long, ordre d'attributs, faute d'orthographe d'attaque.
 4. **Une décision volontaire se commente sur place**, dans le HTML ou le CSS concerné, pour qu'elle arrive sous les yeux au moment où la question se pose.
 
 ## Livraison
 
-Claude livre des **fichiers complets**, jamais de fragments, et **seulement les fichiers réellement modifiés** depuis la dernière récupération de Cam. Chaque livraison dit lesquels et pourquoi. En contrepartie, Cam reprend **tous** les fichiers du lot annoncé.
+Claude livre des **fichiers complets**, jamais de fragments, **jamais de fichier d'« ajouts » à recopier soi-même**, et **seulement les fichiers réellement modifiés** depuis la dernière récupération de Cam. Chaque livraison dit lesquels et pourquoi. En contrepartie, Cam reprend **tous** les fichiers du lot annoncé.
 
 Les données viennent de Cam — classements, rotations, infos d'évènement. Aucune recherche n'est à faire. Sources officielles uniquement, jamais de datamine.
 
@@ -39,7 +43,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 
 **Règles d'architecture :**
 
-- **Zéro `<script>` inline, zéro `<style>`, zéro style inline** — sauf les `display:none` fonctionnels. Trois exceptions structurelles, cf. §8.
+- **Zéro `<script>` inline, zéro `<style>`, zéro style inline** — sauf les `display:none` fonctionnels. Trois exceptions structurelles, cf. §9.
 - Une couleur ne s'écrit jamais en dur : elle passe par une variable de `navbar.css`. Créer la variable si elle manque.
 - Une valeur utilisée par plus d'une page appartient à `global.css`, pas à la feuille de la page.
 - Pas de cache-busting : le service worker est en réseau-d'abord, les suffixes `?v=` n'apportent rien et désalignent le préchargement. Ne pas en introduire.
@@ -54,9 +58,10 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 - `icon-192` déclarée ; aucun lien Google Fonts (la police vient de `navbar.css`).
 - **Aucun emoji dans les titres de section.**
 - **Breakpoints : site 769px, navbar 960/961px.** La navbar exige ~1000px pour ses liens desktop ; ne pas l'aligner sur 769. Trois occurrences de `960` dans `script.js` : synchroniser si changement.
+- **Graisses navbar : 300 explicite** — c'est le rendu voulu, pas une valeur oubliée : ne pas la « normaliser ». Lien de signalement 700, logo mobile 600.
 - Alignements pixel : technique du « fantôme structurel » (sous-titre `&nbsp;`, « + » des counters) plutôt que des marges magiques.
 - Icône ou lien désactivé : `cursor: not-allowed` + tooltip « Disponible prochainement ! » au clic.
-- Ancres : `scroll-margin-top` 70px sur les sections d'accueil, 72px sur `section-nav`.
+- Ancres : `scroll-margin-top` 72px sur `section-nav`.
 
 ---
 
@@ -98,6 +103,8 @@ Le vert de `pokemon.css` signifie **« ce Pokémon figure dans un Top »**, pas 
 - Structure : `pokemon-card` > `image-container` (badges + img) > `card-content`.
 - `data-shiny` et le badge sont **toujours** présents dans le HTML ; c'est `pokemon.css` qui décide de l'affichage.
 - La marge négative de `pokemon-subtitle` est calibrée pour un nom tenant **sur une ligne** : sur un nom qui passe à la ligne, vérifier le rendu.
+- **Séparateur entre deux cartes liées** : un div flex de 24px portant un « + » en gras, centré.
+- **`intro-item-fin`** pose la marge basse du dernier item d'un groupe dans une intro. L'utiliser plutôt qu'un style inline.
 - **`nom-neutre`** annule le vert « Bon » sur une page donnée. Avant de la poser, vérifier que le Pokémon est réellement « Bon » dans `pokemon.css` — sinon elle ne sert à rien, ou masque un vert légitime.
 
 ### Formats de texte
@@ -176,50 +183,58 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
 
 **Activation** : `index.html` uniquement — carte d'évènement + classe couleur, et entrée dans les Nouveautés. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. Badge « En cours ! » via `event-en-cours` + `<span class="badge-en-cours">` en premier enfant. **À la fin de l'évènement** : retirer le badge, puis la carte, quand Cam le signale.
 
-**Aucune activation dans `navbar.html`** : son lien « À venir » pointe sur `index.html#evenements`.
+**Aucune activation dans `navbar.html`** : son lien « Évènements » pointe sur `index.html#evenements`.
 
 ---
 
 ## 7. Pages Raids
 
-Concerne `raids.html` et `raids_obscurs.html`. Structure de carte identique aux pages Évènement, plus deux blocs propres aux raids, toujours dans cet ordre : **Dresseurs Nécessaires**, puis **Types à utiliser**. Chacun est précédé de son `<hr class="separator">`.
+Concerne `raids.html` et `raids_obscurs.html`. Carte identique aux pages Évènement, plus deux blocs propres aux raids, dans cet ordre : **Dresseurs Nécessaires**, puis **Types à utiliser**. Chacun précédé de son `<hr class="separator">`.
 
-**Dates** : `raids-date` en haut, format `Depuis le [jour] [date], [heure] - Jusqu'au [jour] [date], [heure]`. Vérifier le jour de la semaine, ne jamais le supposer.
+**Dates** : `raids-date` en haut, format `Depuis le [jour] [date], [heure] - Jusqu'au [jour] [date], [heure]`. **Vérifier le jour de la semaine, ne jamais le supposer.**
 
 ### Dresseurs Nécessaires
 
-Une bulle `diff-bubble` par nombre de dresseurs, du plus dur au plus facile. Cinq paliers : `diff-1` rouge (Extrême), `diff-2` orange (Difficile), `diff-3` jaune (Modéré), `diff-4` vert clair (Facile), `diff-5` vert foncé (Très facile).
+Une bulle `diff-bubble` par nombre de dresseurs, du plus dur au plus facile. Cinq paliers : `diff-1` Extrême (rouge), `diff-2` Difficile (orange), `diff-3` Modéré (jaune), `diff-4` Facile (vert clair), `diff-5` Très facile (vert foncé).
 
-- **La dernière bulle porte toujours un `+`** — c'est un seuil, pas une valeur exacte — et donc toujours `diff-wide`.
-- **`diff-wide` élargit une bulle** dont le contenu dépasse un caractère.
-- **Fusionner deux paliers identiques (`3-4`) uniquement si la rangée dépasse 5 bulles.** Ce n'est pas une règle de style : à 5 bulles ou moins, une bulle par nombre.
-- La rangée doit tenir dans ~105 px (largeur utile d'une carte en mobile).
+- **La dernière bulle porte toujours un `+`** : c'est un seuil, pas une valeur exacte.
+- **`diff-wide` sur toute bulle dont le contenu dépasse un caractère** — donc toujours sur la dernière.
+- **Une bulle par nombre.** Fusionner deux paliers (`3-4`) uniquement au-delà de 5 bulles : la rangée doit tenir dans ~105 px, largeur utile d'une carte en mobile.
 
-⚠️ **La palette est déclarée une seule fois**, en sélecteurs groupés couvrant `.diff-bubble` et `.diff-legende-item`. Ne jamais la dupliquer : les bulles de carte et la légende ne doivent pas pouvoir diverger.
+⚠️ **La palette est déclarée une seule fois**, en sélecteurs groupés couvrant `.diff-bubble` et `.diff-legende-item`. Ne jamais la dupliquer : les bulles et la légende ne doivent pas pouvoir diverger.
 
 ### Types à utiliser
 
-Icônes de type cliquables vers la page `Top[Type]` correspondante. **Jamais de libellé texte** : l'icône suffit, le `title` du lien porte l'intitulé.
+Icônes cliquables vers la page `Top[Type]`, **jamais de libellé texte** : le `title` du lien porte l'intitulé.
 
-Deux lignes `raid-types-ligne`, dont le sens est strict :
+Deux lignes `raid-types-ligne`, au sens strict :
 - **Ligne 1** : types contre lesquels le boss n'a **aucune** attaque super efficace.
 - **Ligne 2** : types contre lesquels il en a.
 
-La ligne 2 a **volontairement le même traitement visuel** que la ligne 1 — même taille, même opacité. La hiérarchie passe par la position seule, et le sens est porté par la note de bas de page.
+Le critère porte sur les **attaques réelles du boss**, pas sur sa table de types. Une seule ligne quand la seconde serait vide.
 
-Une seule ligne suffit quand la ligne 2 serait vide. Le critère dépend des **attaques réelles du boss**, pas de sa table de types.
+⚠️ Les deux lignes ont **volontairement le même traitement visuel** — même taille, même opacité. La hiérarchie passe par la position seule ; ce n'est pas un oubli à corriger.
 
 ### Bas de page
 
-Deux blocs, dans l'ordre : la légende `diff-legende` (pilules colorées avec leur libellé, précédées de `Légende :`), puis la note `raid-note` expliquant le classement des types. **Texte identique sur les deux pages.**
+Deux blocs, dans l'ordre : la légende `diff-legende` (pilules colorées et leur libellé, précédées de `Légende :`), puis la note `raid-note` sur le classement des types. **Texte identique sur les deux pages.**
 
 ### Spécifique aux Raids Obscurs
 
-Badge Obscur sur **toutes** les cartes, dans `.badges`, **après** le shiny : `<img src="Images/Obscur.png" class="badge-obscur-icon">`. Contrairement à `emoji-shiny`, il n'est **pas inversé en mode sombre** : l'icône est déjà sombre.
+Badge Obscur sur **toutes** les cartes, dans `.badges`, **après** le shiny : `<img src="Images/Obscur.png" class="badge-obscur-icon">`. **Pas d'inversion en mode sombre** — l'icône est déjà sombre.
 
 ---
 
-## 8. Exceptions structurelles
+## 8. Accueil et navigation
+
+- **Cartes d'évènement** : `min-height: 70px` sur `.event-label` et `margin-top: auto` sur `.event-date` — c'est ce qui aligne les dates d'une rangée quand les libellés n'ont pas la même hauteur. Une carte neuve qui s'en passe casse l'alignement de ses voisines.
+- **Nouveautés** : un `news-group` daté au format `JJ/MM`, un `news-items li` par entrée. **À mettre à jour à chaque livraison de contenu.**
+- **Ancres d'accueil** : `scroll-margin-top: 70px` sur `.home-section` et `.type-grid`. L'ancre `#types` est posée **sur la grille, pas sur la section**, afin de dépasser le titre — ne pas la « remonter ».
+- **Menu mobile** : `max-height: calc(100vh - 60px)` + `overflow-y: auto` + `overscroll-behavior: contain`. Ce dernier est indispensable : sans lui, le scroll interne du menu referme le menu.
+
+---
+
+## 9. Exceptions structurelles
 
 Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles sont commentées sur place ; ne pas les « corriger ».
 
@@ -229,7 +244,7 @@ Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles s
 
 ---
 
-## 9. Pièges connus
+## 10. Pièges connus
 
 - **Fragment CSS orphelin** = déclarations flottant hors de tout sélecteur. Le navigateur avale **la règle suivante** en se resynchronisant : c'est donc la règle d'après qui disparaît, ce qui égare le diagnostic. Après toute fusion manuelle : vérifier l'équilibre des accolades et chercher les déclarations hors bloc.
 - **Spécificité** : à égalité, l'ordre de chargement tranche. Pour battre `pokemon.css` depuis `global.css`, viser une spécificité supérieure (préfixe `img.`, `h2.`, `span.`).
@@ -241,7 +256,7 @@ Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles s
 
 ---
 
-## 10. Checklist d'audit
+## 11. Checklist d'audit
 
 **Toute page :**
 1. `theme-color` = `#29b6f6`
