@@ -1,0 +1,13 @@
+{
+  // GoEon — site statique servi par Cloudflare Workers (assets only).
+  // Aucun script Worker : pas de champ "main", uniquement des fichiers statiques.
+  "name": "goeon",
+  "compatibility_date": "2026-08-27",
+  "assets": {
+    // Racine du dépôt : le site n'a pas d'étape de build.
+    "directory": "./",
+    // Pas de page 404 personnalisée dans le dépôt pour l'instant.
+    // À passer sur "404-page" le jour où un 404.html sera ajouté.
+    "not_found_handling": "none"
+  }
+}
