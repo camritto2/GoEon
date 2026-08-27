@@ -1,0 +1,7 @@
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+GoEon-chantiers.md
+GoEon-conventions.md
+chantiers-section-migration.md
