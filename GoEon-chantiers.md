@@ -1,13 +1,10 @@
 # GoEon — Chantiers
 
-*Mis à jour le 27 août 2026. Ce fichier bouge souvent ; le manuel de fabrication (`GoEon-conventions.md`) presque jamais.*
+*Mis à jour le 27 août 2026 (soir). Ce fichier bouge souvent ; le manuel de fabrication (`GoEon-conventions.md`) presque jamais.*
 
 ## Datés
 
-- **EN RETARD — 10 août 2026, 20h : fin de Braises Arctiques.** Sur `BraisesArctiques.html` : retirer le sous-titre « Nouveau Shiny ! » de Frissonille (ligne 255). *Vérifié le 24/08 : la partie `index.html` est faite — la carte a disparu et `event-en-cours` / `badge-en-cours` sont passés sur Festival Aquatique. Seul le sous-titre Frissonille reste.*
-- **EN RETARD — 16 août 2026 : Journée Communauté Goupilou.** Goupilou et Roublenard deviennent **Shiny, et non « Bon »**. Décommenter leur ligne `emoji-shiny` dans `pokemon.css`, puis retirer les trois `nouveau-shiny` de `CDGoupilou.html`. Les commentaires datés sont déjà posés (`pokemon.css` l. 1242 et 2684). *Vérifié le 24/08 : les deux lignes sont toujours commentées et les trois `nouveau-shiny` toujours en place.*
-
-- **EN COURS — 25–30 août 2026 : Championnats XP.** `ChampionnatsXP.html` est en place et lié depuis `index.html`. **L'évènement a commencé le 25/08** : activer le lien navbar et la section `script.js` §14 sans attendre.
+- **EN COURS — 25–30 août 2026 : Championnats XP.** `ChampionnatsXP.html` est en place, lié depuis `index.html`, et porte désormais `event-en-cours` / `badge-en-cours` sur l'accueil. **Reste à faire : activer le lien navbar et la section `script.js` §14.** L'évènement se termine dimanche 30/08 à 20h — passé cette date, le travail n'a plus d'objet.
 
 - **Vers le 24 septembre 2026 — basculer Netlify en redirection 301.** Voir la section Migration ci-dessous.
 
@@ -92,9 +89,23 @@ Les préférences se stockent à côté de l'abonnement dans KV, le Worker filtr
 
 **À ne pas oublier** : les abonnements sont liés à l'origine. Attendre que le gros des réinstallations soit passé avant de lancer la campagne d'abonnement, sinon une partie des utilisateurs s'abonnera depuis l'ancienne origine et perdra son abonnement en migrant.
 
+## Entretien du dépôt
+
+**Structure : les pages restent à la racine.** Décision du 27/08. Les déplacer en sous-dossiers changerait les URL publiques (`goeon.fr/TopFeu.html` → `goeon.fr/pages/TopFeu.html`) juste après la migration de domaine, alors que Google réindexe et que les utilisateurs réinstallent la PWA. Coût technique par-dessus : **3256 références `Images/`** en chemin relatif et 145 balises `<link>`/`<script>` à réécrire. Même raisonnement pour uniformiser la casse des noms de pages (29 en PascalCase, 9 en minuscules) — c'est aussi un changement d'URL. À reconsidérer dans plusieurs mois, et seulement avec des Redirect Rules Cloudflare page par page. *Rappel : la racine donne les URL les plus courtes, ce qui est un avantage pour des liens partagés sur Discord.*
+
+**Retrait d'une page d'évènement passé.** Méthode de Cam : couper les fichiers dans l'explorateur Windows et les coller dans son dossier d'archives (hors dépôt), puis vérifier dans Source Control que chaque `D` est bien présent avant de commit. Pas de `git rm` — la commande refuse de supprimer un fichier modifié non commité, ce que l'explorateur ne fait pas. **Toujours vérifier les liens résiduels avant de supprimer** : `index.html`, la navbar, `script.js`, `service-worker.js`. Ne jamais toucher aux images des pages retirées, elles sont mutualisées.
+
+**Retrait du 27/08 :** `BraisesArctiques.html`, `CDGoupilou.html`, `EclosionFeuGlace.html`, `FestivalAquatique.html`, `MegaStaross.html`. Les deux dernières étaient encore liées depuis l'accueil ; leurs cartes ont été retirées d'`index.html` dans le même geste, et `event-en-cours` / `badge-en-cours` déplacés sur Championnats XP. `chantiers-section-migration.md` supprimé également.
+
+*Avant le retrait de `CDGoupilou.html` : **Goupilou et Roublenard passés Shiny dans `pokemon.css`** (blocs décommentés, en-têtes réécrits en « Normal / Shiny », sans `--accent-vert-bon`). Leur statut est désormais porté par `pokemon.css` seul, et suivra partout où Cam les replacera. La classe `nouveau-shiny` est partie avec la page. Rappel de son fonctionnement, pour la prochaine fois : `img.emoji-shiny.nouveau-shiny` dans `global.css` (l. 352) a une spécificité (0,2,1) qui bat volontairement les règles de `pokemon.css` (0,2,0) — c'est la béquille qui affiche et fait scintiller un badge avant que le Pokémon ne soit déclaré Shiny. **La retirer avant de décommenter fait disparaître le badge.***
+
+*Sur `BraisesArctiques.html`, le sous-titre « Nouveau Shiny ! » de Frissonille avait été retiré juste avant l'archivage. Frissonille reste déclaré « Bon / Shiny » dans `pokemon.css` : rien n'est perdu.*
+
+*Pages orphelines restantes, à conserver : `ChefRocket.html` et `regionaux.html` — en attente, pas mortes.*
+
 ## Contenu
 
-- **Bascule automatique par date.** Mettre les états « à venir / en cours / terminé » dans le HTML avec les bornes en attributs `data-`, et laisser `script.js` choisir selon `Date.now()`. Supprime la plupart des publications d'entretien : plus besoin d'un déploiement pour annoncer le début d'un évènement puis d'un autre pour sa fin. `new Date('2026-08-25T10:00:00')` sans `Z` se résout dans le fuseau de l'appareil, ce qui est le comportement voulu pour Pokémon GO. Brique commune avec `Calendrier.html` et les notifications. *Les deux entrées EN RETARD en tête de fichier illustrent exactement le problème que ce chantier résout.*
+- **Bascule automatique par date.** Mettre les états « à venir / en cours / terminé » dans le HTML avec les bornes en attributs `data-`, et laisser `script.js` choisir selon `Date.now()`. Supprime la plupart des publications d'entretien : plus besoin d'un déploiement pour annoncer le début d'un évènement puis d'un autre pour sa fin. `new Date('2026-08-25T10:00:00')` sans `Z` se résout dans le fuseau de l'appareil, ce qui est le comportement voulu pour Pokémon GO. Brique commune avec `Calendrier.html` et les notifications. *Ce chantier est né de trois retards constatés en août : Braises Arctiques, Goupilou et le badge « En cours » resté sur Festival Aquatique quatre jours après sa fin. Tous corrigés à la main le 27/08 — c'est précisément ce qu'on ne veut plus refaire.*
 - **Filtre « Montrer que ce qui m'intéresse » sur les pages évènement.** *Idée du 24 août 2026.* L'utilisateur coche les Pokémon qui l'intéressent, ils se démarquent visuellement, et un bouton bascule la page en vue filtrée. Intérêt : sur une page évènement longue, on ne vient souvent que pour cinq ou six entrées.
 
   **Décisions de conception.** Le bouton est une barre **sticky en bas d'écran**, pas un bloc en pied de page : sinon il faut scroller jusqu'en bas pour appliquer ce qu'on a coché en haut. Elle n'apparaît qu'à partir du premier Pokémon coché et porte le compteur (« Voir mes 6 Pokémon ») — ce qui règle du même coup la découvrabilité, personne ne devinant seul qu'on peut cocher. La case est une **cible dédiée en coin de carte**, jamais un tap sur la carte entière : `toggleBuild` et `toggleAltImm` occupent déjà la surface. Persistance en `localStorage`, **une clé par évènement** (`goeon-interet-[Evenement]`), pour que la sélection survive à la fermeture de la PWA sur toute la durée de l'évènement. Pour la mise en évidence, contour + halo léger plutôt que simple bordure bleue : `--accent-bleu` sert déjà ailleurs et la confusion avec un statut existant serait immédiate.
@@ -104,18 +115,19 @@ Les préférences se stockent à côté de l'abonnement dans KV, le Worker filtr
   **À arbitrer avant d'écrire la première ligne : une page ou toutes ?** Si c'est appelé à devenir un standard des pages évènement, l'écrire d'emblée comme **module générique de `script.js`** qui scanne les cartes présentes et s'auto-active sur un `data-event-id` déclaré par la page — surcoût initial faible, et pas de recollage du même bout de code à chaque nouvel évènement.
 
 - **`Calendrier.html`** — calendrier des évènements récurrents du mois (Heures Vedette, Heures de Raid, journées d'Étude Limitée, bonus du week-end), une trentaine d'entrées mensuelles. Page complète d'abord, puis éventuellement un aperçu « cette semaine » sur l'accueil. **En attente de la référence Google Sheets de Cam.** Structure de données à arbitrer avec `evenements.json` : une seule source si possible.
-- **Audit des blocs « Bon » de `pokemon.css` contre les 17 Top.** Les classements sont figés : c'est le moment de passer les blocs verts au crible pour repérer ceux qu'aucun classement ne justifie plus, ainsi que les pré-évolutions qui les suivent.
+- **Audit des blocs « Bon » de `pokemon.css` contre les 17 Top.** *Reporté à septembre : les Top vont bouger, on vérifiera après.* Mesure du 27/08 : **504 blocs marqués « Bon »**, dont 246 dont le nom apparaît dans un Top et **258 non**. Ces 258 ne sont pas tous à retirer — beaucoup sont des pré-évolutions qui gardent légitimement le statut (Abra, Barpau, Arcko…). Le travail se fait en deux temps : un script sort la liste, Cam tranche à la main, la chaîne d'évolution demandant du jugement.
 - **ChefRocket** : ajouter Cliff, Arlo et Giovanni. Puis chantier séparation Sbires/Chefs, avant activation navbar et accueil.
 - **MeilleursPokemon.html** (Règles Générales) : à créer. Ensuite, remplacer les `lien-a-venir` des 17 pages Top, activer la carte d'accueil et le lien navbar.
-- **SEO / Open Graph** : meta description et og:tags, priorité aux pages Top. Attend l'image 1200×630 de Cam.
-- **`robots.txt` et `sitemap.xml`** : absents du dépôt, à ajouter. *Attention au conflit possible avec le `robots.txt` généré par Cloudflare si le blocage des crawlers d'entraînement est activé côté tableau de bord.*
+- **SEO / Open Graph** : audit du 27/08 — le `<head>` des pages ne contient que `charset`, `viewport`, `title` et `theme-color`. **Aucune meta description, aucun tag `og:`, aucun canonical.** À ajouter : meta description unique par page, `og:title` / `og:description` / `og:image` / `og:url` / `og:type`, et `<link rel="canonical">` en URL absolue `https://goeon.fr/…` (utile précisément après le changement de domaine). Seul `og:image` dépend de l'image 1200×630 de Cam ; les descriptions ne dépendent que de lui, et c'est là qu'est le volume (17 Top + accueil + pages évènement). *Gain le plus concret : un lien GoEon partagé sur Discord affiche un aperçu au lieu d'une URL nue.*
+- **`robots.txt` et `sitemap.xml`** : absents du dépôt, à ajouter. **Fenêtre courte** : `goeon.fr` est un domaine neuf, Google le découvre de zéro et fixe en ce moment son rythme de passage — la carte complète vaut plus maintenant qu'une fois les habitudes prises. *Attention au conflit possible avec le `robots.txt` généré par Cloudflare si le blocage des crawlers d'entraînement est activé côté tableau de bord.*
 - Et tellement plus qui se trouve pour le moment dans la tête de Cam !
 
 ## Dette technique
 
 - **`regionaux.html`** — page inachevée : un `<script>` inline, des styles inline, et **71 fichiers images référencés mais absents** de `Images/` (soit 39 Pokémon, chromatiques comprises : Kangourex, Tauros et ses formes, Tropius, Plumeline, Sancoki, Flabébé, les singes d'Unys…). C'est en outre la **seule page du site dont les chemins sont en `images/` minuscule**, donc la seule cassée par la sensibilité à la casse de Cloudflare. Les fichiers n'existant pas, corriger la casse seule ne changerait rien de visible. Sera reprise entièrement. *Page orpheline : aucun lien du site n'y mène actuellement.*
+- **`.staross-card` orpheline dans `index.css`** (l. 263 et 277) — la carte qui l'utilisait est partie avec `MegaStaross.html`. Deux lignes, aucun impact ; conservée en vue d'un futur évènement Staross. À trancher lors d'un prochain passage sur `index.css`.
+- **Section R de `pokemon.css`** — `Rubombelle` est placé entre `Roublenard` et `Roucool` au lieu de suivre `Roucoups`. À corriger au prochain audit alphabétique.
 - **Styles inline** — il en reste sur une poignée de pages, presque tous des marges sur des `<p>` dans un `intro-rules`. **Décision de Cam : on corrige page par page, au moment où chaque page est retravaillée.** Pas de passe globale.
-- **`chantiers-section-migration.md`** — fichier temporaire créé le 26/08, rendu obsolète par la présente réécriture. **À supprimer du dépôt** (`git rm chantiers-section-migration.md`).
 - **Fichier technique `no-op-worker.js.map`** — téléversé par Wrangler à chaque déploiement. Inoffensif et invisible pour les visiteurs. Conservé sciemment.
 
 ## Écarté

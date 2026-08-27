@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 4.4 — 9 août 2026.*
+*Version 4.5 — 27 août 2026.*
 
 ## Ce qu'est ce document
 
@@ -12,7 +12,7 @@ Il ne contient pas l'historique du projet, pas la liste des chantiers, pas le ca
 
 ## La contrainte de base
 
-**Le site est en HTML, CSS et JavaScript purs, mobile-first, hébergé sur Netlify via Git.** Aucun framework, aucun bundler, aucun préprocesseur : toute solution proposée doit tenir dans cette contrainte.
+**Le site est en HTML, CSS et JavaScript purs, mobile-first, hébergé sur Cloudflare Workers via Git.** Aucun framework, aucun bundler, aucun préprocesseur : toute solution proposée doit tenir dans cette contrainte.
 
 ## Les quatre règles de travail
 
@@ -48,6 +48,8 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 - Une valeur utilisée par plus d'une page appartient à `global.css`, pas à la feuille de la page.
 - Pas de cache-busting : le service worker est en réseau-d'abord, les suffixes `?v=` n'apportent rien et désalignent le préchargement. Ne pas en introduire.
 - `service-worker.js` : réseau d'abord, cache runtime filtré (GET + http + `response.ok`), fallback navigation → index, `CACHE_NAME` volontairement non versionné.
+- **Toutes les pages vivent à la racine, jamais en sous-dossiers.** Le chemin d'un fichier est son URL publique : le déplacer casse les liens partagés, les favoris et l'indexation. Seul `Images/` est un dossier. Ne pas proposer de réorganisation.
+- **Cloudflare distingue majuscules et minuscules dans les chemins.** `images/` au lieu de `Images/` renvoie un 404. Pour la même raison, ne jamais renommer une page pour uniformiser sa casse : c'est un changement d'URL.
 
 ---
 
@@ -95,6 +97,7 @@ Le vert de `pokemon.css` signifie **« ce Pokémon figure dans un Top »**, pas 
 - **Obscur** : `badge-obscur-icon`.
 - **Shiny boosté** : badge entouré de `shiny-boost-circle`, qui scintille via `:has(.shiny-active)`. Uniquement dans un `div.badges`, jamais en ligne dans du texte.
 - **Nouveau shiny annoncé** (pas encore actif en jeu) : classe `nouveau-shiny`, **pages évènement uniquement**. Ne jamais poser `shiny-active` en statique — le script la retire au premier clic.
+  ⚠️ **Ordre de retrait.** `img.emoji-shiny.nouveau-shiny` (spécificité 0,2,1) bat volontairement `pokemon.css` (0,2,0) : c'est elle seule qui affiche le badge tant que le Pokémon n'est pas déclaré shiny. Le jour où il le devient, **décommenter d'abord sa ligne dans `pokemon.css`**, retirer `nouveau-shiny` ensuite — et dans le même push. L'inverse fait disparaître le badge.
 - Les tailles de badge sont fixées dans les feuilles partagées : ne jamais les redimensionner sur place.
 
 ### Cartes
@@ -182,6 +185,8 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
 - `research-sep` est masquée globalement : la forcer en inline quand un sous-titre a besoin d'un séparateur visible.
 
 **Activation** : `index.html` uniquement — carte d'évènement + classe couleur, et entrée dans les Nouveautés. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. Badge « En cours ! » via `event-en-cours` + `<span class="badge-en-cours">` en premier enfant. **À la fin de l'évènement** : retirer le badge, puis la carte, quand Cam le signale.
+
+**Retrait de la page.** Cam supprime le fichier lui-même. Avant, chercher les liens résiduels dans `index.html`, `navbar.html`, `script.js` et `service-worker.js`, et livrer les fichiers concernés dans le même lot — une page supprimée dont un lien subsiste donne un 404 sur l'accueil. **Ne jamais toucher aux images de la page retirée**, elles sont mutualisées. Vérifier aussi ce que la page portait seule : une classe couleur devenue orpheline dans `index.css`, ou un statut shiny que `pokemon.css` doit désormais porter.
 
 **Aucune activation dans `navbar.html`** : son lien « Évènements » pointe sur `index.html#evenements`.
 
