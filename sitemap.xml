@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Accueil -->
+  <url>
+    <loc>https://goeon.fr/</loc>
+  </url>
+
+  <!-- Évènements -->
+  <url>
+    <loc>https://goeon.fr/ChampionnatsXP</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/GoFestMegaFinale</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/CitySafariMarseille</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TerresSauvages2026</loc>
+  </url>
+
+  <!-- Saison en cours -->
+  <url>
+    <loc>https://goeon.fr/raids</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/raids_obscurs</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/oeufs</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TachesEtude</loc>
+  </url>
+
+  <!-- Autres ressources -->
+  <url>
+    <loc>https://goeon.fr/dynamax</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/metamorph</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/boost_poussiere</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/OptiPM</loc>
+  </url>
+
+  <!-- Meilleurs Pokémon par type -->
+  <url>
+    <loc>https://goeon.fr/TopAcier</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopCombat</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopDragon</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopEau</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopElectrik</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopFee</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopFeu</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopGlace</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopInsecte</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopPlante</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopPoison</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopPsy</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopRoche</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopSol</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopSpectre</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopTenebres</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/TopVol</loc>
+  </url>
+</urlset>
