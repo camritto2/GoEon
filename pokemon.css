@@ -177,6 +177,11 @@
 .pk-aeromite .research-reward-name { color: var(--accent-vert-bon); }
 .pk-aeromite .emoji-shiny  { display: inline; }
 
+/* Airmure — Bon / Shiny (couvre Méga-Airmure) */
+.pk-airmure .pokemon-name { color: var(--accent-vert-bon); }
+.pk-airmure .research-reward-name { color: var(--accent-vert-bon); }
+.pk-airmure .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — B
    ============================================================ */
@@ -314,6 +319,11 @@
 .pk-bulbizarre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bulbizarre .emoji-shiny  { display: inline; }
 
+
+/* Boustiflor — Bon / Shiny */
+.pk-boustiflor .pokemon-name { color: var(--accent-vert-bon); }
+.pk-boustiflor .research-reward-name { color: var(--accent-vert-bon); }
+.pk-boustiflor .emoji-shiny  { display: inline; }
 
 /* ============================================================
    POKÉMON — C
@@ -647,6 +657,11 @@
 .pk-crehelf .emoji-shiny { display: inline; }
 
 
+/* Chétiflor — Bon / Shiny */
+.pk-chetiflor .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chetiflor .research-reward-name { color: var(--accent-vert-bon); }
+.pk-chetiflor .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — D
    ============================================================ */
@@ -858,6 +873,11 @@
 /* Excavarenne — Normal / Shiny */
 .pk-excavarenne .emoji-shiny { display: inline; }
 
+
+/* Empiflor — Bon / Shiny (couvre Méga-Empiflor) */
+.pk-empiflor .pokemon-name { color: var(--accent-vert-bon); }
+.pk-empiflor .research-reward-name { color: var(--accent-vert-bon); }
+.pk-empiflor .emoji-shiny  { display: inline; }
 
 /* ============================================================
    POKÉMON — É
@@ -2791,11 +2811,15 @@
 .pk-scolocendre .research-reward-name { color: var(--accent-vert-bon); }
 .pk-scolocendre .emoji-shiny  { display: inline; }
 
-/* Scorplane — Normal / Shiny */
-.pk-scorplane .emoji-shiny { display: inline; }
+/* Scorplane — Bon / Shiny */
+.pk-scorplane .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scorplane .research-reward-name { color: var(--accent-vert-bon); }
+.pk-scorplane .emoji-shiny  { display: inline; }
 
-/* Scorvol — Normal / Shiny */
-.pk-scorvol .emoji-shiny { display: inline; }
+/* Scorvol — Bon / Shiny */
+.pk-scorvol .pokemon-name { color: var(--accent-vert-bon); }
+.pk-scorvol .research-reward-name { color: var(--accent-vert-bon); }
+.pk-scorvol .emoji-shiny  { display: inline; }
 
 /* Selutin — Normal / Pas de shiny */
 

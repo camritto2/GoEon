@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Méga Ascension</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Méga Ascension</h1>
+  <p class="raids-date">
+    Du lundi 31 août, 10h — Jusqu'au vendredi 4 septembre, 23h59
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#bonus">Bonus</a>
+    <a href="#infos">Infos Supplémentaires</a>
+    <a href="#sauvages">Pokémon Sauvages</a>
+    <a href="#raids">Méga-Raids</a>
+    <a href="#etude">Étude Ponctuelle</a>
+    <a href="#passe-go">Passe Go</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 BONUS                   -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Limite de Passes à Distance augmentée à 30</div>
+    <div class="intro-item"><span class="bullet">• </span>Fonds spéciaux possibles pour les Captures lors des Méga-Raids</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          INFOS SUPPLÉMENTAIRES          -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="infos">Infos Supplémentaires</h2>
+
+  <div class="intro-rules">
+    <strong>Non-présent lors de l'évènement :</strong>
+    <div class="intro-item"><span class="bullet">• </span>Pas de Concours le mardi 1er septembre</div>
+    <div class="intro-item"><span class="bullet">• </span>Pas d'Heure de Raids le mercredi 2 septembre</div>
+    <div class="intro-item"><span class="bullet">• </span>Pas d'Heure Vedette le jeudi 3 septembre</div>
+    <div class="intro-item intro-item-fin"><span class="bullet">• </span>Pas de Raids Obscurs</div>
+    <strong>En attente de confirmation :</strong>
+    <div class="intro-item"><span class="bullet">• </span>Les Dynamax du lundi</div>
+    <div class="intro-item"><span class="bullet">• </span>Les bonus des Échanges du vendredi</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           POKÉMON SAUVAGES              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-pikachu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Pikachu</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-chetiflor">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Chetiflor.png" data-shiny="Images/ChetiflorS.png" alt="Chétiflor" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Chétiflor</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-stari">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Stari.png" data-shiny="Images/StariS.png" alt="Stari" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Stari</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-minidraco">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Minidraco.png" data-shiny="Images/MinidracoS.png" alt="Minidraco" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Minidraco</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-airmure">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Airmure.png" data-shiny="Images/AirmureS.png" alt="Airmure" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Airmure</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-marisson">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Marisson.png" data-shiny="Images/MarissonS.png" alt="Marisson" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Marisson</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-feunnec">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Feunnec.png" data-shiny="Images/FeunnecS.png" alt="Feunnec" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Feunnec</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-grenousse">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Grenousse.png" data-shiny="Images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Grenousse</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-sepiatop">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Sepiatop.png" data-shiny="Images/SepiatopS.png" alt="Sepiatop" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Sepiatop</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-hexadron">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Hexadron.png" data-shiny="Images/HexadronS.png" alt="Hexadron" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Hexadron</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               MÉGA-RAIDS                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="raids">Méga-Raids</h2>
+
+  <!-- Pas de classe pokemon-name-mega ici : elle vit dans top.css, qui n'est pas
+       chargé sur les pages Évènement, et le rouge des pages Top n'a pas cours ici.
+       La couleur du nom vient donc du seul pk- (vert si le Pokémon est « Bon »). -->
+
+  <div class="intro-rules">
+    <!-- Citation du blog officiel : orthographe de la source conservée
+         (« événement », « apparaître »), on ne la rectifie pas. -->
+    <p style="margin: 0 0 10px 0;">Le blog officiel précise : «&nbsp;les Méga-Raids constitueront la majorité des Raids pendant l'événement Méga ascension. Les Boss de Raid de la Saison sont également susceptibles d'apparaître pendant cette période.&nbsp;»</p>
+    <p style="margin: 0;">Les Méga-Raids suivants apparaitront aux jours indiqués :</p>
+  </div>
+
+  <p class="section-sous-titre"><em>Lundi 31 août</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-empiflor">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/EmpiflorM.png" data-shiny="Images/EmpiflorMS.png" alt="Méga-Empiflor" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Empiflor</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-dracolosse">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/DracolosseM.png" data-shiny="Images/DracolosseMS.png" alt="Méga-Dracolosse" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Dracolosse</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-sepiatroce">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/SepiatroceM.png" data-shiny="Images/SepiatroceMS.png" alt="Méga-Sepiatroce" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Sepiatroce</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre"><em>Mardi 1er septembre</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-hexadron">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/HexadronM.png" data-shiny="Images/HexadronMS.png" alt="Méga-Hexadron" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Hexadron</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre"><em>Mercredi 2 septembre</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-airmure">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/AirmureM.png" data-shiny="Images/AirmureMS.png" alt="Méga-Airmure" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Airmure</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre"><em>Jeudi 3 septembre</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-staross">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/StarossM.png" data-shiny="Images/StarossMS.png" alt="Méga-Staross" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Staross</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre"><em>Vendredi 4 septembre</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-raichu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/RaichuMX.png" data-shiny="Images/RaichuMXS.png" alt="Méga-Raichu X" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Raichu X</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-raichu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/RaichuMY.png" data-shiny="Images/RaichuMYS.png" alt="Méga-Raichu Y" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Raichu Y</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre"><em>Tous les jours, mais Rares</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-latios">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/LatiosM.png" data-shiny="Images/LatiosMS.png" alt="Méga-Latios" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Latios</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-latias">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/LatiasM.png" data-shiny="Images/LatiasMS.png" alt="Méga-Latias" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Latias</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           ÉTUDE PONCTUELLE              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="etude">Étude Ponctuelle</h2>
+
+  <div class="intro-rules">
+    <p style="margin: 0;">Une Étude à choix vous demandera de choisir entre <span class="texte-vert">Marisson</span>, <span class="texte-vert">Feunnec</span> et <span class="texte-vert">Grenousse</span> et vous donnera assez de Méga-Énergie pour son évolution finale. Les 3 Mégas feront leur Méga-Début dans le jeu et seront très bons dans leurs types respectifs !</p>
+  </div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-blindepique">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/BlindepiqueM.png" data-shiny="Images/BlindepiqueMS.png" alt="Méga-Blindépique" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Blindépique</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-goupelin">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/GoupelinM.png" data-shiny="Images/GoupelinMS.png" alt="Méga-Goupelin" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Goupelin</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-amphinobi">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/AmphinobiM.png" data-shiny="Images/AmphinobiMS.png" alt="Méga-Amphinobi" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Amphinobi</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                PASSE GO                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="passe-go">Passe Go</h2>
+
+  <p class="section-sous-titre">Passe Go Deluxe</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Un T-shirt avec Blindépique, Goupelin ou Amphinobi, en fonction de votre choix</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
