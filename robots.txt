@@ -1,18 +1,20 @@
-# GoEon — https://goeon.fr
-# Le site est entièrement public et indexable.
-# Seuls sont exclus un fragment de navigation et les pages inachevées.
+# GoEon - https://goeon.fr
+# Le site est entierement public et indexable.
+# Seuls sont exclus un fragment de navigation et les pages inachevees.
+# Commentaires sans accents : robots.txt est servi en text/plain sans
+# charset, les navigateurs affichent l'UTF-8 de travers.
 
 User-agent: *
 Allow: /
 
-# navbar.html n'est pas une page : c'est le fragment injecté par script.js
-# dans #nav-placeholder. Indexé seul, il donnerait un résultat vide.
+# navbar.html n'est pas une page : c'est le fragment injecte par script.js
+# dans #nav-placeholder. Indexe seul, il donnerait un resultat vide.
 Disallow: /navbar.html
 Disallow: /navbar$
 
-# Page inachevée : 71 images référencées mais absentes, chemins en
+# Page inachevee : 71 images referencees mais absentes, chemins en
 # "images/" minuscule (404 sur Cloudflare). Retirer ces deux lignes
-# le jour où la page est reprise.
+# le jour ou la page est reprise.
 Disallow: /regionaux.html
 Disallow: /regionaux$
 

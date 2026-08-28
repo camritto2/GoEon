@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 4.5 — 27 août 2026.*
+*Version 4.6 — 28 août 2026.*
 
 ## Ce qu'est ce document
 
@@ -48,8 +48,12 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 - Une valeur utilisée par plus d'une page appartient à `global.css`, pas à la feuille de la page.
 - Pas de cache-busting : le service worker est en réseau-d'abord, les suffixes `?v=` n'apportent rien et désalignent le préchargement. Ne pas en introduire.
 - `service-worker.js` : réseau d'abord, cache runtime filtré (GET + http + `response.ok`), fallback navigation → index, `CACHE_NAME` volontairement non versionné.
-- **Toutes les pages vivent à la racine, jamais en sous-dossiers.** Le chemin d'un fichier est son URL publique : le déplacer casse les liens partagés, les favoris et l'indexation. Seul `Images/` est un dossier. Ne pas proposer de réorganisation.
+- **Toutes les pages vivent à la racine, jamais en sous-dossiers.** Le nom d'un fichier est son URL publique : le déplacer ou le renommer casse les liens partagés, les favoris et l'indexation. Seul `Images/` est un dossier. Ne pas proposer de réorganisation.
 - **Cloudflare distingue majuscules et minuscules dans les chemins.** `images/` au lieu de `Images/` renvoie un 404. Pour la même raison, ne jamais renommer une page pour uniformiser sa casse : c'est un changement d'URL.
+- ⚠️ **L'URL publique d'une page n'a pas d'extension `.html`.** `wrangler.jsonc` ne définit pas `html_handling`, donc Cloudflare applique son défaut `auto-trailing-slash` : `/TopFeu` répond 200, et `/TopFeu.html` redirige en 307 vers `/TopFeu`. **Toute URL absolue écrite pour l'extérieur — `sitemap.xml`, `canonical`, `og:url`, lien partagé — s'écrit donc sans extension.** Les `href` internes gardent le `.html` : ils fonctionnent, au prix d'une redirection. Ne pas les réécrire sans décision de Cam, c'est un changement d'URL de plus.
+- **`sitemap.xml` se met à jour dans le même commit que la page.** Une page ajoutée y ajoute son bloc `<url>`, une page retirée y retire le sien — un sitemap qui pointe vers un 404 est un signal négatif. Y figurent les pages publiques uniquement : ni `navbar.html` (fragment injecté), ni les pages orphelines ou inachevées, qui rentreront à leur activation.
+- **`robots.txt`** n'interdit que le fragment `navbar.html` et `regionaux.html` tant qu'elle est cassée. **Retirer ses deux lignes `Disallow` le jour où la page est reprise**, sinon le travail restera invisible pour Google.
+- **`.assetsignore` est une liste d'exclusion** : ce qui y figure n'est pas téléversé, donc pas servi. Y ajouter un fichier destiné au public — `robots.txt`, `sitemap.xml`, un futur `404.html` — le rendrait introuvable.
 
 ---
 
@@ -159,7 +163,7 @@ Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué. S
 
 ### Activation d'une nouvelle page Top
 
-Deux gestes, et deux seulement : **(a)** `script.js`, config des types → `page: 'TopX.html'` · **(b)** `index.html` : carte du type (retirer `disabled` et `onclick`, poser le `href`) **et** une entrée dans les Nouveautés.
+Trois gestes, et trois seulement : **(a)** `script.js`, config des types → `page: 'TopX.html'` · **(b)** `index.html` : carte du type (retirer `disabled` et `onclick`, poser le `href`) **et** une entrée dans les Nouveautés · **(c)** `sitemap.xml` : un bloc `<url>` avec `https://goeon.fr/TopX`, sans extension.
 
 **Aucune activation dans `navbar.html`** : elle ne contient aucun lien par type, seulement « Meilleurs Pokémon » → `index.html#types`.
 
@@ -184,9 +188,9 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
   ⚠️ **`passe-go-rank` s'écrit en `<div>`, jamais en `<p>`** : `.pokemon-card` a `overflow: hidden`, la marge par défaut d'un `<p>` ne peut pas s'échapper et décolle le bandeau.
 - `research-sep` est masquée globalement : la forcer en inline quand un sous-titre a besoin d'un séparateur visible.
 
-**Activation** : `index.html` uniquement — carte d'évènement + classe couleur, et entrée dans les Nouveautés. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. Badge « En cours ! » via `event-en-cours` + `<span class="badge-en-cours">` en premier enfant. **À la fin de l'évènement** : retirer le badge, puis la carte, quand Cam le signale.
+**Activation** : `index.html` — carte d'évènement + classe couleur, et entrée dans les Nouveautés — **plus un bloc `<url>` dans `sitemap.xml`**, en URL sans extension. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. Badge « En cours ! » via `event-en-cours` + `<span class="badge-en-cours">` en premier enfant. **À la fin de l'évènement** : retirer le badge, puis la carte, quand Cam le signale.
 
-**Retrait de la page.** Cam supprime le fichier lui-même. Avant, chercher les liens résiduels dans `index.html`, `navbar.html`, `script.js` et `service-worker.js`, et livrer les fichiers concernés dans le même lot — une page supprimée dont un lien subsiste donne un 404 sur l'accueil. **Ne jamais toucher aux images de la page retirée**, elles sont mutualisées. Vérifier aussi ce que la page portait seule : une classe couleur devenue orpheline dans `index.css`, ou un statut shiny que `pokemon.css` doit désormais porter.
+**Retrait de la page.** Cam supprime le fichier lui-même. Avant, chercher les liens résiduels dans `index.html`, `navbar.html`, `script.js`, `service-worker.js` **et `sitemap.xml`**, et livrer les fichiers concernés dans le même lot — une page supprimée dont un lien subsiste donne un 404 sur l'accueil. **Ne jamais toucher aux images de la page retirée**, elles sont mutualisées. Vérifier aussi ce que la page portait seule : une classe couleur devenue orpheline dans `index.css`, ou un statut shiny que `pokemon.css` doit désormais porter.
 
 **Aucune activation dans `navbar.html`** : son lien « Évènements » pointe sur `index.html#evenements`.
 
