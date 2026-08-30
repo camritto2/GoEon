@@ -9,7 +9,11 @@
    Convention de nommage :
      Forme normale   → pk-nomduPokemon
      Forme régionale → pk-nomduPokemon-[initiale région] (ex: -h Hisui, -a Alola)
-     Méga            → pk-nomduPokemon-m
+
+   Les Méga n'ont pas de classe propre : une carte Méga porte la classe
+   de son espèce de base (Méga-Alakazam → pk-alakazam), et le commentaire
+   du bloc le signale par « (couvre Méga-Nom) ». Le statut shiny et le
+   statut Bon d'une Méga ne sont donc pas dissociables de sa forme de base.
    ============================================================ */
 
 
@@ -330,6 +334,23 @@
 .pk-boustiflor .pokemon-name { color: var(--accent-vert-bon); }
 .pk-boustiflor .research-reward-name { color: var(--accent-vert-bon); }
 .pk-boustiflor .emoji-shiny  { display: inline; }
+
+/* Baggiguane — Normal / Shiny */
+.pk-baggiguane .emoji-shiny { display: inline; }
+
+/* Baggaïd — Normal / Shiny */
+.pk-baggaid .emoji-shiny { display: inline; }
+
+/* Banshitrouye — Normal / Shiny */
+.pk-banshitrouye .emoji-shiny { display: inline; }
+
+/* Branette — Bon / Shiny (couvre Méga-Branette) */
+.pk-branette .pokemon-name { color: var(--accent-vert-bon); }
+.pk-branette .research-reward-name { color: var(--accent-vert-bon); }
+.pk-branette .emoji-shiny  { display: inline; }
+
+/* Bruyverne — Normal / Shiny */
+.pk-bruyverne .emoji-shiny { display: inline; }
 
 /* ============================================================
    POKÉMON — C
@@ -673,6 +694,22 @@
 .pk-chetiflor .pokemon-name { color: var(--accent-vert-bon); }
 .pk-chetiflor .research-reward-name { color: var(--accent-vert-bon); }
 .pk-chetiflor .emoji-shiny  { display: inline; }
+
+/* Cabriolaine — Bon / Shiny */
+.pk-cabriolaine .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cabriolaine .research-reward-name { color: var(--accent-vert-bon); }
+.pk-cabriolaine .emoji-shiny  { display: inline; }
+
+/* Charmina — Normal / Shiny (couvre Méga-Charmina) */
+.pk-charmina .emoji-shiny { display: inline; }
+
+/* Chevroum — Bon / Shiny */
+.pk-chevroum .pokemon-name { color: var(--accent-vert-bon); }
+.pk-chevroum .research-reward-name { color: var(--accent-vert-bon); }
+.pk-chevroum .emoji-shiny  { display: inline; }
+
+/* Couafarel — Normal / Shiny */
+.pk-couafarel .emoji-shiny { display: inline; }
 
 /* ============================================================
    POKÉMON — D
@@ -1380,6 +1417,11 @@
 
 /* Gouroutan — Normal / Shiny */
 .pk-gouroutan .emoji-shiny { display: inline; }
+
+/* Grelaçon — Bon / Shiny */
+.pk-grelacon .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grelacon .research-reward-name { color: var(--accent-vert-bon); }
+.pk-grelacon .emoji-shiny  { display: inline; }
 
 /* ============================================================
    POKÉMON — H
@@ -2089,6 +2131,12 @@
 .pk-mustebouee .emoji-shiny { display: inline; }
 
 
+/* Méditikka — Normal / Shiny */
+.pk-meditikka .emoji-shiny { display: inline; }
+
+/* Mistigrix — Normal / Shiny */
+.pk-mistigrix .emoji-shiny { display: inline; }
+
 /* ============================================================
    POKÉMON — N
    ============================================================ */
@@ -2540,6 +2588,17 @@
 .pk-pyrobut .emoji-shiny  { display: inline; }
 
 
+/* Pitrouille — Normal / Shiny */
+.pk-pitrouille .emoji-shiny { display: inline; }
+
+/* Polichombr — Bon / Shiny */
+.pk-polichombr .pokemon-name { color: var(--accent-vert-bon); }
+.pk-polichombr .research-reward-name { color: var(--accent-vert-bon); }
+.pk-polichombr .emoji-shiny  { display: inline; }
+
+/* Psystigri — Normal / Shiny */
+.pk-psystigri .emoji-shiny { display: inline; }
+
 /* ============================================================
    POKÉMON — Q
    ============================================================ */
@@ -2728,15 +2787,10 @@
 .pk-roucoups .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roucoups .emoji-shiny  { display: inline; }
 
-/* Roucarnage — Bon / Shiny */
+/* Roucarnage — Bon / Shiny (couvre Méga-Roucarnage) */
 .pk-roucarnage .pokemon-name { color: var(--accent-vert-bon); }
 .pk-roucarnage .research-reward-name { color: var(--accent-vert-bon); }
 .pk-roucarnage .emoji-shiny  { display: inline; }
-
-/* Méga-Roucarnage — Bon / Shiny */
-.pk-roucarnage-m .pokemon-name { color: var(--accent-vert-bon); }
-.pk-roucarnage-m .research-reward-name { color: var(--accent-vert-bon); }
-.pk-roucarnage-m .emoji-shiny  { display: inline; }
 
 
 /* Roussil — Bon / Shiny */
@@ -2974,6 +3028,12 @@
 
 /* Scrutella — Normal / Shiny */
 .pk-scrutella .emoji-shiny { display: inline; }
+
+/* Sonistrelle — Normal / Shiny */
+.pk-sonistrelle .emoji-shiny { display: inline; }
+
+/* Strassie — Normal / Shiny */
+.pk-strassie .emoji-shiny { display: inline; }
 
 /* ============================================================
    POKÉMON — T
@@ -3380,3 +3440,13 @@
 
 /* Zarbi (toutes lettres) — Normal / Shiny */
 .pk-zarbi .emoji-shiny { display: inline; }
+/* Zoroark — Bon / Shiny */
+.pk-zoroark .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zoroark .research-reward-name { color: var(--accent-vert-bon); }
+.pk-zoroark .emoji-shiny  { display: inline; }
+
+/* Zorua — Bon / Shiny */
+.pk-zorua .pokemon-name { color: var(--accent-vert-bon); }
+.pk-zorua .research-reward-name { color: var(--accent-vert-bon); }
+.pk-zorua .emoji-shiny  { display: inline; }
+

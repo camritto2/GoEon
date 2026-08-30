@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 4.7 — 30 août 2026.*
+*Version 4.8 - 30 août 2026.*
 
 ## Ce qu'est ce document
 
@@ -117,7 +117,7 @@ Le vert de `pokemon.css` signifie **« ce Pokémon figure dans un Top »**, pas 
 ### Formats de texte
 
 - **Rangs Méga : « Méga 1 », « Méga 2 » — jamais « M1 »**, y compris dans `card-rank`. `M1` est l'abréviation de Cam à la saisie, pas ce qui s'écrit.
-- Fourchettes : tiret demi-cadratin espacé « – ». Billets : « Nom / X € », espace insécable après la barre.
+- **Tiret simple `-` partout dans le texte affiché**, sans exception : fourchettes, plages horaires, titres de section, `raids-date`. Ni cadratin « — », ni demi-cadratin « – ». Règle posée par Cam le 30 août après un remplacement global ; toute proposition de « bon » tiret typographique est à écarter d'office. Billets : « Nom / X € », espace insécable après la barre.
 - Ligature œ obligatoire (« Nœud Herbe »). Orthographe rectifiée à appliquer sur tout le site.
 - Dates sans année.
 
@@ -287,7 +287,7 @@ Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles s
 
 6. Cohérence appels / divs / boutons `toggleBuild` ; ids `toggleAltImm` existants ; `aria-expanded` sur les builds et l'intro
 7. Classes `btn-*` toutes présentes dans `top.css` ; aucune couleur dans les `onclick`
-8. Aucun bloc « Cout » sans 2e attaque ; aucun tiret long ; ordre `legacy-indicator` → `footnote-ref` → icône
+8. Aucun bloc « Cout » sans 2e attaque ; aucun tiret autre que `-` ; ordre `legacy-indicator` → `footnote-ref` → icône
 9. Aucun renvoi sans texte — chercher **`card-note` ET `build-note`**
 10. Croisé avec les autres pages Top : bascules cohérentes, Legacy identique, réciprocité des boutons, mêmes badge Obscur / couleur de nom / libellé de forme / cout / image
 
