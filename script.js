@@ -329,7 +329,7 @@ if ('serviceWorker' in navigator) {
 // 12. BOUTON "SIGNALER UNE ERREUR"
 (function() {
   const btn = document.createElement('a');
-  btn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScyUV3hPNevGP_1lsK5Abdi8KbKwwFN5XmGJHRHEAd_pDF7vA/viewform?usp=publish-editor';
+  btn.href = 'https://docs.google.com/forms/d/e/1FAIpQLSeF7TSueQlUEUiCcHYQDHrtU2GXipDznBt4zobpT5ZcqnspHg/viewform';
   btn.target = '_blank';
   btn.id = 'btn-signaler';
   btn.innerHTML = '<span class="signaler-texte">⚠️ Signaler une erreur</span>';

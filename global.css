@@ -469,6 +469,31 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   margin-left: 2px;
 }
 
+/* Attaque mise en avant dans un encadré d'intro (section Attaque Spéciale des
+   pages évènement) : le nom est centré, l'icône de type est calibrée sur lui
+   et non sur un sous-titre, d'où une taille différente de .attaque-type-icon.
+   Remplace les styles inline des anciennes pages Community Day. */
+.attaque-vedette {
+  text-align: center;
+}
+
+.attaque-vedette-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+/* Séparateur « + » entre deux cartes liées d'une pokemon-grid.
+   Remplace les styles inline des anciennes pages évènement. */
+.carte-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-principal);
+}
+
 /* Stats */
 .pokemon-stats {
   margin-top: 0;
