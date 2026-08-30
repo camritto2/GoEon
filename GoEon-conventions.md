@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 4.6 — 28 août 2026.*
+*Version 4.7 — 30 août 2026.*
 
 ## Ce qu'est ce document
 
@@ -193,7 +193,7 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
 | Type | Rôle | Place | Écriture |
 |---|---|---|---|
 | Lien d'**action** | Billetterie, boutique — sert une décision d'achat | **Haut de page**, sous `astuce-shiny` | Libellé explicite (« achat de billets ») |
-| Lien de **source** | Article du blog officiel — sert la vérification | **Bas de page**, après la dernière section | `p.lien-source`, libellé « Source : blog officiel Pokémon GO » |
+| Lien de **source** | Article du blog officiel — sert la vérification | **Bas de page**, après la dernière section | `p.lien-source`, libellé « Source : Blog Officiel Pokémon Go » — majuscules à Blog et Officiel, pas à Go |
 
 Une page peut porter les deux. `.lien-source` vit dans `global.css` — **ne jamais la réécrire en `style` inline**. Toute page qui cite le blog entre guillemets doit porter son lien de source. Au retrait de la page, le lien externe se vérifie comme le reste du lot.
 

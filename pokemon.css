@@ -304,6 +304,12 @@
 .pk-brindibou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-brindibou .emoji-shiny  { display: inline; }
 
+/* Brocélôme — Bon / Shiny (Desséliande figure dans TopSpectre, le vert remonte
+   à la pré-évolution) */
+.pk-brocelome .pokemon-name { color: var(--accent-vert-bon); }
+.pk-brocelome .research-reward-name { color: var(--accent-vert-bon); }
+.pk-brocelome .emoji-shiny  { display: inline; }
+
 /* Brutapode — Bon / Shiny */
 .pk-brutapode .pokemon-name { color: var(--accent-vert-bon); }
 .pk-brutapode .research-reward-name { color: var(--accent-vert-bon); }
@@ -418,6 +424,12 @@
 
 /* Castorno — Normal / Shiny */
 .pk-castorno .emoji-shiny { display: inline; }
+
+/* Ceribou — Normal / Shiny */
+.pk-ceribou .emoji-shiny { display: inline; }
+
+/* Ceriflor — Normal / Shiny */
+.pk-ceriflor .emoji-shiny { display: inline; }
 
 /* Chacripan — Normal / Shiny */
 .pk-chacripan .emoji-shiny { display: inline; }
