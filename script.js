@@ -604,3 +604,49 @@ if (document.querySelector('.research-rewards')) {
   insererSeparateurRangee();
   window.addEventListener('resize', insererSeparateurRangee);
 }
+
+// 18. BADGE D'ÉVÈNEMENT AUTOMATIQUE (accueil)
+// Chaque carte d'évènement porte data-debut et data-fin ; le script en déduit
+// le badge à afficher. Rien avant le début, « En cours ! » pendant, « Terminé »
+// après. Plus aucun badge écrit en dur dans index.html.
+//
+// Format OBLIGATOIRE : "AAAA-MM-JJTHH:MM". La partie horaire n'est pas
+// facultative : sans elle, JavaScript lit la date en UTC et non en heure
+// locale, ce qui décalerait la bascule de deux heures en été.
+//
+// Pas de conversion de fuseau ici, et c'est voulu : les évènements Pokémon GO
+// se jouent à l'heure locale de chaque joueur, donc l'heure du navigateur est
+// exactement la bonne référence.
+//
+// Une date illisible laisse la carte intacte plutôt que d'afficher un faux
+// badge. Relecture toutes les minutes : un onglet ouvert à cheval sur le début
+// d'un évènement bascule tout seul.
+
+function majBadgesEvenements() {
+  const maintenant = Date.now();
+
+  document.querySelectorAll('.home-card[data-debut][data-fin]').forEach(carte => {
+    const debut = new Date(carte.dataset.debut).getTime();
+    const fin   = new Date(carte.dataset.fin).getTime();
+    if (isNaN(debut) || isNaN(fin) || debut > fin) return;
+
+    carte.querySelectorAll('.badge-en-cours, .badge-termine').forEach(b => b.remove());
+    carte.classList.remove('event-en-cours', 'event-termine');
+
+    let classe = null;
+    if (maintenant >= debut && maintenant <= fin) classe = 'en-cours';
+    else if (maintenant > fin)                    classe = 'termine';
+    if (!classe) return;
+
+    carte.classList.add('event-' + classe);
+    const badge = document.createElement('span');
+    badge.className = 'badge-' + classe;
+    badge.textContent = (classe === 'en-cours') ? 'En cours !' : 'Terminé';
+    carte.prepend(badge);
+  });
+}
+
+if (document.querySelector('.home-card[data-debut]')) {
+  majBadgesEvenements();
+  setInterval(majBadgesEvenements, 60000);
+}

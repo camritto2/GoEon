@@ -188,7 +188,16 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
   ⚠️ **`passe-go-rank` s'écrit en `<div>`, jamais en `<p>`** : `.pokemon-card` a `overflow: hidden`, la marge par défaut d'un `<p>` ne peut pas s'échapper et décolle le bandeau.
 - `research-sep` est masquée globalement : la forcer en inline quand un sous-titre a besoin d'un séparateur visible.
 
-**Activation** : `index.html` — carte d'évènement + classe couleur, et entrée dans les Nouveautés — **plus un bloc `<url>` dans `sitemap.xml`**, en URL sans extension. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. Badge « En cours ! » via `event-en-cours` + `<span class="badge-en-cours">` en premier enfant. **À la fin de l'évènement** : retirer le badge, puis la carte, quand Cam le signale.
+**Liens externes : deux objets distincts, deux places.**
+
+| Type | Rôle | Place | Écriture |
+|---|---|---|---|
+| Lien d'**action** | Billetterie, boutique — sert une décision d'achat | **Haut de page**, sous `astuce-shiny` | Libellé explicite (« achat de billets ») |
+| Lien de **source** | Article du blog officiel — sert la vérification | **Bas de page**, après la dernière section | `p.lien-source`, libellé « Source : blog officiel Pokémon GO » |
+
+Une page peut porter les deux. `.lien-source` vit dans `global.css` — **ne jamais la réécrire en `style` inline**. Toute page qui cite le blog entre guillemets doit porter son lien de source. Au retrait de la page, le lien externe se vérifie comme le reste du lot.
+
+**Activation** : `index.html` — carte d'évènement + classe couleur, et entrée dans les Nouveautés — **plus un bloc `<url>` dans `sitemap.xml`**, en URL sans extension. Chaque classe couleur doit être **déclarée en clair ET en mode sombre**. **Badges automatiques** : la carte porte `data-debut` et `data-fin`, et `script.js` §18 pose le badge tout seul — rien avant le début, « En cours ! » pendant, « Terminé » après. **Ne plus écrire de badge en dur**, ni `event-en-cours` : les dates sont la seule source. Format obligatoire `AAAA-MM-JJTHH:MM`, **partie horaire comprise** — sans elle JavaScript lit la date en UTC et la bascule se décale de deux heures en été. Aucune conversion de fuseau : les évènements se jouent à l'heure locale du joueur, donc l'heure du navigateur est la bonne référence. **Retirer la carte** reste manuel, quand Cam le signale.
 
 **Retrait de la page.** Cam supprime le fichier lui-même. Avant, chercher les liens résiduels dans `index.html`, `navbar.html`, `script.js`, `service-worker.js` **et `sitemap.xml`**, et livrer les fichiers concernés dans le même lot — une page supprimée dont un lien subsiste donne un 404 sur l'accueil. **Ne jamais toucher aux images de la page retirée**, elles sont mutualisées. Vérifier aussi ce que la page portait seule : une classe couleur devenue orpheline dans `index.css`, ou un statut shiny que `pokemon.css` doit désormais porter.
 

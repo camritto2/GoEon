@@ -560,6 +560,15 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   margin: -4px 0 8px 0;
 }
 
+/* Lien de source en bas des pages Évènement (blog officiel Pokémon GO).
+   À distinguer du lien d'action (billetterie), qui se place en haut de page. */
+.lien-source {
+  text-align: center;
+  font-size: 12px;
+  margin: 30px 0 10px 0;
+  color: var(--text-secondaire);
+}
+
 .section-sous-titre {
   font-style: italic;
   color: var(--text-secondaire);
@@ -977,6 +986,8 @@ body:has(.section-nav) .category-title {
   .diff-legende-titre { font-size: 14px; margin-right: 5px; }
   .diff-legende-liste { gap: 8px; }
   .diff-legende-item { padding: 5px 12px 4px 12px; border-radius: 6px; font-size: 14px; }
+
+  .lien-source { font-size: 14px; margin-top: 40px; }
 
   /* Navbar de sections */
   .section-nav { justify-content: center; padding: 8px 10px; }
