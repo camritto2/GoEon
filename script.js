@@ -650,3 +650,247 @@ if (document.querySelector('.home-card[data-debut]')) {
   majBadgesEvenements();
   setInterval(majBadgesEvenements, 60000);
 }
+
+// 19. PAGE CALENDRIER (Calendrier.html)
+// Le calendrier n'est pas une grille 7x5 mais quatre pistes verticales qui
+// partagent les memes lignes de grille : evenement long, jour, raids,
+// evenement quotidien. C'est ce qui permet de lire d'un coup d'oeil qu'un
+// evenement chevauche un Community Day, ce qu'une grille classique cache.
+//
+// Source unique : evenements.json, lu au chargement. Rien n'est ecrit en dur
+// dans Calendrier.html.
+//
+// Les rotations de Raids ne sont pas affichees telles qu'elles sont saisies :
+// elles se chevauchent (un Mega peut arriver en cours de semaine) et se
+// trouent. Le script calcule donc, pour chaque jour, l'ensemble des Raids
+// actifs, puis fusionne les jours consecutifs identiques. Une saisie qui
+// deborde ou qui s'imbrique se rend correctement sans traitement particulier.
+//
+// Les Raids Obscurs sont volontairement absents de la piste : ils tiennent le
+// mois entier et n'apportent rien a la lecture verticale. Ils restent lisibles
+// dans le panneau de detail.
+//
+// Format de date : "AAAA-MM-JJ" pour les raids, "AAAA-MM-JJTHH:MM" pour les
+// evenements, comme en section 18.
+
+(function () {
+  const grille = document.getElementById('cal-grille');
+  if (!grille) return;
+
+  const elMois    = document.getElementById('cal-mois-libelle');
+  const elNotes   = document.getElementById('cal-notes');
+  const elLegende = document.getElementById('cal-legende');
+  const elDetail  = document.getElementById('cal-detail');
+  const btnPrec   = document.getElementById('cal-prec');
+  const btnSuiv   = document.getElementById('cal-suiv');
+
+  const LETTRES = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+
+  const CATEGORIES = [
+    { cle: 'evenement',     nom: 'Évènement' },
+    { cle: 'heure-raid',    nom: 'Heure de Raid' },
+    { cle: 'journee-raids', nom: 'Journée de Raids' },
+    { cle: 'dynamax',       nom: 'Lundi Dynamax' },
+    { cle: 'heure-vedette', nom: 'Heure Vedette' },
+    { cle: 'community-day', nom: 'Community Day' },
+    { cle: 'gofest',        nom: 'Go Fest' },
+    { cle: 'maitrise',      nom: 'Maîtrise de Capture' }
+  ];
+
+  let donnees = null;
+  let indexMois = 0;
+
+  // "2026-09-07" ou "2026-09-07T18:00" -> Date locale.
+  // On decoupe a la main plutot que de passer par new Date(chaine) : sur la
+  // forme courte, JavaScript lirait la date en UTC et decalerait le jour.
+  function versDate(chaine) {
+    const [datePart, heurePart] = String(chaine).split('T');
+    const [a, m, j] = datePart.split('-').map(Number);
+    let h = 0, mn = 0;
+    if (heurePart) {
+      const hm = heurePart.split(':').map(Number);
+      h = hm[0] || 0;
+      mn = hm[1] || 0;
+    }
+    return new Date(a, m - 1, j, h, mn);
+  }
+
+  function memeJour(d1, d2) {
+    return d1.getFullYear() === d2.getFullYear()
+        && d1.getMonth()    === d2.getMonth()
+        && d1.getDate()     === d2.getDate();
+  }
+
+  // Numero de jour dans le mois affiche, borne aux limites du mois : un
+  // evenement qui commence le mois precedent demarre visuellement au 1er.
+  function borner(date, annee, mois, nbJours) {
+    if (date.getFullYear() < annee || (date.getFullYear() === annee && date.getMonth() < mois)) return 1;
+    if (date.getFullYear() > annee || (date.getFullYear() === annee && date.getMonth() > mois)) return nbJours;
+    return date.getDate();
+  }
+
+  function bloc(colonne, ligne, portee, classes, html) {
+    const d = document.createElement('div');
+    d.className = classes;
+    d.style.gridColumn = colonne;
+    d.style.gridRow = ligne + ' / span ' + portee;
+    d.innerHTML = html;
+    return d;
+  }
+
+  function echapper(t) {
+    const d = document.createElement('div');
+    d.textContent = t;
+    return d.innerHTML;
+  }
+
+  function afficherDetail(titre, heures, lignes, page) {
+    let html = '<h3>' + echapper(titre) + '</h3>';
+    if (heures) html += '<p class="cal-detail-heures">' + echapper(heures) + '</p>';
+    lignes.forEach(l => { if (l) html += '<p>' + echapper(l) + '</p>'; });
+    if (page) html += '<p><a href="' + page + '">Voir la page de l\'évènement</a></p>';
+    elDetail.innerHTML = html;
+    elDetail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function rendre() {
+    const mois = donnees.mois[indexMois];
+    const [annee, numMois] = mois.cle.split('-').map(Number);
+    const m = numMois - 1;
+    const nbJours = new Date(annee, numMois, 0).getDate();
+    const aujourdhui = new Date();
+
+    elMois.textContent = mois.libelle;
+    btnPrec.disabled = (indexMois === 0);
+    btnSuiv.disabled = (indexMois >= donnees.mois.length - 1);
+
+    elNotes.innerHTML = (mois.notes || []).map(n => '<p>' + echapper(n) + '</p>').join('');
+    elNotes.style.display = (mois.notes && mois.notes.length) ? '' : 'none';
+
+    elLegende.innerHTML = CATEGORIES
+      .map(c => '<span class="cal-cat-' + c.cle + '">' + echapper(c.nom) + '</span>')
+      .join('');
+
+    elDetail.innerHTML = '<p class="cal-detail-vide">Cliquez sur un évènement pour afficher son détail.</p>';
+
+    grille.innerHTML = '';
+    ['Évènement', 'Jour', 'Raids', 'Quotidien'].forEach((t, i) => {
+      const e = document.createElement('div');
+      e.className = 'cal-entete';
+      e.style.gridColumn = i + 1;
+      e.style.gridRow = '1';
+      e.textContent = t;
+      grille.appendChild(e);
+    });
+
+    // Piste 1 : evenements longs
+    (mois.evenements || []).forEach(ev => {
+      const d1 = borner(versDate(ev.debut), annee, m, nbJours);
+      const d2 = borner(versDate(ev.fin),   annee, m, nbJours);
+      const el = bloc(1, d1 + 1, d2 - d1 + 1, 'cal-bloc cal-cat-evenement cal-bloc-cliquable',
+        '<span class="cal-bloc-titre">' + echapper(ev.nom) + '</span>');
+      el.addEventListener('click', () => afficherDetail(
+        ev.nom, null,
+        ['Du ' + ev.debut.replace('T', ' à ') + ' au ' + ev.fin.replace('T', ' à ')],
+        ev.page
+      ));
+      grille.appendChild(el);
+    });
+
+    // Piste 2 : les jours
+    for (let j = 1; j <= nbJours; j++) {
+      const date = new Date(annee, m, j);
+      const idx = (date.getDay() + 6) % 7;
+      let cls = 'cal-jour';
+      if (idx >= 5) cls += ' cal-jour-we';
+      if (memeJour(date, aujourdhui)) cls += ' cal-jour-aujourdhui';
+      const el = bloc(2, j + 1, 1, cls,
+        '<span class="cal-jour-lettre">' + LETTRES[idx] + '</span>' +
+        '<span class="cal-jour-num">' + j + '</span>');
+      grille.appendChild(el);
+    }
+
+    // Piste 3 : raids, recalcules jour par jour puis fusionnes
+    const parJour = [];
+    for (let j = 1; j <= nbJours; j++) {
+      const date = new Date(annee, m, j);
+      const actifs = { legendaire: [], mega: [], obscur: [] };
+      (mois.raids || []).forEach(r => {
+        const d1 = versDate(r.debut);
+        const d2 = versDate(r.fin);
+        if (date >= d1 && date <= d2 && actifs[r.categorie]) {
+          r.pokemon.forEach(p => { if (actifs[r.categorie].indexOf(p) === -1) actifs[r.categorie].push(p); });
+        }
+      });
+      parJour.push(actifs);
+    }
+
+    let j = 1;
+    while (j <= nbJours) {
+      const cle = JSON.stringify([parJour[j - 1].legendaire, parJour[j - 1].mega]);
+      let fin = j;
+      while (fin < nbJours && JSON.stringify([parJour[fin].legendaire, parJour[fin].mega]) === cle) fin++;
+
+      const a = parJour[j - 1];
+      if (a.legendaire.length || a.mega.length) {
+        let html = '';
+        if (a.legendaire.length) html += '<div class="cal-raids-legend">' + a.legendaire.map(echapper).join('<br>') + '</div>';
+        if (a.mega.length)       html += '<div class="cal-raids-mega">' + a.mega.map(echapper).join('<br>') + '</div>';
+        const debutSeg = j, finSeg = fin;
+        const el = bloc(3, j + 1, fin - j + 1, 'cal-raids cal-bloc-cliquable', html);
+        el.addEventListener('click', () => {
+          const obscurs = parJour[debutSeg - 1].obscur;
+          afficherDetail(
+            'Raids du ' + debutSeg + ' au ' + finSeg + ' ' + mois.libelle.toLowerCase(),
+            'De 6h à 21h44',
+            [
+              a.legendaire.length ? 'Légendaires : ' + a.legendaire.join(', ') : null,
+              a.mega.length       ? 'Méga-Raids : ' + a.mega.join(', ')        : null,
+              obscurs.length      ? 'Obscurs : ' + obscurs.join(', ')          : null
+            ],
+            'raids.html'
+          );
+        });
+        grille.appendChild(el);
+      }
+      j = fin + 1;
+    }
+
+    // Piste 4 : evenements quotidiens
+    (mois.quotidiens || []).forEach(q => {
+      const d1 = borner(versDate(q.debut), annee, m, nbJours);
+      const d2 = q.fin ? borner(versDate(q.fin), annee, m, nbJours) : d1;
+      const el = bloc(4, d1 + 1, d2 - d1 + 1,
+        'cal-bloc cal-cat-' + q.categorie + ' cal-bloc-cliquable',
+        '<span class="cal-bloc-titre">' + echapper(q.court) + '</span>');
+      el.addEventListener('click', () => afficherDetail(
+        q.long, q.heures, [q.bonus ? 'Bonus : ' + q.bonus : null], q.page
+      ));
+      grille.appendChild(el);
+    });
+  }
+
+  fetch('evenements.json')
+    .then(r => {
+      if (!r.ok) throw new Error('reponse ' + r.status);
+      return r.json();
+    })
+    .then(d => {
+      donnees = d;
+      if (!donnees.mois || !donnees.mois.length) throw new Error('aucun mois');
+      // On ouvre sur le mois en cours s'il est present, sinon sur le premier.
+      const maintenant = new Date();
+      const cleActuelle = maintenant.getFullYear() + '-' + String(maintenant.getMonth() + 1).padStart(2, '0');
+      const trouve = donnees.mois.findIndex(x => x.cle === cleActuelle);
+      indexMois = (trouve >= 0) ? trouve : 0;
+      rendre();
+    })
+    .catch(() => {
+      elMois.textContent = 'Calendrier indisponible';
+      grille.innerHTML = '';
+      elDetail.innerHTML = '<p class="cal-detail-vide">Les données du calendrier n\'ont pas pu être chargées. Réessayez plus tard.</p>';
+    });
+
+  btnPrec.addEventListener('click', () => { if (indexMois > 0) { indexMois--; rendre(); } });
+  btnSuiv.addEventListener('click', () => { if (indexMois < donnees.mois.length - 1) { indexMois++; rendre(); } });
+})();

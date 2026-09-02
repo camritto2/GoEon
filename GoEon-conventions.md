@@ -63,6 +63,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 - Un seul `<h1>` par page. Catégories en `<h2 class="category-title tier-X">`. Titre d'onglet : `GoEon - Nom`, tiret court.
 - `icon-192` déclarée ; aucun lien Google Fonts (la police vient de `navbar.css`).
 - **Aucun emoji dans les titres de section.**
+- **Orthographe réformée de 1990, sans exception dans les textes de GoEon.** « maitrise », « cout », « apparait », « connait », « évènement » : pas d'accent circonflexe sur *i* et *u*. Deux réserves : les **noms d'attaque du jeu** gardent la graphie officielle (« Piqûre »), et une **citation du blog officiel** se reproduit telle quelle, sans rectification. Règle posée par Cam le 02/09.
 - **Breakpoints : site 769px, navbar 960/961px.** La navbar exige ~1000px pour ses liens desktop ; ne pas l'aligner sur 769. Trois occurrences de `960` dans `script.js` : synchroniser si changement.
 - **Graisses navbar : 300 explicite** — c'est le rendu voulu, pas une valeur oubliée : ne pas la « normaliser ». Lien de signalement 700, logo mobile 600.
 - Alignements pixel : technique du « fantôme structurel » (sous-titre `&nbsp;`, « + » des counters) plutôt que des marges magiques.
@@ -270,6 +271,7 @@ Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles s
 - **Un remplacement par nom d'attaque frappe la première occurrence, pas la bonne.** Découper la page par carte et cibler le rang.
 - **Chercher une classe, c'est déjà faire une hypothèse.** Avant d'affirmer qu'une chose est absente, vérifier qu'on l'a cherchée sous toutes ses formes.
 - **Grouper une règle mobile ne groupe pas sa jumelle desktop.** Deux sélecteurs réunis dans la règle de base peuvent rester dissociés dans la media query, où l'un seul est redéfini. Symptôme : deux éléments censés être identiques divergent uniquement au-dessus du breakpoint. Après tout groupage : chercher le sélecteur dans **tout** le fichier, pas seulement à l'endroit modifié.
+- **Les `<p>` d'un bloc `pokemon-stats` ne portent aucune classe.** Le style vient entièrement de `.pokemon-stats p`. Les anciennes `stat-range` et `stat-100` étaient des classes fantômes, déclarées dans aucune feuille et retirées le 30/08 (184 occurrences sur 6 pages). Ne pas les réintroduire par copier-coller depuis une vieille page.
 - **Un décompte s'extrait par script au moment où on l'écrit**, et se déduplique avant d'être annoncé. Un nombre communiqué est un nombre de **problèmes**, pas de lignes de sortie.
 
 ---

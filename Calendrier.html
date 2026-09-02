@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Calendrier</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="calendrier.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Calendrier</h1>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un évènement pour afficher son détail !</span>
+  </p>
+
+  <!-- Tout le contenu ci-dessous est construit par la section 19 de
+       script.js a partir d'evenements.json. Les conteneurs restent
+       vides dans le HTML : la page n'a qu'une seule source de donnees. -->
+
+  <nav class="cal-nav">
+    <button id="cal-prec" type="button" aria-label="Mois précédent">&lsaquo;</button>
+    <span class="cal-nav-mois" id="cal-mois-libelle">Chargement...</span>
+    <button id="cal-suiv" type="button" aria-label="Mois suivant">&rsaquo;</button>
+  </nav>
+
+  <div class="cal-notes" id="cal-notes"></div>
+
+  <div class="cal-legende" id="cal-legende"></div>
+
+  <div class="cal-grille" id="cal-grille"></div>
+
+  <div class="cal-detail" id="cal-detail"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

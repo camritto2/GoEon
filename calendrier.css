@@ -1,0 +1,221 @@
+/* ==========================================================
+   CALENDRIER — pistes paralleles partageant les memes lignes
+   ==========================================================
+   Le calendrier n'est pas une grille 7x5 mais une liste de jours
+   en lignes, traversee par trois pistes verticales : evenements
+   longs, jour, raids, evenement quotidien.
+
+   grid-auto-rows en minmax(28px, auto) : les jours vides restent
+   compacts, une ligne chargee grandit d'elle-meme, et comme les
+   quatre pistes partagent les memes lignes de grille l'alignement
+   horizontal tient sans calcul de hauteur.
+   ========================================================== */
+
+/* --- Barre de navigation entre les mois --- */
+
+.cal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 16px;
+}
+
+.cal-nav button {
+  background: var(--bg-carte);
+  color: var(--text-principal);
+  border: 1px solid var(--border-carte);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.cal-nav button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cal-nav-mois {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-principal);
+  min-width: 170px;
+  text-align: center;
+}
+
+/* --- Notes generales du mois --- */
+
+.cal-notes {
+  background: var(--bg-bandeau-tache);
+  border-left: 4px solid var(--accent-or);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+}
+
+.cal-notes p {
+  margin: 0 0 4px;
+  font-size: 0.85rem;
+  color: var(--text-secondaire);
+}
+
+.cal-notes p:last-child { margin-bottom: 0; }
+
+/* --- Legende des categories --- */
+
+.cal-legende {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 16px;
+}
+
+.cal-legende span {
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* --- La grille --- */
+
+.cal-grille {
+  display: grid;
+  grid-template-columns: 56px 40px 82px minmax(0, 1fr);
+  grid-auto-rows: minmax(28px, auto);
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.cal-entete {
+  font-size: 0.7rem;
+  color: var(--text-muet);
+  padding: 2px 4px;
+  align-self: end;
+}
+
+/* Colonne 2 : le jour. Le numero porte la lecture, l'initiale
+   du jour de semaine reste discrete a cote. */
+.cal-jour {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+  color: var(--text-principal);
+}
+
+.cal-jour-lettre {
+  font-size: 0.7rem;
+  color: var(--text-muet);
+}
+
+.cal-jour-num {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Le week-end se distingue sans couleur : la colonne des jours
+   porte deja assez d'information coloree a sa droite. */
+.cal-jour-we .cal-jour-num,
+.cal-jour-we .cal-jour-lettre { color: var(--accent-bleu); }
+
+.cal-jour-aujourdhui {
+  background: var(--bg-bandeau-tache);
+  border-radius: 6px;
+}
+
+/* Pistes 1, 3 et 4 : blocs colores */
+
+.cal-bloc {
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.cal-bloc-titre { font-weight: 600; }
+
+.cal-bloc-cliquable { cursor: pointer; }
+
+/* Piste 3 : les raids n'ont pas de fond. Le gris est pris par la
+   categorie Go Fest, et leur position suffit a les identifier. */
+.cal-raids {
+  border-left: 2px solid var(--hr-separator);
+  padding: 4px 6px;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  color: var(--text-secondaire);
+  overflow: hidden;
+}
+
+.cal-raids-legend {
+  font-weight: 600;
+  color: var(--text-principal);
+}
+
+.cal-raids-mega { margin-top: 4px; }
+
+/* Couleurs de categorie */
+
+.cal-cat-evenement    { background: var(--cal-evt-bg);      color: var(--cal-evt-txt); }
+.cal-cat-heure-raid   { background: var(--cal-raid-bg);     color: var(--cal-raid-txt); }
+.cal-cat-journee-raids{ background: var(--cal-journee-bg);  color: var(--cal-journee-txt); }
+.cal-cat-dynamax      { background: var(--cal-dynamax-bg);  color: var(--cal-dynamax-txt); }
+.cal-cat-heure-vedette{ background: var(--cal-vedette-bg);  color: var(--cal-vedette-txt); }
+.cal-cat-community-day{ background: var(--cal-cd-bg);       color: var(--cal-cd-txt); }
+.cal-cat-gofest       { background: var(--cal-gofest-bg);   color: var(--cal-gofest-txt); }
+.cal-cat-maitrise     { background: var(--cal-maitrise-bg); color: var(--cal-maitrise-txt); }
+
+/* --- Panneau de detail, ouvert au clic sur un bloc --- */
+
+.cal-detail {
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.cal-detail h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: var(--text-principal);
+}
+
+.cal-detail-heures {
+  font-size: 0.85rem;
+  color: var(--accent-bleu);
+  margin: 0 0 8px;
+}
+
+.cal-detail p {
+  margin: 0 0 6px;
+  font-size: 0.88rem;
+  color: var(--text-secondaire);
+}
+
+.cal-detail-vide {
+  font-size: 0.85rem;
+  color: var(--text-muet);
+  font-style: italic;
+}
+
+.cal-detail a { color: var(--accent-bleu); }
+
+/* --- Au-dessus du breakpoint du site, tout respire --- */
+
+@media (min-width: 769px) {
+  .cal-grille {
+    grid-template-columns: 130px 62px 190px minmax(0, 1fr);
+    grid-auto-rows: minmax(32px, auto);
+    gap: 3px;
+  }
+
+  .cal-bloc { font-size: 0.85rem; padding: 6px 10px; }
+  .cal-raids { font-size: 0.8rem; padding: 6px 10px; }
+  .cal-jour-num { font-size: 1.1rem; }
+  .cal-jour-lettre { font-size: 0.8rem; }
+}

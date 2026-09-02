@@ -27,6 +27,16 @@
   --accent-or: #F4D995;          /* Bordure des encadrés d'intro */
   --accent-vert-bon: #16a34a;    /* Bon Pokémon (nom en vert) */
   --accent-cyan: #06b6d4;        /* Pokémon obtenus une ou deux fois (pages Top) */
+  /* Calendrier - une paire fond/texte par categorie d'evenement */
+  --cal-raid-bg: #dff2fd;      --cal-raid-txt: #0a5a80;      /* Heure de Raid */
+  --cal-journee-bg: #dde3fa;   --cal-journee-txt: #1e3a8a;   /* Journee de Raids */
+  --cal-dynamax-bg: #ece5fd;   --cal-dynamax-txt: #5b21b6;   /* Lundi Dynamax */
+  --cal-vedette-bg: #dcf5e6;   --cal-vedette-txt: #15803d;   /* Heure Vedette */
+  --cal-cd-bg: #fde2e2;        --cal-cd-txt: #a32d2d;        /* Community Day */
+  --cal-evt-bg: #fbf0d8;       --cal-evt-txt: #7a5a10;       /* Evenement long */
+  --cal-gofest-bg: #ebe9e4;    --cal-gofest-txt: #4a4a45;    /* Go Fest */
+  --cal-maitrise-bg: #fdead5;  --cal-maitrise-txt: #8a4a0a;  /* Maitrise de Capture */
+
   --text-astuce: #64748b;        /* Textes d'astuce gris */
   --bg-bandeau-tache: #e8f4fd;   /* Bandeau des tâches / rangs Passe Go */
 }
@@ -49,6 +59,16 @@ body.dark-mode {
   --bg-image-container: #2d2d2d; /* Zone de l'image légèrement plus claire */
 
   /* Couleurs d'accent du site */
+  /* Calendrier - fonds sombres satures, textes clairs de la meme famille */
+  --cal-raid-bg: #0c3a52;      --cal-raid-txt: #9ddcf8;
+  --cal-journee-bg: #1a2a52;   --cal-journee-txt: #a8bdf0;
+  --cal-dynamax-bg: #2e1f52;   --cal-dynamax-txt: #c9b3f7;
+  --cal-vedette-bg: #123a24;   --cal-vedette-txt: #86e0a8;
+  --cal-cd-bg: #4a1717;        --cal-cd-txt: #f2a9a9;
+  --cal-evt-bg: #3d3113;       --cal-evt-txt: #eccf8a;
+  --cal-gofest-bg: #2e2e2b;    --cal-gofest-txt: #c7c5bd;
+  --cal-maitrise-bg: #452709;  --cal-maitrise-txt: #f0b878;
+
   --text-astuce: #9ca3af;
   --accent-bleu: #29b6f6;
   --accent-vert-bon: #16a34a;
