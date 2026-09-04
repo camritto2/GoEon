@@ -308,6 +308,9 @@
 .pk-brindibou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-brindibou .emoji-shiny  { display: inline; }
 
+/* Briochien — Normal / Shiny */
+.pk-briochien .emoji-shiny { display: inline; }
+
 /* Brocélôme — Bon / Shiny (Desséliande figure dans TopSpectre, le vert remonte
    à la pré-évolution) */
 .pk-brocelome .pokemon-name { color: var(--accent-vert-bon); }
@@ -814,6 +817,8 @@
 /* Doduo — Normal / Shiny */
 .pk-doduo .emoji-shiny { display: inline; }
 
+/* Dogrino — Normal */
+
 /* Doudouvet — Normal / Shiny */
 .pk-doudouvet .emoji-shiny { display: inline; }
 
@@ -1108,6 +1113,11 @@
 /* Flamenroule — Bon */
 .pk-flamenroule .pokemon-name { color: var(--accent-vert-bon); }
 .pk-flamenroule .research-reward-name { color: var(--accent-vert-bon); }
+/* Shiny depuis le 08/09/2026 (Hordes Méga). Les cartes de HordesMega.html
+   gardent en plus la classe nouveau-shiny : elle ne sert pas ici à afficher
+   le badge (cette ligne s'en charge) mais à le faire scintiller pendant tout
+   l'évènement, pour signaler la nouveauté. */
+.pk-flamenroule .emoji-shiny  { display: inline; }
 
 /* Flobio — Bon / Shiny */
 .pk-flobio .pokemon-name { color: var(--accent-vert-bon); }
@@ -1347,6 +1357,8 @@
 .pk-grodoudou .pokemon-name { color: var(--accent-vert-bon); }
 .pk-grodoudou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grodoudou .emoji-shiny  { display: inline; }
+
+/* Grondogue — Normal */
 
 /* Groudon — Bon / Shiny */
 .pk-groudon .pokemon-name { color: var(--accent-vert-bon); }
@@ -1776,6 +1788,12 @@
 
 /* Lombre — Normal / Shiny */
 .pk-lombre .emoji-shiny { display: inline; }
+
+/* Lougaroc — Bon / Shiny (une seule classe pour les formes Diurne,
+   Nocturne et Crépusculaire, comme Zarbi) */
+.pk-lougaroc .pokemon-name { color: var(--accent-vert-bon); }
+.pk-lougaroc .research-reward-name { color: var(--accent-vert-bon); }
+.pk-lougaroc .emoji-shiny  { display: inline; }
 
 /* Limagma — Normal / Shiny */
 .pk-limagma .emoji-shiny { display: inline; }
@@ -2371,6 +2389,9 @@
 /* Papilusion — Normal / Shiny */
 .pk-papilusion .emoji-shiny { display: inline; }
 
+/* Pâtachiot — Normal / Shiny */
+.pk-patachiot .emoji-shiny { display: inline; }
+
 /* Pandarbare — Bon / Shiny */
 .pk-pandarbare .pokemon-name { color: var(--accent-vert-bon); }
 .pk-pandarbare .research-reward-name { color: var(--accent-vert-bon); }
@@ -2771,6 +2792,11 @@
 
 /* Roublenard — Normal / Shiny */
 .pk-roublenard .emoji-shiny  { display: inline; }
+
+/* Rocabot — Bon / Shiny */
+.pk-rocabot .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rocabot .research-reward-name { color: var(--accent-vert-bon); }
+.pk-rocabot .emoji-shiny  { display: inline; }
 
 /* Rubombelle — Bon / Shiny */
 .pk-rubombelle .pokemon-name { color: var(--accent-vert-bon); }

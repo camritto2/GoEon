@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Célébration pour la série Pokémon, les horizons</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Célébration pour la série Pokémon, les horizons</h1>
+  <p class="raids-date">
+    Depuis le mercredi 16 septembre, 10h - Jusqu'au mardi 22 septembre, 20h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#bonus">Bonus</a>
+    <a href="#sauvages">Pokémon Sauvages</a>
+    <a href="#raids">Raids</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#passe">Passe Go</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 BONUS                   -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Nouveau Costume pour <span class="texte-vert">Salamèche</span>, <span class="texte-vert">Reptincel</span> et <span class="texte-vert">Dracaufeu</span></div>
+    <div class="intro-item"><span class="bullet">• </span>Plus de chance de rencontrer Kecleon aux Pokéstops</div>
+    <div class="intro-item"><span class="bullet">• </span>Fond Spécial disponible lors des Raids et pour les <span class="texte-vert">Salamèche</span> sauvages</div>
+    <div class="intro-item"><span class="bullet">• </span>Concours Pokéstop chaque jour</div>
+    <div class="intro-item"><span class="bullet">• </span>Photobombs liés à la série</div>
+    <div class="intro-item"><span class="bullet">• </span>+ voir Passe Go</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           POKÉMON SAUVAGES              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
+
+  <p class="section-sous-titre"><em>À toute heure</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-salameche">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Salameche.png" data-shiny="Images/SalamecheS.png" alt="Salamèche" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Salamèche</h2>
+        <p class="pokemon-subtitle">Portant les lunettes de Friede</p>
+      </div>
+    </div>
+
+    <!-- Pikachu costumé : la classe pk- est conservée pour le seul badge shiny,
+         et nom-neutre annule le vert - cette forme n'est pas « Bonne ». -->
+    <div class="pokemon-card pk-pikachu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name nom-neutre">Pikachu</h2>
+        <p class="pokemon-subtitle">Portant la casquette de Cap</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre"><em>De 5h à 17h</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-patachiot">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Patachiot.png" data-shiny="Images/PatachiotS.png" alt="Pâtachiot" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Pâtachiot</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-zapetrel">
+      <div class="image-container">
+        <img src="Images/Zapetrel.png" alt="Zapétrel" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zapétrel</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-leveinard">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Leveinard.png" data-shiny="Images/LeveinardS.png" alt="Leveinard" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Leveinard</h2>
+        <p class="pokemon-subtitle">Rare</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre"><em>De 17h à 5h</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-evoli">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Evoli.png" data-shiny="Images/EvoliS.png" alt="Évoli" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Évoli</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-bibichut">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Bibichut.png" data-shiny="Images/BibichutS.png" alt="Bibichut" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Bibichut</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-rocabot">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Rocabot.png" data-shiny="Images/RocabotS.png" alt="Rocabot" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Rocabot</h2>
+        <p class="pokemon-subtitle">Rare</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 RAIDS                   -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="raids">Raids</h2>
+
+  <p class="section-sous-titre"><em>Niveau 1</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-pikachu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name nom-neutre">Pikachu</h2>
+        <p class="pokemon-subtitle">Portant la casquette de Cap</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre"><em>Niveau 3</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-dracaufeu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Dracaufeu.png" data-shiny="Images/DracaufeuS.png" alt="Dracaufeu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Dracaufeu</h2>
+        <p class="pokemon-subtitle">Portant les lunettes de Friede</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-miascarade">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Miascarade.png" data-shiny="Images/MiascaradeS.png" alt="Miascarade" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Miascarade</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-flamigator">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Flamigator.png" data-shiny="Images/FlamigatorS.png" alt="Flâmigator" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Flâmigator</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-palmaval">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Palmaval.png" data-shiny="Images/PalmavalS.png" alt="Palmaval" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Palmaval</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            TÂCHES D'ÉTUDE               -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
+
+  <div class="intro-rules">
+    <p>Plus d'informations lorsque l'évènement aura commencé.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                PASSE GO                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="passe">Passe Go</h2>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Rang 1 : Double Bonbons de Capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Rang 10 : Modules Leurre qui durent 1h et attirent les Pokémon de l'évènement</div>
+    <div class="intro-item"><span class="bullet">• </span>Rang 20 : Poussières Étoile supplémentaires par <span class="texte-vert">Bibichut</span> et <span class="texte-vert">Zapétrel</span> attrapés</div>
+  </div>
+
+  <p class="section-sous-titre">Passe Go Deluxe</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Rang 1 : Triple Bonbons de Capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Passes Premium</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Super Bonbons L</div>
+  </div>
+
+  <p class="lien-source">
+    Source : <a href="https://pokemongo.com/news/pokemon-horizons-celebration-event-2026" target="_blank" rel="noopener">Blog Officiel Pokémon Go</a>
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

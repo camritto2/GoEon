@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 4.8 - 30 août 2026.*
+*Version 4.9 - 4 septembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -102,7 +102,8 @@ Le vert de `pokemon.css` signifie **« ce Pokémon figure dans un Top »**, pas 
 - **Obscur** : `badge-obscur-icon`.
 - **Shiny boosté** : badge entouré de `shiny-boost-circle`, qui scintille via `:has(.shiny-active)`. Uniquement dans un `div.badges`, jamais en ligne dans du texte.
 - **Nouveau shiny annoncé** (pas encore actif en jeu) : classe `nouveau-shiny`, **pages évènement uniquement**. Ne jamais poser `shiny-active` en statique — le script la retire au premier clic.
-  ⚠️ **Ordre de retrait.** `img.emoji-shiny.nouveau-shiny` (spécificité 0,2,1) bat volontairement `pokemon.css` (0,2,0) : c'est elle seule qui affiche le badge tant que le Pokémon n'est pas déclaré shiny. Le jour où il le devient, **décommenter d'abord sa ligne dans `pokemon.css`**, retirer `nouveau-shiny` ensuite — et dans le même push. L'inverse fait disparaître le badge.
+  ⚠️ **Deux rôles successifs, une seule classe.** `img.emoji-shiny.nouveau-shiny` (spécificité 0,2,1) bat volontairement `pokemon.css` (0,2,0). Tant que le Pokémon n'est pas déclaré shiny, elle est **seule à afficher** le badge. Le jour où il le devient, **décommenter sa ligne dans `pokemon.css`** : `nouveau-shiny` ne sert plus alors qu'à faire **scintiller** le badge, ce qui signale la nouveauté.
+  ⚠️ **Elle ne se retire pas à l'activation du shiny** : elle reste sur les cartes **pendant tout l'évènement** et part avec la page. Règle posée par Cam le 4 septembre 2026 — l'effet doit tenir du premier au dernier jour.
 - Les tailles de badge sont fixées dans les feuilles partagées : ne jamais les redimensionner sur place.
 
 ### Cartes

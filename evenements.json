@@ -11,8 +11,8 @@
       ],
       "evenements": [
         { "nom": "Méga Ascension",    "debut": "2026-08-31T10:00", "fin": "2026-09-04T20:00", "page": "MegaAscension.html" },
-        { "nom": "Mega Squads",       "debut": "2026-09-08T10:00", "fin": "2026-09-14T20:00" },
-        { "nom": "???",               "debut": "2026-09-16T10:00", "fin": "2026-09-22T20:00" },
+        { "nom": "Hordes Méga",       "debut": "2026-09-08T10:00", "fin": "2026-09-14T20:00", "page": "HordesMega.html" },
+        { "nom": "Célébration pour la série Pokémon, les horizons", "debut": "2026-09-16T10:00", "fin": "2026-09-22T20:00", "page": "CelebrationHorizons.html" },
         { "nom": "Harvest Festival",  "debut": "2026-09-29T10:00", "fin": "2026-10-05T20:00" }
       ],
       "raids": [
