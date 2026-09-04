@@ -6,49 +6,435 @@
       "libelle": "Septembre 2026",
       "notes": [
         "Sauf mention contraire, les évènements commencent à 10h et se terminent à 20h.",
-        "La rotation des Raids se fait le mercredi, entre 11h et 11h45.",
-        "Les Raids débutent à 6h et se terminent à 21h44."
+        "La rotation des Raids se fait le mercredi à 6h.",
+        "Les Dynamax arrivent à 5h."
       ],
       "evenements": [
-        { "nom": "Méga Ascension",    "debut": "2026-08-31T10:00", "fin": "2026-09-04T20:00", "page": "MegaAscension.html" },
-        { "nom": "Hordes Méga",       "debut": "2026-09-08T10:00", "fin": "2026-09-14T20:00", "page": "HordesMega.html" },
-        { "nom": "Célébration pour la série Pokémon, les horizons", "debut": "2026-09-16T10:00", "fin": "2026-09-22T20:00", "page": "CelebrationHorizons.html" },
-        { "nom": "Harvest Festival",  "debut": "2026-09-29T10:00", "fin": "2026-10-05T20:00" }
+        {
+          "nom": "Méga Ascension",
+          "debut": "2026-08-31T10:00",
+          "fin": "2026-09-04T20:00",
+          "page": "MegaAscension.html"
+        },
+        {
+          "nom": "Hordes Méga",
+          "debut": "2026-09-08T10:00",
+          "fin": "2026-09-14T20:00",
+          "page": "HordesMega.html"
+        },
+        {
+          "nom": "Célébration pour la série Pokémon, les horizons",
+          "debut": "2026-09-16T10:00",
+          "fin": "2026-09-22T20:00",
+          "page": "CelebrationHorizons.html"
+        },
+        {
+          "nom": "Harvest Festival",
+          "debut": "2026-09-29T10:00",
+          "fin": "2026-10-05T20:00"
+        }
       ],
       "raids": [
-        { "categorie": "legendaire", "debut": "2026-09-07", "fin": "2026-09-08", "pokemon": ["Regice", "Regirock", "Registeel"] },
-        { "categorie": "legendaire", "debut": "2026-09-09", "fin": "2026-09-15", "pokemon": ["Zacian Héros Aguerri"] },
-        { "categorie": "legendaire", "debut": "2026-09-16", "fin": "2026-09-22", "pokemon": ["Zamazenta Héros Aguerri"] },
-        { "categorie": "legendaire", "debut": "2026-09-23", "fin": "2026-09-29", "pokemon": ["Cancrelove", "Mouscoto", "Câblifère"], "note": "Cancrelove en Europe-Afrique, Mouscoto en Amérique, Câblifère en Asie-Pacifique" },
-        { "categorie": "legendaire", "debut": "2026-09-30", "fin": "2026-10-06", "pokemon": ["Xerneas"] },
-
-        { "categorie": "mega", "debut": "2026-09-07", "fin": "2026-09-08", "pokemon": ["Méga-Léviator"] },
-        { "categorie": "mega", "debut": "2026-09-08", "fin": "2026-09-15", "pokemon": ["Méga-Dardargnan"] },
-        { "categorie": "mega", "debut": "2026-09-11", "fin": "2026-09-15", "pokemon": ["Méga-Démolosse"] },
-        { "categorie": "mega", "debut": "2026-09-16", "fin": "2026-09-22", "pokemon": ["Méga-Florizarre"] },
-        { "categorie": "mega", "debut": "2026-09-23", "fin": "2026-09-29", "pokemon": ["Méga-Sepiatop"] },
-        { "categorie": "mega", "debut": "2026-09-30", "fin": "2026-10-06", "pokemon": ["Méga-Empiflor"] },
-
-        { "categorie": "obscur", "debut": "2026-09-01", "fin": "2026-09-08", "pokemon": ["Giratina Forme Alternative"] },
-        { "categorie": "obscur", "debut": "2026-09-09", "fin": "2026-10-06", "pokemon": ["Fulguris Forme Avatar"] }
+        {
+          "categorie": "legendaire",
+          "debut": "2026-09-07",
+          "fin": "2026-09-08",
+          "pokemon": [
+            {
+              "nom": "Regice",
+              "img": "Regice.png"
+            },
+            {
+              "nom": "Regirock",
+              "img": "Regirock.png"
+            },
+            {
+              "nom": "Registeel",
+              "img": "Registeel.png"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-09-09",
+          "fin": "2026-09-15",
+          "pokemon": [
+            {
+              "nom": "Zacian Héros Aguerri",
+              "img": "ZacianHA.png"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-09-16",
+          "fin": "2026-09-22",
+          "pokemon": [
+            {
+              "nom": "Zamazenta Héros Aguerri",
+              "img": "ZamazentaHA.png"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-09-23",
+          "fin": "2026-09-29",
+          "pokemon": [
+            {
+              "nom": "Cancrelove",
+              "img": "Cancrelove.png",
+              "region": "Europe-Afrique"
+            },
+            {
+              "nom": "Mouscoto",
+              "img": "Mouscoto.png",
+              "region": "Amériques"
+            },
+            {
+              "nom": "Câblifère",
+              "img": "Cablifere.png",
+              "region": "Asie-Pacifique"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-09-30",
+          "fin": "2026-10-06",
+          "pokemon": [
+            {
+              "nom": "Xerneas",
+              "img": "Xerneas.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-09-07",
+          "fin": "2026-09-08",
+          "pokemon": [
+            {
+              "nom": "Méga-Léviator",
+              "img": "LeviatorM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-09-08",
+          "fin": "2026-09-15",
+          "pokemon": [
+            {
+              "nom": "Méga-Dardargnan",
+              "img": "DardargnanM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-09-11",
+          "fin": "2026-09-15",
+          "pokemon": [
+            {
+              "nom": "Méga-Démolosse",
+              "img": "DemolosseM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-09-16",
+          "fin": "2026-09-22",
+          "pokemon": [
+            {
+              "nom": "Méga-Florizarre",
+              "img": "FlorizarreM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-09-23",
+          "fin": "2026-09-29",
+          "pokemon": [
+            {
+              "nom": "Méga-Sepiatroce",
+              "img": "SepiatroceM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-09-30",
+          "fin": "2026-10-06",
+          "pokemon": [
+            {
+              "nom": "Méga-Empiflor",
+              "img": "EmpiflorM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "obscur",
+          "debut": "2026-09-01",
+          "fin": "2026-09-08",
+          "pokemon": [
+            {
+              "nom": "Giratina Forme Alternative",
+              "img": "GiratinaA.png"
+            }
+          ]
+        },
+        {
+          "categorie": "obscur",
+          "debut": "2026-09-09",
+          "fin": "2026-10-06",
+          "pokemon": [
+            {
+              "nom": "Fulguris Forme Avatar",
+              "img": "FulgurisA.png"
+            }
+          ]
+        }
       ],
       "quotidiens": [
-        { "debut": "2026-09-05", "fin": "2026-09-06", "categorie": "gofest",        "court": "Go Fest",                 "long": "Go Fest Méga Finale",                          "heures": "10h - 18h", "page": "GoFestMegaFinale.html" },
-        { "debut": "2026-09-07",                      "categorie": "dynamax",       "court": "Dynamax Tarsal",          "long": "Lundi Dynamax - Tarsal",                       "heures": "18h - 19h", "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante" },
-        { "debut": "2026-09-09",                      "categorie": "heure-raid",    "court": "Raids Zacian",            "long": "Heure de Raid - Zacian Héros Aguerri",         "heures": "18h - 19h" },
-        { "debut": "2026-09-10",                      "categorie": "heure-vedette", "court": "Heure Aspicot",           "long": "Heure Vedette - Aspicot, Coconfort, Dardargnan", "heures": "18h - 19h", "bonus": "Double Bonbons de Transfert" },
-        { "debut": "2026-09-12",                      "categorie": "community-day", "court": "CDC Griknot",             "long": "Community Day Classique - Griknot",            "heures": "14h - 17h", "bonus": "Bonus prolongés jusqu'à 21h" },
-        { "debut": "2026-09-13",                      "categorie": "heure-vedette", "court": "Heure Malosse",           "long": "Heure Vedette - Malosse, Démolosse",           "heures": "18h - 19h", "bonus": "Double Bonbons de Transfert" },
-        { "debut": "2026-09-14",                      "categorie": "dynamax",       "court": "Dynamax Rhinocorne",      "long": "Lundi Dynamax - Rhinocorne",                   "heures": "18h - 19h", "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante" },
-        { "debut": "2026-09-16",                      "categorie": "heure-raid",    "court": "Raids Zamazenta",         "long": "Heure de Raid - Zamazenta Héros Aguerri",      "heures": "18h - 19h" },
-        { "debut": "2026-09-17",                      "categorie": "heure-vedette", "court": "Heure ???",               "long": "Heure Vedette - ???",                          "heures": "18h - 19h", "bonus": "Double Poussière de capture" },
-        { "debut": "2026-09-19",                      "categorie": "journee-raids", "court": "Méga-Raids Étouraptor",   "long": "Journée de Super Méga-Raids - Étouraptor",     "heures": "14h - 17h" },
-        { "debut": "2026-09-21",                      "categorie": "dynamax",       "court": "Dynamax Oiseaux de Kanto","long": "Lundi Dynamax - Artikodin, Électhor, Sulfura", "heures": "18h - 19h", "bonus": "Apparaissent plus souvent aux Sources d'Énergie la semaine suivante" },
-        { "debut": "2026-09-23",                      "categorie": "heure-raid",    "court": "Raids Cancrelove +2",     "long": "Heure de Raid - Cancrelove, Mouscoto, Câblifère", "heures": "18h - 19h" },
-        { "debut": "2026-09-24",                      "categorie": "heure-vedette", "court": "Heure Rattata",           "long": "Heure Vedette - Rattata",                      "heures": "18h - 19h", "bonus": "Double PX d'évolution et plus de chance de rencontrer des Rattata XXS" },
-        { "debut": "2026-09-26",                      "categorie": "maitrise",      "court": "Maîtrise Brocélôme",      "long": "Maîtrise de Capture - Brocélôme",              "heures": "14h - 17h", "page": "MaitriseBrocelome.html" },
-        { "debut": "2026-09-28",                      "categorie": "dynamax",       "court": "Dynamax Larméléon",       "long": "Lundi Dynamax - Larméléon",                    "heures": "18h - 19h", "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante" },
-        { "debut": "2026-09-30",                      "categorie": "heure-raid",    "court": "Raids Xerneas",           "long": "Heure de Raid - Xerneas",                      "heures": "18h - 19h" }
+        {
+          "debut": "2026-09-05",
+          "fin": "2026-09-06",
+          "categorie": "gofest",
+          "court": "Go Fest",
+          "long": "Go Fest Méga Finale",
+          "heures": "10h - 18h",
+          "page": "GoFestMegaFinale.html",
+          "lignes": [
+            "Go Fest",
+            "Méga Finale",
+            "10h-18h"
+          ]
+        },
+        {
+          "debut": "2026-09-07",
+          "categorie": "dynamax",
+          "court": "Dynamax Tarsal",
+          "long": "Lundi Dynamax - Tarsal",
+          "heures": "18h - 19h",
+          "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante",
+          "sprites": [
+            "Tarsal.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-09-09",
+          "categorie": "heure-raid",
+          "court": "Raids Zacian",
+          "long": "Heure de Raid - Zacian Héros Aguerri",
+          "heures": "18h - 19h",
+          "sprites": [
+            "ZacianHA.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-09-10",
+          "categorie": "heure-vedette",
+          "court": "Heure Aspicot",
+          "long": "Heure Vedette - Aspicot, Coconfort, Dardargnan",
+          "heures": "18h - 19h",
+          "bonus": "Double Bonbons de Transfert",
+          "sprites": [
+            "Aspicot.png",
+            "Coconfort.png",
+            "Dardargnan.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-09-12",
+          "categorie": "community-day",
+          "court": "CDC Griknot",
+          "long": "Community Day Classique - Griknot",
+          "heures": "14h - 17h",
+          "bonus": "Bonus prolongés jusqu'à 21h",
+          "sprites": [
+            "Griknot.png"
+          ],
+          "page": "CDCGriknot.html",
+          "lignes": [
+            "Community Day",
+            "14h-17h/21h"
+          ]
+        },
+        {
+          "debut": "2026-09-13",
+          "categorie": "heure-vedette",
+          "court": "Heure Malosse",
+          "long": "Heure Vedette - Malosse, Démolosse",
+          "heures": "18h - 19h",
+          "bonus": "Double Bonbons de Transfert",
+          "sprites": [
+            "Malosse.png",
+            "Demolosse.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-09-14",
+          "categorie": "dynamax",
+          "court": "Dynamax Rhinocorne",
+          "long": "Lundi Dynamax - Rhinocorne",
+          "heures": "18h - 19h",
+          "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante",
+          "lignes": [
+            "Dynamax"
+          ],
+          "sprites": [
+            "Rhinocorne.png"
+          ]
+        },
+        {
+          "debut": "2026-09-16",
+          "categorie": "heure-raid",
+          "court": "Raids Zamazenta",
+          "long": "Heure de Raid - Zamazenta Héros Aguerri",
+          "heures": "18h - 19h",
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ],
+          "sprites": [
+            "ZamazentaHA.png"
+          ]
+        },
+        {
+          "debut": "2026-09-17",
+          "categorie": "heure-vedette",
+          "court": "Heure ???",
+          "long": "Heure Vedette - ???",
+          "heures": "18h - 19h",
+          "bonus": "Double Poussière de capture",
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-09-19",
+          "categorie": "journee-raids",
+          "court": "Méga-Raids Étouraptor",
+          "long": "Journée de Super Méga-Raids - Étouraptor",
+          "heures": "14h - 17h",
+          "sprites": [
+            "Etouraptor.png"
+          ],
+          "page": "MegaEtouraptor.html",
+          "lignes": [
+            "Super Méga-Raids",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2026-09-21",
+          "categorie": "dynamax",
+          "court": "Dynamax Oiseaux de Kanto",
+          "long": "Lundi Dynamax - Artikodin, Électhor, Sulfura",
+          "heures": "18h - 19h",
+          "bonus": "Apparaissent plus souvent aux Sources d'Énergie la semaine suivante",
+          "sprites": [
+            "Artikodin.png",
+            "Electhor.png",
+            "Sulfura.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-09-23",
+          "categorie": "heure-raid",
+          "court": "Raids Cancrelove +2",
+          "long": "Heure de Raid - Cancrelove, Mouscoto, Câblifère",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Cancrelove.png",
+            "Mouscoto.png",
+            "Cablifere.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-09-24",
+          "categorie": "heure-vedette",
+          "court": "Heure Rattata",
+          "long": "Heure Vedette - Rattata",
+          "heures": "18h - 19h",
+          "bonus": "Double PX d'évolution et plus de chance de rencontrer des Rattata XXS",
+          "sprites": [
+            "Rattata.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-09-26",
+          "categorie": "maitrise",
+          "court": "Maîtrise Brocélôme",
+          "long": "Maîtrise de Capture - Brocélôme",
+          "heures": "14h - 17h",
+          "page": "MaitriseBrocelome.html",
+          "sprites": [
+            "Brocelome.png"
+          ],
+          "lignes": [
+            "Maitrise Capture",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2026-09-28",
+          "categorie": "dynamax",
+          "court": "Dynamax Larméléon",
+          "long": "Lundi Dynamax - Larméléon",
+          "heures": "18h - 19h",
+          "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante",
+          "sprites": [
+            "Larmeleon.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-09-30",
+          "categorie": "heure-raid",
+          "court": "Raids Xerneas",
+          "long": "Heure de Raid - Xerneas",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Xerneas.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ]
+        }
       ]
     }
   ]

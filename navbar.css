@@ -36,6 +36,7 @@
   --cal-evt-bg: #fbf0d8;       --cal-evt-txt: #7a5a10;       /* Evenement long */
   --cal-gofest-bg: #ebe9e4;    --cal-gofest-txt: #4a4a45;    /* Go Fest */
   --cal-maitrise-bg: #fdead5;  --cal-maitrise-txt: #8a4a0a;  /* Maitrise de Capture */
+  --cal-raids-bg: #e4e9ef;     --cal-raids-txt: #3f4a58;      /* Piste Raids */
 
   --text-astuce: #64748b;        /* Textes d'astuce gris */
   --bg-bandeau-tache: #e8f4fd;   /* Bandeau des tâches / rangs Passe Go */
@@ -68,6 +69,7 @@ body.dark-mode {
   --cal-evt-bg: #3d3113;       --cal-evt-txt: #eccf8a;
   --cal-gofest-bg: #2e2e2b;    --cal-gofest-txt: #c7c5bd;
   --cal-maitrise-bg: #452709;  --cal-maitrise-txt: #f0b878;
+  --cal-raids-bg: #23292f;     --cal-raids-txt: #b3bdc9;
 
   --text-astuce: #9ca3af;
   --accent-bleu: #29b6f6;

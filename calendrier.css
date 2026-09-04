@@ -2,23 +2,49 @@
    CALENDRIER — pistes paralleles partageant les memes lignes
    ==========================================================
    Le calendrier n'est pas une grille 7x5 mais une liste de jours
-   en lignes, traversee par trois pistes verticales : evenements
-   longs, jour, raids, evenement quotidien.
+   en lignes, traversee par quatre pistes verticales : evenement
+   long, jour, raids, evenement quotidien.
 
-   grid-auto-rows en minmax(28px, auto) : les jours vides restent
-   compacts, une ligne chargee grandit d'elle-meme, et comme les
-   quatre pistes partagent les memes lignes de grille l'alignement
-   horizontal tient sans calcul de hauteur.
+   Hauteur de ligne FIXE (58px) : c'est ce qui garde l'alignement
+   lisible d'un bout a l'autre du mois. Tout le dimensionnement
+   ci-dessous en decoule et ne doit pas etre modifie isolement.
+
+   Le calcul, a 360px de large :
+     360 - 24 (padding .pokemon-app) = 336 utiles
+     336 - 6 (trois gouttieres) = 330
+     330 - 36 (colonne Jour, la DEUXIEME) = 294, soit 98px par piste
+   L'ordre des colonnes est : Evenement, Jour, Raids, Quotidien. Seule
+   la deuxieme est etroite ; les trois autres sont a egalite.
+     98 - 8 (padding) - 4 (gouttieres) = 86, soit 28px par sprite
+   Trois sprites de 28px rentrent donc exactement sur une ligne.
+
+   La piste Raids empile deux rangees (legendaires puis megas). Ses
+   sprites n'ont PAS de taille fixe : le script calcule celle qui remplit
+   au mieux chaque segment, bornee par deux contraintes.
+     - La largeur : trois sprites cote a cote plafonnent a 28px, deux a
+       44px, un seul a 56px.
+     - La hauteur : un segment de D jours offre 60*D-2 pixels, moins
+       10px d'ecart entre rangees et 4px de marges, le tout divise par
+       deux rangees, soit 30*D-13.
+   Une rotation d'un seul jour est donc limitee a 22px, une de deux
+   jours atteint 44px, une de sept jours 56px. C'est ce qui evite les
+   grands vides sur les longues rotations.
+
+   Les trois pistes de contenu sont en minmax(0, 1fr) et NON en 1fr :
+   sans le 0, une colonne ne descend jamais sous la largeur minimale de
+   son contenu. Les pistes a sprites ont un plancher de 96px et poussent,
+   tandis que la piste Evenement, qui ne contient que du texte repliable,
+   absorbe tout l'ecrasement.
    ========================================================== */
 
-/* --- Barre de navigation entre les mois --- */
+/* --- Navigation entre les mois --- */
 
 .cal-nav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 }
 
 .cal-nav button {
@@ -52,124 +78,217 @@
   background: var(--bg-bandeau-tache);
   border-left: 4px solid var(--accent-or);
   border-radius: 6px;
-  padding: 10px 14px;
-  margin: 0 0 16px;
+  padding: 8px 12px;
+  margin: 0 0 14px;
 }
 
 .cal-notes p {
-  margin: 0 0 4px;
-  font-size: 0.85rem;
+  margin: 0 0 3px;
+  font-size: 0.78rem;
   color: var(--text-secondaire);
 }
 
 .cal-notes p:last-child { margin-bottom: 0; }
 
-/* --- Legende des categories --- */
-
-.cal-legende {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 0 0 16px;
-}
-
-.cal-legende span {
-  font-size: 0.75rem;
-  padding: 3px 10px;
-  border-radius: 999px;
-}
-
 /* --- La grille --- */
 
 .cal-grille {
   display: grid;
-  grid-template-columns: 56px 40px 82px minmax(0, 1fr);
-  grid-auto-rows: minmax(28px, auto);
+  grid-template-columns: minmax(0, 1fr) 36px repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto;
+  grid-auto-rows: 58px;
   gap: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
+/* Les en-tetes reprennent la couleur de leur piste quand celle-ci en a
+   une seule. La piste Quotidien est multicolore par nature : lui donner
+   une teinte laisserait croire qu'elle designe une categorie precise,
+   donc elle reste neutre, encadree comme les pastilles de jour. */
 .cal-entete {
   font-size: 0.7rem;
-  color: var(--text-muet);
-  padding: 2px 4px;
+  text-align: center;
   align-self: end;
+  padding: 3px 4px;
+  margin-bottom: 3px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-/* Colonne 2 : le jour. Le numero porte la lecture, l'initiale
-   du jour de semaine reste discrete a cote. */
+.cal-entete-evenements { background: var(--cal-evt-bg);   color: var(--cal-evt-txt); }
+.cal-entete-raids      { background: var(--cal-raids-bg); color: var(--cal-raids-txt); }
+
+.cal-entete-quotidien {
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  color: var(--text-secondaire);
+}
+
+/* Colonne 2 : le jour. Le numero porte la lecture. */
+/* La colonne des jours est une pastille encadree, ni vide ni pleine :
+   un fond de carte et un filet suffisent a la faire ressortir entre
+   deux pistes aux aplats francs, sans lui voler leur lisibilite. */
 .cal-jour {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 4px;
-  padding: 2px 4px;
+  justify-content: center;
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 8px;
   color: var(--text-principal);
 }
 
+/* L'abreviation reste discrete au-dessus, le numero porte la lecture.
+   A 0.6rem, "mar" occupe environ 18px : ca tient dans les 36px de la
+   colonne sans avoir a l'elargir au detriment des pistes a sprites,
+   qui ont besoin de leurs 96px pour trois sprites de 28px. */
 .cal-jour-lettre {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  line-height: 1;
   color: var(--text-muet);
+  margin-bottom: 2px;
 }
 
 .cal-jour-num {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
-/* Le week-end se distingue sans couleur : la colonne des jours
-   porte deja assez d'information coloree a sa droite. */
-.cal-jour-we .cal-jour-num,
-.cal-jour-we .cal-jour-lettre { color: var(--accent-bleu); }
+/* Seul le samedi est mis en avant : c'est le jour ou tombent les
+   evenements. Le dimanche reste un jour comme les autres. */
+.cal-jour-samedi {
+  background: var(--bg-bandeau-tache);
+}
+
+.cal-jour-samedi .cal-jour-num,
+.cal-jour-samedi .cal-jour-lettre { color: var(--accent-bleu); }
 
 .cal-jour-aujourdhui {
-  background: var(--bg-bandeau-tache);
-  border-radius: 6px;
+  border: 2px solid var(--accent-bleu);
 }
 
-/* Pistes 1, 3 et 4 : blocs colores */
+/* --- Blocs colores (pistes 1 et 4) --- */
 
 .cal-bloc {
   border-radius: 6px;
-  padding: 4px 6px;
+  padding: 3px 4px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Piste 1 : evenement long. Pas de sprite possible, du texte,
+   centre verticalement sur toute la duree de l'evenement. */
+.cal-evt-nom {
   font-size: 0.72rem;
-  line-height: 1.3;
-  overflow: hidden;
-}
-
-.cal-bloc-titre { font-weight: 600; }
-
-.cal-bloc-cliquable { cursor: pointer; }
-
-/* Piste 3 : les raids n'ont pas de fond. Le gris est pris par la
-   categorie Go Fest, et leur position suffit a les identifier. */
-.cal-raids {
-  border-left: 2px solid var(--hr-separator);
-  padding: 4px 6px;
-  font-size: 0.7rem;
-  line-height: 1.3;
-  color: var(--text-secondaire);
-  overflow: hidden;
-}
-
-.cal-raids-legend {
   font-weight: 600;
-  color: var(--text-principal);
+  line-height: 1.25;
+  text-align: center;
 }
 
-.cal-raids-mega { margin-top: 4px; }
+/* Piste 4 : libelle au-dessus, sprites en dessous. Le libelle fait une
+   ou deux lignes selon la categorie ; c'est lui qui a impose de passer
+   la hauteur de ligne de 53 a 58px, deux lignes de texte plus un sprite
+   de 28px ne tenant pas dans 53 sans devenir illisibles. */
+.cal-libelle {
+  font-size: 0.6rem;
+  line-height: 1.15;
+  margin-bottom: 2px;
+  text-align: center;
+}
 
-/* Couleurs de categorie */
+.cal-sprites {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+}
 
-.cal-cat-evenement    { background: var(--cal-evt-bg);      color: var(--cal-evt-txt); }
-.cal-cat-heure-raid   { background: var(--cal-raid-bg);     color: var(--cal-raid-txt); }
-.cal-cat-journee-raids{ background: var(--cal-journee-bg);  color: var(--cal-journee-txt); }
-.cal-cat-dynamax      { background: var(--cal-dynamax-bg);  color: var(--cal-dynamax-txt); }
-.cal-cat-heure-vedette{ background: var(--cal-vedette-bg);  color: var(--cal-vedette-txt); }
-.cal-cat-community-day{ background: var(--cal-cd-bg);       color: var(--cal-cd-txt); }
-.cal-cat-gofest       { background: var(--cal-gofest-bg);   color: var(--cal-gofest-txt); }
-.cal-cat-maitrise     { background: var(--cal-maitrise-bg); color: var(--cal-maitrise-txt); }
+.cal-sprites img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
 
-/* --- Panneau de detail, ouvert au clic sur un bloc --- */
+/* Tailles calculees par le script pour la piste Raids. */
+.cal-sp-22 .cal-sprites img { width: 22px; height: 22px; }
+.cal-sp-28 .cal-sprites img { width: 28px; height: 28px; }
+.cal-sp-36 .cal-sprites img { width: 36px; height: 36px; }
+.cal-sp-44 .cal-sprites img { width: 44px; height: 44px; }
+.cal-sp-56 .cal-sprites img { width: 56px; height: 56px; }
+
+/* Repli quand le sprite n'existe pas encore dans Images/ */
+.cal-repli {
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* --- Piste 3 : les raids --- */
+/* Rectangle plein, au meme titre que les autres pistes : sans fond, on
+   ne voyait pas ou une rotation commencait ni ou elle finissait. Sa
+   teinte lui est propre (--cal-raids-*) pour ne pas etre confondue avec
+   le gris de la categorie Go Fest, en piste 4. */
+
+.cal-raids {
+  background: var(--cal-raids-bg);
+  color: var(--cal-raids-txt);
+  border-radius: 6px;
+  padding: 2px 4px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Les megas sont nettement decroches des legendaires : sans cet ecart,
+   les deux rangees se lisaient comme un seul groupe. */
+.cal-raids-megas {
+  margin-top: 10px;
+}
+
+/* Rotation regionalisee : un libelle de zone au-dessus de chaque
+   Pokemon, empiles. N'apparait que si le JSON porte des regions. */
+.cal-raids-region {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cal-raids-region + .cal-raids-region {
+  margin-top: 6px;
+}
+
+.cal-raids-zone {
+  font-size: 0.55rem;
+  line-height: 1.1;
+  margin-bottom: 1px;
+}
+
+.cal-raids .cal-repli {
+  font-size: 0.6rem;
+}
+
+/* --- Couleurs de categorie --- */
+
+.cal-cat-evenement     { background: var(--cal-evt-bg);      color: var(--cal-evt-txt); }
+.cal-cat-heure-raid    { background: var(--cal-raid-bg);     color: var(--cal-raid-txt); }
+.cal-cat-journee-raids { background: var(--cal-journee-bg);  color: var(--cal-journee-txt); }
+.cal-cat-dynamax       { background: var(--cal-dynamax-bg);  color: var(--cal-dynamax-txt); }
+.cal-cat-heure-vedette { background: var(--cal-vedette-bg);  color: var(--cal-vedette-txt); }
+.cal-cat-community-day { background: var(--cal-cd-bg);       color: var(--cal-cd-txt); }
+.cal-cat-gofest        { background: var(--cal-gofest-bg);   color: var(--cal-gofest-txt); }
+.cal-cat-maitrise      { background: var(--cal-maitrise-bg); color: var(--cal-maitrise-txt); }
+
+/* --- Panneau de detail, ouvert au clic --- */
 
 .cal-detail {
   background: var(--bg-carte);
@@ -201,21 +320,25 @@
   font-size: 0.85rem;
   color: var(--text-muet);
   font-style: italic;
+  margin: 0;
 }
 
 .cal-detail a { color: var(--accent-bleu); }
 
-/* --- Au-dessus du breakpoint du site, tout respire --- */
+/* --- Desktop : tout respire, les sprites grandissent --- */
 
 @media (min-width: 769px) {
   .cal-grille {
-    grid-template-columns: 130px 62px 190px minmax(0, 1fr);
-    grid-auto-rows: minmax(32px, auto);
-    gap: 3px;
+    grid-template-columns: minmax(0, 1fr) 70px repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 76px;
+    gap: 4px;
   }
 
-  .cal-bloc { font-size: 0.85rem; padding: 6px 10px; }
-  .cal-raids { font-size: 0.8rem; padding: 6px 10px; }
-  .cal-jour-num { font-size: 1.1rem; }
-  .cal-jour-lettre { font-size: 0.8rem; }
+  .cal-sprites img { width: 40px; height: 40px; }
+  .cal-libelle { font-size: 0.78rem; margin-bottom: 4px; }
+  .cal-evt-nom { font-size: 0.9rem; }
+  .cal-repli { font-size: 0.82rem; }
+  .cal-entete { font-size: 0.85rem; }
+  .cal-jour-num { font-size: 1.9rem; }
+  .cal-jour-lettre { font-size: 0.8rem; margin-bottom: 3px; }
 }
