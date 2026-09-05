@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="global.css">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="calendrier.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#29b6f6">
   <link rel="apple-touch-icon" href="Images/icon-192.png">
@@ -32,28 +34,20 @@
     <h2 class="section-title">Nouveautés</h2>
     <ul class="news-list">
       <li class="news-group">
+        <span class="news-date">05/09</span>
+        <ul class="news-items">
+          <li>Le <a href="Calendrier.html">calendrier</a> est arrivé !</li>
+        </ul>
+      </li>
+      <li class="news-group">
         <span class="news-date">04/09</span>
         <ul class="news-items">
-          <li>Ajout des Évènements : <a href="HordesMega.html">Hordes Méga</a> et <a href="CelebrationHorizons.html">Célébration pour la série Pokémon, les horizons</a></li>
-        </ul>
-      </li>
-      <li class="news-group">
-        <span class="news-date">02/09</span>
-        <ul class="news-items">
-          <li>Ajout des Évènements : <a href="CDCGriknot.html">Community Day Classique Griknot</a> et <a href="MegaEtouraptor.html">Journée de Super Méga-Raids Étouraptor</a></li>
-          <li>Mise à jour du <a href="GoFestMegaFinale.html">GoFest : Méga Finale</a></li>
-        </ul>
-      </li>
-      <li class="news-group">
-        <span class="news-date">30/08</span>
-        <ul class="news-items">
-          <li>Ajout des Évènements <a href="GoFestMegaFinale.html">GoFest : Méga Finale</a> et <a href="MaitriseBrocelome.html">Maitrise de Capture Brocélôme</a></li>
+          <li><span class="news-text">Tous les Évènements sont à jour</span></li>
         </ul>
       </li>
       <li class="news-group">
         <span class="news-date news-date-upcoming">À venir</span>
         <ul class="news-items">
-          <li><span class="news-text">Travail sur un calendrier des Évènements</span></li>
           <li><span class="news-text">Team Go Rocket : Sbires &amp; Chefs</span></li>
         </ul>
       </li>
@@ -85,6 +79,17 @@
       </ul>
     </div>
   </div>
+
+  <!-- APERÇU 7 JOURS -->
+  <!-- Conteneurs vides : la section 19 de script.js les remplit a partir
+       d'evenements.json, exactement comme la page Calendrier. Si le
+       chargement echoue, elle masque la section entiere. -->
+  <section class="home-section">
+    <h2 class="section-title">Prévisions à 7 jours</h2>
+    <div class="cal-grille cal-compact" id="cal-semaine"></div>
+    <p class="cal-astuce"><a href="Calendrier.html">Cliquez ici pour le mois entier</a></p>
+    <div class="cal-detail" id="cal-detail"></div>
+  </section>
 
   <section class="home-section" id="evenements">
     <h2 class="section-title">Évènements</h2>

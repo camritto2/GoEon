@@ -100,6 +100,18 @@
   margin: 0 0 14px;
 }
 
+/* Sur l'accueil, la meme ligne ne sert pas a apprendre le clic mais a
+   renvoyer vers le mois entier. Elle y est plus discrete : c'est un
+   renvoi, pas une consigne, et elle suit immediatement la grille. Le
+   selecteur d'adjacence evite d'avoir a poser une classe de plus dans
+   index.html. */
+.cal-astuce a { color: var(--accent-bleu); }
+
+.cal-compact + .cal-astuce {
+  font-size: 0.68rem;
+  margin: 0;
+}
+
 /* --- La grille --- */
 
 .cal-grille {
@@ -229,6 +241,7 @@
    ciblent .cal-sprites : tout <img> de la piste doit donc etre place
    dans un conteneur .cal-sprites, y compris en rangee fusionnee, sinon
    il s'affiche a sa taille native de 512px. */
+.cal-sp-16 .cal-sprites img { width: 16px; height: 16px; }
 .cal-sp-22 .cal-sprites img { width: 22px; height: 22px; }
 .cal-sp-28 .cal-sprites img { width: 28px; height: 28px; }
 .cal-sp-36 .cal-sprites img { width: 36px; height: 36px; }
@@ -266,6 +279,7 @@
    rangees se lisaient comme un seul groupe. L'ecart grandit avec la
    duree du segment, qui a d'autant plus de hauteur a occuper. Classe
    posee par le script. */
+.cal-ec-4  .cal-raids-megas { margin-top: 4px; }
 .cal-ec-10 .cal-raids-megas { margin-top: 10px; }
 .cal-ec-16 .cal-raids-megas { margin-top: 16px; }
 .cal-ec-24 .cal-raids-megas { margin-top: 24px; }
@@ -398,6 +412,53 @@
 
 .cal-detail a { color: var(--accent-bleu); }
 
+/* --- Variante compacte : apercu de sept jours sur l'accueil --- */
+/* Meme grille, memes pistes, meme moteur : seule la hauteur de ligne
+   descend a 44px. Le script le sait (constante PAS de la section 19, qui
+   vaut 46 = 44 + 2 de gouttiere) et calcule les sprites de la piste Raids
+   en consequence. Les deux valeurs ne doivent jamais bouger l'une sans
+   l'autre, sinon les sprites debordent ou laissent un vide.
+
+   A 44px il ne reste que 38px sous les marges, la ou deux lignes de texte
+   plus un sprite en reclament 45 : la piste Quotidien n'affiche donc
+   qu'UNE ligne dans cette variante (le script s'en charge) et ses sprites
+   tombent a 22px.
+
+   La regle des sprites vise .cal-bloc et non .cal-sprites tout court :
+   sans ca elle ecraserait les .cal-sp-NN de la piste Raids, qui ont la
+   meme specificite mais sont declarees plus haut dans le fichier. */
+
+/* grid-template-rows neutralise : la page reserve sa premiere ligne aux
+   en-tetes de pistes, que l'apercu n'affiche pas. Sans ca, le premier jour
+   se dimensionnerait sur son contenu au lieu de suivre les autres. */
+.cal-compact {
+  grid-template-rows: none;
+  grid-auto-rows: 44px;
+
+  /* Un cadre fin ferme l'apercu. Sur sept lignes, les trous de la piste
+     Evenements — les jours sans evenement long — donnaient une grille qui
+     flotte au milieu de la page ; le filet lui rend un bord.
+
+     Le padding lateral coute de la largeur de piste, et cette largeur est
+     connue du script : 336px utiles a l'accueil, moins 2px de bordure,
+     moins 8px de padding, moins 6px de gouttieres, moins 36px pour la
+     colonne des jours = 284px pour trois pistes, soit 94px chacune.
+     C'est la constante LARGEUR de la section 19, qui en deduit la taille
+     des sprites de la piste Raids. Les deux ne doivent jamais bouger
+     l'une sans l'autre. */
+  border: 1px solid var(--border-carte);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 6px;
+}
+
+.cal-compact .cal-jour-num    { font-size: 1.2rem; }
+.cal-compact .cal-jour-lettre { font-size: 0.55rem; margin-bottom: 1px; }
+.cal-compact .cal-evt-nom     { font-size: 0.66rem; line-height: 1.2; }
+.cal-compact .cal-libelle     { font-size: 0.55rem; margin-bottom: 1px; }
+.cal-compact .cal-repli       { font-size: 0.6rem; }
+.cal-compact .cal-bloc .cal-sprites img { width: 22px; height: 22px; }
+
 /* --- Desktop : tout respire, les sprites grandissent --- */
 
 @media (min-width: 769px) {
@@ -424,4 +485,16 @@
   .cal-entete { font-size: 0.85rem; }
   .cal-jour-num { font-size: 1.9rem; }
   .cal-jour-lettre { font-size: 0.8rem; margin-bottom: 3px; }
+
+  /* L'apercu compact respire aussi, en gardant un cran de moins que la
+     page. Le script, lui, continue de calculer ses sprites de Raids sur
+     le pas mobile : cale pour le plus petit, il ne deborde jamais sur le
+     plus grand. C'est deja la regle de la page. */
+  .cal-compact { grid-auto-rows: 58px; }
+  .cal-compact .cal-jour-num { font-size: 1.45rem; }
+  .cal-compact .cal-jour-lettre { font-size: 0.7rem; }
+  .cal-compact .cal-libelle { font-size: 0.68rem; margin-bottom: 2px; }
+  .cal-compact .cal-evt-nom { font-size: 0.8rem; }
+  .cal-compact .cal-repli { font-size: 0.72rem; }
+  .cal-compact .cal-bloc .cal-sprites img { width: 32px; height: 32px; }
 }

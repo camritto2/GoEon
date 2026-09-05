@@ -6,6 +6,11 @@
     <loc>https://goeon.fr/</loc>
   </url>
 
+  <!-- Calendrier -->
+  <url>
+    <loc>https://goeon.fr/Calendrier</loc>
+  </url>
+
   <!-- Évènements -->
   <url>
     <loc>https://goeon.fr/MegaAscension</loc>

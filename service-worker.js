@@ -9,7 +9,9 @@ const FILES_TO_CACHE = [
   '/global.css',
   '/index.css',
   '/pokemon.css',
+  '/calendrier.css',
   '/script.js',
+  '/evenements.json',
   '/manifest.json',
   '/Images/icon-192.png',
   '/Images/icon-512.png'

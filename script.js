@@ -651,19 +651,29 @@ if (document.querySelector('.home-card[data-debut]')) {
   setInterval(majBadgesEvenements, 60000);
 }
 
-// 19. PAGE CALENDRIER (Calendrier.html)
+// 19. CALENDRIER (page Calendrier.html et apercu de l'accueil)
 // Le calendrier n'est pas une grille 7x5 mais quatre pistes verticales qui
 // partagent les memes lignes de grille : evenement long, jour, raids,
 // evenement quotidien. C'est ce qui permet de lire d'un coup d'oeil qu'un
 // evenement chevauche un Community Day, ce qu'une grille classique cache.
 //
+// UN SEUL MOTEUR, DEUX FENETRES. La page affiche le mois choisi, l'accueil
+// une fenetre glissante de sept jours qui commence aujourd'hui. Rien ne
+// distingue les deux rendus sinon les bornes qu'on leur donne : le moteur
+// travaille sur une fenetre de N jours et ne sait pas de quel mois il
+// s'agit. C'est ce qui permet a l'apercu de l'accueil de traverser une fin
+// de mois sans traitement particulier.
+//
 // Source unique : evenements.json, lu au chargement. Rien n'est ecrit en dur
-// dans Calendrier.html, qui ne contient que des conteneurs vides.
+// dans les pages, qui ne contiennent que des conteneurs vides. Les entrees
+// de tous les mois sont fusionnees en un seul flux avant rendu, puis
+// filtrees par chevauchement avec la fenetre : une entree saisie dans le
+// mois de septembre mais qui deborde sur octobre s'affiche dans les deux.
 //
 // Les pistes affichent des SPRITES, pas du texte : un sprite de 28px tient
 // dans une ligne de hauteur fixe la ou "Dynamax Oiseaux de Kanto" ne tient
-// pas. C'est ce qui rend possible l'alignement uniforme du mois. Le nom
-// complet et les bonus s'ouvrent dans le panneau de detail, au clic.
+// pas. C'est ce qui rend possible l'alignement uniforme. Le nom complet et
+// les bonus s'ouvrent dans le panneau de detail, au clic.
 //
 // Quand un sprite manque encore dans Images/, l'entree n'a pas de cle "img"
 // (ou pas de "sprites") et le script retombe sur le libelle court. On
@@ -684,8 +694,37 @@ if (document.querySelector('.home-card[data-debut]')) {
 // evenements, comme en section 18.
 
 (function () {
-  const grille = document.getElementById('cal-grille');
+  const grille = document.getElementById('cal-grille')
+              || document.getElementById('cal-semaine');
   if (!grille) return;
+
+  // Le conteneur choisi dit tout : #cal-grille = la page et son mois,
+  // #cal-semaine = l'apercu de l'accueil et ses sept jours.
+  const semaine = (grille.id === 'cal-semaine');
+  const FENETRE = 7;
+
+  // Pas vertical d'un jour, en pixels : hauteur de ligne + gouttiere.
+  // 58 + 2 sur la page, 44 + 2 dans l'apercu compact de l'accueil. C'est
+  // la seule constante qui change entre les deux contextes, et toutes les
+  // tailles de sprites de la piste Raids en decoulent. On garde toujours
+  // la valeur MOBILE : les lignes sont plus hautes sur grand ecran, donc
+  // un sprite calcule pour le mobile ne debordera jamais.
+  const PAS = semaine ? 46 : 60;
+
+  // Largeur utile d'une piste a sprites, en pixels, a 360px d'ecran.
+  // 98 sur la page. L'apercu de l'accueil perd 2px de bordure et 8px de
+  // padding lateral (voir .cal-compact dans calendrier.css), ce qui le
+  // ramene a 94. Comme PAS, c'est une valeur MOBILE : les pistes sont plus
+  // larges des qu'on grandit l'ecran, donc un sprite calcule ici ne
+  // debordera jamais ailleurs.
+  const LARGEUR = semaine ? 94 : 98;
+
+  // Numero de la premiere ligne de jour. La page reserve la ligne 1 aux
+  // en-tetes de pistes ; l'accueil s'en passe et commence donc a 1. La
+  // classe .cal-compact neutralise en consequence le grid-template-rows,
+  // sans quoi cette premiere ligne se dimensionnerait sur son contenu au
+  // lieu de suivre les autres.
+  const DECALAGE = semaine ? 1 : 2;
 
   const elMois   = document.getElementById('cal-mois-libelle');
   const elNotes  = document.getElementById('cal-notes');
@@ -699,6 +738,7 @@ if (document.querySelector('.home-card[data-debut]')) {
                        'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'décembre'];
 
   let donnees = null;
+  let tout = null;
   let indexMois = 0;
 
   // "2026-09-07" ou "2026-09-07T18:00" -> Date locale.
@@ -714,6 +754,23 @@ if (document.querySelector('.home-card[data-debut]')) {
       mn = hm[1] || 0;
     }
     return new Date(a, m - 1, j, h, mn);
+  }
+
+  // Meme date, ramenee a minuit. Toute la geometrie de la grille raisonne
+  // en jours pleins : une entree qui commence a 10h occupe sa ligne entiere.
+  function jourDe(d) {
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+
+  function ajouterJours(d, n) {
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+  }
+
+  // Ecart en jours pleins entre deux minuits. On arrondit au lieu de
+  // diviser sec : le dernier dimanche d'octobre dure 25 heures, et une
+  // division entiere y perdrait un jour sur toute la fin de la fenetre.
+  function ecartJours(a, b) {
+    return Math.round((jourDe(b) - jourDe(a)) / 86400000);
   }
 
   // "2026-08-31T10:00" -> "lundi 31 aout à 10h". Sans annee, conformement
@@ -765,19 +822,60 @@ if (document.querySelector('.home-card[data-debut]')) {
         && d1.getDate()     === d2.getDate();
   }
 
-  // Numero de jour dans le mois affiche, borne aux limites du mois : un
-  // evenement qui commence le mois precedent demarre visuellement au 1er.
-  function borner(date, annee, mois, nbJours) {
-    if (date.getFullYear() < annee || (date.getFullYear() === annee && date.getMonth() < mois)) return 1;
-    if (date.getFullYear() > annee || (date.getFullYear() === annee && date.getMonth() > mois)) return nbJours;
-    return date.getDate();
-  }
-
   function echapper(t) {
     const d = document.createElement('div');
     d.textContent = t;
     return d.innerHTML;
   }
+
+  // --- La fenetre affichee ---------------------------------------------
+
+  // Bornes courantes : sept jours a partir d'aujourd'hui sur l'accueil,
+  // le mois selectionne sur la page.
+  function fenetre() {
+    if (semaine) {
+      const debut = jourDe(new Date());
+      return { debut: debut, fin: ajouterJours(debut, FENETRE - 1), nb: FENETRE };
+    }
+    const [annee, numMois] = donnees.mois[indexMois].cle.split('-').map(Number);
+    const nb = new Date(annee, numMois, 0).getDate();
+    return { debut: new Date(annee, numMois - 1, 1), fin: new Date(annee, numMois - 1, nb), nb: nb };
+  }
+
+  // Numero de ligne de grille (1 = en-tetes), borne a la fenetre : une
+  // entree commencee avant demarre visuellement au premier jour affiche.
+  function ligneDe(date, f) {
+    let i = ecartJours(f.debut, date);
+    if (i < 0) i = 0;
+    if (i > f.nb - 1) i = f.nb - 1;
+    return i + DECALAGE;
+  }
+
+  function chevauche(debut, fin, f) {
+    return jourDe(fin) >= f.debut && jourDe(debut) <= f.fin;
+  }
+
+  // Toutes les entrees, tous mois confondus, en un seul flux. La fenetre
+  // de l'accueil peut chevaucher deux mois : le moteur ne doit pas avoir a
+  // savoir dans quelle entree de "mois" une donnee a ete saisie. Doublons
+  // ecartes au passage, au cas ou un evenement a cheval serait declare des
+  // deux cotes.
+  function aplatir(cle) {
+    const vus = new Set();
+    const sortie = [];
+    (donnees.mois || []).forEach(mois => {
+      (mois[cle] || []).forEach(entree => {
+        const id = (entree.nom || entree.long || entree.court || entree.categorie)
+                 + '|' + entree.debut + '|' + (entree.fin || '');
+        if (vus.has(id)) return;
+        vus.add(id);
+        sortie.push(entree);
+      });
+    });
+    return sortie;
+  }
+
+  // --- Sprites et dimensionnement --------------------------------------
 
   // Rangee de sprites, ou libelle de repli si aucune image n'est disponible.
   function rangeeSprites(fichiers, replis) {
@@ -790,14 +888,16 @@ if (document.querySelector('.home-card[data-debut]')) {
   }
 
   // Taille de sprite d'un segment de Raids. Deux contraintes se croisent :
-  // la largeur (98px pour N sprites cote a cote) et la hauteur (60*D-2
-  // pixels pour D jours, moins 10 d'ecart entre rangees et 4 de marges,
+  // la largeur (LARGEUR px pour N sprites cote a cote) et la hauteur (PAS*D-2
+  // pixels pour D jours, moins l'ecart entre rangees et les marges,
   // divises par les deux rangees). On prend la plus petite, arrondie a
-  // la classe inferieure. Un segment d'un jour tombe donc a 22px, ce qui
-  // est son maximum physique, tandis qu'une rotation de sept jours monte
-  // a 56px au lieu de laisser un grand vide.
-  const PALIERS = [22, 28, 36, 44, 56];
-  const ECARTS  = [10, 16, 24, 32, 40];
+  // la classe inferieure. Sur la page, un segment d'un jour tombe donc a
+  // 22px, ce qui est son maximum physique, tandis qu'une rotation de sept
+  // jours monte a 56px au lieu de laisser un grand vide. Dans l'apercu
+  // compact, ou le pas est de 46px, les memes segments descendent d'un
+  // cran : c'est le prix de la ligne a 44px, et c'est voulu.
+  const PALIERS = [16, 22, 28, 36, 44, 56];
+  const ECARTS  = [4, 10, 16, 24, 32, 40];
 
   function palier(valeur, table) {
     let choisi = table[0];
@@ -805,24 +905,28 @@ if (document.querySelector('.home-card[data-debut]')) {
     return choisi;
   }
 
-  function largeurDispo(n) { return (98 - 8 - (n - 1) * 2) / n; }
+  function largeurDispo(n) { return (LARGEUR - 8 - (n - 1) * 2) / n; }
 
-  // Taille en deux rangees empilees : la hauteur d'un segment de D jours
-  // vaut 60*D-2, moins l'ecart entre rangees et les marges, divisee par 2.
-  function tailleEmpilee(nbMax, jours) {
-    return palier(Math.min(largeurDispo(nbMax), 30 * jours - 13), PALIERS);
+  // L'ecart entre legendaires et megas grandit avec la duree : un segment
+  // de sept jours a de la hauteur a occuper, un segment d'un jour non. Il
+  // suit le pas vertical, sans quoi l'apercu compact decrocherait ses
+  // megas hors du bloc. Il se calcule AVANT la taille des sprites, qui
+  // occupe la hauteur qu'il laisse.
+  function valeurEcart(jours) {
+    return palier((10 + (jours - 1) * 6) * PAS / 60, ECARTS);
+  }
+
+  // Taille en deux rangees empilees. Hauteur reellement disponible d'un
+  // segment de D jours : PAS*D-2 pour le bloc, moins 4px de marges, moins
+  // l'ecart entre les deux rangees ; le reste se partage en deux.
+  function tailleEmpilee(nbMax, jours, ecart) {
+    return palier(Math.min(largeurDispo(nbMax), (PAS * jours - 6 - ecart) / 2), PALIERS);
   }
 
   // Taille sur une rangee unique : toute la hauteur pour un seul niveau,
   // mais tous les Pokemon se partagent la largeur.
   function tailleFusionnee(total, jours) {
-    return palier(Math.min(largeurDispo(total), 60 * jours - 6), PALIERS);
-  }
-
-  // L'ecart entre legendaires et megas grandit avec la duree : un segment
-  // de sept jours a de la hauteur a occuper, un segment d'un jour non.
-  function classeEcart(jours) {
-    return 'cal-ec-' + palier(10 + (jours - 1) * 6, ECARTS);
+    return palier(Math.min(largeurDispo(total), PAS * jours - 6), PALIERS);
   }
 
   // Rangee ou chaque Pokemon porte le nom de sa zone, empiles.
@@ -845,6 +949,8 @@ if (document.querySelector('.home-card[data-debut]')) {
     d.innerHTML = html;
     return d;
   }
+
+  // --- Panneau de detail ------------------------------------------------
 
   function fermerDetail() {
     elDetail.classList.remove('cal-detail-ouvert');
@@ -875,27 +981,31 @@ if (document.querySelector('.home-card[data-debut]')) {
     fermerDetail();
   });
 
+  // --- Rendu -------------------------------------------------------------
+
   function rendre() {
-    const mois = donnees.mois[indexMois];
-    const [annee, numMois] = mois.cle.split('-').map(Number);
-    const m = numMois - 1;
-    const nbJours = new Date(annee, numMois, 0).getDate();
+    const f = fenetre();
     const aujourdhui = new Date();
 
-    elMois.textContent = mois.libelle;
-    btnPrec.disabled = (indexMois === 0);
-    btnSuiv.disabled = (indexMois >= donnees.mois.length - 1);
-
-    elNotes.innerHTML = (mois.notes || []).map(n => '<p>' + echapper(n) + '</p>').join('');
-    elNotes.style.display = (mois.notes && mois.notes.length) ? '' : 'none';
+    // Navigation et notes n'existent que sur la page : l'apercu de
+    // l'accueil n'a ni l'une ni les autres.
+    if (elMois) {
+      const mois = donnees.mois[indexMois];
+      elMois.textContent = mois.libelle;
+      btnPrec.disabled = (indexMois === 0);
+      btnSuiv.disabled = (indexMois >= donnees.mois.length - 1);
+      elNotes.innerHTML = (mois.notes || []).map(n => '<p>' + echapper(n) + '</p>').join('');
+      elNotes.style.display = (mois.notes && mois.notes.length) ? '' : 'none';
+    }
 
     fermerDetail();
-
     grille.innerHTML = '';
 
     // Ligne 1 : en-tetes de pistes. La colonne des jours n'en porte pas,
-    // son contenu se lit seul.
-    [['Évènements', 'evenements'], null, ['Raids', 'raids'], ['Quotidien', 'quotidien']]
+    // son contenu se lit seul. L'apercu de l'accueil s'en passe : sur sept
+    // lignes, une rangee d'etiquettes coute proportionnellement trop cher,
+    // et les couleurs de pistes suffisent a la lecture.
+    if (!semaine) [['Évènements', 'evenements'], null, ['Raids', 'raids'], ['Quotidien', 'quotidien']]
       .forEach((h, i) => {
         if (!h) return;
         const e = document.createElement('div');
@@ -906,11 +1016,12 @@ if (document.querySelector('.home-card[data-debut]')) {
         grille.appendChild(e);
       });
 
-    // Piste 1 : evenements longs. Les jours occupent les lignes 2 a N+1.
-    (mois.evenements || []).forEach(ev => {
-      const d1 = borner(versDate(ev.debut), annee, m, nbJours);
-      const d2 = borner(versDate(ev.fin),   annee, m, nbJours);
-      const el = bloc(1, d1 + 1, d2 - d1 + 1, 'cal-bloc cal-cat-evenement',
+    // Piste 1 : evenements longs
+    tout.evenements.forEach(ev => {
+      if (!chevauche(versDate(ev.debut), versDate(ev.fin), f)) return;
+      const l1 = ligneDe(versDate(ev.debut), f);
+      const l2 = ligneDe(versDate(ev.fin), f);
+      const el = bloc(1, l1, l2 - l1 + 1, 'cal-bloc cal-cat-evenement',
         '<span class="cal-evt-nom">' + echapper(ev.nom) + '</span>');
       el.addEventListener('click', () => afficherDetail(
         ev.nom, null,
@@ -921,25 +1032,25 @@ if (document.querySelector('.home-card[data-debut]')) {
     });
 
     // Piste 2 : les jours
-    for (let j = 1; j <= nbJours; j++) {
-      const date = new Date(annee, m, j);
+    for (let i = 0; i < f.nb; i++) {
+      const date = ajouterJours(f.debut, i);
       const idx = (date.getDay() + 6) % 7;
       let cls = 'cal-jour';
       if (idx === 5) cls += ' cal-jour-samedi';
       if (memeJour(date, aujourdhui)) cls += ' cal-jour-aujourdhui';
-      grille.appendChild(bloc(2, j + 1, 1, cls,
+      grille.appendChild(bloc(2, i + DECALAGE, 1, cls,
         '<span class="cal-jour-lettre">' + JOURS[idx] + '</span>' +
-        '<span class="cal-jour-num">' + j + '</span>'));
+        '<span class="cal-jour-num">' + date.getDate() + '</span>'));
     }
 
     // Piste 3 : raids, recalcules jour par jour puis fusionnes
     const parJour = [];
-    for (let j = 1; j <= nbJours; j++) {
-      const date = new Date(annee, m, j);
+    for (let i = 0; i < f.nb; i++) {
+      const date = ajouterJours(f.debut, i);
       const actifs = { legendaire: [], mega: [], obscur: [] };
-      (mois.raids || []).forEach(r => {
+      tout.raids.forEach(r => {
         if (!actifs[r.categorie]) return;
-        if (date >= versDate(r.debut) && date <= versDate(r.fin)) {
+        if (date >= jourDe(versDate(r.debut)) && date <= jourDe(versDate(r.fin))) {
           r.pokemon.forEach(p => {
             if (!actifs[r.categorie].some(x => x.nom === p.nom)) actifs[r.categorie].push(p);
           });
@@ -950,15 +1061,15 @@ if (document.querySelector('.home-card[data-debut]')) {
 
     const signature = a => JSON.stringify([a.legendaire.map(p => p.nom), a.mega.map(p => p.nom)]);
 
-    let j = 1;
-    while (j <= nbJours) {
-      const cle = signature(parJour[j - 1]);
-      let fin = j;
-      while (fin < nbJours && signature(parJour[fin]) === cle) fin++;
+    let i = 0;
+    while (i < f.nb) {
+      const cle = signature(parJour[i]);
+      let fin = i;
+      while (fin + 1 < f.nb && signature(parJour[fin + 1]) === cle) fin++;
 
-      const a = parJour[j - 1];
+      const a = parJour[i];
       if (a.legendaire.length || a.mega.length) {
-        const jours = fin - j + 1;
+        const jours = fin - i + 1;
         const regionalise = a.legendaire.some(p => p.region);
 
         // En mode regionalise les legendaires sont empiles, pas cote a
@@ -970,11 +1081,13 @@ if (document.querySelector('.home-card[data-debut]')) {
         // donne parfois des sprites plus grands que de les empiler. C'est
         // le cas du 30 septembre : Xerneas et Mega-Empiflor passent de 22
         // a 44px en se placant cote a cote.
+        const ecart = valeurEcart(jours);
+
         const fusion = !regionalise
                     && a.legendaire.length && a.mega.length
-                    && tailleFusionnee(total, jours) > tailleEmpilee(nbMax, jours);
+                    && tailleFusionnee(total, jours) > tailleEmpilee(nbMax, jours, ecart);
 
-        const taille = fusion ? tailleFusionnee(total, jours) : tailleEmpilee(nbMax, jours);
+        const taille = fusion ? tailleFusionnee(total, jours) : tailleEmpilee(nbMax, jours, ecart);
 
         let html = '';
         if (fusion) {
@@ -998,17 +1111,16 @@ if (document.querySelector('.home-card[data-debut]')) {
           }
         }
 
-        const dSeg = j, fSeg = fin;
-        const el = bloc(3, j + 1, jours,
-          'cal-raids cal-sp-' + taille + ' ' + classeEcart(jours), html);
+        const dSeg = ajouterJours(f.debut, i);
+        const fSeg = ajouterJours(f.debut, fin);
+        const obscurs = parJour[i].obscur;
+        const el = bloc(3, i + DECALAGE, jours,
+          'cal-raids cal-sp-' + taille + ' cal-ec-' + ecart, html);
         el.addEventListener('click', () => {
-          const dtD = new Date(annee, m, dSeg);
-          const dtF = new Date(annee, m, fSeg);
           const jourTexte = d => JOURS_LONGS[(d.getDay() + 6) % 7] + ' ' + d.getDate();
-          const titre = (dSeg === fSeg)
-            ? 'Raids du ' + jourTexte(dtD)
-            : 'Raids du ' + jourTexte(dtD) + ' au ' + jourTexte(dtF);
-          const obscurs = parJour[dSeg - 1].obscur;
+          const titre = memeJour(dSeg, fSeg)
+            ? 'Raids du ' + jourTexte(dSeg)
+            : 'Raids du ' + jourTexte(dSeg) + ' au ' + jourTexte(fSeg);
           afficherDetail(titre, 'De 6h à 21h44', [
             a.legendaire.length
               ? 'Légendaires : ' + (regionalise
@@ -1021,19 +1133,41 @@ if (document.querySelector('.home-card[data-debut]')) {
         });
         grille.appendChild(el);
       }
-      j = fin + 1;
+      i = fin + 1;
     }
 
     // Piste 4 : evenements quotidiens, horaire au-dessus du sprite
-    (mois.quotidiens || []).forEach(q => {
-      const d1 = borner(versDate(q.debut), annee, m, nbJours);
-      const d2 = q.fin ? borner(versDate(q.fin), annee, m, nbJours) : d1;
-      const lignes = q.lignes || (q.heures ? [q.heures] : []);
+    tout.quotidiens.forEach(q => {
+      const dDeb = versDate(q.debut);
+      const dFin = q.fin ? versDate(q.fin) : dDeb;
+      if (!chevauche(dDeb, dFin, f)) return;
+
+      const l1 = ligneDe(dDeb, f);
+      const l2 = ligneDe(dFin, f);
+      const saisies = q.lignes || (q.heures ? [q.heures] : []);
+
+      // Une ligne de 44px ne tient pas deux lignes de texte ET un sprite :
+      // dans l'apercu compact on ne garde donc qu'une ligne, celle que
+      // porte la cle "compact" si elle existe, sinon la PREMIERE saisie.
+      // C'est la categorie et non l'horaire : sans les en-tetes de pistes,
+      // c'est elle qui dit ce qu'on regarde, et l'horaire reste a un clic
+      // dans le panneau de detail.
+      const lignes = semaine
+        ? (q.compact ? [q.compact] : saisies.slice(0, 1))
+        : saisies;
+
+      // Le repli textuel ne sert qu'a remplacer un sprite manquant. En
+      // compact, ou le libelle affiche deja la categorie, il ecrirait le
+      // meme mot deux fois de suite : on ne le pose alors que si aucun
+      // libelle n'a ete retenu.
+      const aSprites = !!(q.sprites && q.sprites.length);
       const html = (lignes.length
                      ? '<span class="cal-libelle">' + lignes.map(echapper).join('<br>') + '</span>'
                      : '')
-                 + rangeeSprites(q.sprites, q.court);
-      const el = bloc(4, d1 + 1, d2 - d1 + 1, 'cal-bloc cal-cat-' + q.categorie, html);
+                 + ((aSprites || !semaine || !lignes.length)
+                     ? rangeeSprites(q.sprites, q.court)
+                     : '');
+      const el = bloc(4, l1, l2 - l1 + 1, 'cal-bloc cal-cat-' + q.categorie, html);
       el.addEventListener('click', () => afficherDetail(
         q.long, q.heures, [q.bonus ? 'Bonus : ' + q.bonus : null], q.page
       ));
@@ -1049,19 +1183,35 @@ if (document.querySelector('.home-card[data-debut]')) {
     .then(d => {
       donnees = d;
       if (!donnees.mois || !donnees.mois.length) throw new Error('aucun mois');
-      // On ouvre sur le mois en cours s'il est present, sinon sur le premier.
-      const maintenant = new Date();
-      const cleActuelle = maintenant.getFullYear() + '-' + String(maintenant.getMonth() + 1).padStart(2, '0');
-      const trouve = donnees.mois.findIndex(x => x.cle === cleActuelle);
-      indexMois = (trouve >= 0) ? trouve : 0;
+      tout = {
+        evenements: aplatir('evenements'),
+        raids:      aplatir('raids'),
+        quotidiens: aplatir('quotidiens')
+      };
+      // La page s'ouvre sur le mois en cours s'il est present, sinon sur
+      // le premier. L'apercu de l'accueil n'a pas de mois a choisir.
+      if (!semaine) {
+        const maintenant = new Date();
+        const cleActuelle = maintenant.getFullYear() + '-' + String(maintenant.getMonth() + 1).padStart(2, '0');
+        const trouve = donnees.mois.findIndex(x => x.cle === cleActuelle);
+        indexMois = (trouve >= 0) ? trouve : 0;
+      }
       rendre();
     })
     .catch(() => {
+      // Sur la page, on le dit. Sur l'accueil, on efface la section : une
+      // page d'accueil n'a pas a porter un message d'erreur pour un
+      // apercu qui n'est pas son contenu principal.
+      if (semaine) {
+        const section = grille.closest('.home-section');
+        if (section) section.style.display = 'none';
+        return;
+      }
       elMois.textContent = 'Calendrier indisponible';
       grille.innerHTML = '';
       elNotes.innerHTML = '<p>Les données du calendrier n\'ont pas pu être chargées. Réessayez plus tard.</p>';
     });
 
-  btnPrec.addEventListener('click', () => { if (indexMois > 0) { indexMois--; rendre(); } });
-  btnSuiv.addEventListener('click', () => { if (donnees && indexMois < donnees.mois.length - 1) { indexMois++; rendre(); } });
+  if (btnPrec) btnPrec.addEventListener('click', () => { if (indexMois > 0) { indexMois--; rendre(); } });
+  if (btnSuiv) btnSuiv.addEventListener('click', () => { if (donnees && indexMois < donnees.mois.length - 1) { indexMois++; rendre(); } });
 })();

@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 4.9 - 4 septembre 2026.*
+*Version 5.0 - 5 septembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -251,6 +251,23 @@ Badge Obscur sur **toutes** les cartes, dans `.badges`, **après** le shiny : `<
 - **Nouveautés** : un `news-group` daté au format `JJ/MM`, un `news-items li` par entrée. **À mettre à jour à chaque livraison de contenu.**
 - **Ancres d'accueil** : `scroll-margin-top: 70px` sur `.home-section` et `.type-grid`. L'ancre `#types` est posée **sur la grille, pas sur la section**, afin de dépasser le titre — ne pas la « remonter ».
 - **Menu mobile** : `max-height: calc(100vh - 60px)` + `overflow-y: auto` + `overscroll-behavior: contain`. Ce dernier est indispensable : sans lui, le scroll interne du menu referme le menu.
+
+### Calendrier
+
+Le calendrier de `Calendrier.html` et l'aperçu de sept jours de l'accueil sont **le même moteur** (`script.js` §19), qui travaille sur une **fenêtre de N jours** et ignore la notion de mois : la page lui donne le mois choisi, l'accueil aujourd'hui → J+6. Les entrées de tous les mois de `evenements.json` sont fusionnées puis filtrées par chevauchement. Conséquence à connaître : **un évènement saisi sous un mois mais qui déborde sur le suivant s'affiche dans les deux**, sans avoir à le ressaisir — et le ressaisir des deux côtés serait un doublon.
+
+⚠️ **Deux constantes du script portent des mesures qui vivent dans `calendrier.css`, et ne se modifient jamais l'une sans l'autre.**
+
+| Constante | Ce qu'elle vaut | Ce qu'elle mesure |
+|---|---|---|
+| `PAS` | 60 sur la page, 46 en compact | hauteur de ligne + gouttière |
+| `LARGEUR` | 98 sur la page, 94 en compact | largeur utile d'une piste à sprites |
+
+Toute la taille des sprites de la piste Raids en découle : le script choisit le plus grand palier qui tient à la fois en largeur et en hauteur. Changer `grid-auto-rows`, la bordure ou le padding de `.cal-compact` sans recalculer la constante fait déborder les sprites hors de leur bloc — silencieusement, et seulement sur certaines rotations.
+
+Les deux constantes sont des **valeurs mobiles**. Lignes et pistes ne font que grandir sur écran large, donc un sprite calculé sur la valeur mobile ne déborde jamais ailleurs. Ne pas les caler sur le desktop.
+
+Autres points fixes : la piste Quotidien n'affiche **qu'une ligne de texte en compact** (deux lignes plus un sprite ne tiennent pas dans 44px) — c'est la première ligne saisie, donc la catégorie, une clé `"compact"` du JSON prenant le dessus si besoin. Un mois nouveau demande son entrée `cle` / `libelle` dans `evenements.json`, **même vide** : sans elle, la navigation ne peut pas l'atteindre, quand bien même des données à cheval s'y afficheraient.
 
 ---
 
