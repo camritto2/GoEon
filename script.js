@@ -694,6 +694,9 @@ if (document.querySelector('.home-card[data-debut]')) {
   const btnSuiv  = document.getElementById('cal-suiv');
 
   const JOURS = ['lun', 'mar', 'mer', 'jeu', 'ven', 'sam', 'dim'];
+  const JOURS_LONGS = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+  const MOIS_LONGS  = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+                       'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'décembre'];
 
   let donnees = null;
   let indexMois = 0;
@@ -711,6 +714,49 @@ if (document.querySelector('.home-card[data-debut]')) {
       mn = hm[1] || 0;
     }
     return new Date(a, m - 1, j, h, mn);
+  }
+
+  // "2026-08-31T10:00" -> "lundi 31 aout à 10h". Sans annee, conformement
+  // aux conventions du site ; l'heure n'apparait que si la chaine en porte
+  // une, et les minutes seulement si elles ne sont pas nulles.
+  function dateLongue(chaine) {
+    const d = versDate(chaine);
+    let texte = JOURS_LONGS[(d.getDay() + 6) % 7] + ' ' + d.getDate() + ' ' + MOIS_LONGS[d.getMonth()];
+    if (String(chaine).indexOf('T') !== -1) {
+      texte += ' à ' + d.getHours() + 'h'
+             + (d.getMinutes() ? String(d.getMinutes()).padStart(2, '0') : '');
+    }
+    return texte;
+  }
+
+  // Le vert "Bon" n'est pas une donnee du calendrier : il vit dans
+  // pokemon.css, qui cible .pk-<slug> .pokemon-name. On se contente de
+  // poser les memes classes, et la couleur suit sans rien saisir ici.
+  // Le slug est le nom de base, sans accent et sans le prefixe Mega,
+  // puisque c'est ainsi que pokemon.css les declare.
+  function slugPokemon(nom) {
+    return String(nom)
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/^mega-?/, '')
+      .replace(/[^a-z0-9]/g, '');
+  }
+
+  function nomHtml(p) {
+    let h = '<span class="pk-' + slugPokemon(p.nom) + '">'
+          + '<span class="pokemon-name">' + echapper(p.nom) + '</span></span>';
+    if (p.forme) h += ' <em class="cal-forme">' + echapper(p.forme) + '</em>';
+    return h;
+  }
+
+  // Enumeration a la francaise : virgules, puis "&" devant le dernier.
+  function joindre(parts) {
+    if (parts.length <= 1) return parts.join('');
+    return parts.slice(0, -1).join(', ') + ' & ' + parts[parts.length - 1];
+  }
+
+  function listeNoms(liste) {
+    return joindre(liste.map(nomHtml));
   }
 
   function memeJour(d1, d2) {
@@ -751,14 +797,32 @@ if (document.querySelector('.home-card[data-debut]')) {
   // est son maximum physique, tandis qu'une rotation de sept jours monte
   // a 56px au lieu de laisser un grand vide.
   const PALIERS = [22, 28, 36, 44, 56];
+  const ECARTS  = [10, 16, 24, 32, 40];
 
-  function classeTaille(nbMax, jours) {
-    const parLargeur = (98 - 8 - (nbMax - 1) * 2) / nbMax;
-    const parHauteur = 30 * jours - 13;
-    const cible = Math.min(parLargeur, parHauteur);
-    let choisi = PALIERS[0];
-    PALIERS.forEach(p => { if (p <= cible) choisi = p; });
-    return 'cal-sp-' + choisi;
+  function palier(valeur, table) {
+    let choisi = table[0];
+    table.forEach(p => { if (p <= valeur) choisi = p; });
+    return choisi;
+  }
+
+  function largeurDispo(n) { return (98 - 8 - (n - 1) * 2) / n; }
+
+  // Taille en deux rangees empilees : la hauteur d'un segment de D jours
+  // vaut 60*D-2, moins l'ecart entre rangees et les marges, divisee par 2.
+  function tailleEmpilee(nbMax, jours) {
+    return palier(Math.min(largeurDispo(nbMax), 30 * jours - 13), PALIERS);
+  }
+
+  // Taille sur une rangee unique : toute la hauteur pour un seul niveau,
+  // mais tous les Pokemon se partagent la largeur.
+  function tailleFusionnee(total, jours) {
+    return palier(Math.min(largeurDispo(total), 60 * jours - 6), PALIERS);
+  }
+
+  // L'ecart entre legendaires et megas grandit avec la duree : un segment
+  // de sept jours a de la hauteur a occuper, un segment d'un jour non.
+  function classeEcart(jours) {
+    return 'cal-ec-' + palier(10 + (jours - 1) * 6, ECARTS);
   }
 
   // Rangee ou chaque Pokemon porte le nom de sa zone, empiles.
@@ -782,13 +846,34 @@ if (document.querySelector('.home-card[data-debut]')) {
     return d;
   }
 
-  function afficherDetail(titre, heures, lignes, page) {
-    let html = '<h3>' + echapper(titre) + '</h3>';
-    if (heures) html += '<p class="cal-detail-heures">' + echapper(heures) + '</p>';
-    lignes.forEach(l => { if (l) html += '<p>' + echapper(l) + '</p>'; });
-    if (page) html += '<p><a href="' + page + '">Voir la page dédiée</a></p>';
-    elDetail.innerHTML = html;
+  function fermerDetail() {
+    elDetail.classList.remove('cal-detail-ouvert');
+    elDetail.innerHTML = '';
   }
+
+  function afficherDetail(titre, heures, lignes, page) {
+    let html = '<button type="button" class="cal-detail-fermer" aria-label="Fermer">×</button>'
+             + '<h3>' + echapper(titre) + '</h3>';
+    if (heures) html += '<p class="cal-detail-heures">' + echapper(heures) + '</p>';
+    lignes.forEach(l => { if (l) html += '<p>' + l + '</p>'; });
+    if (page) html += '<p><a href="' + page + '">Voir la page de l\'Évènement</a></p>';
+    elDetail.innerHTML = html;
+    elDetail.classList.add('cal-detail-ouvert');
+    elDetail.querySelector('.cal-detail-fermer').addEventListener('click', fermerDetail);
+  }
+
+  // Le panneau flotte au-dessus de la grille : on le ferme a la touche
+  // Echap et au clic hors de lui, sans quoi il resterait a l'ecran.
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') fermerDetail();
+  });
+
+  document.addEventListener('click', e => {
+    if (!elDetail.classList.contains('cal-detail-ouvert')) return;
+    if (elDetail.contains(e.target)) return;
+    if (e.target.closest('.cal-bloc, .cal-raids')) return;
+    fermerDetail();
+  });
 
   function rendre() {
     const mois = donnees.mois[indexMois];
@@ -804,7 +889,7 @@ if (document.querySelector('.home-card[data-debut]')) {
     elNotes.innerHTML = (mois.notes || []).map(n => '<p>' + echapper(n) + '</p>').join('');
     elNotes.style.display = (mois.notes && mois.notes.length) ? '' : 'none';
 
-    elDetail.innerHTML = '<p class="cal-detail-vide">Cliquez sur un évènement pour afficher son détail.</p>';
+    fermerDetail();
 
     grille.innerHTML = '';
 
@@ -829,7 +914,7 @@ if (document.querySelector('.home-card[data-debut]')) {
         '<span class="cal-evt-nom">' + echapper(ev.nom) + '</span>');
       el.addEventListener('click', () => afficherDetail(
         ev.nom, null,
-        ['Du ' + ev.debut.replace('T', ' à ') + ' au ' + ev.fin.replace('T', ' à ')],
+        ['Du ' + dateLongue(ev.debut) + ' au ' + dateLongue(ev.fin)],
         ev.page
       ));
       grille.appendChild(el);
@@ -876,35 +961,64 @@ if (document.querySelector('.home-card[data-debut]')) {
         const jours = fin - j + 1;
         const regionalise = a.legendaire.some(p => p.region);
 
-        let html = '';
-        if (a.legendaire.length) {
-          html += regionalise
-            ? rangeeRegions(a.legendaire)
-            : rangeeSprites(a.legendaire.filter(p => p.img).map(p => p.img),
-                            a.legendaire.map(p => p.nom).join(', '));
-        }
-        if (a.mega.length) {
-          html += '<span class="cal-raids-megas">'
-                + rangeeSprites(a.mega.filter(p => p.img).map(p => p.img),
-                                a.mega.map(p => p.nom).join(', '))
-                + '</span>';
-        }
-
         // En mode regionalise les legendaires sont empiles, pas cote a
         // cote : seuls les megas contraignent alors la largeur.
         const nbMax = Math.max(regionalise ? 1 : a.legendaire.length, a.mega.length, 1);
+        const total = a.legendaire.length + a.mega.length;
+
+        // Sur un segment court, mettre tout le monde sur une seule rangee
+        // donne parfois des sprites plus grands que de les empiler. C'est
+        // le cas du 30 septembre : Xerneas et Mega-Empiflor passent de 22
+        // a 44px en se placant cote a cote.
+        const fusion = !regionalise
+                    && a.legendaire.length && a.mega.length
+                    && tailleFusionnee(total, jours) > tailleEmpilee(nbMax, jours);
+
+        const taille = fusion ? tailleFusionnee(total, jours) : tailleEmpilee(nbMax, jours);
+
+        let html = '';
+        if (fusion) {
+          html = '<span class="cal-sprites">'
+               + a.legendaire.concat(a.mega).map(p => p.img
+                   ? '<img src="Images/' + p.img + '" alt="" loading="lazy">'
+                   : '<span class="cal-repli">' + echapper(p.nom) + '</span>').join('')
+               + '</span>';
+        } else {
+          if (a.legendaire.length) {
+            html += regionalise
+              ? rangeeRegions(a.legendaire)
+              : rangeeSprites(a.legendaire.filter(p => p.img).map(p => p.img),
+                              a.legendaire.map(p => p.nom).join(', '));
+          }
+          if (a.mega.length) {
+            html += '<span class="cal-raids-megas">'
+                  + rangeeSprites(a.mega.filter(p => p.img).map(p => p.img),
+                                  a.mega.map(p => p.nom).join(', '))
+                  + '</span>';
+          }
+        }
+
         const dSeg = j, fSeg = fin;
-        const el = bloc(3, j + 1, jours, 'cal-raids ' + classeTaille(nbMax, jours), html);
-        el.addEventListener('click', () => afficherDetail(
-          'Raids du ' + dSeg + ' au ' + fSeg,
-          'De 6h à 21h44',
-          [
-            a.legendaire.length ? 'Légendaires : ' + a.legendaire.map(p => p.nom).join(', ') : null,
-            a.mega.length       ? 'Méga-Raids : ' + a.mega.map(p => p.nom).join(', ')        : null,
-            parJour[dSeg - 1].obscur.length ? 'Obscurs : ' + parJour[dSeg - 1].obscur.map(p => p.nom).join(', ') : null
-          ],
-          'raids.html'
-        ));
+        const el = bloc(3, j + 1, jours,
+          'cal-raids cal-sp-' + taille + ' ' + classeEcart(jours), html);
+        el.addEventListener('click', () => {
+          const dtD = new Date(annee, m, dSeg);
+          const dtF = new Date(annee, m, fSeg);
+          const jourTexte = d => JOURS_LONGS[(d.getDay() + 6) % 7] + ' ' + d.getDate();
+          const titre = (dSeg === fSeg)
+            ? 'Raids du ' + jourTexte(dtD)
+            : 'Raids du ' + jourTexte(dtD) + ' au ' + jourTexte(dtF);
+          const obscurs = parJour[dSeg - 1].obscur;
+          afficherDetail(titre, 'De 6h à 21h44', [
+            a.legendaire.length
+              ? 'Légendaires : ' + (regionalise
+                  ? joindre(a.legendaire.map(p => nomHtml(p) + ' en ' + echapper(p.region)))
+                  : listeNoms(a.legendaire))
+              : null,
+            a.mega.length  ? 'Méga-Raids : ' + listeNoms(a.mega) : null,
+            obscurs.length ? 'Obscurs : ' + listeNoms(obscurs)   : null
+          ]);
+        });
         grille.appendChild(el);
       }
       j = fin + 1;
@@ -945,7 +1059,7 @@ if (document.querySelector('.home-card[data-debut]')) {
     .catch(() => {
       elMois.textContent = 'Calendrier indisponible';
       grille.innerHTML = '';
-      elDetail.innerHTML = '<p class="cal-detail-vide">Les données du calendrier n\'ont pas pu être chargées. Réessayez plus tard.</p>';
+      elNotes.innerHTML = '<p>Les données du calendrier n\'ont pas pu être chargées. Réessayez plus tard.</p>';
     });
 
   btnPrec.addEventListener('click', () => { if (indexMois > 0) { indexMois--; rendre(); } });

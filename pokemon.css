@@ -2686,10 +2686,8 @@
 .pk-regice .research-reward-name { color: var(--accent-vert-bon); }
 .pk-regice .emoji-shiny  { display: inline; }
 
-/* Regirock — Bon / Shiny */
-.pk-regirock .pokemon-name { color: var(--accent-vert-bon); }
-.pk-regirock .research-reward-name { color: var(--accent-vert-bon); }
-.pk-regirock .emoji-shiny  { display: inline; }
+/* Regirock — Normal / Shiny */
+.pk-regirock .emoji-shiny { display: inline; }
 
 /* Regidrago — Bon / Shiny */
 .pk-regidrago .pokemon-name { color: var(--accent-vert-bon); }
@@ -2733,6 +2731,16 @@
 .pk-rexillius .pokemon-name { color: var(--accent-vert-bon); }
 .pk-rexillius .research-reward-name { color: var(--accent-vert-bon); }
 .pk-rexillius .emoji-shiny  { display: inline; }
+
+/* Rhinocorne — Bon / Shiny */
+.pk-rhinocorne .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rhinocorne .research-reward-name { color: var(--accent-vert-bon); }
+.pk-rhinocorne .emoji-shiny  { display: inline; }
+
+/* Rhinoféros — Bon / Shiny */
+.pk-rhinoferos .pokemon-name { color: var(--accent-vert-bon); }
+.pk-rhinoferos .research-reward-name { color: var(--accent-vert-bon); }
+.pk-rhinoferos .emoji-shiny  { display: inline; }
 
 /* Rhinolove — Normal / Shiny */
 .pk-rhinolove .emoji-shiny { display: inline; }

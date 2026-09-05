@@ -4,11 +4,6 @@
     {
       "cle": "2026-09",
       "libelle": "Septembre 2026",
-      "notes": [
-        "Sauf mention contraire, les évènements commencent à 10h et se terminent à 20h.",
-        "La rotation des Raids se fait le mercredi à 6h.",
-        "Les Dynamax arrivent à 5h."
-      ],
       "evenements": [
         {
           "nom": "Méga Ascension",
@@ -60,8 +55,9 @@
           "fin": "2026-09-15",
           "pokemon": [
             {
-              "nom": "Zacian Héros Aguerri",
-              "img": "ZacianHA.png"
+              "nom": "Zacian",
+              "img": "ZacianHA.png",
+              "forme": "Héros Aguerri"
             }
           ]
         },
@@ -71,8 +67,9 @@
           "fin": "2026-09-22",
           "pokemon": [
             {
-              "nom": "Zamazenta Héros Aguerri",
-              "img": "ZamazentaHA.png"
+              "nom": "Zamazenta",
+              "img": "ZamazentaHA.png",
+              "forme": "Héros Aguerri"
             }
           ]
         },
@@ -84,17 +81,17 @@
             {
               "nom": "Cancrelove",
               "img": "Cancrelove.png",
-              "region": "Europe-Afrique"
+              "region": "Europe et Afrique"
             },
             {
               "nom": "Mouscoto",
               "img": "Mouscoto.png",
-              "region": "Amériques"
+              "region": "Amérique"
             },
             {
               "nom": "Câblifère",
               "img": "Cablifere.png",
-              "region": "Asie-Pacifique"
+              "region": "Asie et Pacifique"
             }
           ]
         },
@@ -181,8 +178,9 @@
           "fin": "2026-09-08",
           "pokemon": [
             {
-              "nom": "Giratina Forme Alternative",
-              "img": "GiratinaA.png"
+              "nom": "Giratina",
+              "img": "GiratinaA.png",
+              "forme": "Forme Alternative"
             }
           ]
         },
@@ -192,8 +190,9 @@
           "fin": "2026-10-06",
           "pokemon": [
             {
-              "nom": "Fulguris Forme Avatar",
-              "img": "FulgurisA.png"
+              "nom": "Fulguris",
+              "img": "FulgurisA.png",
+              "forme": "Forme Avatar"
             }
           ]
         }
@@ -218,8 +217,8 @@
           "categorie": "dynamax",
           "court": "Dynamax Tarsal",
           "long": "Lundi Dynamax - Tarsal",
-          "heures": "18h - 19h",
-          "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
           "sprites": [
             "Tarsal.png"
           ],
@@ -231,7 +230,7 @@
           "debut": "2026-09-09",
           "categorie": "heure-raid",
           "court": "Raids Zacian",
-          "long": "Heure de Raid - Zacian Héros Aguerri",
+          "long": "Heure de Raid - Zacian",
           "heures": "18h - 19h",
           "sprites": [
             "ZacianHA.png"
@@ -245,7 +244,7 @@
           "debut": "2026-09-10",
           "categorie": "heure-vedette",
           "court": "Heure Aspicot",
-          "long": "Heure Vedette - Aspicot, Coconfort, Dardargnan",
+          "long": "Heure Vedette - Aspicot, Coconfort & Dardargnan",
           "heures": "18h - 19h",
           "bonus": "Double Bonbons de Transfert",
           "sprites": [
@@ -264,7 +263,7 @@
           "court": "CDC Griknot",
           "long": "Community Day Classique - Griknot",
           "heures": "14h - 17h",
-          "bonus": "Bonus prolongés jusqu'à 21h",
+          "bonus": "Certains bonus prolongés jusqu'à 21h",
           "sprites": [
             "Griknot.png"
           ],
@@ -278,7 +277,7 @@
           "debut": "2026-09-13",
           "categorie": "heure-vedette",
           "court": "Heure Malosse",
-          "long": "Heure Vedette - Malosse, Démolosse",
+          "long": "Heure Vedette - Malosse & Démolosse",
           "heures": "18h - 19h",
           "bonus": "Double Bonbons de Transfert",
           "sprites": [
@@ -295,8 +294,8 @@
           "categorie": "dynamax",
           "court": "Dynamax Rhinocorne",
           "long": "Lundi Dynamax - Rhinocorne",
-          "heures": "18h - 19h",
-          "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
           "lignes": [
             "Dynamax"
           ],
@@ -308,7 +307,7 @@
           "debut": "2026-09-16",
           "categorie": "heure-raid",
           "court": "Raids Zamazenta",
-          "long": "Heure de Raid - Zamazenta Héros Aguerri",
+          "long": "Heure de Raid - Zamazenta",
           "heures": "18h - 19h",
           "lignes": [
             "Heure Raids",
@@ -341,7 +340,7 @@
           ],
           "page": "MegaEtouraptor.html",
           "lignes": [
-            "Super Méga-Raids",
+            "Méga-Raids",
             "14h-17h"
           ]
         },
@@ -349,9 +348,9 @@
           "debut": "2026-09-21",
           "categorie": "dynamax",
           "court": "Dynamax Oiseaux de Kanto",
-          "long": "Lundi Dynamax - Artikodin, Électhor, Sulfura",
-          "heures": "18h - 19h",
-          "bonus": "Apparaissent plus souvent aux Sources d'Énergie la semaine suivante",
+          "long": "Lundi Dynamax - Artikodin, Électhor & Sulfura",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
           "sprites": [
             "Artikodin.png",
             "Electhor.png",
@@ -364,13 +363,11 @@
         {
           "debut": "2026-09-23",
           "categorie": "heure-raid",
-          "court": "Raids Cancrelove +2",
-          "long": "Heure de Raid - Cancrelove, Mouscoto, Câblifère",
+          "court": "Raids Cancrelove",
+          "long": "Heure de Raid - Cancrelove",
           "heures": "18h - 19h",
           "sprites": [
-            "Cancrelove.png",
-            "Mouscoto.png",
-            "Cablifere.png"
+            "Cancrelove.png"
           ],
           "lignes": [
             "Heure Raids",
@@ -412,8 +409,8 @@
           "categorie": "dynamax",
           "court": "Dynamax Larméléon",
           "long": "Lundi Dynamax - Larméléon",
-          "heures": "18h - 19h",
-          "bonus": "Apparaît plus souvent aux Sources d'Énergie la semaine suivante",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
           "sprites": [
             "Larmeleon.png"
           ],

@@ -90,6 +90,16 @@
 
 .cal-notes p:last-child { margin-bottom: 0; }
 
+/* Invite de clic. Elle est en dur dans le HTML et non dans le panneau :
+   le panneau flotte et n'existe qu'une fois qu'on a clique, donc il ne
+   peut plus porter l'indication qui apprend justement a cliquer. */
+.cal-astuce {
+  font-size: 0.8rem;
+  color: var(--text-astuce);
+  text-align: center;
+  margin: 0 0 14px;
+}
+
 /* --- La grille --- */
 
 .cal-grille {
@@ -215,7 +225,10 @@
   display: block;
 }
 
-/* Tailles calculees par le script pour la piste Raids. */
+/* Tailles calculees par le script pour la piste Raids. Ces regles
+   ciblent .cal-sprites : tout <img> de la piste doit donc etre place
+   dans un conteneur .cal-sprites, y compris en rangee fusionnee, sinon
+   il s'affiche a sa taille native de 512px. */
 .cal-sp-22 .cal-sprites img { width: 22px; height: 22px; }
 .cal-sp-28 .cal-sprites img { width: 28px; height: 28px; }
 .cal-sp-36 .cal-sprites img { width: 36px; height: 36px; }
@@ -249,11 +262,16 @@
   justify-content: center;
 }
 
-/* Les megas sont nettement decroches des legendaires : sans cet ecart,
-   les deux rangees se lisaient comme un seul groupe. */
-.cal-raids-megas {
-  margin-top: 10px;
-}
+/* Les megas sont decroches des legendaires : sans ecart, les deux
+   rangees se lisaient comme un seul groupe. L'ecart grandit avec la
+   duree du segment, qui a d'autant plus de hauteur a occuper. Classe
+   posee par le script. */
+.cal-ec-10 .cal-raids-megas { margin-top: 10px; }
+.cal-ec-16 .cal-raids-megas { margin-top: 16px; }
+.cal-ec-24 .cal-raids-megas { margin-top: 24px; }
+.cal-ec-32 .cal-raids-megas { margin-top: 32px; }
+.cal-ec-40 .cal-raids-megas { margin-top: 40px; }
+
 
 /* Rotation regionalisee : un libelle de zone au-dessus de chaque
    Pokemon, empiles. N'apparait que si le JSON porte des regions. */
@@ -266,6 +284,7 @@
 .cal-raids-region + .cal-raids-region {
   margin-top: 6px;
 }
+
 
 .cal-raids-zone {
   font-size: 0.55rem;
@@ -289,13 +308,49 @@
 .cal-cat-maitrise      { background: var(--cal-maitrise-bg); color: var(--cal-maitrise-txt); }
 
 /* --- Panneau de detail, ouvert au clic --- */
+/* Il flotte au-dessus du calendrier plutot que de s'inserer dans le
+   flux : la grille reste visible derriere, et le panneau ne bouge plus
+   au defilement. Ancre en bas sur mobile, ou le pouce arrive, et pose
+   en bas a droite sur grand ecran.
+
+   z-index 9999 : il faut depasser le bouton "retour en haut" (9998,
+   pose par la section 13 de script.js), qui occupe le meme coin. Le
+   menu mobile deroule reste au-dessus, a 10000. */
 
 .cal-detail {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 9999;
   background: var(--bg-carte);
   border: 1px solid var(--border-carte);
-  border-radius: 10px;
-  padding: 14px 16px;
-  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+  padding: 14px 40px 14px 16px;
+  max-height: 55vh;
+  overflow-y: auto;
+  display: none;
+}
+
+.cal-detail-ouvert {
+  display: block;
+}
+
+.cal-detail-fermer {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: var(--bg-bandeau-tache);
+  color: var(--text-principal);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .cal-detail h3 {
@@ -316,11 +371,29 @@
   color: var(--text-secondaire);
 }
 
-.cal-detail-vide {
-  font-size: 0.85rem;
-  color: var(--text-muet);
-  font-style: italic;
+/* Les noms de Pokemon sont en gras ; leur couleur vient de pokemon.css,
+   qui met en vert ceux qui figurent dans un Top. On ne redefinit donc
+   PAS la couleur ici, sous peine de doubler cette source de verite.
+   font-size en inherit : .pokemon-name est dimensionne pour les cartes,
+   pas pour un paragraphe. */
+/* .pokemon-name est un conteneur flex centre avec min-height 3.2em dans
+   global.css, calibre pour les cartes. Dans un paragraphe il faut tout
+   neutraliser, sinon chaque nom part sur sa propre ligne, centre et
+   espace. On ne touche PAS a color : c'est pokemon.css qui la porte,
+   avec la meme specificite que cette regle. */
+.cal-detail .pokemon-name {
+  display: inline;
+  min-height: 0;
   margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  text-align: inherit;
+}
+
+.cal-forme {
+  font-style: italic;
 }
 
 .cal-detail a { color: var(--accent-bleu); }
@@ -338,6 +411,16 @@
   .cal-libelle { font-size: 0.78rem; margin-bottom: 4px; }
   .cal-evt-nom { font-size: 0.9rem; }
   .cal-repli { font-size: 0.82rem; }
+  /* Sur grand ecran le panneau se pose en bas a droite : il ne barre
+     plus toute la largeur pour trois lignes de texte. */
+  .cal-detail {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+    width: 380px;
+    max-height: 60vh;
+  }
+
   .cal-entete { font-size: 0.85rem; }
   .cal-jour-num { font-size: 1.9rem; }
   .cal-jour-lettre { font-size: 0.8rem; margin-bottom: 3px; }
