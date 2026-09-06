@@ -227,6 +227,21 @@
           ]
         },
         {
+          "debut": "2026-09-08",
+          "categorie": "saison",
+          "court": "Nouvelle Saison",
+          "long": "Nouvelle Saison & Nouveau Passe Go",
+          "details": [
+            "Nouvelle saison : Sentiers Crépusculaires. Rotation des tâches d'Étude, des Œufs et des Pokémon Sauvages.",
+            "Nouveau Passe Go : fin du Passe Go d'Aout, début du Passe Go de Septembre."
+          ],
+          "lignes": [
+            "Nouvelle Saison",
+            "Nouveau Passe Go"
+          ],
+          "compact": "Saison & Passe Go"
+        },
+        {
           "debut": "2026-09-09",
           "categorie": "heure-raid",
           "court": "Raids Zacian",

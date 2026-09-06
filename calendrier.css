@@ -320,6 +320,7 @@
 .cal-cat-community-day { background: var(--cal-cd-bg);       color: var(--cal-cd-txt); }
 .cal-cat-gofest        { background: var(--cal-gofest-bg);   color: var(--cal-gofest-txt); }
 .cal-cat-maitrise      { background: var(--cal-maitrise-bg); color: var(--cal-maitrise-txt); }
+.cal-cat-saison        { background: var(--cal-saison-bg);   color: var(--cal-saison-txt); }
 
 /* --- Panneau de detail, ouvert au clic --- */
 /* Il flotte au-dessus du calendrier plutot que de s'inserer dans le

@@ -1156,20 +1156,27 @@ if (document.querySelector('.home-card[data-debut]')) {
         ? (q.compact ? [q.compact] : saisies.slice(0, 1))
         : saisies;
 
-      // Le repli textuel ne sert qu'a remplacer un sprite manquant. En
-      // compact, ou le libelle affiche deja la categorie, il ecrirait le
-      // meme mot deux fois de suite : on ne le pose alors que si aucun
-      // libelle n'a ete retenu.
+      // Le repli textuel ne sert qu'a remplacer un sprite manquant, et il
+      // porte souvent une information que le libelle n'a pas : "Heure ???"
+      // dit que le Pokemon vedette n'est pas encore annonce. On ne l'ecarte
+      // donc que s'il redit un libelle deja saisi — le cas du Go Fest, dont
+      // "court" reprend mot pour mot sa premiere ligne. La comparaison se
+      // fait sur les lignes SAISIES, pas sur les lignes affichees : en
+      // compact il n'en reste qu'une, ce qui ferait resurgir le doublon.
       const aSprites = !!(q.sprites && q.sprites.length);
+      const repliRedondant = saisies.indexOf(q.court) !== -1;
       const html = (lignes.length
                      ? '<span class="cal-libelle">' + lignes.map(echapper).join('<br>') + '</span>'
                      : '')
-                 + ((aSprites || !semaine || !lignes.length)
-                     ? rangeeSprites(q.sprites, q.court)
-                     : '');
+                 + ((aSprites || !repliRedondant) ? rangeeSprites(q.sprites, q.court) : '');
       const el = bloc(4, l1, l2 - l1 + 1, 'cal-bloc cal-cat-' + q.categorie, html);
+      // "details" accueille les entrees qui ne rentrent pas dans le couple
+      // horaire/bonus : une journee qui cumule deux annonces sans rapport,
+      // typiquement. Chaque chaine devient un paragraphe du panneau.
       el.addEventListener('click', () => afficherDetail(
-        q.long, q.heures, [q.bonus ? 'Bonus : ' + q.bonus : null], q.page
+        q.long, q.heures,
+        (q.details || []).map(echapper).concat(q.bonus ? ['Bonus : ' + echapper(q.bonus)] : []),
+        q.page
       ));
       grille.appendChild(el);
     });
