@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<style>
+/* ══════════════════════════════════════════════════════════════════════
+   AFFICHE D'ÉVÈNEMENT GoEon — MODÈLE UNIQUE
+   Rendu en PNG par Chromium. Ce fichier ne va pas sur le site :
+   c'est le moule, seul le PNG est publié dans Images/.
+
+   ─── RÉGLAGES FIXES ───
+   Largeur : 1080px, toujours. C'est elle qui tient la série ensemble.
+   Hauteur : variable, à ajuster au contenu. Validé jusqu'à 1720px,
+             lisible sur téléphone. Mesurer le bas du pied après
+             remplissage, puis arrondir au-dessus.
+
+   ─── RECETTES PAR CATÉGORIE ───
+   Community Day .... en-tête A + lignée + attaque + bonus + ticket
+   Journée de Raids . en-tête B + duo + types + attaque + bonus
+                      + équipe conseillée + ticket
+   Évènement long ... en-tête B + lignée ou duo + bonus + ticket
+   Gros évènement ... prévoir deux images plutôt qu'une plus haute
+
+   ─── ACCENT PAR CATÉGORIE ───
+   Community Day .......... #f2c14e      Heure de Raid .......... #4fb0e0
+   Journée de Raids ....... #6f8ae0      Lundi Dynamax .......... #a98af0
+   Heure Vedette .......... #5fbf80      Évènement long ......... #d9b44a
+   Go Fest ................ #b4b4ac      Maîtrise de Capture .... #e09a4a
+   Un accent clair est obligatoire : le fond est sombre.
+
+   ─── MOTIF DE FOND ───
+   Icônes de type du Pokémon vedette, masque radial effaçant le centre.
+   L'opacité dépend du glyphe, pas d'une valeur unique :
+     formes fines (Dragon, Sol) ...... 12%
+     glyphes pleins (Combat, Vol) .... 8 à 11%
+
+   ─── PIÈGES CONNUS ───
+   Les icônes de type font 64x64 : au-delà de 92px d'affichage elles
+   deviennent floues. Idem pour tout sprite fourni en 200x200.
+   .attaque .etiquette est en nowrap : une phrase plus longue que
+   « Sa puissance augmente avec le Méga-Niveau » cassera la mise en page.
+   Un libellé rallongé dans une cellule de bonus repousse le pied :
+   revérifier la hauteur après chaque changement de texte.
+   Les blocs se touchent déjà, 60px d'écart cumulé sur toute l'affiche.
+   Pour gagner de la place, retirer un bloc, pas rogner des marges.
+   Le CSS en réserve, plus bas, est privé de ses commentaires internes :
+   les commentaires CSS ne s'imbriquent pas.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════════════════════
+   AFFICHE D'ÉVÈNEMENT GoEon - MODÈLE
+   Rendu en PNG 1080x1350. Ce fichier ne va pas sur le site :
+   c'est le moule, seul le PNG est publié.
+
+   ─── CE QUI CHANGE D'UN ÉVÈNEMENT À L'AUTRE ───
+   1. --accent ci-dessous, selon la catégorie du calendrier
+   2. Le surtitre, le titre et la date, en haut du <body>
+   3. Les trois sprites et leurs largeurs (.pk-1/2/3 img.sprite)
+   4. Les lignes de bonus et la ligne du ticket
+   Tout le reste est structurel, il n'y a pas à y toucher.
+
+   ─── ACCENTS PAR CATÉGORIE (repris de navbar.css) ───
+   Community Day .......... #f2c14e   (or shiny, réglage actuel)
+   Heure de Raid .......... #4fb0e0
+   Journée de Raids ....... #6f8ae0
+   Lundi Dynamax .......... #a98af0
+   Heure Vedette .......... #5fbf80
+   Évènement long ......... #d9b44a
+   Go Fest ................ #b4b4ac
+   Maîtrise de Capture .... #e09a4a
+   Un accent clair est indispensable : le fond est sombre, les
+   teintes foncées du calendrier ne s'y lisent pas.
+   ══════════════════════════════════════════════════════════════ */
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+.ig {
+  --nuit:      #131a33;
+  --nuit-bas:  #0b1022;
+  --accent:    #6f8ae0;   /* <<< Journee de Raids */
+  --sable:     #cf8a4c;
+  --clair:     #eef1f8;
+  --doux:      #8f9ac0;
+
+  width: 1080px;
+  height: 1720px;
+  background:
+    radial-gradient(120% 70% at 50% 8%, #222b52 0%, rgba(34,43,82,0) 60%),
+    linear-gradient(180deg, var(--nuit) 0%, var(--nuit-bas) 100%);
+  font-family: 'Poppins', sans-serif;
+  color: var(--clair);
+  padding: 40px 64px 34px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Strates de sol - Griknot est un Pokémon Sol qui vit sous terre */
+.ig::after {
+  content:'';
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height: 300px;
+  background: linear-gradient(180deg, rgba(207,138,76,0) 0%, rgba(207,138,76,.13) 100%);
+  pointer-events:none;
+}
+
+/* Motif de fond : icones de type du Pokemon vedette.
+   Masque radial -> le motif s'efface au centre. */
+.ig::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('Images/Combat.webp'), url('Images/Vol.webp');
+  background-size: 132px 132px, 132px 132px;
+  background-position: 0 0, 66px 66px;
+  background-repeat: repeat, repeat;
+  opacity: .11;
+  -webkit-mask-image: radial-gradient(ellipse 62% 46% at 50% 44%, transparent 30%, #000 100%);
+  mask-image: radial-gradient(ellipse 62% 46% at 50% 44%, transparent 30%, #000 100%);
+  pointer-events: none;
+}
+
+.ig > * { position: relative; z-index: 1; }
+
+/* ─── Titre ─── */
+
+.surtitre {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+
+.titre {
+  font-size: 104px;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -.025em;
+}
+
+.entete {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 26px;
+}
+.quand {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: right;
+  margin-top: 14px;
+  gap: 2px;
+  white-space: nowrap;
+}
+.quand .heure { text-align: center; }
+
+.quand .jour { font-size: 30px; font-weight: 700; }
+.quand .heure { font-size: 30px; font-weight: 500; color: var(--accent); }
+
+/* ─── Vedette : un seul Pokémon ─── */
+
+.vedette {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+.duo { display: flex; align-items: flex-end; gap: 30px; }
+.pk-petit { gap: 124px; }
+.types-vedette {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  align-self: flex-start;
+  margin-left: -58px;
+}
+.types-vedette img { width: 92px; height: 92px; }
+.types-vedette i {
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--doux);
+}
+.pk-gros, .pk-petit { display: flex; flex-direction: column; align-items: center; }
+.vedette .second { width: 208px; display: block; }
+.nom-second {
+  margin-top: 8px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -.015em;
+}
+.sous-nom {
+  margin-top: 2px;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--doux);
+}
+
+.vedette .heros { width: 520px; display: block; }
+.vedette .nom-heros {
+  margin-top: 8px;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -.015em;
+}
+.vedette .pc-heros {
+  margin-top: 4px;
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--doux);
+}
+.shiny-solo {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.shiny-solo .etoile {
+  width: 34px;
+  height: 34px;
+  display: block;
+  filter: brightness(1.45) saturate(1.25) drop-shadow(0 0 5px rgba(255,215,0,.55));
+}
+.shiny-solo .fleche {
+  width: 20px;
+  height: 34px;
+  display: block;
+  margin-left: -14px;
+}
+
+/* ─── Attaque ─── */
+
+.attaque {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 26px;
+  background: rgba(242,193,78,.09);
+  border-left: 5px solid var(--accent);
+  margin-bottom: 20px;
+}
+
+.attaque .etiquette {
+  white-space: nowrap;
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--doux);
+  margin-bottom: 1px;
+}
+.attaque .surnom.haut { margin: 0 0 3px; }
+.attaque .surnom {
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 6px 0 1px;
+}
+.attaque .nom {
+  font-size: 40px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.05;
+}
+.attaque .nom img { width: 34px; height: 34px; }
+.attaque .chiffres {
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 14px;
+  row-gap: 3px;
+  align-items: baseline;
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--clair);
+  white-space: nowrap;
+}
+.attaque .chiffres .mode { font-weight: 700; color: var(--accent); padding-right: 4px; }
+.attaque .chiffres .effet-pvp {
+  grid-column: 2 / -1;
+  max-width: 330px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: var(--doux);
+  white-space: normal;
+  margin: -1px 0 5px;
+}
+.attaque .chiffres b { font-weight: 700; color: var(--accent); }
+
+/* ─── Bonus ─── */
+
+.bonus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 26px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(143,154,192,.22);
+}
+
+.bonus-item { display: flex; align-items: center; gap: 15px; }
+
+
+.bonus-icone {
+  width: 62px;
+  min-width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bonus-icone img { max-width: 62px; max-height: 62px; }
+.bonus-chiffre {
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.bonus-txt { font-size: 24px; font-weight: 500; line-height: 1.25; }
+.ticket {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(143,154,192,.22);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.ticket .libelle { font-size: 24px; font-weight: 500; white-space: nowrap; }
+.ticket .libelle b { font-weight: 700; color: var(--accent); }
+.ticket .dedans {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.ticket .dedans img { max-width: 44px; max-height: 44px; }
+.ticket .dedans .plus {
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--doux);
+}
+.ticket .dedans .etiq { font-size: 19px; font-weight: 300; color: var(--doux); }
+
+.ticket .vignette { width: 52px; height: 52px; }
+
+/* ─── Contres ─── */
+.contres {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(143,154,192,.22);
+}
+.contres-titre {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.contres-liste {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px 14px;
+}
+.c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.rang {
+  position: absolute;
+  top: -2px;
+  left: 6px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.c img { width: 76px; height: 76px; object-fit: contain; }
+.c b {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--clair);
+}
+.types-grille {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-content: center;
+  justify-content: center;
+  gap: 5px;
+}
+.types-grille img:nth-child(4) { grid-column: 1 / 2; justify-self: end; }
+.types-grille img:nth-child(5) { grid-column: 2 / 4; justify-self: start; }
+.types-grille img { width: 24px; height: 24px; }
+
+
+
+.bonus-txt .nb { white-space: nowrap; font-style: normal; }
+.bonus-txt em {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--doux);
+}
+.bonus-txt span {
+  display: block;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--doux);
+  margin-top: 2px;
+}
+
+/* ─── Pied ─── */
+
+.pied {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 13px;
+}
+.pied img { width: 44px; height: 44px; border-radius: 10px; }
+.pied .marque { font-size: 32px; font-weight: 700; letter-spacing: -.01em; }
+.pied .marque i { font-style: normal; color: var(--doux); }
+
+/* ══════════════════════════════════════════════════════════════════
+   CSS EN RÉSERVE — recopier hors de ce commentaire pour activer.
+
+   [EN-TÊTE A] date sous le titre :
+
+.quand {
+  margin-top: 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.quand .jour { font-size: 33px; font-weight: 700; }
+.quand .heure { font-size: 33px; font-weight: 500; color: var(--accent); }
+
+   [VEDETTE EN LIGNÉE] trois Pokémon, taille croissante :
+
+.lignee {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 195px 280px 420px;
+  column-gap: 26px;
+  justify-content: center;
+  align-items: end;
+  align-content: end;
+  margin-bottom: 22px;
+}
+.pk-1 { grid-column: 1; grid-row: 2; }
+.pk-2 { grid-column: 2; grid-row: 2; }
+.pk-3 { grid-column: 3; grid-row: 2; }
+
+.pk-2 .media, .pk-3 .media { overflow: visible; }
+
+.shiny-solo {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 17px;
+  white-space: nowrap;
+}
+.shiny-solo .rond {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  padding: 7px;
+}
+.shiny-solo .rond img {
+  width: 34px;
+  height: 34px;
+  display: block;
+  filter: brightness(1.45) saturate(1.25) drop-shadow(0 0 5px rgba(255,215,0,.55));
+}
+
+.pk { text-align: center; }
+.pk .media {
+  height: 248px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.shiny-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.shiny-tag .rond {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFD700;
+  border-radius: 50%;
+  padding: 5px;
+}
+.shiny-tag .rond img { width: 26px; height: 26px; display: block; }
+.pk img.sprite { display:block; margin: 0 auto; }
+
+.pk-1 img.sprite { width: 195px; }
+.pk-2 img.sprite { width: 280px; }
+.pk-3 img.sprite { width: 420px; }
+
+.pk .nom {
+  margin-top: 10px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.pk-1 .nom { font-size: 27px; }
+.pk-2 .nom { font-size: 31px; }
+.pk-3 .nom { font-size: 40px; }
+
+.fleche {
+  color: rgba(143,154,192,.45);
+  font-size: 34px;
+  font-weight: 300;
+  padding-bottom: 58px;
+}
+
+.mention-shiny {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 27px;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 20px 0 40px;
+}
+   ══════════════════════════════════════════════════════════════════ */
+</style>
+</head>
+<body>
+
+<div class="ig">
+
+  <div class="entete">
+    <div>
+      <div class="surtitre">Journée de Super Méga-Raids</div>
+      <h1 class="titre">Étouraptor</h1>
+    </div>
+    <div class="quand">
+      <span class="jour">Samedi 19 septembre</span>
+      <span class="heure">14h - 17h</span>
+    </div>
+  </div>
+
+  <div class="vedette">
+    <span class="shiny-solo"><img class="etoile" src="Images/Shiny.png" alt="Shiny"><svg class="fleche" viewBox="0 0 24 40" fill="none" aria-hidden="true"><path d="M12 37 V6 M4 14 L12 5 L20 14" stroke="#e8913f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Shiny boosté + Nouveau Méga</span>
+    <div class="duo">
+      <div class="pk-petit">
+        <div class="types-vedette">
+          <img src="Images/Combat.webp" alt="Combat">
+          <i>/</i>
+          <img src="Images/Vol.webp" alt="Vol">
+        </div>
+        <img src="Images/EtouraptorS.png" alt="Étouraptor shiny" class="second">
+      </div>
+      <div class="pk-gros">
+        <img src="Images/EtouraptorM.png" alt="Méga-Étouraptor" class="heros">
+      </div>
+    </div>
+  </div>
+
+  <div class="attaque">
+    <div>
+      <div class="surnom haut">Nouvelle Attaque</div>
+      <div class="etiquette">Sa puissance augmente avec le Méga-Niveau</div>
+      <div class="nom">Rapace+ <img src="Images/Vol.webp" alt="Vol"></div>
+    </div>
+    <div class="chiffres">
+      <span class="mode">PvP</span><span>Puissance <b>70</b></span>
+      <span class="effet-pvp">+ Baisse la Défense du lanceur de 3 niveaux</span>
+      <span class="mode">Raids</span><span>Puissance <b>150</b></span>
+    </div>
+  </div>
+
+  <div class="bonus">
+
+    <div class="bonus-item">
+      <div class="bonus-icone"><img src="Images/MegaIcone.webp" alt="Méga"></div>
+      <div class="bonus-txt">Méga-Niveau 1<span>à la capture</span></div>
+    </div>
+
+    <div class="bonus-item">
+      <div class="bonus-icone"><span class="bonus-chiffre">100%</span></div>
+      <div class="bonus-txt">1 614 PC<span>2 018 avec boost météo</span></div>
+    </div>
+
+    <div class="bonus-item">
+      <div class="bonus-icone"><span class="bonus-chiffre">7</span></div>
+      <div class="bonus-txt">Dresseurs minimum<span>pour le battre</span></div>
+    </div>
+
+    <div class="bonus-item">
+      <div class="bonus-icone"><img src="Images/Gardevoir.png" alt="Gardevoir"></div>
+      <div class="bonus-txt">Étude Ponctuelle<span>Passe Premium + rencontre avec Gardevoir</span></div>
+    </div>
+
+    <div class="bonus-item">
+      <div class="bonus-icone"><img src="Images/PasseOrange.webp" alt="Passe de Raid"></div>
+      <div class="bonus-txt">6 Passes offerts</div>
+    </div>
+
+    <div class="bonus-item">
+      <div class="bonus-icone"><img src="Images/PasseDistance.webp" alt="Passe à distance"></div>
+      <div class="bonus-txt">Limite de 20 Raids à distance<span>sam. 2h - dim. 5h</span></div>
+    </div>
+
+  </div>
+
+  <div class="contres">
+    <div class="contres-titre">Pokémon conseillés</div>
+    <div class="contres-liste">
+      <span class="c"><span class="rang">1</span><img src="Images/MewtwoMY.png" alt="Méga-Mewtwo Y"><b>Méga-Mewtwo Y (ou X)</b></span>
+      <span class="c"><span class="rang">2</span><img src="Images/RayquazaM.png" alt="Méga-Rayquaza"><b>Méga-Rayquaza</b></span>
+      <span class="c"><span class="rang">3</span><img src="Images/RaichuMY.png" alt="Méga-Raichu Y"><b>Méga-Raichu Y (ou X)</b></span>
+      <span class="c"><span class="rang">4</span><img src="Images/AirmureM.png" alt="Méga-Airmure"><b>Méga-Airmure</b></span>
+      <span class="c"><span class="rang">5</span><img src="Images/LatiosM.png" alt="Méga-Latios"><b>Méga-Latios</b></span>
+      <span class="c"><span class="rang">6</span><img src="Images/GardevoirM.png" alt="Méga-Gardevoir"><b>Méga-Gardevoir</b></span>
+
+      <span class="c"><span class="rang">1</span><img src="Images/KyuremB.png" alt="Kyurem Blanc"><b>Kyurem Blanc</b></span>
+      <span class="c"><span class="rang">2</span><img src="Images/Mewtwo.png" alt="Mewtwo"><b>Mewtwo</b></span>
+      <span class="c"><span class="rang">3</span><img src="Images/Rayquaza.png" alt="Rayquaza"><b>Rayquaza</b></span>
+      <span class="c"><span class="rang">4</span><img src="Images/KyuremN.png" alt="Kyurem Noir"><b>Kyurem Noir</b></span>
+      <span class="c"><span class="rang">5</span><img src="Images/ArtikodinG.png" alt="Artikodin de Galar"><b>Artikodin de Galar</b></span>
+      <span class="c types">
+        <span class="types-grille">
+          <img src="Images/Vol.webp" alt="Vol"><img src="Images/Electrik.webp" alt="Électrik"><img src="Images/Psy.webp" alt="Psy"><img src="Images/Glace.webp" alt="Glace"><img src="Images/Fee.webp" alt="Fée">
+        </span>
+        <b>Types efficaces</b>
+      </span>
+    </div>
+  </div>
+
+  <div class="ticket">
+    <img class="vignette" src="Images/TicketRose.webp" alt="Ticket">
+    <span class="libelle">Ticket payant à <b>5€49</b></span>
+    <span class="dedans">
+      <span class="etiq">avec 8 Passes supplémentaires</span>
+    </span>
+  </div>
+
+  <div class="pied">
+    <img src="Images/icon-192.png" alt="GoEon">
+    <span class="marque">GoEon<i>.fr</i></span>
+  </div>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     HTML EN RÉSERVE — recopier hors de ce commentaire pour activer.
+     Chaque bloc remplace son équivalent ci-dessus, jamais en plus.
+
+     [EN-TÊTE A] date sous le titre, pour un Community Day :
+
+  <div class="surtitre">Community Day Classique</div>
+  <h1 class="titre">Griknot</h1>
+
+  <div class="quand">
+    <span class="jour">Samedi 12 septembre</span>
+    <span class="heure">14h - 17h/21h</span>
+  </div>
+
+
+     [VEDETTE EN LIGNÉE] trois Pokémon, taille croissante :
+
+  <div class="lignee">
+    <span class="shiny-solo"><span class="rond"><img src="Images/Shiny.png" alt="Shiny"></span>Shiny boosté</span>
+    <div class="pk pk-1">
+      <div class="media">
+        <img src="Images/GriknotS.png" alt="Griknot shiny" class="sprite">
+      </div>
+      <div class="nom">Griknot</div>
+    </div>
+    <div class="pk pk-2">
+      <div class="media">
+        <img src="Images/CarmacheS.png" alt="Carmache shiny" class="sprite">
+      </div>
+      <div class="nom">Carmache</div>
+    </div>
+    <div class="pk pk-3">
+      <div class="media">
+        <img src="Images/CarchacrokS.png" alt="Carchacrok shiny" class="sprite">
+      </div>
+      <div class="nom">Carchacrok</div>
+    </div>
+  </div>
+
+
+     [CHIFFRES 4 COLONNES] Puissance et Énergie :
+
+      <div class="chiffres">
+        <span class="mode">PvP</span><span>Puissance <b>90</b></span><span class="sep">/</span><span>Énergie <b>50</b></span>
+        <span class="effet-pvp">+ 10% de chance de baisser la Défense de l'adversaire de 20%</span>
+        <span class="mode">Raids</span><span>Puissance <b>100</b></span><span class="sep">/</span><span>Énergie <b>50</b></span>
+      </div>
+
+     ══════════════════════════════════════════════════════════════ -->
+
+</body>
+</html>
