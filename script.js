@@ -957,9 +957,14 @@ if (document.querySelector('.home-card[data-debut]')) {
     elDetail.innerHTML = '';
   }
 
-  function afficherDetail(titre, heures, lignes, page) {
+  // "forme" est le sous-titre d'une entree : le costume, la variante, ce qui
+  // precise le Pokemon sans changer son nom. Meme vocabulaire que la cle
+  // "forme" des Pokemon de raid, et meme rendu en italique.
+  function afficherDetail(titre, heures, lignes, page, forme) {
     let html = '<button type="button" class="cal-detail-fermer" aria-label="Fermer">×</button>'
-             + '<h3>' + echapper(titre) + '</h3>';
+             + '<h3>' + echapper(titre)
+             + (forme ? ' <em class="cal-forme">' + echapper(forme) + '</em>' : '')
+             + '</h3>';
     if (heures) html += '<p class="cal-detail-heures">' + echapper(heures) + '</p>';
     lignes.forEach(l => { if (l) html += '<p>' + l + '</p>'; });
     if (page) html += '<p><a href="' + page + '">Voir la page de l\'Évènement</a></p>';
@@ -1176,7 +1181,7 @@ if (document.querySelector('.home-card[data-debut]')) {
       el.addEventListener('click', () => afficherDetail(
         q.long, q.heures,
         (q.details || []).map(echapper).concat(q.bonus ? ['Bonus : ' + echapper(q.bonus)] : []),
-        q.page
+        q.page, q.forme
       ));
       grille.appendChild(el);
     });

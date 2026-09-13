@@ -50,7 +50,7 @@
 .cal-nav button {
   background: var(--bg-carte);
   color: var(--text-principal);
-  border: 1px solid var(--border-carte);
+  border: 1px solid var(--cal-bordure);
   border-radius: 8px;
   font-family: inherit;
   font-size: 1.2rem;
@@ -142,7 +142,7 @@
 
 .cal-entete-quotidien {
   background: var(--bg-carte);
-  border: 1px solid var(--border-carte);
+  border: 1px solid var(--cal-bordure);
   color: var(--text-secondaire);
 }
 
@@ -156,7 +156,7 @@
   align-items: center;
   justify-content: center;
   background: var(--bg-carte);
-  border: 1px solid var(--border-carte);
+  border: 1px solid var(--cal-bordure);
   border-radius: 8px;
   color: var(--text-principal);
 }
@@ -339,7 +339,7 @@
   bottom: 12px;
   z-index: 9999;
   background: var(--bg-carte);
-  border: 1px solid var(--border-carte);
+  border: 1px solid var(--cal-bordure);
   border-radius: 12px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
   padding: 14px 40px 14px 16px;
@@ -447,7 +447,7 @@
      C'est la constante LARGEUR de la section 19, qui en deduit la taille
      des sprites de la piste Raids. Les deux ne doivent jamais bouger
      l'une sans l'autre. */
-  border: 1px solid var(--border-carte);
+  border: 1px solid var(--cal-bordure);
   border-radius: 10px;
   padding: 4px;
   margin-bottom: 6px;

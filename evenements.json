@@ -335,10 +335,14 @@
         {
           "debut": "2026-09-17",
           "categorie": "heure-vedette",
-          "court": "Heure ???",
-          "long": "Heure Vedette - ???",
+          "court": "Heure Salamèche",
+          "long": "Heure Vedette - Salamèche",
           "heures": "18h - 19h",
           "bonus": "Double Poussière de capture",
+          "forme": "portant les lunettes de Friede",
+          "sprites": [
+            "Salameche.png"
+          ],
           "lignes": [
             "Heure Vedette",
             "18h-19h"

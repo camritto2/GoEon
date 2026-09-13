@@ -1,0 +1,139 @@
+{
+  "_format": {
+    "cle": "Une entrée par FORME, pas par espèce. Wimessir ♀ et Wimessir ♂ ont deux entrées, Méga-Alakazam a la sienne à côté d'Alakazam. Slug en minuscules sans accent, suffixe de région comme dans pokemon.css (-a Alola, -h Hisui, -g Galar), -f / -m pour les formes genrées, -mega pour les Méga.",
+    "types": "Un ou deux types, orthographiés exactement comme sur le site : Acier, Combat, Dragon, Eau, Électrik, Fée, Feu, Glace, Insecte, Normal, Plante, Poison, Psy, Roche, Sol, Spectre, Ténèbres, Vol. La météo qui boost n'est PAS stockée ici : script.js §20 la déduit des types. Elle ne concerne QUE les raids — ni les œufs, ni les Dynamax, ni les tâches d'étude ne sont boostés par la météo, et n25 ne sert donc que sur une carte de raid.",
+    "pc": "PC du 100 %. n15 = tâche d'étude, n20 = raid, œuf ET Dynamax (même niveau, une seule valeur), n25 = boost météo. null tant que la valeur n'a pas été relevée en jeu.",
+    "exemple": {
+      "nomdupokemon": {
+        "types": [
+          "Type1",
+          "Type2"
+        ],
+        "pc": {
+          "n15": null,
+          "n20": null,
+          "n25": null
+        }
+      }
+    }
+  },
+  "pokemon": {
+    "baggiguane": {
+      "types": [
+        "Ténèbres",
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 784,
+        "n25": 980
+      }
+    },
+    "dardargnan-mega": {
+      "types": [
+        "Insecte",
+        "Poison"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1054,
+        "n25": 1318
+      }
+    },
+    "demolosse-mega": {
+      "types": [
+        "Ténèbres",
+        "Feu"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1505,
+        "n25": 1882
+      }
+    },
+    "hexadron": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1347,
+        "n25": 1683
+      }
+    },
+    "insolourdo": {
+      "types": [
+        "Normal"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 965,
+        "n25": 1206
+      }
+    },
+    "lokhlass": {
+      "types": [
+        "Eau",
+        "Glace"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1509,
+        "n25": 1886
+      }
+    },
+    "patachiot": {
+      "types": [
+        "Fée"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 563,
+        "n25": 703
+      }
+    },
+    "rattata-a": {
+      "types": [
+        "Ténèbres",
+        "Normal"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 419,
+        "n25": 524
+      }
+    },
+    "sabelette-a": {
+      "types": [
+        "Glace",
+        "Acier"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 739,
+        "n25": 924
+      }
+    },
+    "triopikeur-a": {
+      "types": [
+        "Sol",
+        "Acier"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1084,
+        "n25": 1355
+      }
+    },
+    "zacian-ha": {
+      "types": [
+        "Fée"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 2188,
+        "n25": 2735
+      }
+    }
+  }
+}

@@ -37,6 +37,12 @@
   --cal-gofest-bg: #ebe9e4;    --cal-gofest-txt: #4a4a45;    /* Go Fest */
   --cal-maitrise-bg: #fdead5;  --cal-maitrise-txt: #8a4a0a;  /* Maitrise de Capture */
   --cal-saison-bg: #fbe1f0;    --cal-saison-txt: #9b2a6b;    /* Nouvelle Saison / Passe Go */
+  /* Le calendrier a sa propre bordure, plus franche que --border-carte.
+     Une carte isolee se passe d'un trait net, une grille non : ce sont les
+     filets qui donnent les colonnes et les lignes. Ne pas remplacer par
+     --border-carte, et ne pas remonter --border-carte pour autant, ce qui
+     toucherait toutes les cartes du site. */
+  --cal-bordure: #cbd5e1;
   --cal-raids-bg: #e4e9ef;     --cal-raids-txt: #3f4a58;      /* Piste Raids */
 
   --text-astuce: #64748b;        /* Textes d'astuce gris */
@@ -62,16 +68,25 @@ body.dark-mode {
 
   /* Couleurs d'accent du site */
   /* Calendrier - fonds sombres satures, textes clairs de la meme famille */
-  --cal-raid-bg: #0c3a52;      --cal-raid-txt: #9ddcf8;
-  --cal-journee-bg: #1a2a52;   --cal-journee-txt: #a8bdf0;
-  --cal-dynamax-bg: #2e1f52;   --cal-dynamax-txt: #c9b3f7;
-  --cal-vedette-bg: #123a24;   --cal-vedette-txt: #86e0a8;
-  --cal-cd-bg: #4a1717;        --cal-cd-txt: #f2a9a9;
-  --cal-evt-bg: #3d3113;       --cal-evt-txt: #eccf8a;
-  --cal-gofest-bg: #2e2e2b;    --cal-gofest-txt: #c7c5bd;
-  --cal-maitrise-bg: #452709;  --cal-maitrise-txt: #f0b878;
-  --cal-saison-bg: #451a33;    --cal-saison-txt: #f0a8cf;
-  --cal-raids-bg: #23292f;     --cal-raids-txt: #b3bdc9;
+  /* Calendrier en sombre. Les teintes sont celles du mode clair, reprises
+     telles quelles : c'est la teinte qui identifie une categorie, pas son
+     intensite. Saturation et clarte sont en revanche IDENTIQUES pour toutes
+     (26% et 23% pour les fonds, 62% et 80% pour les textes), pour que les
+     pistes forment une famille au lieu d'une mosaique ou certaines cases
+     crient et d'autres s'effacent. Go Fest et la piste Raids gardent leur
+     quasi-neutralite, a 6% de saturation. Retoucher une seule case de ce
+     bloc casse l'egalite : les modifier toutes ou aucune. */
+  --cal-raid-bg: #2b3f4a;     --cal-raid-txt: #acd4ec;          /* Heure de Raid */
+  --cal-journee-bg: #2b324a;  --cal-journee-txt: #acb9ec;       /* Journee de Raids */
+  --cal-dynamax-bg: #342b4a;  --cal-dynamax-txt: #bfacec;       /* Lundi Dynamax */
+  --cal-vedette-bg: #2b4a38;  --cal-vedette-txt: #acecc6;       /* Heure Vedette */
+  --cal-cd-bg: #4a2b2b;       --cal-cd-txt: #ecacac;            /* Community Day */
+  --cal-evt-bg: #4a402b;      --cal-evt-txt: #ecd8ac;           /* Evenement long */
+  --cal-gofest-bg: #3e3c37;   --cal-gofest-txt: #d7d1c1;        /* Go Fest */
+  --cal-maitrise-bg: #4a3b2b; --cal-maitrise-txt: #ecceac;      /* Maitrise de Capture */
+  --cal-saison-bg: #4a2b3d;   --cal-saison-txt: #ecacd1;        /* Nouvelle Saison / Passe Go */
+  --cal-raids-bg: #373a3e;    --cal-raids-txt: #c1cbd7;         /* Piste Raids */
+  --cal-bordure: #474d55;
 
   --text-astuce: #9ca3af;
   --accent-bleu: #29b6f6;

@@ -40,6 +40,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 | `pokemon.css` | **Source de vérité shiny/tiers**, et rien d'autre. |
 | `top.css` · `optipm.css` · `rocket.css` · `index.css` | Strictement ce qui ne sert qu'à ces pages. |
 | `script.js` | **Toute** la logique du site, en sections numérotées et titrées. Aucun JS ne vit ailleurs. |
+| `pokemon-data.json` | **Source de vérité types et PC du 100 %**, une entrée par forme. Aucune météo n'y est stockée, elle se déduit des types. |
 
 **Règles d'architecture :**
 
@@ -115,6 +116,18 @@ Le vert de `pokemon.css` signifie **« ce Pokémon figure dans un Top »**, pas 
 - **Séparateur entre deux cartes liées** : un div flex de 24px portant un « + » en gras, centré.
 - **`intro-item-fin`** pose la marge basse du dernier item d'un groupe dans une intro. L'utiliser plutôt qu'un style inline.
 - **`nom-neutre`** annule le vert « Bon » sur une page donnée. Avant de la poser, vérifier que le Pokémon est réellement « Bon » dans `pokemon.css` — sinon elle ne sert à rien, ou masque un vert légitime.
+
+### Base Pokémon (`pokemon-data.json`)
+
+Types et PC du 100 % vivent dans `pokemon-data.json`, lus par `script.js` §20. Décision de Cam du 9 septembre 2026 : **le fichier se remplit au fil des évènements**, un Pokémon à la fois, sur les valeurs que Cam relève en jeu. Pas d'extraction automatique des pages existantes, pas de calcul à partir de stats de base.
+
+- **La clé est une FORME, pas une espèce**, contrairement aux classes `pk-` de `pokemon.css`. Wimessir ♀ et Wimessir ♂ ont deux entrées, une Méga a la sienne à côté de son espèce de base : ni les PC ni parfois les types ne se partagent. Slug sans accent, suffixe de région comme dans `pokemon.css` (`-a`, `-h`, `-g`), `-f` / `-m` pour les formes genrées, `-mega` pour les Méga.
+- **Trois PC seulement** : `n15` tâche d'étude, `n20` raid, œuf **et Dynamax**, `n25` boost météo. Ces trois contextes se capturent au niveau 20, donc une seule valeur pour les trois — ne jamais créer de champ « œuf » ni « dynamax ». Une valeur non relevée reste à `null`. À noter : les cartes Dynamax n'affichent pas de boost météo, seulement types et PC.
+- ⚠️ **Le PC d'étude ne se déduit pas du PC de raid.** L'arrondi du jeu rend le calcul ambigu dans environ trois cas sur quatre. Ne jamais le remplir autrement qu'en le relevant.
+- **La météo ne se stocke pas** : `script.js` §20 la déduit des types. Un double type peut donner deux météos ; deux types de la même météo ne la donnent qu'une fois (Glace/Acier → Neige seul).
+- ⚠️ **La météo ne concerne que les raids.** Œufs, Dynamax et tâches d'étude ne sont pas boostés : leur PC est le même par tous les temps. Un bloc météo ou un `data-pc="n25"` n'a donc rien à faire sur ces cartes, alors même que le Pokémon a un `n25` renseigné pour ses raids.
+- **Le script ne remplit que ce qui est VIDE.** Un type, une météo ou un PC écrit en dur dans une page est laissé intact, et un Pokémon absent du fichier ne casse rien. On bascule donc **une carte à la fois** : poser `data-pk="cle"` sur la carte, vider le conteneur ou le `span` concerné, et marquer chaque PC avec `data-pc="n15|n20|n25"`. La console liste les clés manquantes — c'est un pense-bête, pas une erreur.
+- **Libellé météo affiché : « Q. Nuages »**, jamais « Quelques Nuages », qui ne tient pas sur mobile. L'attribut `alt` reste en toutes lettres. Le site n'affiche pas la variante de nuit « Clair » : Ensoleillé la couvre.
 
 ### Formats de texte
 

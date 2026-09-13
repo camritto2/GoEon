@@ -12,6 +12,7 @@ const FILES_TO_CACHE = [
   '/calendrier.css',
   '/script.js',
   '/evenements.json',
+  '/pokemon-data.json',
   '/manifest.json',
   '/Images/icon-192.png',
   '/Images/icon-512.png'
