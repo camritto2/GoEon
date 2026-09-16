@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.0 - 5 septembre 2026.*
+*Version 5.1 - 16 septembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -17,7 +17,7 @@ Il ne contient pas l'historique du projet, pas la liste des chantiers, pas le ca
 ## Les quatre règles de travail
 
 1. **Ne jamais travailler de mémoire.** Source de vérité : le dépôt, branche `dev`. Ce document dit ce qui *devrait* être vrai ; seuls les fichiers disent ce qui *est* vrai. Si un fichier est introuvable ou si le dépôt semble en retard sur ce que décrit Cam, le lui dire plutôt que de supposer.
-2. **Annoncer en ouverture la date du dernier commit lu** (« j'ai lu le dev du JJ/MM à HHhMM »), seul moyen pour Cam de repérer une base périmée avant qu'on bâtisse dessus. Elle se récupère sur le tarball `codeload`, dont les fichiers portent la date du commit — `raw.githubusercontent` ne renvoie pas de `Last-Modified`, l'API GitHub est en limite de taux. **Rappeler à Cam de pousser sur `dev` en fin de session.**
+2. **Annoncer en ouverture la date du dernier commit lu** (« j'ai lu le dev du JJ/MM à HHhMM »), seul moyen pour Cam de repérer une base périmée avant qu'on bâtisse dessus. Elle se récupère sur le **flux Atom des commits**, `github.com/camritto2/GoEon/commits/dev.atom`, qui donne les vraies dates de commit et n'est pas limité en requêtes. Ne plus dater par les fichiers du tarball `codeload` : leur date est celle de la génération de l'archive, pas du commit, et codeload peut servir une archive en cache antérieure au dernier push - erreur constatée le 16/09. `raw.githubusercontent` ne renvoie pas de `Last-Modified` ; l'API GitHub est en limite de taux. **Rappeler à Cam de pousser sur `dev` en fin de session.**
 3. **Tout doute se signale à Cam, qui tranche.** En audit, une anomalie apparente ne se corrige jamais d'office : un bouton, un tiret, une note ou une couleur qui semble contredire ce manuel peut être une décision validée. Seules les fautes mécaniques se corrigent sans demander — casse de fichier, tiret long, ordre d'attributs, faute d'orthographe d'attaque.
 4. **Une décision volontaire se commente sur place**, dans le HTML ou le CSS concerné, pour qu'elle arrive sous les yeux au moment où la question se pose.
 

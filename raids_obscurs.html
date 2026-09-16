@@ -17,8 +17,15 @@
 
 <div class="pokemon-app">
   <h1>Raids Obscurs du moment</h1>
+  <!-- Onglets vers l'autre page de raids. Deux liens, pas de bascule
+       JavaScript : les deux rotations n'ont pas le même rythme et chacune
+       garde sa ligne de dates. aria-current marque l'onglet actif. -->
+  <nav class="raids-onglets">
+    <a href="raids.html">Raids</a>
+    <a href="raids_obscurs.html" aria-current="page">Raids Obscurs</a>
+  </nav>
   <p class="raids-date">
-    Depuis le mercredi 5 août, 6h - Jusqu'au dimanche 6 septembre, 21h30
+    Depuis le mercredi 9 septembre, 6h - Jusqu'au mardi 6 octobre, 21h44
   </p>
   <p class="astuce-shiny">
     <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
@@ -27,93 +34,74 @@
   <h2 class="category-title tier-1">Raids Obscurs 1 Étoile</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-ramoloss">
+    <div class="pokemon-card pk-machoc" data-pk="machoc">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
-        <img src="Images/Ramoloss.png" data-shiny="Images/RamolossS.png" alt="Ramoloss Obscur" class="pokemon-img">
+        <img src="Images/Machoc.png" data-shiny="Images/MachocS.png" alt="Machoc Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Ramoloss</h2>
+        <h2 class="pokemon-name">Machoc</h2>
         <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Eau</span><img src="Images/Eau.webp" alt="Eau" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Psy</span><img src="Images/Psy.webp" alt="Psy" class="type-icon"></div>
-        </div>
+        <div class="pokemon-types-container"></div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p>PC du 100% : <span class="boost-value">700</span></p>
-          <p>Boost Météo : <span class="boost-value">876</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
-            <div class="weather-block"><span class="weather-text">Vent</span><img src="Images/Vent.webp" alt="Vent" class="weather-icon"></div>
-          </div>
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
         </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-capumain">
+    <div class="pokemon-card pk-chetiflor" data-pk="chetiflor">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
-        <img src="Images/Capumain.png" data-shiny="Images/CapumainS.png" alt="Capumain Obscur" class="pokemon-img">
+        <img src="Images/Chetiflor.png" data-shiny="Images/ChetiflorS.png" alt="Chétiflor Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Capumain</h2>
+        <h2 class="pokemon-name">Chétiflor</h2>
         <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Normal</span><img src="Images/Normal.webp" alt="Normal" class="type-icon"></div>
-        </div>
+        <div class="pokemon-types-container"></div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p>PC du 100% : <span class="boost-value">770</span></p>
-          <p>Boost Météo : <span class="boost-value">963</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="Images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
-          </div>
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
         </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-cradopaud">
+    <div class="pokemon-card pk-poussifeu" data-pk="poussifeu">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
-        <img src="Images/Cradopaud.png" data-shiny="Images/CradopaudS.png" alt="Cradopaud Obscur" class="pokemon-img">
+        <img src="Images/Poussifeu.png" data-shiny="Images/PoussifeuS.png" alt="Poussifeu Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Cradopaud</h2>
+        <h2 class="pokemon-name">Poussifeu</h2>
         <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Poison</span><img src="Images/Poison.webp" alt="Poison" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Combat</span><img src="Images/Combat.webp" alt="Combat" class="type-icon"></div>
-        </div>
+        <div class="pokemon-types-container"></div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p>PC du 100% : <span class="boost-value">544</span></p>
-          <p>Boost Météo : <span class="boost-value">680</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Couvert</span><img src="Images/Couvert.webp" alt="Couvert" class="weather-icon"></div>
-          </div>
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
         </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-larvibule">
+    <div class="pokemon-card pk-draby" data-pk="draby">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
-        <img src="Images/Larvibule.png" data-shiny="Images/LarvibuleS.png" alt="Larvibule Obscur" class="pokemon-img">
+        <img src="Images/Draby.png" data-shiny="Images/DrabyS.png" alt="Draby Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Larvibule</h2>
+        <h2 class="pokemon-name">Draby</h2>
         <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Insecte</span><img src="Images/Insecte.webp" alt="Insecte" class="type-icon"></div>
-        </div>
+        <div class="pokemon-types-container"></div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p>PC du 100% : <span class="boost-value">562</span></p>
-          <p>Boost Météo : <span class="boost-value">703</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
-          </div>
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
         </div>
       </div>
     </div>
@@ -123,67 +111,57 @@
   <h2 class="category-title tier-3">Raids Obscurs 3 Étoiles</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-ronflex">
+    <div class="pokemon-card pk-sablaireau-a" data-pk="sablaireau-a">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
-        <img src="Images/Ronflex.png" data-shiny="Images/RonflexS.png" alt="Ronflex Obscur" class="pokemon-img">
+        <img src="Images/SablaireauA.png" data-shiny="Images/SablaireauAS.png" alt="Sablaireau d'Alola Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Ronflex</h2>
+        <h2 class="pokemon-name">Sablaireau d'Alola</h2>
         <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Normal</span><img src="Images/Normal.webp" alt="Normal" class="type-icon"></div>
-        </div>
+        <div class="pokemon-types-container"></div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p>PC du 100% : <span class="boost-value">1 843</span></p>
-          <p>Boost Météo : <span class="boost-value">2 304</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="Images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
-          </div>
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
         </div>
         <hr class="separator">
         <p class="raid-difficulty-label">Dresseurs Nécessaires</p>
         <div class="raid-difficulty">
-          <div class="diff-bubble diff-1">1</div>
-          <div class="diff-bubble diff-3">2</div>
-          <div class="diff-bubble diff-4">3</div>
-          <div class="diff-bubble diff-5 diff-wide">4+</div>
+          <div class="diff-bubble diff-3">1</div>
+          <div class="diff-bubble diff-4">2</div>
+          <div class="diff-bubble diff-5 diff-wide">3+</div>
         </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-kapoera">
+    <div class="pokemon-card pk-maraiste" data-pk="maraiste">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
-        <img src="Images/Kapoera.png" data-shiny="Images/KapoeraS.png" alt="Kapoera Obscur" class="pokemon-img">
+        <img src="Images/Maraiste.png" data-shiny="Images/MaraisteS.png" alt="Maraiste Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Kapoera</h2>
+        <h2 class="pokemon-name">Maraiste</h2>
         <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Combat</span><img src="Images/Combat.webp" alt="Combat" class="type-icon"></div>
-        </div>
+        <div class="pokemon-types-container"></div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p>PC du 100% : <span class="boost-value">1 231</span></p>
-          <p>Boost Météo : <span class="boost-value">1 540</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Couvert</span><img src="Images/Couvert.webp" alt="Couvert" class="weather-icon"></div>
-          </div>
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
         </div>
         <hr class="separator">
         <p class="raid-difficulty-label">Dresseurs Nécessaires</p>
         <div class="raid-difficulty">
-          <div class="diff-bubble diff-1">1</div>
-          <div class="diff-bubble diff-3">2</div>
-          <div class="diff-bubble diff-4">3</div>
-          <div class="diff-bubble diff-5 diff-wide">4+</div>
+          <div class="diff-bubble diff-3">1</div>
+          <div class="diff-bubble diff-4">2</div>
+          <div class="diff-bubble diff-5 diff-wide">3+</div>
         </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-melancolux">
+    <div class="pokemon-card pk-melancolux" data-pk="melancolux">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
         <img src="Images/Melancolux.png" data-shiny="Images/MelancoluxS.png" alt="Mélancolux Obscur" class="pokemon-img">
@@ -191,18 +169,12 @@
       <div class="card-content">
         <h2 class="pokemon-name">Mélancolux</h2>
         <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Spectre</span><img src="Images/Spectre.webp" alt="Spectre" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Feu</span><img src="Images/Feu.webp" alt="Feu" class="type-icon"></div>
-        </div>
+        <div class="pokemon-types-container"></div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p>PC du 100% : <span class="boost-value">976</span></p>
-          <p>Boost Météo : <span class="boost-value">1 220</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Brouillard</span><img src="Images/Brouillard.webp" alt="Brouillard" class="weather-icon"></div>
-            <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="Images/Ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
-          </div>
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
         </div>
         <hr class="separator">
         <p class="raid-difficulty-label">Dresseurs Nécessaires</p>
@@ -219,55 +191,47 @@
   <h2 class="category-title tier-legendary">Raids Obscurs Légendaires</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-giratina">
+    <!-- Fulguris est Électrik/Vol : c'est le type Vol qui lui vaut ses faiblesses
+         Glace et Roche, un Électrik pur ne craindrait que le Sol - auquel le Vol
+         le rend justement immunisé. La météo qui le boost en découle :
+         Pluvieux pour l'Électrik, Vent pour le Vol. -->
+    <div class="pokemon-card pk-fulguris" data-pk="fulguris-avatar">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
-        <img src="Images/GiratinaA.png" data-shiny="Images/GiratinaAS.png" alt="Giratina Obscur" class="pokemon-img">
+        <img src="Images/FulgurisA.png" data-shiny="Images/FulgurisAS.png" alt="Fulguris Obscur" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Giratina</h2>
-        <p class="pokemon-subtitle">Forme Alternative</p>
+        <h2 class="pokemon-name">Fulguris</h2>
+        <p class="pokemon-subtitle">Forme Avatar</p>
         <hr class="separator">
-        <div class="pokemon-types-container">
-          <div class="type-block"><span class="type-text">Spectre</span><img src="Images/Spectre.webp" alt="Spectre" class="type-icon"></div>
-          <div class="type-block"><span class="type-text">Dragon</span><img src="Images/Dragon.webp" alt="Dragon" class="type-icon"></div>
-        </div>
+        <div class="pokemon-types-container"></div>
         <hr class="separator">
         <div class="pokemon-stats">
-          <p>PC du 100% : <span class="boost-value">1 931</span></p>
-          <p>Boost Météo : <span class="boost-value">2 414</span></p>
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Brouillard</span><img src="Images/Brouillard.webp" alt="Brouillard" class="weather-icon"></div>
-            <div class="weather-block"><span class="weather-text">Vent</span><img src="Images/Vent.webp" alt="Vent" class="weather-icon"></div>
-          </div>
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
         </div>
         <hr class="separator">
         <p class="raid-difficulty-label">Dresseurs Nécessaires</p>
         <div class="raid-difficulty">
-          <div class="diff-bubble diff-1">1</div>
-          <div class="diff-bubble diff-2">2</div>
-          <div class="diff-bubble diff-3">3</div>
-          <div class="diff-bubble diff-4">4</div>
-          <div class="diff-bubble diff-5 diff-wide">5+</div>
+          <div class="diff-bubble diff-1 diff-wide">1-3</div>
+          <div class="diff-bubble diff-3 diff-wide">4-6</div>
+          <div class="diff-bubble diff-5 diff-wide">7+</div>
         </div>
         <hr class="separator">
         <p class="raid-types-label">Types à utiliser</p>
         <div class="raid-types">
           <div class="raid-types-ligne">
-            <a href="TopFee.html" title="Voir les meilleurs Pokémon Fée"><img src="Images/Fee.webp" alt="Fée" class="type-icon"></a>
-            <a href="TopTenebres.html" title="Voir les meilleurs Pokémon Ténèbres"><img src="Images/Tenebres.webp" alt="Ténèbres" class="type-icon"></a>
+            <a href="TopGlace.html" title="Voir les meilleurs Pokémon Glace"><img src="Images/Glace.webp" alt="Glace" class="type-icon"></a>
           </div>
           <div class="raid-types-ligne">
-            <a href="TopDragon.html" title="Voir les meilleurs Pokémon Dragon"><img src="Images/Dragon.webp" alt="Dragon" class="type-icon"></a>
-            <a href="TopSpectre.html" title="Voir les meilleurs Pokémon Spectre"><img src="Images/Spectre.webp" alt="Spectre" class="type-icon"></a>
-            <a href="TopGlace.html" title="Voir les meilleurs Pokémon Glace"><img src="Images/Glace.webp" alt="Glace" class="type-icon"></a>
+            <a href="TopRoche.html" title="Voir les meilleurs Pokémon Roche"><img src="Images/Roche.webp" alt="Roche" class="type-icon"></a>
           </div>
         </div>
       </div>
     </div>
 
   </div>
-
 
   <div class="diff-legende">
     <span class="diff-legende-titre">Légende :</span>

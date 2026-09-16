@@ -924,6 +924,44 @@ body:has(.section-nav) .category-title {
   scroll-margin-top: 95px;
 }
 
+/* Onglets Raids / Raids Obscurs.
+   Deux liens vers deux pages, pas de JavaScript et pas d'état à gérer :
+   l'onglet actif est celui qui porte aria-current, posé dans le HTML de
+   chaque page. Les deux rotations n'ont pas le même rythme, chaque page
+   garde donc son fichier, son URL et sa propre ligne de dates. */
+.raids-onglets {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 0 12px 0;
+}
+
+.raids-onglets a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-carte);
+  background: var(--bg-carte);
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.raids-onglets a:hover {
+  background-color: var(--accent-navbar);
+  color: var(--accent-text-navbar);
+}
+
+.raids-onglets a[aria-current="page"] {
+  background-color: var(--accent-navbar);
+  color: var(--accent-text-navbar);
+  border-color: var(--accent-navbar);
+  cursor: default;
+}
+
 /* ==========================================
    DESKTOP — min-width: 769px
    ========================================== */
@@ -1041,6 +1079,10 @@ body:has(.section-nav) .category-title {
   /* Navbar de sections */
   .section-nav { justify-content: center; padding: 8px 10px; }
   .section-nav a { font-size: 13px; padding: 5px 14px; }
+
+  /* Onglets Raids */
+  .raids-onglets { gap: 8px; margin-bottom: 16px; }
+  .raids-onglets a { font-size: 15px; padding: 8px 20px; }
   body:has(.section-nav) .category-title { scroll-margin-top: 115px; }
 
 }

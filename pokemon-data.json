@@ -49,6 +49,17 @@
         "n25": 1268
       }
     },
+    "chetiflor": {
+      "types": [
+        "Plante",
+        "Poison"
+      ],
+      "pc": {
+        "n15": 443,
+        "n20": 590,
+        "n25": 738
+      }
+    },
     "chochodile": {
       "types": [
         "Feu"
@@ -101,6 +112,16 @@
         "n25": 1882
       }
     },
+    "draby": {
+      "types": [
+        "Dragon"
+      ],
+      "pc": {
+        "n15": 495,
+        "n20": 660,
+        "n25": 826
+      }
+    },
     "dracaufeu": {
       "types": [
         "Feu",
@@ -131,6 +152,39 @@
         "n15": 1297,
         "n20": 1729,
         "n25": 2162
+      }
+    },
+    "florizarre": {
+      "types": [
+        "Plante",
+        "Poison"
+      ],
+      "pc": {
+        "n15": 1166,
+        "n20": 1554,
+        "n25": 1943
+      }
+    },
+    "florizarre-mega": {
+      "types": [
+        "Plante",
+        "Poison"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1554,
+        "n25": 1943
+      }
+    },
+    "fulguris-avatar": {
+      "types": [
+        "Électrik",
+        "Vol"
+      ],
+      "pc": {
+        "n15": 1433,
+        "n20": 1911,
+        "n25": 2389
       }
     },
     "hexadron": {
@@ -174,6 +228,27 @@
         "n25": 1886
       }
     },
+    "machoc": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": 548,
+        "n20": 730,
+        "n25": 913
+      }
+    },
+    "maraiste": {
+      "types": [
+        "Eau",
+        "Sol"
+      ],
+      "pc": {
+        "n15": 854,
+        "n20": 1138,
+        "n25": 1423
+      }
+    },
     "matourgeon": {
       "types": [
         "Plante"
@@ -182,6 +257,17 @@
         "n15": 720,
         "n20": 959,
         "n25": 1199
+      }
+    },
+    "melancolux": {
+      "types": [
+        "Spectre",
+        "Feu"
+      ],
+      "pc": {
+        "n15": 732,
+        "n20": 976,
+        "n25": 1220
       }
     },
     "miascarade": {
@@ -236,6 +322,16 @@
         "n25": 725
       }
     },
+    "poussifeu": {
+      "types": [
+        "Feu"
+      ],
+      "pc": {
+        "n15": 468,
+        "n20": 624,
+        "n25": 781
+      }
+    },
     "rattata-a": {
       "types": [
         "Ténèbres",
@@ -268,6 +364,17 @@
         "n25": 924
       }
     },
+    "sablaireau-a": {
+      "types": [
+        "Glace",
+        "Acier"
+      ],
+      "pc": {
+        "n15": 1042,
+        "n20": 1390,
+        "n25": 1737
+      }
+    },
     "salameche": {
       "types": [
         "Feu"
@@ -295,6 +402,16 @@
       ],
       "pc": {
         "n15": null,
+        "n20": 2188,
+        "n25": 2735
+      }
+    },
+    "zamazenta-ha": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": 1641,
         "n20": 2188,
         "n25": 2735
       }
