@@ -963,6 +963,38 @@ body:has(.section-nav) .category-title {
 }
 
 /* ==========================================
+   PROBABILITÉ D'ÉCLOSION — page Œufs
+   Déplacé depuis un <style> de oeufs.html le 16/09 : aucune page ne doit
+   porter de CSS en propre. Les pastilles disent la rareté d'un Pokémon
+   dans un œuf ; plus il y en a, plus il est rare.
+   ========================================== */
+
+.proba-container {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-top: 0;
+}
+
+.proba-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Pastille citée au fil du texte dans l'encadré d'intro : un poil plus
+   petite que sur les cartes, et alignée sur la ligne de base du texte. */
+.proba-icon-intro {
+  width: 14px;
+  vertical-align: middle;
+}
+
+body.dark-mode .proba-icon {
+  filter: invert(1);
+}
+
+
+/* ==========================================
    DESKTOP — min-width: 769px
    ========================================== */
 

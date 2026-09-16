@@ -171,6 +171,9 @@
 /* Azumarill — Normal / Shiny */
 .pk-azumarill .emoji-shiny { display: inline; }
 
+/* Azurill — Normal / Shiny */
+.pk-azurill .emoji-shiny { display: inline; }
+
 /* Aspicot — Bon / Shiny */
 .pk-aspicot .pokemon-name { color: var(--accent-vert-bon); }
 .pk-aspicot .research-reward-name { color: var(--accent-vert-bon); }
@@ -1365,6 +1368,9 @@
 .pk-groudon .research-reward-name { color: var(--accent-vert-bon); }
 .pk-groudon .emoji-shiny  { display: inline; }
 
+/* Goinfrex — Normal / Shiny */
+.pk-goinfrex .emoji-shiny { display: inline; }
+
 /* Gribouraigne — Bon / Shiny */
 .pk-gribouraigne .pokemon-name { color: var(--accent-vert-bon); }
 .pk-gribouraigne .research-reward-name { color: var(--accent-vert-bon); }
@@ -2010,6 +2016,12 @@
 
 /* Miasmax — Normal / Shiny */
 .pk-miasmax .emoji-shiny { display: inline; }
+
+/* Mime Jr. — Normal / Shiny */
+.pk-mimejr .emoji-shiny { display: inline; }
+
+/* M. Mime — Normal / Shiny */
+.pk-mmime .emoji-shiny { display: inline; }
 
 /* M. Mime de Galar — Bon / Shiny */
 .pk-mmime-g .pokemon-name { color: var(--accent-vert-bon); }
