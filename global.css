@@ -205,6 +205,29 @@ h1 {
   color: var(--accent-vert-bon);
 }
 
+/* Nom + sous-titre de forme reunis, pour que le filet de separation passe SOUS
+   le sous-titre et non entre les deux - meme ordre que sur les cartes Passe Go
+   (nom, sous-titre, separateur). Pose le 16/09. Le wrapper est facultatif : une
+   recompense sans forme garde le filet sur .research-reward-name, inchange. */
+.research-reward-head {
+  font-size: 8px;
+  min-height: 2.8em;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1px;
+  border-bottom: 1px solid var(--hr-separator);
+}
+
+.research-reward-head .research-reward-name {
+  min-height: 0;
+  padding-top: 0;
+  border-bottom: none;
+}
+
 .research-reward-form {
   font-size: 8px;
   font-weight: normal;
@@ -996,6 +1019,7 @@ body:has(.section-nav) .category-title {
   .research-image-container .emoji-shiny { width: 20px; height: 20px; }
   .research-image-container .emoji-costume { width: 20px; height: 20px; }
   .research-image-container .badges { top: 6px; left: -10px; }
+  .research-reward-head { font-size: 16px; }
   .research-reward-form { font-size: 14px; }
   .research-cp { font-size: 14px; padding-top: 0; padding-bottom: 2px !important; }
 
