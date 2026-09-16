@@ -17,7 +17,7 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Acier.webp" alt="Acier" class="top-title-icon">Type Acier<img src="Images/Acier.webp" alt="Acier" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Acier.webp" alt="Acier" class="top-title-icon">Type Acier<img src="Images/Acier.webp" alt="Acier" class="top-title-icon"></span>
     </h1>
 
     <div class="intro-rules">
@@ -259,7 +259,8 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Ailes d'Acier</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Luminocanon</strong>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Peu importe</strong><span class="footnote-ref">7</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Bec Vrille++++</strong><span class="footnote-ref">7</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-mairm-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('mairm-details', 'toggle-mairm-btn')">
@@ -267,14 +268,9 @@
                     </button>
                 </div>
                 <div class="card-build" id="mairm-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Piqué</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
-                    </div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">7</span>
                 </div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">7</span> : Bec Vrille++++ fera toujours plus de dégâts qu'une Attaque de type Acier. L'Attaque Chargée de base ne servira pas, n'importe laquelle convient, et une 2e Attaque Chargée est inutile.</div>
             </div>
         </div>
 
@@ -302,7 +298,7 @@
                     </div>
                 </div>
                 <div class="card-note hidden-note"></div>
-                <div class="build-footnote" id="dialgaoL-note"><span class="legacy-indicator">L</span> : Hurle-Temps ne peut pas être appris via une CT d'Élite ; il est exclusif aux événements.</div>
+                <div class="build-footnote" id="dialgaoL-note"><span class="legacy-indicator">L</span> : Hurle-Temps ne peut pas être appris via une CT d'Élite. L'Attaque ne s'obtient que lors d'évènements.</div>
             </div>
         </div>
 
@@ -454,7 +450,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong id="scalp-imm">Griffe Acier</strong><span id="scalp-imm-alt" style="display:none"> → <strong>Aboiement</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tête de Fer</strong>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tête de Fer</strong><span class="footnote-ref">8</span>
                 </div>
                 <div class="card-button">
                     <button id="toggle-scalp-btn" class="btn-tenebres" aria-expanded="false" onclick="toggleBuild('scalp-details', 'toggle-scalp-btn'); toggleAltImm('scalp-imm', 'scalp-imm-alt')">
@@ -469,7 +465,7 @@
                     <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">8</span> : Scalproie est également utilisable, avec les mêmes Attaques. Il est moins bon que Scalpereur et Duralugon, mais meilleur que Pingoléon.</div>
             </div>
         </div>
 
@@ -497,7 +493,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Ailes d'Acier</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Luminocanon</strong>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Hydroblast</strong><span class="legacy-indicator">L</span><span class="footnote-ref">9</span> <img src="Images/Eau.webp" alt="Type Eau" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-pingo-btn" class="btn-eau" aria-expanded="false" onclick="toggleBuild('pingo-details', 'toggle-pingo-btn')">
@@ -505,14 +501,9 @@
                     </button>
                 </div>
                 <div class="card-build" id="pingo-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Hydroblast</strong><span class="legacy-indicator">L</span>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">25 Bonbons<br>+ 10 000 Poussières Étoile</span>
-                    </div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">9</span>
                 </div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">9</span> : Hydroblast<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Acier.</div>
             </div>
         </div>
 
@@ -643,12 +634,28 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">21</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Magneton.png" alt="Magnéton" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Magnéton</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Strido-Son</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Bombe Aimant</strong><span class="footnote-ref">10</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note"><span class="footnote-ref">10</span> : Magnéton est meilleur que son évolution Magnézone pour le type Acier.</div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">22</div>
                 <div class="card-image"><img src="Images/Cobaltium.png" alt="Cobaltium" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Cobaltium</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Griffe Acier</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Sainte</strong><span class="legacy-indicator">L</span><span class="footnote-ref">7</span> <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Sainte</strong><span class="legacy-indicator">L</span><span class="footnote-ref">11</span> <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-cob-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('cob-details', 'toggle-cob-btn')">
@@ -656,15 +663,15 @@
                     </button>
                 </div>
                 <div class="card-build" id="cob-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">7</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">11</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">7</span> : Lame Sainte<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Acier.</div>
+                <div class="card-note"><span class="footnote-ref">11</span> : Lame Sainte<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Acier.</div>
             </div>
         </div>
 
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">22</div>
+                <div class="card-rank">23</div>
                 <div class="card-image"><img src="Images/Vrombotor.png" alt="Vrombotor" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Vrombotor</span></strong></div>
                 <div class="card-badges"></div>
@@ -691,7 +698,7 @@
 
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">23</div>
+                <div class="card-rank">24</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Magnezone.png" alt="Magnézone" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Magnézone</span></strong></div>
                 <div class="card-badges"></div>
@@ -718,7 +725,7 @@
 
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">24</div>
+                <div class="card-rank">25</div>
                 <div class="card-image"><img src="Images/Exagide.png" alt="Exagide" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Exagide</span></strong></div>
                 <div class="card-badges"></div>
@@ -739,22 +746,6 @@
                     <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">25</div>
-                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Berserkatt.png" alt="Berserkatt" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Berserkatt</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Griffe Acier</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Tête de Fer</strong>
-                </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>

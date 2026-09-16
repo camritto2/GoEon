@@ -250,10 +250,8 @@
 .pk-beldeneige .research-reward-name { color: var(--accent-vert-bon); }
 .pk-beldeneige .emoji-shiny  { display: inline; }
 
-/* Berserkatt — Bon / Shiny */
-.pk-berserkatt .pokemon-name { color: var(--accent-vert-bon); }
-.pk-berserkatt .research-reward-name { color: var(--accent-vert-bon); }
-.pk-berserkatt .emoji-shiny  { display: inline; }
+/* Berserkatt — Normal / Shiny */
+.pk-berserkatt .emoji-shiny { display: inline; }
 
 /* Bétochef — Bon / Shiny */
 .pk-betochef .pokemon-name { color: var(--accent-vert-bon); }
@@ -2009,10 +2007,8 @@
 /* Miaouss — Normal / Shiny */
 .pk-miaouss .emoji-shiny { display: inline; }
 
-/* Miaouss de Galar — Bon / Shiny */
-.pk-miaouss-g .pokemon-name { color: var(--accent-vert-bon); }
-.pk-miaouss-g .research-reward-name { color: var(--accent-vert-bon); }
-.pk-miaouss-g .emoji-shiny  { display: inline; }
+/* Miaouss de Galar — Normal / Shiny */
+.pk-miaouss-g .emoji-shiny { display: inline; }
 
 /* Miasmax — Normal / Shiny */
 .pk-miasmax .emoji-shiny { display: inline; }
