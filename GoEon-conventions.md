@@ -127,11 +127,12 @@ Types et PC du 100 % vivent dans `pokemon-data.json`, lus par `script.js` §20. 
 - **La météo ne se stocke pas** : `script.js` §20 la déduit des types. Un double type peut donner deux météos ; deux types de la même météo ne la donnent qu'une fois (Glace/Acier → Neige seul).
 - ⚠️ **La météo ne concerne que les raids.** Œufs, Dynamax et tâches d'étude ne sont pas boostés : leur PC est le même par tous les temps. Un bloc météo ou un `data-pc="n25"` n'a donc rien à faire sur ces cartes, alors même que le Pokémon a un `n25` renseigné pour ses raids.
 - **Le script ne remplit que ce qui est VIDE.** Un type, une météo ou un PC écrit en dur dans une page est laissé intact, et un Pokémon absent du fichier ne casse rien. On bascule donc **une carte à la fois** : poser `data-pk="cle"` sur la carte, vider le conteneur ou le `span` concerné, et marquer chaque PC avec `data-pc="n15|n20|n25"`. La console liste les clés manquantes — c'est un pense-bête, pas une erreur.
-- **Libellé météo affiché : « Q. Nuages »**, jamais « Quelques Nuages », qui ne tient pas sur mobile. L'attribut `alt` reste en toutes lettres. Le site n'affiche pas la variante de nuit « Clair » : Ensoleillé la couvre.
+- **Libellé météo : « Q. Nuages » partout**, texte affiché *et* attribut `alt` — « Quelques Nuages » ne tient pas sur mobile. Règle rectifiée par Cam le 16/09 : la version précédente demandait un `alt` en toutes lettres. Seul le nom de fichier garde la forme longue, `Quelques_Nuages.webp`. Le site n'affiche pas la variante de nuit « Clair » : Ensoleillé la couvre.
 
 ### Formats de texte
 
 - **Rangs Méga : « Méga 1 », « Méga 2 » — jamais « M1 »**, y compris dans `card-rank`. `M1` est l'abréviation de Cam à la saisie, pas ce qui s'écrit.
+- **Séparateur de milliers : espace INSÉCABLE**, dans les PC comme partout où un nombre s'affiche. Une espace ordinaire autorise le navigateur à couper la ligne au milieu du nombre : sur une carte étroite, « 1 509 » se lit alors comme deux nombres. Règle posée par Cam le 16/09, appliquée aux 74 PC écrits en dur et à `formatePC` en §20.
 - **Tiret simple `-` partout dans le texte affiché**, sans exception : fourchettes, plages horaires, titres de section, `raids-date`. Ni cadratin « — », ni demi-cadratin « – ». Règle posée par Cam le 30 août après un remplacement global ; toute proposition de « bon » tiret typographique est à écarter d'office. Billets : « Nom / X € », espace insécable après la barre.
 - Ligature œ obligatoire (« Nœud Herbe »). Orthographe rectifiée à appliquer sur tout le site.
 - Dates sans année.

@@ -1227,3 +1227,137 @@ if (document.querySelector('.home-card[data-debut]')) {
   if (btnPrec) btnPrec.addEventListener('click', () => { if (indexMois > 0) { indexMois--; rendre(); } });
   if (btnSuiv) btnSuiv.addEventListener('click', () => { if (donnees && indexMois < donnees.mois.length - 1) { indexMois++; rendre(); } });
 })();
+
+// 20. BASE POKÉMON (types, météo, PC du 100 %)
+// Une carte porte data-pk="cle" et le script va chercher le reste dans
+// pokemon-data.json. La clé est une FORME, pas une espèce : contrairement aux
+// classes pk- de pokemon.css, Wimessir ♀ et Wimessir ♂ ont deux entrées, et une
+// Méga a la sienne. Deux formes de la même espèce n'ont ni les mêmes PC ni
+// forcément les mêmes types.
+//
+// RÈGLE D'OR : le script ne remplit que ce qui est VIDE. Un conteneur de types,
+// un bloc météo ou un PC déjà écrit en dur dans la page est laissé intact. Les
+// pages existantes continuent donc de fonctionner sans être touchées, et on
+// bascule une carte à la fois en vidant l'élément concerné. Un Pokémon absent
+// du JSON ne casse rien non plus : sa carte reste telle quelle.
+//
+// PC : n15 = tâche d'étude, n20 = raid, œuf ET Dynamax, n25 = boost météo. Ces
+// trois-là sont capturés au niveau 20, donc une seule valeur pour les trois : ni
+// champ « œuf » ni champ « dynamax ». Les cartes Dynamax n'ont pas de bloc météo,
+// le script n'y touche donc pas.
+// L'élément qui reçoit la valeur porte data-pc="n15|n20|n25" :
+//   <span class="boost-value" data-pc="n20"></span>
+//   <span class="research-cp" data-pc="n15"></span>
+//
+// La météo n'est jamais stockée : elle se déduit des types, table ci-dessous.
+// Un double type peut donc donner deux météos (ex. Eau/Vol → Pluvieux + Vent).
+//
+// ATTENTION : la météo ne concerne QUE les raids. Un œuf, un Dynamax et une
+// tâche d'étude ne sont jamais boostés — leur PC ne bouge pas avec le temps
+// qu'il fait. Donc pas de .weather-container et pas de data-pc="n25" ailleurs
+// que sur une carte de raid, même si le Pokémon a bien un n25 renseigné.
+
+(function () {
+  if (!document.querySelector('[data-pk]')) return;
+
+  // Les 18 types et la météo qui les boost. Ensoleillé couvre aussi la
+  // variante de nuit (« Clair » en jeu) : le site n'affiche que « Ensoleillé ».
+  const METEO_PAR_TYPE = {
+    'Plante': 'Ensoleillé', 'Sol': 'Ensoleillé', 'Feu': 'Ensoleillé',
+    'Eau': 'Pluvieux', 'Électrik': 'Pluvieux', 'Insecte': 'Pluvieux',
+    'Normal': 'Q. Nuages', 'Roche': 'Q. Nuages',
+    'Fée': 'Couvert', 'Combat': 'Couvert', 'Poison': 'Couvert',
+    'Dragon': 'Vent', 'Vol': 'Vent', 'Psy': 'Vent',
+    'Glace': 'Neige', 'Acier': 'Neige',
+    'Ténèbres': 'Brouillard', 'Spectre': 'Brouillard'
+  };
+
+  // Le libellé est « Q. Nuages » partout, texte affiché comme attribut alt :
+  // « Quelques Nuages » ne tient pas sur mobile. Seul le fichier garde la
+  // forme longue. Règle tranchée par Cam le 16/09.
+  const METEO = {
+    'Ensoleillé': { img: 'Ensoleille.webp',      alt: 'Ensoleillé' },
+    'Pluvieux':   { img: 'Pluvieux.webp',        alt: 'Pluvieux' },
+    'Q. Nuages':  { img: 'Quelques_Nuages.webp', alt: 'Q. Nuages' },
+    'Couvert':    { img: 'Couvert.webp',         alt: 'Couvert' },
+    'Vent':       { img: 'Vent.webp',            alt: 'Vent' },
+    'Neige':      { img: 'Neige.webp',           alt: 'Neige' },
+    'Brouillard': { img: 'Brouillard.webp',      alt: 'Brouillard' }
+  };
+
+  // Les images de types sont sans accent : Électrik → Electrik.webp.
+  function imageType(type) {
+    return type.normalize('NFD').replace(/[\u0300-\u036f]/g, '') + '.webp';
+  }
+
+  // Séparateur de milliers : une espace INSÉCABLE. Une espace ordinaire
+  // autorise le navigateur à couper la ligne au milieu du nombre, et « 1 509 »
+  // se lit alors comme deux nombres sur une carte étroite. Tranché le 16/09 :
+  // insécable partout sur le site, ici comme dans les PC écrits en dur.
+  function formatePC(nombre) {
+    return String(nombre).replace(/\B(?=(\d{3})+(?!\d))/g, '\u00A0');
+  }
+
+  function estVide(el) {
+    return el && el.innerHTML.trim() === '';
+  }
+
+  function blocType(type) {
+    return '<div class="type-block"><span class="type-text">' + type + '</span>'
+         + '<img src="Images/' + imageType(type) + '" alt="' + type + '" class="type-icon"></div>';
+  }
+
+  function blocMeteo(nom) {
+    const m = METEO[nom];
+    return '<div class="weather-block"><span class="weather-text">' + nom + '</span>'
+         + '<img src="Images/' + m.img + '" alt="' + m.alt + '" class="weather-icon"></div>';
+  }
+
+  fetch('pokemon-data.json')
+    .then(r => {
+      if (!r.ok) throw new Error('pokemon-data.json introuvable (HTTP ' + r.status + ')');
+      return r.json();
+    })
+    .then(donnees => {
+      const base = donnees.pokemon || {};
+      const manquants = [];
+
+      document.querySelectorAll('[data-pk]').forEach(carte => {
+        const cle = carte.dataset.pk;
+        const fiche = base[cle];
+        if (!fiche) { manquants.push(cle); return; }
+
+        // Types
+        const contType = carte.querySelector('.pokemon-types-container');
+        if (estVide(contType) && Array.isArray(fiche.types)) {
+          contType.innerHTML = fiche.types.map(blocType).join('');
+        }
+
+        // Météo, déduite des types. Deux types de la même météo ne la
+        // donnent qu'une fois (ex. Glace/Acier → Neige, pas Neige + Neige).
+        const contMeteo = carte.querySelector('.weather-container');
+        if (estVide(contMeteo) && Array.isArray(fiche.types)) {
+          const meteos = [];
+          fiche.types.forEach(t => {
+            const m = METEO_PAR_TYPE[t];
+            if (m && !meteos.includes(m)) meteos.push(m);
+          });
+          contMeteo.innerHTML = meteos.map(blocMeteo).join('');
+        }
+
+        // PC du 100 %
+        carte.querySelectorAll('[data-pc]').forEach(el => {
+          if (!estVide(el)) return;
+          const valeur = (fiche.pc || {})[el.dataset.pc];
+          if (typeof valeur === 'number') el.textContent = formatePC(valeur);
+        });
+      });
+
+      // Liste des Pokémon à renseigner : c'est le pense-bête de remplissage,
+      // pas une erreur. La page reste parfaitement utilisable sans eux.
+      if (manquants.length) {
+        console.info('pokemon-data.json — clés absentes :', [...new Set(manquants)].join(', '));
+      }
+    })
+    .catch(error => console.error('Erreur lors du chargement de pokemon-data.json :', error));
+})();
