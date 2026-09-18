@@ -24,9 +24,16 @@
           "page": "CelebrationHorizons.html"
         },
         {
-          "nom": "Harvest Festival",
+          "nom": "Festival des récoltes",
           "debut": "2026-09-29T10:00",
-          "fin": "2026-10-05T20:00"
+          "fin": "2026-10-01T23:59",
+          "page": "FestivalRecoltes.html"
+        },
+        {
+          "nom": "Festival des récoltes - Offensive",
+          "debut": "2026-10-02T00:00",
+          "fin": "2026-10-05T20:00",
+          "page": "FestivalRecoltesOffensive.html"
         }
       ],
       "raids": [

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Festival des récoltes</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Festival des récoltes</h1>
+  <!-- Onglets vers la seconde partie de l'évènement. Même composant que les
+       pages de raids : deux liens vers deux pages, pas de bascule JavaScript,
+       chaque partie gardant sa propre ligne de dates. aria-current marque
+       l'onglet actif. -->
+  <nav class="raids-onglets">
+    <a href="FestivalRecoltes.html" aria-current="page">Festival des récoltes</a>
+    <a href="FestivalRecoltesOffensive.html">Offensive</a>
+  </nav>
+  <p class="raids-date">
+    Du mardi 29 septembre, 10h au lundi 5 octobre, 20h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                  BONUS                  -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Les Modules Leurre Moussu n'attireront que des Pommes (Acidulées, Sucrées ou Nectar) ou des Pokémon de l'évènement</div>
+    <div class="intro-item"><span class="bullet">• </span>Une Étude Ponctuelle à choix permettant d'offrir un type des 3 types de Pommes</div>
+    <div class="intro-item"><span class="bullet">• </span>+ voir Passe Go</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--             POKÉMON SAUVAGES            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-rongourmand">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Rongourmand.png" data-shiny="Images/RongourmandS.png" alt="Rongourmand" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Rongourmand</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-gourmelet">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Gourmelet.png" data-shiny="Images/GourmeletS.png" alt="Gourmelet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Gourmelet</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-olivini">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Olivini.png" data-shiny="Images/OliviniS.png" alt="Olivini" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Olivini</h2>
+      </div>
+    </div>
+
+    <!-- Verpom : nouveau shiny, qui débute avec l'évènement. Son statut shiny
+         est déclaré dans pokemon.css ; la classe nouveau-shiny est conservée
+         ici volontairement, pour tout l'évènement, afin que le badge scintille
+         en permanence et signale la nouveauté. Elle part avec la page, pas
+         avant. Images/Verpom.png et Images/VerpomS.png restent à déposer. -->
+    <div class="pokemon-card pk-verpom">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Verpom</h2>
+        <p class="pokemon-subtitle">Rare - Nouveau shiny !</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 PASSE GO                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="passe">Passe Go</h2>
+
+  <p class="section-sous-titre">Bonus</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Rang 1 : <span class="texte-vert">Verpom</span> aura plus de chances de donner des Pommes Acidulées, Sucrées ou Nectar</div>
+    <div class="intro-item"><span class="bullet">• </span>Rang 10 : Les Modules Leurre Moussu dureront 1h</div>
+    <div class="intro-item"><span class="bullet">• </span>Rang 20 : Plus de Poussières Étoile par victoire contre la Team Go Rocket</div>
+  </div>
+
+  <p class="section-sous-titre">Récompenses</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Des rencontres</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Pommes</div>
+    <div class="intro-item"><span class="bullet">• </span>Un Module Leurre Moussu</div>
+    <div class="intro-item"><span class="bullet">• </span>Un Super Radar Rocket</div>
+  </div>
+
+  <p class="section-sous-titre">Passe Go Deluxe</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Plus de rencontres</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Pommes</div>
+    <div class="intro-item"><span class="bullet">• </span>Des Modules Leurre Moussu</div>
+    <div class="intro-item"><span class="bullet">• </span>Un Super Radar Rocket</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

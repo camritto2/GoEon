@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.1 - 16 septembre 2026.*
+*Version 5.2 - 18 septembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -189,6 +189,8 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
 
 ## 6. Pages Évènement
 
+**Dates** : `raids-date` en haut, format `Du [jour] [date], [heure] au [jour] [date], [heure]` - une seule phrase, sans tiret séparateur. Règle posée par Cam le 18/09 ; elle ne vaut **que pour les pages Évènement**, les pages Raids gardant leur `Depuis le… - Jusqu'au…` (§7). **Vérifier le jour de la semaine, ne jamais le supposer.**
+
 **Structure** : `h1` → `raids-date` → `astuce-shiny` (si des shinies sont cliquables) → `section-nav` (si ≥ 4 sections) → `intro-rules` → les sections.
 
 **Ordre des sections**, toutes optionnelles : Pokémon à l'honneur → Bonus → Nouveaux Pokémon → Pokémon Sauvages → Raids → Tâches d'Étude → Attaques Spéciales → Passe Go / Ticket Payant → Infos Supplémentaires. Les présences varient d'un évènement à l'autre, l'ordre relatif non — **sauf indication contraire de Cam**, qui peut vouloir mettre les Raids en avant.
@@ -225,7 +227,7 @@ Une page peut porter les deux. `.lien-source` vit dans `global.css` — **ne jam
 
 Concerne `raids.html` et `raids_obscurs.html`. Carte identique aux pages Évènement, plus deux blocs propres aux raids, dans cet ordre : **Dresseurs Nécessaires**, puis **Types à utiliser**. Chacun précédé de son `<hr class="separator">`.
 
-**Dates** : `raids-date` en haut, format `Depuis le [jour] [date], [heure] - Jusqu'au [jour] [date], [heure]`. **Vérifier le jour de la semaine, ne jamais le supposer.**
+**Dates** : `raids-date` en haut, format `Depuis le [jour] [date], [heure] - Jusqu'au [jour] [date], [heure]`. **Propre aux deux pages de raids** : les pages Évènement écrivent `Du… au…` (§6). **Vérifier le jour de la semaine, ne jamais le supposer.**
 
 ### Dresseurs Nécessaires
 

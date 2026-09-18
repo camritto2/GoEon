@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Festival des récoltes : Offensive</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Festival des récoltes : Offensive</h1>
+  <!-- Onglets vers la première partie de l'évènement. Même composant que les
+       pages de raids : deux liens vers deux pages, pas de bascule JavaScript,
+       chaque partie gardant sa propre ligne de dates. aria-current marque
+       l'onglet actif. -->
+  <nav class="raids-onglets">
+    <a href="FestivalRecoltes.html">Festival des récoltes</a>
+    <a href="FestivalRecoltesOffensive.html" aria-current="page">Offensive</a>
+  </nav>
+  <p class="raids-date">
+    Du vendredi 2 octobre, 0h au lundi 5 octobre, 20h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#shiny">Nouveau Shiny</a>
+    <a href="#bonus">Bonus</a>
+    <a href="#sauvages">Pokémon Sauvages</a>
+    <a href="#obscurs">Nouveaux Pokémon Obscurs</a>
+    <a href="#taches">Tâches d'Étude</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--              NOUVEAU SHINY              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="shiny">Nouveau Shiny</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <!-- Gribouraigne et Tag-Tag : nouveaux shinies, qui débutent avec
+         l'évènement. La classe nouveau-shiny est conservée pour toute la durée
+         de l'évènement, afin que le badge scintille et signale la nouveauté.
+         Elle part avec la page, pas avant. Le carte-plus entre les deux dit la
+         lignée : Gribouraigne évolue en Tag-Tag. -->
+    <div class="pokemon-card pk-gribouraigne">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Gribouraigne.png" data-shiny="Images/GribouraigneS.png" alt="Gribouraigne" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Gribouraigne</h2>
+        <p class="pokemon-subtitle">En Œuf 12 km</p>
+      </div>
+    </div>
+
+    <div class="carte-plus">+</div>
+
+    <div class="pokemon-card pk-tag-tag">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/TagTag.png" data-shiny="Images/TagTagS.png" alt="Tag-Tag" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Tag-Tag</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                  BONUS                  -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Plus de Team Go Rocket en Montgolfière et aux Pokéstop</div>
+    <div class="intro-item"><span class="bullet">• </span>IV plus variés pour les Pokémon attrapés lors des Raids Obscurs 1 et 3 étoiles</div>
+    <div class="intro-item"><span class="bullet">• </span>Possibilité d'utiliser une CT Attaque Chargée pour oublier l'Attaque <strong>Frustration</strong> d'un Pokémon Obscur</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--             POKÉMON SAUVAGES            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <!-- Smogo : classe pk-smogo à créer dans pokemon.css, et images
+         Smogo.png / SmogoS.png à déposer. -->
+    <div class="pokemon-card pk-smogo">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Smogo.png" data-shiny="Images/SmogoS.png" alt="Smogo" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Smogo</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-limagma">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Limagma.png" data-shiny="Images/LimagmaS.png" alt="Limagma" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Limagma</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-chamallot">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Chamallot.png" data-shiny="Images/ChamallotS.png" alt="Chamallot" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Chamallot</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-magmar">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Magmar.png" data-shiny="Images/MagmarS.png" alt="Magmar" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Magmar</h2>
+        <p class="pokemon-subtitle">Rare</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--        NOUVEAUX POKÉMON OBSCURS         -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="obscurs">Nouveaux Pokémon Obscurs</h2>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Les chefs et certains Sbires auront de nouveaux Pokémon</div>
+  </div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-sovkipou">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
+        <img src="Images/Sovkipou.png" data-shiny="Images/SovkipouS.png" alt="Sovkipou Obscur" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Sovkipou</h2>
+      </div>
+    </div>
+
+    <!-- Mimantis : classe pk-mimantis à créer dans pokemon.css, et images
+         Mimantis.png / MimantisS.png à déposer. -->
+    <div class="pokemon-card pk-mimantis">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
+        <img src="Images/Mimantis.png" data-shiny="Images/MimantisS.png" alt="Mimantis Obscur" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Mimantis</h2>
+      </div>
+    </div>
+
+    <!-- Bacabouh : classe pk-bacabouh à créer dans pokemon.css, et images
+         Bacabouh.png / BacabouhS.png à déposer. -->
+    <div class="pokemon-card pk-bacabouh">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
+        <img src="Images/Bacabouh.png" data-shiny="Images/BacabouhS.png" alt="Bacabouh Obscur" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Bacabouh</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-zekrom">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon"></div>
+        <img src="Images/Zekrom.png" data-shiny="Images/ZekromS.png" alt="Zekrom Obscur" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zekrom</h2>
+        <p class="pokemon-subtitle">Avec Giovanni</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--              TÂCHES D'ÉTUDE             -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
+
+  <p class="section-sous-titre"><em>Détails à venir</em></p>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>CT Attaque Immédiate</div>
+    <div class="intro-item"><span class="bullet">• </span>CT Attaque Chargée</div>
+    <div class="intro-item"><span class="bullet">• </span>Éléments mystérieux</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

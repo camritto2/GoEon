@@ -387,7 +387,11 @@ img.emoji-shiny.nouveau-shiny {
 
 /* Shiny boosté — étoile suivie d'une flèche montante, même signe que sur les
    infographies. La flèche est dessinée en CSS (masque SVG) : aucune balise à
-   ajouter dans les pages, le composant reste `<span class="shiny-boost-circle">`. */
+   ajouter dans les pages, le composant reste `<span class="shiny-boost-circle">`.
+   ⚠️ La flèche se dimensionne sur le badge shiny qu'elle accompagne, qui passe
+   de 14px en mobile à 22px au-dessus de 769px. Les valeurs ci-dessous sont donc
+   les valeurs mobiles, et la media query porte les valeurs desktop : une taille
+   unique donnait une flèche deux fois plus haute que l'étoile sur téléphone. */
 .shiny-boost-circle {
   display: inline-flex;
   align-items: center;
@@ -396,9 +400,9 @@ img.emoji-shiny.nouveau-shiny {
 
 .shiny-boost-circle::after {
   content: "";
-  width: 14px;
-  height: 31px;
-  margin-left: -3px;
+  width: 9px;
+  height: 20px;
+  margin-left: -2px;
   background-color: #DAA520;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 52'%3E%3Cpath d='M12 49 V6 M4 14 L12 5 L20 14' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 52'%3E%3Cpath d='M12 49 V6 M4 14 L12 5 L20 14' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
@@ -632,6 +636,15 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   color: var(--text-secondaire);
 }
 
+/* Lien d'action en haut des pages Évènement (billetterie, boutique en ligne).
+   Pendant de .lien-source, qui ferme la page. Pas de taille de police : le
+   lien reprend celle du corps de page. Posée le 18/09 en retirant le
+   style inline de CitySafariMarseille.html. */
+.lien-action {
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
 .section-sous-titre {
   font-style: italic;
   color: var(--text-secondaire);
@@ -673,6 +686,14 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
 .intro-rules p:last-child {
   margin-bottom: 0;
 }
+
+/* Paragraphes d'intro qui encadrent une liste d'intro-item, quand l'espacement
+   par défaut ne suffit pas. ⚠️ Les deux règles sont écrites scopées à dessein :
+   `.intro-rules p` pèse (0,1,1) et battrait une classe seule (0,1,0), qui
+   n'aurait alors aucun effet. Posées le 18/09 en remplacement des
+   style="margin: …" inline de Marseille et Pyrobut. */
+.intro-rules p.intro-p-avant { margin-bottom: 10px; }
+.intro-rules p.intro-p-apres { margin-top: 8px; }
 
 /* Encadrés d'intro */
 .intro-rules {
@@ -1065,6 +1086,8 @@ body.dark-mode .proba-icon {
   .emoji-shiny { width: 22px; height: 22px; }
   .badge-obscur-icon { width: 22px; height: 22px; }
   .emoji-costume { width: 26px; height: 26px; }
+  /* Flèche du shiny boosté : valeurs desktop, calées sur le badge à 22px. */
+  .shiny-boost-circle::after { width: 14px; height: 31px; margin-left: -3px; }
   .astuce-shiny-icon { width: 14px; height: 14px; }
 
   /* Contenu */

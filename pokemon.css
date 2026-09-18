@@ -356,6 +356,9 @@
 /* Bruyverne — Normal / Shiny */
 .pk-bruyverne .emoji-shiny { display: inline; }
 
+/* Bacabouh — Normal / Shiny */
+.pk-bacabouh .emoji-shiny { display: inline; }
+
 /* ============================================================
    POKÉMON — C
    ============================================================ */
@@ -1198,6 +1201,9 @@
 .pk-floreclat .pokemon-name { color: var(--accent-vert-bon); }
 .pk-floreclat .research-reward-name { color: var(--accent-vert-bon); }
 .pk-floreclat .emoji-shiny  { display: inline; }
+
+/* Floramantis — Normal / Shiny */
+.pk-floramantis .emoji-shiny { display: inline; }
 
 /* ============================================================
    POKÉMON — G
@@ -2163,6 +2169,9 @@
 /* Mistigrix — Normal / Shiny */
 .pk-mistigrix .emoji-shiny { display: inline; }
 
+/* Mimantis — Normal / Shiny */
+.pk-mimantis .emoji-shiny { display: inline; }
+
 /* ============================================================
    POKÉMON — N
    ============================================================ */
@@ -3077,6 +3086,12 @@
 /* Strassie — Normal / Shiny */
 .pk-strassie .emoji-shiny { display: inline; }
 
+/* Smogo — Normal / Shiny */
+.pk-smogo .emoji-shiny { display: inline; }
+
+/* Smogogo — Normal / Shiny */
+.pk-smogogo .emoji-shiny { display: inline; }
+
 /* ============================================================
    POKÉMON — T
    ============================================================ */
@@ -3289,6 +3304,9 @@
 .pk-tiboudet .pokemon-name { color: var(--accent-vert-bon); }
 .pk-tiboudet .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tiboudet .emoji-shiny  { display: inline; }
+
+/* Trépassable — Normal / Shiny */
+.pk-trepassable .emoji-shiny { display: inline; }
 
 /* ============================================================
    POKÉMON — U
