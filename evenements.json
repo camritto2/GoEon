@@ -458,7 +458,23 @@
       "libelle": "Octobre 2026",
       "evenements": [],
       "raids": [],
-      "quotidiens": []
+      "quotidiens": [
+        {
+          "debut": "2026-10-03",
+          "categorie": "dynamax",
+          "court": "Pyrobut Gigamax",
+          "long": "Journée de Combat - Pyrobut Gigamax",
+          "heures": "14h - 17h",
+          "sprites": [
+            "Pyrobut.png"
+          ],
+          "page": "PyrobutGigamax.html",
+          "lignes": [
+            "Gigamax",
+            "14h-17h"
+          ]
+        }
+      ]
     }
   ]
 }

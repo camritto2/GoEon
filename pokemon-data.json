@@ -850,6 +850,16 @@
         "n25": null
       }
     },
+    "pyrobut": {
+      "types": [
+        "Feu"
+      ],
+      "pc": {
+        "n15": 1293,
+        "n20": 1724,
+        "n25": 2156
+      }
+    },
     "pyronille": {
       "types": [
         "Insecte",
