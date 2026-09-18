@@ -385,18 +385,27 @@ img.emoji-shiny.nouveau-shiny {
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
-/* Cercle shiny boosté */
+/* Shiny boosté — étoile suivie d'une flèche montante, même signe que sur les
+   infographies. La flèche est dessinée en CSS (masque SVG) : aucune balise à
+   ajouter dans les pages, le composant reste `<span class="shiny-boost-circle">`. */
 .shiny-boost-circle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #DAA520;
-  border-radius: 50%;
-  padding: 3px 2px 3px 3px;
 }
 
-body.dark-mode .shiny-boost-circle {
-  border-color: #FFD700;
+.shiny-boost-circle::after {
+  content: "";
+  width: 14px;
+  height: 31px;
+  margin-left: -3px;
+  background-color: #DAA520;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 52'%3E%3Cpath d='M12 49 V6 M4 14 L12 5 L20 14' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 52'%3E%3Cpath d='M12 49 V6 M4 14 L12 5 L20 14' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+body.dark-mode .shiny-boost-circle::after {
+  background-color: #FFD700;
 }
 
 .shiny-boost-circle:has(.shiny-active) {
@@ -414,6 +423,12 @@ body.dark-mode .shiny-boost-circle {
    et ses sélecteurs .pk-x .pokemon-name pèsent (0,2,0). */
 h2.pokemon-name.nom-neutre { color: var(--text-principal); }
 span.research-reward-name.nom-neutre { color: var(--text-principal); }
+
+/* Nom de Pokémon cité dans une ligne de texte (bonus, intro…) — gras vert « Bon » */
+.nom-bon {
+  color: var(--accent-vert-bon);
+  font-weight: 700;
+}
 
 /* Nom */
 .pokemon-name {

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Journée de Communauté Zorua</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Journée de Communauté Zorua</h1>
+  <p class="raids-date">
+    Samedi 10 octobre, de 14h à 17h/21h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#honneur">Pokémon à l'honneur</a>
+    <a href="#bonus">Bonus</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#attaque">Attaque Spéciale</a>
+    <a href="#ticket">Ticket Payant</a>
+    <a href="#astuce">Astuce</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          POKÉMON À L'HONNEUR            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="honneur">Pokémon à l'honneur</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-zorua">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Zorua.png" data-shiny="Images/ZoruaS.png" alt="Zorua" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zorua</h2>
+        <p class="pokemon-subtitle">Shiny boosté !</p>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Ténèbres</span><img src="Images/Tenebres.webp" alt="Ténèbres" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carte-plus">+</div>
+
+    <div class="pokemon-card pk-zoroark">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Zoroark.png" data-shiny="Images/ZoroarkS.png" alt="Zoroark" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zoroark</h2>
+        <p class="pokemon-subtitle">Shiny boosté !</p>
+        <hr class="separator">
+        <div class="pokemon-types-container">
+          <div class="type-block"><span class="type-text">Ténèbres</span><img src="Images/Tenebres.webp" alt="Ténèbres" class="type-icon"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                BONUS                    -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span><strong>Triple PX</strong> de Capture</div>
+    <div class="intro-item"><span class="bullet">• </span>Taux de <strong>shiny boosté à 1/25</strong></div>
+    <div class="intro-item"><span class="bullet">• </span><strong>Double Bonbons</strong> de Capture, et plus de chances de Bonbon L</div>
+    <div class="intro-item"><span class="bullet">• </span>Les Encens durent 3h (sauf encens quotidien)</div>
+    <div class="intro-item"><span class="bullet">• </span>Les Modules Leurre durent 1h</div>
+    <div class="intro-item"><span class="bullet">• </span>5 Photobombs de <span class="nom-bon">Zorua</span></div>
+    <div class="intro-item"><span class="bullet">• </span>2 Échanges supplémentaires, avec un coût réduit de 50%</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          TÂCHES D'ÉTUDE                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
+  <p class="research-helper">💡 Les valeurs indiquées correspondent aux PC du 100%.</p>
+
+  <div class="research-list">
+
+    <div class="research-card">
+      <span class="research-task">Attrape 3 Zorua<br>Attrape 5 Pokémon en équipe<br>Attrape 50 Pokémon</span>
+      <div class="research-rewards">
+        <div class="research-reward-item pk-zorua">
+          <div class="research-image-container">
+            <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+            <img src="Images/Zorua.png" data-shiny="Images/ZoruaS.png" alt="Zorua" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Zorua</span>
+          <span class="research-cp">503</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          ATTAQUE SPÉCIALE               -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="attaque">Attaque Spéciale</h2>
+  <div class="intro-rules">
+    <p><em>Faire évoluer Zorua en Zoroark entre 14h et 21h permet d'obtenir l'Attaque Immédiate suivante :</em></p>
+    <p class="attaque-vedette"><strong>Coup Bas</strong> <img src="Images/Tenebres.webp" alt="Ténèbres" class="attaque-vedette-icon"></p>
+    <div class="intro-item"><span class="bullet">• </span>PvP : Puissance 8 / Énergie 7 / 2 Tours</div>
+    <div class="intro-item"><span class="bullet">• </span>Raids : Puissance 5 / Énergie 6 / 0,5 secondes</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            TICKET PAYANT                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="ticket">Ticket Payant</h2>
+  <p class="section-sous-titre">2€19 /&nbsp;<em>Disponible dans la boutique en ligne avec 5 Hyper Balls offertes</em></p>
+  <div class="intro-rules">
+    <p>Une Étude Spéciale avec :</p>
+    <div class="intro-item"><span class="bullet">• </span>Des rencontres supplémentaires avec des Zorua</div>
+    <div class="intro-item"><span class="bullet">• </span>1 Passe Premium</div>
+    <div class="intro-item"><span class="bullet">• </span>1 Super Bonbon L</div>
+    <div class="intro-item"><span class="bullet">• </span>Et bien d'autres surprises !</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                ASTUCE                   -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="astuce">Astuce</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Réglez votre copain Pokémon sur Zorua avant l'Évènement pour éviter l'animation de transformation à chaque Capture !</div>
+  </div>
+
+  <p class="lien-source">
+    Source : <a href="https://pokemongo.com/fr/news/communityday-october-2026-zorua" target="_blank" rel="noopener">Blog Officiel Pokémon Go</a>
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

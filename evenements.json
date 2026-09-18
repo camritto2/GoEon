@@ -473,6 +473,22 @@
             "Gigamax",
             "14h-17h"
           ]
+        },
+        {
+          "debut": "2026-10-10",
+          "categorie": "community-day",
+          "court": "CD Zorua",
+          "long": "Community Day - Zorua",
+          "heures": "14h - 17h",
+          "bonus": "Certains bonus prolongés jusqu'à 21h",
+          "sprites": [
+            "Zorua.png"
+          ],
+          "page": "CDZorua.html",
+          "lignes": [
+            "Community Day",
+            "14h-17h/21h"
+          ]
         }
       ]
     }
