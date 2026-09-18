@@ -8,14 +8,12 @@
         {
           "nom": "Méga Ascension",
           "debut": "2026-08-31T10:00",
-          "fin": "2026-09-04T20:00",
-          "page": "MegaAscension.html"
+          "fin": "2026-09-04T20:00"
         },
         {
           "nom": "Hordes Méga",
           "debut": "2026-09-08T10:00",
-          "fin": "2026-09-14T20:00",
-          "page": "HordesMega.html"
+          "fin": "2026-09-14T20:00"
         },
         {
           "nom": "Célébration pour la série Pokémon, les horizons",
@@ -212,7 +210,6 @@
           "court": "Go Fest",
           "long": "Go Fest Méga Finale",
           "heures": "10h - 18h",
-          "page": "GoFestMegaFinale.html",
           "lignes": [
             "Go Fest",
             "Méga Finale",
@@ -289,7 +286,6 @@
           "sprites": [
             "Griknot.png"
           ],
-          "page": "CDCGriknot.html",
           "lignes": [
             "Community Day",
             "14h-17h/21h"
@@ -463,9 +459,146 @@
     {
       "cle": "2026-10",
       "libelle": "Octobre 2026",
-      "evenements": [],
-      "raids": [],
+      "evenements": [
+        {
+          "nom": "???",
+          "debut": "2026-10-06T00:00",
+          "fin": "2026-10-10T20:00"
+        },
+        {
+          "nom": "Marathon d'Automne",
+          "debut": "2026-10-13T10:00",
+          "fin": "2026-10-19T20:00"
+        },
+        {
+          "nom": "Halloween - Partie 1",
+          "debut": "2026-10-27T10:00",
+          "fin": "2026-10-31T20:00"
+        }
+      ],
+      "raids": [
+        {
+          "categorie": "legendaire",
+          "debut": "2026-10-07",
+          "fin": "2026-10-13",
+          "pokemon": [
+            {
+              "nom": "Yveltal",
+              "img": "Yveltal.png"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-10-14",
+          "fin": "2026-10-20",
+          "pokemon": [
+            {
+              "nom": "Dialga",
+              "img": "Dialga.png"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-10-21",
+          "fin": "2026-10-27",
+          "pokemon": [
+            {
+              "nom": "Palkia",
+              "img": "Palkia.png"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-10-28",
+          "fin": "2026-11-03",
+          "pokemon": [
+            {
+              "nom": "Giratina",
+              "img": "GiratinaO.png",
+              "forme": "Forme Originelle"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-10-07",
+          "fin": "2026-10-13",
+          "pokemon": [
+            {
+              "nom": "Méga-Tortank",
+              "img": "TortankM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-10-14",
+          "fin": "2026-10-20",
+          "pokemon": [
+            {
+              "nom": "Méga-Dracolosse",
+              "img": "DracolosseM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-10-21",
+          "fin": "2026-10-27",
+          "pokemon": [
+            {
+              "nom": "Méga-Dracaufeu X",
+              "img": "DracaufeuMX.png"
+            },
+            {
+              "nom": "Méga-Dracaufeu Y",
+              "img": "DracaufeuMY.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-10-28",
+          "fin": "2026-11-03",
+          "pokemon": [
+            {
+              "nom": "Méga-Ténéfix",
+              "img": "TenefixM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "obscur",
+          "debut": "2026-10-07",
+          "fin": "2026-11-03",
+          "pokemon": [
+            {
+              "nom": "Démétéros",
+              "img": "DemeterosA.png",
+              "forme": "Forme Avatar"
+            }
+          ]
+        }
+      ],
       "quotidiens": [
+        {
+          "debut": "2026-10-01",
+          "categorie": "heure-vedette",
+          "court": "Heure Grainipiot",
+          "long": "Heure Vedette - Grainipiot",
+          "heures": "18h - 19h",
+          "bonus": "Double PX de capture",
+          "sprites": [
+            "Grainipiot.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
         {
           "debut": "2026-10-03",
           "categorie": "dynamax",
@@ -482,6 +615,49 @@
           ]
         },
         {
+          "debut": "2026-10-05",
+          "categorie": "dynamax",
+          "court": "Dynamax Grillepattes",
+          "long": "Lundi Dynamax - Grillepattes",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
+          "sprites": [
+            "Grillepattes.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-10-07",
+          "categorie": "heure-raid",
+          "court": "Raids Yveltal",
+          "long": "Heure de Raid - Yveltal",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Yveltal.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-10-08",
+          "categorie": "heure-vedette",
+          "court": "Heure Lewsor",
+          "long": "Heure Vedette - Lewsor",
+          "heures": "18h - 19h",
+          "bonus": "Double Bonbons de capture",
+          "sprites": [
+            "Lewsor.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
           "debut": "2026-10-10",
           "categorie": "community-day",
           "court": "CD Zorua",
@@ -495,6 +671,190 @@
           "lignes": [
             "Community Day",
             "14h-17h/21h"
+          ]
+        },
+        {
+          "debut": "2026-10-12",
+          "categorie": "dynamax",
+          "court": "Dynamax Minisange",
+          "long": "Lundi Dynamax - Minisange",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
+          "sprites": [
+            "Minisange.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-10-14",
+          "categorie": "heure-raid",
+          "court": "Raids Dialga",
+          "long": "Heure de Raid - Dialga",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Dialga.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-10-15",
+          "categorie": "heure-vedette",
+          "court": "Heure Nounourson",
+          "long": "Heure Vedette - Nounourson",
+          "heures": "18h - 19h",
+          "bonus": "Double Bonbons de transfert",
+          "sprites": [
+            "Nounourson.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-10-17",
+          "categorie": "eclosion",
+          "court": "Éclosion ???",
+          "long": "Journée d'Éclosion - ???",
+          "heures": "11h - 17h",
+          "lignes": [
+            "Éclosion",
+            "11h-17h"
+          ]
+        },
+        {
+          "debut": "2026-10-19",
+          "categorie": "dynamax",
+          "court": "Dynamax Farfuret",
+          "long": "Lundi Dynamax - Farfuret",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
+          "sprites": [
+            "Farfuret.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-10-21",
+          "categorie": "heure-raid",
+          "court": "Raids Palkia",
+          "long": "Heure de Raid - Palkia",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Palkia.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-10-22",
+          "categorie": "heure-vedette",
+          "court": "Heure Spododo",
+          "long": "Heure Vedette - Spododo",
+          "heures": "18h - 19h",
+          "bonus": "Double Poussière de capture (1 000 P.É. par capture)",
+          "sprites": [
+            "Spododo.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-10-24",
+          "categorie": "dynamax",
+          "court": "??? Gigamax",
+          "long": "Journée de Combat - ??? Gigamax",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Gigamax",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2026-10-26",
+          "categorie": "dynamax",
+          "court": "Dynamax Ténéfix",
+          "long": "Lundi Dynamax - Ténéfix",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
+          "sprites": [
+            "Tenefix.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-10-28",
+          "categorie": "heure-raid",
+          "court": "Raids Giratina",
+          "long": "Heure de Raid - Giratina",
+          "heures": "18h - 19h",
+          "sprites": [
+            "GiratinaO.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ],
+          "forme": "Forme Originelle"
+        },
+        {
+          "debut": "2026-10-29",
+          "categorie": "heure-vedette",
+          "court": "Heure Fantominus",
+          "long": "Heure Vedette - Fantominus",
+          "heures": "18h - 19h",
+          "bonus": "Double PX d'évolution",
+          "sprites": [
+            "Fantominus.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-10-31",
+          "categorie": "journee-raids",
+          "court": "Méga-Raids ???",
+          "long": "Journée de Super Méga-Raids - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Méga-Raids",
+            "14h-17h"
+          ]
+        }
+      ]
+    },
+    {
+      "cle": "2026-11",
+      "libelle": "Novembre 2026",
+      "evenements": [],
+      "raids": [],
+      "quotidiens": [
+        {
+          "debut": "2026-11-14",
+          "fin": "2026-11-15",
+          "categorie": "gofest",
+          "court": "Terres Sauvages",
+          "long": "Terres Sauvages Mondial 2026",
+          "heures": "10h - 18h",
+          "page": "TerresSauvages2026.html",
+          "lignes": [
+            "Terres Sauvages",
+            "10h-18h"
           ]
         }
       ]

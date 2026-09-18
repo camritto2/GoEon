@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.2 - 18 septembre 2026.*
+*Version 5.3 - 18 septembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -281,9 +281,13 @@ Le calendrier de `Calendrier.html` et l'aperçu de sept jours de l'accueil sont 
 
 Toute la taille des sprites de la piste Raids en découle : le script choisit le plus grand palier qui tient à la fois en largeur et en hauteur. Changer `grid-auto-rows`, la bordure ou le padding de `.cal-compact` sans recalculer la constante fait déborder les sprites hors de leur bloc — silencieusement, et seulement sur certaines rotations.
 
+Cas particulier des **rotations régionalisées** (un légendaire différent par zone) : les légendaires y sont *empilés* sous leur étiquette de zone au lieu d'être côte à côte, ce qui fait quatre rangées pour trois régions plus un Méga, là où le calcul ordinaire n'en compte que deux. Sur un segment court - les deux jours qu'une rotation commencée en fin de fenêtre laisse voir dans l'aperçu de l'accueil - rien ne tient, et `.cal-raids` étant en `overflow: hidden`, le bloc rognait **en silence**. Le script mesure donc la hauteur réellement occupée et **renonce aux étiquettes quand elle déborde** : les légendaires repassent côte à côte, les zones restent lisibles au clic dans le panneau de détail.
+
 Les deux constantes sont des **valeurs mobiles**. Lignes et pistes ne font que grandir sur écran large, donc un sprite calculé sur la valeur mobile ne déborde jamais ailleurs. Ne pas les caler sur le desktop.
 
 Autres points fixes : la piste Quotidien n'affiche **qu'une ligne de texte en compact** (deux lignes plus un sprite ne tiennent pas dans 44px) — c'est la première ligne saisie, donc la catégorie, une clé `"compact"` du JSON prenant le dessus si besoin. Un mois nouveau demande son entrée `cle` / `libelle` dans `evenements.json`, **même vide** : sans elle, la navigation ne peut pas l'atteindre, quand bien même des données à cheval s'y afficheraient.
+
+**Ajouter une catégorie à la piste Quotidien touche trois endroits**, et le script n'en connait aucun : il compose la classe `cal-cat-<categorie>` à partir de la clé `categorie` du JSON, donc une catégorie déclarée nulle part rend un bloc sans couleur, sans la moindre erreur. Il faut la paire `--cal-<nom>-bg` / `--cal-<nom>-txt` dans `navbar.css` **deux fois** - une dans le bloc clair, une dans le bloc sombre - puis `.cal-cat-<nom>` dans `calendrier.css`. La Journée d'Éclosion (turquoise) a été ajoutée ainsi le 18/09 et porte le compte à neuf catégories.
 
 ---
 

@@ -37,6 +37,7 @@
   --cal-gofest-bg: #ebe9e4;    --cal-gofest-txt: #4a4a45;    /* Go Fest */
   --cal-maitrise-bg: #fdead5;  --cal-maitrise-txt: #8a4a0a;  /* Maitrise de Capture */
   --cal-saison-bg: #fbe1f0;    --cal-saison-txt: #9b2a6b;    /* Nouvelle Saison / Passe Go */
+  --cal-eclosion-bg: #d9f4f0;  --cal-eclosion-txt: #0f6b63;  /* Journee d'Eclosion */
   /* Le calendrier a sa propre bordure, plus franche que --border-carte.
      Une carte isolee se passe d'un trait net, une grille non : ce sont les
      filets qui donnent les colonnes et les lignes. Ne pas remplacer par
@@ -85,6 +86,7 @@ body.dark-mode {
   --cal-gofest-bg: #3e3c37;   --cal-gofest-txt: #d7d1c1;        /* Go Fest */
   --cal-maitrise-bg: #4a3b2b; --cal-maitrise-txt: #ecceac;      /* Maitrise de Capture */
   --cal-saison-bg: #4a2b3d;   --cal-saison-txt: #ecacd1;        /* Nouvelle Saison / Passe Go */
+  --cal-eclosion-bg: #2b4a45; --cal-eclosion-txt: #acece0;      /* Journee d'Eclosion */
   --cal-raids-bg: #373a3e;    --cal-raids-txt: #c1cbd7;         /* Piste Raids */
   --cal-bordure: #474d55;
 

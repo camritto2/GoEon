@@ -321,6 +321,7 @@
 .cal-cat-gofest        { background: var(--cal-gofest-bg);   color: var(--cal-gofest-txt); }
 .cal-cat-maitrise      { background: var(--cal-maitrise-bg); color: var(--cal-maitrise-txt); }
 .cal-cat-saison        { background: var(--cal-saison-bg);   color: var(--cal-saison-txt); }
+.cal-cat-eclosion      { background: var(--cal-eclosion-bg); color: var(--cal-eclosion-txt); }
 
 /* --- Panneau de detail, ouvert au clic --- */
 /* Il flotte au-dessus du calendrier plutot que de s'inserer dans le

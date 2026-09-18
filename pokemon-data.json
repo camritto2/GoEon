@@ -18,6 +18,38 @@
     }
   },
   "pokemon": {
+    "abra": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 767,
+        "n25": null
+      }
+    },
+    "amonita": {
+      "types": [
+        "Roche",
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 882,
+        "n25": null
+      }
+    },
+    "apitrini": {
+      "types": [
+        "Insecte",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 282,
+        "n25": null
+      }
+    },
     "arcko": {
       "types": [
         "Plante"
@@ -25,6 +57,17 @@
       "pc": {
         "n15": null,
         "n20": 601,
+        "n25": null
+      }
+    },
+    "artikodin": {
+      "types": [
+        "Glace",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1743,
         "n25": null
       }
     },
@@ -57,6 +100,16 @@
       "pc": {
         "n15": null,
         "n20": 1194,
+        "n25": null
+      }
+    },
+    "barpau": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 157,
         "n25": null
       }
     },
@@ -102,6 +155,16 @@
         "n25": 1268
       }
     },
+    "caninos": {
+      "types": [
+        "Feu"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 710,
+        "n25": null
+      }
+    },
     "caninos-h": {
       "types": [
         "Feu",
@@ -123,6 +186,17 @@
         "n25": null
       }
     },
+    "caratroc": {
+      "types": [
+        "Insecte",
+        "Roche"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 231,
+        "n25": null
+      }
+    },
     "charbambin": {
       "types": [
         "Feu"
@@ -130,6 +204,16 @@
       "pc": {
         "n15": null,
         "n20": 418,
+        "n25": null
+      }
+    },
+    "chenipan": {
+      "types": [
+        "Insecte"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 249,
         "n25": null
       }
     },
@@ -152,6 +236,17 @@
         "n15": 483,
         "n20": 644,
         "n25": 805
+      }
+    },
+    "chovsourir": {
+      "types": [
+        "Psy",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 580,
+        "n25": null
       }
     },
     "coiffeton": {
@@ -184,6 +279,16 @@
         "n25": 1383
       }
     },
+    "croquine": {
+      "types": [
+        "Plante"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 268,
+        "n25": null
+      }
+    },
     "dardargnan-mega": {
       "types": [
         "Insecte",
@@ -193,6 +298,16 @@
         "n15": null,
         "n20": 1054,
         "n25": 1318
+      }
+    },
+    "darumarond": {
+      "types": [
+        "Feu"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 823,
+        "n25": null
       }
     },
     "darumarond-g": {
@@ -224,6 +339,17 @@
         "n15": null,
         "n20": 1505,
         "n25": 1882
+      }
+    },
+    "doudouvet": {
+      "types": [
+        "Plante",
+        "Fée"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 400,
+        "n25": null
       }
     },
     "draby": {
@@ -268,6 +394,28 @@
         "n25": 1951
       }
     },
+    "duralugon": {
+      "types": [
+        "Acier",
+        "Dragon"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1753,
+        "n25": null
+      }
+    },
+    "electhor": {
+      "types": [
+        "Électrik",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 2015,
+        "n25": null
+      }
+    },
     "elekid": {
       "types": [
         "Électrik"
@@ -278,6 +426,26 @@
         "n25": 861
       }
     },
+    "elektek": {
+      "types": [
+        "Électrik"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1333,
+        "n25": null
+      }
+    },
+    "entei": {
+      "types": [
+        "Feu"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1984,
+        "n25": null
+      }
+    },
     "evoli": {
       "types": [
         "Normal"
@@ -286,6 +454,17 @@
         "n15": 459,
         "n20": 612,
         "n25": 765
+      }
+    },
+    "fantominus": {
+      "types": [
+        "Spectre",
+        "Poison"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 702,
+        "n25": null
       }
     },
     "farfuret-h": {
@@ -531,6 +710,38 @@
         "n25": 1683
       }
     },
+    "hexagel": {
+      "types": [
+        "Glace"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1598,
+        "n25": null
+      }
+    },
+    "ho-oh": {
+      "types": [
+        "Feu",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 2207,
+        "n25": null
+      }
+    },
+    "hoothoot": {
+      "types": [
+        "Normal",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 387,
+        "n25": null
+      }
+    },
     "insolourdo": {
       "types": [
         "Normal"
@@ -541,6 +752,17 @@
         "n25": 1206
       }
     },
+    "kabuto": {
+      "types": [
+        "Roche",
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 783,
+        "n25": null
+      }
+    },
     "kaiminus": {
       "types": [
         "Eau"
@@ -548,6 +770,26 @@
       "pc": {
         "n15": null,
         "n20": 646,
+        "n25": null
+      }
+    },
+    "kapoera": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1232,
+        "n25": null
+      }
+    },
+    "kicklee": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1472,
         "n25": null
       }
     },
@@ -561,6 +803,26 @@
         "n25": null
       }
     },
+    "krabby": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 892,
+        "n25": null
+      }
+    },
+    "kraknoix": {
+      "types": [
+        "Sol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 728,
+        "n25": null
+      }
+    },
     "larmeleon": {
       "types": [
         "Eau"
@@ -568,6 +830,28 @@
       "pc": {
         "n15": null,
         "n20": 627,
+        "n25": null
+      }
+    },
+    "latias": {
+      "types": [
+        "Dragon",
+        "Psy"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 2006,
+        "n25": null
+      }
+    },
+    "latios": {
+      "types": [
+        "Dragon",
+        "Psy"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 2178,
         "n25": null
       }
     },
@@ -603,6 +887,17 @@
         "n25": 1886
       }
     },
+    "lugia": {
+      "types": [
+        "Psy",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 2115,
+        "n25": null
+      }
+    },
     "machoc": {
       "types": [
         "Combat"
@@ -621,6 +916,26 @@
         "n15": 567,
         "n20": 756,
         "n25": 945
+      }
+    },
+    "magicarpe": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 157,
+        "n25": null
+      }
+    },
+    "magmar": {
+      "types": [
+        "Feu"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1367,
+        "n25": null
       }
     },
     "maraiste": {
@@ -676,6 +991,16 @@
         "n25": 1220
       }
     },
+    "miamiasme": {
+      "types": [
+        "Poison"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 571,
+        "n25": null
+      }
+    },
     "miaouss-g": {
       "types": [
         "Acier"
@@ -718,6 +1043,16 @@
         "n25": 717
       }
     },
+    "minisange": {
+      "types": [
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 380,
+        "n25": null
+      }
+    },
     "monorpale": {
       "types": [
         "Acier",
@@ -729,6 +1064,16 @@
         "n25": null
       }
     },
+    "moumouton": {
+      "types": [
+        "Normal"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 403,
+        "n25": null
+      }
+    },
     "moustillon": {
       "types": [
         "Eau"
@@ -736,6 +1081,27 @@
       "pc": {
         "n15": null,
         "n20": 597,
+        "n25": null
+      }
+    },
+    "nodulithe": {
+      "types": [
+        "Roche"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 688,
+        "n25": null
+      }
+    },
+    "obalie": {
+      "types": [
+        "Glace",
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 550,
         "n25": null
       }
     },
@@ -820,6 +1186,17 @@
         "n25": 670
       }
     },
+    "poichigeon": {
+      "types": [
+        "Normal",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 484,
+        "n25": null
+      }
+    },
     "poussacha": {
       "types": [
         "Plante"
@@ -871,6 +1248,16 @@
         "n25": null
       }
     },
+    "quartermac": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1733,
+        "n25": null
+      }
+    },
     "racaillou-a": {
       "types": [
         "Roche",
@@ -879,6 +1266,16 @@
       "pc": {
         "n15": null,
         "n20": 739,
+        "n25": null
+      }
+    },
+    "raikou": {
+      "types": [
+        "Électrik"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1972,
         "n25": null
       }
     },
@@ -903,6 +1300,36 @@
         "n25": 524
       }
     },
+    "regice": {
+      "types": [
+        "Glace"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1784,
+        "n25": null
+      }
+    },
+    "regirock": {
+      "types": [
+        "Roche"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1784,
+        "n25": null
+      }
+    },
+    "registeel": {
+      "types": [
+        "Acier"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1784,
+        "n25": null
+      }
+    },
     "rhinocorne": {
       "types": [
         "Sol",
@@ -922,6 +1349,26 @@
         "n15": 407,
         "n20": 543,
         "n25": 679
+      }
+    },
+    "rongourmand": {
+      "types": [
+        "Normal"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 539,
+        "n25": null
+      }
+    },
+    "rototaupe": {
+      "types": [
+        "Sol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 786,
+        "n25": null
       }
     },
     "rozbouton": {
@@ -967,6 +1414,17 @@
         "n25": 700
       }
     },
+    "salarsen": {
+      "types": [
+        "Électrik",
+        "Poison"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1486,
+        "n25": null
+      }
+    },
     "selutin": {
       "types": [
         "Roche"
@@ -975,6 +1433,60 @@
         "n15": 414,
         "n20": 552,
         "n25": 690
+      }
+    },
+    "sepiatop": {
+      "types": [
+        "Ténèbres",
+        "Psy"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 529,
+        "n25": null
+      }
+    },
+    "solochi": {
+      "types": [
+        "Ténèbres",
+        "Dragon"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 606,
+        "n25": null
+      }
+    },
+    "suicune": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1704,
+        "n25": null
+      }
+    },
+    "sulfura": {
+      "types": [
+        "Feu",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1980,
+        "n25": null
+      }
+    },
+    "tarsal": {
+      "types": [
+        "Psy",
+        "Fée"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 308,
+        "n25": null
       }
     },
     "taupiqueur-a": {
@@ -996,6 +1508,17 @@
       "pc": {
         "n15": null,
         "n20": 843,
+        "n25": null
+      }
+    },
+    "terhal": {
+      "types": [
+        "Acier",
+        "Psy"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 558,
         "n25": null
       }
     },
@@ -1072,6 +1595,16 @@
         "n25": null
       }
     },
+    "tygnon": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 1332,
+        "n25": null
+      }
+    },
     "vipelierre": {
       "types": [
         "Plante"
@@ -1104,6 +1637,16 @@
         "n25": null
       }
     },
+    "wailmer": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 838,
+        "n25": null
+      }
+    },
     "wimessir-f": {
       "types": [
         "Psy",
@@ -1123,6 +1666,16 @@
       "pc": {
         "n15": null,
         "n20": 1396,
+        "n25": null
+      }
+    },
+    "wushours": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": 727,
         "n25": null
       }
     },

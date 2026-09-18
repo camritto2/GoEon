@@ -929,6 +929,36 @@ if (document.querySelector('.home-card[data-debut]')) {
     return palier(Math.min(largeurDispo(total), PAS * jours - 6), PALIERS);
   }
 
+  // Une rotation regionalisee coute bien plus cher qu'une rotation
+  // ordinaire : les legendaires ne sont plus cote a cote mais EMPILES,
+  // chacun sous son etiquette de zone, et les megas s'ajoutent encore en
+  // dessous. Trois regions plus un mega, ce sont quatre rangees la ou
+  // tailleEmpilee n'en compte que deux. Sur un segment court - les deux
+  // jours que l'apercu de l'accueil laisse voir d'une rotation qui
+  // commence en fin de fenetre - plus rien ne tient, et .cal-raids etant
+  // en overflow: hidden, le bloc rognait le contenu sans rien dire.
+  // On mesure donc la hauteur reellement occupee (voir plus bas), et on
+  // renonce aux etiquettes quand elle deborde : les legendaires repassent
+  // cote a cote comme une rotation ordinaire, et les zones restent
+  // lisibles dans le panneau de detail, au clic.
+  const ZONE          = 11;  // .cal-raids-zone : 0.55rem a 1.1, plus 1px
+  const ENTRE_REGIONS = 6;   // .cal-raids-region + .cal-raids-region
+
+  function tailleRegionalisee(nbLeg, nbMega, jours, ecart) {
+    const dispo = PAS * jours - 6
+                - nbLeg * ZONE
+                - (nbLeg - 1) * ENTRE_REGIONS
+                - (nbMega ? ecart : 0);
+    const rangees = nbLeg + (nbMega ? 1 : 0);
+    return palier(Math.min(largeurDispo(Math.max(nbMega, 1)), dispo / rangees), PALIERS);
+  }
+
+  function hauteurRegionalisee(nbLeg, nbMega, taille, ecart) {
+    return nbLeg * (ZONE + taille)
+         + (nbLeg - 1) * ENTRE_REGIONS
+         + (nbMega ? ecart + taille : 0);
+  }
+
   // Rangee ou chaque Pokemon porte le nom de sa zone, empiles.
   function rangeeRegions(liste) {
     return liste.map(p =>
@@ -1075,7 +1105,18 @@ if (document.querySelector('.home-card[data-debut]')) {
       const a = parJour[i];
       if (a.legendaire.length || a.mega.length) {
         const jours = fin - i + 1;
-        const regionalise = a.legendaire.some(p => p.region);
+        const ecart = valeurEcart(jours);
+
+        // Les etiquettes de zone ne sont pas un droit acquis : on les garde
+        // si la pile qu'elles imposent tient dans la hauteur du segment,
+        // sinon on retombe sur une rotation ordinaire.
+        let regionalise = a.legendaire.some(p => p.region);
+        let tailleRegion = 0;
+        if (regionalise) {
+          tailleRegion = tailleRegionalisee(a.legendaire.length, a.mega.length, jours, ecart);
+          if (hauteurRegionalisee(a.legendaire.length, a.mega.length, tailleRegion, ecart)
+              > PAS * jours - 6) regionalise = false;
+        }
 
         // En mode regionalise les legendaires sont empiles, pas cote a
         // cote : seuls les megas contraignent alors la largeur.
@@ -1086,13 +1127,13 @@ if (document.querySelector('.home-card[data-debut]')) {
         // donne parfois des sprites plus grands que de les empiler. C'est
         // le cas du 30 septembre : Xerneas et Mega-Empiflor passent de 22
         // a 44px en se placant cote a cote.
-        const ecart = valeurEcart(jours);
-
         const fusion = !regionalise
                     && a.legendaire.length && a.mega.length
                     && tailleFusionnee(total, jours) > tailleEmpilee(nbMax, jours, ecart);
 
-        const taille = fusion ? tailleFusionnee(total, jours) : tailleEmpilee(nbMax, jours, ecart);
+        const taille = regionalise
+          ? tailleRegion
+          : (fusion ? tailleFusionnee(total, jours) : tailleEmpilee(nbMax, jours, ecart));
 
         let html = '';
         if (fusion) {
