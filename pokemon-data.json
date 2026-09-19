@@ -341,6 +341,17 @@
         "n25": 1882
       }
     },
+    "dialga": {
+      "types": [
+        "Acier",
+        "Dragon"
+      ],
+      "pc": {
+        "n15": 1731,
+        "n20": 2307,
+        "n25": 2884
+      }
+    },
     "doudouvet": {
       "types": [
         "Plante",
@@ -908,6 +919,16 @@
         "n25": 913
       }
     },
+    "mackogneur": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": 1310,
+        "n20": 1746,
+        "n25": 2183
+      }
+    },
     "magby": {
       "types": [
         "Feu"
@@ -1135,6 +1156,17 @@
         "n25": null
       }
     },
+    "palkia": {
+      "types": [
+        "Eau",
+        "Dragon"
+      ],
+      "pc": {
+        "n15": 1710,
+        "n20": 2280,
+        "n25": 2850
+      }
+    },
     "palmaval": {
       "types": [
         "Eau",
@@ -1194,6 +1226,17 @@
       "pc": {
         "n15": null,
         "n20": 484,
+        "n25": null
+      }
+    },
+    "pondralugon": {
+      "types": [
+        "Acier",
+        "Dragon"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
         "n25": null
       }
     },

@@ -37,6 +37,9 @@
 .pk-abra .research-reward-name { color: var(--accent-vert-bon); }
 .pk-abra .emoji-shiny  { display: inline; }
 
+/* Aflamanoir — Normal / Shiny */
+.pk-aflamanoir .emoji-shiny { display: inline; }
+
 /* Alakazam — Bon / Shiny (couvre Méga-Alakazam) */
 .pk-alakazam .pokemon-name { color: var(--accent-vert-bon); }
 .pk-alakazam .research-reward-name { color: var(--accent-vert-bon); }
@@ -92,6 +95,12 @@
 .pk-archeduc-h .pokemon-name { color: var(--accent-vert-bon); }
 .pk-archeduc-h .research-reward-name { color: var(--accent-vert-bon); }
 .pk-archeduc-h .emoji-shiny  { display: inline; }
+
+/* Archéodong — Normal / Shiny */
+.pk-archeodong .emoji-shiny { display: inline; }
+
+/* Archéomire — Normal / Shiny */
+.pk-archeomire .emoji-shiny { display: inline; }
 
 /* Artikodin — Bon / Shiny */
 .pk-artikodin .pokemon-name { color: var(--accent-vert-bon); }
@@ -218,8 +227,14 @@
 .pk-badabouin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-badabouin .emoji-shiny  { display: inline; }
 
+/* Barbicha — Normal / Shiny */
+.pk-barbicha .emoji-shiny { display: inline; }
+
 /* Bargantua — Normal / Shiny (toutes couleurs) */
 .pk-bargantua .emoji-shiny { display: inline; }
+
+/* Barloche — Normal / Shiny */
+.pk-barloche .emoji-shiny { display: inline; }
 
 /* Bazoucan — Bon / Shiny */
 .pk-bazoucan .pokemon-name { color: var(--accent-vert-bon); }
@@ -295,6 +310,9 @@
 .pk-boskara .pokemon-name { color: var(--accent-vert-bon); }
 .pk-boskara .research-reward-name { color: var(--accent-vert-bon); }
 .pk-boskara .emoji-shiny  { display: inline; }
+
+/* Boumata — Normal / Shiny */
+.pk-boumata .emoji-shiny { display: inline; }
 
 /* Braisillon — Normal / Shiny */
 .pk-braisillon .emoji-shiny { display: inline; }
@@ -531,6 +549,12 @@
 .pk-clamiral-h .pokemon-name { color: var(--accent-vert-bon); }
 .pk-clamiral-h .research-reward-name { color: var(--accent-vert-bon); }
 .pk-clamiral-h .emoji-shiny  { display: inline; }
+
+/* Clic — Normal / Shiny */
+.pk-clic .emoji-shiny { display: inline; }
+
+/* Cliticlic — Normal / Shiny */
+.pk-cliticlic .emoji-shiny { display: inline; }
 
 /* Cochignon — Bon / Shiny */
 .pk-cochignon .pokemon-name { color: var(--accent-vert-bon); }
@@ -1636,6 +1660,9 @@
 .pk-kranidos .pokemon-name { color: var(--accent-vert-bon); }
 .pk-kranidos .research-reward-name { color: var(--accent-vert-bon); }
 .pk-kranidos .emoji-shiny  { display: inline; }
+
+/* Kravarech — Normal / Shiny */
+.pk-kravarech .emoji-shiny { display: inline; }
 
 /* Kungfouine — Normal / Shiny */
 .pk-kungfouine .emoji-shiny { display: inline; }
@@ -3107,6 +3134,12 @@
 .pk-tag-tag .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tag-tag .emoji-shiny  { display: inline; }
 
+/* Tarinor — Normal / Shiny */
+.pk-tarinor .emoji-shiny { display: inline; }
+
+/* Tarinorme — Normal / Shiny */
+.pk-tarinorme .emoji-shiny { display: inline; }
+
 /* Tarpaud — Normal / Shiny */
 .pk-tarpaud .emoji-shiny { display: inline; }
 
@@ -3155,6 +3188,9 @@
 .pk-terhal .research-reward-name { color: var(--accent-vert-bon); }
 .pk-terhal .emoji-shiny  { display: inline; }
 
+/* Terraiste — Normal / Shiny */
+.pk-terraiste .emoji-shiny { display: inline; }
+
 /* Terrakium — Bon / Shiny */
 .pk-terrakium .pokemon-name { color: var(--accent-vert-bon); }
 .pk-terrakium .research-reward-name { color: var(--accent-vert-bon); }
@@ -3170,6 +3206,9 @@
 .pk-theffroi .pokemon-name { color: var(--accent-vert-bon); }
 .pk-theffroi .research-reward-name { color: var(--accent-vert-bon); }
 .pk-theffroi .emoji-shiny  { display: inline; }
+
+/* Tic — Normal / Shiny */
+.pk-tic .emoji-shiny { display: inline; }
 
 /* Tiplouf — Bon / Shiny */
 .pk-tiplouf .pokemon-name { color: var(--accent-vert-bon); }
@@ -3270,6 +3309,9 @@
 .pk-tritosor .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tritosor .emoji-shiny  { display: inline; }
 
+/* Trousselin — Normal / Shiny */
+.pk-trousselin .emoji-shiny { display: inline; }
+
 /* Tygnon — Normal / Shiny */
 .pk-tygnon .emoji-shiny { display: inline; }
 
@@ -3328,6 +3370,9 @@
 
 /* Vacilys — Normal / Shiny */
 .pk-vacilys .emoji-shiny { display: inline; }
+
+/* Venalgue — Normal / Shiny */
+.pk-venalgue .emoji-shiny { display: inline; }
 
 /* Victini — Bon / Shiny */
 .pk-victini .pokemon-name { color: var(--accent-vert-bon); }
