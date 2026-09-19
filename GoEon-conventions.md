@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.3 - 18 septembre 2026.*
+*Version 5.4 - 19 septembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -17,7 +17,7 @@ Il ne contient pas l'historique du projet, pas la liste des chantiers, pas le ca
 ## Les quatre règles de travail
 
 1. **Ne jamais travailler de mémoire.** Source de vérité : le dépôt, branche `dev`. Ce document dit ce qui *devrait* être vrai ; seuls les fichiers disent ce qui *est* vrai. Si un fichier est introuvable ou si le dépôt semble en retard sur ce que décrit Cam, le lui dire plutôt que de supposer.
-2. **Annoncer en ouverture la date du dernier commit lu** (« j'ai lu le dev du JJ/MM à HHhMM »), seul moyen pour Cam de repérer une base périmée avant qu'on bâtisse dessus. Elle se récupère sur le **flux Atom des commits**, `github.com/camritto2/GoEon/commits/dev.atom`, qui donne les vraies dates de commit et n'est pas limité en requêtes. Ne plus dater par les fichiers du tarball `codeload` : leur date est celle de la génération de l'archive, pas du commit, et codeload peut servir une archive en cache antérieure au dernier push - erreur constatée le 16/09. `raw.githubusercontent` ne renvoie pas de `Last-Modified` ; l'API GitHub est en limite de taux. **Rappeler à Cam de pousser sur `dev` en fin de session.**
+2. **Annoncer en ouverture la date du dernier commit lu** (« j'ai lu le dev du JJ/MM à HHhMM »), seul moyen pour Cam de repérer une base périmée avant qu'on bâtisse dessus. Elle se lit sur le **flux Atom des commits**, `github.com/camritto2/GoEon/commits/dev.atom`, et nulle part ailleurs : les dates du tarball `codeload` sont celles de l'archive, pas du commit. **Rappeler à Cam de pousser sur `dev` en fin de session.**
 3. **Tout doute se signale à Cam, qui tranche.** En audit, une anomalie apparente ne se corrige jamais d'office : un bouton, un tiret, une note ou une couleur qui semble contredire ce manuel peut être une décision validée. Seules les fautes mécaniques se corrigent sans demander — casse de fichier, tiret long, ordre d'attributs, faute d'orthographe d'attaque.
 4. **Une décision volontaire se commente sur place**, dans le HTML ou le CSS concerné, pour qu'elle arrive sous les yeux au moment où la question se pose.
 
@@ -60,7 +60,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 
 ## 2. Règles globales de page
 
-- **`theme-color: #29b6f6` sur toutes les pages.** Point récidiviste : à vérifier en premier dans tout audit.
+- **`theme-color: #29b6f6` sur toutes les pages.**
 - Un seul `<h1>` par page. Catégories en `<h2 class="category-title tier-X">`. Titre d'onglet : `GoEon - Nom`, tiret court.
 - `icon-192` déclarée ; aucun lien Google Fonts (la police vient de `navbar.css`).
 - **Aucun emoji dans les titres de section.**
@@ -75,7 +75,7 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 
 ## 3. Images
 
-- **Dossier `Images/` avec un I majuscule, et la casse réelle du disque pour les fichiers** (`Spectre.webp`, pas `spectre.webp`). Netlify est insensible à la casse : une erreur ici ne casse rien en production et passe inaperçue. Ne jamais « corriger » vers la minuscule.
+- **Dossier `Images/` avec un I majuscule, et la casse réelle du disque pour les fichiers** (`Spectre.webp`, pas `spectre.webp`). Cloudflare distingue la casse : une minuscule de trop donne un 404 en production, cf. §1. Ne jamais « corriger » vers la minuscule.
 - **Ne jamais inventer un nom de fichier ni corriger une extension** (`.png` ↔ `.webp`). Cam prend les fichiers là où il les trouve, il n'y a aucune règle déductible. En cas de doute : demander.
 - **Une image référencée n'est pas une image présente.** Toute page neuve ou retravaillée se termine par une vérification des `src` **contre la liste réelle de `Images/`** — pas contre la convention de nommage, qui dit seulement quel nom le fichier *devrait* porter.
 - Nommage : `NomSansAccents.png`, shiny `NomS.png`, forme **avant** le S (`GoupixAS.png`).
@@ -119,20 +119,18 @@ Le vert de `pokemon.css` signifie **« ce Pokémon figure dans un Top »**, pas 
 
 ### Base Pokémon (`pokemon-data.json`)
 
-Types et PC du 100 % vivent dans `pokemon-data.json`, lus par `script.js` §20. Décision de Cam du 9 septembre 2026 : **le fichier se remplit au fil des évènements**, un Pokémon à la fois, sur les valeurs que Cam relève en jeu. Pas d'extraction automatique des pages existantes, pas de calcul à partir de stats de base.
+Types et PC du 100 % vivent dans `pokemon-data.json`, lus par `script.js` §20. **Le bloc `_format` en tête du fichier fait foi** pour les clés, les types et les trois PC : il se lit là-bas, il ne se recopie pas ici.
 
-- **La clé est une FORME, pas une espèce**, contrairement aux classes `pk-` de `pokemon.css`. Wimessir ♀ et Wimessir ♂ ont deux entrées, une Méga a la sienne à côté de son espèce de base : ni les PC ni parfois les types ne se partagent. Slug sans accent, suffixe de région comme dans `pokemon.css` (`-a`, `-h`, `-g`), `-f` / `-m` pour les formes genrées, `-mega` pour les Méga.
-- **Trois PC seulement** : `n15` tâche d'étude, `n20` raid, œuf **et Dynamax**, `n25` boost météo. Ces trois contextes se capturent au niveau 20, donc une seule valeur pour les trois — ne jamais créer de champ « œuf » ni « dynamax ». Une valeur non relevée reste à `null`. À noter : les cartes Dynamax n'affichent pas de boost météo, seulement types et PC.
-- ⚠️ **Le PC d'étude ne se déduit pas du PC de raid.** L'arrondi du jeu rend le calcul ambigu dans environ trois cas sur quatre. Ne jamais le remplir autrement qu'en le relevant.
-- **La météo ne se stocke pas** : `script.js` §20 la déduit des types. Un double type peut donner deux météos ; deux types de la même météo ne la donnent qu'une fois (Glace/Acier → Neige seul).
-- ⚠️ **La météo ne concerne que les raids.** Œufs, Dynamax et tâches d'étude ne sont pas boostés : leur PC est le même par tous les temps. Un bloc météo ou un `data-pc="n25"` n'a donc rien à faire sur ces cartes, alors même que le Pokémon a un `n25` renseigné pour ses raids.
+- ⚠️ **Rien ne se calcule.** Une valeur entre dans la base parce que Cam l'a relevée en jeu. Le PC d'étude ne se déduit pas du PC de raid : l'arrondi du jeu rend le calcul ambigu dans environ trois cas sur quatre. **Reprendre des valeurs déjà écrites sur une page du site est en revanche possible, quand Cam le demande.**
+- **La météo se déduit des types**, elle ne se stocke pas. Un double type peut donner deux météos ; deux types de la même météo ne la donnent qu'une fois (Glace/Acier → Neige seul).
+- ⚠️ **Elle ne concerne que les raids.** Œufs, Dynamax et tâches d'étude ne sont pas boostés : un bloc météo ou un `data-pc="n25"` n'a rien à faire sur ces cartes, alors même que le Pokémon a un `n25` renseigné pour ses raids.
 - **Le script ne remplit que ce qui est VIDE.** Un type, une météo ou un PC écrit en dur dans une page est laissé intact, et un Pokémon absent du fichier ne casse rien. On bascule donc **une carte à la fois** : poser `data-pk="cle"` sur la carte, vider le conteneur ou le `span` concerné, et marquer chaque PC avec `data-pc="n15|n20|n25"`. La console liste les clés manquantes — c'est un pense-bête, pas une erreur.
-- **Libellé météo : « Q. Nuages » partout**, texte affiché *et* attribut `alt` — « Quelques Nuages » ne tient pas sur mobile. Règle rectifiée par Cam le 16/09 : la version précédente demandait un `alt` en toutes lettres. Seul le nom de fichier garde la forme longue, `Quelques_Nuages.webp`. Le site n'affiche pas la variante de nuit « Clair » : Ensoleillé la couvre.
+- **Libellé météo : « Q. Nuages » partout**, texte affiché *et* attribut `alt` — « Quelques Nuages » ne tient pas sur mobile. Seul le nom de fichier garde la forme longue, `Quelques_Nuages.webp`. Le site n'affiche pas la variante de nuit « Clair » : Ensoleillé la couvre.
 
 ### Formats de texte
 
 - **Rangs Méga : « Méga 1 », « Méga 2 » — jamais « M1 »**, y compris dans `card-rank`. `M1` est l'abréviation de Cam à la saisie, pas ce qui s'écrit.
-- **Séparateur de milliers : espace INSÉCABLE**, dans les PC comme partout où un nombre s'affiche. Une espace ordinaire autorise le navigateur à couper la ligne au milieu du nombre : sur une carte étroite, « 1 509 » se lit alors comme deux nombres. Règle posée par Cam le 16/09, appliquée aux 74 PC écrits en dur et à `formatePC` en §20.
+- **Séparateur de milliers : espace INSÉCABLE**, dans les PC comme partout où un nombre s'affiche. Une espace ordinaire autorise le navigateur à couper la ligne au milieu du nombre : sur une carte étroite, « 1 509 » se lit alors comme deux nombres. Règle posée par Cam le 16/09 ; `formatePC` en §20 l'applique.
 - **Tiret simple `-` partout dans le texte affiché**, sans exception : fourchettes, plages horaires, titres de section, `raids-date`. Ni cadratin « — », ni demi-cadratin « – ». Règle posée par Cam le 30 août après un remplacement global ; toute proposition de « bon » tiret typographique est à écarter d'office. Billets : « Nom / X € », espace insécable après la barre.
 - Ligature œ obligatoire (« Nœud Herbe »). Orthographe rectifiée à appliquer sur tout le site.
 - Dates sans année.
@@ -201,10 +199,9 @@ Puis rappeler à Cam : vérifier les images, relire la méta.
 - **`section-nav`** : un `<a href="#ancre">` par section, l'`id` correspondant sur le `h2.category-title`. Le CSS est dans `global.css` — **ne jamais le recopier dans un `<style>`**.
 - `section-sous-titre` pour les sous-titres de section.
 - **Tâches d'étude** : un seul `research-card` quand plusieurs tâches partagent la même récompense, séparées par `<br>`.
-- `research-reward-form` est le sous-titre des cartes d'étude. **Ne pas utiliser `research-note` à sa place** : elle porte un filet pointillé, elle est faite pour une note de bas de carte.
+- `research-reward-form` est le sous-titre des cartes d'étude.
 - **Cartes du Passe Go** : le rang n'est pas un sous-titre, c'est un bandeau `passe-go-rank` en **premier enfant** de `.pokemon-card`, avant `.image-container`. Le PC va en `passe-go-pc`.
   ⚠️ **`passe-go-rank` s'écrit en `<div>`, jamais en `<p>`** : `.pokemon-card` a `overflow: hidden`, la marge par défaut d'un `<p>` ne peut pas s'échapper et décolle le bandeau.
-- `research-sep` est masquée globalement : la forcer en inline quand un sous-titre a besoin d'un séparateur visible.
 
 **Liens externes : deux objets distincts, deux places.**
 
@@ -293,11 +290,14 @@ Autres points fixes : la piste Quotidien n'affiche **qu'une ligne de texte en co
 
 ## 9. Exceptions structurelles
 
-Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles sont commentées sur place ; ne pas les « corriger ».
+Quatre entorses assumées à « aucun CSS hors des fichiers partagés ». Elles sont commentées sur place ; ne pas les « corriger ».
 
 1. **`TerresSauvages2026.html`** — `<style>` désactivant l'animation du badge shiny : le clic y affiche le Gigamax, l'animation induirait le lecteur en erreur.
 2. **`script.js`, boutons « Signaler » et « Retour en haut »** — construits en JS, ils injectent leur propre `<style>`.
 3. **`rocket.css?v=N`** — seul fichier CSS versionné.
+4. **`regionaux.html`** — `<style>` et `<script>` inline. Page inachevée, écartée de l'indexation par `robots.txt` : elle se remettra aux normes le jour de sa reprise, pas avant.
+
+`InfographieModele.html` n'entre pas dans ce compte : c'est un moule de rendu, exclu du déploiement par `.assetsignore`, dont le CSS reste embarqué.
 
 ---
 
@@ -309,7 +309,7 @@ Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles s
 - **Un remplacement par nom d'attaque frappe la première occurrence, pas la bonne.** Découper la page par carte et cibler le rang.
 - **Chercher une classe, c'est déjà faire une hypothèse.** Avant d'affirmer qu'une chose est absente, vérifier qu'on l'a cherchée sous toutes ses formes.
 - **Grouper une règle mobile ne groupe pas sa jumelle desktop.** Deux sélecteurs réunis dans la règle de base peuvent rester dissociés dans la media query, où l'un seul est redéfini. Symptôme : deux éléments censés être identiques divergent uniquement au-dessus du breakpoint. Après tout groupage : chercher le sélecteur dans **tout** le fichier, pas seulement à l'endroit modifié.
-- **Les `<p>` d'un bloc `pokemon-stats` ne portent aucune classe.** Le style vient entièrement de `.pokemon-stats p`. Les anciennes `stat-range` et `stat-100` étaient des classes fantômes, déclarées dans aucune feuille et retirées le 30/08 (184 occurrences sur 6 pages). Ne pas les réintroduire par copier-coller depuis une vieille page.
+- **Les `<p>` d'un bloc `pokemon-stats` ne portent aucune classe.** Le style vient entièrement de `.pokemon-stats p`. Les anciennes `stat-range` et `stat-100` étaient des classes fantômes, déclarées dans aucune feuille. Ne pas les réintroduire par copier-coller depuis une vieille page.
 - **Un décompte s'extrait par script au moment où on l'écrit**, et se déduplique avant d'être annoncé. Un nombre communiqué est un nombre de **problèmes**, pas de lignes de sortie.
 
 ---
