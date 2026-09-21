@@ -28,14 +28,70 @@
         "n25": null
       }
     },
+    "aeromite": {
+      "types": null,
+      "pc": {
+        "n15": 892,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "akwakwak": {
+      "types": null,
+      "pc": {
+        "n15": 1050,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "aligatueur": {
+      "types": null,
+      "pc": {
+        "n15": 1224,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "amagara": {
+      "types": null,
+      "pc": {
+        "n15": 584,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "amonistar": {
+      "types": null,
+      "pc": {
+        "n15": 1194,
+        "n20": null,
+        "n25": null
+      }
+    },
     "amonita": {
       "types": [
         "Roche",
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 662,
         "n20": 882,
+        "n25": null
+      }
+    },
+    "amphinobi": {
+      "types": null,
+      "pc": {
+        "n15": 1137,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "anorith": {
+      "types": null,
+      "pc": {
+        "n15": 655,
+        "n20": null,
         "n25": null
       }
     },
@@ -45,8 +101,50 @@
         "Vol"
       ],
       "pc": {
-        "n15": null,
+        "n15": 212,
         "n20": 282,
+        "n25": null
+      }
+    },
+    "aquali": {
+      "types": null,
+      "pc": {
+        "n15": 1335,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "araqua": {
+      "types": null,
+      "pc": {
+        "n15": 306,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "arbok": {
+      "types": [
+        "Poison"
+      ],
+      "pc": {
+        "n15": 823,
+        "n20": 1097,
+        "n25": 1372
+      }
+    },
+    "arcanin": {
+      "types": null,
+      "pc": {
+        "n15": 1298,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "archeduc": {
+      "types": null,
+      "pc": {
+        "n15": 1189,
+        "n20": null,
         "n25": null
       }
     },
@@ -55,8 +153,16 @@
         "Plante"
       ],
       "pc": {
-        "n15": null,
+        "n15": 451,
         "n20": 601,
+        "n25": null
+      }
+    },
+    "arkeapti": {
+      "types": null,
+      "pc": {
+        "n15": 789,
+        "n20": null,
         "n25": null
       }
     },
@@ -68,6 +174,14 @@
       "pc": {
         "n15": null,
         "n20": 1743,
+        "n25": null
+      }
+    },
+    "azumarill": {
+      "types": null,
+      "pc": {
+        "n15": 680,
+        "n20": null,
         "n25": null
       }
     },
@@ -93,6 +207,32 @@
         "n25": 980
       }
     },
+    "balbuto": {
+      "types": null,
+      "pc": {
+        "n15": 337,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "balignon": {
+      "types": [
+        "Plante"
+      ],
+      "pc": {
+        "n15": 347,
+        "n20": 463,
+        "n25": 578
+      }
+    },
+    "barbicha": {
+      "types": null,
+      "pc": {
+        "n15": 889,
+        "n20": null,
+        "n25": null
+      }
+    },
     "bargantua-blanc": {
       "types": [
         "Eau"
@@ -108,8 +248,27 @@
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 117,
         "n20": 157,
+        "n25": null
+      }
+    },
+    "baudrive": {
+      "types": [
+        "Spectre",
+        "Vol"
+      ],
+      "pc": {
+        "n15": 513,
+        "n20": 684,
+        "n25": 855
+      }
+    },
+    "bebecaille": {
+      "types": null,
+      "pc": {
+        "n15": 415,
+        "n20": null,
         "n25": null
       }
     },
@@ -123,13 +282,53 @@
         "n25": 615
       }
     },
+    "blindepique": {
+      "types": null,
+      "pc": {
+        "n15": 1266,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "blizzi": {
+      "types": null,
+      "pc": {
+        "n15": 497,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "bombydou": {
+      "types": null,
+      "pc": {
+        "n15": 380,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "braisillon": {
+      "types": null,
+      "pc": {
+        "n15": 629,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "brasegali": {
+      "types": null,
+      "pc": {
+        "n15": 1220,
+        "n20": null,
+        "n25": null
+      }
+    },
     "brindibou": {
       "types": [
         "Plante",
         "Vol"
       ],
       "pc": {
-        "n15": null,
+        "n15": 453,
         "n20": 604,
         "n25": null
       }
@@ -140,9 +339,19 @@
         "Poison"
       ],
       "pc": {
-        "n15": null,
+        "n15": 477,
         "n20": 637,
         "n25": null
+      }
+    },
+    "cabriolaine": {
+      "types": [
+        "Plante"
+      ],
+      "pc": {
+        "n15": 536,
+        "n20": 714,
+        "n25": 893
       }
     },
     "canarbello": {
@@ -160,7 +369,7 @@
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 533,
         "n20": 710,
         "n25": null
       }
@@ -171,8 +380,24 @@
         "Roche"
       ],
       "pc": {
-        "n15": null,
+        "n15": 566,
         "n20": 755,
+        "n25": null
+      }
+    },
+    "carabing": {
+      "types": null,
+      "pc": {
+        "n15": 506,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "carapagos": {
+      "types": null,
+      "pc": {
+        "n15": 638,
+        "n20": null,
         "n25": null
       }
     },
@@ -181,7 +406,7 @@
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 405,
         "n20": 540,
         "n25": null
       }
@@ -197,6 +422,32 @@
         "n25": null
       }
     },
+    "carmache": {
+      "types": null,
+      "pc": {
+        "n15": 803,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "chacripan": {
+      "types": [
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 330,
+        "n20": 441,
+        "n25": 551
+      }
+    },
+    "chaglam": {
+      "types": null,
+      "pc": {
+        "n15": 400,
+        "n20": null,
+        "n25": null
+      }
+    },
     "charbambin": {
       "types": [
         "Feu"
@@ -204,6 +455,14 @@
       "pc": {
         "n15": null,
         "n20": 418,
+        "n25": null
+      }
+    },
+    "charmina": {
+      "types": null,
+      "pc": {
+        "n15": 613,
+        "n20": null,
         "n25": null
       }
     },
@@ -228,6 +487,16 @@
         "n25": 738
       }
     },
+    "chlorobule": {
+      "types": [
+        "Plante"
+      ],
+      "pc": {
+        "n15": 441,
+        "n20": 588,
+        "n25": 736
+      }
+    },
     "chochodile": {
       "types": [
         "Feu"
@@ -249,6 +518,30 @@
         "n25": null
       }
     },
+    "clamiral": {
+      "types": null,
+      "pc": {
+        "n15": 1211,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "coatox": {
+      "types": null,
+      "pc": {
+        "n15": 1066,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "cochignon": {
+      "types": null,
+      "pc": {
+        "n15": 1005,
+        "n20": null,
+        "n25": null
+      }
+    },
     "coiffeton": {
       "types": [
         "Eau"
@@ -259,6 +552,22 @@
         "n25": 768
       }
     },
+    "colhomard": {
+      "types": null,
+      "pc": {
+        "n15": 1060,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "coquiperl": {
+      "types": null,
+      "pc": {
+        "n15": 544,
+        "n20": null,
+        "n25": null
+      }
+    },
     "corayon-g": {
       "types": [
         "Spectre"
@@ -266,6 +575,49 @@
       "pc": {
         "n15": null,
         "n20": 855,
+        "n25": null
+      }
+    },
+    "cornebre": {
+      "types": [
+        "Ténèbres",
+        "Vol"
+      ],
+      "pc": {
+        "n15": 669,
+        "n20": 892,
+        "n25": 1116
+      }
+    },
+    "couaneton": {
+      "types": null,
+      "pc": {
+        "n15": 367,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "coupenotte": {
+      "types": null,
+      "pc": {
+        "n15": 586,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "cradopaud": {
+      "types": null,
+      "pc": {
+        "n15": 408,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "craparoi": {
+      "types": null,
+      "pc": {
+        "n15": 1030,
+        "n20": null,
         "n25": null
       }
     },
@@ -305,7 +657,7 @@
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 618,
         "n20": 823,
         "n25": null
       }
@@ -327,6 +679,22 @@
       "pc": {
         "n15": null,
         "n20": 281,
+        "n25": null
+      }
+    },
+    "dedenne": {
+      "types": null,
+      "pc": {
+        "n15": 789,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "demanta": {
+      "types": null,
+      "pc": {
+        "n15": 903,
+        "n20": null,
         "n25": null
       }
     },
@@ -352,13 +720,29 @@
         "n25": 2884
       }
     },
+    "doduo": {
+      "types": null,
+      "pc": {
+        "n15": 514,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "donphan": {
+      "types": null,
+      "pc": {
+        "n15": 1291,
+        "n20": null,
+        "n25": null
+      }
+    },
     "doudouvet": {
       "types": [
         "Plante",
         "Fée"
       ],
       "pc": {
-        "n15": null,
+        "n15": 300,
         "n20": 400,
         "n25": null
       }
@@ -382,6 +766,14 @@
         "n15": 1238,
         "n20": 1651,
         "n25": 2064
+      }
+    },
+    "dracolosse": {
+      "types": null,
+      "pc": {
+        "n15": 1625,
+        "n20": null,
+        "n25": null
       }
     },
     "draieul": {
@@ -416,6 +808,16 @@
         "n25": null
       }
     },
+    "dynavolt": {
+      "types": [
+        "Électrik"
+      ],
+      "pc": {
+        "n15": 413,
+        "n20": 551,
+        "n25": 689
+      }
+    },
     "electhor": {
       "types": [
         "Électrik",
@@ -424,6 +826,14 @@
       "pc": {
         "n15": null,
         "n20": 2015,
+        "n25": null
+      }
+    },
+    "electrode": {
+      "types": null,
+      "pc": {
+        "n15": 899,
+        "n20": null,
         "n25": null
       }
     },
@@ -442,8 +852,34 @@
         "Électrik"
       ],
       "pc": {
-        "n15": null,
+        "n15": 1000,
         "n20": 1333,
+        "n25": null
+      }
+    },
+    "embrochet": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": 387,
+        "n20": 516,
+        "n25": 645
+      }
+    },
+    "embrylex": {
+      "types": null,
+      "pc": {
+        "n15": 445,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "emolga": {
+      "types": null,
+      "pc": {
+        "n15": 700,
+        "n20": null,
         "n25": null
       }
     },
@@ -457,6 +893,22 @@
         "n25": null
       }
     },
+    "escargaume": {
+      "types": null,
+      "pc": {
+        "n15": 357,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "etourvol": {
+      "types": null,
+      "pc": {
+        "n15": 556,
+        "n20": null,
+        "n25": null
+      }
+    },
     "evoli": {
       "types": [
         "Normal"
@@ -467,14 +919,38 @@
         "n25": 765
       }
     },
+    "excavarenne": {
+      "types": null,
+      "pc": {
+        "n15": 646,
+        "n20": null,
+        "n25": null
+      }
+    },
     "fantominus": {
       "types": [
         "Spectre",
         "Poison"
       ],
       "pc": {
-        "n15": null,
+        "n15": 527,
         "n20": 702,
+        "n25": 878
+      }
+    },
+    "fantyrm": {
+      "types": null,
+      "pc": {
+        "n15": 328,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "farfuret": {
+      "types": null,
+      "pc": {
+        "n15": 879,
+        "n20": null,
         "n25": null
       }
     },
@@ -489,12 +965,28 @@
         "n25": null
       }
     },
+    "felinferno": {
+      "types": null,
+      "pc": {
+        "n15": 1284,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ferosinge": {
+      "types": null,
+      "pc": {
+        "n15": 499,
+        "n20": null,
+        "n25": null
+      }
+    },
     "feunnec": {
       "types": [
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 440,
         "n20": 587,
         "n25": null
       }
@@ -504,7 +996,7 @@
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 470,
         "n20": 627,
         "n25": null
       }
@@ -514,7 +1006,7 @@
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 443,
         "n20": 591,
         "n25": null
       }
@@ -528,6 +1020,14 @@
         "n15": 1297,
         "n20": 1729,
         "n25": 2162
+      }
+    },
+    "flingouste": {
+      "types": null,
+      "pc": {
+        "n15": 466,
+        "n20": null,
+        "n25": null
       }
     },
     "florizarre": {
@@ -569,7 +1069,7 @@
         "Glace"
       ],
       "pc": {
-        "n15": null,
+        "n15": 534,
         "n20": 712,
         "n25": null
       }
@@ -596,12 +1096,20 @@
         "n25": 2389
       }
     },
+    "galekid": {
+      "types": null,
+      "pc": {
+        "n15": 560,
+        "n20": null,
+        "n25": null
+      }
+    },
     "germignon": {
       "types": [
         "Plante"
       ],
       "pc": {
-        "n15": null,
+        "n15": 400,
         "n20": 534,
         "n25": null
       }
@@ -612,8 +1120,16 @@
         "Sol"
       ],
       "pc": {
-        "n15": null,
+        "n15": 483,
         "n20": 644,
+        "n25": null
+      }
+    },
+    "goelise": {
+      "types": null,
+      "pc": {
+        "n15": 328,
+        "n20": null,
         "n25": null
       }
     },
@@ -627,12 +1143,64 @@
         "n25": 1351
       }
     },
+    "gorythmic": {
+      "types": null,
+      "pc": {
+        "n15": 1424,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "goupelin": {
+      "types": null,
+      "pc": {
+        "n15": 1311,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "goupilou": {
+      "types": [
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 306,
+        "n20": 408,
+        "n25": 510
+      }
+    },
+    "goupix": {
+      "types": null,
+      "pc": {
+        "n15": 378,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "gourmelet": {
+      "types": null,
+      "pc": {
+        "n15": 314,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "grainipiot": {
+      "types": [
+        "Plante"
+      ],
+      "pc": {
+        "n15": 256,
+        "n20": 342,
+        "n25": 427
+      }
+    },
     "grenousse": {
       "types": [
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 425,
         "n20": 567,
         "n25": null
       }
@@ -681,6 +1249,25 @@
         "n25": 576
       }
     },
+    "grindur": {
+      "types": null,
+      "pc": {
+        "n15": 403,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "gringolem": {
+      "types": [
+        "Sol",
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 509,
+        "n20": 679,
+        "n25": 849
+      }
+    },
     "grondogue": {
       "types": [
         "Ténèbres"
@@ -691,13 +1278,29 @@
         "n25": 999
       }
     },
+    "groret": {
+      "types": null,
+      "pc": {
+        "n15": 1015,
+        "n20": null,
+        "n25": null
+      }
+    },
     "gruikui": {
       "types": [
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 464,
         "n20": 618,
+        "n25": null
+      }
+    },
+    "helionceau": {
+      "types": null,
+      "pc": {
+        "n15": 611,
+        "n20": null,
         "n25": null
       }
     },
@@ -706,7 +1309,7 @@
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 420,
         "n20": 560,
         "n25": null
       }
@@ -731,6 +1334,16 @@
         "n25": null
       }
     },
+    "hippopotas": {
+      "types": [
+        "Sol"
+      ],
+      "pc": {
+        "n15": 582,
+        "n20": 776,
+        "n25": 970
+      }
+    },
     "ho-oh": {
       "types": [
         "Feu",
@@ -753,14 +1366,46 @@
         "n25": null
       }
     },
+    "hypnomade": {
+      "types": null,
+      "pc": {
+        "n15": 895,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "hypocean": {
+      "types": null,
+      "pc": {
+        "n15": 897,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "insecateur": {
+      "types": null,
+      "pc": {
+        "n15": 1160,
+        "n20": null,
+        "n25": null
+      }
+    },
     "insolourdo": {
       "types": [
         "Normal"
       ],
       "pc": {
-        "n15": null,
+        "n15": 724,
         "n20": 965,
         "n25": 1206
+      }
+    },
+    "jungko": {
+      "types": null,
+      "pc": {
+        "n15": 1181,
+        "n20": null,
+        "n25": null
       }
     },
     "kabuto": {
@@ -769,9 +1414,27 @@
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 587,
         "n20": 783,
         "n25": null
+      }
+    },
+    "kabutops": {
+      "types": null,
+      "pc": {
+        "n15": 1162,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "kadabra": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": 882,
+        "n20": 1176,
+        "n25": 1471
       }
     },
     "kaiminus": {
@@ -779,8 +1442,16 @@
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 485,
         "n20": 646,
+        "n25": null
+      }
+    },
+    "kaorine": {
+      "types": null,
+      "pc": {
+        "n15": 845,
+        "n20": null,
         "n25": null
       }
     },
@@ -791,6 +1462,14 @@
       "pc": {
         "n15": null,
         "n20": 1232,
+        "n25": null
+      }
+    },
+    "keunotor": {
+      "types": null,
+      "pc": {
+        "n15": 309,
+        "n20": null,
         "n25": null
       }
     },
@@ -829,8 +1508,40 @@
         "Sol"
       ],
       "pc": {
-        "n15": null,
+        "n15": 546,
         "n20": 728,
+        "n25": null
+      }
+    },
+    "laggron": {
+      "types": null,
+      "pc": {
+        "n15": 1274,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "lamantine": {
+      "types": null,
+      "pc": {
+        "n15": 851,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "lamperoie": {
+      "types": null,
+      "pc": {
+        "n15": 735,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "laporeille": {
+      "types": null,
+      "pc": {
+        "n15": 539,
+        "n20": null,
         "n25": null
       }
     },
@@ -839,9 +1550,19 @@
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 470,
         "n20": 627,
         "n25": null
+      }
+    },
+    "larvadar": {
+      "types": [
+        "Insecte"
+      ],
+      "pc": {
+        "n15": 153,
+        "n20": 204,
+        "n25": 256
       }
     },
     "latias": {
@@ -866,6 +1587,22 @@
         "n25": null
       }
     },
+    "leopardus": {
+      "types": null,
+      "pc": {
+        "n15": 791,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "leuphorie": {
+      "types": null,
+      "pc": {
+        "n15": 1182,
+        "n20": null,
+        "n25": null
+      }
+    },
     "leveinard": {
       "types": [
         "Normal"
@@ -876,15 +1613,55 @@
         "n25": 896
       }
     },
+    "lewsor": {
+      "types": null,
+      "pc": {
+        "n15": 593,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "lezargus": {
+      "types": null,
+      "pc": {
+        "n15": 1270,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "lilia": {
+      "types": null,
+      "pc": {
+        "n15": 553,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "lilliterelle": {
+      "types": null,
+      "pc": {
+        "n15": 253,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "limonde": {
+      "types": null,
+      "pc": {
+        "n15": 926,
+        "n20": null,
+        "n25": null
+      }
+    },
     "limonde-g": {
       "types": [
         "Sol",
         "Acier"
       ],
       "pc": {
-        "n15": null,
+        "n15": 926,
         "n20": 1235,
-        "n25": null
+        "n25": 1544
       }
     },
     "lokhlass": {
@@ -898,6 +1675,14 @@
         "n25": 1886
       }
     },
+    "lombre": {
+      "types": null,
+      "pc": {
+        "n15": 513,
+        "n20": null,
+        "n25": null
+      }
+    },
     "lugia": {
       "types": [
         "Psy",
@@ -909,6 +1694,14 @@
         "n25": null
       }
     },
+    "luxio": {
+      "types": null,
+      "pc": {
+        "n15": 636,
+        "n20": null,
+        "n25": null
+      }
+    },
     "machoc": {
       "types": [
         "Combat"
@@ -917,6 +1710,14 @@
         "n15": 548,
         "n20": 730,
         "n25": 913
+      }
+    },
+    "machopeur": {
+      "types": null,
+      "pc": {
+        "n15": 870,
+        "n20": null,
+        "n25": null
       }
     },
     "mackogneur": {
@@ -944,7 +1745,7 @@
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 117,
         "n20": 157,
         "n25": null
       }
@@ -954,8 +1755,40 @@
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 1026,
         "n20": 1367,
+        "n25": null
+      }
+    },
+    "majaspic": {
+      "types": null,
+      "pc": {
+        "n15": 976,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "makuhita": {
+      "types": null,
+      "pc": {
+        "n15": 350,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "malosse": {
+      "types": null,
+      "pc": {
+        "n15": 529,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "manternel": {
+      "types": null,
+      "pc": {
+        "n15": 1106,
+        "n20": null,
         "n25": null
       }
     },
@@ -970,12 +1803,20 @@
         "n25": 1423
       }
     },
+    "marill": {
+      "types": null,
+      "pc": {
+        "n15": 197,
+        "n20": null,
+        "n25": null
+      }
+    },
     "marisson": {
       "types": [
         "Plante"
       ],
       "pc": {
-        "n15": null,
+        "n15": 469,
         "n20": 626,
         "n25": null
       }
@@ -1001,6 +1842,24 @@
         "n25": 1199
       }
     },
+    "medhyena": {
+      "types": [
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 290,
+        "n20": 387,
+        "n25": 484
+      }
+    },
+    "meganium": {
+      "types": null,
+      "pc": {
+        "n15": 1033,
+        "n20": null,
+        "n25": null
+      }
+    },
     "melancolux": {
       "types": [
         "Spectre",
@@ -1012,13 +1871,37 @@
         "n25": 1220
       }
     },
+    "melofee": {
+      "types": null,
+      "pc": {
+        "n15": 495,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "metang": {
+      "types": null,
+      "pc": {
+        "n15": 738,
+        "n20": null,
+        "n25": null
+      }
+    },
     "miamiasme": {
       "types": [
         "Poison"
       ],
       "pc": {
-        "n15": null,
+        "n15": 428,
         "n20": 571,
+        "n25": null
+      }
+    },
+    "miaouss": {
+      "types": null,
+      "pc": {
+        "n15": 320,
+        "n20": null,
         "n25": null
       }
     },
@@ -1074,14 +1957,30 @@
         "n25": null
       }
     },
+    "minotaupe": {
+      "types": null,
+      "pc": {
+        "n15": 1390,
+        "n20": null,
+        "n25": null
+      }
+    },
     "monorpale": {
       "types": [
         "Acier",
         "Spectre"
       ],
       "pc": {
-        "n15": null,
+        "n15": 595,
         "n20": 794,
+        "n25": null
+      }
+    },
+    "moufouette": {
+      "types": null,
+      "pc": {
+        "n15": 493,
+        "n20": null,
         "n25": null
       }
     },
@@ -1090,7 +1989,7 @@
         "Normal"
       ],
       "pc": {
-        "n15": null,
+        "n15": 302,
         "n20": 403,
         "n25": null
       }
@@ -1100,8 +1999,56 @@
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 448,
         "n20": 597,
+        "n25": null
+      }
+    },
+    "mucuscule": {
+      "types": null,
+      "pc": {
+        "n15": 418,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "mysdibule": {
+      "types": null,
+      "pc": {
+        "n15": 700,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "nanmeouie": {
+      "types": null,
+      "pc": {
+        "n15": 721,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ningale": {
+      "types": null,
+      "pc": {
+        "n15": 329,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "noadkoko-a": {
+      "types": null,
+      "pc": {
+        "n15": 1292,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "noarfang": {
+      "types": null,
+      "pc": {
+        "n15": 867,
+        "n20": null,
         "n25": null
       }
     },
@@ -1110,8 +2057,16 @@
         "Roche"
       ],
       "pc": {
-        "n15": null,
+        "n15": 516,
         "n20": 688,
+        "n25": null
+      }
+    },
+    "nounourson": {
+      "types": null,
+      "pc": {
+        "n15": 579,
+        "n20": null,
         "n25": null
       }
     },
@@ -1126,12 +2081,60 @@
         "n25": null
       }
     },
+    "olivini": {
+      "types": null,
+      "pc": {
+        "n15": 366,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "onix": {
+      "types": null,
+      "pc": {
+        "n15": 472,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "opermine": {
+      "types": null,
+      "pc": {
+        "n15": 405,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "oratoria": {
+      "types": null,
+      "pc": {
+        "n15": 1371,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ossatueur": {
+      "types": null,
+      "pc": {
+        "n15": 786,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ossatueur-a": {
+      "types": null,
+      "pc": {
+        "n15": 786,
+        "n20": null,
+        "n25": null
+      }
+    },
     "otaquin": {
       "types": [
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 483,
         "n20": 645,
         "n25": null
       }
@@ -1141,7 +2144,7 @@
         "Plante"
       ],
       "pc": {
-        "n15": null,
+        "n15": 465,
         "n20": 620,
         "n25": null
       }
@@ -1151,7 +2154,7 @@
         "Feu"
       ],
       "pc": {
-        "n15": null,
+        "n15": 410,
         "n20": 547,
         "n25": null
       }
@@ -1188,6 +2191,14 @@
         "n25": null
       }
     },
+    "paras": {
+      "types": null,
+      "pc": {
+        "n15": 436,
+        "n20": null,
+        "n25": null
+      }
+    },
     "patachiot": {
       "types": [
         "Fée"
@@ -1198,6 +2209,22 @@
         "n25": 703
       }
     },
+    "persian": {
+      "types": null,
+      "pc": {
+        "n15": 724,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "phogleur": {
+      "types": null,
+      "pc": {
+        "n15": 735,
+        "n20": null,
+        "n25": null
+      }
+    },
     "pichu": {
       "types": [
         "Électrik"
@@ -1205,6 +2232,22 @@
       "pc": {
         "n15": null,
         "n20": 270,
+        "n25": null
+      }
+    },
+    "piclairon": {
+      "types": null,
+      "pc": {
+        "n15": 633,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "pifeuil": {
+      "types": null,
+      "pc": {
+        "n15": 526,
+        "n20": null,
         "n25": null
       }
     },
@@ -1218,6 +2261,22 @@
         "n25": 670
       }
     },
+    "pingoleon": {
+      "types": null,
+      "pc": {
+        "n15": 1243,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "pohm": {
+      "types": null,
+      "pc": {
+        "n15": 272,
+        "n20": null,
+        "n25": null
+      }
+    },
     "poichigeon": {
       "types": [
         "Normal",
@@ -1229,6 +2288,48 @@
         "n25": null
       }
     },
+    "poissoroy": {
+      "types": null,
+      "pc": {
+        "n15": 926,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "polagriffe": {
+      "types": null,
+      "pc": {
+        "n15": 1303,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "polarhume": {
+      "types": null,
+      "pc": {
+        "n15": 458,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "polichombr": {
+      "types": [
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 436,
+        "n20": 581,
+        "n25": 727
+      }
+    },
+    "ponchien": {
+      "types": null,
+      "pc": {
+        "n15": 678,
+        "n20": null,
+        "n25": null
+      }
+    },
     "pondralugon": {
       "types": [
         "Acier",
@@ -1236,6 +2337,22 @@
       ],
       "pc": {
         "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ponyta": {
+      "types": null,
+      "pc": {
+        "n15": 727,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ponyta-g": {
+      "types": null,
+      "pc": {
+        "n15": 727,
         "n20": null,
         "n25": null
       }
@@ -1260,6 +2377,22 @@
         "n25": 781
       }
     },
+    "psykokwak": {
+      "types": null,
+      "pc": {
+        "n15": 474,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ptera": {
+      "types": null,
+      "pc": {
+        "n15": 1193,
+        "n20": null,
+        "n25": null
+      }
+    },
     "ptiravi": {
       "types": [
         "Normal"
@@ -1267,6 +2400,22 @@
       "pc": {
         "n15": null,
         "n20": 212,
+        "n25": null
+      }
+    },
+    "ptitard": {
+      "types": null,
+      "pc": {
+        "n15": 355,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ptyranidur": {
+      "types": null,
+      "pc": {
+        "n15": 700,
+        "n20": null,
         "n25": null
       }
     },
@@ -1278,6 +2427,14 @@
         "n15": 1293,
         "n20": 1724,
         "n25": 2156
+      }
+    },
+    "pyroli": {
+      "types": null,
+      "pc": {
+        "n15": 1298,
+        "n20": null,
+        "n25": null
       }
     },
     "pyronille": {
@@ -1301,13 +2458,21 @@
         "n25": null
       }
     },
+    "qulbutoke": {
+      "types": null,
+      "pc": {
+        "n15": 440,
+        "n20": null,
+        "n25": null
+      }
+    },
     "racaillou-a": {
       "types": [
         "Roche",
         "Électrik"
       ],
       "pc": {
-        "n15": null,
+        "n15": 554,
         "n20": 739,
         "n25": null
       }
@@ -1322,13 +2487,29 @@
         "n25": null
       }
     },
+    "ramoloss": {
+      "types": null,
+      "pc": {
+        "n15": 525,
+        "n20": null,
+        "n25": null
+      }
+    },
     "ramoloss-g": {
       "types": [
         "Psy"
       ],
       "pc": {
-        "n15": null,
+        "n15": 525,
         "n20": 700,
+        "n25": null
+      }
+    },
+    "rattata": {
+      "types": null,
+      "pc": {
+        "n15": 315,
+        "n20": null,
         "n25": null
       }
     },
@@ -1338,7 +2519,7 @@
         "Normal"
       ],
       "pc": {
-        "n15": null,
+        "n15": 315,
         "n20": 419,
         "n25": 524
       }
@@ -1373,6 +2554,14 @@
         "n25": null
       }
     },
+    "remoraid": {
+      "types": null,
+      "pc": {
+        "n15": 391,
+        "n20": null,
+        "n25": null
+      }
+    },
     "rhinocorne": {
       "types": [
         "Sol",
@@ -1394,12 +2583,36 @@
         "n25": 679
       }
     },
+    "roitiflam": {
+      "types": null,
+      "pc": {
+        "n15": 1278,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "rondoudou": {
+      "types": null,
+      "pc": {
+        "n15": 310,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ronflex": {
+      "types": null,
+      "pc": {
+        "n15": 1398,
+        "n20": null,
+        "n25": null
+      }
+    },
     "rongourmand": {
       "types": [
         "Normal"
       ],
       "pc": {
-        "n15": null,
+        "n15": 404,
         "n20": 539,
         "n25": null
       }
@@ -1425,13 +2638,23 @@
         "n25": null
       }
     },
+    "sabelette": {
+      "types": [
+        "Sol"
+      ],
+      "pc": {
+        "n15": 540,
+        "n20": 720,
+        "n25": 901
+      }
+    },
     "sabelette-a": {
       "types": [
         "Glace",
         "Acier"
       ],
       "pc": {
-        "n15": null,
+        "n15": 554,
         "n20": 739,
         "n25": 924
       }
@@ -1468,6 +2691,22 @@
         "n25": null
       }
     },
+    "sapereau": {
+      "types": null,
+      "pc": {
+        "n15": 237,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "scobolide": {
+      "types": null,
+      "pc": {
+        "n15": 490,
+        "n20": null,
+        "n25": null
+      }
+    },
     "selutin": {
       "types": [
         "Roche"
@@ -1489,14 +2728,98 @@
         "n25": null
       }
     },
+    "simiabraz": {
+      "types": null,
+      "pc": {
+        "n15": 1150,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "simularbre": {
+      "types": null,
+      "pc": {
+        "n15": 920,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "skelenox": {
+      "types": [
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 302,
+        "n20": 403,
+        "n25": 504
+      }
+    },
+    "smogogo": {
+      "types": [
+        "Poison"
+      ],
+      "pc": {
+        "n15": 982,
+        "n20": 1310,
+        "n25": 1637
+      }
+    },
     "solochi": {
       "types": [
         "Ténèbres",
         "Dragon"
       ],
       "pc": {
-        "n15": null,
+        "n15": 455,
         "n20": 606,
+        "n25": null
+      }
+    },
+    "sorbebe": {
+      "types": null,
+      "pc": {
+        "n15": 443,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "sovkipou": {
+      "types": null,
+      "pc": {
+        "n15": 215,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "spectrum": {
+      "types": null,
+      "pc": {
+        "n15": 841,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "spinda": {
+      "types": null,
+      "pc": {
+        "n15": 523,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "stalgamin": {
+      "types": null,
+      "pc": {
+        "n15": 380,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "staross": {
+      "types": null,
+      "pc": {
+        "n15": 1107,
+        "n20": null,
         "n25": null
       }
     },
@@ -1527,8 +2850,16 @@
         "Fée"
       ],
       "pc": {
-        "n15": null,
+        "n15": 231,
         "n20": 308,
+        "n25": null
+      }
+    },
+    "taupiqueur": {
+      "types": null,
+      "pc": {
+        "n15": 286,
+        "n20": null,
         "n25": null
       }
     },
@@ -1538,8 +2869,16 @@
         "Acier"
       ],
       "pc": {
-        "n15": null,
+        "n15": 292,
         "n20": 389,
+        "n25": null
+      }
+    },
+    "teddiursa": {
+      "types": null,
+      "pc": {
+        "n15": 569,
+        "n20": null,
         "n25": null
       }
     },
@@ -1554,13 +2893,21 @@
         "n25": null
       }
     },
+    "teraclope": {
+      "types": null,
+      "pc": {
+        "n15": 628,
+        "n20": null,
+        "n25": null
+      }
+    },
     "terhal": {
       "types": [
         "Acier",
         "Psy"
       ],
       "pc": {
-        "n15": null,
+        "n15": 418,
         "n20": 558,
         "n25": null
       }
@@ -1575,14 +2922,32 @@
         "n25": 651
       }
     },
+    "tetarte": {
+      "types": null,
+      "pc": {
+        "n15": 608,
+        "n20": null,
+        "n25": null
+      }
+    },
     "tiplouf": {
       "types": [
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 460,
         "n20": 614,
         "n25": null
+      }
+    },
+    "tissenboule": {
+      "types": [
+        "Insecte"
+      ],
+      "pc": {
+        "n15": 244,
+        "n20": 326,
+        "n25": 408
       }
     },
     "togepi": {
@@ -1595,13 +2960,45 @@
         "n25": null
       }
     },
+    "togetic": {
+      "types": null,
+      "pc": {
+        "n15": 732,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "tortank": {
+      "types": null,
+      "pc": {
+        "n15": 1057,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "torterra": {
+      "types": null,
+      "pc": {
+        "n15": 1257,
+        "n20": null,
+        "n25": null
+      }
+    },
     "tortipouss": {
       "types": [
         "Plante"
       ],
       "pc": {
-        "n15": null,
+        "n15": 508,
         "n20": 678,
+        "n25": null
+      }
+    },
+    "tournegrin": {
+      "types": null,
+      "pc": {
+        "n15": 169,
+        "n20": null,
         "n25": null
       }
     },
@@ -1638,6 +3035,14 @@
         "n25": null
       }
     },
+    "tutafeh": {
+      "types": null,
+      "pc": {
+        "n15": 420,
+        "n20": null,
+        "n25": null
+      }
+    },
     "tygnon": {
       "types": [
         "Combat"
@@ -1648,13 +3053,63 @@
         "n25": null
       }
     },
+    "tylton": {
+      "types": null,
+      "pc": {
+        "n15": 353,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "typhlosion": {
+      "types": null,
+      "pc": {
+        "n15": 1238,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "ursaring": {
+      "types": [
+        "Normal"
+      ],
+      "pc": {
+        "n15": 1262,
+        "n20": 1682,
+        "n25": 2103
+      }
+    },
     "vipelierre": {
       "types": [
         "Plante"
       ],
       "pc": {
-        "n15": null,
+        "n15": 364,
         "n20": 485,
+        "n25": null
+      }
+    },
+    "volcaropod": {
+      "types": null,
+      "pc": {
+        "n15": 729,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "voltali": {
+      "types": null,
+      "pc": {
+        "n15": 1238,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "vorasterie": {
+      "types": null,
+      "pc": {
+        "n15": 416,
+        "n20": null,
         "n25": null
       }
     },
@@ -1685,7 +3140,7 @@
         "Eau"
       ],
       "pc": {
-        "n15": null,
+        "n15": 629,
         "n20": 838,
         "n25": null
       }
@@ -1707,7 +3162,7 @@
         "Normal"
       ],
       "pc": {
-        "n15": null,
+        "n15": 1047,
         "n20": 1396,
         "n25": null
       }
@@ -1719,6 +3174,14 @@
       "pc": {
         "n15": null,
         "n20": 727,
+        "n25": null
+      }
+    },
+    "xatu": {
+      "types": null,
+      "pc": {
+        "n15": 938,
+        "n20": null,
         "n25": null
       }
     },
@@ -1753,13 +3216,21 @@
         "n25": 590
       }
     },
+    "zigzaton": {
+      "types": null,
+      "pc": {
+        "n15": 218,
+        "n20": null,
+        "n25": null
+      }
+    },
     "zigzaton-g": {
       "types": [
         "Ténèbres",
         "Normal"
       ],
       "pc": {
-        "n15": null,
+        "n15": 218,
         "n20": 290,
         "n25": null
       }

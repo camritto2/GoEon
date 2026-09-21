@@ -760,6 +760,38 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
 .intro-content { display: none; }
 .intro-content.open { display: block; }
 
+/* Titre de catégorie repliable — Récompense des 7 Jours (Tâches d'Étude).
+   Le bouton est posé DANS le h2 pour garder la sémantique de titre ; il
+   hérite de la police, de la taille et de la couleur du h2, si bien que la
+   classe tier-1 reste seule maîtresse de la couleur. La bascule passe par
+   toggleBanner() (§8 de script.js), et le contenu par .intro-content
+   ci-dessus. ⚠️ Le div .intro-content ENVELOPPE le .research-list au lieu
+   de le remplacer : .research-list est en flex, et .intro-content.open le
+   ferait passer en block. Posé le 21/09. */
+.category-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.category-toggle .intro-arrow { font-size: 14px; }
+
+/* Flèche de tête, symétrique de celle de fin. Tirée en CSS depuis
+   aria-expanded, que toggleBanner() tient déjà à jour : pas de second
+   identifiant à gérer côté script, les deux flèches basculent ensemble. */
+.category-toggle::before {
+  content: '▾';
+  font-size: 14px;
+  color: var(--text-secondaire);
+}
+.category-toggle[aria-expanded="true"]::before { content: '▴'; }
+
 /* Sous-puce, décalée sous sa puce parente */
 .intro-sous-item { padding-left: 22px; }
 

@@ -1362,11 +1362,19 @@ if (document.querySelector('.home-card[data-debut]')) {
     .then(donnees => {
       const base = donnees.pokemon || {};
       const manquants = [];
+      const sansTypes = [];
+      const sansPC = [];
 
       document.querySelectorAll('[data-pk]').forEach(carte => {
         const cle = carte.dataset.pk;
         const fiche = base[cle];
         if (!fiche) { manquants.push(cle); return; }
+
+        // Un Pokémon peut entrer dans la base sans ses types : une page qui ne
+        // les affiche pas (les tâches d'étude) n'en donne aucun à relever. La
+        // clé existe donc, mais l'entrée est incomplète — le signaler ici,
+        // sinon le trou ne se voit que le jour où le Pokémon passe en raid.
+        if (!Array.isArray(fiche.types) || !fiche.types.length) sansTypes.push(cle);
 
         // Types
         const contType = carte.querySelector('.pokemon-types-container');
@@ -1391,6 +1399,7 @@ if (document.querySelector('.home-card[data-debut]')) {
           if (!estVide(el)) return;
           const valeur = (fiche.pc || {})[el.dataset.pc];
           if (typeof valeur === 'number') el.textContent = formatePC(valeur);
+          else sansPC.push(cle + ' (' + el.dataset.pc + ')');
         });
       });
 
@@ -1398,6 +1407,12 @@ if (document.querySelector('.home-card[data-debut]')) {
       // pas une erreur. La page reste parfaitement utilisable sans eux.
       if (manquants.length) {
         console.info('pokemon-data.json — clés absentes :', [...new Set(manquants)].join(', '));
+      }
+      if (sansTypes.length) {
+        console.info('pokemon-data.json — types à renseigner :', [...new Set(sansTypes)].join(', '));
+      }
+      if (sansPC.length) {
+        console.info('pokemon-data.json — PC à relever :', [...new Set(sansPC)].join(', '));
       }
     })
     .catch(error => console.error('Erreur lors du chargement de pokemon-data.json :', error));

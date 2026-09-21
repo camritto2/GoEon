@@ -416,14 +416,14 @@
           "categorie": "maitrise",
           "court": "Maîtrise Brocélôme",
           "long": "Maîtrise de Capture - Brocélôme",
-          "heures": "14h - 17h",
+          "heures": "10h - 20h",
           "page": "MaitriseBrocelome.html",
           "sprites": [
             "Brocelome.png"
           ],
           "lignes": [
             "Maitrise Capture",
-            "14h-17h"
+            "10h-20h"
           ]
         },
         {

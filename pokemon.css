@@ -198,6 +198,9 @@
 .pk-airmure .research-reward-name { color: var(--accent-vert-bon); }
 .pk-airmure .emoji-shiny  { display: inline; }
 
+/* Arbok — Normal / Shiny */
+.pk-arbok .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — B
    ============================================================ */
@@ -742,6 +745,11 @@
 /* Couafarel — Normal / Shiny */
 .pk-couafarel .emoji-shiny { display: inline; }
 
+/* Cornèbre — Bon / Shiny */
+.pk-cornebre .pokemon-name { color: var(--accent-vert-bon); }
+.pk-cornebre .research-reward-name { color: var(--accent-vert-bon); }
+.pk-cornebre .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — D
    ============================================================ */
@@ -903,6 +911,11 @@
 .pk-dodoala .emoji-shiny { display: inline; }
 
 
+/* Donphan — Bon / Shiny */
+.pk-donphan .pokemon-name { color: var(--accent-vert-bon); }
+.pk-donphan .research-reward-name { color: var(--accent-vert-bon); }
+.pk-donphan .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — E
    ============================================================ */
@@ -1034,6 +1047,11 @@
 
 /* Écrémeuh — Normal / Shiny */
 .pk-ecremeuh .emoji-shiny { display: inline; }
+
+/* Embrochet — Normal / Pas de shiny */
+
+/* Électrode — Normal / Shiny */
+.pk-electrode .emoji-shiny  { display: inline; }
 
 /* ============================================================
    POKÉMON — F
@@ -1540,6 +1558,9 @@
 .pk-hypotrempe .emoji-shiny { display: inline; }
 
 
+/* Hypnomade — Normal / Shiny */
+.pk-hypnomade .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — I
    ============================================================ */
@@ -1874,6 +1895,11 @@
 .pk-lucanon .emoji-shiny  { display: inline; }
 
 
+/* Larvadar — Normal / Pas de shiny */
+
+/* Lamantine — Normal / Shiny */
+.pk-lamantine .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — M
    ============================================================ */
@@ -2199,6 +2225,9 @@
 /* Mimantis — Normal / Shiny */
 .pk-mimantis .emoji-shiny { display: inline; }
 
+/* Medhyèna — Normal / Shiny */
+.pk-medhyena .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — N
    ============================================================ */
@@ -2324,6 +2353,9 @@
 .pk-nidoqueen .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nidoqueen .emoji-shiny { display: inline; }
 
+/* Natu — Normal / Shiny */
+.pk-natu .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — O
    ============================================================ */
@@ -2410,6 +2442,15 @@
 .pk-ouistempo .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ouistempo .emoji-shiny  { display: inline; }
 
+
+/* Otaria — Normal / Shiny */
+.pk-otaria .emoji-shiny  { display: inline; }
+
+/* Osselait — Normal / Shiny */
+.pk-osselait .emoji-shiny  { display: inline; }
+
+/* Ossatueur — Normal / Shiny */
+.pk-ossatueur .emoji-shiny  { display: inline; }
 
 /* ============================================================
    POKÉMON — P
@@ -2663,6 +2704,11 @@
 
 /* Psystigri — Normal / Shiny */
 .pk-psystigri .emoji-shiny { display: inline; }
+
+/* Phampy — Bon / Shiny */
+.pk-phampy .pokemon-name { color: var(--accent-vert-bon); }
+.pk-phampy .research-reward-name { color: var(--accent-vert-bon); }
+.pk-phampy .emoji-shiny  { display: inline; }
 
 /* ============================================================
    POKÉMON — Q
@@ -3119,6 +3165,12 @@
 /* Smogogo — Normal / Shiny */
 .pk-smogogo .emoji-shiny { display: inline; }
 
+/* Sabelette — Normal / Shiny */
+.pk-sabelette .emoji-shiny  { display: inline; }
+
+/* Soporifik — Normal / Shiny */
+.pk-soporifik .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — T
    ============================================================ */
@@ -3435,6 +3487,9 @@
 .pk-vrombotor .emoji-shiny  { display: inline; }
 
 
+/* Voltorbe — Normal / Shiny */
+.pk-voltorbe .emoji-shiny  { display: inline; }
+
 /* ============================================================
    POKÉMON — W
    ============================================================ */
@@ -3467,6 +3522,9 @@
 .pk-xerneas .research-reward-name { color: var(--accent-vert-bon); }
 .pk-xerneas .emoji-shiny  { display: inline; }
 
+
+/* Xatu — Normal / Shiny */
+.pk-xatu .emoji-shiny  { display: inline; }
 
 /* ============================================================
    POKÉMON — Y
