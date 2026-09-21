@@ -1,6 +1,6 @@
 # GoEon — Chantiers
 
-*Mis à jour le 18 septembre 2026. Ce fichier ne liste que ce qui reste à faire : ni journal des travaux terminés, ni règles durables — celles-ci vont dans le manuel de fabrication (`GoEon-conventions.md`).*
+*Mis à jour le 21 septembre 2026. Ce fichier ne liste que ce qui reste à faire : ni journal des travaux terminés, ni règles durables — celles-ci vont dans le manuel de fabrication (`GoEon-conventions.md`).*
 
 ## Datés
 
@@ -10,11 +10,9 @@ Ne pas le faire plus tôt : une redirection immédiate ferait atterrir les utili
 
 Marche à suivre : remplacer le contenu Netlify par un `_redirects` contenant `/*  https://goeon.fr/:splat  301!` (le `!` force la redirection même si un fichier existe à ce chemin). Conserver le kill switch encore quelque temps si possible.
 
-## Dette technique, par priorité
+## Dette technique
 
-**Priorité 1 — l'ordre de `pokemon.css`.** Le fichier n'est alphabétique dans aucune de ses 21 sections de lettres : **196 ruptures d'ordre sur 773 blocs** (23 pour la seule section C, 21 pour la M). Les familles y sont groupées à dessein - Roucool, Roucoups puis Roucarnage se suivent, une forme régionale ou une Méga reste collée à sa forme de base - si bien qu'un tri alphabétique strict les séparerait. **Une règle est à trancher avant de toucher au fichier** : alphabet strict, ou alphabet sur le premier de chaque famille. Aucun sélecteur n'est en double, réordonner ne cassera donc rien.
-
-**Priorité 2 — les styles inline.** Il en reste sur une poignée de pages, presque tous des marges sur des `<p>` dans un `intro-rules`. **Décision de Cam : on corrige page par page, au moment où chaque page est retravaillée.** Pas de passe globale. Il en reste **110 sur les 17 pages Top**, plus 19 sur `regionaux.html` et 8 sur `TerresSauvages2026.html` ; la reprise des Top pour l'Attaque Bonus-Méga les emportera en chemin.
+**Les styles inline.** Il en reste sur une poignée de pages, presque tous des marges sur des `<p>` dans un `intro-rules`. **Décision de Cam : on corrige page par page, au moment où chaque page est retravaillée.** Pas de passe globale. Il en reste **110 sur les 17 pages Top**, plus 20 sur `regionaux.html` ; la reprise des Top pour l'Attaque Bonus-Méga les emportera en chemin.
 
 ## Notifications push
 
