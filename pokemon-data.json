@@ -148,6 +148,17 @@
         "n25": null
       }
     },
+    "archeduc-h": {
+      "types": [
+        "Plante",
+        "Combat"
+      ],
+      "pc": {
+        "n15": 1241,
+        "n20": 1655,
+        "n25": 2069
+      }
+    },
     "arcko": {
       "types": [
         "Plante"
@@ -344,6 +355,16 @@
         "n25": null
       }
     },
+    "cablifere": {
+      "types": [
+        "Électrik"
+      ],
+      "pc": {
+        "n15": 1687,
+        "n20": 2249,
+        "n25": 2812
+      }
+    },
     "cabriolaine": {
       "types": [
         "Plante"
@@ -362,6 +383,17 @@
         "n15": 761,
         "n20": 1014,
         "n25": 1268
+      }
+    },
+    "cancrelove": {
+      "types": [
+        "Insecte",
+        "Combat"
+      ],
+      "pc": {
+        "n15": 1218,
+        "n20": 1624,
+        "n25": 2030
       }
     },
     "caninos": {
@@ -524,6 +556,17 @@
         "n15": 1211,
         "n20": null,
         "n25": null
+      }
+    },
+    "clamiral-h": {
+      "types": [
+        "Eau",
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 1200,
+        "n20": 1601,
+        "n25": 2001
       }
     },
     "coatox": {
@@ -868,11 +911,14 @@
       }
     },
     "embrylex": {
-      "types": null,
+      "types": [
+        "Roche",
+        "Sol"
+      ],
       "pc": {
         "n15": 445,
-        "n20": null,
-        "n25": null
+        "n20": 594,
+        "n25": 743
       }
     },
     "emolga": {
@@ -1994,6 +2040,17 @@
         "n25": null
       }
     },
+    "mouscoto": {
+      "types": [
+        "Insecte",
+        "Combat"
+      ],
+      "pc": {
+        "n15": 1483,
+        "n20": 1977,
+        "n25": 2472
+      }
+    },
     "moustillon": {
       "types": [
         "Eau"
@@ -2728,6 +2785,28 @@
         "n25": null
       }
     },
+    "sepiatroce": {
+      "types": [
+        "Ténèbres",
+        "Psy"
+      ],
+      "pc": {
+        "n15": 1011,
+        "n20": 1347,
+        "n25": 1685
+      }
+    },
+    "sepiatroce-mega": {
+      "types": [
+        "Ténèbres",
+        "Psy"
+      ],
+      "pc": {
+        "n15": 1011,
+        "n20": 1347,
+        "n25": 1685
+      }
+    },
     "simiabraz": {
       "types": null,
       "pc": {
@@ -2772,7 +2851,7 @@
       "pc": {
         "n15": 455,
         "n20": 606,
-        "n25": null
+        "n25": 758
       }
     },
     "sorbebe": {
@@ -3067,6 +3146,17 @@
         "n15": 1238,
         "n20": null,
         "n25": null
+      }
+    },
+    "typhlosion-h": {
+      "types": [
+        "Feu",
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 1283,
+        "n20": 1710,
+        "n25": 2138
       }
     },
     "ursaring": {

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - World Space Week 2026</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>World Space Week 2026</h1>
+  <p class="raids-date">
+    Du dimanche 4 octobre, 0h au samedi 10 octobre, 23h59
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 RAIDS                   -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="raids">Raids</h2>
+
+  <p class="section-sous-titre"><em>1 Étoile</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <!-- Pikachu costumé : la classe pk- est conservée pour le seul badge shiny,
+         et nom-neutre annule le vert - cette forme n'évolue pas.
+         C'est le costume qui est nouveau, pas le shiny : pas de nouveau-shiny,
+         la nouveauté est portée par le sous-titre. -->
+    <div class="pokemon-card pk-pikachu" data-pk="pikachu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name nom-neutre">Pikachu</h2>
+        <p class="pokemon-subtitle">Astronaute - Nouveau costume</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            ÉTUDE PONCTUELLE             -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="etude">Étude Ponctuelle</h2>
+
+  <p class="section-sous-titre"><em>À réaliser avant le lundi 12 octobre</em></p>
+
+  <div class="intro-rules">
+    <p class="intro-p-avant">Détails à venir</p>
+    <div class="intro-item"><span class="bullet">• </span>Rencontres avec des Pokémon</div>
+    <div class="intro-item"><span class="bullet">• </span>Rencontre avec Pikachu Astronaute</div>
+  </div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-pikachu" data-pk="pikachu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name nom-neutre">Pikachu</h2>
+        <p class="pokemon-subtitle">Astronaute - Nouveau costume</p>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n15"></span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

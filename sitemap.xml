@@ -13,9 +13,6 @@
 
   <!-- Évènements -->
   <url>
-    <loc>https://goeon.fr/CelebrationHorizons</loc>
-  </url>
-  <url>
     <loc>https://goeon.fr/MaitriseBrocelome</loc>
   </url>
   <url>
@@ -29,6 +26,9 @@
   </url>
   <url>
     <loc>https://goeon.fr/PyrobutGigamax</loc>
+  </url>
+  <url>
+    <loc>https://goeon.fr/WorldSpaceWeek</loc>
   </url>
   <url>
     <loc>https://goeon.fr/CDZorua</loc>

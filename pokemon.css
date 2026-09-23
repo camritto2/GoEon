@@ -3383,6 +3383,11 @@
 .pk-typhlosion .research-reward-name { color: var(--accent-vert-bon); }
 .pk-typhlosion .emoji-shiny  { display: inline; }
 
+/* Typhlosion de Hisui — Bon / Shiny */
+.pk-typhlosion-h .pokemon-name { color: var(--accent-vert-bon); }
+.pk-typhlosion-h .research-reward-name { color: var(--accent-vert-bon); }
+.pk-typhlosion-h .emoji-shiny  { display: inline; }
+
 /* Tyranocif — Bon / Shiny (couvre Méga-Tyranocif) */
 .pk-tyranocif .pokemon-name { color: var(--accent-vert-bon); }
 .pk-tyranocif .research-reward-name { color: var(--accent-vert-bon); }

@@ -18,8 +18,7 @@
         {
           "nom": "Célébration pour la série Pokémon, les horizons",
           "debut": "2026-09-16T10:00",
-          "fin": "2026-09-22T20:00",
-          "page": "CelebrationHorizons.html"
+          "fin": "2026-09-22T20:00"
         },
         {
           "nom": "Festival des récoltes",
@@ -460,9 +459,10 @@
       "libelle": "Octobre 2026",
       "evenements": [
         {
-          "nom": "???",
+          "nom": "World Space Week 2026",
           "debut": "2026-10-06T00:00",
-          "fin": "2026-10-10T20:00"
+          "fin": "2026-10-10T23:59",
+          "page": "WorldSpaceWeek.html"
         },
         {
           "nom": "Marathon d'Automne",
@@ -626,6 +626,22 @@
           "lignes": [
             "Dynamax"
           ]
+        },
+        {
+          "debut": "2026-10-06",
+          "categorie": "saison",
+          "court": "Nouveau Passe Go",
+          "long": "Nouveau Passe Go",
+          "heures": "10h",
+          "details": [
+            "Fin du Passe Go de Septembre, début du Passe Go d'Octobre.",
+            "Il se termine le mardi 3 novembre à 10h."
+          ],
+          "lignes": [
+            "Nouveau Passe Go",
+            "10h"
+          ],
+          "compact": "Passe Go"
         },
         {
           "debut": "2026-10-07",
