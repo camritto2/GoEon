@@ -54,11 +54,16 @@ Une section par type. On ne note que ceux qui franchissent le seuil.
 
 ### Combat
 
-*Seuils : 25e = Cancrelove · dernier Méga = Méga 5, Méga-Gallame.*
+*Seuils : 25e = Chelours · dernier Méga = Méga 5, Méga-Gallame.*
 
 | Pokémon | Types | Attaque du type | Source | Position visée |
 |---|---|---|---|---|
-| | | | | |
+| Katagami | Plante / Acier | Lame Sainte (AI : Tranch'Herbe, qui le fait Top Plante) | AC | entre Bétochef (8) et Gallame (9) - relevé avec Taillade (eDPS 23,37), à confirmer avec Tranch'Herbe |
+| Mewtwo | Psy | Riposte L + Exploforce | AI + AC | entre Marshadow (10) et Mackogneur (11) (eDPS 21,41) |
+| Raikou | Électrik | Aurasphère (AI : Éclair) | AC | entre Mackogneur (11) et Archéduc de Hisui (12) (eDPS 21,00) |
+| Togekiss | Fée / Vol | Exploforce (AI : Charme) | AC | entre Viridium (19) et Quartermac (20) - relevé avec Puissance Cachée Combat et Aurasphère L (eDPS 19,30), à confirmer avec ce build |
+
+*Tranché le 23 septembre : **Méga-Mewtwo Y est écarté**, Méga-Mewtwo X occupant déjà le rôle Combat (Méga 1). **Mewtwo est retenu** malgré la règle 6 : un joueur qui n'a pas assez de Méga-Énergie peut le jouer en Combat avec Riposte L et Exploforce. Méga-Mewtwo X et Y sont considérés comme deux Pokémon distincts.*
 
 ### Dragon
 

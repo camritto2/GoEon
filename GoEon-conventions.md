@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.4 - 19 septembre 2026.*
+*Version 5.5 - 23 septembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -156,7 +156,7 @@ La face avant d'une page Top[X] porte la meilleure attaque immédiate **pour jou
 
 Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué. Si la face avant porte une icône de type, lui donner un id et le passer en **3e argument** : elle disparait au clic, même quand l'attaque révélée est du même type.
 
-**Invariant croisé.** Pour un Pokémon présent sur plusieurs pages, chacune implique une « meilleure attaque immédiate absolue » : celle révélée s'il y a une bascule, celle de la face avant sinon. **Toutes les pages doivent impliquer la même.** Deux pages sans bascule affichant deux attaques différentes, ou deux bascules pointant l'une vers l'autre, sont contradictoires par construction. Cet invariant **se vérifie par script, pas à l'œil** : trois relectures manuelles successives ont laissé passer des contradictions qu'un groupement par Pokémon fait tomber en quelques secondes.
+**Invariant croisé.** Pour un Pokémon présent sur plusieurs pages, chacune implique une « meilleure attaque immédiate absolue » : celle révélée s'il y a une bascule, celle de la face avant sinon. **Toutes les pages doivent impliquer la même.** Deux pages sans bascule affichant deux attaques différentes, ou deux bascules pointant l'une vers l'autre, sont contradictoires par construction. Cet invariant **se vérifie par script, pas à l'œil** : trois relectures manuelles successives ont laissé passer des contradictions qu'un groupement par Pokémon fait tomber en quelques secondes. **Méga-Mewtwo X et Y forment une exception car ils sont considérés comme 2 Pokémon distincts.**
 
 ### Builds et boutons
 
@@ -170,7 +170,7 @@ Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué. S
 - Ordre strict : `nom` → `legacy-indicator` → `footnote-ref` → icône de type.
 - **Une icône de type accompagne toute attaque hors-type de la face avant**, immédiate comme chargée, pas seulement celles portées par une bascule.
 - **Le statut Legacy appartient au couple attaque + Pokémon**, pas à l'attaque seule : une même attaque peut être Legacy pour un Pokémon et pas pour un autre. En conséquence, **un Pokémon présent sur deux pages Top y porte exactement le même statut Legacy** — une divergence est forcément une erreur.
-- **Quand le `-` s'explique par la supériorité de l'attaque de face**, le même `footnote-ref` se pose **deux fois** : sur l'Attaque Chargée de la face avant *et* sur le tiret, avec une note unique.
+- **Où va la note qui explique un `-`.** Si l'attaque de face est **du type de la page**, la note explique seulement l'absence de 2e attaque : elle va dans le build, en `build-note`, avec un seul renvoi sur le tiret. Si l'attaque de face est **d'un autre type** (cas d'un Off-Type), la note explique aussi sa présence sur la page : elle reste en `card-note`, et le renvoi se pose sur l'attaque de face et sur le tiret.
 - **Deux classes de note, à ne pas confondre.** `card-note` s'affiche en permanence sous la carte (renvois de la face avant) ; `build-note` vit dans le build et n'apparait qu'au déploiement (renvois de la 2e Attaque Chargée). **Un audit qui ne cherche que `card-note` conclura à tort que des notes manquent.**
 - **Numérotation des renvois** : séquentielle dans l'ordre des cartes. Un numéro se **réutilise entre la forme Méga et la forme de base d'une même espèce** ; **deux espèces différentes gardent deux numéros distincts, même à texte identique**. Ne pas factoriser.
 - Puces d'intro colorées comme leur ligne, puce Legacy neutre.
