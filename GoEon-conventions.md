@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.5 - 23 septembre 2026.*
+*Version 5.6 - 25 septembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -132,6 +132,7 @@ Types et PC du 100 % vivent dans `pokemon-data.json`, lus par `script.js` §20. 
 - **Rangs Méga : « Méga 1 », « Méga 2 » — jamais « M1 »**, y compris dans `card-rank`. `M1` est l'abréviation de Cam à la saisie, pas ce qui s'écrit.
 - **Séparateur de milliers : espace INSÉCABLE**, dans les PC comme partout où un nombre s'affiche. Une espace ordinaire autorise le navigateur à couper la ligne au milieu du nombre : sur une carte étroite, « 1 509 » se lit alors comme deux nombres. Règle posée par Cam le 16/09 ; `formatePC` en §20 l'applique.
 - **Tiret simple `-` partout dans le texte affiché**, sans exception : fourchettes, plages horaires, titres de section, `raids-date`. Ni cadratin « — », ni demi-cadratin « – ». Règle posée par Cam le 30 août après un remplacement global ; toute proposition de « bon » tiret typographique est à écarter d'office. Billets : « Nom / X € », espace insécable après la barre.
+- **Vert en texte courant : uniquement quand le Pokémon peut être capturé** - rencontre, récompense d'étude, apparition. Une Méga-Énergie, un copain avec qui marcher ou un Pokémon qui reçoit une attaque restent en noir, même s'il est « Bon ». Classe : `texte-vert`. Règle posée par Cam le 25/09.
 - Ligature œ obligatoire (« Nœud Herbe »). Orthographe rectifiée à appliquer sur tout le site.
 - Dates sans année.
 

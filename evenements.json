@@ -465,9 +465,10 @@
           "page": "WorldSpaceWeek.html"
         },
         {
-          "nom": "Marathon d'Automne",
+          "nom": "Marathon Automnal",
           "debut": "2026-10-13T10:00",
-          "fin": "2026-10-19T20:00"
+          "fin": "2026-10-19T20:00",
+          "page": "MarathonAutomnal.html"
         },
         {
           "nom": "Halloween - Partie 1",
@@ -734,9 +735,13 @@
         {
           "debut": "2026-10-17",
           "categorie": "eclosion",
-          "court": "Éclosion ???",
-          "long": "Journée d'Éclosion - ???",
+          "court": "Éclosion Mascaïman",
+          "long": "Journée d'Éclosion - Mascaïman",
           "heures": "11h - 17h",
+          "sprites": [
+            "Mascaiman.png"
+          ],
+          "page": "EclosionMascaiman.html",
           "lignes": [
             "Éclosion",
             "11h-17h"

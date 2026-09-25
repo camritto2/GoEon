@@ -422,12 +422,6 @@ body.dark-mode .shiny-boost-circle::after {
 h2.pokemon-name.nom-neutre { color: var(--text-principal); }
 span.research-reward-name.nom-neutre { color: var(--text-principal); }
 
-/* Nom de Pokémon cité dans une ligne de texte (bonus, intro…) — gras vert « Bon » */
-.nom-bon {
-  color: var(--accent-vert-bon);
-  font-weight: 700;
-}
-
 /* Nom */
 .pokemon-name {
   font-size: 11px;
@@ -672,7 +666,10 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   gap: 2px;
 }
 
-/* Textes de légende des codes couleur (intros, listes) */
+/* Textes de légende des codes couleur (intros, listes), et nom de Pokémon
+   cité dans une ligne de texte quand il peut être capturé (cf. manuel §4).
+   Seule classe pour ce vert : l'ancienne .nom-bon, identique, a été fusionnée
+   ici le 25/09. */
 .texte-vert {
   color: var(--accent-vert-bon);
   font-weight: bold;

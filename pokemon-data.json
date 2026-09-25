@@ -1668,11 +1668,13 @@
       }
     },
     "lezargus": {
-      "types": null,
+      "types": [
+        "Eau"
+      ],
       "pc": {
         "n15": 1270,
-        "n20": null,
-        "n25": null
+        "n20": 1693,
+        "n25": 2117
       }
     },
     "lilia": {
@@ -1738,6 +1740,17 @@
         "n15": null,
         "n20": 2115,
         "n25": null
+      }
+    },
+    "lugulabre": {
+      "types": [
+        "Spectre",
+        "Feu"
+      ],
+      "pc": {
+        "n15": 1401,
+        "n20": 1867,
+        "n25": 2335
       }
     },
     "luxio": {
@@ -3176,6 +3189,28 @@
       "pc": {
         "n15": 364,
         "n20": 485,
+        "n25": null
+      }
+    },
+    "virevorreur": {
+      "types": [
+        "Plante",
+        "Spectre"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "virovent": {
+      "types": [
+        "Plante",
+        "Spectre"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
         "n25": null
       }
     },

@@ -3445,10 +3445,14 @@
 /* Vipélierre — Normal / Shiny */
 .pk-vipelierre .emoji-shiny { display: inline; }
 
+/* Virevorreur — Normal / Pas de shiny */
+
 /* Viridium — Bon / Shiny */
 .pk-viridium .pokemon-name { color: var(--accent-vert-bon); }
 .pk-viridium .research-reward-name { color: var(--accent-vert-bon); }
 .pk-viridium .emoji-shiny  { display: inline; }
+
+/* Virovent — Normal / Pas de shiny */
 
 /* Volcanion — Bon / Shiny */
 .pk-volcanion .pokemon-name { color: var(--accent-vert-bon); }
