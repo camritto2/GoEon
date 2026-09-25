@@ -3119,11 +3119,15 @@
 .pk-stalgamin .research-reward-name { color: var(--accent-vert-bon); }
 .pk-stalgamin .emoji-shiny  { display: inline; }
 
-/* Stari — Normal / Shiny */
-.pk-stari .emoji-shiny { display: inline; }
+/* Stari — Bon / Shiny */
+.pk-stari .pokemon-name { color: var(--accent-vert-bon); }
+.pk-stari .research-reward-name { color: var(--accent-vert-bon); }
+.pk-stari .emoji-shiny  { display: inline; }
 
-/* Staross — Normal / Shiny */
-.pk-staross .emoji-shiny { display: inline; }
+/* Staross — Bon / Shiny (couvre Méga-Staross) */
+.pk-staross .pokemon-name { color: var(--accent-vert-bon); }
+.pk-staross .research-reward-name { color: var(--accent-vert-bon); }
+.pk-staross .emoji-shiny  { display: inline; }
 
 /* Statitik — Bon / Shiny */
 .pk-statitik .pokemon-name { color: var(--accent-vert-bon); }

@@ -73,11 +73,14 @@ Une section par type. On ne note que ceux qui franchissent le seuil.
 
 ### Eau
 
-*Seuils : 25e = Milobellus · dernier Méga = Méga 5, Méga-Sharpedo.*
+*Seuils : 25e = Milobellus · dernier Méga = Méga 5, Méga-Tortank.*
 
 | Pokémon | Types | Attaque du type | Source | Position visée |
 |---|---|---|---|---|
-| | | | | |
+| Tranchodon | Dragon | Surf (AI : Draco-Queue, qui le fait Top Dragon) | AC | entre Golgopathe (23) et Tortank (24) (eDPS 16,97) |
+| Crabominable | Combat / Glace | Écume + Pince-Masse | AI + AC | entre Tortank (24) et Milobellus (25) (eDPS 16,77) |
+
+*Relevé le 25 septembre.*
 
 ### Électrik
 
