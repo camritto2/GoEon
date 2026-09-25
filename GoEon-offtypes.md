@@ -69,9 +69,7 @@ Une section par type. On ne note que ceux qui franchissent le seuil.
 
 *Seuils : 25e = Pomdorochi · dernier Méga = Méga 5, Méga-Latios.*
 
-| Pokémon | Types | Attaque du type | Source | Position visée |
-|---|---|---|---|---|
-| | | | | |
+*Relevé le 23 septembre : aucun Off-Type.*
 
 ### Eau
 
