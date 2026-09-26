@@ -6,10 +6,10 @@
     <title>GoEon - Top Fée</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="top.css"> 
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="Images/icon-192.png">
+    <link rel="stylesheet" href="top.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#29b6f6">
+    <link rel="apple-touch-icon" href="Images/icon-192.png">
 </head>
 <body>
 
@@ -17,9 +17,9 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Fee.webp" alt="Fée" class="top-title-icon">Type Fée<img src="Images/Fee.webp" alt="Fée" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Fee.webp" alt="Fée" class="top-title-icon">Type Fée<img src="Images/Fee.webp" alt="Fée" class="top-title-icon"></span>
     </h1>
-    
+
     <div class="intro-rules">
         <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
             Comprendre le classement
@@ -29,7 +29,7 @@
         <div class="intro-item"><span class="bullet legend-blue">•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
         <div class="intro-item"><span class="bullet legend-cyan">•</span>Les Pokémon en <span class="legend-cyan">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
         <div class="intro-item"><span class="bullet legend-red">•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
-        <div class="intro-item"><span class="bullet" >•</span><span class="legacy-indicator" >L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
+        <div class="intro-item"><span class="bullet">•</span><span class="legacy-indicator">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
         Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
         💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
@@ -68,9 +68,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">1</div>
@@ -98,9 +95,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -131,9 +125,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">3</div>
@@ -162,9 +153,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">4</div>
@@ -173,7 +161,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong id="toko-imm">Étonnement</strong><img id="toko-imm-icon" src="Images/Spectre.webp" alt="Type Spectre" class="type-icon-btn icone-imm"><span id="toko-imm-alt" style="display:none"> → <strong>Choc Mental</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span><span class="footnote-ref">2</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button">
                     <button id="toggle-toko-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('toko-details', 'toggle-toko-btn'); toggleAltImm('toko-imm', 'toko-imm-alt', 'toko-imm-icon')">
@@ -182,13 +170,11 @@
                 </div>
                 <div class="card-build" id="toko-details">
                     <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
+                    <div class="build-note"><span class="footnote-ref">2</span> : Ire de la Nature<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
                 </div>
-                <div class="card-note"><span class="footnote-ref">2</span> : Ire de la Nature fera toujours plus de dégâts que Prescience.</div>
+                <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -206,9 +192,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -239,9 +222,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">7</div>
@@ -250,7 +230,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Vent Féérique</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Pouvoir Lunaire</strong>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vol</strong><span class="footnote-ref">3</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-amovt-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('amovt-details', 'toggle-amovt-btn')">
@@ -258,19 +238,11 @@
                     </button>
                 </div>
                 <div class="card-build" id="amovt-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Vol</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">3</span>
                 </div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Fée.</div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -301,9 +273,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">9</div>
@@ -319,9 +288,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -352,9 +318,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">10</div>
@@ -370,9 +333,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -403,9 +363,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">12</div>
@@ -434,9 +391,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">13</div>
@@ -452,9 +406,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -474,9 +425,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card mega-card">
                 <div class="card-rank">Méga 3</div>
@@ -492,9 +440,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -525,9 +470,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">16</div>
@@ -536,7 +478,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Vent Féérique</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Marteau Mastoc</strong><span class="legacy-indicator">L</span><span class="footnote-ref">3</span> <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Marteau Mastoc</strong><span class="legacy-indicator">L</span><span class="footnote-ref">4</span> <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-forg-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('forg-details', 'toggle-forg-btn')">
@@ -544,14 +486,11 @@
                     </button>
                 </div>
                 <div class="card-build" id="forg-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">3</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">4</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">3</span> : Marteau Mastoc fera toujours plus de dégâts que Câlinerie.</div>
+                <div class="card-note"><span class="footnote-ref">4</span> : Marteau Mastoc<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Fée.</div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -571,9 +510,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">18</div>
@@ -591,9 +527,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">19</div>
@@ -601,7 +534,7 @@
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Tokopisco</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Pistolet à O</strong> <img src="Images/Eau.webp" alt="Type Eau" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Puissance Cachée</strong> <img src="Images/Glace.webp" alt="Type Glace" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button"></div>
@@ -609,9 +542,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -642,9 +572,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">21</div>
@@ -660,9 +587,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -682,9 +606,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">22</div>
@@ -700,9 +621,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -733,9 +651,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">24</div>
@@ -751,9 +666,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -773,17 +685,16 @@
         </div>
 
     </div>
-    
+
     <hr class="section-divider">
-    
+
     <div class="more-info-container">
-        <span class="more-info-title">Plus d'informations : <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/fairy" target="_blank" class="more-info-link">Cliquez ici</a></span>
+        <span class="more-info-title">Plus d'informations : <a href="https://www.dialgadex.com/?strongest=&amp;t=Fairy&amp;lang=fr" target="_blank" class="more-info-link">Cliquez ici</a></span>
     </div>
 
 </div>
 
 <script src="script.js"></script>
-
 
 </body>
 </html>

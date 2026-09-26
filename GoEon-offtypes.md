@@ -84,11 +84,19 @@ Une section par type. On ne note que ceux qui franchissent le seuil.
 
 ### Électrik
 
-*Seuils : 25e = Togedemaru · dernier Méga = Méga 4, Méga-Pharamp.*
+*Seuils : 25e = Pharamp · dernier Méga = Méga 4, Méga-Pharamp.*
 
 | Pokémon | Types | Attaque du type | Source | Position visée |
 |---|---|---|---|---|
-| | | | | |
+| Méga-Mewtwo Y | Psy | Tonnerre (AI : Coupe Psycho) | AC | entre Méga-Raichu X (Méga 2) et Regieleki (1) (eDPS 26,80) |
+| Méga-Mewtwo X | Psy / Combat | Tonnerre (AI : Coupe Psycho) | AC | entre Zeraora (2) et Câblifère (3) (eDPS 25,72) |
+| Mewtwo | Psy | Tonnerre (AI : Coupe Psycho) | AC | entre Fulguris Forme Avatar (14) et Grolem d'Alola (15) (eDPS 19,07) |
+| Primo-Kyogre | Eau | Fatal-Foudre en 2e AC (AC : Onde Originelle, AI : Cascade) | 2e AC | Méga 5, entre Salarsen (17) et Élecsprint (18) (eDPS 18,32) |
+| Zacian Héros Aguerri | Fée | Éclair Fou (AI : Aboiement) | AC | entre Élecsprint (18) et Zéblitz (19) (eDPS 17,78) |
+| Arcanin | Feu | Crocs Éclair + Éclair Fou | AI + AC | entre Ohmassacre (20) et Raichu d'Alola (21) (eDPS 17,28) |
+| Meloetta Forme Chant | Normal / Psy | Tonnerre (AI : Vive-Attaque) | AC | entre Fulgulairo (22) et Iguolta (23) (eDPS 16,68) |
+
+*Relevé le 26 septembre.*
 
 ### Fée
 
@@ -96,15 +104,35 @@ Une section par type. On ne note que ceux qui franchissent le seuil.
 
 | Pokémon | Types | Attaque du type | Source | Position visée |
 |---|---|---|---|---|
-| | | | | |
+| Méga-Alakazam | Psy | Éclat Magique L (AI : Coupe Psycho) | AC | entre Amovénus Forme Avatar (2) et Tokorico (3) (eDPS 23,32) |
+| Câblifère | Électrik | Éclat Magique (AI : Éclair) | AC | entre Tokotoro (6) et Amovénus Forme Totémique (7) (eDPS 21,31) |
+| Méga-Branette | Spectre | Éclat Magique (AI : Châtiment) | AC | entre Sorcilence (11) et Oratoria (12) (eDPS 19,29) |
+| Meloetta Forme Chant | Normal / Psy | Éclat Magique (AI : Vive-Attaque) | AC | entre Forgelina (16) et Galopa de Galar (17) (eDPS 17,92) |
+| Gromago | Spectre | Éclat Magique (AI : Châtiment) | AC | entre Galopa de Galar (17) et Florges (18) (eDPS 17,29) |
+| Ursaking | Sol / Normal | Câlinerie (AI : Charge) | AC | entre Tokopisco (19) et Rubombelle (20) (eDPS 16,81) |
+| Alakazam | Psy | Éclat Magique L (AI : Coupe Psycho) | AC | entre Tokopisco (19) et Rubombelle (20), après Ursaking (eDPS 16,77) |
+| Polagriffe | Glace | Charme + Câlinerie | AI + AC | entre Tokopisco (19) et Rubombelle (20), après Alakazam (eDPS 16,71) |
+| Zamazenta Bouclier Suprême | Combat / Acier | Pouvoir Lunaire (AI : Griffe Acier) | AC | entre Mélodelfe (21) et Smogogo de Galar (22), après Méga-Mysdibule (eDPS 16,14) |
+| Donphan | Sol | Charme + Câlinerie | AI + AC | entre Mélodelfe (21) et Smogogo de Galar (22), après Zamazenta Bouclier Suprême (eDPS 15,84) |
+| Mew | Psy | Éclat Magique (AI : Draco-Queue) | AC | entre Smogogo de Galar (22) et Feunard d'Alola (23) (eDPS 15,31) |
+| Zamazenta Héros Aguerri | Combat | Pouvoir Lunaire (AI : Griffe Acier) | AC | entre Cupcanaille (24) et Grodoudou (25) (eDPS 14,87) |
+
+*Relevé le 26 septembre.*
+
+*Avec Méga-Alakazam (Méga 2) et Méga-Branette (Méga 4), les Méga deviennent Méga-Diancie Méga 3, Méga-Altaria Méga 5 et **Méga-Mysdibule Méga 6 : il sortirait de la page** (règle 5).*
 
 ### Feu
 
-*Seuils : 25e = Typhlosion de Hisui · dernier Méga = Méga 5, Méga-Camérupt.*
+*Seuils : 25e = Typhlosion de Hisui · dernier Méga = Méga 5, Méga-Démolosse.*
 
 | Pokémon | Types | Attaque du type | Source | Position visée |
 |---|---|---|---|---|
-| | | | | |
+| Méga-Mewtwo X | Psy / Combat | Lance-Flammes (AI : Riposte) | AC | entre Reshiram (2) et Méga-Démolosse (Méga 5) (eDPS 26,76) |
+| Méga-Mewtwo Y | Psy | Lance-Flammes (AI : Coupe Psycho) | AC | entre Reshiram (2) et Méga-Démolosse (Méga 5), après Méga-Mewtwo X (eDPS 26,34) |
+
+*Relevé le 26 septembre.*
+
+*Avec les deux, Méga-Mewtwo X prend Méga 5 et Méga-Mewtwo Y tomberait en Méga 6, tout comme **Méga-Démolosse en Méga 7 : les deux sortiraient de la page** (règle 5).*
 
 ### Glace
 

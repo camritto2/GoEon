@@ -3265,10 +3265,8 @@
 
 /* Tissenboule — Normal / Pas de shiny */
 
-/* Togedemaru — Bon / Shiny */
-.pk-togedemaru .pokemon-name { color: var(--accent-vert-bon); }
-.pk-togedemaru .research-reward-name { color: var(--accent-vert-bon); }
-.pk-togedemaru .emoji-shiny  { display: inline; }
+/* Togedemaru — Normal / Shiny */
+.pk-togedemaru .emoji-shiny { display: inline; }
 
 /* Togekiss — Bon / Shiny */
 .pk-togekiss .pokemon-name { color: var(--accent-vert-bon); }

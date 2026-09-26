@@ -6,10 +6,10 @@
     <title>GoEon - Top Feu</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="top.css"> 
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="Images/icon-192.png">
+    <link rel="stylesheet" href="top.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#29b6f6">
+    <link rel="apple-touch-icon" href="Images/icon-192.png">
 </head>
 <body>
 
@@ -17,9 +17,9 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Feu.webp" alt="Feu" class="top-title-icon">Type Feu<img src="Images/Feu.webp" alt="Feu" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Feu.webp" alt="Feu" class="top-title-icon">Type Feu<img src="Images/Feu.webp" alt="Feu" class="top-title-icon"></span>
     </h1>
-    
+
     <div class="intro-rules">
         <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
             Comprendre le classement
@@ -29,7 +29,7 @@
         <div class="intro-item"><span class="bullet legend-blue">•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
         <div class="intro-item"><span class="bullet legend-cyan">•</span>Les Pokémon en <span class="legend-cyan">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
         <div class="intro-item"><span class="bullet legend-red">•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
-        <div class="intro-item"><span class="bullet" ><span class="legacy-indicator" >L</span></span>signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
+        <div class="intro-item"><span class="bullet">•</span><span class="legacy-indicator">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
         Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
         💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
@@ -43,6 +43,24 @@
         <div class="grid-item">
             <div class="fandom-card mega-card">
                 <div class="card-rank">Méga 1</div>
+                <div class="card-image"><img src="Images/GoupelinM.png" alt="Méga-Goupelin" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Goupelin</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Danse Flammes</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">1</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Feu Ensorcelé++++</strong><span class="footnote-ref">1</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note"><span class="footnote-ref">1</span> : Feu Ensorcelé++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 2</div>
                 <div class="card-image"><img src="Images/BrasegaliM.png" alt="Méga-Braségali" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Braségali</span></strong></div>
                 <div class="card-badges"></div>
@@ -70,7 +88,7 @@
 
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 2</div>
+                <div class="card-rank">Méga 3</div>
                 <div class="card-image"><img src="Images/DracaufeuMY.png" alt="Méga-Dracaufeu Y" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Dracaufeu Y</span></strong></div>
                 <div class="card-badges"></div>
@@ -84,8 +102,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="mdracy-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">1</span>
-                    <div class="build-note"><span class="footnote-ref">1</span> : Rafale Feu fera toujours plus de dégâts que Tranch'Air.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
+                    <div class="build-note"><span class="footnote-ref">2</span> : Rafale Feu<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Vol.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -121,6 +139,23 @@
 
 
         <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 4</div>
+                <div class="card-image"><img src="Images/DracaufeuMX.png" alt="Méga-Dracaufeu X" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Dracaufeu X</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Danse Flammes</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Rafale Feu</strong><span class="legacy-indicator">L</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">2</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Reshiram.png" alt="Reshiram" class="card-img"></div>
@@ -141,6 +176,34 @@
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
                     <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 5</div>
+                <div class="card-image"><img src="Images/DemolosseM.png" alt="Méga-Démolosse" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Démolosse</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mdemo-imm">Crocs Feu</strong><span id="mdemo-imm-alt" style="display:none"> → <strong>Aboiement</strong></span><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Lance-Flammes</strong>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-mdemo-btn" class="btn-tenebres" aria-expanded="false" onclick="toggleBuild('mdemo-details', 'toggle-mdemo-btn'); toggleAltImm('mdemo-imm', 'mdemo-imm-alt')">
+                    Également Top Ténèbres <img src="Images/Tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mdemo-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Tricherie</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
                 <div class="card-note hidden-note"></div>
@@ -177,34 +240,6 @@
 
 
         <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 3</div>
-                <div class="card-image"><img src="Images/GroudonP.png" alt="Primo-Groudon" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Primo-Groudon</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Tir de Boue</strong> <img src="Images/Sol.webp" alt="Type Sol" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Déflagration</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-pgroud-btn" class="btn-sol" aria-expanded="false" onclick="toggleBuild('pgroud-details', 'toggle-pgroud-btn')">
-                    Également Top Sol <img src="Images/Sol.webp" alt="Type Sol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="pgroud-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lame Pangéenne</strong><span class="legacy-indicator">L</span>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">4</div>
                 <div class="card-image"><img src="Images/Pyrax.png" alt="Pyrax" class="card-img"></div>
@@ -225,34 +260,6 @@
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
                     <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 4</div>
-                <div class="card-image"><img src="Images/DemolosseM.png" alt="Méga-Démolosse" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Démolosse</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mdemo-imm">Crocs Feu</strong><span id="mdemo-imm-alt" style="display:none"> → <strong>Aboiement</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Lance-Flammes</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-mdemo-btn" class="btn-tenebres" aria-expanded="false" onclick="toggleBuild('mdemo-details', 'toggle-mdemo-btn'); toggleAltImm('mdemo-imm', 'mdemo-imm-alt')">
-                    Également Top Ténèbres <img src="Images/Tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="mdemo-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Tricherie</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
                 <div class="card-note hidden-note"></div>
@@ -313,7 +320,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Calcination</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Feu Sacré+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">2</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Feu Sacré+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">3</span>
                 </div>
                 <div class="card-button">
                     <button id="toggle-hooha-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('hooha-details', 'toggle-hooha-btn')">
@@ -328,7 +335,7 @@
                     <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note"><span class="footnote-ref">2</span> : Cette forme a été disponible une fois dans le jeu. L'attaque Feu Sacré+ est plus forte que la version de base. Elle devient Feu Sacré++ après purification (mais devient moins forte).</div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Cette forme a été disponible une fois dans le jeu. L'Attaque Feu Sacré+ est plus forte que la version de base. Elle devient Feu Sacré++ après purification (mais devient moins forte).</div>
             </div>
         </div>
 
@@ -467,8 +474,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="dracau-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">1</span>
-                    <div class="build-note"><span class="footnote-ref">1</span> : Rafale Feu fera toujours plus de dégâts que Tranch'Air.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
+                    <div class="build-note"><span class="footnote-ref">2</span> : Rafale Feu<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Vol.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -656,34 +663,6 @@
 
 
         <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 5</div>
-                <div class="card-image"><img src="Images/CameruptM.png" alt="Méga-Camérupt" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Camérupt</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Calcination</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Surchauffe</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-mcame-btn" class="btn-sol" aria-expanded="false" onclick="toggleBuild('mcame-details', 'toggle-mcame-btn')">
-                    Également Top Sol <img src="Images/Sol.webp" alt="Type Sol" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="mcame-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Telluriforce</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">22</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Ho-Oh.png" alt="Ho-Oh" class="card-img"></div>
@@ -784,17 +763,16 @@
         </div>
 
     </div>
-    
+
     <hr class="section-divider">
-    
+
     <div class="more-info-container">
-        <span class="more-info-title">Plus d'informations : <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/fire" target="_blank" class="more-info-link">Cliquez ici</a></span>
+        <span class="more-info-title">Plus d'informations : <a href="https://www.dialgadex.com/?strongest=&amp;t=Fire&amp;lang=fr" target="_blank" class="more-info-link">Cliquez ici</a></span>
     </div>
 
 </div>
 
 <script src="script.js"></script>
-
 
 </body>
 </html>

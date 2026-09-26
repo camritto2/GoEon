@@ -6,10 +6,10 @@
     <title>GoEon - Top Électrik</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="top.css"> 
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="Images/icon-192.png">
+    <link rel="stylesheet" href="top.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#29b6f6">
+    <link rel="apple-touch-icon" href="Images/icon-192.png">
 </head>
 <body>
 
@@ -17,9 +17,9 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Electrik.webp" alt="Électrik" class="top-title-icon">Type Électrik<img src="Images/Electrik.webp" alt="Électrik" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Electrik.webp" alt="Électrik" class="top-title-icon">Type Électrik<img src="Images/Electrik.webp" alt="Électrik" class="top-title-icon"></span>
     </h1>
-    
+
     <div class="intro-rules">
         <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
             Comprendre le classement
@@ -29,7 +29,7 @@
         <div class="intro-item"><span class="bullet legend-blue">•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
         <div class="intro-item"><span class="bullet legend-cyan">•</span>Les Pokémon en <span class="legend-cyan">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
         <div class="intro-item"><span class="bullet legend-red">•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
-        <div class="intro-item"><span class="bullet" >•</span><span class="legacy-indicator" >L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
+        <div class="intro-item"><span class="bullet">•</span><span class="legacy-indicator">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
         Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
         💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
@@ -48,11 +48,30 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Éclair</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">1</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Élecanon++++</strong><span class="footnote-ref">1</span>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">1</span> : Élecanon++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 2</div>
+                <div class="card-image"><img src="Images/RaichuMX.png" alt="Méga-Raichu X" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Raichu X</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Éclair</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">2</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Électacle++++</strong><span class="footnote-ref">2</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note"><span class="footnote-ref">2</span> : Électacle++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
             </div>
         </div>
 
@@ -64,17 +83,14 @@
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Regieleki</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Verrouillage</strong> <img src="Images/Normal.webp" alt="Type Normal" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Verrouillage</strong><span class="footnote-ref">3</span> <img src="Images/Normal.webp" alt="Type Normal" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Voltageôle</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Verrouillage permet de charger l'Attaque Chargée plus vite, et donc de la lancer plus souvent qu'avec une Attaque de type Électrik.</div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -94,9 +110,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">3</div>
@@ -114,12 +127,9 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 2</div>
+                <div class="card-rank">Méga 3</div>
                 <div class="card-image"><img src="Images/ElecsprintM.png" alt="Méga-Élecsprint" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Élecsprint</span></strong></div>
                 <div class="card-badges"></div>
@@ -132,9 +142,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -152,9 +159,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -185,26 +189,6 @@
         </div>
 
 
-        
-
-
-        <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 3</div>
-                <div class="card-image"><img src="Images/RaichuMX.png" alt="Méga-Raichu X" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Raichu X</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Éclair</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong>
-                </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
         <div class="grid-item">
             <div class="fandom-card mega-card">
                 <div class="card-rank">Méga 4</div>
@@ -220,9 +204,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -242,9 +223,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">7</div>
@@ -260,9 +238,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -293,14 +268,11 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">9</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Magnezone.png" alt="Magnézone" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Magnézone</span></strong></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Magnézone</span><span class="footnote-ref">4</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Change Éclair</strong><br>
@@ -319,12 +291,9 @@
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">4</span> : Magnéton est également utilisable, avec Éclair et Coup d'Jus. Il se place alors entre Fulgulairo et Iguolta.</div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -355,9 +324,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">11</div>
@@ -375,9 +341,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">12</div>
@@ -393,9 +356,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -426,9 +386,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">14</div>
@@ -444,9 +401,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -477,9 +431,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">16</div>
@@ -495,9 +446,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -516,15 +464,12 @@
                     </button>
                 </div>
                 <div class="card-build" id="sala-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">1</span>
-                    <div class="build-note"><span class="footnote-ref">1</span> : Éclair Fou fera toujours plus de dégâts qu'une Attaque Poison.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
+                    <div class="build-note"><span class="footnote-ref">5</span> : Éclair Fou fera toujours plus de dégâts qu'une Attaque Poison.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -544,9 +489,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">19</div>
@@ -562,9 +504,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -584,9 +523,6 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">21</div>
@@ -602,9 +538,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
-
-        
 
 
         <div class="grid-item">
@@ -658,18 +591,15 @@
         </div>
 
 
-        
-
-
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">25</div>
-                <div class="card-image"><img src="Images/Togedemaru.png" alt="Togedemaru" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Togedemaru</span></strong></div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Pharamp.png" alt="Pharamp" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Pharamp</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Éclair</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Change Éclair</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Élecanon</strong>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
@@ -678,17 +608,16 @@
         </div>
 
     </div>
-    
+
     <hr class="section-divider">
-    
+
     <div class="more-info-container">
-        <span class="more-info-title">Plus d'informations : <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/electric" target="_blank" class="more-info-link">Cliquez ici</a></span>
+        <span class="more-info-title">Plus d'informations : <a href="https://www.dialgadex.com/?strongest=&amp;t=Electric&amp;lang=fr" target="_blank" class="more-info-link">Cliquez ici</a></span>
     </div>
 
 </div>
 
 <script src="script.js"></script>
-
 
 </body>
 </html>
