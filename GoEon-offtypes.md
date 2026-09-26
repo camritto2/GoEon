@@ -140,15 +140,44 @@ Une section par type. On ne note que ceux qui franchissent le seuil.
 
 | Pokémon | Types | Attaque du type | Source | Position visée |
 |---|---|---|---|---|
-| | | | | |
+| Méga-Mewtwo Y | Psy | Laser Glace en 2e AC (AC : Frappe Psy L, AI : Coupe Psycho) | 2e AC | entre Kyurem Forme Noire (2) et Glaivodo (3) (eDPS 29,75) |
+| Méga-Mewtwo X | Psy / Combat | Laser Glace (AI : Riposte L) | AC | entre Kyurem Forme Noire (2) et Glaivodo (3), après Méga-Mewtwo Y - relevé avec Coupe Psycho (eDPS 28,65), à confirmer avec Riposte L |
+| Primo-Kyogre | Eau | Avalanche en 2e AC (AC : Onde Originelle L, AI : Cascade) | 2e AC | entre Méga-Blizzaroi (Méga 1) et Mammochon (5) (eDPS 23,02) |
+| Mewtwo | Psy | Laser Glace en 2e AC (AC : Frappe Psy L, AI : Coupe Psycho) | 2e AC | entre Givrali (7) et Balbalèze (8) (eDPS 21,15) |
+| Méga-Lockpin | Normal | Triple Axel (AI : Écras'Face) | AC | entre Dimoret (9) et Sorbouboul (10) (eDPS 19,63) |
+| Méga-Staross | Eau / Psy | Laser Glace (AI : Vague Psy) | AC | entre Sorbouboul (10) et M. Glaquette (11) (eDPS 19,37) |
+| Méga-Tortank | Eau | Laser Glace (AI : Roulade, qui remplace Pistolet à O de son Top Eau) | AC | entre Beldeneige (17) et Polagriffe (18) (eDPS 18,13) |
+| Porygon-Z | Normal | Blizzard (AI : Verrouillage) | AC | entre Beldeneige (17) et Polagriffe (18), après Méga-Tortank (eDPS 18,11) |
+| Kyogre | Eau | Avalanche en 2e AC (AC : Onde Originelle L, AI : Cascade) | 2e AC | entre Hexagel (19) et Blizzaroi (20) (eDPS 17,52) |
+| Marshadow | Combat / Spectre | Poing Glace (AI : Riposte) | AC | entre Blizzaroi (20) et Crustabri (21) - relevé avec Griffe Ombre (eDPS 16,85), à confirmer avec Riposte |
+| Mew | Psy | Souffle Glacé + Laser Glace | AI + AC | entre Kaimorse (24) et Lokhlass (25) (eDPS 16,11) |
+| Méga-Flagadoss | Eau / Psy | Laser Glace (AI : Choc Mental) | AC | entre Kaimorse (24) et Lokhlass (25), après Mew (eDPS 15,91) |
+| Ursaking | Sol / Normal | Poing Glace en 2e AC (AC : Cavalerie Lourde, AI : Griffe) | 2e AC | entre Kaimorse (24) et Lokhlass (25), après Méga-Flagadoss (eDPS 15,72) |
+| Sucreine | Plante | Triple Axel (AI : Charme, qui remplace Feuille Magik de son Top Plante) | AC | entre Kaimorse (24) et Lokhlass (25), après Ursaking (eDPS 15,65) - à confirmer avec Feuille Magik |
+
+*Relevé le 26 septembre.*
+
+*Avec Méga-Mewtwo Y (Méga 1), Méga-Mewtwo X (Méga 2) et Primo-Kyogre (Méga 4), les Méga deviennent Méga-Blizzaroi Méga 3 et Méga-Oniglali Méga 5. Aucun Méga actuel ne sort, mais **Méga-Lockpin, Méga-Staross, Méga-Tortank et Méga-Flagadoss tomberaient en Méga 6 à 9 et restent dehors** (règle 5).*
 
 ### Insecte
 
-*Seuils : 25e = Aéromite · dernier Méga = Méga 4, Méga-Dardargnan.*
+*Seuils : 25e = Aéromite · dernier Méga = Méga 4, Méga-Cizayox.*
 
 | Pokémon | Types | Attaque du type | Source | Position visée |
 |---|---|---|---|---|
-| | | | | |
+| Katagami | Plante / Acier | Plaie Croix en 2e AC (AC : Lame Feuille, AI : Tranch'Herbe, qui le font Top Plante) | 2e AC | entre Pyrax (1) et Genesect (2) - relevé avec Taillade (eDPS 22,55), à confirmer avec Tranch'Herbe |
+| Méga-Absol | Ténèbres | Mégacorne en 2e AC (AC : Centrifugifle L, AI : Aboiement) | 2e AC | Méga 5, entre Yanméga (8) et Scarabrute (9) (eDPS 20,50) |
+| Xerneas | Fée | Mégacorne en 2e AC (AC : Pouvoir Lunaire, AI : Géo-Contrôle L) | 2e AC | entre Insécateur (14) et Fermite (15) (eDPS 19,10) |
+| Méga-Hexadron | Combat | Mégacorne (AI : Riposte) | AC | entre Crabaraque (21) et Mouscoto (22) (eDPS 16,67) |
+| Farfurex | Combat / Poison | Plaie Croix (AI : Direct Toxik) | AC | entre Crabaraque (21) et Mouscoto (22), après Méga-Hexadron (eDPS 16,29) |
+| Clamiral | Eau | Mégacorne en 2e AC (AC : Hydroblast L, AI : Cascade, qui le font Top Eau) | 2e AC | entre Crabaraque (21) et Mouscoto (22), après Farfurex - relevé avec Taillade (eDPS 16,21), à confirmer avec Cascade |
+| Absol | Ténèbres | Mégacorne en 2e AC (AC : Centrifugifle L, AI : Aboiement) | 2e AC | entre Mouscoto (22) et Rubombelle (23) (eDPS 15,98) |
+
+*Relevé le 26 septembre.*
+
+*Méga-Absol prend Méga 5 sans faire sortir de Méga actuel. **Méga-Hexadron tomberait en Méga 6 et reste dehors** (règle 5).*
+
+*Farfurex a déjà Plaie Croix sur `TopPoison`, faute d'Attaque Chargée de type Poison : il n'y perd rien.*
 
 ### Plante
 
