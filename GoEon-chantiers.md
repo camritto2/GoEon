@@ -1,6 +1,6 @@
 # GoEon — Chantiers
 
-*Mis à jour le 21 septembre 2026. Ce fichier ne liste que ce qui reste à faire : ni journal des travaux terminés, ni règles durables — celles-ci vont dans le manuel de fabrication (`GoEon-conventions.md`).*
+*Mis à jour le 28 septembre 2026. Ce fichier ne liste que ce qui reste à faire : ni journal des travaux terminés, ni règles durables — celles-ci vont dans le manuel de fabrication (`GoEon-conventions.md`).*
 
 ## Datés
 
@@ -49,6 +49,10 @@ Les préférences se stockent à côté de l'abonnement dans KV, le Worker filtr
   **Le vrai travail n'est pas le filtre.** Il est dans les effets de bord du masquage : recalculer les `<hr class="research-rangee-sep">` injectés par JS après chaque bascule, masquer les titres de section devenus vides, traiter les ancres de section-nav qui pointent vers du vide, et prévoir le cas « 0 coché » (message, pas page blanche). La partie visible — case, classe CSS, `localStorage`, barre sticky — est du JS vanille sans dépendance, de l'ordre de l'heure.
 
   **À arbitrer avant d'écrire la première ligne : une page ou toutes ?** Si c'est appelé à devenir un standard des pages évènement, l'écrire d'emblée comme **module générique de `script.js`** qui scanne les cartes présentes et s'auto-active sur un `data-event-id` déclaré par la page — surcoût initial faible, et pas de recollage du même bout de code à chaque nouvel évènement.
+- **Bouton Off-Types sur les 17 pages Top.** *Idée du 28 septembre 2026, qui met fin au fichier `GoEon-offtypes.md`. Les Off-Types seront repris type par type au moment de construire le bouton.* Un bouton « Off-Types ON/OFF » juste au-dessus du classement bascule entre les deux versions de la page : les 5 meilleurs Méga + le Top 25, avec ou sans les Off-Types.
+  - OFF par défaut.
+  - Une couleur spéciale pour les Off-Types, et la présence de leur vrai type sur la carte.
+  - Le HTML est laissé à l'assistant.
 - **Audit des blocs « Bon » de `pokemon.css` contre les 17 Top.** *À faire après la reprise des 17 Top.* Mesure du 27/08 : **504 blocs marqués « Bon »**, dont 246 dont le nom apparaît dans un Top et **258 non**. Ces 258 ne sont pas tous à retirer — beaucoup sont des pré-évolutions qui gardent légitimement le statut (Abra, Barpau, Arcko…). Le travail se fait en deux temps : un script sort la liste, Cam tranche à la main, la chaîne d'évolution demandant du jugement.
 - **MeilleursPokemon.html** (Règles Générales) : à créer. Ensuite, remplacer les `lien-a-venir` des 17 pages Top, activer la carte d'accueil et le lien navbar.
 - Et tellement plus qui se trouve pour le moment dans la tête de Cam ! Ou dans sa liste perso !

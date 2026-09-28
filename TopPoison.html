@@ -6,10 +6,10 @@
     <title>GoEon - Top Poison</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="top.css"> 
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="Images/icon-192.png">
+    <link rel="stylesheet" href="top.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#29b6f6">
+    <link rel="apple-touch-icon" href="Images/icon-192.png">
 </head>
 <body>
 
@@ -17,9 +17,9 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Poison.webp" alt="Poison" class="top-title-icon">Type Poison<img src="Images/Poison.webp" alt="Poison" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Poison.webp" alt="Poison" class="top-title-icon">Type Poison<img src="Images/Poison.webp" alt="Poison" class="top-title-icon"></span>
     </h1>
-    
+
     <div class="intro-rules">
         <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
             Comprendre le classement
@@ -29,7 +29,7 @@
         <div class="intro-item"><span class="bullet legend-blue">•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
         <div class="intro-item"><span class="bullet legend-cyan">•</span>Les Pokémon en <span class="legend-cyan">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
         <div class="intro-item"><span class="bullet legend-red">•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
-        <div class="intro-item"><span class="bullet" >•</span><span class="legacy-indicator" >L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
+        <div class="intro-item"><span class="bullet">•</span><span class="legacy-indicator">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
         Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
         💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
@@ -43,6 +43,35 @@
         <div class="grid-item">
             <div class="fandom-card mega-card">
                 <div class="card-rank">Méga 1</div>
+                <div class="card-image"><img src="Images/EmpiflorM.png" alt="Méga-Empiflor" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Empiflor</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Acide</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">1</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Bombe Acide++++</strong><span class="footnote-ref">1</span>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-mempi-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('mempi-details', 'toggle-mempi-btn')">
+                    Également Top Plante <img src="Images/Plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mempi-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lame Feuille</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
+                    </div>
+                </div>
+                <div class="card-note"><span class="footnote-ref">1</span> : Bombe Acide++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 2</div>
                 <div class="card-image"><img src="Images/EctoplasmaM.png" alt="Méga-Ectoplasma" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Ectoplasma</span></strong></div>
                 <div class="card-badges"></div>
@@ -98,7 +127,7 @@
 
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 2</div>
+                <div class="card-rank">Méga 3</div>
                 <div class="card-image"><img src="Images/DardargnanM.png" alt="Méga-Dardargnan" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Dardargnan</span></strong></div>
                 <div class="card-badges"></div>
@@ -170,38 +199,10 @@
 
 
         <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 3</div>
-                <div class="card-image"><img src="Images/EmpiflorM.png" alt="Méga-Empiflor" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Empiflor</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Acide</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Bombe Beurk</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-mempi-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('mempi-details', 'toggle-mempi-btn')">
-                    Également Top Plante <img src="Images/Plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="mempi-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lame Feuille</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">4</div>
                 <div class="card-image"><img src="Images/Roserade.png" alt="Roserade" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Roserade</span></strong></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Roserade</span><span class="footnote-ref">2</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
@@ -220,7 +221,7 @@
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">2</span> : Rosélia est également utilisable, avec Direct Toxik et Bombe Beurk. Il se place alors entre Kravarech et Florizarre.</div>
             </div>
         </div>
 
@@ -229,7 +230,7 @@
             <div class="fandom-card">
                 <div class="card-rank">5</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Qwilpik.png" alt="Qwilpik" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Qwilpik</span></strong></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Qwilpik</span><span class="footnote-ref">3</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
@@ -237,7 +238,7 @@
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Qwilfish de Hisui est également utilisable, avec Direct Toxik et Bombe Beurk. Il se place alors entre Nostenfer et Farfurex.</div>
             </div>
         </div>
 
@@ -521,16 +522,16 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">18</div>
-                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Farfurex.png" alt="Farfurex" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Farfurex</span></strong></div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Nostenfer.png" alt="Nostenfer" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Nostenfer</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Plaie Croix</strong><span class="footnote-ref">1</span> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Tornade</strong> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Bombe Beurk</strong>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note"><span class="footnote-ref">1</span> : Farfurex ne possède pas d'Attaque Chargée de type Poison.</div>
+                <div class="card-note hidden-note"></div>
             </div>
         </div>
 
@@ -538,6 +539,23 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">19</div>
+                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Farfurex.png" alt="Farfurex" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Farfurex</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Plaie Croix</strong><span class="footnote-ref">4</span> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn">
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note"><span class="footnote-ref">4</span> : Farfurex ne possède pas d'Attaque Chargée de type Poison.</div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">20</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Nidoking.png" alt="Nidoking" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Nidoking</span></strong></div>
                 <div class="card-badges"></div>
@@ -558,23 +576,6 @@
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">20</div>
-                <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Nostenfer.png" alt="Nostenfer" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Nostenfer</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Lame d'Air</strong> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Bombe Beurk</strong>
-                </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
@@ -649,7 +650,7 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Floréclat</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Jet-Pierres</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Jet-Pierres</strong> <img src="Images/Roche.webp" alt="Type Roche" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Cradovague</strong>
                 </div>
                 <div class="card-button">
@@ -678,7 +679,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong><span class="footnote-ref">2</span> <img src="Images/Electrik.webp" alt="Type Électrik" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong><span class="footnote-ref">5</span> <img src="Images/Electrik.webp" alt="Type Électrik" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-salar-btn" class="btn-electrik" aria-expanded="false" onclick="toggleBuild('salar-details', 'toggle-salar-btn')">
@@ -686,9 +687,9 @@
                     </button>
                 </div>
                 <div class="card-build" id="salar-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">2</span> : Salarsen ne possède pas d'Attaque Chargée de type Poison.</div>
+                <div class="card-note"><span class="footnote-ref">5</span> : Salarsen ne possède pas d'Attaque Chargée de type Poison.</div>
             </div>
         </div>
 

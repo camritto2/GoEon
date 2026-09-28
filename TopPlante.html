@@ -6,10 +6,10 @@
     <title>GoEon - Top Plante</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="global.css">
-  <link rel="stylesheet" href="top.css"> 
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#29b6f6">
-  <link rel="apple-touch-icon" href="Images/icon-192.png">
+    <link rel="stylesheet" href="top.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#29b6f6">
+    <link rel="apple-touch-icon" href="Images/icon-192.png">
 </head>
 <body>
 
@@ -17,9 +17,9 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Plante.webp" alt="Plante" class="top-title-icon">Type Plante<img src="Images/Plante.webp" alt="Plante" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Plante.webp" alt="Plante" class="top-title-icon">Type Plante<img src="Images/Plante.webp" alt="Plante" class="top-title-icon"></span>
     </h1>
-    
+
     <div class="intro-rules">
         <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
             Comprendre le classement
@@ -29,7 +29,7 @@
         <div class="intro-item"><span class="bullet legend-blue">•</span>Les Pokémon en <span class="legend-blue">bleu</span> sont les Pokémon légendaires/fabuleux/ultra-chimères.</div>
         <div class="intro-item"><span class="bullet legend-cyan">•</span>Les Pokémon en <span class="legend-cyan">cyan</span> sont les Pokémon que l'on a pu obtenir qu'une ou deux fois dans le jeu (souvent des fabuleux).</div>
         <div class="intro-item"><span class="bullet legend-red">•</span>Les Méga sont en <span class="legend-red">rouge</span>. Ils peuvent également être dans le classement dans leur forme de base.</div>
-        <div class="intro-item"><span class="bullet" >•</span><span class="legacy-indicator" >L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
+        <div class="intro-item"><span class="bullet">•</span><span class="legacy-indicator">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
         Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
         💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
@@ -43,16 +43,34 @@
         <div class="grid-item">
             <div class="fandom-card mega-card">
                 <div class="card-rank">Méga 1</div>
+                <div class="card-image"><img src="Images/BlindepiqueM.png" alt="Méga-Blindépique" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Blindépique</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Fouet Lianes</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">1</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Canon Graine++++</strong><span class="footnote-ref">1</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note"><span class="footnote-ref">1</span> : Canon Graine++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 2</div>
                 <div class="card-image"><img src="Images/JungkoM.png" alt="Méga-Jungko" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Jungko</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Taillade</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Taillade</strong><span class="footnote-ref">2</span> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Végé-Attaque</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">2</span> : Taillade permet de charger l'Attaque Chargée plus vite, et donc de la lancer plus souvent qu'avec une Attaque de type Plante.</div>
             </div>
         </div>
 
@@ -76,7 +94,7 @@
 
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 2</div>
+                <div class="card-rank">Méga 3</div>
                 <div class="card-image"><img src="Images/FlorizarreM.png" alt="Méga-Florizarre" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Florizarre</span></strong></div>
                 <div class="card-badges"></div>
@@ -149,7 +167,7 @@
 
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 3</div>
+                <div class="card-rank">Méga 4</div>
                 <div class="card-image"><img src="Images/EmpiflorM.png" alt="Méga-Empiflor" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Empiflor</span></strong></div>
                 <div class="card-badges"></div>
@@ -163,14 +181,9 @@
                     </button>
                 </div>
                 <div class="card-build" id="mempi-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Bombe Beurk</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
-                    </div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">3</span>
                 </div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Méga-Empiflor possède la Méga-Attaque Bonus "Bombe Acide++++" et n'a donc pas besoin d'une 2e Attaque Chargée de type Poison.</div>
             </div>
         </div>
 
@@ -317,12 +330,12 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Jungko</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Taillade</strong> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Taillade</strong><span class="footnote-ref">4</span> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Végé-Attaque</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">4</span> : Taillade permet de charger l'Attaque Chargée plus vite, et donc de la lancer plus souvent qu'avec une Attaque de type Plante.</div>
             </div>
         </div>
 
@@ -351,7 +364,7 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Chapignon</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Forte-Paume</strong><span class="footnote-ref">1</span> <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Forte-Paume</strong><span class="footnote-ref">5</span> <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Nœud Herbe</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button">
@@ -367,7 +380,7 @@
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note"><span class="footnote-ref">1</span> : Forte-Paume fera toujours plus de dégâts que Balle Graine.</div>
+                <div class="card-note"><span class="footnote-ref">5</span> : Forte-Paume fera toujours plus de dégâts qu'une Attaque de type Plante.</div>
             </div>
         </div>
 
@@ -487,7 +500,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong id="archeh-imm">Feuille Magik</strong><span id="archeh-imm-alt" style="display:none"> → <strong>Coupe Psycho</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Aurasphère</strong><span class="footnote-ref">2</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Aurasphère</strong><span class="footnote-ref">6</span> <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-archeh-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('archeh-details', 'toggle-archeh-btn'); toggleAltImm('archeh-imm', 'archeh-imm-alt')">
@@ -495,9 +508,9 @@
                     </button>
                 </div>
                 <div class="card-build" id="archeh-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">6</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">2</span> : Aurasphère fera toujours plus de dégâts que Désherbaffe.</div>
+                <div class="card-note"><span class="footnote-ref">6</span> : Aurasphère fera toujours plus de dégâts qu'une Attaque de type Plante.</div>
             </div>
         </div>
 
@@ -550,11 +563,11 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">21</div>
-                <div class="card-image"><img src="Images/Phyllali.png" alt="Phyllali" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Phyllali</span></strong></div>
+                <div class="card-image"><img src="Images/Chevroum.png" alt="Chevroum" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Chevroum</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Tranch'Herbe</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Fouet Lianes</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Feuille</strong>
                 </div>
                 <div class="card-button"></div>
@@ -567,11 +580,11 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">22</div>
-                <div class="card-image"><img src="Images/Chevroum.png" alt="Chevroum" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Chevroum</span></strong></div>
+                <div class="card-image"><img src="Images/Phyllali.png" alt="Phyllali" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Phyllali</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Fouet Lianes</strong><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Tranch'Herbe</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Feuille</strong>
                 </div>
                 <div class="card-button"></div>
@@ -611,7 +624,7 @@
 
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 4</div>
+                <div class="card-rank">Méga 5</div>
                 <div class="card-image"><img src="Images/BlizzaroiM.png" alt="Méga-Blizzaroi" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Blizzaroi</span></strong></div>
                 <div class="card-badges"></div>
@@ -640,6 +653,23 @@
         <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">24</div>
+                <div class="card-image"><img src="Images/Arboliva.png" alt="Arboliva" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Arboliva</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Feuille Magik</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Canon Graine</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">25</div>
                 <div class="card-image"><img src="Images/Sinistrail.png" alt="Sinistrail" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Sinistrail</span></strong></div>
                 <div class="card-badges"></div>
@@ -660,23 +690,6 @@
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">25</div>
-                <div class="card-image"><img src="Images/Arboliva.png" alt="Arboliva" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Arboliva</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Feuille Magik</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Canon Graine</strong>
-                </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
