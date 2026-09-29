@@ -8,6 +8,10 @@
   /* Mode Clair par défaut */
   --bg-navbar: #2a2a2a;
   --bg-gigamax: #FFF4E6;
+  --bg-futur-bon: #eaf7ee;       /* Carte « futur bon » (page Absents) */
+  --accent-legendaire: #3b82f6;  /* Nom d'un légendaire (page Absents) */
+  --accent-mega: #e53e3e;        /* Nom d'une Méga (page Absents) */
+  --accent-gigamax: #e8894a;     /* Nom d'un Gigamax (page Absents) */
   --text-navbar: #ffffff;
   --accent-navbar: #f6ad55; /* Ton jaune/orange actif */
   --accent-text-navbar: #2a2a2a;
@@ -54,6 +58,10 @@ body.dark-mode {
   /* Mode Sombre automatique au clic */
   --bg-navbar: #1a1a1a;
   --bg-gigamax: #3d2a12;       
+  --bg-futur-bon: #16301f;
+  --accent-legendaire: #3b82f6;
+  --accent-mega: #ff8787;
+  --accent-gigamax: #e8894a;
   --text-navbar: #ffffff;
   --accent-navbar: #f6ad55;
   --accent-text-navbar: #1a1a1a;

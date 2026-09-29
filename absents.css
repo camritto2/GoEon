@@ -1,0 +1,29 @@
+/* ==========================================
+   Absents.html - Pokémon absents du jeu
+   Strictement ce qui ne sert qu'à cette page.
+   ========================================== */
+
+/* Couleurs de nom. Les classes pokemon-name-* de top.css ne sont pas
+   reprises : top.css porte aussi des tailles propres aux cartes Top.
+   Ici : bleu = légendaire, cyan = fabuleux, rouge = Méga, orange = Gigamax. */
+/* Le sélecteur .pokemon-card .pokemon-name.absent-X (0,3,0) doit battre
+   « .pokemon-card .pokemon-name » de pokemon.css (0,2,0). */
+.pokemon-card .pokemon-name.absent-legendaire { color: var(--accent-legendaire); }
+.pokemon-card .pokemon-name.absent-fabuleux   { color: var(--accent-cyan); }
+.pokemon-card .pokemon-name.absent-mega       { color: var(--accent-mega); }
+.pokemon-card .pokemon-name.absent-gigamax    { color: var(--accent-gigamax); }
+
+/* Carte « futur bon » : fond vert, comme le fond orange des Gigamax. */
+.pokemon-card.futur-bon {
+  background-color: var(--bg-futur-bon);
+  border-color: var(--accent-vert-bon);
+}
+
+.pokemon-card.futur-bon .image-container {
+  background-color: var(--bg-futur-bon);
+}
+
+/* Légende de l'intro */
+.texte-legendaire { color: var(--accent-legendaire); font-weight: bold; }
+.texte-fabuleux   { color: var(--accent-cyan);       font-weight: bold; }
+.texte-mega       { color: var(--accent-mega);       font-weight: bold; }

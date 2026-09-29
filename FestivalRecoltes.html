@@ -32,6 +32,15 @@
     <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
 
+  <nav class="section-nav">
+    <a href="#bonus">Bonus</a>
+    <a href="#sauvages">Pokémon Sauvages</a>
+    <a href="#leurres">Leurres Moussus</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#etude">Étude Ponctuelle</a>
+    <a href="#passe">Passe Go</a>
+  </nav>
+
   <!-- ═══════════════════════════════════════ -->
   <!--                  BONUS                  -->
   <!-- ═══════════════════════════════════════ -->
@@ -39,8 +48,7 @@
   <h2 class="category-title tier-1" id="bonus">Bonus</h2>
 
   <div class="intro-rules">
-    <div class="intro-item"><span class="bullet">• </span>Les Modules Leurre Moussu n'attireront que des Pommes (Acidulées, Sucrées ou Nectar) ou des Pokémon de l'évènement</div>
-    <div class="intro-item"><span class="bullet">• </span>Une Étude Ponctuelle à choix permettant d'offrir un type des 3 types de Pommes</div>
+    <div class="intro-item"><span class="bullet">• </span>Les Modules Leurre Moussu attireront des Pommes (Acidulées, Sucrées ou Nectar) et les Pokémon mentionnés plus bas.</div>
     <div class="intro-item"><span class="bullet">• </span>+ voir Passe Go</div>
   </div>
 
@@ -51,6 +59,26 @@
   <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
 
   <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-balignon">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Balignon.png" data-shiny="Images/BalignonS.png" alt="Balignon" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Balignon</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-trompignon">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Trompignon.png" data-shiny="Images/TrompignonS.png" alt="Trompignon" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Trompignon</h2>
+      </div>
+    </div>
 
     <div class="pokemon-card pk-rongourmand">
       <div class="image-container">
@@ -82,11 +110,22 @@
       </div>
     </div>
 
+    <div class="pokemon-card pk-ronflex">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Ronflex.png" data-shiny="Images/RonflexS.png" alt="Ronflex" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Ronflex</h2>
+        <p class="pokemon-subtitle">Rare</p>
+      </div>
+    </div>
+
     <!-- Verpom : nouveau shiny, qui débute avec l'évènement. Son statut shiny
          est déclaré dans pokemon.css ; la classe nouveau-shiny est conservée
-         ici volontairement, pour tout l'évènement, afin que le badge scintille
-         en permanence et signale la nouveauté. Elle part avec la page, pas
-         avant. Images/Verpom.png et Images/VerpomS.png restent à déposer. -->
+         sur toutes ses cartes de la page, pour tout l'évènement, afin que le
+         badge scintille en permanence et signale la nouveauté. Elle part avec
+         la page, pas avant. -->
     <div class="pokemon-card pk-verpom">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
@@ -101,6 +140,172 @@
   </div>
 
   <!-- ═══════════════════════════════════════ -->
+  <!--            LEURRES MOUSSUS            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="leurres">Leurres Moussus</h2>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <!-- Doudouvet costumé : image de base (jamais d'image propre à un
+         costume), badge Costume en plus du shiny. pk-doudouvet est un bloc
+         Normal / Shiny dans pokemon.css : le nom reste noir. -->
+    <div class="pokemon-card pk-doudouvet">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Doudouvet.png" data-shiny="Images/DoudouvetS.png" alt="Doudouvet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Doudouvet</h2>
+        <p class="pokemon-subtitle">Avec une couronne de fleurs</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-verpom">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Verpom</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--             TÂCHES D'ÉTUDE            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
+
+  <!-- Images PommeSucree.webp, PommeAcidulee.webp et PommeNectar.webp à
+       déposer (nommage des objets, en .webp comme ModuleLeurre.webp). -->
+  <div class="research-list">
+
+    <div class="research-card">
+      <span class="research-task">Attrape 5 Pokémon de type Plante</span>
+      <div class="research-rewards">
+        <div class="research-reward-item pk-trompignon" data-pk="trompignon">
+          <div class="research-image-container">
+            <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+            <img src="Images/Trompignon.png" data-shiny="Images/TrompignonS.png" alt="Trompignon" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Trompignon</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+        <div class="research-reward-item pk-rongourmand" data-pk="rongourmand">
+          <div class="research-image-container">
+            <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+            <img src="Images/Rongourmand.png" data-shiny="Images/RongourmandS.png" alt="Rongourmand" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Rongourmand</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+        <div class="research-reward-item pk-olivini" data-pk="olivini">
+          <div class="research-image-container">
+            <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+            <img src="Images/Olivini.png" data-shiny="Images/OliviniS.png" alt="Olivini" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Olivini</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-task">Attrape 15 Pokémon de type Plante</span>
+      <div class="research-rewards">
+        <div class="research-reward-item pk-verpom" data-pk="verpom">
+          <div class="research-image-container">
+            <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+            <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Verpom</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-task">Utilise 10 Baies pour t'aider à attraper des Pokémon</span>
+      <div class="research-rewards">
+        <div class="research-reward-item pk-olivini" data-pk="olivini">
+          <div class="research-image-container">
+            <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+            <img src="Images/Olivini.png" data-shiny="Images/OliviniS.png" alt="Olivini" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Olivini</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-task">Utilise 20 Baies pour t'aider à attraper des Pokémon</span>
+      <div class="research-rewards">
+        <div class="research-reward-item">
+          <div class="research-image-container">
+            <img src="Images/PommeSucree.webp" alt="Pomme Sucrée" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Pomme Sucrée</span>
+        </div>
+        <div class="research-reward-item">
+          <div class="research-image-container">
+            <img src="Images/PommeAcidulee.webp" alt="Pomme Acidulée" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Pomme Acidulée</span>
+        </div>
+        <div class="research-reward-item">
+          <div class="research-image-container">
+            <img src="Images/PommeNectar.webp" alt="Pomme Nectar" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Pomme Nectar</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            ÉTUDE PONCTUELLE           -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="etude">Étude Ponctuelle</h2>
+
+  <p class="section-sous-titre"><em>À choix, en 2 étapes</em></p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-verpom" data-pk="verpom">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Verpom</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n15"></span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre">Étape 1</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>1 rencontre avec <span class="texte-vert">Verpom</span></div>
+  </div>
+
+  <p class="section-sous-titre">Étape 2</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>2 rencontres avec <span class="texte-vert">Verpom</span></div>
+    <div class="intro-item"><span class="bullet">• </span>8 Pommes du type choisi</div>
+    <div class="intro-item"><span class="bullet">• </span>2 Pommes de chacun des deux autres types</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
   <!--                 PASSE GO                -->
   <!-- ═══════════════════════════════════════ -->
 
@@ -108,25 +313,324 @@
 
   <p class="section-sous-titre">Bonus</p>
   <div class="intro-rules">
-    <div class="intro-item"><span class="bullet">• </span>Rang 1 : <span class="texte-vert">Verpom</span> aura plus de chances de donner des Pommes Acidulées, Sucrées ou Nectar</div>
+    <div class="intro-item"><span class="bullet">• </span>Rang 1 : Verpom aura plus de chances de donner des Pommes Acidulées, Sucrées ou Nectar</div>
     <div class="intro-item"><span class="bullet">• </span>Rang 10 : Les Modules Leurre Moussu dureront 1h</div>
     <div class="intro-item"><span class="bullet">• </span>Rang 20 : Plus de Poussières Étoile par victoire contre la Team Go Rocket</div>
   </div>
 
+  <!-- Image SuperRadarRocket.webp à déposer (nommage des objets, en .webp
+       comme ModuleLeurre.webp). -->
   <p class="section-sous-titre">Récompenses</p>
-  <div class="intro-rules">
-    <div class="intro-item"><span class="bullet">• </span>Des rencontres</div>
-    <div class="intro-item"><span class="bullet">• </span>Des Pommes</div>
-    <div class="intro-item"><span class="bullet">• </span>Un Module Leurre Moussu</div>
-    <div class="intro-item"><span class="bullet">• </span>Un Super Radar Rocket</div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-gourmelet" data-pk="gourmelet">
+      <div class="passe-go-rank">Rang 4</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Gourmelet.png" data-shiny="Images/GourmeletS.png" alt="Gourmelet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Gourmelet</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-olivini" data-pk="olivini">
+      <div class="passe-go-rank">Rang 8</div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Olivini.png" data-shiny="Images/OliviniS.png" alt="Olivini" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Olivini</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-doudouvet" data-pk="doudouvet">
+      <div class="passe-go-rank">Rang 9</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Doudouvet.png" data-shiny="Images/DoudouvetS.png" alt="Doudouvet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Doudouvet</h2>
+        <p class="pokemon-subtitle">Avec une couronne de fleurs</p>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-balignon" data-pk="balignon">
+      <div class="passe-go-rank">Rang 14</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Balignon.png" data-shiny="Images/BalignonS.png" alt="Balignon" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Balignon</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-olivini" data-pk="olivini">
+      <div class="passe-go-rank">Rang 18</div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Olivini.png" data-shiny="Images/OliviniS.png" alt="Olivini" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Olivini</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-doudouvet" data-pk="doudouvet">
+      <div class="passe-go-rank">Rang 19</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Doudouvet.png" data-shiny="Images/DoudouvetS.png" alt="Doudouvet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Doudouvet</h2>
+        <p class="pokemon-subtitle">Avec une couronne de fleurs</p>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-olivini" data-pk="olivini">
+      <div class="passe-go-rank">Rang 24</div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Olivini.png" data-shiny="Images/OliviniS.png" alt="Olivini" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Olivini</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-doudouvet" data-pk="doudouvet">
+      <div class="passe-go-rank">Rang 28</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Doudouvet.png" data-shiny="Images/DoudouvetS.png" alt="Doudouvet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Doudouvet</h2>
+        <p class="pokemon-subtitle">Avec une couronne de fleurs</p>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-verpom" data-pk="verpom">
+      <div class="passe-go-rank">Rang 29</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Verpom</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card">
+      <div class="passe-go-rank">Rang 30</div>
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="Images/SuperRadarRocket.webp" alt="Super Radar Rocket" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Super Radar Rocket</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-verpom" data-pk="verpom">
+      <div class="passe-go-rank">Rang 60</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Verpom</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
   </div>
 
   <p class="section-sous-titre">Passe Go Deluxe</p>
-  <div class="intro-rules">
-    <div class="intro-item"><span class="bullet">• </span>Plus de rencontres</div>
-    <div class="intro-item"><span class="bullet">• </span>Des Pommes</div>
-    <div class="intro-item"><span class="bullet">• </span>Des Modules Leurre Moussu</div>
-    <div class="intro-item"><span class="bullet">• </span>Un Super Radar Rocket</div>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card">
+      <div class="passe-go-rank">Rang 2</div>
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="Images/SuperRadarRocket.webp" alt="Super Radar Rocket" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Super Radar Rocket</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-trompignon" data-pk="trompignon">
+      <div class="passe-go-rank">Rang 4</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Trompignon.png" data-shiny="Images/TrompignonS.png" alt="Trompignon" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Trompignon</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-verpom" data-pk="verpom">
+      <div class="passe-go-rank">Rang 8</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Verpom</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-doudouvet" data-pk="doudouvet">
+      <div class="passe-go-rank">Rang 9</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Doudouvet.png" data-shiny="Images/DoudouvetS.png" alt="Doudouvet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Doudouvet</h2>
+        <p class="pokemon-subtitle">Avec une couronne de fleurs</p>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-cabriolaine" data-pk="cabriolaine">
+      <div class="passe-go-rank">Rang 14</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Cabriolaine.png" data-shiny="Images/CabriolaineS.png" alt="Cabriolaine" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Cabriolaine</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-olivini" data-pk="olivini">
+      <div class="passe-go-rank">Rang 18</div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Olivini.png" data-shiny="Images/OliviniS.png" alt="Olivini" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Olivini</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-doudouvet" data-pk="doudouvet">
+      <div class="passe-go-rank">Rang 19</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Doudouvet.png" data-shiny="Images/DoudouvetS.png" alt="Doudouvet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Doudouvet</h2>
+        <p class="pokemon-subtitle">Avec une couronne de fleurs</p>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-olivini" data-pk="olivini">
+      <div class="passe-go-rank">Rang 24</div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Olivini.png" data-shiny="Images/OliviniS.png" alt="Olivini" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Olivini</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-doudouvet" data-pk="doudouvet">
+      <div class="passe-go-rank">Rang 28</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+        <img src="Images/Doudouvet.png" data-shiny="Images/DoudouvetS.png" alt="Doudouvet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Doudouvet</h2>
+        <p class="pokemon-subtitle">Avec une couronne de fleurs</p>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-ronflex" data-pk="ronflex">
+      <div class="passe-go-rank">Rang 29</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Ronflex.png" data-shiny="Images/RonflexS.png" alt="Ronflex" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Ronflex</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-verpom" data-pk="verpom">
+      <div class="passe-go-rank">Rang 30</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Verpom</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-verpom" data-pk="verpom">
+      <div class="passe-go-rank">Rang 60</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+        <img src="Images/Verpom.png" data-shiny="Images/VerpomS.png" alt="Verpom" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Verpom</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
   </div>
 
 </div>

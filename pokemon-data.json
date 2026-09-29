@@ -787,7 +787,7 @@
       "pc": {
         "n15": 300,
         "n20": 400,
-        "n25": null
+        "n25": 500
       }
     },
     "draby": {
@@ -1224,11 +1224,13 @@
       }
     },
     "gourmelet": {
-      "types": null,
+      "types": [
+        "Normal"
+      ],
       "pc": {
         "n15": 314,
-        "n20": null,
-        "n25": null
+        "n20": 418,
+        "n25": 523
       }
     },
     "grainipiot": {
@@ -2152,11 +2154,14 @@
       }
     },
     "olivini": {
-      "types": null,
+      "types": [
+        "Plante",
+        "Normal"
+      ],
       "pc": {
         "n15": 366,
-        "n20": null,
-        "n25": null
+        "n20": 488,
+        "n25": 610
       }
     },
     "onix": {
@@ -2670,11 +2675,13 @@
       }
     },
     "ronflex": {
-      "types": null,
+      "types": [
+        "Normal"
+      ],
       "pc": {
-        "n15": 1398,
-        "n20": null,
-        "n25": null
+        "n15": 1382,
+        "n20": 1843,
+        "n25": 2304
       }
     },
     "rongourmand": {
@@ -3127,6 +3134,17 @@
         "n25": null
       }
     },
+    "trompignon": {
+      "types": [
+        "Plante",
+        "Poison"
+      ],
+      "pc": {
+        "n15": 419,
+        "n20": 559,
+        "n25": 699
+      }
+    },
     "tutafeh": {
       "types": null,
       "pc": {
@@ -3180,6 +3198,17 @@
         "n15": 1262,
         "n20": 1682,
         "n25": 2103
+      }
+    },
+    "verpom": {
+      "types": [
+        "Plante",
+        "Dragon"
+      ],
+      "pc": {
+        "n15": 306,
+        "n20": 408,
+        "n25": 510
       }
     },
     "vipelierre": {

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Pokémon absents</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="absents.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+
+  <h1>Les Pokémon absents du jeu</h1>
+
+  <div class="intro-rules">
+    Un Pokémon en <span class="texte-legendaire">bleu</span> est légendaire, en <span class="texte-fabuleux">cyan</span> fabuleux, en <span class="texte-mega">rouge</span> une Méga-Évolution.<br>
+    Un Pokémon <span class="texte-orange">avec un fond orange</span> est une forme Gigamax.<br>
+    Un Pokémon <span class="texte-vert">avec un fond vert</span> sera très certainement un bon Pokémon.
+  </div>
+
+  <!-- GÉNÉRATION 1 -->
+  <h2 class="category-title tier-1">1re génération</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+    <div class="pokemon-card futur-bon" data-pk="melodelfe-mega">
+      <div class="image-container">
+        <img src="Images/MelodelfeM.png" alt="Méga-Mélodelfe" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name absent-mega">Méga-Mélodelfe</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card gigamax" data-pk="evoli-gigamax">
+      <div class="image-container">
+        <img src="Images/EvoliG.png" alt="Évoli Gigamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name absent-gigamax">Évoli</h2>
+        <p class="pokemon-subtitle">Gigamax</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GÉNÉRATION 2 -->
+  <h2 class="category-title tier-1">2e génération</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+    <div class="pokemon-card futur-bon" data-pk="meganium-mega">
+      <div class="image-container">
+        <img src="Images/MeganiumM.png" alt="Méga-Méganium" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name absent-mega">Méga-Méganium</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card futur-bon" data-pk="aligatueur-mega">
+      <div class="image-container">
+        <img src="Images/AligatueurM.png" alt="Méga-Aligatueur" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name absent-mega">Méga-Aligatueur</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card" data-pk="pichu-troizepi">
+      <div class="image-container">
+        <img src="Images/Pichu.png" alt="Pichu Troizépi" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Pichu</h2>
+        <p class="pokemon-subtitle">Troizépi</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GÉNÉRATION 3 -->
+  <h2 class="category-title tier-1">3e génération</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+    <div class="pokemon-card" data-pk="eoko-mega">
+      <div class="image-container">
+        <img src="Images/EokoM.png" alt="Méga-Éoko" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name absent-mega">Méga-Éoko</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card futur-bon" data-pk="absol-z-mega">
+      <div class="image-container">
+        <img src="Images/AbsolMZ.png" alt="Méga-Absol Z" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name absent-mega">Méga-Absol Z</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
