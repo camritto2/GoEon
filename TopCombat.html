@@ -47,16 +47,19 @@
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Mewtwo X</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Riposte</strong><span class="legacy-indicator">L</span><span class="footnote-ref">1</span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Exploforce</strong><span class="footnote-ref">2</span><br>
-                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Dynamo-Poing++++</strong><span class="footnote-ref">2</span>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Riposte</strong><span class="legacy-indicator">L</span><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong id="mmx-ac"><em>Peu importe</em><span class="footnote-ref">1</span></strong><span id="mmx-ac-alt" style="display:none"> → <strong>Frappe Psy</strong><span class="legacy-indicator">L</span></span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Dynamo-Poing++++</strong><span id="mmx-mb-ref"><span class="footnote-ref">1</span></span>
                 </div>
-                <!-- Méga-Mewtwo X et Méga-Mewtwo Y sont traités comme deux Pokémon distincts
-                     (cf. manuel §5) : pas de bouton « Également Top Psy », c'est Méga-Mewtwo Y
-                     qui figure sur TopPsy. La note 1 remplace la bascule. -->
-                <div class="card-button"></div>
-                <div class="card-build"></div>
-                <div class="card-note"><span class="footnote-ref">1</span> : Joué en Top Psy, Coupe Psycho sera la meilleure Attaque Immédiate pour Méga-Mewtwo.<br><span class="footnote-ref">2</span> : Dynamo-Poing++++ fera toujours plus de dégâts qu'Exploforce. Exploforce ne sert que si ce Mewtwo Méga-Évolue en Méga-Mewtwo Y.</div>
+                <div class="card-button">
+                    <button id="toggle-mmx-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('mmx-details', 'toggle-mmx-btn'); toggleAltImm('mmx-ac', 'mmx-ac-alt', 'mmx-note mmx-mb-ref')">
+                    Également Top Psy <img src="Images/Psy.webp" alt="Type Psy" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mmx-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong>
+                </div>
+                <div class="card-note" id="mmx-note"><span class="footnote-ref">1</span> : Dynamo-Poing++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
             </div>
         </div>
 
@@ -125,12 +128,12 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Riposte</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">3</span><br>
-                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Casse-Brique++++</strong><span class="footnote-ref">3</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">2</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Casse-Brique++++</strong><span class="footnote-ref">2</span>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note"><span class="footnote-ref">3</span> : Casse-Brique++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+                <div class="card-note"><span class="footnote-ref">2</span> : Casse-Brique++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
             </div>
         </div>
 
@@ -319,8 +322,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="shifmp-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">4</span>
-                    <div class="build-note"><span class="footnote-ref">4</span> : Dynamo-Poing fera toujours plus de dégâts qu'une Attaque de type Eau.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">3</span>
+                    <div class="build-note"><span class="footnote-ref">3</span> : Dynamo-Poing fera toujours plus de dégâts qu'une Attaque de type Eau.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -450,8 +453,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="arch-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
-                    <div class="build-note"><span class="footnote-ref">5</span> : Aurasphère fera toujours plus de dégâts qu'une Attaque de type Plante.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">4</span>
+                    <div class="build-note"><span class="footnote-ref">4</span> : Aurasphère fera toujours plus de dégâts qu'une Attaque de type Plante.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -575,8 +578,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="cob-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">6</span>
-                    <div class="build-note"><span class="footnote-ref">6</span> : Lame Sainte<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Acier.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
+                    <div class="build-note"><span class="footnote-ref">5</span> : Lame Sainte<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Acier.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -723,13 +726,13 @@
                     </button>
                 </div>
                 <div class="card-build" id="courr-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Ball'Ombre</strong> / <strong>Poing de Colère</strong><span class="legacy-indicator">L</span><span class="footnote-ref">7</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Ball'Ombre</strong> / <strong>Poing de Colère</strong><span class="legacy-indicator">L</span><span class="footnote-ref">6</span>
                     <hr>
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
-                    <div class="build-note"><span class="footnote-ref">7</span> : Ball'Ombre et Poing de Colère feront autant de dégâts l'une que l'autre.</div>
+                    <div class="build-note"><span class="footnote-ref">6</span> : Ball'Ombre et Poing de Colère feront autant de dégâts l'une que l'autre.</div>
                     </div>
                 <div class="card-note hidden-note"></div>
             </div>

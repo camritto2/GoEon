@@ -797,6 +797,22 @@
 .pk-demolosse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-demolosse .emoji-shiny  { display: inline; }
 
+/* Deoxys Forme Attaque — Normal / Shiny */
+.pk-deoxys-a .emoji-shiny { display: inline; }
+
+/* Deoxys Forme Défense — Normal / Shiny */
+.pk-deoxys-d .emoji-shiny { display: inline; }
+
+/* Deoxys Forme Normale — Bon / Shiny */
+.pk-deoxys-n .pokemon-name { color: var(--accent-vert-bon); }
+.pk-deoxys-n .research-reward-name { color: var(--accent-vert-bon); }
+.pk-deoxys-n .emoji-shiny  { display: inline; }
+
+/* Deoxys Forme Vitesse — Bon / Shiny */
+.pk-deoxys-v .pokemon-name { color: var(--accent-vert-bon); }
+.pk-deoxys-v .research-reward-name { color: var(--accent-vert-bon); }
+.pk-deoxys-v .emoji-shiny  { display: inline; }
+
 /* Deusolourdo — Normal / Shiny */
 .pk-deusolourdo .emoji-shiny { display: inline; }
 

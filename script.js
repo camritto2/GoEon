@@ -208,23 +208,25 @@ function toggleBuild(divId, btnId, targetSpanId = null, activeHtml = '', normalH
   if (targetSpan) targetSpan.innerHTML = ouvert ? activeHtml : normalHtml;
 }
 
+// iconId : un id, ou plusieurs séparés par une espace (ex. Méga-Mewtwo X sur
+// TopCombat, où la note et son renvoi disparaissent avec « Peu importe »).
 function toggleAltImm(immId, altId, iconId = null) {
   const imm = document.getElementById(immId);
   const alt = document.getElementById(altId);
-  const icon = iconId ? document.getElementById(iconId) : null;
+  const masques = iconId ? iconId.split(' ').map(id => document.getElementById(id)) : [];
   const isOpen = alt.style.display !== 'none';
   if (!isOpen) {
     imm.style.textDecoration = 'line-through';
     imm.style.color = 'var(--text-muet)';
     imm.style.fontWeight = 'normal';
     alt.style.display = 'inline';
-    if (icon) icon.style.display = 'none';
+    masques.forEach(el => { el.style.display = 'none'; });
   } else {
     imm.style.textDecoration = 'none';
     imm.style.color = '';
     imm.style.fontWeight = 'bold';
     alt.style.display = 'none';
-    if (icon) icon.style.display = '';
+    masques.forEach(el => { el.style.display = ''; });
   }
 }
 

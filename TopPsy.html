@@ -17,7 +17,7 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Psy.webp" alt="Psy" class="top-title-icon">Type Psy<img src="Images/Psy.webp" alt="Psy" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Psy.webp" alt="Psy" class="top-title-icon">Type Psy<img src="Images/Psy.webp" alt="Psy" class="top-title-icon"></span>
     </h1>
     
     <div class="intro-rules">
@@ -39,7 +39,6 @@
     <h2 class="top-title">Top 25</h2>
 
     <div class="pokemon-grid">
-
         <div class="grid-item">
             <div class="fandom-card mega-card">
                 <div class="card-rank">Méga 1</div>
@@ -47,19 +46,42 @@
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Mewtwo Y</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Choc Mental</strong><span class="footnote-ref">1</span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Frappe Psy</strong><span class="legacy-indicator">L</span>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coupe Psycho</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">1</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Prescience++++</strong><span class="footnote-ref">1</span>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note"><span class="footnote-ref">1</span> : Méga-Mewtwo X est un Top Combat. Dans ce cas, Riposte sera plus efficace.</div>
+                <div class="card-note"><span class="footnote-ref">1</span> : Prescience++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
             </div>
         </div>
-
 
         <div class="grid-item">
             <div class="fandom-card mega-card">
                 <div class="card-rank">Méga 2</div>
+                <div class="card-image"><img src="Images/MewtwoMX.png" alt="Méga-Mewtwo X" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Mewtwo X</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mmx-imm">Choc Mental</strong><span id="mmx-imm-alt" style="display:none"> → <strong>Riposte</strong><span class="legacy-indicator">L</span></span><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Frappe Psy</strong><span class="legacy-indicator">L</span>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-mmx-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('mmx-details', 'toggle-mmx-btn'); toggleAltImm('mmx-imm', 'mmx-imm-alt')">
+                    Également Top Combat <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mmx-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
+                    <div class="build-note"><span class="footnote-ref">2</span> : Méga-Mewtwo X possède l'Attaque Bonus Dynamo-Poing++++ et n'a pas besoin d'une autre Attaque.</div>
+                </div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 3</div>
                 <div class="card-image"><img src="Images/AlakazamM.png" alt="Méga-Alakazam" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Alakazam</span></strong></div>
                 <div class="card-badges"></div>
@@ -72,7 +94,6 @@
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
-
 
         <div class="grid-item">
             <div class="fandom-card">
@@ -90,10 +111,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 3</div>
+                <div class="card-rank">Méga 4</div>
                 <div class="card-image"><img src="Images/GardevoirM.png" alt="Méga-Gardevoir" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Gardevoir</span></strong></div>
                 <div class="card-badges"></div>
@@ -118,10 +138,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 4</div>
+                <div class="card-rank">Méga 5</div>
                 <div class="card-image"><img src="Images/GallameM.png" alt="Méga-Gallame" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Gallame</span></strong></div>
                 <div class="card-badges"></div>
@@ -135,7 +154,7 @@
                     </button>
                 </div>
                 <div class="card-build" id="mgall-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Close Combat</strong>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lame Sainte</strong>
                     <hr>
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
@@ -146,44 +165,31 @@
             </div>
         </div>
 
-
         <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 5</div>
-                <div class="card-image"><img src="Images/LatiosM.png" alt="Méga-Latios" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Latios</span></strong></div>
+            <div class="fandom-card">
+                <div class="card-rank">2</div>
+                <div class="card-image"><img src="Images/DeoxysN.png" alt="Deoxys Forme Normale" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Deoxys</span></strong><span class="pokemon-form"><em>Forme Normale</em></span></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mlati-imm">Psykoud'Boul</strong><span id="mlati-imm-alt" style="display:none"> → <strong>Draco-Souffle</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Psyko</strong>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Psykoud'Boul</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Psycho-Boost</strong>
                 </div>
-                <div class="card-button">
-                    <button id="toggle-mlati-btn" class="btn-dragon" aria-expanded="false" onclick="toggleBuild('mlati-details', 'toggle-mlati-btn'); toggleAltImm('mlati-imm', 'mlati-imm-alt')">
-                    Également Top Dragon <img src="Images/Dragon.webp" alt="Type Dragon" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="mlati-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Draco-Griffe</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
-                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">2</div>
+                <div class="card-rank">3</div>
                 <div class="card-image"><img src="Images/NecrozmaCC.png" alt="Necrozma" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Necrozma</span></strong><span class="pokemon-form"><em>Crinière du Couchant</em></span></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coupe Psycho</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Choc Météore</strong><span class="legacy-indicator">L</span><span class="footnote-ref">2</span> <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Choc Météore</strong><span class="legacy-indicator">L</span><span class="footnote-ref">3</span> <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-necco-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('necco-details', 'toggle-necco-btn')">
@@ -191,16 +197,15 @@
                     </button>
                 </div>
                 <div class="card-build" id="necco-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">3</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">2</span> : Choc Météore fera toujours plus de dégâts que Prescience.</div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Choc Météore<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">3</div>
+                <div class="card-rank">4</div>
                 <div class="card-image"><img src="Images/HoopaD.png" alt="Hoopa" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Hoopa</span></strong><span class="pokemon-form"><em>Déchainé</em></span></div>
                 <div class="card-badges"></div>
@@ -225,16 +230,15 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">4</div>
+                <div class="card-rank">5</div>
                 <div class="card-image"><img src="Images/NecrozmaAA.png" alt="Necrozma" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Necrozma</span></strong><span class="pokemon-form"><em>Ailes de l'Aurore</em></span></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coupe Psycho</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Rayon Spectral</strong><span class="legacy-indicator">L</span><span class="footnote-ref">3</span> <img src="Images/Spectre.webp" alt="Type Spectre" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Rayon Spectral</strong><span class="legacy-indicator">L</span><span class="footnote-ref">4</span> <img src="Images/Spectre.webp" alt="Type Spectre" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-necau-btn" class="btn-spectre" aria-expanded="false" onclick="toggleBuild('necau-details', 'toggle-necau-btn')">
@@ -242,22 +246,21 @@
                     </button>
                 </div>
                 <div class="card-build" id="necau-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">3</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">4</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">3</span> : Rayon Spectral fera toujours plus de dégâts que Prescience.</div>
+                <div class="card-note"><span class="footnote-ref">4</span> : Rayon Spectral<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">5</div>
+                <div class="card-rank">6</div>
                 <div class="card-image"><img src="Images/ArtikodinG.png" alt="Artikodin de Galar" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Artikodin de Galar</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coupe Psycho</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vol</strong><span class="footnote-ref">4</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vol</strong><span class="footnote-ref">5</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-artik-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('artik-details', 'toggle-artik-btn')">
@@ -265,16 +268,15 @@
                     </button>
                 </div>
                 <div class="card-build" id="artik-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">4</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">4</span> : Vol fera toujours plus de dégâts que Prescience.</div>
+                <div class="card-note"><span class="footnote-ref">5</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">6</div>
+                <div class="card-rank">7</div>
                 <div class="card-image"><img src="Images/Lunala.png" alt="Lunala" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Lunala</span></strong></div>
                 <div class="card-badges"></div>
@@ -299,10 +301,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">7</div>
+                <div class="card-rank">8</div>
                 <div class="card-image"><img src="Images/HoopaE.png" alt="Hoopa" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Hoopa</span></strong><span class="pokemon-form"><em>Enchainé</em></span></div>
                 <div class="card-badges"></div>
@@ -327,16 +328,31 @@
             </div>
         </div>
 
+        <div class="grid-item">
+            <div class="fandom-card">
+                <div class="card-rank">9</div>
+                <div class="card-image"><img src="Images/DeoxysV.png" alt="Deoxys Forme Vitesse" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Deoxys</span></strong><span class="pokemon-form"><em>Forme Vitesse</em></span></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Psykoud'Boul</strong><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Psycho-Boost</strong>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note hidden-note"></div>
+            </div>
+        </div>
 
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">8</div>
+                <div class="card-rank">10</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Lugia.png" alt="Lugia" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-rare">Lugia</span></strong><span class="pokemon-form"><em>Apex</em></span></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Extrasenseur</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Aéroblast+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">5</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Aéroblast+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">6</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-lugap-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('lugap-details', 'toggle-lugap-btn')">
@@ -344,16 +360,15 @@
                     </button>
                 </div>
                 <div class="card-build" id="lugap-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">6</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">5</span> : Cette forme a été disponible une fois dans le jeu. L'attaque Aéroblast+ est plus forte que la version de base. Cette attaque fera toujours plus de dégâts que Prescience. Elle devient Aéroblast++ après purification (mais devient moins forte).</div>
+                <div class="card-note"><span class="footnote-ref">6</span> : Cette forme a été disponible une fois dans le jeu. L'Attaque Aéroblast+ est plus forte que la version de base. Elle fera toujours plus de dégâts qu'une Attaque de type Psy. Elle devient Aéroblast++ après purification (mais devient moins forte).</div>
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">9</div>
+                <div class="card-rank">11</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Latios.png" alt="Latios" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Latios</span></strong></div>
                 <div class="card-badges"></div>
@@ -378,10 +393,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">10</div>
+                <div class="card-rank">12</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Metalosse.png" alt="Métalosse" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Métalosse</span></strong></div>
                 <div class="card-badges"></div>
@@ -406,10 +420,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">11</div>
+                <div class="card-rank">13</div>
                 <div class="card-image"><img src="Images/Mentali.png" alt="Mentali" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Mentali</span></strong></div>
                 <div class="card-badges"></div>
@@ -423,10 +436,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">12</div>
+                <div class="card-rank">14</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Alakazam.png" alt="Alakazam" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Alakazam</span></strong></div>
                 <div class="card-badges"></div>
@@ -440,16 +452,15 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">13</div>
+                <div class="card-rank">15</div>
                 <div class="card-image"><img src="Images/Tokopiyon.png" alt="Tokopiyon" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Tokopiyon</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Choc Mental</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span><span class="footnote-ref">6</span> <img src="Images/Fee.webp" alt="Type Fée" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ire de la Nature</strong><span class="legacy-indicator">L</span><span class="footnote-ref">7</span> <img src="Images/Fee.webp" alt="Type Fée" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-tokop-btn" class="btn-fee" aria-expanded="false" onclick="toggleBuild('tokop-details', 'toggle-tokop-btn')">
@@ -457,16 +468,15 @@
                     </button>
                 </div>
                 <div class="card-build" id="tokop-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">6</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">7</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">6</span> : Ire de la Nature fera toujours plus de dégâts que Prescience.</div>
+                <div class="card-note"><span class="footnote-ref">7</span> : Ire de la Nature<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">14</div>
+                <div class="card-rank">16</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Gardevoir.png" alt="Gardevoir" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Gardevoir</span></strong></div>
                 <div class="card-badges"></div>
@@ -491,10 +501,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">15</div>
+                <div class="card-rank">17</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Gallame.png" alt="Gallame" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Gallame</span></strong></div>
                 <div class="card-badges"></div>
@@ -508,7 +517,7 @@
                     </button>
                 </div>
                 <div class="card-build" id="galla-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Close Combat</strong>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lame Sainte</strong>
                     <hr>
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
@@ -519,10 +528,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">16</div>
+                <div class="card-rank">18</div>
                 <div class="card-image"><img src="Images/Crefadet.png" alt="Créfadet" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Créfadet</span></strong></div>
                 <div class="card-badges"></div>
@@ -536,10 +544,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">17</div>
+                <div class="card-rank">19</div>
                 <div class="card-image"><img src="Images/Necrozma.png" alt="Necrozma" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Necrozma</span></strong></div>
                 <div class="card-badges"></div>
@@ -553,10 +560,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">18</div>
+                <div class="card-rank">20</div>
                 <div class="card-image"><img src="Images/MeloettaC.png" alt="Meloetta" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-rare">Meloetta</span></strong><span class="pokemon-form"><em>Forme Chant</em></span></div>
                 <div class="card-badges"></div>
@@ -570,10 +576,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">19</div>
+                <div class="card-rank">21</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Noadkoko.png" alt="Noadkoko" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Noadkoko</span></strong></div>
                 <div class="card-badges"></div>
@@ -598,10 +603,9 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">20</div>
+                <div class="card-rank">22</div>
                 <div class="card-image"><img src="Images/Sorcilence.png" alt="Sorcilence" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Sorcilence</span></strong></div>
                 <div class="card-badges"></div>
@@ -626,16 +630,15 @@
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">21</div>
+                <div class="card-rank">23</div>
                 <div class="card-image"><img src="Images/GueriaigleH.png" alt="Guériaigle de Hisui" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-normal">Guériaigle de Hisui</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong id="gueri-imm">Psykoud'Boul</strong><span id="gueri-imm-alt" style="display:none"> → <strong>Lame d'Air</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vol</strong><span class="footnote-ref">7</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vol</strong><span class="footnote-ref">8</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-gueri-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('gueri-details', 'toggle-gueri-btn'); toggleAltImm('gueri-imm', 'gueri-imm-alt')">
@@ -643,22 +646,21 @@
                     </button>
                 </div>
                 <div class="card-build" id="gueri-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">7</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">8</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">7</span> : Vol fera toujours plus de dégâts que Psyko.</div>
+                <div class="card-note"><span class="footnote-ref">8</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">22</div>
+                <div class="card-rank">24</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Lugia.png" alt="Lugia" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Lugia</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Extrasenseur</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vol</strong><span class="footnote-ref">8</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Vol</strong><span class="footnote-ref">9</span> <img src="Images/Vol.webp" alt="Type Vol" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-lugia-btn" class="btn-vol" aria-expanded="false" onclick="toggleBuild('lugia-details', 'toggle-lugia-btn')">
@@ -666,16 +668,15 @@
                     </button>
                 </div>
                 <div class="card-build" id="lugia-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">8</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">9</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">8</span> : Vol fera toujours plus de dégâts que Prescience.</div>
+                <div class="card-note"><span class="footnote-ref">9</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
             </div>
         </div>
 
-
         <div class="grid-item">
             <div class="fandom-card">
-                <div class="card-rank">23</div>
+                <div class="card-rank">25</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Latias.png" alt="Latias" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Latias</span></strong></div>
                 <div class="card-badges"></div>
@@ -690,62 +691,6 @@
                 </div>
                 <div class="card-build" id="latia-details">
                     <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Colère</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">24</div>
-                <div class="card-image"><img src="Images/Jirachi.png" alt="Jirachi" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-rare">Jirachi</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Choc Mental</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Psyko</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-jirac-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('jirac-details', 'toggle-jirac-btn')">
-                    Également Top Acier <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="jirac-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Carnareket</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-
-        <div class="grid-item">
-            <div class="fandom-card">
-                <div class="card-rank">25</div>
-                <div class="card-image"><img src="Images/Victini.png" alt="Victini" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-rare">Victini</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="victi-imm">Choc Mental</strong><span id="victi-imm-alt" style="display:none"> → <strong>Vive-Attaque</strong> <img src="Images/Normal.webp" alt="Type Normal" class="type-icon-btn"></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Psyko</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-victi-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('victi-details', 'toggle-victi-btn'); toggleAltImm('victi-imm', 'victi-imm-alt')">
-                    Également Top Feu <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="victi-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Coup Victoire</strong>
                     <hr>
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
