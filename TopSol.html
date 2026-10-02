@@ -17,7 +17,7 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Sol.webp" alt="Sol" class="top-title-icon">Type Sol<img src="Images/Sol.webp" alt="Sol" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Sol.webp" alt="Sol" class="top-title-icon">Type Sol<img src="Images/Sol.webp" alt="Sol" class="top-title-icon"></span>
     </h1>
     
     <div class="intro-rules">
@@ -50,19 +50,8 @@
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Tir de Boue</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Lame Pangéenne</strong><span class="legacy-indicator">L</span>
                 </div>
-                <div class="card-button">
-                    <button id="toggle-pgroud-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('pgroud-details', 'toggle-pgroud-btn')">
-                    Également Top Feu <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="pgroud-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Déflagration</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
-                    </div>
-                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
@@ -193,7 +182,7 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Minotaupe</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mino-imm">Tir de Boue</strong><span id="mino-imm-alt" style="display:none"> → <strong>Griffe Acier</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mino-imm">Coud'Boue</strong><span id="mino-imm-alt" style="display:none"> → <strong>Griffe Acier</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Sable Ardent</strong>
                 </div>
                 <div class="card-button">
@@ -235,7 +224,7 @@
             <div class="fandom-card">
                 <div class="card-rank">6</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Rhinastoc.png" alt="Rhinastoc" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Rhinastoc</span></strong></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Rhinastoc</span><span class="footnote-ref">1</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coud'Boue</strong><br>
@@ -254,7 +243,7 @@
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">1</span> : Rhinoféros est également utilisable, avec Coud'Boue et Séisme. Il se place alors entre Crocorible et Bourrinos.</div>
             </div>
         </div>
 
@@ -390,22 +379,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Camérupt</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mcame-imm">Flammèche</strong><img id="mcame-imm-icon" src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn icone-imm"><span id="mcame-imm-alt" style="display:none"> → <strong>Calcination</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Flammèche</strong> <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Telluriforce</strong>
                 </div>
-                <div class="card-button">
-                    <button id="toggle-mcame-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('mcame-details', 'toggle-mcame-btn'); toggleAltImm('mcame-imm', 'mcame-imm-alt', 'mcame-imm-icon')">
-                    Également Top Feu <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="mcame-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Surchauffe</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
-                    </div>
-                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
@@ -537,7 +515,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Charge</strong> <img src="Images/Normal.webp" alt="Type Normal" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Cavalerie Lourde</strong>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Cavalerie Lourde</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>

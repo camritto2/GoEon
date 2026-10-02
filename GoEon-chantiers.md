@@ -1,6 +1,6 @@
 # GoEon — Chantiers
 
-*Mis à jour le 28 septembre 2026. Ce fichier ne liste que ce qui reste à faire : ni journal des travaux terminés, ni règles durables — celles-ci vont dans le manuel de fabrication (`GoEon-conventions.md`).*
+*Mis à jour le 30 septembre 2026. Ce fichier ne liste que ce qui reste à faire : ni journal des travaux terminés, ni règles durables — celles-ci vont dans le manuel de fabrication (`GoEon-conventions.md`).*
 
 ## Datés
 
@@ -12,7 +12,7 @@ Marche à suivre : remplacer le contenu Netlify par un `_redirects` contenant `/
 
 ## Dette technique
 
-**Les styles inline.** Il en reste sur une poignée de pages, presque tous des marges sur des `<p>` dans un `intro-rules`. **Décision de Cam : on corrige page par page, au moment où chaque page est retravaillée.** Pas de passe globale. Il en reste **110 sur les 17 pages Top**, plus 20 sur `regionaux.html` ; la reprise des Top pour l'Attaque Bonus-Méga les emportera en chemin.
+**Les styles inline.** Il en reste sur une poignée de pages, presque tous des marges sur des `<p>` dans un `intro-rules`. **Décision de Cam : on corrige page par page, au moment où chaque page est retravaillée.** Pas de passe globale. Les pages Top sont soldées (il n'y reste que les `display:none` des bascules d'attaques, qui sont un état JS et non de la mise en forme) ; il en reste **20 sur `regionaux.html`**.
 
 ## Notifications push
 
@@ -55,4 +55,7 @@ Les préférences se stockent à côté de l'abonnement dans KV, le Worker filtr
   - Le HTML est laissé à l'assistant.
 - **Audit des blocs « Bon » de `pokemon.css` contre les 17 Top.** *À faire après la reprise des 17 Top.* Mesure du 27/08 : **504 blocs marqués « Bon »**, dont 246 dont le nom apparaît dans un Top et **258 non**. Ces 258 ne sont pas tous à retirer — beaucoup sont des pré-évolutions qui gardent légitimement le statut (Abra, Barpau, Arcko…). Le travail se fait en deux temps : un script sort la liste, Cam tranche à la main, la chaîne d'évolution demandant du jugement.
 - **MeilleursPokemon.html** (Règles Générales) : à créer. Ensuite, remplacer les `lien-a-venir` des 17 pages Top, activer la carte d'accueil et le lien navbar.
+- **Recommandations du Chef sur les pages évènement.** *Décidé le 6 septembre 2026.* Rubrique de **conseils pratiques**, pas d'évaluation : quoi prioriser si on n'a qu'une heure, quand lâcher ses encens, quel spawn mérite une Framby dorée. Sur un évènement léger, on peut dire qu'une session suffit sans jamais taper sur le jeu. Pages évènement uniquement, **pas les infographies**.
+  - À trancher : le libellé du `<h2>`, qui reviendra sur chaque page et dans les résultats Google (« Recommandations du Chef », « Le choix du Chef » ou « La reco du Chef »).
+  - En option : une petite toque SVG en `currentColor` à côté du titre.
 - Et tellement plus qui se trouve pour le moment dans la tête de Cam ! Ou dans sa liste perso !

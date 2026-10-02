@@ -6,6 +6,11 @@
     <loc>https://goeon.fr/</loc>
   </url>
 
+  <!-- À propos -->
+  <url>
+    <loc>https://goeon.fr/APropos</loc>
+  </url>
+
   <!-- Calendrier -->
   <url>
     <loc>https://goeon.fr/Calendrier</loc>

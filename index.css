@@ -397,6 +397,21 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   transform: translateY(-2px);
 }
 
+/* Liens discrets de pied de page (À propos). Placés sous le bouton Discord,
+   hors navbar : décision du 05/09 de ne pas encombrer la barre. */
+.footer-liens {
+  margin: 16px 0 0 0;
+  font-size: 13px;
+}
+
+.footer-liens a {
+  color: var(--text-secondaire);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-liens a:hover { color: var(--text-principal); }
+
 /* ==========================================
    BANDEAUX REPLIABLES (Tuto PWA + Légende)
    ========================================== */

@@ -17,7 +17,7 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Spectre.webp" alt="Spectre" class="top-title-icon">Type Spectre<img src="Images/Spectre.webp" alt="Spectre" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Spectre.webp" alt="Spectre" class="top-title-icon">Type Spectre<img src="Images/Spectre.webp" alt="Spectre" class="top-title-icon"></span>
     </h1>
 
     <div class="intro-rules">
@@ -48,7 +48,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Coupe Psycho</strong> <img src="Images/Psy.webp" alt="Type Psy" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Rayon Spectral</strong><span class="legacy-indicator">L</span><span class="footnote-ref">1</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Rayon Spectral</strong><span class="legacy-indicator">L</span>
                 </div>
                 <div class="card-button">
                     <button id="toggle-necau-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('necau-details', 'toggle-necau-btn')">
@@ -57,8 +57,9 @@
                 </div>
                 <div class="card-build" id="necau-details">
                     <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">1</span>
+                    <div class="build-note"><span class="footnote-ref">1</span> : Rayon Spectral<span class="legacy-indicator">L</span> fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
                 </div>
-                <div class="card-note"><span class="footnote-ref">1</span> : Rayon Spectral fera toujours plus de dégâts qu'une Attaque Psy.</div>
+                <div class="card-note hidden-note"></div>
             </div>
         </div>
 
@@ -269,7 +270,7 @@
             <div class="fandom-card">
                 <div class="card-rank">8</div>
                 <div class="card-image"><img src="Images/HoopaE.png" alt="Hoopa Forme Enchainée" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-legendary">Hoopa</span></strong><span class="pokemon-form"><em>Forme Enchainée</em></span></div>
+                <div class="card-name"><strong><span class="pokemon-name-legendary">Hoopa</span></strong><span class="pokemon-form"><em>Enchainé</em></span></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong id="hoope-imm">Étonnement</strong><span id="hoope-imm-alt" style="display:none"> → <strong>Choc Mental</strong></span><br>
@@ -345,12 +346,12 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Zoroark de Hisui</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong> <img src="Images/Tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Aboiement</strong><span class="footnote-ref">2</span> <img src="Images/Tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Ball'Ombre</strong>
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note hidden-note"></div>
+                <div class="card-note"><span class="footnote-ref">2</span> : Aboiement permet de charger l'Attaque Chargée plus vite, et donc de la lancer plus souvent qu'avec une Attaque de type Spectre.</div>
             </div>
         </div>
 
@@ -480,11 +481,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Malvalame</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="malva-imm">Flammèche</strong><span id="malva-imm-alt" style="display:none"> → <strong>Calcination</strong></span> <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="malva-imm">Flammèche</strong><img id="malva-imm-icon" src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn icone-imm"><span id="malva-imm-alt" style="display:none"> → <strong>Calcination</strong></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Ball'Ombre</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-malva-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('malva-details', 'toggle-malva-btn'); toggleAltImm('malva-imm', 'malva-imm-alt')">
+                    <button id="toggle-malva-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('malva-details', 'toggle-malva-btn'); toggleAltImm('malva-imm', 'malva-imm-alt', 'malva-imm-icon')">
                     Également Top Feu <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -649,11 +650,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Courrousinge</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="courr-imm">Balayage</strong><span id="courr-imm-alt" style="display:none"> → <strong>Riposte</strong></span> <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ball'Ombre</strong> / <strong>Poing de Colère</strong><span class="legacy-indicator">L</span><span class="footnote-ref">2</span>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="courr-imm">Balayage</strong><img id="courr-imm-icon" src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn icone-imm"><span id="courr-imm-alt" style="display:none"> → <strong>Riposte</strong></span><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Ball'Ombre</strong> / <strong>Poing de Colère</strong><span class="legacy-indicator">L</span><span class="footnote-ref">3</span>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-courr-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('courr-details', 'toggle-courr-btn'); toggleAltImm('courr-imm', 'courr-imm-alt')">
+                    <button id="toggle-courr-btn" class="btn-combat" aria-expanded="false" onclick="toggleBuild('courr-details', 'toggle-courr-btn'); toggleAltImm('courr-imm', 'courr-imm-alt', 'courr-imm-icon')">
                     Également Top Combat <img src="Images/Combat.webp" alt="Type Combat" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -665,7 +666,7 @@
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note"><span class="footnote-ref">2</span> : Ball'Ombre et Poing de Colère feront autant de dégâts l'une que l'autre.</div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Ball'Ombre et Poing de Colère feront autant de dégâts l'une que l'autre.</div>
             </div>
         </div>
 
