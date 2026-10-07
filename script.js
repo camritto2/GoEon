@@ -295,9 +295,12 @@ function gererLiensMorts() {
 
 // 11 bis. AFFICHAGE DU TOOLTIP "DISPONIBLE PROCHAINEMENT"
 // decalageY : 20 sous le curseur (navbar), -45 au-dessus (cartes de l'accueil)
-function afficherComingSoon(e, decalageY) {
+// texte : facultatif, « Disponible prochainement ! » par défaut ; réécrit à
+// chaque appel pour qu'un message particulier ne reste pas collé au tooltip
+function afficherComingSoon(e, decalageY, texte) {
   const tooltip = document.getElementById('coming-soon-tooltip');
   if (!tooltip) return;
+  tooltip.textContent = texte || 'Disponible prochainement !';
 
   // Repli si l'évènement n'a pas de coordonnées (activation au clavier)
   let x = e.pageX;
@@ -478,9 +481,12 @@ function switchTab(os, btn) {
   btn.classList.add('active');
 }
 
-function showComingSoon(e) {
+// texte facultatif : « Page à venir » sur les cartes d'évènements dont la
+// page n'est pas encore en ligne. Le href garde déjà le nom de la future
+// page : à la mise en ligne, il suffit de retirer le onclick.
+function showComingSoon(e, texte) {
   e.preventDefault();
-  afficherComingSoon(e, -45);
+  afficherComingSoon(e, -45, texte);
 }
 
 // 16. PAGE OPTIPM (OptiPM.html)

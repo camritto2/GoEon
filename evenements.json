@@ -23,14 +23,12 @@
         {
           "nom": "Festival des récoltes",
           "debut": "2026-09-29T10:00",
-          "fin": "2026-10-01T23:59",
-          "page": "FestivalRecoltes.html"
+          "fin": "2026-10-01T23:59"
         },
         {
           "nom": "Festival des récoltes - Offensive",
           "debut": "2026-10-02T00:00",
-          "fin": "2026-10-05T20:00",
-          "page": "FestivalRecoltesOffensive.html"
+          "fin": "2026-10-05T20:00"
         }
       ],
       "raids": [
@@ -470,9 +468,14 @@
           "page": "MarathonAutomnal.html"
         },
         {
+          "nom": "Pluie de Météno",
+          "debut": "2026-10-20T00:00",
+          "fin": "2026-10-24T23:59"
+        },
+        {
           "nom": "Halloween - Partie 1",
           "debut": "2026-10-27T10:00",
-          "fin": "2026-10-31T20:00"
+          "fin": "2026-11-01T10:00"
         }
       ],
       "raids": [
@@ -607,7 +610,6 @@
           "sprites": [
             "Pyrobut.png"
           ],
-          "page": "PyrobutGigamax.html",
           "lignes": [
             "Gigamax",
             "14h-17h"
