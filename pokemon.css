@@ -463,10 +463,8 @@
 /* Carmadura — Shiny */
 .pk-carmadura .emoji-shiny  { display: inline; }
 
-/* Carvanha — Bon / Shiny */
-.pk-carvanha .pokemon-name { color: var(--accent-vert-bon); }
-.pk-carvanha .research-reward-name { color: var(--accent-vert-bon); }
-.pk-carvanha .emoji-shiny  { display: inline; }
+/* Carvanha — Normal / Shiny */
+.pk-carvanha .emoji-shiny { display: inline; }
 
 /* Castorno — Normal / Shiny */
 .pk-castorno .emoji-shiny { display: inline; }
@@ -792,6 +790,11 @@
 /* Démanta — Normal / Shiny */
 .pk-demanta .emoji-shiny { display: inline; }
 
+/* Démétéros — Bon / Shiny */
+.pk-demeteros .pokemon-name { color: var(--accent-vert-bon); }
+.pk-demeteros .research-reward-name { color: var(--accent-vert-bon); }
+.pk-demeteros .emoji-shiny  { display: inline; }
+
 /* Démolosse — Bon / Shiny (couvre Méga-Démolosse) */
 .pk-demolosse .pokemon-name { color: var(--accent-vert-bon); }
 .pk-demolosse .research-reward-name { color: var(--accent-vert-bon); }
@@ -853,7 +856,9 @@
 /* Doduo — Normal / Shiny */
 .pk-doduo .emoji-shiny { display: inline; }
 
-/* Dogrino — Normal */
+/* Dogrino — Bon */
+.pk-dogrino .pokemon-name { color: var(--accent-vert-bon); }
+.pk-dogrino .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Donphan — Bon / Shiny */
 .pk-donphan .pokemon-name { color: var(--accent-vert-bon); }
@@ -906,6 +911,11 @@
 
 /* Drakkarmin — Normal / Shiny */
 .pk-drakkarmin .emoji-shiny { display: inline; }
+
+/* Drascore — Bon / Shiny */
+.pk-drascore .pokemon-name { color: var(--accent-vert-bon); }
+.pk-drascore .research-reward-name { color: var(--accent-vert-bon); }
+.pk-drascore .emoji-shiny  { display: inline; }
 
 /* Drattak — Bon / Shiny */
 .pk-drattak .pokemon-name { color: var(--accent-vert-bon); }
@@ -1466,7 +1476,9 @@
 .pk-grolem-a .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grolem-a .emoji-shiny  { display: inline; }
 
-/* Grondogue — Normal */
+/* Grondogue — Bon */
+.pk-grondogue .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grondogue .research-reward-name { color: var(--accent-vert-bon); }
 
 /* Groret — Normal / Shiny */
 .pk-groret .emoji-shiny { display: inline; }
@@ -2093,6 +2105,9 @@
 .pk-mentali .pokemon-name { color: var(--accent-vert-bon); }
 .pk-mentali .research-reward-name { color: var(--accent-vert-bon); }
 .pk-mentali .emoji-shiny  { display: inline; }
+
+/* Mesmérella — Normal / Shiny */
+.pk-mesmerella .emoji-shiny { display: inline; }
 
 /* Métalosse — Bon / Shiny (couvre Méga-Métalosse) */
 .pk-metalosse .pokemon-name { color: var(--accent-vert-bon); }
@@ -2896,20 +2911,14 @@
 /* Roublenard — Normal / Shiny */
 .pk-roublenard .emoji-shiny  { display: inline; }
 
-/* Roucarnage — Bon / Shiny (couvre Méga-Roucarnage) */
-.pk-roucarnage .pokemon-name { color: var(--accent-vert-bon); }
-.pk-roucarnage .research-reward-name { color: var(--accent-vert-bon); }
-.pk-roucarnage .emoji-shiny  { display: inline; }
+/* Roucarnage — Normal / Shiny (couvre Méga-Roucarnage) */
+.pk-roucarnage .emoji-shiny { display: inline; }
 
-/* Roucool — Bon / Shiny */
-.pk-roucool .pokemon-name { color: var(--accent-vert-bon); }
-.pk-roucool .research-reward-name { color: var(--accent-vert-bon); }
-.pk-roucool .emoji-shiny  { display: inline; }
+/* Roucool — Normal / Shiny */
+.pk-roucool .emoji-shiny { display: inline; }
 
-/* Roucoups — Bon / Shiny */
-.pk-roucoups .pokemon-name { color: var(--accent-vert-bon); }
-.pk-roucoups .research-reward-name { color: var(--accent-vert-bon); }
-.pk-roucoups .emoji-shiny  { display: inline; }
+/* Roucoups — Normal / Shiny */
+.pk-roucoups .emoji-shiny { display: inline; }
 
 /* Roussil — Bon / Shiny */
 .pk-roussil .pokemon-name { color: var(--accent-vert-bon); }
@@ -3035,10 +3044,8 @@
 /* Shaofouine — Normal / Shiny */
 .pk-shaofouine .emoji-shiny { display: inline; }
 
-/* Sharpedo — Bon / Shiny (couvre Méga-Sharpedo) */
-.pk-sharpedo .pokemon-name { color: var(--accent-vert-bon); }
-.pk-sharpedo .research-reward-name { color: var(--accent-vert-bon); }
-.pk-sharpedo .emoji-shiny  { display: inline; }
+/* Sharpedo — Normal / Shiny (couvre Méga-Sharpedo) */
+.pk-sharpedo .emoji-shiny { display: inline; }
 
 /* Shaymin — Bon / Shiny */
 .pk-shaymin .pokemon-name { color: var(--accent-vert-bon); }
@@ -3048,6 +3055,9 @@
 /* Shifours — Bon */
 .pk-shifours .pokemon-name { color: var(--accent-vert-bon); }
 .pk-shifours .research-reward-name { color: var(--accent-vert-bon); }
+
+/* Sidérella — Normal / Shiny */
+.pk-siderella .emoji-shiny { display: inline; }
 
 /* Simiabraz — Bon / Shiny */
 .pk-simiabraz .pokemon-name { color: var(--accent-vert-bon); }
@@ -3559,6 +3569,11 @@
 .pk-ymphect .pokemon-name { color: var(--accent-vert-bon); }
 .pk-ymphect .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ymphect .emoji-shiny  { display: inline; }
+
+/* Yveltal — Bon / Shiny */
+.pk-yveltal .pokemon-name { color: var(--accent-vert-bon); }
+.pk-yveltal .research-reward-name { color: var(--accent-vert-bon); }
+.pk-yveltal .emoji-shiny  { display: inline; }
 
 
 /* ============================================================

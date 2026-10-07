@@ -613,6 +613,16 @@
         "n25": null
       }
     },
+    "colossinge": {
+      "types": [
+        "Combat"
+      ],
+      "pc": {
+        "n15": 980,
+        "n20": 1307,
+        "n25": 1634
+      }
+    },
     "coquiperl": {
       "types": null,
       "pc": {
@@ -751,6 +761,17 @@
         "n25": null
       }
     },
+    "demeteros-avatar": {
+      "types": [
+        "Sol",
+        "Vol"
+      ],
+      "pc": {
+        "n15": 1538,
+        "n20": 2050,
+        "n25": 2563
+      }
+    },
     "demolosse-mega": {
       "types": [
         "Ténèbres",
@@ -771,6 +792,17 @@
         "n15": 1731,
         "n20": 2307,
         "n25": 2884
+      }
+    },
+    "dinoclier": {
+      "types": [
+        "Roche",
+        "Acier"
+      ],
+      "pc": {
+        "n15": 381,
+        "n20": 509,
+        "n25": 636
       }
     },
     "doduo": {
@@ -848,6 +880,17 @@
         "n15": 1171,
         "n20": 1561,
         "n25": 1951
+      }
+    },
+    "drascore": {
+      "types": [
+        "Poison",
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 1051,
+        "n20": 1401,
+        "n25": 1752
       }
     },
     "duralugon": {
@@ -1573,6 +1616,17 @@
         "n25": null
       }
     },
+    "kirlia": {
+      "types": [
+        "Psy",
+        "Fée"
+      ],
+      "pc": {
+        "n15": 414,
+        "n20": 552,
+        "n25": 690
+      }
+    },
     "korillon": {
       "types": [
         "Psy"
@@ -2164,6 +2218,16 @@
         "n15": 867,
         "n20": null,
         "n25": null
+      }
+    },
+    "noctali": {
+      "types": [
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 916,
+        "n20": 1221,
+        "n25": 1526
       }
     },
     "nodulithe": {
@@ -2879,6 +2943,16 @@
         "n25": 1685
       }
     },
+    "siderella": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": 1037,
+        "n20": 1382,
+        "n25": 1728
+      }
+    },
     "simiabraz": {
       "types": null,
       "pc": {
@@ -2967,11 +3041,14 @@
       }
     },
     "staross": {
-      "types": null,
+      "types": [
+        "Eau",
+        "Psy"
+      ],
       "pc": {
         "n15": 1107,
-        "n20": null,
-        "n25": null
+        "n20": 1476,
+        "n25": 1846
       }
     },
     "suicune": {
@@ -3120,11 +3197,13 @@
       }
     },
     "tortank": {
-      "types": null,
+      "types": [
+        "Eau"
+      ],
       "pc": {
         "n15": 1057,
-        "n20": null,
-        "n25": null
+        "n20": 1409,
+        "n25": 1761
       }
     },
     "torterra": {
@@ -3394,6 +3473,17 @@
     "xerneas": {
       "types": [
         "Fée"
+      ],
+      "pc": {
+        "n15": 1620,
+        "n20": 2160,
+        "n25": 2701
+      }
+    },
+    "yveltal": {
+      "types": [
+        "Ténèbres",
+        "Vol"
       ],
       "pc": {
         "n15": 1620,

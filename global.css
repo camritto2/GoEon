@@ -343,6 +343,13 @@ body.dark-mode .emoji-shiny {
   filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
+/* Badge Dynamax : icône noire, inversée en mode sombre comme le badge Shiny.
+   Ciblée par sa source : les autres emoji-costume (Gigamax, Costume) sont en
+   couleur et ne s'inversent jamais. */
+body.dark-mode .emoji-costume[src$="Dynamax.webp"] {
+  filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
 /* Badge Obscur — dans .badges d'une .pokemon-card (pages Raids Obscurs).
    Mêmes dimensions que .emoji-shiny, mais jamais inversé en mode sombre :
    l'icône est déjà sombre par nature. */

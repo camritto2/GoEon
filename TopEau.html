@@ -48,12 +48,18 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Sheauriken</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">1</span><br>
-                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Surf++++</strong><span class="footnote-ref">1</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong id="mamph-ac"><em>Peu importe</em><span class="footnote-ref">1</span></strong><span id="mamph-ac-alt" style="display:none"> → <strong>Centrifugifle</strong></span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Surf++++</strong><span id="mamph-mb-ref"><span class="footnote-ref">1</span></span>
                 </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
-                <div class="card-note"><span class="footnote-ref">1</span> : Surf++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+                <div class="card-button">
+                    <button id="toggle-mamph-btn" class="btn-tenebres" aria-expanded="false" onclick="toggleBuild('mamph-details', 'toggle-mamph-btn'); toggleAltImm('mamph-ac', 'mamph-ac-alt', 'mamph-note mamph-mb-ref')">
+                    Également Top Ténèbres <img src="Images/Tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mamph-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong>
+                </div>
+                <div class="card-note" id="mamph-note"><span class="footnote-ref">1</span> : Surf++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
             </div>
         </div>
 
@@ -227,8 +233,19 @@
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Sheauriken</strong><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Hydroblast</strong><span class="legacy-indicator">L</span>
                 </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
+                <div class="card-button">
+                    <button id="toggle-amph-btn" class="btn-tenebres" aria-expanded="false" onclick="toggleBuild('amph-details', 'toggle-amph-btn')">
+                    Également Top Ténèbres <img src="Images/Tenebres.webp" alt="Type Ténèbres" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="amph-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Centrifugifle</strong>
+                    <hr>
+                    <div class="attack-cost-container">
+                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
+                    <span class="attack-cost-value">25 Bonbons<br>+ 10 000 Poussières Étoile</span>
+                    </div>
+                </div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>

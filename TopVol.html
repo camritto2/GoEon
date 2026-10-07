@@ -17,7 +17,7 @@
 
 <div class="ranking-container">
     <h1>
-      Les meilleurs Pokémon de<br><span class="top-title-type"><img src="Images/Vol.webp" alt="Vol" class="top-title-icon">Type Vol<img src="Images/Vol.webp" alt="Vol" class="top-title-icon"></span>
+      Les meilleurs attaquants de<br><span class="top-title-type"><img src="Images/Vol.webp" alt="Vol" class="top-title-icon">Type Vol<img src="Images/Vol.webp" alt="Vol" class="top-title-icon"></span>
     </h1>
 
     <div class="intro-rules">
@@ -68,6 +68,47 @@
         </div>
 
         <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 2</div>
+                <div class="card-image"><img src="Images/EtouraptorM.png" alt="Méga-Étouraptor" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Étouraptor</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Tornade</strong><span class="legacy-indicator">L</span><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">2</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Rapace++++</strong><span class="footnote-ref">2</span>
+                </div>
+                <div class="card-button"></div>
+                <div class="card-build"></div>
+                <div class="card-note"><span class="footnote-ref">2</span> : Rapace++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="fandom-card mega-card">
+                <div class="card-rank">Méga 3</div>
+                <div class="card-image"><img src="Images/AirmureM.png" alt="Méga-Airmure" class="card-img"></div>
+                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Airmure</span></strong></div>
+                <div class="card-badges"></div>
+                <div class="card-attacks">
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mairm-imm">Lame d'Air</strong><span id="mairm-imm-alt" style="display:none"> → <strong>Ailes d'Acier</strong></span><br>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">3</span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Bec Vrille++++</strong><span class="footnote-ref">3</span>
+                </div>
+                <div class="card-button">
+                    <button id="toggle-mairm-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('mairm-details', 'toggle-mairm-btn'); toggleAltImm('mairm-imm', 'mairm-imm-alt')">
+                    Également Top Acier <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
+                    </button>
+                </div>
+                <div class="card-build" id="mairm-details">
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">4</span>
+                    <div class="build-note"><span class="footnote-ref">4</span> : Méga-Airmure possède l'Attaque Bonus Bec Vrille++++ et n'a pas besoin d'une autre Attaque.</div>
+                </div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Bec Vrille++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+            </div>
+        </div>
+
+        <div class="grid-item">
             <div class="fandom-card">
                 <div class="card-rank">1</div>
                 <div class="card-image"><img src="Images/Rayquaza.png" alt="Rayquaza" class="card-img"></div>
@@ -96,7 +137,7 @@
 
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 2</div>
+                <div class="card-rank">Méga 4</div>
                 <div class="card-image"><img src="Images/DrattakM.png" alt="Méga-Drattak" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Drattak</span></strong></div>
                 <div class="card-badges"></div>
@@ -150,7 +191,7 @@
 
         <div class="grid-item">
             <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 3</div>
+                <div class="card-rank">Méga 5</div>
                 <div class="card-image"><img src="Images/DracaufeuMY.png" alt="Méga-Dracaufeu Y" class="card-img"></div>
                 <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Dracaufeu Y</span></strong></div>
                 <div class="card-badges"></div>
@@ -164,8 +205,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="mdracy-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
-                    <div class="build-note"><span class="footnote-ref">2</span> : Rafale Feu fera toujours plus de dégâts qu'une Attaque de type Vol.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
+                    <div class="build-note"><span class="footnote-ref">5</span> : Rafale Feu fera toujours plus de dégâts qu'une Attaque de type Vol.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -194,22 +235,6 @@
                     <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 4</div>
-                <div class="card-image"><img src="Images/RoucarnageM.png" alt="Méga-Roucarnage" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Roucarnage</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Tornade</strong><span class="legacy-indicator">L</span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Rapace</strong>
-                </div>
-                <div class="card-button"></div>
-                <div class="card-build"></div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
@@ -257,8 +282,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="artig-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">3</span>
-                    <div class="build-note"><span class="footnote-ref">3</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">6</span>
+                    <div class="build-note"><span class="footnote-ref">6</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -281,33 +306,6 @@
                 </div>
                 <div class="card-build" id="drat-details">
                     <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Draco-Météore</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">75 Bonbons<br>+ 75 000 Poussières Étoile</span>
-                    </div>
-                </div>
-                <div class="card-note hidden-note"></div>
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="fandom-card mega-card">
-                <div class="card-rank">Méga 5</div>
-                <div class="card-image"><img src="Images/AirmureM.png" alt="Méga-Airmure" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-mega">Méga-Airmure</span></strong></div>
-                <div class="card-badges"></div>
-                <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="mairm-imm">Lame d'Air</strong><span id="mairm-imm-alt" style="display:none"> → <strong>Ailes d'Acier</strong></span><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Piqué</strong>
-                </div>
-                <div class="card-button">
-                    <button id="toggle-mairm-btn" class="btn-acier" aria-expanded="false" onclick="toggleBuild('mairm-details', 'toggle-mairm-btn'); toggleAltImm('mairm-imm', 'mairm-imm-alt')">
-                    Également Top Acier <img src="Images/Acier.webp" alt="Type Acier" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
-                    </button>
-                </div>
-                <div class="card-build" id="mairm-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Luminocanon</strong>
                     <hr>
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
@@ -350,8 +348,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="amot-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">4</span>
-                    <div class="build-note"><span class="footnote-ref">4</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Fée.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">7</span>
+                    <div class="build-note"><span class="footnote-ref">7</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Fée.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -413,7 +411,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Extrasenseur</strong> <img src="Images/Psy.webp" alt="Type Psy" class="type-icon-btn"><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Aéroblast+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">5</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Aéroblast+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">8</span>
                 </div>
                 <div class="card-button">
                     <button id="toggle-lugiapex-btn" class="btn-psy" aria-expanded="false" onclick="toggleBuild('lugiapex-details', 'toggle-lugiapex-btn')">
@@ -421,9 +419,9 @@
                     </button>
                 </div>
                 <div class="card-build" id="lugiapex-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">8</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">5</span> : Cette forme a été disponible une fois dans le jeu. L'attaque Aéroblast+ est plus forte que la version de base. Cette attaque fera toujours plus de dégâts que Prescience. Elle devient Aéroblast++ après purification (mais devient moins forte).</div>
+                <div class="card-note"><span class="footnote-ref">8</span> : Cette forme a été disponible une fois dans le jeu. L'attaque Aéroblast+ est plus forte que la version de base. Cette attaque fera toujours plus de dégâts que Prescience. Elle devient Aéroblast++ après purification (mais devient moins forte).</div>
             </div>
         </div>
 
@@ -434,22 +432,22 @@
                 <div class="card-name"><strong><span class="pokemon-name-rare">Ho-Oh</span></strong><span class="pokemon-form"><em>Apex</em></span></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="hoohapex-imm">Puissance Cachée Vol</strong><span id="hoohapex-imm-alt" style="display:none"> → <strong>Calcination</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Calcination</strong> <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Rapace</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-hoohapex-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('hoohapex-details', 'toggle-hoohapex-btn'); toggleAltImm('hoohapex-imm', 'hoohapex-imm-alt')">
+                    <button id="toggle-hoohapex-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('hoohapex-details', 'toggle-hoohapex-btn')">
                     Également Top Feu <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="hoohapex-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Feu Sacré+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">6</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Feu Sacré+</strong><span class="legacy-indicator">L</span><span class="footnote-ref">9</span>
                     <hr>
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
                     <span class="attack-cost-value">100 Bonbons<br>+ 100 000 Poussières Étoile</span>
                     </div>
-                    <div class="build-note"><span class="footnote-ref">6</span> : Cette forme a été disponible une fois dans le jeu. L'attaque Feu Sacré+ est plus forte que la version de base. Elle devient Feu Sacré++ après purification (mais devient moins forte).</div>
+                    <div class="build-note"><span class="footnote-ref">9</span> : Cette forme a été disponible une fois dans le jeu. L'attaque Feu Sacré+ est plus forte que la version de base. Elle devient Feu Sacré++ après purification (mais devient moins forte).</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -462,11 +460,11 @@
                 <div class="card-name"><strong><span class="pokemon-name-legendary">Ho-Oh</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="hooh-imm">Puissance Cachée Vol</strong><span id="hooh-imm-alt" style="display:none"> → <strong>Calcination</strong></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong>Calcination</strong> <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Rapace</strong>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-hooh-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('hooh-details', 'toggle-hooh-btn'); toggleAltImm('hooh-imm', 'hooh-imm-alt')">
+                    <button id="toggle-hooh-btn" class="btn-feu" aria-expanded="false" onclick="toggleBuild('hooh-details', 'toggle-hooh-btn')">
                     Également Top Feu <img src="Images/Feu.webp" alt="Type Feu" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
@@ -498,8 +496,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="guerih-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">7</span>
-                    <div class="build-note"><span class="footnote-ref">7</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">10</span>
+                    <div class="build-note"><span class="footnote-ref">10</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -677,8 +675,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="lugia-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">8</span>
-                    <div class="build-note"><span class="footnote-ref">8</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">11</span>
+                    <div class="build-note"><span class="footnote-ref">11</span> : Vol fera toujours plus de dégâts qu'une Attaque de type Psy.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -716,18 +714,19 @@
                     </button>
                 </div>
                 <div class="card-build" id="dracau-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
-                    <div class="build-note"><span class="footnote-ref">2</span> : Rafale Feu fera toujours plus de dégâts qu'une Attaque de type Vol.</div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
+                    <div class="build-note"><span class="footnote-ref">5</span> : Rafale Feu fera toujours plus de dégâts qu'une Attaque de type Vol.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
         </div>
+
     </div>
 
     <hr class="section-divider">
 
     <div class="more-info-container">
-        <span class="more-info-title">Plus d'informations : <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/flying" target="_blank" class="more-info-link">Cliquez ici</a></span>
+        <span class="more-info-title">Plus d'informations : <a href="https://www.dialgadex.com/?strongest=&amp;t=Flying&amp;lang=fr" target="_blank" class="more-info-link">Cliquez ici</a></span>
     </div>
 
 </div>

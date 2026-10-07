@@ -792,11 +792,17 @@
         {
           "debut": "2026-10-24",
           "categorie": "dynamax",
-          "court": "??? Gigamax",
-          "long": "Journée de Combat - ??? Gigamax",
+          "court": "Créhelf, Créfollet & Créfadet",
+          "long": "Journée de Combat - Créhelf, Créfollet & Créfadet Dynamax",
           "heures": "14h - 17h",
+          "sprites": [
+            "Crehelf.png",
+            "Crefollet.png",
+            "Crefadet.png"
+          ],
+          "page": "CrehelfCrefolletCrefadet.html",
           "lignes": [
-            "Gigamax",
+            "Dynamax",
             "14h-17h"
           ]
         },
