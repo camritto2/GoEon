@@ -684,6 +684,36 @@
         "n25": null
       }
     },
+    "crefadet": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": 1376,
+        "n20": 1834,
+        "n25": 2293
+      }
+    },
+    "crefollet": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": 1310,
+        "n20": 1747,
+        "n25": 2184
+      }
+    },
+    "crehelf": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": 1081,
+        "n20": 1442,
+        "n25": 1803
+      }
+    },
     "crocogril": {
       "types": [
         "Feu"
@@ -2044,6 +2074,17 @@
         "n25": null
       }
     },
+    "meteno": {
+      "types": [
+        "Roche",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "miamiasme": {
       "types": [
         "Poison"
@@ -3156,6 +3197,16 @@
         "n15": 608,
         "n20": null,
         "n25": null
+      }
+    },
+    "theffroi": {
+      "types": [
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 488,
+        "n20": 650,
+        "n25": 813
       }
     },
     "tiplouf": {

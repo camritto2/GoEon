@@ -1043,6 +1043,48 @@ body:has(.section-nav) .category-title {
   cursor: default;
 }
 
+/* Onglets d'éditions — évènement récurrent sur une seule page
+   (PluieMeteno.html). Même pilule que .raids-onglets, mais ce sont des
+   boutons qui basculent des panneaux de la page (script.js §21), pas des
+   liens vers une autre URL. flex-wrap : six libellés, dont « Delta Aquarides
+   du Sud », ne tiennent pas sur une ligne en mobile. */
+.onglets-editions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 0 12px 0;
+}
+
+.onglets-editions button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-carte);
+  background: var(--bg-carte);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.onglets-editions button:hover,
+.onglets-editions button[aria-selected="true"] {
+  background-color: var(--accent-navbar);
+  color: var(--accent-text-navbar);
+  border-color: var(--accent-navbar);
+}
+
+.onglets-editions button[aria-selected="true"] {
+  cursor: default;
+}
+
+.edition-panel[hidden] {
+  display: none;
+}
+
 /* ==========================================
    PROBABILITÉ D'ÉCLOSION — page Œufs
    Déplacé depuis un <style> de oeufs.html le 16/09 : aucune page ne doit

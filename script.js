@@ -1425,3 +1425,38 @@ if (document.querySelector('.home-card[data-debut]')) {
     })
     .catch(error => console.error('Erreur lors du chargement de pokemon-data.json :', error));
 })();
+
+
+// 21. ONGLETS D'ÉDITIONS (évènement récurrent sur une seule page)
+// PluieMeteno.html : un onglet par édition, un panneau .edition-panel par
+// onglet, relié par aria-controls. Chaque panneau porte data-debut et
+// data-fin, au même format obligatoire que §18 ("AAAA-MM-JJTHH:MM", partie
+// horaire comprise). Au chargement, on ouvre l'édition en cours, sinon la
+// prochaine ; une fois la dernière passée, la dernière reste ouverte.
+// Sans JS, le HTML laisse le premier panneau visible.
+(function () {
+  const liste = document.querySelector('.onglets-editions');
+  if (!liste) return;
+  const onglets = [...liste.querySelectorAll('[role="tab"]')];
+  if (!onglets.length) return;
+
+  function ouvrir(onglet) {
+    onglets.forEach(o => {
+      const actif = (o === onglet);
+      o.setAttribute('aria-selected', actif ? 'true' : 'false');
+      const panneau = document.getElementById(o.getAttribute('aria-controls'));
+      if (panneau) panneau.hidden = !actif;
+    });
+  }
+
+  onglets.forEach(o => o.addEventListener('click', () => ouvrir(o)));
+
+  const maintenant = Date.now();
+  const aOuvrir = onglets.find(o => {
+    const panneau = document.getElementById(o.getAttribute('aria-controls'));
+    if (!panneau) return false;
+    const fin = new Date(panneau.dataset.fin).getTime();
+    return !isNaN(fin) && fin >= maintenant;
+  }) || onglets[onglets.length - 1];
+  ouvrir(aOuvrir);
+})();

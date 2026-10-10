@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Pluie de Météno</title>
+  <link rel="canonical" href="https://goeon.fr/PluieMeteno">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Pluie de Météno</h1>
+
+  <!-- Évènement récurrent : une seule page pour toutes les éditions, testé
+       ainsi avec Cam le 10/10. Seuls le nom, les dates et la variante
+       changent d'une édition à l'autre : ils vivent dans les onglets, le
+       reste de la page est commun. L'onglet ouvert au chargement est choisi
+       par script.js §21 d'après les data-debut / data-fin des panneaux :
+       l'édition en cours, sinon la prochaine. Sans JS, les Orionides
+       restent affichées.
+       Quand une variante est connue : remplacer, dans le panneau concerné,
+       Meteno.png par l'image de la variante et « Variante à découvrir » par
+       le nom du noyau. -->
+  <div class="onglets-editions" role="tablist" aria-label="Éditions de la Pluie de Météno">
+    <button type="button" role="tab" id="tab-orionides" aria-controls="edition-orionides" aria-selected="true">Orionides</button>
+    <button type="button" role="tab" id="tab-leonides" aria-controls="edition-leonides" aria-selected="false">Léonides</button>
+    <button type="button" role="tab" id="tab-geminides" aria-controls="edition-geminides" aria-selected="false">Géminides</button>
+    <button type="button" role="tab" id="tab-eta-aquarides" aria-controls="edition-eta-aquarides" aria-selected="false">Êta Aquarides</button>
+    <button type="button" role="tab" id="tab-delta-aquarides" aria-controls="edition-delta-aquarides" aria-selected="false">Delta Aquarides du Sud</button>
+    <button type="button" role="tab" id="tab-perseides" aria-controls="edition-perseides" aria-selected="false">Perséides</button>
+  </div>
+
+  <div class="edition-panel" role="tabpanel" id="edition-orionides" aria-labelledby="tab-orionides"
+       data-debut="2026-10-19T17:00" data-fin="2026-10-24T23:59">
+    <p class="raids-date">Du lundi 19 octobre, 17h au samedi 24 octobre, 23h59</p>
+    <div class="pokemon-grid pokemon-grid-6">
+      <div class="pokemon-card pk-meteno" data-pk="meteno">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Météno</h2>
+          <p class="pokemon-subtitle">Variante à découvrir</p>
+          <hr class="separator">
+          <div class="pokemon-types-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edition-panel" role="tabpanel" id="edition-leonides" aria-labelledby="tab-leonides"
+       data-debut="2026-11-14T17:00" data-fin="2026-11-19T23:59" hidden>
+    <p class="raids-date">Du samedi 14 novembre, 17h au jeudi 19 novembre, 23h59</p>
+    <div class="pokemon-grid pokemon-grid-6">
+      <div class="pokemon-card pk-meteno" data-pk="meteno">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Météno</h2>
+          <p class="pokemon-subtitle">Variante à découvrir</p>
+          <hr class="separator">
+          <div class="pokemon-types-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edition-panel" role="tabpanel" id="edition-geminides" aria-labelledby="tab-geminides"
+       data-debut="2026-12-11T17:00" data-fin="2026-12-16T23:59" hidden>
+    <p class="raids-date">Du vendredi 11 décembre, 17h au mercredi 16 décembre, 23h59</p>
+    <p class="section-sous-titre"><em>Lors des Géminides, la variante du Météno ne sera pas la même dans l'hémisphère Nord et dans l'hémisphère Sud</em></p>
+    <div class="pokemon-grid pokemon-grid-6">
+      <div class="pokemon-card pk-meteno" data-pk="meteno">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Météno</h2>
+          <p class="pokemon-subtitle">Hémisphère Nord</p>
+          <hr class="separator">
+          <div class="pokemon-types-container"></div>
+        </div>
+      </div>
+      <div class="pokemon-card pk-meteno" data-pk="meteno">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Météno</h2>
+          <p class="pokemon-subtitle">Hémisphère Sud</p>
+          <hr class="separator">
+          <div class="pokemon-types-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edition-panel" role="tabpanel" id="edition-eta-aquarides" aria-labelledby="tab-eta-aquarides"
+       data-debut="2027-05-03T17:00" data-fin="2027-05-08T23:59" hidden>
+    <p class="raids-date">Du lundi 3 mai, 17h au samedi 8 mai, 23h59</p>
+    <div class="pokemon-grid pokemon-grid-6">
+      <div class="pokemon-card pk-meteno" data-pk="meteno">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Météno</h2>
+          <p class="pokemon-subtitle">Variante à découvrir</p>
+          <hr class="separator">
+          <div class="pokemon-types-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edition-panel" role="tabpanel" id="edition-delta-aquarides" aria-labelledby="tab-delta-aquarides"
+       data-debut="2027-07-28T17:00" data-fin="2027-08-02T23:59" hidden>
+    <p class="raids-date">Du mercredi 28 juillet, 17h au lundi 2 aout, 23h59</p>
+    <div class="pokemon-grid pokemon-grid-6">
+      <div class="pokemon-card pk-meteno" data-pk="meteno">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Météno</h2>
+          <p class="pokemon-subtitle">Variante à découvrir</p>
+          <hr class="separator">
+          <div class="pokemon-types-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="edition-panel" role="tabpanel" id="edition-perseides" aria-labelledby="tab-perseides"
+       data-debut="2027-08-10T17:00" data-fin="2027-08-15T23:59" hidden>
+    <p class="raids-date">Du mardi 10 aout, 17h au dimanche 15 aout, 23h59</p>
+    <div class="pokemon-grid pokemon-grid-6">
+      <div class="pokemon-card pk-meteno" data-pk="meteno">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Météno</h2>
+          <p class="pokemon-subtitle">Variante à découvrir</p>
+          <hr class="separator">
+          <div class="pokemon-types-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro-rules">
+    <p>Météno possède 7 variantes différentes. À chaque Évènement, une nouvelle variante sera disponible.</p>
+    <p>On ne sait pas à l'avance quelle variante sera disponible à quel Évènement !</p>
+    <p>Lors de ces Évènements, entre 17h et 21h, le ciel sera illuminé d'étoiles filantes. Les Météno seront alors plus fréquents en Sauvage.</p>
+    <p>Météno possèdera un boost de Poussières Étoiles par Capture !</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            NOUVEAU POKÉMON              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1">Nouveau Pokémon</h2>
+
+  <!-- Les 7 variantes partagent la classe pk-meteno. Leurs types ne sont
+       pas répétés : Roche/Vol s'affiche une fois, sur la carte fermée des
+       onglets en haut de page (data-pk="meteno"), choix de Cam du 10/10.
+       Pas de shiny pour le moment :
+       pokemon.css masque le badge. Le jour venu, toutes les variantes
+       montreront le même shiny noyau dévoilé, MetenoOS.png ; la forme
+       fermée des panneaux d'édition a le sien, MetenoFS.png. -->
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-meteno">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/MetenoR.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Rouge" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Météno</h2>
+        <p class="pokemon-subtitle">Noyau Rouge</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-meteno">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/MetenoO.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Orange" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Météno</h2>
+        <p class="pokemon-subtitle">Noyau Orange</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-meteno">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/MetenoJ.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Jaune" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Météno</h2>
+        <p class="pokemon-subtitle">Noyau Jaune</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-meteno">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/MetenoVe.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Vert" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Météno</h2>
+        <p class="pokemon-subtitle">Noyau Vert</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-meteno">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/MetenoB.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Bleu" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Météno</h2>
+        <p class="pokemon-subtitle">Noyau Bleu</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-meteno">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/MetenoI.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Indigo" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Météno</h2>
+        <p class="pokemon-subtitle">Noyau Indigo</p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-meteno">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/MetenoVi.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Violet" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Météno</h2>
+        <p class="pokemon-subtitle">Noyau Violet</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          INFOS SUPPLÉMENTAIRES          -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1">Infos Supplémentaires</h2>
+  <div class="intro-rules">
+    <p>En combat, Météno peut changer de forme. Lorsque ses PV passent sous 50%, Météno révèle son noyau ! Il possède alors une Attaque plus élevée, mais une Défense plus faible ! Cela ne se produira, au départ, que lors des Combats de PvP.</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

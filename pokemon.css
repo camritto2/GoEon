@@ -1471,6 +1471,11 @@
 .pk-grodoudou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-grodoudou .emoji-shiny  { display: inline; }
 
+/* Grodrive — Bon / Shiny */
+.pk-grodrive .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grodrive .research-reward-name { color: var(--accent-vert-bon); }
+.pk-grodrive .emoji-shiny  { display: inline; }
+
 /* Grolem d'Alola — Bon / Shiny */
 .pk-grolem-a .pokemon-name { color: var(--accent-vert-bon); }
 .pk-grolem-a .research-reward-name { color: var(--accent-vert-bon); }
@@ -2113,6 +2118,8 @@
 .pk-metalosse .pokemon-name { color: var(--accent-vert-bon); }
 .pk-metalosse .research-reward-name { color: var(--accent-vert-bon); }
 .pk-metalosse .emoji-shiny  { display: inline; }
+
+/* Météno — Normal (pas de shiny pour le moment) */
 
 /* Métang — Bon / Shiny */
 .pk-metang .pokemon-name { color: var(--accent-vert-bon); }
@@ -3329,6 +3336,11 @@
 .pk-tokotoro .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tokotoro .emoji-shiny  { display: inline; }
 
+/* Tomberro — Bon (shiny à partir du 01/11, avec Toutombe) */
+.pk-tomberro .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tomberro .research-reward-name { color: var(--accent-vert-bon); }
+/* À décommenter le 01/11 : .pk-tomberro .emoji-shiny  { display: inline; } */
+
 /* Tortank — Bon / Shiny */
 .pk-tortank .pokemon-name { color: var(--accent-vert-bon); }
 .pk-tortank .research-reward-name { color: var(--accent-vert-bon); }
@@ -3351,6 +3363,11 @@
 
 /* Tournegrin — Normal / Shiny */
 .pk-tournegrin .emoji-shiny { display: inline; }
+
+/* Toutombe — Bon (shiny à partir du 01/11, Halloween 2026 - 2e Partie) */
+.pk-toutombe .pokemon-name { color: var(--accent-vert-bon); }
+.pk-toutombe .research-reward-name { color: var(--accent-vert-bon); }
+/* À décommenter le 01/11 : .pk-toutombe .emoji-shiny  { display: inline; } */
 
 /* Toxizap — Bon / Shiny */
 .pk-toxizap .pokemon-name { color: var(--accent-vert-bon); }

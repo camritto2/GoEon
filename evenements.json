@@ -470,12 +470,14 @@
         {
           "nom": "Pluie de Météno",
           "debut": "2026-10-20T00:00",
-          "fin": "2026-10-24T23:59"
+          "fin": "2026-10-24T23:59",
+          "page": "PluieMeteno.html"
         },
         {
           "nom": "Halloween - Partie 1",
           "debut": "2026-10-27T10:00",
-          "fin": "2026-11-01T10:00"
+          "fin": "2026-11-01T10:00",
+          "page": "Halloween2026.html"
         }
       ],
       "raids": [
@@ -868,7 +870,20 @@
     {
       "cle": "2026-11",
       "libelle": "Novembre 2026",
-      "evenements": [],
+      "evenements": [
+        {
+          "nom": "Halloween - Partie 2",
+          "debut": "2026-11-02T00:00",
+          "fin": "2026-11-05T20:00",
+          "page": "Halloween2026.html"
+        },
+        {
+          "nom": "Pluie de Météno",
+          "debut": "2026-11-14T17:00",
+          "fin": "2026-11-19T23:59",
+          "page": "PluieMeteno.html"
+        }
+      ],
       "raids": [],
       "quotidiens": [
         {
@@ -885,6 +900,20 @@
           ]
         }
       ]
+    },
+    {
+      "cle": "2026-12",
+      "libelle": "Décembre 2026",
+      "evenements": [
+        {
+          "nom": "Pluie de Météno",
+          "debut": "2026-12-11T17:00",
+          "fin": "2026-12-16T23:59",
+          "page": "PluieMeteno.html"
+        }
+      ],
+      "raids": [],
+      "quotidiens": []
     }
   ]
 }
