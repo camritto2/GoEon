@@ -517,6 +517,15 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   margin-left: 3px;
 }
 
+/* Petite icône dans le texte courant (Noctali, Mentali, feuille, glaçon) */
+.icone-texte {
+  height: 1.3em;
+  width: auto;
+  object-fit: contain;
+  vertical-align: -0.3em;
+  margin-left: 4px;
+}
+
 /* Attaque mise en avant dans un encadré d'intro (section Attaque Spéciale des
    pages évènement) : le nom est centré, l'icône de type est calibrée sur lui
    et non sur un sous-titre, d'où une taille différente de .attaque-type-icon.

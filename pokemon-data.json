@@ -1687,6 +1687,17 @@
         "n25": null
       }
     },
+    "kyurem": {
+      "types": [
+        "Dragon",
+        "Glace"
+      ],
+      "pc": {
+        "n15": 1532,
+        "n20": 2042,
+        "n25": 2553
+      }
+    },
     "laggron": {
       "types": null,
       "pc": {
@@ -2794,6 +2805,17 @@
         "n25": null
       }
     },
+    "reshiram": {
+      "types": [
+        "Dragon",
+        "Feu"
+      ],
+      "pc": {
+        "n15": 1731,
+        "n20": 2307,
+        "n25": 2884
+      }
+    },
     "rhinocorne": {
       "types": [
         "Sol",
@@ -3571,6 +3593,17 @@
         "n15": 354,
         "n20": 472,
         "n25": 590
+      }
+    },
+    "zekrom": {
+      "types": [
+        "Dragon",
+        "Électrik"
+      ],
+      "pc": {
+        "n15": 1731,
+        "n20": 2307,
+        "n25": 2884
       }
     },
     "zigzaton": {
