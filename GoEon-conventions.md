@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.6 - 25 septembre 2026.*
+*Version 5.7 - 10 octobre 2026.*
 
 ## Ce qu'est ce document
 
@@ -174,6 +174,9 @@ Mise en œuvre : `toggleAltImm('id-imm', 'id-imm-alt')` + un `<span>` masqué. S
 - **Où va la note qui explique un `-`.** Si l'attaque de face est **du type de la page**, la note explique seulement l'absence de 2e attaque : elle va dans le build, en `build-note`, avec un seul renvoi sur le tiret. Si l'attaque de face est **d'un autre type** (cas d'un Off-Type), la note explique aussi sa présence sur la page : elle reste en `card-note`, et le renvoi se pose sur l'attaque de face et sur le tiret.
 - **Deux classes de note, à ne pas confondre.** `card-note` s'affiche en permanence sous la carte (renvois de la face avant) ; `build-note` vit dans le build et n'apparait qu'au déploiement (renvois de la 2e Attaque Chargée). **Un audit qui ne cherche que `card-note` conclura à tort que des notes manquent.**
 - **Numérotation des renvois** : séquentielle dans l'ordre des cartes. Un numéro se **réutilise entre la forme Méga et la forme de base d'une même espèce** ; **deux espèces différentes gardent deux numéros distincts, même à texte identique**. Ne pas factoriser.
+- **Méga dont l'Attaque Bonus-Méga est de type X, présent sur deux Tops** : sur le Top X, Attaque Chargée « *Peu importe* » avec une bascule qui révèle l'Attaque Chargée de l'autre type, et 2e Attaque Chargée `-` sans cout. Sur l'autre Top, pas de ligne Bonus-Méga, 2e Attaque Chargée `-` et build-note « Méga-X possède l'Attaque Bonus Y++++ et n'a pas besoin d'une autre Attaque. » Modèle : Méga-Amphinobi.
+- **Une attaque Legacy citée dans une note porte son ᴸ**, et « Attaque » prend toujours la majuscule.
+- **Une icône masquée par une bascule** s'écrit comme les autres : une espace, puis `<img id="xxx-imm-icon" … class="type-icon-btn">`.
 - Puces d'intro colorées comme leur ligne, puce Legacy neutre.
 
 ### Activation d'une nouvelle page Top

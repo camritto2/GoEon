@@ -33,7 +33,7 @@
         <div class="intro-item"><span class="bullet">•</span><span class="legacy-indicator">L</span> signifie que l'Attaque est "Legacy". Elle ne peut s'obtenir que lors d'évènements spéciaux ou avec une CT d'Élite.</div>
         <br>
         Plus de détails sur ce classement : <a href="#" class="lien-a-venir">Règles Générales</a><br><br>
-        💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures attaques en cas de double type.
+        💡 Astuce : Cliquez sur le badge coloré avec une flèche ▼ pour découvrir les meilleures Attaques en cas de double type.
         </div>
     </div>
 
@@ -49,23 +49,18 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Acide</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong><em>Peu importe</em></strong><span class="footnote-ref">1</span><br>
-                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Bombe Acide++++</strong><span class="footnote-ref">1</span>
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong id="mempi-ac"><em>Peu importe</em><span class="footnote-ref">1</span></strong><span id="mempi-ac-alt" style="display:none"> → <strong>Lame Feuille</strong></span><br>
+                    <span class="attack-label">Attaque Bonus-Méga</span> :<br><strong>Bombe Acide++++</strong><span id="mempi-mb-ref"><span class="footnote-ref">1</span></span>
                 </div>
                 <div class="card-button">
-                    <button id="toggle-mempi-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('mempi-details', 'toggle-mempi-btn')">
+                    <button id="toggle-mempi-btn" class="btn-plante" aria-expanded="false" onclick="toggleBuild('mempi-details', 'toggle-mempi-btn'); toggleAltImm('mempi-ac', 'mempi-ac-alt', 'mempi-note mempi-mb-ref')">
                     Également Top Plante <img src="Images/Plante.webp" alt="Type Plante" class="type-icon-btn"> <span class="arrow-indicator">▼</span>
                     </button>
                 </div>
                 <div class="card-build" id="mempi-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Lame Feuille</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
-                    </div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong>
                 </div>
-                <div class="card-note"><span class="footnote-ref">1</span> : Bombe Acide++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
+                <div class="card-note" id="mempi-note"><span class="footnote-ref">1</span> : Bombe Acide++++ fera toujours plus de dégâts que l'Attaque Chargée de base, qui ne servira pas : n'importe laquelle convient.</div>
             </div>
         </div>
 
@@ -142,12 +137,8 @@
                     </button>
                 </div>
                 <div class="card-build" id="mdard-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Plaie Croix</strong>
-                    <hr>
-                    <div class="attack-cost-container">
-                    <span class="attack-cost-title">Cout de la 2e Attaque :</span>
-                    <span class="attack-cost-value">25 Bonbons<br>+ 10 000 Poussières Étoile</span>
-                    </div>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">2</span>
+                    <div class="build-note"><span class="footnote-ref">2</span> : Méga-Dardargnan possède l'Attaque Bonus Dard Mortel++++ et n'a pas besoin d'une autre Attaque.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -203,7 +194,7 @@
             <div class="fandom-card">
                 <div class="card-rank">4</div>
                 <div class="card-image"><img src="Images/Roserade.png" alt="Roserade" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Roserade</span><span class="footnote-ref">2</span></strong></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Roserade</span><span class="footnote-ref">3</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
@@ -222,7 +213,7 @@
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
                 </div>
-                <div class="card-note"><span class="footnote-ref">2</span> : Rosélia est également utilisable, avec Direct Toxik et Bombe Beurk. Il se place alors entre Kravarech et Florizarre.</div>
+                <div class="card-note"><span class="footnote-ref">3</span> : Rosélia est également utilisable, avec Direct Toxik et Bombe Beurk. Il se place alors entre Kravarech et Florizarre.</div>
             </div>
         </div>
 
@@ -231,7 +222,7 @@
             <div class="fandom-card">
                 <div class="card-rank">5</div>
                 <div class="card-image"><div class="card-badges"><img src="Images/Obscur.png" alt="Obscur Disponible" title="Obscur Disponible"></div><img src="Images/Qwilpik.png" alt="Qwilpik" class="card-img"></div>
-                <div class="card-name"><strong><span class="pokemon-name-normal">Qwilpik</span><span class="footnote-ref">3</span></strong></div>
+                <div class="card-name"><strong><span class="pokemon-name-normal">Qwilpik</span><span class="footnote-ref">4</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
@@ -239,7 +230,7 @@
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note"><span class="footnote-ref">3</span> : Qwilfish de Hisui est également utilisable, avec Direct Toxik et Bombe Beurk. Il se place alors entre Nostenfer et Farfurex.</div>
+                <div class="card-note"><span class="footnote-ref">4</span> : Qwilfish de Hisui est également utilisable, avec Direct Toxik et Bombe Beurk. Il se place alors entre Nostenfer et Farfurex.</div>
             </div>
         </div>
 
@@ -423,7 +414,7 @@
                     </button>
                 </div>
                 <div class="card-build" id="grota-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Vibrobscur</strong>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>Centrifugifle</strong>
                     <hr>
                     <div class="attack-cost-container">
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
@@ -545,11 +536,11 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Plaie Croix</strong><span class="footnote-ref">4</span> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Plaie Croix</strong><span class="footnote-ref">5</span> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn">
                 </div>
                 <div class="card-button"></div>
                 <div class="card-build"></div>
-                <div class="card-note"><span class="footnote-ref">4</span> : Farfurex ne possède pas d'Attaque Chargée de type Poison.</div>
+                <div class="card-note"><span class="footnote-ref">5</span> : Farfurex ne possède pas d'Attaque Chargée de type Poison.</div>
             </div>
         </div>
 
@@ -561,7 +552,7 @@
                 <div class="card-name"><strong><span class="pokemon-name-normal">Nidoking</span></strong></div>
                 <div class="card-badges"></div>
                 <div class="card-attacks">
-                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="nidok-imm">Direct Toxik</strong><span id="nidok-imm-alt" style="display:none"> → <strong>Taillade</strong><span class="legacy-indicator">L</span> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn"></span><br>
+                    <span class="attack-label">Attaque Immédiate</span> :<br><strong id="nidok-imm">Direct Toxik</strong><span id="nidok-imm-alt" style="display:none"> → <strong>Taillade</strong><span class="legacy-indicator">L</span><span class="footnote-ref">6</span> <img src="Images/Insecte.webp" alt="Type Insecte" class="type-icon-btn"></span><br>
                     <span class="attack-label">Attaque Chargée</span> :<br><strong>Cradovague</strong>
                 </div>
                 <div class="card-button">
@@ -576,6 +567,7 @@
                     <span class="attack-cost-title">Cout de la 2e Attaque :</span>
                     <span class="attack-cost-value">50 Bonbons<br>+ 50 000 Poussières Étoile</span>
                     </div>
+                    <div class="build-note"><span class="footnote-ref">6</span> : Taillade<span class="legacy-indicator">L</span> permet de charger l'Attaque Chargée plus vite, et donc de la lancer plus souvent qu'avec une Attaque de type Sol.</div>
                 </div>
                 <div class="card-note hidden-note"></div>
             </div>
@@ -680,7 +672,7 @@
                 <div class="card-badges"></div>
                 <div class="card-attacks">
                     <span class="attack-label">Attaque Immédiate</span> :<br><strong>Direct Toxik</strong><br>
-                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong><span class="footnote-ref">5</span> <img src="Images/Electrik.webp" alt="Type Électrik" class="type-icon-btn">
+                    <span class="attack-label">Attaque Chargée</span> :<br><strong>Éclair Fou</strong><span class="footnote-ref">7</span> <img src="Images/Electrik.webp" alt="Type Électrik" class="type-icon-btn">
                 </div>
                 <div class="card-button">
                     <button id="toggle-salar-btn" class="btn-electrik" aria-expanded="false" onclick="toggleBuild('salar-details', 'toggle-salar-btn')">
@@ -688,24 +680,23 @@
                     </button>
                 </div>
                 <div class="card-build" id="salar-details">
-                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">5</span>
+                    <span class="attack-label">2e Attaque Chargée</span> :<br><strong>-</strong><span class="footnote-ref">7</span>
                 </div>
-                <div class="card-note"><span class="footnote-ref">5</span> : Salarsen ne possède pas d'Attaque Chargée de type Poison.</div>
+                <div class="card-note"><span class="footnote-ref">7</span> : Éclair Fou fera toujours plus de dégâts qu'une Attaque de type Poison.</div>
             </div>
         </div>
 
-        </div>
-    
+    </div>
+
     <hr class="section-divider">
-    
+
     <div class="more-info-container">
-        <span class="more-info-title">Plus d'informations : <a href="https://db.pokemongohub.net/fr/pokemon-list/best-per-type/poison" target="_blank" class="more-info-link">Cliquez ici</a></span>
+        <span class="more-info-title">Plus d'informations : <a href="https://www.dialgadex.com/?strongest=&amp;t=Poison&amp;lang=fr" target="_blank" class="more-info-link">Cliquez ici</a></span>
     </div>
 
 </div>
 
 <script src="script.js"></script>
-
 
 </body>
 </html>

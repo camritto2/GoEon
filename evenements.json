@@ -458,8 +458,7 @@
         {
           "nom": "World Space Week 2026",
           "debut": "2026-10-06T00:00",
-          "fin": "2026-10-10T23:59",
-          "page": "WorldSpaceWeek.html"
+          "fin": "2026-10-10T23:59"
         },
         {
           "nom": "Marathon Automnal",
@@ -686,7 +685,6 @@
           "sprites": [
             "Zorua.png"
           ],
-          "page": "CDZorua.html",
           "lignes": [
             "Community Day",
             "14h-17h/21h"

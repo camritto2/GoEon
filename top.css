@@ -227,16 +227,6 @@ body.dark-mode .pokemon-name-mega {
   font-size: 8px;
 }
 
-.build-footnote {
-  display: none;
-  font-size: 8px;
-  color: var(--text-muet);
-  text-align: left;
-  margin-top: -4px;
-  padding: 0 16px 6px 16px;
-  line-height: 1.4;
-}
-
 .build-note {
   font-size: 8px;
   color: var(--text-muet);
@@ -245,12 +235,6 @@ body.dark-mode .pokemon-name-mega {
   padding-top: 4px;
   border-top: 1px solid var(--hr-separator);
   line-height: 1.4;
-}
-
-/* Dialga Originel (TopAcier + TopDragon) : affiche la note Legacy
-   quand son build alternatif est déplié */
-#dialgao-details.open ~ #dialgaoL-note {
-  display: block;
 }
 
 /* Image carte */
@@ -341,11 +325,6 @@ body.dark-mode .pokemon-name-mega {
   height: 12px;
   width: auto;
   vertical-align: middle;
-}
-
-/* Icône décalée après l'attaque immédiate alternative */
-.icone-imm {
-  margin-left: 4px;
 }
 
 /* Flèche des boutons de build */
@@ -672,7 +651,6 @@ body.dark-mode .legend-red { color: #ff8787; }
   .badge-obscur { padding: 4px 12px; font-size: 11px; letter-spacing: 0.5px; gap: 4px; }
   .attack-cost-value { font-size: 16px; }
   .card-note:not(.hidden-note) { font-size: 13px; }
-  .build-footnote { font-size: 13px; }
   .build-note { font-size: 13px; }
 
   .pokemon-name-legendary,

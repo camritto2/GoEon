@@ -28,14 +28,19 @@
     Mais certains Pokémon (notamment les champignons et ceux avec des pierres précieuses) offrent encore plus de Poussières Étoile. Les voici :
   </div>
 
+  <!-- data-pk : la météo se déduit des types lus dans pokemon-data.json (§20).
+       Le script ne remplit que les conteneurs VIDES : un Pokémon dont les types
+       ne sont pas encore relevés garde sa météo écrite en dur. Une fois ses
+       types dans la base, vider son weather-container. -->
+
   <!-- 500 -->
   <h2 class="category-title tier-1">500 Poussières Étoile</h2>
   <p class="section-sous-titre">(Ou 625 avec le Boost Météo)</p>
   <div class="pokemon-grid pokemon-grid-6">
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="paras">
       <div class="image-container"><div class="badges"></div><img src="Images/Paras.png" alt="Paras" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Paras</h2>
+        <h2 class="pokemon-name">Paras</h2>
         <hr class="separator">
         <div class="pokemon-stats">
           <div class="weather-container">
@@ -45,10 +50,10 @@
         </div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="miaouss">
       <div class="image-container"><div class="badges"></div><img src="Images/Miaouss.png" alt="Miaouss" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Miaouss</h2>
+        <h2 class="pokemon-name">Miaouss</h2>
         <hr class="separator">
         <div class="pokemon-stats">
           <div class="weather-container">
@@ -57,35 +62,30 @@
         </div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="balignon">
       <div class="image-container"><div class="badges"></div><img src="Images/Balignon.png" alt="Balignon" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Balignon</h2>
+        <h2 class="pokemon-name">Balignon</h2>
         <hr class="separator">
         <div class="pokemon-stats">
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="Images/Ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
-          </div>
+          <div class="weather-container"></div>
         </div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="trompignon">
       <div class="image-container"><div class="badges"></div><img src="Images/Trompignon.png" alt="Trompignon" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Trompignon</h2>
+        <h2 class="pokemon-name">Trompignon</h2>
         <hr class="separator">
         <div class="pokemon-stats">
-          <div class="weather-container">
-            <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="Images/Ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
-            <div class="weather-block"><span class="weather-text">Couvert</span><img src="Images/Couvert.webp" alt="Couvert" class="weather-icon"></div>
-          </div>
+          <div class="weather-container"></div>
         </div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="spododo">
       <div class="image-container"><div class="badges"></div><img src="Images/Spododo.png" alt="Spododo" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Spododo</h2>
+        <h2 class="pokemon-name">Spododo</h2>
         <hr class="separator">
         <div class="pokemon-stats">
           <div class="weather-container">
@@ -95,10 +95,10 @@
         </div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="cadoizo">
       <div class="image-container"><div class="badges"></div><img src="Images/Cadoizo.png" alt="Cadoizo" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Cadoizo</h2>
+        <h2 class="pokemon-name">Cadoizo</h2>
         <hr class="separator">
         <div class="pokemon-stats">
           <div class="weather-container">
@@ -114,10 +114,10 @@
   <h2 class="category-title tier-1">700 Poussières Étoile</h2>
   <p class="section-sous-titre">(Ou 875 avec le Boost Météo)</p>
   <div class="pokemon-grid pokemon-grid-6">
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="parasect">
       <div class="image-container"><div class="badges"></div><img src="Images/Parasect.png" alt="Parasect" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Parasect</h2>
+        <h2 class="pokemon-name">Parasect</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
@@ -125,20 +125,20 @@
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="persian">
       <div class="image-container"><div class="badges"></div><img src="Images/Persian.png" alt="Persian" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Persian</h2>
+        <h2 class="pokemon-name">Persian</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="Images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="chapignon">
       <div class="image-container"><div class="badges"></div><img src="Images/Chapignon.png" alt="Chapignon" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Chapignon</h2>
+        <h2 class="pokemon-name">Chapignon</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="Images/Ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
@@ -146,10 +146,10 @@
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="gaulet">
       <div class="image-container"><div class="badges"></div><img src="Images/Gaulet.png" alt="Gaulet" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Gaulet</h2>
+        <h2 class="pokemon-name">Gaulet</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="Images/Ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
@@ -157,10 +157,10 @@
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="lampignon">
       <div class="image-container"><div class="badges"></div><img src="Images/Lampignon.png" alt="Lampignon" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Lampignon</h2>
+        <h2 class="pokemon-name">Lampignon</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Ensoleillé</span><img src="Images/Ensoleille.webp" alt="Ensoleillé" class="weather-icon"></div>
@@ -174,55 +174,48 @@
   <h2 class="category-title tier-1">750 Poussières Étoile</h2>
   <p class="section-sous-titre">(Ou 937 avec le Boost Météo)</p>
   <div class="pokemon-grid pokemon-grid-6">
-    <div class="pokemon-card">
-      <div class="image-container"><div class="badges"></div><img src="Images/MiaoussA.png" alt="Miaouss<br>d'Alola" class="pokemon-img"></div>
+    <div class="pokemon-card" data-pk="miaouss-a">
+      <div class="image-container"><div class="badges"></div><img src="Images/MiaoussA.png" alt="Miaouss d'Alola" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Miaouss<br>d'Alola</h2>
+        <h2 class="pokemon-name">Miaouss<br>d'Alola</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Brouillard</span><img src="Images/Brouillard.webp" alt="Brouillard" class="weather-icon"></div>
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="stari">
       <div class="image-container"><div class="badges"></div><img src="Images/Stari.png" alt="Stari" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Stari</h2>
+        <h2 class="pokemon-name">Stari</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="apitrini">
       <div class="image-container"><div class="badges"></div><img src="Images/Apitrini.png" alt="Apitrini" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Apitrini</h2>
+        <h2 class="pokemon-name">Apitrini</h2>
         <hr class="separator">
-        <div class="pokemon-stats"><div class="weather-container">
-          <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
-          <div class="weather-block"><span class="weather-text">Vent</span><img src="Images/Vent.webp" alt="Vent" class="weather-icon"></div>
-        </div></div>
+        <div class="pokemon-stats"><div class="weather-container"></div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="miamiasme">
       <div class="image-container"><div class="badges"></div><img src="Images/Miamiasme.png" alt="Miamiasme" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Miamiasme</h2>
+        <h2 class="pokemon-name">Miamiasme</h2>
         <hr class="separator">
-        <div class="pokemon-stats"><div class="weather-container">
-          <div class="weather-block"><span class="weather-text">Couvert</span><img src="Images/Couvert.webp" alt="Couvert" class="weather-icon"></div>
-        </div></div>
+        <div class="pokemon-stats"><div class="weather-container"></div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="tenefix">
       <div class="image-container"><div class="badges"></div><img src="Images/Tenefix.png" alt="Ténéfix" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Ténéfix</h2>
+        <h2 class="pokemon-name">Ténéfix</h2>
         <hr class="separator">
-        <div class="pokemon-stats"><div class="weather-container">
-          <div class="weather-block"><span class="weather-text">Brouillard</span><img src="Images/Brouillard.webp" alt="Brouillard" class="weather-icon"></div>
-        </div></div>
+        <div class="pokemon-stats"><div class="weather-container"></div></div>
       </div>
     </div>
   </div>
@@ -231,31 +224,28 @@
   <h2 class="category-title tier-1">950 Poussières Étoile</h2>
   <p class="section-sous-titre">(Ou 1 187 avec le Boost Météo)</p>
   <div class="pokemon-grid pokemon-grid-6">
-    <div class="pokemon-card">
-      <div class="image-container"><div class="badges"></div><img src="Images/PersianA.png" alt="Persian<br>d'Alola" class="pokemon-img"></div>
+    <div class="pokemon-card" data-pk="persian-a">
+      <div class="image-container"><div class="badges"></div><img src="Images/PersianA.png" alt="Persian d'Alola" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Persian<br>d'Alola</h2>
+        <h2 class="pokemon-name">Persian<br>d'Alola</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Brouillard</span><img src="Images/Brouillard.webp" alt="Brouillard" class="weather-icon"></div>
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="staross">
       <div class="image-container"><div class="badges"></div><img src="Images/Staross.png" alt="Staross" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Staross</h2>
+        <h2 class="pokemon-name">Staross</h2>
         <hr class="separator">
-        <div class="pokemon-stats"><div class="weather-container">
-          <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
-          <div class="weather-block"><span class="weather-text">Vent</span><img src="Images/Vent.webp" alt="Vent" class="weather-icon"></div>
-        </div></div>
+        <div class="pokemon-stats"><div class="weather-container"></div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="apireine">
       <div class="image-container"><div class="badges"></div><img src="Images/Apireine.png" alt="Apireine" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Apireine</h2>
+        <h2 class="pokemon-name">Apireine</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
@@ -263,10 +253,10 @@
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="miasmax">
       <div class="image-container"><div class="badges"></div><img src="Images/Miasmax.png" alt="Miasmax" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Miasmax</h2>
+        <h2 class="pokemon-name">Miasmax</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Couvert</span><img src="Images/Couvert.webp" alt="Couvert" class="weather-icon"></div>
@@ -279,21 +269,20 @@
   <h2 class="category-title tier-1">1 000 Poussières Étoile</h2>
   <p class="section-sous-titre">(Ou 1 250 avec le Boost Météo)</p>
   <div class="pokemon-grid pokemon-grid-6">
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="kokiyas">
       <div class="image-container"><div class="badges"></div><img src="Images/Kokiyas.png" alt="Kokiyas" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Kokiyas</h2>
+        <h2 class="pokemon-name">Kokiyas</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
-          <div class="weather-block"><span class="weather-text">Neige</span><img src="Images/Neige.webp" alt="Neige" class="weather-icon"></div>
         </div></div>
       </div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="eoko">
       <div class="image-container"><div class="badges"></div><img src="Images/Eoko.png" alt="Éoko" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Éoko</h2>
+        <h2 class="pokemon-name">Éoko</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Vent</span><img src="Images/Vent.webp" alt="Vent" class="weather-icon"></div>
@@ -306,10 +295,10 @@
   <h2 class="category-title tier-1">1 200 Poussières Étoile</h2>
   <p class="section-sous-titre">(Ou 1 500 avec le Boost Météo)</p>
   <div class="pokemon-grid pokemon-grid-6">
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="crustabri">
       <div class="image-container"><div class="badges"></div><img src="Images/Crustabri.png" alt="Crustabri" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Crustabri</h2>
+        <h2 class="pokemon-name">Crustabri</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Pluvieux</span><img src="Images/Pluvieux.webp" alt="Pluvieux" class="weather-icon"></div>
@@ -323,10 +312,10 @@
   <h2 class="category-title tier-1">2 100 Poussières Étoile</h2>
   <p class="section-sous-titre">(Ou 2 625 avec le Boost Météo)</p>
   <div class="pokemon-grid pokemon-grid-6">
-    <div class="pokemon-card">
+    <div class="pokemon-card" data-pk="nanmeouie">
       <div class="image-container"><div class="badges"></div><img src="Images/Nanmeouie.png" alt="Nanméouïe" class="pokemon-img"></div>
       <div class="card-content">
-        <h2 class="pokemon-name pokemon-normal">Nanméouïe</h2>
+        <h2 class="pokemon-name">Nanméouïe</h2>
         <hr class="separator">
         <div class="pokemon-stats"><div class="weather-container">
           <div class="weather-block"><span class="weather-text">Q. Nuages</span><img src="Images/Quelques_Nuages.webp" alt="Q. Nuages" class="weather-icon"></div>
