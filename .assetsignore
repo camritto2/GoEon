@@ -2,6 +2,5 @@
 .gitignore
 .assetsignore
 wrangler.jsonc
-GoEon-chantiers.md
 GoEon-conventions.md
 InfographieModele.html
