@@ -119,6 +119,19 @@ h1 {
   border-bottom: 1px solid var(--hr-separator);
 }
 
+/* Bandeau long (plusieurs rangs fusionnés) : texte réduit et sans retour
+   à la ligne, pour tenir sur la largeur d'une carte mobile. La réduction
+   porte sur le <span> intérieur : le bandeau garde sa propre taille de
+   police, donc sa hauteur de ligne, et reste aussi haut que ses voisins. */
+.passe-go-rank.passe-go-rank-long {
+  padding: 3px 4px;
+  white-space: nowrap;
+}
+
+.passe-go-rank-long span {
+  font-size: 9px;
+}
+
 .research-rewards {
   display: flex;
   flex-wrap: wrap;
@@ -163,6 +176,25 @@ h1 {
   max-height: 100%;
 }
 
+/* Objets en récompense (Méga-Énergie, Super-Bonbon…) : leur image remplit
+   tout le cadre, alors qu'un sprite Pokémon a des marges transparentes.
+   On les réduit pour qu'ils aient la même taille visuelle. */
+.research-image-container .objet-img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+/* Pastille d'espèce sur un objet (Méga-Énergie, Bonbon…) : sprite du
+   Pokémon en petit, en bas à droite de l'icône générique. Simple <img> sans
+   pokemon-img, donc ignoré par la bascule shiny. */
+.research-image-container .objet-pastille {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: auto;
+}
+
 .research-image-container .badges {
   top: 2px;
   left: -6px;
@@ -171,6 +203,14 @@ h1 {
 .research-image-container .emoji-shiny {
   width: 10px;
   height: 10px;
+}
+
+/* Flèche du shiny boosté, à l'échelle du badge des tâches d'étude (10px en
+   mobile au lieu de 14px) : mêmes proportions que .shiny-boost-circle::after. */
+.research-image-container .shiny-boost-circle::after {
+  width: 6px;
+  height: 14px;
+  margin-left: -1px;
 }
 
 .research-image-container .emoji-costume {
@@ -193,6 +233,13 @@ h1 {
   max-width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid var(--hr-separator);
+}
+
+/* Récompense sans PC (objet) : le nom est alors le dernier enfant, et le
+   filet n'a plus rien à séparer. */
+.research-reward-name:last-child,
+.research-reward-head:last-child {
+  border-bottom: none;
 }
 
 .research-reward-name.reward-good {
@@ -1146,6 +1193,7 @@ body.dark-mode .proba-icon {
   .research-list { max-width: 100%; }
   .research-saison-titre { font-size: 18px; margin: -15px 0 16px 0; }
   .passe-go-rank { font-size: 16px; }
+  .passe-go-rank-long span { font-size: 13px; }
   .passe-go-intro { font-size: 16px; }
   .passe-go-pc { font-size: 14px; }
   .pokemon-card:has(.passe-go-rank) .image-container { padding-bottom: 0; }
@@ -1222,6 +1270,7 @@ body.dark-mode .proba-icon {
   .research-reward-name { font-size: 16px; align-self: stretch; }
   .research-image-container { width: 100px; height: 100px; }
   .research-image-container .emoji-shiny { width: 20px; height: 20px; }
+  .research-image-container .shiny-boost-circle::after { width: 13px; height: 28px; margin-left: -3px; }
   .research-image-container .emoji-costume { width: 20px; height: 20px; }
   .research-image-container .badges { top: 6px; left: -10px; }
   .research-reward-head { font-size: 16px; }

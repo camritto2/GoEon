@@ -36,6 +36,17 @@
         "n25": null
       }
     },
+    "airmure": {
+      "types": [
+        "Acier",
+        "Vol"
+      ],
+      "pc": {
+        "n15": 903,
+        "n20": 1204,
+        "n25": 1506
+      }
+    },
     "akwakwak": {
       "types": null,
       "pc": {
@@ -138,6 +149,17 @@
         "n15": 1298,
         "n20": null,
         "n25": null
+      }
+    },
+    "arcanin-h": {
+      "types": [
+        "Feu",
+        "Roche"
+      ],
+      "pc": {
+        "n15": 1348,
+        "n20": 1797,
+        "n25": 2247
       }
     },
     "archeduc": {
@@ -375,6 +397,16 @@
         "n25": 893
       }
     },
+    "cacnea": {
+      "types": [
+        "Plante"
+      ],
+      "pc": {
+        "n15": 532,
+        "n20": 709,
+        "n25": 887
+      }
+    },
     "canarbello": {
       "types": [
         "Eau"
@@ -470,6 +502,16 @@
         "n15": 803,
         "n20": null,
         "n25": null
+      }
+    },
+    "cerfrousse": {
+      "types": [
+        "Normal"
+      ],
+      "pc": {
+        "n15": 927,
+        "n20": 1236,
+        "n25": 1546
       }
     },
     "chacripan": {
@@ -666,6 +708,17 @@
         "n15": 586,
         "n20": null,
         "n25": null
+      }
+    },
+    "crabicoque": {
+      "types": [
+        "Insecte",
+        "Roche"
+      ],
+      "pc": {
+        "n15": 524,
+        "n20": 699,
+        "n25": 874
       }
     },
     "cradopaud": {
@@ -1358,6 +1411,17 @@
         "n25": 427
       }
     },
+    "granivol": {
+      "types": [
+        "Plante",
+        "Vol"
+      ],
+      "pc": {
+        "n15": 257,
+        "n20": 342,
+        "n25": 428
+      }
+    },
     "grenousse": {
       "types": [
         "Eau"
@@ -1457,6 +1521,17 @@
         "n15": 464,
         "n20": 618,
         "n25": null
+      }
+    },
+    "hachecateur": {
+      "types": [
+        "Insecte",
+        "Roche"
+      ],
+      "pc": {
+        "n15": 1348,
+        "n20": 1798,
+        "n25": 2247
       }
     },
     "helionceau": {
@@ -3442,9 +3517,9 @@
         "Spectre"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null
+        "n15": 375,
+        "n20": 501,
+        "n25": 626
       }
     },
     "volcaropod": {
@@ -3461,6 +3536,17 @@
         "n15": 1238,
         "n20": null,
         "n25": null
+      }
+    },
+    "voltorbe-h": {
+      "types": [
+        "Électrik",
+        "Plante"
+      ],
+      "pc": {
+        "n15": 432,
+        "n20": 577,
+        "n25": 721
       }
     },
     "vorasterie": {
@@ -3593,6 +3679,16 @@
         "n15": 354,
         "n20": 472,
         "n25": 590
+      }
+    },
+    "zebibron": {
+      "types": [
+        "Électrik"
+      ],
+      "pc": {
+        "n15": 378,
+        "n20": 504,
+        "n25": 630
       }
     },
     "zekrom": {

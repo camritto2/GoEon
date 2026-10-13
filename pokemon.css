@@ -393,6 +393,9 @@
 .pk-cabriolaine .research-reward-name { color: var(--accent-vert-bon); }
 .pk-cabriolaine .emoji-shiny  { display: inline; }
 
+/* Cacnea — Normal / Shiny */
+.pk-cacnea .emoji-shiny { display: inline; }
+
 /* Camerupt — Bon / Shiny */
 .pk-camerupt .pokemon-name { color: var(--accent-vert-bon); }
 .pk-camerupt .research-reward-name { color: var(--accent-vert-bon); }
@@ -3514,6 +3517,9 @@
 
 /* Voltorbe — Normal / Shiny */
 .pk-voltorbe .emoji-shiny  { display: inline; }
+
+/* Voltorbe de Hisui — Normal / Shiny */
+.pk-voltorbe-h .emoji-shiny  { display: inline; }
 
 /* Vorastérie — Normal / Shiny */
 .pk-vorasterie .emoji-shiny { display: inline; }

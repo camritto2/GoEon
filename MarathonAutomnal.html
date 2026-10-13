@@ -30,7 +30,7 @@
     <a href="#sauvages">Pokémon Sauvages</a>
     <a href="#encens">Encens</a>
     <a href="#taches">Tâches d'Étude</a>
-    <a href="#etude">Étude Ponctuelle</a>
+    <a href="#etude">Étude Temporelle</a>
     <a href="#attaque">Nouvelle Attaque</a>
     <a href="#passe">Passe Go</a>
   </nav>
@@ -84,6 +84,8 @@
 
   <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
 
+  <!-- Cacnea : classe pk-cacnea absente de pokemon.css, images Cacnea.png /
+       CacneaS.png à déposer. -->
   <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card pk-ponyta">
@@ -106,6 +108,16 @@
       </div>
     </div>
 
+    <div class="pokemon-card pk-cerfrousse">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Cerfrousse.png" data-shiny="Images/CerfrousseS.png" alt="Cerfrousse" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Cerfrousse</h2>
+      </div>
+    </div>
+
     <div class="pokemon-card pk-dynavolt">
       <div class="image-container">
         <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
@@ -116,7 +128,16 @@
       </div>
     </div>
 
-    <!-- Zébibron : images Zebibron.png / ZebibronS.png à déposer. -->
+    <div class="pokemon-card pk-cacnea">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Cacnea.png" data-shiny="Images/CacneaS.png" alt="Cacnea" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Cacnea</h2>
+      </div>
+    </div>
+
     <div class="pokemon-card pk-zebibron">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
@@ -265,25 +286,99 @@
 
   <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
 
-  <p class="section-sous-titre"><em>Détails à venir</em></p>
+  <!-- Images SuperBonbon.webp et MegaEnergie.webp à déposer (nommage des
+       objets, en .webp). La Méga-Énergie est générique : l'espèce est donnée
+       par la pastille objet-pastille, le sprite du Pokémon en bas à droite. -->
+  <div class="research-list">
 
-  <div class="intro-rules">
-    <div class="intro-item"><span class="bullet">• </span>Doduo</div>
-    <div class="intro-item"><span class="bullet">• </span><span class="texte-vert">Dynavolt</span></div>
-    <div class="intro-item"><span class="bullet">• </span>Virovent</div>
-    <div class="intro-item"><span class="bullet">• </span>Méga-Énergie Élecsprint</div>
-    <div class="intro-item"><span class="bullet">• </span>Super Bonbons</div>
+    <div class="research-card">
+      <span class="research-task">Gagne un Bonbon en marchant avec ton Copain</span>
+      <div class="research-rewards">
+        <div class="research-reward-item pk-virovent" data-pk="virovent">
+          <div class="research-image-container">
+            <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+            <img src="Images/Virovent.png" data-shiny="Images/ViroventS.png" alt="Virovent" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Virovent</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+        <div class="research-reward-item pk-dynavolt" data-pk="dynavolt">
+          <div class="research-image-container">
+            <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+            <img src="Images/Dynavolt.png" data-shiny="Images/DynavoltS.png" alt="Dynavolt" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Dynavolt</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-task">Explore 1 km</span>
+      <div class="research-rewards">
+        <div class="research-reward-item pk-cacnea" data-pk="cacnea">
+          <div class="research-image-container">
+            <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+            <img src="Images/Cacnea.png" data-shiny="Images/CacneaS.png" alt="Cacnea" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Cacnea</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+        <div class="research-reward-item pk-doduo" data-pk="doduo">
+          <div class="research-image-container">
+            <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+            <img src="Images/Doduo.png" data-shiny="Images/DoduoS.png" alt="Doduo" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Doduo</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+        <div class="research-reward-item pk-dynavolt" data-pk="dynavolt">
+          <div class="research-image-container">
+            <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+            <img src="Images/Dynavolt.png" data-shiny="Images/DynavoltS.png" alt="Dynavolt" class="pokemon-img">
+          </div>
+          <span class="research-reward-name">Dynavolt</span>
+          <span class="research-cp" data-pc="n15"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="research-card">
+      <span class="research-task">Explore 3 km<br>Fais tourner un nouveau Pokéstop</span>
+      <div class="research-rewards">
+        <div class="research-reward-item">
+          <div class="research-image-container">
+            <img src="Images/SuperBonbon.webp" alt="1 Super Bonbon" class="pokemon-img objet-img">
+          </div>
+          <span class="research-reward-name">1 Super Bonbon</span>
+        </div>
+        <div class="research-reward-item">
+          <div class="research-image-container">
+            <img src="Images/MegaEnergie.webp" alt="25 Méga-Énergie Élecsprint" class="pokemon-img objet-img">
+            <img src="Images/Elecsprint.png" alt="" class="objet-pastille">
+          </div>
+          <span class="research-reward-name">25 Méga-Énergie</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- ═══════════════════════════════════════ -->
-  <!--            ÉTUDE PONCTUELLE           -->
+  <!--            ÉTUDE TEMPORELLE           -->
   <!-- ═══════════════════════════════════════ -->
 
-  <h2 class="category-title tier-1" id="etude">Étude Ponctuelle</h2>
+  <h2 class="category-title tier-1" id="etude">Étude Temporelle</h2>
 
   <div class="intro-rules">
-    <div class="intro-item"><span class="bullet">• </span>16 800 PX</div>
+    <div class="intro-item"><span class="bullet">• </span>Étape 1 : Explore 5 km</div>
+    <div class="intro-item"><span class="bullet">• </span>Étape 2 : Explore 10 km</div>
+    <div class="intro-item"><span class="bullet">• </span>Étape 3 : Explore 21 km</div>
+    <div class="intro-item"><span class="bullet">• </span>Étape 4 : Explore 42 km</div>
+    <div class="intro-item intro-item-sous"><span class="bullet">◦ </span>4200 PX à chaque étape</div>
   </div>
+
+  <p class="section-sous-titre">Récompense finale</p>
 
   <div class="pokemon-grid pokemon-grid-6">
 
@@ -296,7 +391,7 @@
       </div>
       <div class="card-content">
         <h2 class="pokemon-name nom-neutre">Pikachu</h2>
-        <p class="pokemon-subtitle">Portant une visière de marathon</p>
+        <p class="pokemon-subtitle">Portant une visière de Marathon</p>
         <hr class="separator">
         <div class="pokemon-stats">
           <p>PC du 100% : <span class="boost-value" data-pc="n15"></span></p>
@@ -316,6 +411,7 @@
     <p class="attaque-vedette"><strong>Coup d'Jus+</strong> <img src="Images/Electrik.webp" alt="Électrik" class="attaque-vedette-icon"></p>
     <div class="intro-item"><span class="bullet">• </span>PvP : Puissance 50</div>
     <div class="intro-item"><span class="bullet">• </span>Raids : Puissance 150</div>
+    <div class="intro-item"><span class="bullet">• </span>La puissance de l'Attaque augmente avec le Méga-Niveau</div>
   </div>
 
   <!-- ═══════════════════════════════════════ -->
@@ -324,9 +420,210 @@
 
   <h2 class="category-title tier-1" id="passe">Passe Go</h2>
 
+  <p class="section-sous-titre">Bonus</p>
   <div class="intro-rules">
     <div class="intro-item"><span class="bullet">• </span>Rang 10 : Durée des Encens montée à 2h</div>
     <div class="intro-item"><span class="bullet">• </span>Rang 20 : 5 fois plus de Méga-Énergie obtenue en marchant avec Dynavolt ou Élecsprint</div>
+  </div>
+
+  <p class="section-sous-titre">Tâches quotidiennes</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Utilise un Encens : 50 points</div>
+    <div class="intro-item"><span class="bullet">• </span>Explore 1 km : 50 points</div>
+  </div>
+
+  <p class="section-sous-titre">Récompenses</p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-cacnea" data-pk="cacnea">
+      <div class="passe-go-rank">Rang 4</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Cacnea.png" data-shiny="Images/CacneaS.png" alt="Cacnea" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Cacnea</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-ponyta" data-pk="ponyta">
+      <div class="passe-go-rank">Rang 8</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Ponyta.png" data-shiny="Images/PonytaS.png" alt="Ponyta" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Ponyta</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-dynavolt" data-pk="dynavolt">
+      <div class="passe-go-rank passe-go-rank-long"><span>Rangs 9, 18, 26 &amp; 27</span></div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Dynavolt.png" data-shiny="Images/DynavoltS.png" alt="Dynavolt" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Dynavolt</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-zebibron" data-pk="zebibron">
+      <div class="passe-go-rank">Rang 14</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Zebibron.png" data-shiny="Images/ZebibronS.png" alt="Zébibron" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zébibron</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-airmure" data-pk="airmure">
+      <div class="passe-go-rank">Rang 19</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Airmure.png" data-shiny="Images/AirmureS.png" alt="Airmure" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Airmure</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-caninos-h" data-pk="caninos-h">
+      <div class="passe-go-rank">Rangs 28 &amp; 29</div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/CaninosH.png" data-shiny="Images/CaninosHS.png" alt="Caninos de Hisui" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Caninos de Hisui</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-virovent" data-pk="virovent">
+      <div class="passe-go-rank">Rangs 30 &amp; 60</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Virovent.png" data-shiny="Images/ViroventS.png" alt="Virovent" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Virovent</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="section-sous-titre">Passe Go Deluxe</p>
+
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-granivol" data-pk="granivol">
+      <div class="passe-go-rank">Rang 4</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Granivol.png" data-shiny="Images/GranivolS.png" alt="Granivol" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Granivol</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-ponyta-g" data-pk="ponyta-g">
+      <div class="passe-go-rank">Rang 8</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/PonytaG.png" data-shiny="Images/PonytaGS.png" alt="Ponyta de Galar" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Ponyta de Galar</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-dynavolt" data-pk="dynavolt">
+      <div class="passe-go-rank passe-go-rank-long"><span>Rangs 9, 18, 26 &amp; 27</span></div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/Dynavolt.png" data-shiny="Images/DynavoltS.png" alt="Dynavolt" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Dynavolt</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-crabicoque" data-pk="crabicoque">
+      <div class="passe-go-rank">Rang 14</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Crabicoque.png" data-shiny="Images/CrabicoqueS.png" alt="Crabicoque" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Crabicoque</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-airmure" data-pk="airmure">
+      <div class="passe-go-rank">Rang 19</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Airmure.png" data-shiny="Images/AirmureS.png" alt="Airmure" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Airmure</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-caninos-h" data-pk="caninos-h">
+      <div class="passe-go-rank">Rangs 28 &amp; 29</div>
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/CaninosH.png" data-shiny="Images/CaninosHS.png" alt="Caninos de Hisui" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Caninos de Hisui</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-virovent" data-pk="virovent">
+      <div class="passe-go-rank">Rangs 30 &amp; 60</div>
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Virovent.png" data-shiny="Images/ViroventS.png" alt="Virovent" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Virovent</h2>
+        <hr class="separator">
+        <p class="passe-go-pc" data-pc="n15"></p>
+      </div>
+    </div>
+
   </div>
 
   <p class="lien-source">
