@@ -3469,6 +3469,17 @@
         "n25": 2138
       }
     },
+    "tyranocif": {
+      "types": [
+        "Roche",
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 1643,
+        "n20": 2191,
+        "n25": 2739
+      }
+    },
     "ursaring": {
       "types": [
         "Normal"
