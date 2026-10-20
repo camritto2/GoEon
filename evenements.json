@@ -463,8 +463,7 @@
         {
           "nom": "Marathon Automnal",
           "debut": "2026-10-13T10:00",
-          "fin": "2026-10-19T20:00",
-          "page": "MarathonAutomnal.html"
+          "fin": "2026-10-19T20:00"
         },
         {
           "nom": "Pluie de Météno",
@@ -742,7 +741,6 @@
           "sprites": [
             "Mascaiman.png"
           ],
-          "page": "EclosionMascaiman.html",
           "lignes": [
             "Éclosion",
             "11h-17h"
