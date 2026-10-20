@@ -855,9 +855,13 @@
         {
           "debut": "2026-10-31",
           "categorie": "journee-raids",
-          "court": "Méga-Raids ???",
-          "long": "Journée de Super Méga-Raids - ???",
+          "court": "Méga-Raids Lugulabre",
+          "long": "Journée de Super Méga-Raids - Lugulabre",
           "heures": "14h - 17h",
+          "sprites": [
+            "LugulabreM.png"
+          ],
+          "page": "MegaLugulabre.html",
           "lignes": [
             "Méga-Raids",
             "14h-17h"

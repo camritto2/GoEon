@@ -106,6 +106,17 @@
         "n25": null
       }
     },
+    "apireine": {
+      "types": [
+        "Insecte",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "apitrini": {
       "types": [
         "Insecte",
@@ -407,6 +418,17 @@
         "n25": 887
       }
     },
+    "cadoizo": {
+      "types": [
+        "Glace",
+        "Vol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "canarbello": {
       "types": [
         "Eau"
@@ -528,6 +550,17 @@
       "types": null,
       "pc": {
         "n15": 400,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "chapignon": {
+      "types": [
+        "Plante",
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
         "n20": null,
         "n25": null
       }
@@ -784,6 +817,17 @@
       "pc": {
         "n15": null,
         "n20": 268,
+        "n25": null
+      }
+    },
+    "crustabri": {
+      "types": [
+        "Eau",
+        "Glace"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
         "n25": null
       }
     },
@@ -1096,6 +1140,16 @@
         "n25": null
       }
     },
+    "eoko": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "escargaume": {
       "types": null,
       "pc": {
@@ -1150,11 +1204,14 @@
       }
     },
     "farfuret": {
-      "types": null,
+      "types": [
+        "Ténèbres",
+        "Glace"
+      ],
       "pc": {
         "n15": 879,
-        "n20": null,
-        "n25": null
+        "n20": 1172,
+        "n25": 1465
       }
     },
     "farfuret-h": {
@@ -1314,6 +1371,17 @@
       "types": null,
       "pc": {
         "n15": 560,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "gaulet": {
+      "types": [
+        "Plante",
+        "Poison"
+      ],
+      "pc": {
+        "n15": null,
         "n20": null,
         "n25": null
       }
@@ -1732,6 +1800,16 @@
         "n25": 690
       }
     },
+    "kokiyas": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "korillon": {
       "types": [
         "Psy"
@@ -1793,6 +1871,17 @@
       "types": null,
       "pc": {
         "n15": 735,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "lampignon": {
+      "types": [
+        "Plante",
+        "Fée"
+      ],
+      "pc": {
+        "n15": null,
         "n20": null,
         "n25": null
       }
@@ -2182,9 +2271,21 @@
       }
     },
     "miaouss": {
-      "types": null,
+      "types": [
+        "Normal"
+      ],
       "pc": {
         "n15": 320,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "miaouss-a": {
+      "types": [
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": null,
         "n20": null,
         "n25": null
       }
@@ -2208,6 +2309,16 @@
         "n15": 1210,
         "n20": 1614,
         "n25": 2017
+      }
+    },
+    "miasmax": {
+      "types": [
+        "Poison"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
       }
     },
     "mimejr": {
@@ -2316,7 +2427,9 @@
       }
     },
     "nanmeouie": {
-      "types": null,
+      "types": [
+        "Normal"
+      ],
       "pc": {
         "n15": 721,
         "n20": null,
@@ -2510,9 +2623,23 @@
       }
     },
     "paras": {
-      "types": null,
+      "types": [
+        "Insecte",
+        "Plante"
+      ],
       "pc": {
         "n15": 436,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "parasect": {
+      "types": [
+        "Insecte",
+        "Plante"
+      ],
+      "pc": {
+        "n15": null,
         "n20": null,
         "n25": null
       }
@@ -2528,9 +2655,21 @@
       }
     },
     "persian": {
-      "types": null,
+      "types": [
+        "Normal"
+      ],
       "pc": {
         "n15": 724,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "persian-a": {
+      "types": [
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": null,
         "n20": null,
         "n25": null
       }
@@ -3170,10 +3309,31 @@
         "n25": null
       }
     },
+    "spododo": {
+      "types": [
+        "Plante",
+        "Fée"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "stalgamin": {
       "types": null,
       "pc": {
         "n15": 380,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "stari": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": null,
         "n20": null,
         "n25": null
       }
