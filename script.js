@@ -1059,20 +1059,49 @@ if (document.querySelector('.home-card[data-debut]')) {
         grille.appendChild(e);
       });
 
-    // Piste 1 : evenements longs
-    tout.evenements.forEach(ev => {
-      if (!chevauche(versDate(ev.debut), versDate(ev.fin), f)) return;
-      const l1 = ligneDe(versDate(ev.debut), f);
-      const l2 = ligneDe(versDate(ev.fin), f);
-      const el = bloc(1, l1, l2 - l1 + 1, 'cal-bloc cal-cat-evenement',
-        '<span class="cal-evt-nom">' + echapper(ev.nom) + '</span>');
-      el.addEventListener('click', () => afficherDetail(
-        ev.nom, null,
-        ['Du ' + dateLongue(ev.debut) + ' au ' + dateLongue(ev.fin)],
-        ev.page
-      ));
-      grille.appendChild(el);
-    });
+    // Piste 1 : evenements longs, recalcules jour par jour puis fusionnes,
+    // comme les Raids. Deux evenements qui se chevauchent ne se superposent
+    // plus : les jours communs forment un bloc a part, "A & B", dont le
+    // panneau de detail presente les deux evenements, chacun avec ses dates
+    // et son lien. Demande de Cam le 20/10 (Pluie de Meteno, Sentiers Dynamax
+    // et Souhaits Crepusculaires en novembre) : plus besoin de decaler le debut du
+    // second evenement dans evenements.json.
+    const evtsDuJour = [];
+    for (let i = 0; i < f.nb; i++) {
+      const date = ajouterJours(f.debut, i);
+      evtsDuJour.push(tout.evenements
+        .filter(ev => date >= jourDe(versDate(ev.debut)) && date <= jourDe(versDate(ev.fin)))
+        .sort((a, b) => versDate(a.debut) - versDate(b.debut)));
+    }
+    const signatureEvts = l => l.map(ev => ev.nom + '|' + ev.debut).join('§');
+
+    let j = 0;
+    while (j < f.nb) {
+      const cle = signatureEvts(evtsDuJour[j]);
+      let fin = j;
+      while (fin + 1 < f.nb && signatureEvts(evtsDuJour[fin + 1]) === cle) fin++;
+
+      const liste = evtsDuJour[j];
+      if (liste.length) {
+        const el = bloc(1, j + DECALAGE, fin - j + 1, 'cal-bloc cal-cat-evenement',
+          '<span class="cal-evt-nom">' + liste.map(ev => echapper(ev.nom)).join(' &amp; ') + '</span>');
+        el.addEventListener('click', () => {
+          if (liste.length === 1) {
+            const ev = liste[0];
+            afficherDetail(ev.nom, null,
+              ['Du ' + dateLongue(ev.debut) + ' au ' + dateLongue(ev.fin)], ev.page);
+            return;
+          }
+          afficherDetail(liste.map(ev => ev.nom).join(' & '), null,
+            liste.map(ev => '<strong>' + echapper(ev.nom) + '</strong><br>'
+              + 'Du ' + dateLongue(ev.debut) + ' au ' + dateLongue(ev.fin)
+              + (ev.page ? '<br><a href="' + ev.page + '">Voir la page de l\'Évènement</a>' : '')),
+            null);
+        });
+        grille.appendChild(el);
+      }
+      j = fin + 1;
+    }
 
     // Piste 2 : les jours
     for (let i = 0; i < f.nb; i++) {
@@ -1095,14 +1124,17 @@ if (document.querySelector('.home-card[data-debut]')) {
         if (!actifs[r.categorie]) return;
         if (date >= jourDe(versDate(r.debut)) && date <= jourDe(versDate(r.fin))) {
           r.pokemon.forEach(p => {
-            if (!actifs[r.categorie].some(x => x.nom === p.nom)) actifs[r.categorie].push(p);
+            // Nom ET forme : les quatre Deoxys de novembre portent le meme
+            // nom, seule la forme les distingue.
+            if (!actifs[r.categorie].some(x => x.nom === p.nom && x.forme === p.forme)) actifs[r.categorie].push(p);
           });
         }
       });
       parJour.push(actifs);
     }
 
-    const signature = a => JSON.stringify([a.legendaire.map(p => p.nom), a.mega.map(p => p.nom)]);
+    const idRaid = p => p.nom + '|' + (p.forme || '');
+    const signature = a => JSON.stringify([a.legendaire.map(idRaid), a.mega.map(idRaid)]);
 
     let i = 0;
     while (i < f.nb) {
@@ -1446,6 +1478,26 @@ if (document.querySelector('.home-card[data-debut]')) {
       o.setAttribute('aria-selected', actif ? 'true' : 'false');
       const panneau = document.getElementById(o.getAttribute('aria-controls'));
       if (panneau) panneau.hidden = !actif;
+    });
+
+    // Texte propre à une édition, hors des panneaux (dans l'intro commune) :
+    // un élément data-edition="<id du panneau>" ne s'affiche qu'avec son
+    // onglet, et un élément data-edition-defaut le remplace dans tous les
+    // onglets qui n'ont pas de texte propre. Demande de Cam le 20/10 : la
+    // variante des Orionides dans l'intro, la phrase générique ailleurs.
+    const id = onglet.getAttribute('aria-controls');
+    document.querySelectorAll('[data-edition]').forEach(el => {
+      el.hidden = (el.dataset.edition !== id);
+    });
+    const propre = !!document.querySelector('[data-edition="' + id + '"]');
+    document.querySelectorAll('[data-edition-defaut]').forEach(el => {
+      el.hidden = propre;
+    });
+    // data-edition-sauf : l'inverse, visible partout SAUF dans les onglets
+    // listés (séparés par des espaces). La section « Nouveau Pokémon »
+    // disparaît ainsi des Orionides, dont la variante est déjà en haut.
+    document.querySelectorAll('[data-edition-sauf]').forEach(el => {
+      el.hidden = el.dataset.editionSauf.split(/\s+/).includes(id);
     });
   }
 

@@ -45,11 +45,23 @@
       <div class="pokemon-card pk-meteno" data-pk="meteno">
         <div class="image-container">
           <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno" class="pokemon-img">
+          <img src="Images/Meteno.png" data-shiny="Images/MetenoFS.png" alt="Météno Forme Météore" class="pokemon-img">
         </div>
         <div class="card-content">
           <h2 class="pokemon-name">Météno</h2>
-          <p class="pokemon-subtitle">Variante à découvrir</p>
+          <p class="pokemon-subtitle">Forme Météore</p>
+          <hr class="separator">
+          <div class="pokemon-types-container"></div>
+        </div>
+      </div>
+      <div class="pokemon-card pk-meteno" data-pk="meteno">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/MetenoVe.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Vert" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Météno</h2>
+          <p class="pokemon-subtitle">Noyau Vert</p>
           <hr class="separator">
           <div class="pokemon-types-container"></div>
         </div>
@@ -166,19 +178,27 @@
   </div>
 
   <div class="intro-rules">
-    <p>Météno possède 7 variantes différentes. À chaque Évènement, une nouvelle variante sera disponible.</p>
-    <p>On ne sait pas à l'avance quelle variante sera disponible à quel Évènement !</p>
+    <p>Météno possède 7 couleurs de Noyau différentes, toutes cachées sous la forme Météore. À chaque Évènement, une nouvelle couleur sera disponible.</p>
+    <!-- data-edition : visible avec son seul onglet ; data-edition-defaut :
+         dans les onglets sans texte propre (script.js §21). Sans JS, ce sont
+         les Orionides qui s'affichent, d'où le hidden sur la phrase générique. -->
+    <p data-edition="edition-orionides">Pour les Orionides, c'est le Noyau Vert qui est disponible !</p>
+    <p data-edition-defaut hidden>On ne sait pas à l'avance quelle variante sera disponible à quel Évènement !</p>
     <p>Lors de ces Évènements, entre 17h et 21h, le ciel sera illuminé d'étoiles filantes. Les Météno seront alors plus fréquents en Sauvage.</p>
-    <p>Météno possèdera un boost de Poussières Étoiles par Capture !</p>
+    <p>Météno rapporte 1 000 Poussières Étoile par Capture !</p>
   </div>
 
   <!-- ═══════════════════════════════════════ -->
   <!--            NOUVEAU POKÉMON              -->
   <!-- ═══════════════════════════════════════ -->
 
+  <!-- Masquée dans l'onglet Orionides, où la variante est déjà montrée en
+       haut (script.js §21, data-edition-sauf). Hidden d'origine : sans JS,
+       ce sont les Orionides qui s'affichent. -->
+  <div data-edition-sauf="edition-orionides" hidden>
   <h2 class="category-title tier-1">Nouveau Pokémon</h2>
 
-  <!-- Les 7 variantes partagent la classe pk-meteno. Leurs types ne sont
+  <!-- Les variantes encore inconnues partagent la classe pk-meteno. Leurs types ne sont
        pas répétés : Roche/Vol s'affiche une fois, sur la carte fermée des
        onglets en haut de page (data-pk="meteno"), choix de Cam du 10/10.
        Pas de shiny pour le moment :
@@ -223,17 +243,6 @@
     <div class="pokemon-card pk-meteno">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/MetenoVe.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Vert" class="pokemon-img">
-      </div>
-      <div class="card-content">
-        <h2 class="pokemon-name">Météno</h2>
-        <p class="pokemon-subtitle">Noyau Vert</p>
-      </div>
-    </div>
-
-    <div class="pokemon-card pk-meteno">
-      <div class="image-container">
-        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="Images/MetenoB.png" data-shiny="Images/MetenoOS.png" alt="Météno Noyau Bleu" class="pokemon-img">
       </div>
       <div class="card-content">
@@ -264,6 +273,7 @@
       </div>
     </div>
 
+  </div>
   </div>
 
   <!-- ═══════════════════════════════════════ -->

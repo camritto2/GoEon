@@ -467,7 +467,7 @@
         },
         {
           "nom": "Pluie de Météno",
-          "debut": "2026-10-20T00:00",
+          "debut": "2026-10-19T17:00",
           "fin": "2026-10-24T23:59",
           "page": "PluieMeteno.html"
         },
@@ -564,7 +564,7 @@
         {
           "categorie": "mega",
           "debut": "2026-10-28",
-          "fin": "2026-11-03",
+          "fin": "2026-11-08",
           "pokemon": [
             {
               "nom": "Méga-Ténéfix",
@@ -873,19 +873,318 @@
       "evenements": [
         {
           "nom": "Halloween - Partie 2",
-          "debut": "2026-11-02T00:00",
+          "debut": "2026-11-01T10:00",
           "fin": "2026-11-05T20:00",
           "page": "Halloween2026.html"
+        },
+        {
+          "nom": "Âme Sauvage",
+          "debut": "2026-11-09T10:00",
+          "fin": "2026-11-13T20:00",
+          "page": "AmeSauvage.html"
         },
         {
           "nom": "Pluie de Météno",
           "debut": "2026-11-14T17:00",
           "fin": "2026-11-19T23:59",
           "page": "PluieMeteno.html"
+        },
+        {
+          "nom": "Sentiers Dynamax",
+          "debut": "2026-11-16T10:00",
+          "fin": "2026-11-23T20:00"
+        },
+        {
+          "nom": "Souhaits Crépusculaires",
+          "debut": "2026-11-21T10:00",
+          "fin": "2026-11-30T20:00"
         }
       ],
-      "raids": [],
+      "raids": [
+        {
+          "categorie": "legendaire",
+          "debut": "2026-11-04",
+          "fin": "2026-11-08",
+          "pokemon": [
+            {
+              "nom": "Giratina",
+              "img": "GiratinaA.png",
+              "forme": "Forme Alternative"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-11-09",
+          "fin": "2026-11-13",
+          "pokemon": [
+            {
+              "nom": "Zacian",
+              "img": "ZacianES.png",
+              "forme": "Épée Suprême"
+            },
+            {
+              "nom": "Zamazenta",
+              "img": "ZamazentaBS.png",
+              "forme": "Bouclier Suprême"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-11-14",
+          "fin": "2026-11-14",
+          "pokemon": [
+            {
+              "nom": "Zekrom",
+              "img": "Zekrom.png"
+            },
+            {
+              "nom": "Kyurem",
+              "img": "KyuremB.png",
+              "forme": "Blanc"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-11-15",
+          "fin": "2026-11-15",
+          "pokemon": [
+            {
+              "nom": "Reshiram",
+              "img": "Reshiram.png"
+            },
+            {
+              "nom": "Kyurem",
+              "img": "KyuremN.png",
+              "forme": "Noir"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-11-16",
+          "fin": "2026-11-24",
+          "pokemon": [
+            {
+              "nom": "Cresselia",
+              "img": "Cresselia.png"
+            },
+            {
+              "nom": "Darkrai",
+              "img": "Darkrai.png"
+            }
+          ]
+        },
+        {
+          "categorie": "legendaire",
+          "debut": "2026-11-25",
+          "fin": "2026-12-01",
+          "pokemon": [
+            {
+              "nom": "Deoxys",
+              "img": "DeoxysN.png",
+              "forme": "Forme Normale"
+            },
+            {
+              "nom": "Deoxys",
+              "img": "DeoxysD.png",
+              "forme": "Forme Défense"
+            },
+            {
+              "nom": "Deoxys",
+              "img": "DeoxysA.png",
+              "forme": "Forme Attaque"
+            },
+            {
+              "nom": "Deoxys",
+              "img": "DeoxysV.png",
+              "forme": "Forme Vitesse"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-11-09",
+          "fin": "2026-11-15",
+          "pokemon": [
+            {
+              "nom": "???"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-11-16",
+          "fin": "2026-11-24",
+          "pokemon": [
+            {
+              "nom": "Méga-Branette",
+              "img": "BranetteM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-11-25",
+          "fin": "2026-12-01",
+          "pokemon": [
+            {
+              "nom": "Méga-Métalosse",
+              "img": "MetalosseM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "obscur",
+          "debut": "2026-11-04",
+          "fin": "2026-11-08",
+          "pokemon": [
+            {
+              "nom": "Boréas",
+              "img": "BoreasA.png",
+              "forme": "Forme Avatar"
+            }
+          ]
+        },
+        {
+          "categorie": "obscur",
+          "debut": "2026-11-16",
+          "fin": "2026-12-01",
+          "pokemon": [
+            {
+              "nom": "Boréas",
+              "img": "BoreasA.png",
+              "forme": "Forme Avatar"
+            }
+          ]
+        }
+      ],
       "quotidiens": [
+        {
+          "debut": "2026-11-02",
+          "categorie": "dynamax",
+          "court": "Dynamax Machoc",
+          "long": "Lundi Dynamax - Machoc",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
+          "sprites": [
+            "Machoc.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-11-04",
+          "categorie": "heure-raid",
+          "court": "Raids Giratina",
+          "long": "Heure de Raid - Giratina",
+          "heures": "18h - 19h",
+          "sprites": [
+            "GiratinaA.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ],
+          "forme": "Forme Alternative"
+        },
+        {
+          "debut": "2026-11-05",
+          "categorie": "heure-vedette",
+          "court": "Heure Teddiursa",
+          "long": "Heure Vedette - Teddiursa",
+          "heures": "18h - 19h",
+          "bonus": "Double PX d'Évolution",
+          "sprites": [
+            "Teddiursa.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ],
+          "forme": "Portant un chapeau de sorcière"
+        },
+        {
+          "debut": "2026-11-09",
+          "categorie": "heure-raid",
+          "court": "Raids Zacian",
+          "long": "Heure de Raid - Zacian",
+          "heures": "18h - 19h",
+          "sprites": [
+            "ZacianES.png"
+          ],
+          "page": "AmeSauvage.html",
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ],
+          "forme": "Épée Suprême"
+        },
+        {
+          "debut": "2026-11-10",
+          "categorie": "heure-raid",
+          "court": "Raids Zamazenta",
+          "long": "Heure de Raid - Zamazenta",
+          "heures": "18h - 19h",
+          "sprites": [
+            "ZamazentaBS.png"
+          ],
+          "page": "AmeSauvage.html",
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ],
+          "forme": "Bouclier Suprême"
+        },
+        {
+          "debut": "2026-11-11",
+          "categorie": "dynamax",
+          "court": "Dynamax Registeel",
+          "long": "Heure de Combat Dynamax - Registeel",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Registeel.png"
+          ],
+          "page": "AmeSauvage.html",
+          "lignes": [
+            "Dynamax",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-11-12",
+          "categorie": "dynamax",
+          "court": "Dynamax Regidrago",
+          "long": "Heure de Combat Dynamax - Regidrago",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Regidrago.png"
+          ],
+          "page": "AmeSauvage.html",
+          "lignes": [
+            "Dynamax",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-11-13",
+          "categorie": "dynamax",
+          "court": "Dynamax Latias & Latios",
+          "long": "Heure de Combat Dynamax - Latias & Latios",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Latias.png",
+            "Latios.png"
+          ],
+          "page": "AmeSauvage.html",
+          "lignes": [
+            "Dynamax",
+            "18h-19h"
+          ]
+        },
         {
           "debut": "2026-11-14",
           "fin": "2026-11-15",
@@ -897,6 +1196,116 @@
           "lignes": [
             "Terres Sauvages",
             "10h-18h"
+          ]
+        },
+        {
+          "debut": "2026-11-16",
+          "categorie": "dynamax",
+          "court": "Dynamax ???",
+          "long": "Lundi Dynamax - ???",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-11-18",
+          "categorie": "heure-raid",
+          "court": "Raids Cresselia & Darkrai",
+          "long": "Heure de Raid - Cresselia & Darkrai",
+          "heures": "18h - 19h",
+          "sprites": [
+            "Cresselia.png",
+            "Darkrai.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-11-21",
+          "categorie": "community-day",
+          "court": "CD ???",
+          "long": "Community Day - ???",
+          "heures": "14h - 17h",
+          "bonus": "Certains bonus prolongés jusqu'à 21h",
+          "lignes": [
+            "Community Day",
+            "14h-17h/21h"
+          ]
+        },
+        {
+          "debut": "2026-11-23",
+          "categorie": "dynamax",
+          "court": "Dynamax Psystigri",
+          "long": "Lundi Dynamax - Psystigri",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
+          "sprites": [
+            "Psystigri.png"
+          ],
+          "lignes": [
+            "Dynamax"
+          ]
+        },
+        {
+          "debut": "2026-11-25",
+          "categorie": "heure-raid",
+          "court": "Raids Deoxys",
+          "long": "Heure de Raid - Deoxys",
+          "heures": "18h - 19h",
+          "sprites": [
+            "DeoxysN.png",
+            "DeoxysD.png",
+            "DeoxysA.png",
+            "DeoxysV.png"
+          ],
+          "lignes": [
+            "Heure Raids",
+            "18h-19h"
+          ],
+          "forme": "Formes Normale, Défense, Attaque & Vitesse"
+        },
+        {
+          "debut": "2026-11-26",
+          "categorie": "heure-vedette",
+          "court": "Heure Sonistrelle",
+          "long": "Heure Vedette - Sonistrelle",
+          "heures": "18h - 19h",
+          "bonus": "Double Bonbons de Capture",
+          "sprites": [
+            "Sonistrelle.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
+          "debut": "2026-11-28",
+          "categorie": "journee-raids",
+          "court": "Méga-Raids ???",
+          "long": "Journée de Super Méga-Raids - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Méga-Raids",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2026-11-30",
+          "categorie": "dynamax",
+          "court": "Dynamax Hexagel",
+          "long": "Lundi Dynamax - Hexagel",
+          "heures": "5h - 21h",
+          "bonus": "Apparait ensuite plus souvent aux Sources d'Énergie durant la semaine",
+          "sprites": [
+            "Hexagel.png"
+          ],
+          "lignes": [
+            "Dynamax"
           ]
         }
       ]

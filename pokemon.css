@@ -320,6 +320,11 @@
 .pk-bombydou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bombydou .emoji-shiny  { display: inline; }
 
+/* Boréas — Bon / Shiny */
+.pk-boreas .pokemon-name { color: var(--accent-vert-bon); }
+.pk-boreas .research-reward-name { color: var(--accent-vert-bon); }
+.pk-boreas .emoji-shiny  { display: inline; }
+
 /* Boskara — Bon / Shiny */
 .pk-boskara .pokemon-name { color: var(--accent-vert-bon); }
 .pk-boskara .research-reward-name { color: var(--accent-vert-bon); }
@@ -709,6 +714,9 @@
 /* Créhelf — Normal / Shiny */
 .pk-crehelf .emoji-shiny { display: inline; }
 
+/* Cresselia — Normal / Shiny */
+.pk-cresselia .emoji-shiny { display: inline; }
+
 /* Croâporal — Bon / Shiny */
 .pk-croaporal .pokemon-name { color: var(--accent-vert-bon); }
 .pk-croaporal .research-reward-name { color: var(--accent-vert-bon); }
@@ -758,6 +766,11 @@
 .pk-dardargnan .pokemon-name { color: var(--accent-vert-bon); }
 .pk-dardargnan .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dardargnan .emoji-shiny  { display: inline; }
+
+/* Darkrai — Bon / Shiny */
+.pk-darkrai .pokemon-name { color: var(--accent-vert-bon); }
+.pk-darkrai .research-reward-name { color: var(--accent-vert-bon); }
+.pk-darkrai .emoji-shiny  { display: inline; }
 
 /* Darumacho — Bon / Shiny */
 .pk-darumacho .pokemon-name { color: var(--accent-vert-bon); }
@@ -1111,6 +1124,9 @@
 .pk-felinferno .pokemon-name { color: var(--accent-vert-bon); }
 .pk-felinferno .research-reward-name { color: var(--accent-vert-bon); }
 .pk-felinferno .emoji-shiny  { display: inline; }
+
+/* Ferdeter — Normal / Shiny */
+.pk-ferdeter .emoji-shiny { display: inline; }
 
 /* Fermite — Bon / Shiny */
 .pk-fermite .pokemon-name { color: var(--accent-vert-bon); }

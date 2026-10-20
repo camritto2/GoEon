@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Âme Sauvage</title>
+  <link rel="canonical" href="https://goeon.fr/AmeSauvage">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Âme Sauvage</h1>
+  <p class="raids-date">
+    Du lundi 9 novembre, 10h au vendredi 13 novembre, 20h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#bonus">Bonus</a>
+    <a href="#nouveaux">Nouveaux Pokémon</a>
+    <a href="#sauvages">Pokémon Sauvages</a>
+    <a href="#raids">Raids</a>
+    <a href="#dynamax">Combats Dynamax</a>
+    <a href="#heures">Heures de Raids et de Combats</a>
+    <a href="#attaques">Attaques Vedettes</a>
+    <a href="#taches">Tâches d'Étude</a>
+    <a href="#defi">Défi Global</a>
+    <a href="#passe">Passe Go</a>
+    <a href="#reco">Recommandations du chef</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 BONUS                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Limite augmentée à 30 Raids à distance</div>
+    <div class="intro-item"><span class="bullet">• </span>Retour de Mordudor Shiny dans le Sac de pièces</div>
+    <div class="intro-item"><span class="bullet">• </span>Retour de <span class="texte-vert">Meltan</span> Shiny dans la Boite Mystère. Le temps d'attente pour ouvrir la boite sera réduit.</div>
+    <div class="intro-item"><span class="bullet">• </span>Pas d'Heure Dynamax ni d'Heure Vedette durant l'Évènement <em>(ni les concours du mardi, les combats du jeudi et les échanges du vendredi)</em></div>
+    <div class="intro-item"><span class="bullet">• </span>Fond Spécial disponible pour les Combats Dynamax de niveau 5</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            NOUVEAUX POKÉMON           -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="nouveaux">Nouveaux Pokémon</h2>
+
+  <!-- Types et PC du 100 % lus dans pokemon-data.json par script.js §20.
+       Images Meltan.png / MeltanS.png à déposer. -->
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-regidrago" data-pk="regidrago">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+        <img src="Images/Regidrago.png" data-shiny="Images/RegidragoS.png" alt="Regidrago Dynamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Regidrago</h2>
+        <p class="pokemon-subtitle">Dynamax - Niveau 5</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-meltan" data-pk="meltan">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+        <img src="Images/Meltan.png" data-shiny="Images/MeltanS.png" alt="Meltan Dynamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Meltan</h2>
+        <p class="pokemon-subtitle">Dynamax - Dans le Passe Go</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            POKÉMON SAUVAGES           -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="sauvages">Pokémon Sauvages</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-magneti">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Magneti.png" data-shiny="Images/MagnetiS.png" alt="Magnéti" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Magnéti</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-sonistrelle">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Sonistrelle.png" data-shiny="Images/SonistrelleS.png" alt="Sonistrelle" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Sonistrelle</h2>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-togedemaru">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Togedemaru.png" data-shiny="Images/TogedemaruS.png" alt="Togedemaru" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Togedemaru</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 RAIDS                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="raids">Raids</h2>
+  <p class="section-sous-titre"><em>3 Étoiles</em></p>
+
+  <!-- Ferdeter : images Ferdeter.png / FerdeterS.png à déposer. -->
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-drakkarmin" data-pk="drakkarmin">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Drakkarmin.png" data-shiny="Images/DrakkarminS.png" alt="Drakkarmin" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Drakkarmin</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-ferdeter" data-pk="ferdeter">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Ferdeter.png" data-shiny="Images/FerdeterS.png" alt="Ferdeter" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Ferdeter</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="section-sous-titre"><em>5 Étoiles</em></p>
+
+  <!-- Formes Épée Suprême et Bouclier Suprême : clés zacian-es et
+       zamazenta-bs dans pokemon-data.json, suffixes ES / BS des images.
+       Leurs PC sont ceux de la forme Héros Aguerri, celle qu'on capture
+       (précisé par Cam le 20/10) ; les types restent ceux du boss. -->
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-zacian" data-pk="zacian-es">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/ZacianES.png" data-shiny="Images/ZacianESS.png" alt="Zacian Épée Suprême" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zacian</h2>
+        <p class="pokemon-subtitle">Épée Suprême</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-zamazenta" data-pk="zamazenta-bs">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/ZamazentaBS.png" data-shiny="Images/ZamazentaBSS.png" alt="Zamazenta Bouclier Suprême" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Zamazenta</h2>
+        <p class="pokemon-subtitle">Bouclier Suprême</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Zacian et Zamazenta permettront de gagner de l'Énergie Épée ou Bouclier Suprême pour changer de forme. Rappel : On combat la forme Suprême, mais on capture la forme "Héros Aguerri"</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            COMBATS DYNAMAX            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="dynamax">Combats Dynamax</h2>
+  <p class="section-sous-titre"><em>Niveau 1</em></p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-tarsal" data-pk="tarsal">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+        <img src="Images/Tarsal.png" data-shiny="Images/TarsalS.png" alt="Tarsal Dynamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Tarsal</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+  </div>
+  <p class="section-sous-titre"><em>Niveau 2</em></p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-machoc" data-pk="machoc">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+        <img src="Images/Machoc.png" data-shiny="Images/MachocS.png" alt="Machoc Dynamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Machoc</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+  </div>
+  <p class="section-sous-titre"><em>Niveau 5 - Mercredi 11 novembre</em></p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-registeel" data-pk="registeel">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+        <img src="Images/Registeel.png" data-shiny="Images/RegisteelS.png" alt="Registeel Dynamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Registeel</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+  </div>
+  <p class="section-sous-titre"><em>Niveau 5 - Jeudi 12 novembre</em></p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-regidrago" data-pk="regidrago">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+        <img src="Images/Regidrago.png" data-shiny="Images/RegidragoS.png" alt="Regidrago Dynamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Regidrago</h2>
+        <p class="pokemon-subtitle">Nouveau Dynamax</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+  </div>
+  <p class="section-sous-titre"><em>Niveau 5 - Vendredi 13 novembre</em></p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-latias" data-pk="latias">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+        <img src="Images/Latias.png" data-shiny="Images/LatiasS.png" alt="Latias Dynamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Latias</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-latios" data-pk="latios">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+        <img src="Images/Latios.png" data-shiny="Images/LatiosS.png" alt="Latios Dynamax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Latios</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--     HEURES DE RAIDS ET DE COMBATS     -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Section propre à cet évènement, proposée par Cam le 20/10 : une Heure
+       chaque jour, alternant Raids et Combats Dynamax, regroupées pour ne pas
+       se perdre entre les deux sections précédentes. -->
+  <h2 class="category-title tier-1" id="heures">Heures de Raids et de Combats</h2>
+  <div class="intro-rules">
+    <p>Tous les jours, une Heure de Raids ou de Combats aura lieu de 18h à 19h</p>
+    <div class="intro-item"><span class="bullet">• </span>Lundi : <span class="texte-vert">Zacian Épée Suprême</span></div>
+    <div class="intro-item"><span class="bullet">• </span>Mardi : <span class="texte-vert">Zamazenta Bouclier Suprême</span></div>
+    <div class="intro-item"><span class="bullet">• </span>Mercredi : Registeel Dynamax</div>
+    <div class="intro-item"><span class="bullet">• </span>Jeudi : <span class="texte-vert">Regidrago Dynamax</span></div>
+    <div class="intro-item"><span class="bullet">• </span>Vendredi : <span class="texte-vert">Latias</span>/<span class="texte-vert">Latios</span> Dynamax</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--           ATTAQUES VEDETTES           -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Nom d'attaque en vert : c'est la meilleure attaque du Pokémon
+       (Griffe Acier pour Registeel, Draco-Souffle pour Regidrago), demandé
+       par Cam le 20/10. -->
+  <h2 class="category-title tier-1" id="attaques">Attaques Vedettes</h2>
+  <div class="intro-rules">
+    <p class="attaque-vedette">Registeel : <strong class="texte-vert">Griffe Acier</strong> <img src="Images/Acier.webp" alt="Acier" class="attaque-vedette-icon"></p>
+    <div class="intro-item"><span class="bullet">• </span>Attaque Immédiate</div>
+    <div class="intro-item"><span class="bullet">• </span>Puissance : 6</div>
+    <div class="intro-item"><span class="bullet">• </span>Énergie : 5</div>
+    <div class="intro-item intro-item-fin"><span class="bullet">• </span>Durée : 0,5s</div>
+    <p class="attaque-vedette">Latios : <strong>Ball'Brume</strong> <img src="Images/Psy.webp" alt="Psy" class="attaque-vedette-icon"></p>
+    <div class="intro-item"><span class="bullet">• </span>Attaque Chargée</div>
+    <div class="intro-item"><span class="bullet">• </span>Puissance : 105</div>
+    <div class="intro-item"><span class="bullet">• </span>Énergie : 100</div>
+    <div class="intro-item intro-item-fin"><span class="bullet">• </span>Durée : 2,0s</div>
+    <p class="attaque-vedette">Latias : <strong>Lumi-Éclat</strong> <img src="Images/Psy.webp" alt="Psy" class="attaque-vedette-icon"></p>
+    <div class="intro-item"><span class="bullet">• </span>Attaque Chargée</div>
+    <div class="intro-item"><span class="bullet">• </span>Puissance : 100</div>
+    <div class="intro-item"><span class="bullet">• </span>Énergie : 100</div>
+    <div class="intro-item intro-item-fin"><span class="bullet">• </span>Durée : 1,5s</div>
+    <p class="attaque-vedette">Regidrago : <strong class="texte-vert">Draco-Souffle</strong> <img src="Images/Dragon.webp" alt="Dragon" class="attaque-vedette-icon"></p>
+    <div class="intro-item"><span class="bullet">• </span>Attaque Immédiate</div>
+    <div class="intro-item"><span class="bullet">• </span>Puissance : 6</div>
+    <div class="intro-item"><span class="bullet">• </span>Énergie : 4</div>
+    <div class="intro-item"><span class="bullet">• </span>Durée : 0,5s</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--             TÂCHES D'ÉTUDE            -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="taches">Tâches d'Étude</h2>
+  <div class="intro-rules">
+    <p>Détails à venir</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--              DÉFI GLOBAL              -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="defi">Défi Global</h2>
+  <div class="intro-rules">
+    <p>Bonus à débloquer :</p>
+    <div class="intro-item"><span class="bullet">• </span>L'Effet Aventure de Gladius Maximus de Zacian Épée Suprême sera plus efficace</div>
+    <div class="intro-item"><span class="bullet">• </span>L'Effet Aventure de Aegis Maxima de Zamazenta Bouclier Suprême sera plus efficace</div>
+    <div class="intro-item"><span class="bullet">• </span>La Jauge Énergie lors des Combats Dynamax se remplira plus rapidement.</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                PASSE GO               -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="passe">Passe Go</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Rencontre avec <span class="texte-vert">Meltan</span> Dynamax</div>
+    <div class="intro-item"><span class="bullet">• </span>D'autres rencontres</div>
+    <div class="intro-item"><span class="bullet">• </span>Objet d'Avatar</div>
+    <div class="intro-item intro-item-fin"><span class="bullet">• </span>Et bien d'autres !</div>
+    <p>Rang 25 : Distance d'Éclosion divisée par 2</p>
+  </div>
+
+  <p class="section-sous-titre">Passe Go Deluxe</p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Une Capsule d'Argent, permettant de booster une statistique (Attaque, Défense ou PV) d'un Pokémon</div>
+    <div class="intro-item"><span class="bullet">• </span>Plus de rencontre avec <span class="texte-vert">Meltan</span> Dynamax</div>
+    <div class="intro-item"><span class="bullet">• </span>D'autres Objets d'Avatar</div>
+    <div class="intro-item intro-item-fin"><span class="bullet">• </span>Et bien d'autres !</div>
+    <p>Rang 1 : 5 000 PX supplémentaires par Raids et Combats Dynamax</p>
+    <p>Rang 2 : Cout nécessaire pour débloquer et booster les Attaques Dynamax divisé par 4</p>
+    <p>Rang 3 : 1 Bonbon et 1 Bonbon L supplémentaires par Raids et Combats Dynamax</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--         RECOMMANDATIONS DU CHEF         -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="reco">Recommandations du chef</h2>
+  <div class="intro-rules">
+    <p>Une bonne entrée en matière avant les Terres Sauvages, mais attention à certains points ! Si <span class="texte-vert">Regidrago</span>, <span class="texte-vert">Latios</span> et <span class="texte-vert">Latias</span> sont bons, ne perdez pas vos Particules Max sur Registeel qui lui, n'est pas bon ! Même avec son Attaque Spéciale !</p>
+    <p>De même, <span class="texte-vert">Melmetal</span> possède un Gigamax qui arrivera plus tard dans le jeu, et qui sera donc meilleur que sa forme Dynamax, que vous pourrez avoir à cet Évènement. Cela dit, qui sait quand elle arrivera dans le jeu !</p>
+    <p><span class="texte-vert">Zacian</span> &amp; <span class="texte-vert">Zamazenta</span> restent des Musts, d'autant plus qu'ils permettent ici d'avoir l'Énergie nécessaire pour avoir leur meilleure forme ! À ne pas manquer !</p>
+  </div>
+
+
+  <p class="lien-source">
+    Source : <a href="https://pokemongo.com/news/into-the-wild-2026" target="_blank" rel="noopener">Blog Officiel Pokémon Go</a>
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
