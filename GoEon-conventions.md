@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.7 - 10 octobre 2026.*
+*Version 5.8 - 20 octobre 2026.*
 
 ## Ce qu'est ce document
 
@@ -126,6 +126,7 @@ Types et PC du 100 % vivent dans `pokemon-data.json`, lus par `script.js` §20. 
 - ⚠️ **Elle ne concerne que les raids.** Œufs, Dynamax et tâches d'étude ne sont pas boostés : un bloc météo ou un `data-pc="n25"` n'a rien à faire sur ces cartes, alors même que le Pokémon a un `n25` renseigné pour ses raids.
 - **Le script ne remplit que ce qui est VIDE.** Un type, une météo ou un PC écrit en dur dans une page est laissé intact, et un Pokémon absent du fichier ne casse rien. On bascule donc **une carte à la fois** : poser `data-pk="cle"` sur la carte, vider le conteneur ou le `span` concerné, et marquer chaque PC avec `data-pc="n15|n20|n25"`. La console liste les clés manquantes — c'est un pense-bête, pas une erreur.
 - **Libellé météo : « Q. Nuages » partout**, texte affiché *et* attribut `alt` — « Quelques Nuages » ne tient pas sur mobile. Seul le nom de fichier garde la forme longue, `Quelques_Nuages.webp`. Le site n'affiche pas la variante de nuit « Clair » : Ensoleillé la couvre.
+- **Exception Team Go Rocket.** Les Pokémon capturables de `TeamRocket.html` affichent leur PC aux niveaux de capture des Obscurs : `n8`, et `n13` avec Boost Météo, avec le bloc météo des raids. Ces deux champs n'existent que sur ces Pokémon. Choix de Cam du 20/10.
 
 ### Formats de texte
 
@@ -294,12 +295,11 @@ Autres points fixes : la piste Quotidien n'affiche **qu'une ligne de texte en co
 
 ## 9. Exceptions structurelles
 
-Quatre entorses assumées à « aucun CSS hors des fichiers partagés ». Elles sont commentées sur place ; ne pas les « corriger ».
+Trois entorses assumées à « aucun CSS hors des fichiers partagés ». Elles sont commentées sur place ; ne pas les « corriger ».
 
 1. **`TerresSauvages2026.html`** — `<style>` désactivant l'animation du badge shiny : le clic y affiche le Gigamax, l'animation induirait le lecteur en erreur.
 2. **`script.js`, boutons « Signaler » et « Retour en haut »** — construits en JS, ils injectent leur propre `<style>`.
-3. **`rocket.css?v=N`** — seul fichier CSS versionné.
-4. **`regionaux.html`** — `<style>` et `<script>` inline. Page inachevée, écartée de l'indexation par `robots.txt` : elle se remettra aux normes le jour de sa reprise, pas avant.
+3. **`regionaux.html`** — `<style>` et `<script>` inline. Page inachevée, écartée de l'indexation par `robots.txt` : elle se remettra aux normes le jour de sa reprise, pas avant.
 
 `InfographieModele.html` n'entre pas dans ce compte : c'est un moule de rendu, exclu du déploiement par `.assetsignore`, dont le CSS reste embarqué.
 

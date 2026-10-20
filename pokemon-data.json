@@ -2,7 +2,7 @@
   "_format": {
     "cle": "Une entrée par FORME, pas par espèce. Wimessir ♀ et Wimessir ♂ ont deux entrées, Méga-Alakazam a la sienne à côté d'Alakazam. Slug en minuscules sans accent, suffixe de région comme dans pokemon.css (-a Alola, -h Hisui, -g Galar), -f / -m pour les formes genrées, -mega pour les Méga.",
     "types": "Un ou deux types, orthographiés exactement comme sur le site : Acier, Combat, Dragon, Eau, Électrik, Fée, Feu, Glace, Insecte, Normal, Plante, Poison, Psy, Roche, Sol, Spectre, Ténèbres, Vol. La météo qui boost n'est PAS stockée ici : script.js §20 la déduit des types. Elle ne concerne QUE les raids — ni les œufs, ni les Dynamax, ni les tâches d'étude ne sont boostés par la météo, et n25 ne sert donc que sur une carte de raid.",
-    "pc": "PC du 100 %. n15 = tâche d'étude, n20 = raid, œuf ET Dynamax (même niveau, une seule valeur), n25 = boost météo. null tant que la valeur n'a pas été relevée en jeu.",
+    "pc": "PC du 100 %. n15 = tâche d'étude, n20 = raid, œuf ET Dynamax (même niveau, une seule valeur), n25 = boost météo. null tant que la valeur n'a pas été relevée en jeu. Exception : n8 = capture d'un Pokémon Obscur de la Team Go Rocket, n13 = même capture avec Boost Météo. Champs posés uniquement sur les Pokémon capturables de TeamRocket.html (choix de Cam du 20/10).",
     "exemple": {
       "nomdupokemon": {
         "types": [
@@ -51,6 +51,16 @@
       "types": null,
       "pc": {
         "n15": 1050,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "alakazam": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": null,
         "n20": null,
         "n25": null
       }
@@ -429,6 +439,17 @@
         "n25": null
       }
     },
+    "camerupt": {
+      "types": [
+        "Feu",
+        "Sol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "canarbello": {
       "types": [
         "Eau"
@@ -632,6 +653,17 @@
       "pc": {
         "n15": null,
         "n20": 580,
+        "n25": null
+      }
+    },
+    "cizayox": {
+      "types": [
+        "Insecte",
+        "Acier"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
         "n25": null
       }
     },
@@ -897,6 +929,17 @@
         "n15": 1538,
         "n20": 2050,
         "n25": 2563
+      }
+    },
+    "demolosse": {
+      "types": [
+        "Ténèbres",
+        "Feu"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
       }
     },
     "demolosse-mega": {
@@ -1233,16 +1276,6 @@
         "n25": null
       }
     },
-    "ferdeter": {
-      "types": [
-        "Acier"
-      ],
-      "pc": {
-        "n15": 985,
-        "n20": 1313,
-        "n25": 1642
-      }
-    },
     "ferosinge": {
       "types": null,
       "pc": {
@@ -1258,6 +1291,17 @@
       "pc": {
         "n15": 440,
         "n20": 587,
+        "n25": null
+      }
+    },
+    "flagadoss": {
+      "types": [
+        "Eau",
+        "Psy"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
         "n25": null
       }
     },
@@ -1385,6 +1429,17 @@
         "n25": null
       }
     },
+    "gallame": {
+      "types": [
+        "Psy",
+        "Combat"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "gaulet": {
       "types": [
         "Plante",
@@ -1433,6 +1488,17 @@
         "n15": 811,
         "n20": 1081,
         "n25": 1351
+      }
+    },
+    "golemastoc": {
+      "types": [
+        "Sol",
+        "Spectre"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
       }
     },
     "gorythmic": {
@@ -1763,6 +1829,16 @@
         "n25": null
       }
     },
+    "kangourex": {
+      "types": [
+        "Normal"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "kaorine": {
       "types": null,
       "pc": {
@@ -1988,6 +2064,17 @@
         "n15": 1270,
         "n20": 1693,
         "n25": 2117
+      }
+    },
+    "libegon": {
+      "types": [
+        "Sol",
+        "Dragon"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
       }
     },
     "lilia": {
@@ -2251,16 +2338,6 @@
         "n25": null
       }
     },
-    "meltan": {
-      "types": [
-        "Acier"
-      ],
-      "pc": {
-        "n15": 457,
-        "n20": 610,
-        "n25": 762
-      }
-    },
     "metang": {
       "types": null,
       "pc": {
@@ -2334,6 +2411,16 @@
     "miasmax": {
       "types": [
         "Poison"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "milobellus": {
+      "types": [
+        "Eau"
       ],
       "pc": {
         "n15": null,
@@ -2464,6 +2551,17 @@
         "n25": null
       }
     },
+    "noacier": {
+      "types": [
+        "Plante",
+        "Acier"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "noadkoko-a": {
       "types": null,
       "pc": {
@@ -2570,6 +2668,18 @@
         "n25": null
       }
     },
+    "osselait": {
+      "types": [
+        "Sol"
+      ],
+      "pc": {
+        "n8": 229,
+        "n13": 378,
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "otaquin": {
       "types": [
         "Eau"
@@ -2637,6 +2747,8 @@
         "Combat"
       ],
       "pc": {
+        "n8": 335,
+        "n13": 553,
         "n15": null,
         "n20": 850,
         "n25": null
@@ -3011,16 +3123,6 @@
         "n25": null
       }
     },
-    "regidrago": {
-      "types": [
-        "Dragon"
-      ],
-      "pc": {
-        "n15": 1274,
-        "n20": 1699,
-        "n25": 2124
-      }
-    },
     "regirock": {
       "types": [
         "Roche"
@@ -3058,6 +3160,17 @@
         "n15": 1731,
         "n20": 2307,
         "n25": 2884
+      }
+    },
+    "rhinastoc": {
+      "types": [
+        "Sol",
+        "Roche"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
       }
     },
     "rhinocorne": {
@@ -3296,6 +3409,17 @@
         "n25": 1637
       }
     },
+    "smogogo-g": {
+      "types": [
+        "Poison",
+        "Fée"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "solochi": {
       "types": [
         "Ténèbres",
@@ -3379,6 +3503,17 @@
         "n25": 1846
       }
     },
+    "steelix": {
+      "types": [
+        "Acier",
+        "Sol"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "suicune": {
       "types": [
         "Eau"
@@ -3397,6 +3532,19 @@
       "pc": {
         "n15": null,
         "n20": 1980,
+        "n25": null
+      }
+    },
+    "tadmorv-a": {
+      "types": [
+        "Poison",
+        "Ténèbres"
+      ],
+      "pc": {
+        "n8": 309,
+        "n13": 510,
+        "n15": null,
+        "n20": null,
         "n25": null
       }
     },
@@ -3851,34 +3999,12 @@
         "n25": 2701
       }
     },
-    "zacian-es": {
-      "types": [
-        "Fée",
-        "Acier"
-      ],
-      "pc": {
-        "n15": 1641,
-        "n20": 2188,
-        "n25": 2735
-      }
-    },
     "zacian-ha": {
       "types": [
         "Fée"
       ],
       "pc": {
-        "n15": 1641,
-        "n20": 2188,
-        "n25": 2735
-      }
-    },
-    "zamazenta-bs": {
-      "types": [
-        "Combat",
-        "Acier"
-      ],
-      "pc": {
-        "n15": 1641,
+        "n15": null,
         "n20": 2188,
         "n25": 2735
       }
@@ -3920,6 +4046,8 @@
         "Électrik"
       ],
       "pc": {
+        "n8": 910,
+        "n13": 1500,
         "n15": 1731,
         "n20": 2307,
         "n25": 2884

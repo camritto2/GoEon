@@ -18,6 +18,8 @@
   
   --bg-site: #f5f7fa;
   --bg-carte: #ffffff;
+  --rouge-rocket: #e53e3e;       /* Cadre du Pokémon capturable (Team Go Rocket) */
+  --bg-capture-rocket: #fde8e8;  /* Fond du cadre capturable sur le bandeau des Chefs */
   --border-carte: #e2e8f0;
   --text-principal: #2d3748;
   --text-secondaire: #4a5568;
@@ -68,6 +70,8 @@ body.dark-mode {
 
   --bg-site: #121212;         
   --bg-carte: #252525;        /* Cartes Pokémon un chouïa plus claires */
+  --rouge-rocket: #e53e3e;       /* Identique en sombre : le rouge ressort déjà */
+  --bg-capture-rocket: rgba(229, 62, 62, 0.25);  /* Rouge translucide, comme la carte capturable en sombre */
   --border-carte: #323232;    
   --text-principal: #f3f4f6;  
   --text-secondaire: #e5e7eb;

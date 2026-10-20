@@ -320,11 +320,6 @@
 .pk-bombydou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bombydou .emoji-shiny  { display: inline; }
 
-/* Boréas — Bon / Shiny */
-.pk-boreas .pokemon-name { color: var(--accent-vert-bon); }
-.pk-boreas .research-reward-name { color: var(--accent-vert-bon); }
-.pk-boreas .emoji-shiny  { display: inline; }
-
 /* Boskara — Bon / Shiny */
 .pk-boskara .pokemon-name { color: var(--accent-vert-bon); }
 .pk-boskara .research-reward-name { color: var(--accent-vert-bon); }
@@ -401,7 +396,7 @@
 /* Cacnea — Normal / Shiny */
 .pk-cacnea .emoji-shiny { display: inline; }
 
-/* Camerupt — Bon / Shiny */
+/* Camérupt — Bon / Shiny */
 .pk-camerupt .pokemon-name { color: var(--accent-vert-bon); }
 .pk-camerupt .research-reward-name { color: var(--accent-vert-bon); }
 .pk-camerupt .emoji-shiny  { display: inline; }
@@ -714,9 +709,6 @@
 /* Créhelf — Normal / Shiny */
 .pk-crehelf .emoji-shiny { display: inline; }
 
-/* Cresselia — Normal / Shiny */
-.pk-cresselia .emoji-shiny { display: inline; }
-
 /* Croâporal — Bon / Shiny */
 .pk-croaporal .pokemon-name { color: var(--accent-vert-bon); }
 .pk-croaporal .research-reward-name { color: var(--accent-vert-bon); }
@@ -766,11 +758,6 @@
 .pk-dardargnan .pokemon-name { color: var(--accent-vert-bon); }
 .pk-dardargnan .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dardargnan .emoji-shiny  { display: inline; }
-
-/* Darkrai — Bon / Shiny */
-.pk-darkrai .pokemon-name { color: var(--accent-vert-bon); }
-.pk-darkrai .research-reward-name { color: var(--accent-vert-bon); }
-.pk-darkrai .emoji-shiny  { display: inline; }
 
 /* Darumacho — Bon / Shiny */
 .pk-darumacho .pokemon-name { color: var(--accent-vert-bon); }
@@ -1124,9 +1111,6 @@
 .pk-felinferno .pokemon-name { color: var(--accent-vert-bon); }
 .pk-felinferno .research-reward-name { color: var(--accent-vert-bon); }
 .pk-felinferno .emoji-shiny  { display: inline; }
-
-/* Ferdeter — Normal / Shiny */
-.pk-ferdeter .emoji-shiny { display: inline; }
 
 /* Fermite — Bon / Shiny */
 .pk-fermite .pokemon-name { color: var(--accent-vert-bon); }
@@ -3223,6 +3207,11 @@
 .pk-tadmorv .pokemon-name { color: var(--accent-vert-bon); }
 .pk-tadmorv .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tadmorv .emoji-shiny { display: inline; }
+
+/* Tadmorv d'Alola — Bon / Shiny */
+.pk-tadmorv-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-tadmorv-a .research-reward-name { color: var(--accent-vert-bon); }
+.pk-tadmorv-a .emoji-shiny  { display: inline; }
 
 /* Tag-Tag — Bon / Shiny */
 .pk-tag-tag .pokemon-name { color: var(--accent-vert-bon); }

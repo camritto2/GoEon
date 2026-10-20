@@ -48,6 +48,46 @@
   margin: -2px 0 0 0;
   background-color: #3a3a3a;
   border-radius: 16px 16px 0 0;
+  /* Le bandeau est un <button> (repliable) : on neutralise le style natif. */
+  width: 100%;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Pokémon capturable du Chef, en petit à côté de son portrait. */
+/* Cadre rouge, comme le Pokémon capturable dans la carte : « encadré en
+   rouge = à capturer ». Fond rouge pâle en clair, rouge translucide en
+   sombre (--bg-capture-rocket), sans halo. Choix de Cam du 20/10. */
+.rocket-chef-banner img.rocket-banner-capture {
+  width: 36px;
+  height: 36px;
+  padding: 2px;
+  box-sizing: border-box;
+  border: 1.5px solid var(--rouge-rocket);
+  border-radius: 8px;
+  background-color: var(--bg-capture-rocket);
+}
+
+/* Chef ouvert : la miniature disparait, le Pokémon est visible dans la carte
+   (demande de Cam du 20/10). aria-expanded est tenu à jour par toggleBanner(). */
+.rocket-chef-banner[aria-expanded="true"] img.rocket-banner-capture {
+  display: none;
+}
+
+/* Chef replié : le bandeau est seul dans sa carte, on arrondit aussi le bas
+   (l'attribut donne la spécificité pour battre la règle desktop). */
+.rocket-chef-banner[aria-expanded="false"] {
+  border-radius: 16px;
+}
+
+/* Flèche du repli, calée à droite pour ne pas décentrer le nom du Chef. */
+.rocket-chef-banner .intro-arrow {
+  position: absolute;
+  right: 14px;
+  color: inherit;
+  opacity: 0.8;
 }
 
 body.dark-mode .rocket-chef-banner {
@@ -58,6 +98,13 @@ body.dark-mode .rocket-chef-banner {
   width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+/* PC du 100 % des Pokémon capturables (niveaux 8 et 13), bloc .pokemon-stats
+   des raids : centré, la carte étant trop étroite en mobile. */
+.rocket-capturable .pokemon-stats {
+  text-align: center;
+  margin-top: 4px;
 }
 
 /* ==========================================
@@ -259,6 +306,17 @@ body.dark-mode .rocket-counters {
     max-width: 700px;
   }
 
+  /* global.css ouvre toujours .intro-content en desktop (intros des pages
+     Top et évènement). Les Chefs restent repliables sur grand écran aussi :
+     spécificité supérieure pour reprendre la main. */
+  .rocket-list .intro-content { display: none; }
+  .rocket-list .intro-content.open { display: block; }
+
+  .rocket-chef-banner .intro-arrow {
+    right: 20px;
+    font-size: 18px;
+  }
+
   .rocket-chef-banner {
     font-size: 26px;
     gap: 12px;
@@ -270,6 +328,13 @@ body.dark-mode .rocket-counters {
   .rocket-chef-banner img {
     width: 64px;
     height: 64px;
+  }
+
+  .rocket-chef-banner img.rocket-banner-capture {
+    width: 52px;
+    height: 52px;
+    padding: 3px;
+    border-radius: 10px;
   }
 
   .rocket-slot-label {

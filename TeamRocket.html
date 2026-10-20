@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Team Go Rocket</title>
+  <link rel="canonical" href="https://goeon.fr/TeamRocket">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="stylesheet" href="rocket.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Team Go Rocket</h1>
+
+  <!-- Une page, deux onglets : Sbires et Chefs (choix de Cam du 20/10).
+       Mêmes boutons que Halloween et la Pluie de Météno (script.js §21). Les
+       panneaux n'ont pas de dates : l'onglet ouvert au chargement est celui
+       qui porte aria-selected="true" ici. -->
+  <div class="onglets-editions" role="tablist" aria-label="Sbires et Chefs de la Team Go Rocket">
+    <button type="button" role="tab" id="tab-sbires" aria-controls="sbires" aria-selected="true">Sbires</button>
+    <button type="button" role="tab" id="tab-chefs" aria-controls="chefs" aria-selected="false">Chefs</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 SBIRES                  -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <div class="edition-panel" role="tabpanel" id="sbires" aria-labelledby="tab-sbires">
+    <!-- En attente des équipes de Sbires de Cam. -->
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                  CHEFS                  -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <div class="edition-panel" role="tabpanel" id="chefs" aria-labelledby="tab-chefs" hidden>
+
+    <div class="intro-rules">
+      <ul class="rocket-intro-list">
+        <li>Chaque chef de la Team Go Rocket utilisera ses 2 boucliers.</li>
+        <li>Vous obtiendrez un Œuf 12 km après avoir battu un Chef.</li>
+        <li>Vous pourrez également capturer le Pokémon <span class="rocket-highlight-red">encadré en rouge</span>.</li>
+      </ul>
+    </div>
+
+    <p class="astuce-shiny">
+      <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+    </p>
+
+    <!-- Chaque Chef est un bandeau repliable (idée de Cam du 20/10 : trop de
+         défilement sinon), fermé au chargement, en mobile comme en desktop.
+         Le bandeau montre aussi, en petit, le Pokémon capturable du Chef
+         (idée de Cam du 20/10), pour le voir sans ouvrir la carte.
+         Bascule par toggleBanner() (script.js §8), contenu dans .intro-content.
+         Types des Pokémon : lus dans pokemon-data.json (data-pk, script.js §20),
+         plus écrits en dur. Capturables : PC du 100 % au niveau 8 (n8) et 13 avec
+         Boost Météo (n13), niveaux de capture des Obscurs de la Team Go Rocket
+         (choix de Cam du 20/10, à la place des niveaux 15/20/25). Tous les Pokémon des Chefs sont Obscurs. Seul le
+         Pokémon capturable porte une classe pk- (vert + shiny via pokemon.css). -->
+    <div class="rocket-list">
+
+    <!-- ==============================
+         SIERRA
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner" aria-expanded="false" aria-controls="chef-sierra" onclick="toggleBanner(this, 'chef-sierra', 'chef-sierra-arrow')">
+        <span>Sierra</span>
+        <img src="Images/Sierra.webp" alt="Sierra">
+        <img src="Images/Pandespiegle.png" alt="Pandespiègle" title="Pokémon à capturer : Pandespiègle" class="rocket-banner-capture">
+        <span class="intro-arrow" id="chef-sierra-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="chef-sierra">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item rocket-capturable pk-pandespiegle" data-pk="pandespiegle">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Pandespiegle.png" data-shiny="Images/PandespiegleS.png" alt="Pandespiègle" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Pandespiègle</p>
+          <div class="rocket-types"></div>
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="tortank">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tortank.png" alt="Tortank" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tortank</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="libegon">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Libegon.png" alt="Libégon" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Libégon</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="noacier">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Noacier.png" alt="Noacier" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Noacier</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="milobellus">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Milobellus.png" alt="Milobellus" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Milobellus</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="demolosse">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Demolosse.png" alt="Démolosse" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Démolosse</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="steelix">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Steelix.png" alt="Steelix" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Steelix</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <!-- Types à utiliser pour ce combat : en attente des types de Cam
+           (ceux de juillet valaient pour l'ancienne équipe). -->
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         ARLO
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner" aria-expanded="false" aria-controls="chef-arlo" onclick="toggleBanner(this, 'chef-arlo', 'chef-arlo-arrow')">
+        <span>Arlo</span>
+        <img src="Images/Arlo.webp" alt="Arlo">
+        <img src="Images/TadmorvA.png" alt="Tadmorv d'Alola" title="Pokémon à capturer : Tadmorv d'Alola" class="rocket-banner-capture">
+        <span class="intro-arrow" id="chef-arlo-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="chef-arlo">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item rocket-capturable pk-tadmorv-a" data-pk="tadmorv-a">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/TadmorvA.png" data-shiny="Images/TadmorvAS.png" alt="Tadmorv d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tadmorv d'Alola</p>
+          <div class="rocket-types"></div>
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="steelix">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Steelix.png" alt="Steelix" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Steelix</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="golemastoc">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Golemastoc.png" alt="Golemastoc" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Golemastoc</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="flagadoss">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Flagadoss.png" alt="Flagadoss" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Flagadoss</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="alakazam">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Alakazam.png" alt="Alakazam" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Alakazam</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="dracaufeu">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Dracaufeu.png" alt="Dracaufeu" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Dracaufeu</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="cizayox">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Cizayox.png" alt="Cizayox" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Cizayox</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <!-- Types à utiliser pour ce combat : en attente des types de Cam
+           (ceux de juillet valaient pour l'ancienne équipe). -->
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         CLIFF
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner" aria-expanded="false" aria-controls="chef-cliff" onclick="toggleBanner(this, 'chef-cliff', 'chef-cliff-arrow')">
+        <span>Cliff</span>
+        <img src="Images/Cliff.webp" alt="Cliff">
+        <img src="Images/Osselait.png" alt="Osselait" title="Pokémon à capturer : Osselait" class="rocket-banner-capture">
+        <span class="intro-arrow" id="chef-cliff-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="chef-cliff">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item rocket-capturable pk-osselait" data-pk="osselait">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Osselait.png" data-shiny="Images/OsselaitS.png" alt="Osselait" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Osselait</p>
+          <div class="rocket-types"></div>
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="ronflex">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ronflex.png" alt="Ronflex" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ronflex</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="golemastoc">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Golemastoc.png" alt="Golemastoc" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Golemastoc</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="smogogo-g">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/SmogogoG.png" alt="Smogogo de Galar" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Smogogo de Galar</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="tyranocif">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tyranocif.png" alt="Tyranocif" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tyranocif</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="camerupt">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Camerupt.png" alt="Camérupt" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Camérupt</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="gallame">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Gallame.png" alt="Gallame" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Gallame</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <!-- Types à utiliser pour ce combat : en attente des types de Cam
+           (ceux de juillet valaient pour l'ancienne équipe). -->
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         GIOVANNI
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner" aria-expanded="false" aria-controls="chef-giovanni" onclick="toggleBanner(this, 'chef-giovanni', 'chef-giovanni-arrow')">
+        <span>Giovanni</span>
+        <img src="Images/Giovanni.webp" alt="Giovanni">
+        <img src="Images/Zekrom.png" alt="Zekrom" title="Pokémon à capturer : Zekrom" class="rocket-banner-capture">
+        <span class="intro-arrow" id="chef-giovanni-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="chef-giovanni">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="persian">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Persian.png" alt="Persian" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Persian</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="kangourex">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kangourex.png" alt="Kangourex" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kangourex</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="rhinastoc">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Rhinastoc.png" alt="Rhinastoc" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Rhinastoc</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="mackogneur">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Mackogneur.png" alt="Mackogneur" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Mackogneur</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item rocket-capturable pk-zekrom" data-pk="zekrom">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Zekrom.png" data-shiny="Images/ZekromS.png" alt="Zekrom" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Zekrom</p>
+          <div class="rocket-types"></div>
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Types à utiliser pour ce combat : en attente des types de Cam
+           (ceux de juillet valaient pour l'ancienne équipe). -->
+      </div>
+
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
