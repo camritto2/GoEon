@@ -34,7 +34,2670 @@
   <!-- ═══════════════════════════════════════ -->
 
   <div class="edition-panel" role="tabpanel" id="sbires" aria-labelledby="tab-sbires">
-    <!-- En attente des équipes de Sbires de Cam. -->
+    <div class="intro-rules">
+      <ul class="rocket-intro-list">
+        <li>Les Sbires n'utilisent pas leurs boucliers.</li>
+        <li>Après avoir remporté le Combat, vous pourrez capturer l'un des Pokémon <span class="rocket-highlight-red">encadrés en rouge</span>.</li>
+        <li>Toutes les phrases prononcées par les Sbires annoncent le type utilisé.</li>
+      </ul>
+    </div>
+
+    <p class="astuce-shiny">
+      <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+    </p>
+
+    <!-- Chaque Sbire est un bandeau repliable, comme les Chefs, mais sans
+         miniature (trop de Pokémon à capturer) ni « Types à utiliser » (choix
+         de Cam du 20/10). Rangés par ordre alphabétique du type. Le bandeau porte l'icône du type, le Sbire (homme ou
+         femme) et sa phrase d'accroche, sans le nom du type (Cam, 20/10 : l'icône
+         et l'indice de la phrase suffisent), qui permet de le reconnaitre en jeu : elle
+         reste donc visible bandeau fermé. Le mot-indice du type y est en
+         <strong>, souligné sans gras. -->
+    <div class="rocket-list">
+
+    <!-- ==============================
+         ACIER - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-acier" onclick="toggleBanner(this, 'sbire-acier', 'sbire-acier-arrow')">
+        <img src="Images/Acier.webp" alt="Acier" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Tu ne me surpasseras jamais, moi et ma volonté de <strong>fer</strong> ! »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-acier-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-acier">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-sabelette-a" data-pk="sabelette-a">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/SabeletteA.png" data-shiny="Images/SabeletteAS.png" alt="Sabelette d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Sabelette d'Alola</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-galekid" data-pk="galekid">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Galekid.png" data-shiny="Images/GalekidS.png" alt="Galekid" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Galekid</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-terhal" data-pk="terhal">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Terhal.png" data-shiny="Images/TerhalS.png" alt="Terhal" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Terhal</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="galegon">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Galegon.png" alt="Galegon" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Galegon</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="airmure">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Airmure.png" alt="Airmure" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Airmure</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="metang">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Metang.png" alt="Métang" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Métang</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="galeking">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Galeking.png" alt="Galeking" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Galeking</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="sablaireau-a">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/SablaireauA.png" alt="Sablaireau d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Sablaireau d'Alola</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="tarinorme">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tarinorme.png" alt="Tarinorme" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tarinorme</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         COMBAT - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-combat" onclick="toggleBanner(this, 'sbire-combat', 'sbire-combat-arrow')">
+        <img src="Images/Combat.webp" alt="Combat" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Mes <strong>biscoteaux</strong> ne sont pas seulement là pour faire joli ! »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-combat-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-combat">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-charpenti" data-pk="charpenti">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Charpenti.png" data-shiny="Images/CharpentiS.png" alt="Charpenti" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Charpenti</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-ferosinge" data-pk="ferosinge">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ferosinge.png" data-shiny="Images/FerosingeS.png" alt="Férosinge" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Férosinge</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-makuhita" data-pk="makuhita">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Makuhita.png" data-shiny="Images/MakuhitaS.png" alt="Makuhita" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Makuhita</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-kapoera" data-pk="kapoera">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kapoera.png" data-shiny="Images/KapoeraS.png" alt="Kapoera" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kapoera</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-kicklee" data-pk="kicklee">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kicklee.png" data-shiny="Images/KickleeS.png" alt="Kicklee" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kicklee</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-tygnon" data-pk="tygnon">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tygnon.png" data-shiny="Images/TygnonS.png" alt="Tygnon" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tygnon</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="betochef">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Betochef.png" alt="Bétochef" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Bétochef</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="courrousinge">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Courrousinge.png" alt="Courrousinge" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Courrousinge</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="simiabraz">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Simiabraz.png" alt="Simiabraz" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Simiabraz</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         DRAGON - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-dragon" onclick="toggleBanner(this, 'sbire-dragon', 'sbire-dragon-arrow')">
+        <img src="Images/Dragon.webp" alt="Dragon" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Raaaahhh !!! ... C'était bien ? »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-dragon-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-dragon">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-sonistrelle" data-pk="sonistrelle">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Sonistrelle.png" data-shiny="Images/SonistrelleS.png" alt="Sonistrelle" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Sonistrelle</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-solochi" data-pk="solochi">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Solochi.png" data-shiny="Images/SolochiS.png" alt="Solochi" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Solochi</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-coupenotte" data-pk="coupenotte">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Coupenotte.png" data-shiny="Images/CoupenotteS.png" alt="Coupenotte" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Coupenotte</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="noadkoko-a">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/NoadkokoA.png" alt="Noadkoko d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Noadkoko d'Alola</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="draco">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Draco.png" alt="Draco" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Draco</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="carmache">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Carmache.png" alt="Carmache" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Carmache</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="dracolosse">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Dracolosse.png" alt="Dracolosse" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Dracolosse</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="carchacrok">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Carchacrok.png" alt="Carchacrok" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Carchacrok</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="drattak">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Drattak.png" alt="Drattak" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Drattak</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         EAU - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-eau" onclick="toggleBanner(this, 'sbire-eau', 'sbire-eau-arrow')">
+        <img src="Images/Eau.webp" alt="Eau" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Ces <strong>eaux</strong> sont dangereuses ! »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-eau-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-eau">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-gobou" data-pk="gobou">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Gobou.png" data-shiny="Images/GobouS.png" alt="Gobou" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Gobou</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-tentacool" data-pk="tentacool">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tentacool.png" data-shiny="Images/TentacoolS.png" alt="Tentacool" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tentacool</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-krabby" data-pk="krabby">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Krabby.png" data-shiny="Images/KrabbyS.png" alt="Krabby" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Krabby</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="araqua">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Araqua.png" alt="Araqua" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Araqua</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="laggron">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Laggron.png" alt="Laggron" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Laggron</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="sharpedo">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Sharpedo.png" alt="Sharpedo" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Sharpedo</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="kaimorse">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kaimorse.png" alt="Kaimorse" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kaimorse</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="amphinobi">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Amphinobi.png" alt="Amphinobi" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Amphinobi</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="tentacruel">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tentacruel.png" alt="Tentacruel" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tentacruel</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         EAU - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-eau-homme" onclick="toggleBanner(this, 'sbire-eau-homme', 'sbire-eau-homme-arrow')">
+        <img src="Images/Eau.webp" alt="Eau" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Ces <strong>eaux</strong> sont dangereuses ! »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-eau-homme-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-eau-homme">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable rocket-row-n2">
+        <div class="research-reward-item pk-magicarpe" data-pk="magicarpe">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Magicarpe.png" data-shiny="Images/MagicarpeS.png" alt="Magicarpe" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Magicarpe</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-barpau" data-pk="barpau">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Barpau.png" data-shiny="Images/BarpauS.png" alt="Barpau" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Barpau</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="magicarpe">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Magicarpe.png" alt="Magicarpe" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Magicarpe</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="magicarpe">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Magicarpe.png" alt="Magicarpe" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Magicarpe</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="leviator">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Leviator.png" alt="Léviator" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Léviator</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         ÉLECTRIK - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-electrik" onclick="toggleBanner(this, 'sbire-electrik', 'sbire-electrik-arrow')">
+        <img src="Images/Electrik.webp" alt="Électrik" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Prêt pour un <strong>choc</strong> ? »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-electrik-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-electrik">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-voltorbe" data-pk="voltorbe">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Voltorbe.png" data-shiny="Images/VoltorbeS.png" alt="Voltorbe" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Voltorbe</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-lixy" data-pk="lixy">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Lixy.png" data-shiny="Images/LixyS.png" alt="Lixy" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Lixy</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-galvaran" data-pk="galvaran">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Galvaran.png" data-shiny="Images/GalvaranS.png" alt="Galvaran" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Galvaran</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-elektek" data-pk="elektek">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Elektek.png" data-shiny="Images/ElektekS.png" alt="Élektek" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Élektek</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-magneti" data-pk="magneti">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Magneti.png" data-shiny="Images/MagnetiS.png" alt="Magnéti" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Magnéti</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-racaillou-a" data-pk="racaillou-a">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/RacaillouA.png" data-shiny="Images/RacaillouAS.png" alt="Racaillou d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Racaillou d'Alola</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="luxray">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Luxray.png" alt="Luxray" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Luxray</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="pharamp">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Pharamp.png" alt="Pharamp" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Pharamp</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="mygavolt">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Mygavolt.png" alt="Mygavolt" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Mygavolt</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         FÉE - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-fee" onclick="toggleBanner(this, 'sbire-fee', 'sbire-fee-arrow')">
+        <img src="Images/Fee.webp" alt="Fée" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Émerveille-toi devant mes <strong>adorables</strong> Pokémon ! »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-fee-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-fee">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-snubull" data-pk="snubull">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Snubull.png" data-shiny="Images/SnubullS.png" alt="Snubull" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Snubull</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-tarsal" data-pk="tarsal">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tarsal.png" data-shiny="Images/TarsalS.png" alt="Tarsal" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tarsal</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-goupix-a" data-pk="goupix-a">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/GoupixA.png" data-shiny="Images/GoupixAS.png" alt="Goupix d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Goupix d'Alola</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-snubull" data-pk="snubull">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Snubull.png" data-shiny="Images/SnubullS.png" alt="Snubull" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Snubull</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-kirlia" data-pk="kirlia">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kirlia.png" data-shiny="Images/KirliaS.png" alt="Kirlia" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kirlia</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-smogogo-g" data-pk="smogogo-g">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/SmogogoG.png" data-shiny="Images/SmogogoGS.png" alt="Smogogo de Galar" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Smogogo de Galar</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="granbull">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Granbull.png" alt="Granbull" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Granbull</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="feunard-a">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/FeunardA.png" alt="Feunard d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Feunard d'Alola</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="smogogo-g">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/SmogogoG.png" alt="Smogogo de Galar" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Smogogo de Galar</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         FEU - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-feu" onclick="toggleBanner(this, 'sbire-feu', 'sbire-feu-arrow')">
+        <img src="Images/Feu.webp" alt="Feu" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Sais-tu que certains Pokémon soufflent le <strong>feu</strong> ? »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-feu-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-feu">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-funecire" data-pk="funecire">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Funecire.png" data-shiny="Images/FunecireS.png" alt="Funécire" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Funécire</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-ponyta" data-pk="ponyta">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ponyta.png" data-shiny="Images/PonytaS.png" alt="Ponyta" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ponyta</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-poussifeu" data-pk="poussifeu">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Poussifeu.png" data-shiny="Images/PoussifeuS.png" alt="Poussifeu" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Poussifeu</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="magmar">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Magmar.png" alt="Magmar" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Magmar</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="brasegali">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Brasegali.png" alt="Braségali" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Braségali</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="camerupt">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Camerupt.png" alt="Camérupt" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Camérupt</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="darumacho">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Darumacho.png" alt="Darumacho" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Darumacho</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="goupelin">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Goupelin.png" alt="Goupelin" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Goupelin</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="maganon">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Maganon.png" alt="Maganon" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Maganon</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         GLACE - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-glace" onclick="toggleBanner(this, 'sbire-glace', 'sbire-glace-arrow')">
+        <img src="Images/Glace.webp" alt="Glace" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Tu vas te <strong>geler</strong> sur place. »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-glace-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-glace">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-otaria" data-pk="otaria">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Otaria.png" data-shiny="Images/OtariaS.png" alt="Otaria" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Otaria</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-cadoizo" data-pk="cadoizo">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Cadoizo.png" data-shiny="Images/CadoizoS.png" alt="Cadoizo" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Cadoizo</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-obalie" data-pk="obalie">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Obalie.png" data-shiny="Images/ObalieS.png" alt="Obalie" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Obalie</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="phogleur">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Phogleur.png" alt="Phogleur" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Phogleur</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="momartik">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Momartik.png" alt="Momartik" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Momartik</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="feunard-a">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/FeunardA.png" alt="Feunard d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Feunard d'Alola</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="dragmara">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Dragmara.png" alt="Dragmara" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Dragmara</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="momartik">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Momartik.png" alt="Momartik" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Momartik</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="oniglali">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Oniglali.png" alt="Oniglali" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Oniglali</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         INSECTE - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-insecte" onclick="toggleBanner(this, 'sbire-insecte', 'sbire-insecte-arrow')">
+        <img src="Images/Insecte.webp" alt="Insecte" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Montre-lui ce que les Pokémon <strong>Insecte</strong> ont dans le ventre ! »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-insecte-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-insecte">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-mimitoss" data-pk="mimitoss">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Mimitoss.png" data-shiny="Images/MimitossS.png" alt="Mimitoss" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Mimitoss</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-aspicot" data-pk="aspicot">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Aspicot.png" data-shiny="Images/AspicotS.png" alt="Aspicot" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Aspicot</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-sovkipou" data-pk="sovkipou">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Sovkipou.png" data-shiny="Images/SovkipouS.png" alt="Sovkipou" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Sovkipou</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="scarabrute">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Scarabrute.png" alt="Scarabrute" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Scarabrute</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="anorith">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Anorith.png" alt="Anorith" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Anorith</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="araqua">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Araqua.png" alt="Araqua" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Araqua</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="cizayox">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Cizayox.png" alt="Cizayox" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Cizayox</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="brutapode">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Brutapode.png" alt="Brutapode" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Brutapode</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="lucanon">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Lucanon.png" alt="Lucanon" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Lucanon</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         NORMAL - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-normal" onclick="toggleBanner(this, 'sbire-normal', 'sbire-normal-arrow')">
+        <img src="Images/Normal.webp" alt="Normal" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« <strong>Normal</strong> ne veut pas dire faible. »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-normal-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-normal">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-teddiursa" data-pk="teddiursa">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Teddiursa.png" data-shiny="Images/TeddiursaS.png" alt="Teddiursa" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Teddiursa</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-hoothoot" data-pk="hoothoot">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Hoothoot.png" data-shiny="Images/HoothootS.png" alt="Hoothoot" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Hoothoot</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-porygon" data-pk="porygon">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Porygon.png" data-shiny="Images/PorygonS.png" alt="Porygon" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Porygon</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-ramboum" data-pk="ramboum">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ramboum.png" data-shiny="Images/RamboumS.png" alt="Ramboum" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ramboum</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-nounourson" data-pk="nounourson">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Nounourson.png" data-shiny="Images/NounoursonS.png" alt="Nounourson" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Nounourson</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-etourmi" data-pk="etourmi">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Etourmi.png" data-shiny="Images/EtourmiS.png" alt="Étourmi" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Étourmi</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="ursaring">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ursaring.png" alt="Ursaring" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ursaring</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="heledelle">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Heledelle.png" alt="Hélédelle" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Hélédelle</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="kangourex">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kangourex.png" alt="Kangourex" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kangourex</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         PLANTE - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-plante" onclick="toggleBanner(this, 'sbire-plante', 'sbire-plante-arrow')">
+        <img src="Images/Plante.webp" alt="Plante" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Ne t'approche pas de nous ! »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-plante-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-plante">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-brocelome" data-pk="brocelome">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Brocelome.png" data-shiny="Images/BrocelomeS.png" alt="Brocélôme" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Brocélôme</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-mimantis" data-pk="mimantis">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Mimantis.png" data-shiny="Images/MimantisS.png" alt="Mimantis" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Mimantis</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-saquedeneu" data-pk="saquedeneu">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Saquedeneu.png" data-shiny="Images/SaquedeneuS.png" alt="Saquedeneu" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Saquedeneu</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="lilia">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Lilia.png" alt="Lilia" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Lilia</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="jungko">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Jungko.png" alt="Jungko" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Jungko</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="spododo">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Spododo.png" alt="Spododo" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Spododo</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="blindepique">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Blindepique.png" alt="Blindépique" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Blindépique</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="desseliande">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Desseliande.png" alt="Desséliande" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Desséliande</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="vacilys">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Vacilys.png" alt="Vacilys" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Vacilys</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         POISON - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-poison" onclick="toggleBanner(this, 'sbire-poison', 'sbire-poison-arrow')">
+        <img src="Images/Poison.webp" alt="Poison" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Prêt à bondir sur l'adversaire ! »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-poison-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-poison">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-mystherbe" data-pk="mystherbe">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Mystherbe.png" data-shiny="Images/MystherbeS.png" alt="Mystherbe" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Mystherbe</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-nosferapti" data-pk="nosferapti">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosférapti" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Nosférapti</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-qwilfish" data-pk="qwilfish">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Qwilfish.png" data-shiny="Images/QwilfishS.png" alt="Qwilfish" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Qwilfish</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-smogogo-g" data-pk="smogogo-g">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/SmogogoG.png" data-shiny="Images/SmogogoGS.png" alt="Smogogo de Galar" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Smogogo de Galar</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-nidorino" data-pk="nidorino">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Nidorino.png" data-shiny="Images/NidorinoS.png" alt="Nidorino" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Nidorino</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-nidorina" data-pk="nidorina">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Nidorina.png" data-shiny="Images/NidorinaS.png" alt="Nidorina" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Nidorina</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="smogogo">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Smogogo.png" alt="Smogogo" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Smogogo</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="coatox">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Coatox.png" alt="Coatox" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Coatox</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="gaulet">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Gaulet.png" alt="Gaulet" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Gaulet</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         PSY - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-psy" onclick="toggleBanner(this, 'sbire-psy', 'sbire-psy-arrow')">
+        <img src="Images/Psy.webp" alt="Psy" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« As-tu peur des <strong>kinésistes</strong> qui ont des pouvoirs occultes ? »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-psy-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-psy">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-qulbutoke" data-pk="qulbutoke">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Qulbutoke.png" data-shiny="Images/QulbutokeS.png" alt="Qulbutoké" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Qulbutoké</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-soporifik" data-pk="soporifik">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Soporifik.png" data-shiny="Images/SoporifikS.png" alt="Soporifik" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Soporifik</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-tarsal" data-pk="tarsal">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tarsal.png" data-shiny="Images/TarsalS.png" alt="Tarsal" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tarsal</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-qulbutoke" data-pk="qulbutoke">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Qulbutoke.png" data-shiny="Images/QulbutokeS.png" alt="Qulbutoké" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Qulbutoké</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-soporifik" data-pk="soporifik">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Soporifik.png" data-shiny="Images/SoporifikS.png" alt="Soporifik" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Soporifik</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-meios" data-pk="meios">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Meios.png" data-shiny="Images/MeiosS.png" alt="Méios" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Méios</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="gallame">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Gallame.png" alt="Gallame" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Gallame</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="sepiatroce">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Sepiatroce.png" alt="Sepiatroce" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Sepiatroce</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="symbios">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Symbios.png" alt="Symbios" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Symbios</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         ROCHE - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-roche" onclick="toggleBanner(this, 'sbire-roche', 'sbire-roche-arrow')">
+        <img src="Images/Roche.webp" alt="Roche" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Je vais te déc-<strong>rocher</strong> un coup de poing ! »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-roche-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-roche">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-onix" data-pk="onix">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Onix.png" data-shiny="Images/OnixS.png" alt="Onix" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Onix</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-kabuto" data-pk="kabuto">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kabuto.png" data-shiny="Images/KabutoS.png" alt="Kabuto" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kabuto</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-kranidos" data-pk="kranidos">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kranidos.png" data-shiny="Images/KranidosS.png" alt="Kranidos" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kranidos</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-dinoclier" data-pk="dinoclier">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Dinoclier.png" data-shiny="Images/DinoclierS.png" alt="Dinoclier" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Dinoclier</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-gravalanch" data-pk="gravalanch">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Gravalanch.png" data-shiny="Images/GravalanchS.png" alt="Gravalanch" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Gravalanch</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-kranidos" data-pk="kranidos">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kranidos.png" data-shiny="Images/KranidosS.png" alt="Kranidos" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kranidos</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="rexillius">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Rexillius.png" alt="Rexillius" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Rexillius</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="grolem">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Grolem.png" alt="Grolem" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Grolem</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="dragmara">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Dragmara.png" alt="Dragmara" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Dragmara</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         SOL - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-sol" onclick="toggleBanner(this, 'sbire-sol', 'sbire-sol-arrow')">
+        <img src="Images/Sol.webp" alt="Sol" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Tu vas mordre la <strong>poussière</strong> ! »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-sol-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-sol">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-rhinocorne" data-pk="rhinocorne">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Rhinocorne.png" data-shiny="Images/RhinocorneS.png" alt="Rhinocorne" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Rhinocorne</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-scorplane" data-pk="scorplane">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Scorplane.png" data-shiny="Images/ScorplaneS.png" alt="Scorplane" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Scorplane</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-kraknoix" data-pk="kraknoix">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kraknoix.png" data-shiny="Images/KraknoixS.png" alt="Kraknoix" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kraknoix</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-scorplane" data-pk="scorplane">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Scorplane.png" data-shiny="Images/ScorplaneS.png" alt="Scorplane" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Scorplane</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-kaorine" data-pk="kaorine">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Kaorine.png" data-shiny="Images/KaorineS.png" alt="Kaorine" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Kaorine</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-vibraninf" data-pk="vibraninf">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Vibraninf.png" data-shiny="Images/VibraninfS.png" alt="Vibraninf" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Vibraninf</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="golemastoc">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Golemastoc.png" alt="Golemastoc" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Golemastoc</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="hippodocus">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Hippodocus.png" alt="Hippodocus" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Hippodocus</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="libegon">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Libegon.png" alt="Libégon" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Libégon</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         SPECTRE - Sbire homme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-spectre" onclick="toggleBanner(this, 'sbire-spectre', 'sbire-spectre-arrow')">
+        <img src="Images/Spectre.webp" alt="Spectre" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Ké... Ké... Ké... Ké... Ké... Ké ! »</span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-spectre-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-spectre">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-skelenox" data-pk="skelenox">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Skelenox.png" data-shiny="Images/SkelenoxS.png" alt="Skelénox" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Skelénox</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-bacabouh" data-pk="bacabouh">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Bacabouh.png" data-shiny="Images/BacabouhS.png" alt="Bacabouh" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Bacabouh</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-tutafeh" data-pk="tutafeh">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tutafeh.png" data-shiny="Images/TutafehS.png" alt="Tutafeh" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tutafeh</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="teraclope">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Teraclope.png" alt="Téraclope" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Téraclope</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="tenefix">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tenefix.png" alt="Ténéfix" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ténéfix</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="tutankafer">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tutankafer.png" alt="Tutankafer" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tutankafer</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="ectoplasma">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ectoplasma.png" alt="Ectoplasma" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ectoplasma</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="momartik">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Momartik.png" alt="Momartik" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Momartik</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="tutankafer">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tutankafer.png" alt="Tutankafer" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tutankafer</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         TÉNÈBRES - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-tenebres" onclick="toggleBanner(this, 'sbire-tenebres', 'sbire-tenebres-arrow')">
+        <img src="Images/Tenebres.webp" alt="Ténèbres" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Comme on dit, là où il y a de la lumière, il y a de l'<strong>ombre</strong>. »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-tenebres-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-tenebres">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-carvanha" data-pk="carvanha">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Carvanha.png" data-shiny="Images/CarvanhaS.png" alt="Carvanha" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Carvanha</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-medhyena" data-pk="medhyena">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Medhyena.png" data-shiny="Images/MedhyenaS.png" alt="Medhyèna" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Medhyèna</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-rattata-a" data-pk="rattata-a">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/RattataA.png" data-shiny="Images/RattataAS.png" alt="Rattata d'Alola" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Rattata d'Alola</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-farfuret" data-pk="farfuret">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Farfuret.png" data-shiny="Images/FarfuretS.png" alt="Farfuret" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Farfuret</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-malosse" data-pk="malosse">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Malosse.png" data-shiny="Images/MalosseS.png" alt="Malosse" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Malosse</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-absol" data-pk="absol">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Absol.png" data-shiny="Images/AbsolS.png" alt="Absol" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Absol</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="leopardus">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Leopardus.png" alt="Léopardus" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Léopardus</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="trioxhydre">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Trioxhydre.png" alt="Trioxhydre" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Trioxhydre</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         VOL - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-vol" onclick="toggleBanner(this, 'sbire-vol', 'sbire-vol-arrow')">
+        <img src="Images/Vol.webp" alt="Vol" class="rocket-sbire-type">
+        <span class="rocket-sbire-phrase">« Combat contre mes Pokémon de type <strong>Vol</strong> ! »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-vol-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-vol">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-nirondelle" data-pk="nirondelle">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Nirondelle.png" data-shiny="Images/NirondelleS.png" alt="Nirondelle" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Nirondelle</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-minisange" data-pk="minisange">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Minisange.png" data-shiny="Images/MinisangeS.png" alt="Minisange" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Minisange</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-tylton" data-pk="tylton">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tylton.png" data-shiny="Images/TyltonS.png" alt="Tylton" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tylton</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-insecateur" data-pk="insecateur">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Insecateur.png" data-shiny="Images/InsecateurS.png" alt="Insécateur" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Insécateur</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-nosferapti" data-pk="nosferapti">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosférapti" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Nosférapti</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-scorplane" data-pk="scorplane">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Scorplane.png" data-shiny="Images/ScorplaneS.png" alt="Scorplane" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Scorplane</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="dracolosse">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Dracolosse.png" alt="Dracolosse" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Dracolosse</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="bazoucan">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Bazoucan.png" alt="Bazoucan" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Bazoucan</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="lakmecygne">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Lakmecygne.png" alt="Lakmécygne" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Lakmécygne</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         SANS-TYPE - Sbire homme
+         ==============================
+         Sbire sans type : équipe mixte (starters de Kanto), pas d'icône de
+         type, et trois phrases possibles en jeu, une par ligne. Placé en
+         dernier, hors de l'ordre alphabétique (Cam, 20/10). -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-sans-type" onclick="toggleBanner(this, 'sbire-sans-type', 'sbire-sans-type-arrow')">
+        <span class="rocket-sbire-phrases">
+          <span class="rocket-sbire-phrase">« Prêt pour la défaite ? »</span>
+          <span class="rocket-sbire-phrase">« T'inquiète, j'ai gagné d'avance ! »</span>
+          <span class="rocket-sbire-phrase">« La gagne, c'est pour les gagnants. »</span>
+        </span>
+        <img src="Images/SbireHomme.webp" alt="Sbire homme">
+        <span class="intro-arrow" id="sbire-sans-type-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-sans-type">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable">
+        <div class="research-reward-item pk-bulbizarre" data-pk="bulbizarre">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Bulbizarre.png" data-shiny="Images/BulbizarreS.png" alt="Bulbizarre" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Bulbizarre</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-salameche" data-pk="salameche">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Salameche.png" data-shiny="Images/SalamecheS.png" alt="Salamèche" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Salamèche</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-carapuce" data-pk="carapuce">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Carapuce.png" data-shiny="Images/CarapuceS.png" alt="Carapuce" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Carapuce</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="herbizarre">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Herbizarre.png" alt="Herbizarre" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Herbizarre</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="reptincel">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Reptincel.png" alt="Reptincel" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Reptincel</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="carabaffe">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Carabaffe.png" alt="Carabaffe" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Carabaffe</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="florizarre">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Florizarre.png" alt="Florizarre" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Florizarre</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="dracaufeu">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Dracaufeu.png" alt="Dracaufeu" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Dracaufeu</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="tortank">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tortank.png" alt="Tortank" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tortank</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         SANS-TYPE - Sbire femme
+         ============================== -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-sans-type-femme" onclick="toggleBanner(this, 'sbire-sans-type-femme', 'sbire-sans-type-femme-arrow')">
+        <span class="rocket-sbire-phrases">
+          <span class="rocket-sbire-phrase">« Prêt pour la défaite ? »</span>
+          <span class="rocket-sbire-phrase">« T'inquiète, j'ai gagné d'avance ! »</span>
+          <span class="rocket-sbire-phrase">« La gagne, c'est pour les gagnants. »</span>
+        </span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-sans-type-femme-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-sans-type-femme">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable rocket-row-n2">
+        <div class="research-reward-item pk-ronflex" data-pk="ronflex">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ronflex.png" data-shiny="Images/RonflexS.png" alt="Ronflex" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ronflex</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item pk-lokhlass" data-pk="lokhlass">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Lokhlass.png" data-shiny="Images/LokhlassS.png" alt="Lokhlass" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Lokhlass</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="ronflex">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ronflex.png" alt="Ronflex" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ronflex</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="tartard">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Tartard.png" alt="Tartard" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Tartard</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="gardevoir">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Gardevoir.png" alt="Gardevoir" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Gardevoir</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="ronflex">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ronflex.png" alt="Ronflex" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ronflex</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="dracolosse">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Dracolosse.png" alt="Dracolosse" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Dracolosse</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="leviator">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Leviator.png" alt="Léviator" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Léviator</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         FAUX-CHEF - Sbire femme
+         ==============================
+         Faux Chef : Sbire déguisée, sans type. Pas d'icône de type ; placée
+         en tout dernier, après les Sbires sans type (Cam, 20/10). -->
+    <div class="research-card">
+      <button type="button" class="rocket-chef-banner rocket-sbire-banner" aria-expanded="false" aria-controls="sbire-faux-chef" onclick="toggleBanner(this, 'sbire-faux-chef', 'sbire-faux-chef-arrow')">
+        <span class="rocket-sbire-phrase">« Je t'ai bien eu ! »</span>
+        <img src="Images/SbireFemme.webp" alt="Sbire femme">
+        <span class="intro-arrow" id="sbire-faux-chef-arrow">▾</span>
+      </button>
+
+      <div class="intro-content" id="sbire-faux-chef">
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">1er Pokémon</div>
+      <div class="research-rewards rocket-row rocket-row-capturable rocket-row-n1">
+        <div class="research-reward-item pk-chetiflor" data-pk="chetiflor">
+          <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Chetiflor.png" data-shiny="Images/ChetiflorS.png" alt="Chétiflor" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Chétiflor</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">2e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="rattatac">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Rattatac.png" alt="Rattatac" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Rattatac</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="boustiflor">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Boustiflor.png" alt="Boustiflor" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Boustiflor</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label">3e Pokémon</div>
+      <div class="research-rewards rocket-row">
+        <div class="research-reward-item" data-pk="rattatac">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Rattatac.png" alt="Rattatac" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Rattatac</p>
+          <div class="rocket-types"></div>
+        </div>
+        <div class="research-reward-item" data-pk="ronflex">
+          <div class="research-image-container">
+            <div class="badges">
+              <img src="Images/Obscur.png" alt="Obscur" title="Pokémon Obscur" class="badge-obscur-icon">
+            </div>
+            <img src="Images/Ronflex.png" alt="Ronflex" class="pokemon-img">
+          </div>
+          <p class="research-reward-name">Ronflex</p>
+          <div class="rocket-types"></div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════ -->
@@ -48,6 +2711,7 @@
         <li>Chaque chef de la Team Go Rocket utilisera ses 2 boucliers.</li>
         <li>Vous obtiendrez un Œuf 12 km après avoir battu un Chef.</li>
         <li>Vous pourrez également capturer le Pokémon <span class="rocket-highlight-red">encadré en rouge</span>.</li>
+        <li>Pour faire perdre les boucliers aux Chefs, il faut attaquer vite ! C'est d'autant plus important pour Giovanni. Mackogneur avec Poing Karaté et Coup Croix sera très utile.</li>
       </ul>
     </div>
 
@@ -170,8 +2834,15 @@
         </div>
       </div>
 
-      <!-- Types à utiliser pour ce combat : en attente des types de Cam
-           (ceux de juillet valaient pour l'ancienne équipe). -->
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label rocket-counters-label">Types à utiliser pour ce combat</div>
+      <div class="rocket-counters">
+          <div class="type-block"><span class="type-text">Fée</span><img src="Images/Fee.webp" alt="Fée" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Combat</span><img src="Images/Combat.webp" alt="Combat" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Plante</span><img src="Images/Plante.webp" alt="Plante" class="type-icon"></div>
+      </div>
       </div>
 
     </div>
@@ -279,8 +2950,15 @@
         </div>
       </div>
 
-      <!-- Types à utiliser pour ce combat : en attente des types de Cam
-           (ceux de juillet valaient pour l'ancienne équipe). -->
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label rocket-counters-label">Types à utiliser pour ce combat</div>
+      <div class="rocket-counters">
+          <div class="type-block"><span class="type-text">Eau</span><img src="Images/Eau.webp" alt="Eau" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Ténèbres</span><img src="Images/Tenebres.webp" alt="Ténèbres" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Feu</span><img src="Images/Feu.webp" alt="Feu" class="type-icon"></div>
+      </div>
       </div>
 
     </div>
@@ -388,8 +3066,15 @@
         </div>
       </div>
 
-      <!-- Types à utiliser pour ce combat : en attente des types de Cam
-           (ceux de juillet valaient pour l'ancienne équipe). -->
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label rocket-counters-label">Types à utiliser pour ce combat</div>
+      <div class="rocket-counters">
+          <div class="type-block"><span class="type-text">Eau</span><img src="Images/Eau.webp" alt="Eau" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Sol</span><img src="Images/Sol.webp" alt="Sol" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Fée</span><img src="Images/Fee.webp" alt="Fée" class="type-icon"></div>
+      </div>
       </div>
 
     </div>
@@ -477,8 +3162,15 @@
         </div>
       </div>
 
-      <!-- Types à utiliser pour ce combat : en attente des types de Cam
-           (ceux de juillet valaient pour l'ancienne équipe). -->
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label rocket-counters-label">Types à utiliser pour ce combat</div>
+      <div class="rocket-counters">
+          <div class="type-block"><span class="type-text">Combat</span><img src="Images/Combat.webp" alt="Combat" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Fée</span><img src="Images/Fee.webp" alt="Fée" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Sol</span><img src="Images/Sol.webp" alt="Sol" class="type-icon"></div>
+      </div>
       </div>
 
     </div>

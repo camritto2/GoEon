@@ -70,6 +70,43 @@
   background-color: var(--bg-capture-rocket);
 }
 
+/* Bandeau d'un Sbire : icône du type, phrase d'accroche, puis le Sbire.
+   La phrase reste visible bandeau fermé : c'est elle qui permet de
+   reconnaitre le Sbire en jeu. */
+.rocket-chef-banner img.rocket-sbire-type {
+  width: 22px;
+  height: 22px;
+}
+
+/* Marges latérales : une phrase longue passe sur deux lignes sans venir
+   sous la flèche du repli. */
+.rocket-sbire-banner {
+  padding: 4px 30px;
+}
+
+.rocket-sbire-phrase {
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Sbire sans type : ses trois phrases possibles, empilées. */
+.rocket-sbire-phrases {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Mot-indice du type dans la phrase (« feu », « Normal ») : souligné seul,
+   sans gras (essai de Cam du 20/10). */
+.rocket-sbire-phrase strong {
+  font-weight: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* Chef ouvert : la miniature disparait, le Pokémon est visible dans la carte
    (demande de Cam du 20/10). aria-expanded est tenu à jour par toggleBanner(). */
 .rocket-chef-banner[aria-expanded="true"] img.rocket-banner-capture {
@@ -196,6 +233,37 @@ body.dark-mode .rocket-chef-banner {
 .rocket-row .research-reward-item.rocket-capturable:last-of-type {
   border-right: 2px solid #e53e3e;
 }
+
+/* Sbires : un seul cadre pour toute la rangée des capturables (idée de Cam
+   du 20/10) - « l'un des Pokémon encadrés en rouge ». Les cases gardent leur
+   séparateur ; position: relative pour placer le badge shiny en coin. */
+.rocket-row-capturable {
+  background-color: rgba(229, 62, 62, 0.06);
+  border: 2px solid var(--rouge-rocket);
+  border-radius: 8px;
+  margin: 1px 4px;
+  box-sizing: border-box;
+}
+
+.rocket-row-capturable .research-reward-item {
+  position: relative;
+}
+
+/* Rangée capturable de 1 ou 2 Pokémon : le cadre se resserre sur eux au lieu
+   de courir sur toute la largeur. Les cases gardent leur largeur d'un tiers
+   de carte : 1/1 ou 1/2 du cadre. */
+.rocket-row-capturable.rocket-row-n2 {
+  width: calc(200% / 3 - 8px);
+  margin: 1px auto;
+}
+
+.rocket-row-capturable.rocket-row-n1 {
+  width: calc(100% / 3 - 8px);
+  margin: 1px auto;
+}
+
+.rocket-row-n2 .research-reward-item { width: 50%; }
+.rocket-row-n1 .research-reward-item { width: 100%; }
 
 .rocket-shiny-corner {
   position: absolute;
@@ -328,6 +396,19 @@ body.dark-mode .rocket-counters {
   .rocket-chef-banner img {
     width: 64px;
     height: 64px;
+  }
+
+  .rocket-chef-banner img.rocket-sbire-type {
+    width: 34px;
+    height: 34px;
+  }
+
+  .rocket-sbire-phrase {
+    font-size: 19px;
+  }
+
+  .rocket-sbire-banner {
+    padding: 6px 44px;
   }
 
   .rocket-chef-banner img.rocket-banner-capture {
