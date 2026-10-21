@@ -25,9 +25,21 @@
     <a href="raids.html" aria-current="page">Raids</a>
     <a href="raids_obscurs.html">Raids Obscurs</a>
   </nav>
-  <p class="raids-date">
-    Depuis le mercredi 14 octobre, 6h - Jusqu'au mardi 20 octobre, 21h44
+  <p class="raids-date" data-debut="2026-10-21T06:00" data-fin="2026-10-27T21:44">
+    Depuis le mercredi 21 octobre, 6h - Jusqu'au mardi 27 octobre, 21h44
   </p>
+  <div class="intro-rules">
+    <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
+      Horaires des Raids
+      <span class="intro-arrow" id="intro-arrow">▾</span>
+    </button>
+    <div class="intro-content" id="intro-content">
+      <div class="intro-item"><span class="bullet">•</span>Les Raids ont lieu chaque jour, de 6h à 21h44.</div>
+      <div class="intro-item"><span class="bullet">•</span>Un Œuf éclot une heure après son apparition. Les Œufs apparaissent de 6h à 20h.</div>
+      <div class="intro-item"><span class="bullet">•</span>Une fois l'Œuf éclos, le Raid dure 45 minutes.</div>
+    </div>
+  </div>
+
   <p class="astuce-shiny">
     <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
@@ -35,13 +47,13 @@
   <h2 class="category-title tier-1">Raids 1 Étoile</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-ramoloss-g" data-pk="ramoloss-g">
+    <div class="pokemon-card pk-coupenotte" data-pk="coupenotte">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/RamolossG.png" data-shiny="Images/RamolossGS.png" alt="Ramoloss de Galar" class="pokemon-img">
+        <img src="Images/Coupenotte.png" data-shiny="Images/CoupenotteS.png" alt="Coupenotte" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Ramoloss de Galar</h2>
+        <h2 class="pokemon-name">Coupenotte</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -53,13 +65,13 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-voltorbe-h" data-pk="voltorbe-h">
+    <div class="pokemon-card pk-frigodo" data-pk="frigodo">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/VoltorbeH.png" data-shiny="Images/VoltorbeHS.png" alt="Voltorbe de Hisui" class="pokemon-img">
+        <img src="Images/Frigodo.png" data-shiny="Images/FrigodoS.png" alt="Frigodo" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Voltorbe de Hisui</h2>
+        <h2 class="pokemon-name">Frigodo</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -71,13 +83,13 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-ningale" data-pk="ningale">
+    <div class="pokemon-card pk-mucuscule" data-pk="mucuscule">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/Ningale.png" data-shiny="Images/NingaleS.png" alt="Ningale" class="pokemon-img">
+        <img src="Images/Mucuscule.png" data-shiny="Images/MucusculeS.png" alt="Mucuscule" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Ningale</h2>
+        <h2 class="pokemon-name">Mucuscule</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -89,13 +101,13 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-terhal" data-pk="terhal">
+    <div class="pokemon-card pk-bebecaille" data-pk="bebecaille">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/Terhal.png" data-shiny="Images/TerhalS.png" alt="Terhal" class="pokemon-img">
+        <img src="Images/Bebecaille.png" data-shiny="Images/BebecailleS.png" alt="Bébécaille" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Terhal</h2>
+        <h2 class="pokemon-name">Bébécaille</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -112,13 +124,13 @@
 <h2 class="category-title tier-3">Raids 3 Étoiles</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-arcanin-h" data-pk="arcanin-h">
+    <div class="pokemon-card pk-grotadmorv-a" data-pk="grotadmorv-a">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/ArcaninH.png" data-shiny="Images/ArcaninHS.png" alt="Arcanin de Hisui" class="pokemon-img">
+        <img src="Images/GrotadmorvA.png" data-shiny="Images/GrotadmorvAS.png" alt="Grotadmorv d'Alola" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Arcanin de Hisui</h2>
+        <h2 class="pokemon-name">Grotadmorv d'Alola</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -127,17 +139,23 @@
           <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
           <div class="weather-container"></div>
         </div>
-        <!-- Difficulté à venir : Cam ne l'a pas encore. -->
+        <hr class="separator">
+        <p class="raid-difficulty-label">Dresseurs Nécessaires</p>
+        <div class="raid-difficulty">
+          <div class="diff-bubble diff-3">1</div>
+          <div class="diff-bubble diff-4">2</div>
+          <div class="diff-bubble diff-5 diff-wide">3+</div>
+        </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-ronflex" data-pk="ronflex">
+    <div class="pokemon-card pk-feunard-a" data-pk="feunard-a">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/Ronflex.png" data-shiny="Images/RonflexS.png" alt="Ronflex" class="pokemon-img">
+        <img src="Images/FeunardA.png" data-shiny="Images/FeunardAS.png" alt="Feunard d'Alola" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Ronflex</h2>
+        <h2 class="pokemon-name">Feunard d'Alola</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -146,17 +164,22 @@
           <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
           <div class="weather-container"></div>
         </div>
-        <!-- Difficulté à venir : Cam ne l'a pas encore. -->
+        <hr class="separator">
+        <p class="raid-difficulty-label">Dresseurs Nécessaires</p>
+        <div class="raid-difficulty">
+          <div class="diff-bubble diff-4">1</div>
+          <div class="diff-bubble diff-5 diff-wide">2+</div>
+        </div>
       </div>
     </div>
 
-    <div class="pokemon-card pk-hachecateur" data-pk="hachecateur">
+    <div class="pokemon-card pk-raichu-a" data-pk="raichu-a">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/Hachecateur.png" data-shiny="Images/HachecateurS.png" alt="Hachécateur" class="pokemon-img">
+        <img src="Images/RaichuA.png" data-shiny="Images/RaichuAS.png" alt="Raichu d'Alola" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Hachécateur</h2>
+        <h2 class="pokemon-name">Raichu d'Alola</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -165,7 +188,13 @@
           <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
           <div class="weather-container"></div>
         </div>
-        <!-- Difficulté à venir : Cam ne l'a pas encore. -->
+        <hr class="separator">
+        <p class="raid-difficulty-label">Dresseurs Nécessaires</p>
+        <div class="raid-difficulty">
+          <div class="diff-bubble diff-3">1</div>
+          <div class="diff-bubble diff-4">2</div>
+          <div class="diff-bubble diff-5 diff-wide">3+</div>
+        </div>
       </div>
     </div>
 
@@ -176,15 +205,15 @@
 
     <!-- Pas de pokemon-name-mega ici : sur les pages de raids les noms restent
          verts, portés par pokemon.css. Le rouge Méga est réservé aux pages Top.
-         data-pk pointe la forme de base : on combat Méga-Dracolosse, mais on
-         capture un Dracolosse normal au terme du raid. -->
-    <div class="pokemon-card pk-dracolosse" data-pk="dracolosse">
+         data-pk pointe la forme de base : on combat Méga-Dracaufeu, mais on
+         capture un Dracaufeu normal au terme du raid. -->
+    <div class="pokemon-card pk-dracaufeu-mx" data-pk="dracaufeu">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/DracolosseM.png" data-shiny="Images/DracolosseMS.png" alt="Méga-Dracolosse" class="pokemon-img">
+        <img src="Images/DracaufeuMX.png" data-shiny="Images/DracaufeuMXS.png" alt="Méga-Dracaufeu X" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Méga-Dracolosse</h2>
+        <h2 class="pokemon-name">Méga-Dracaufeu X</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -205,12 +234,48 @@
         <p class="raid-types-label">Types à utiliser</p>
         <div class="raid-types">
           <div class="raid-types-ligne">
-            <a href="TopGlace.html" title="Voir les meilleurs Pokémon Glace"><img src="Images/Glace.webp" alt="Glace" class="type-icon"></a>
-            <a href="TopFee.html" title="Voir les meilleurs Pokémon Fée"><img src="Images/Fee.webp" alt="Fée" class="type-icon"></a>
+            <a href="TopSol.html" title="Voir les meilleurs Pokémon Sol"><img src="Images/Sol.webp" alt="Sol" class="type-icon"></a>
+            <a href="TopRoche.html" title="Voir les meilleurs Pokémon Roche"><img src="Images/Roche.webp" alt="Roche" class="type-icon"></a>
           </div>
           <div class="raid-types-ligne">
-            <a href="TopRoche.html" title="Voir les meilleurs Pokémon Roche"><img src="Images/Roche.webp" alt="Roche" class="type-icon"></a>
             <a href="TopDragon.html" title="Voir les meilleurs Pokémon Dragon"><img src="Images/Dragon.webp" alt="Dragon" class="type-icon"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pokemon-card pk-dracaufeu-my" data-pk="dracaufeu">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/DracaufeuMY.png" data-shiny="Images/DracaufeuMYS.png" alt="Méga-Dracaufeu Y" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Dracaufeu Y</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
+        </div>
+        <hr class="separator">
+        <p class="raid-difficulty-label">Dresseurs Nécessaires</p>
+        <div class="raid-difficulty">
+          <div class="diff-bubble diff-2">1</div>
+          <div class="diff-bubble diff-3">2</div>
+          <div class="diff-bubble diff-4">3</div>
+          <div class="diff-bubble diff-5 diff-wide">4+</div>
+        </div>
+        <hr class="separator">
+        <p class="raid-types-label">Types à utiliser</p>
+        <div class="raid-types">
+          <div class="raid-types-ligne">
+            <a href="TopRoche.html" title="Voir les meilleurs Pokémon Roche"><img src="Images/Roche.webp" alt="Roche" class="type-icon"></a>
+          </div>
+          <div class="raid-types-ligne">
+            <a href="TopEau.html" title="Voir les meilleurs Pokémon Eau"><img src="Images/Eau.webp" alt="Eau" class="type-icon"></a>
+            <a href="TopElectrik.html" title="Voir les meilleurs Pokémon Électrik"><img src="Images/Electrik.webp" alt="Électrik" class="type-icon"></a>
           </div>
         </div>
       </div>
@@ -221,13 +286,13 @@
   <h2 class="category-title tier-legendary">Raids Légendaires</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card pk-dialga" data-pk="dialga">
+    <div class="pokemon-card pk-palkia" data-pk="palkia">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
-        <img src="Images/Dialga.png" data-shiny="Images/DialgaS.png" alt="Dialga" class="pokemon-img">
+        <img src="Images/Palkia.png" data-shiny="Images/PalkiaS.png" alt="Palkia" class="pokemon-img">
       </div>
       <div class="card-content">
-        <h2 class="pokemon-name">Dialga</h2>
+        <h2 class="pokemon-name">Palkia</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">
@@ -241,18 +306,18 @@
         <div class="raid-difficulty">
           <div class="diff-bubble diff-1">1</div>
           <div class="diff-bubble diff-2">2</div>
-          <div class="diff-bubble diff-3 diff-wide">3-5</div>
-          <div class="diff-bubble diff-4">6</div>
-          <div class="diff-bubble diff-5 diff-wide">7+</div>
+          <div class="diff-bubble diff-3 diff-wide">3-4</div>
+          <div class="diff-bubble diff-4">5</div>
+          <div class="diff-bubble diff-5 diff-wide">6+</div>
         </div>
         <hr class="separator">
         <p class="raid-types-label">Types à utiliser</p>
         <div class="raid-types">
           <div class="raid-types-ligne">
-            <a href="TopSol.html" title="Voir les meilleurs Pokémon Sol"><img src="Images/Sol.webp" alt="Sol" class="type-icon"></a>
+            <a href="TopFee.html" title="Voir les meilleurs Pokémon Fée"><img src="Images/Fee.webp" alt="Fée" class="type-icon"></a>
           </div>
           <div class="raid-types-ligne">
-            <a href="TopCombat.html" title="Voir les meilleurs Pokémon Combat"><img src="Images/Combat.webp" alt="Combat" class="type-icon"></a>
+            <a href="TopDragon.html" title="Voir les meilleurs Pokémon Dragon"><img src="Images/Dragon.webp" alt="Dragon" class="type-icon"></a>
           </div>
         </div>
       </div>

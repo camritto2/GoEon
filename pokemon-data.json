@@ -371,11 +371,13 @@
       }
     },
     "bebecaille": {
-      "types": null,
+      "types": [
+        "Dragon"
+      ],
       "pc": {
         "n15": 415,
-        "n20": null,
-        "n25": null
+        "n20": 553,
+        "n25": 692
       }
     },
     "betochef": {
@@ -922,8 +924,8 @@
       ],
       "pc": {
         "n15": 586,
-        "n20": null,
-        "n25": null
+        "n20": 782,
+        "n25": 977
       }
     },
     "courrousinge": {
@@ -1532,9 +1534,9 @@
         "Fée"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null
+        "n15": 989,
+        "n20": 1319,
+        "n25": 1649
       }
     },
     "feunnec": {
@@ -2010,6 +2012,17 @@
         "n15": 1015,
         "n20": null,
         "n25": null
+      }
+    },
+    "grotadmorv-a": {
+      "types": [
+        "Poison",
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 1181,
+        "n20": 1575,
+        "n25": 1969
       }
     },
     "gruikui": {
@@ -3066,11 +3079,13 @@
       }
     },
     "mucuscule": {
-      "types": null,
+      "types": [
+        "Dragon"
+      ],
       "pc": {
         "n15": 418,
-        "n20": null,
-        "n25": null
+        "n20": 557,
+        "n25": 697
       }
     },
     "mygavolt": {
@@ -3743,6 +3758,17 @@
         "n15": 554,
         "n20": 739,
         "n25": null
+      }
+    },
+    "raichu-a": {
+      "types": [
+        "Électrik",
+        "Psy"
+      ],
+      "pc": {
+        "n15": 980,
+        "n20": 1306,
+        "n25": 1633
       }
     },
     "raikou": {

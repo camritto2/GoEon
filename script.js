@@ -1473,3 +1473,40 @@ if (document.querySelector('.home-card[data-debut]')) {
   }) || onglets[onglets.length - 1];
   ouvrir(aOuvrir);
 })();
+
+
+// 22. STATUT DE LA ROTATION DE RAIDS (raids.html, raids_obscurs.html)
+// La ligne .raids-date porte data-debut et data-fin, au même format
+// obligatoire que §18 ("AAAA-MM-JJTHH:MM", partie horaire comprise). Même
+// logique que les badges de l'accueil : rien avant le début, « À jour »
+// pendant, « Raids terminés. La mise à jour arrive très vite ! » après :
+// une rotation périmée se signale d'elle-même quand la mise à jour n'a pas
+// encore été faite.
+// Le badge va sur sa propre ligne, sous les dates. Une date illisible ne
+// produit aucun badge. Relecture toutes les minutes, comme §18.
+function majStatutRaids() {
+  const maintenant = Date.now();
+
+  document.querySelectorAll('.raids-date[data-debut][data-fin]').forEach(ligne => {
+    const debut = new Date(ligne.dataset.debut).getTime();
+    const fin   = new Date(ligne.dataset.fin).getTime();
+
+    ligne.querySelectorAll('.raids-statut').forEach(b => b.remove());
+    if (isNaN(debut) || isNaN(fin) || debut > fin) return;
+
+    let classe = null;
+    if (maintenant >= debut && maintenant <= fin) classe = 'en-cours';
+    else if (maintenant > fin)                    classe = 'termine';
+    if (!classe) return;
+
+    const badge = document.createElement('span');
+    badge.className = 'raids-statut raids-statut-' + classe;
+    badge.textContent = (classe === 'en-cours') ? 'À jour' : 'Raids terminés. La mise à jour arrive très vite !';
+    ligne.append(badge);
+  });
+}
+
+if (document.querySelector('.raids-date[data-debut]')) {
+  majStatutRaids();
+  setInterval(majStatutRaids, 60000);
+}

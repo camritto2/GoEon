@@ -1494,6 +1494,11 @@
 /* Groret — Normal / Shiny */
 .pk-groret .emoji-shiny { display: inline; }
 
+/* Grotadmorv d'Alola — Bon / Shiny */
+.pk-grotadmorv-a .pokemon-name { color: var(--accent-vert-bon); }
+.pk-grotadmorv-a .research-reward-name { color: var(--accent-vert-bon); }
+.pk-grotadmorv-a .emoji-shiny  { display: inline; }
+
 /* Grotichon — Bon / Shiny */
 .pk-grotichon .pokemon-name { color: var(--accent-vert-bon); }
 .pk-grotichon .research-reward-name { color: var(--accent-vert-bon); }

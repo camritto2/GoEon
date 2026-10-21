@@ -676,6 +676,24 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   text-align: center;
 }
 
+/* Badge posé par script.js §22 sous la ligne de dates des pages de raids.
+   Mêmes couleurs que les badges de l'accueil (index.css) : vert pendant,
+   gris fixe après (#6b7280, lisible en blanc dans les deux modes). */
+.raids-statut {
+  display: table;
+  margin: 6px auto 0 auto;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  line-height: 1.3;
+}
+
+.raids-statut-en-cours { background-color: var(--accent-vert-bon); }
+.raids-statut-termine  { background-color: #6b7280; }
+
 .astuce-shiny {
   margin: 0 0 10px 10px;
   color: var(--text-astuce);
@@ -1188,6 +1206,7 @@ body.dark-mode .proba-icon {
   .category-link { font-size: 15px; margin: -8px 0 12px 0; }
   .pokemon-subtitle { font-size: 13px; margin: -5px 0 4px 0; }
   .raids-date { font-size: 20px; text-align: center; margin: 10px 0 15px 0; }
+  .raids-statut { font-size: 14px; }
   .astuce-shiny { font-size: 14px; text-align: center; margin: 0 0 8px 0; }
   .research-helper { font-size: 16px; }
   .research-list { max-width: 100%; }

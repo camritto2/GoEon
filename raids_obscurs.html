@@ -25,9 +25,21 @@
     <a href="raids.html">Raids</a>
     <a href="raids_obscurs.html" aria-current="page">Raids Obscurs</a>
   </nav>
-  <p class="raids-date">
+  <p class="raids-date" data-debut="2026-10-07T06:00" data-fin="2026-11-03T21:44">
     Depuis le mercredi 7 octobre, 6h - Jusqu'au mardi 3 novembre, 21h44
   </p>
+  <div class="intro-rules">
+    <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
+      Horaires des Raids
+      <span class="intro-arrow" id="intro-arrow">▾</span>
+    </button>
+    <div class="intro-content" id="intro-content">
+      <div class="intro-item"><span class="bullet">•</span>Les Raids ont lieu chaque jour, de 6h à 21h44.</div>
+      <div class="intro-item"><span class="bullet">•</span>Un Œuf éclot une heure après son apparition. Les Œufs apparaissent de 6h à 20h.</div>
+      <div class="intro-item"><span class="bullet">•</span>Une fois l'Œuf éclos, le Raid dure 45 minutes.</div>
+    </div>
+  </div>
+
   <p class="astuce-shiny">
     <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
   </p>
