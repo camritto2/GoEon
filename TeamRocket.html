@@ -46,9 +46,19 @@
       <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
     </p>
 
+    <!-- Niveau de détail de la page (idée de Cam du 22/10), commun aux deux
+         onglets : simplifiée (noms seuls, sans Types à utiliser), types, ou complète (PC du 100 % et
+         purification des capturables). script.js §23, rocket.css. -->
+    <div class="rocket-details" role="group" aria-label="Niveau de détail">
+      <button type="button" data-detail="simple" aria-pressed="false">Version simplifiée</button>
+      <button type="button" data-detail="types" aria-pressed="true">Uniquement les types</button>
+      <button type="button" data-detail="complet" aria-pressed="false">Détails complets</button>
+    </div>
+
     <!-- Chaque Sbire est un bandeau repliable, comme les Chefs, mais sans
-         miniature (trop de Pokémon à capturer) ni « Types à utiliser » (choix
-         de Cam du 20/10). Rangés par ordre alphabétique du type. Le bandeau porte l'icône du type, le Sbire (homme ou
+         miniature (trop de Pokémon à capturer) (choix de Cam du 20/10). Les
+         « Types à utiliser » s'y ajoutent, même bloc que les Chefs (test du 22/10
+         sur le Sbire Acier). Rangés par ordre alphabétique du type. Le bandeau porte l'icône du type, le Sbire (homme ou
          femme) et sa phrase d'accroche, sans le nom du type (Cam, 20/10 : l'icône
          et l'indice de la phrase suffisent), qui permet de le reconnaitre en jeu : elle
          reste donc visible bandeau fermé. Le mot-indice du type y est en
@@ -80,6 +90,15 @@
           </div>
           <p class="research-reward-name">Sabelette d'Alola</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>3 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>3<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
         <div class="research-reward-item pk-galekid" data-pk="galekid">
           <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
@@ -91,6 +110,15 @@
           </div>
           <p class="research-reward-name">Galekid</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>1 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>1<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
         <div class="research-reward-item pk-terhal" data-pk="terhal">
           <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
@@ -102,6 +130,15 @@
           </div>
           <p class="research-reward-name">Terhal</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>5 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>5<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -174,6 +211,16 @@
           <div class="rocket-types"></div>
         </div>
       </div>
+
+      <hr class="research-rangee-sep">
+      <div class="rocket-slot-label rocket-counters-label">Types à utiliser pour ce combat</div>
+      <div class="rocket-counters">
+          <div class="type-block"><span class="type-text">Sol</span><img src="Images/Sol.webp" alt="Sol" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Feu</span><img src="Images/Feu.webp" alt="Feu" class="type-icon"></div>
+          <div class="type-block rocket-counters-plus"><span class="type-text">&nbsp;</span><span class="rocket-plus-signe">+</span></div>
+          <div class="type-block"><span class="type-text">Combat</span><img src="Images/Combat.webp" alt="Combat" class="type-icon"></div>
+      </div>
       </div>
 
     </div>
@@ -203,6 +250,15 @@
           </div>
           <p class="research-reward-name">Charpenti</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>3 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>3<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
         <div class="research-reward-item pk-ferosinge" data-pk="ferosinge">
           <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
@@ -214,6 +270,15 @@
           </div>
           <p class="research-reward-name">Férosinge</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>3 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>3<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
         <div class="research-reward-item pk-makuhita" data-pk="makuhita">
           <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
@@ -225,6 +290,15 @@
           </div>
           <p class="research-reward-name">Makuhita</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>3 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>3<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -241,6 +315,15 @@
           </div>
           <p class="research-reward-name">Kapoera</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>5 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>5<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
         <div class="research-reward-item pk-kicklee" data-pk="kicklee">
           <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
@@ -252,6 +335,15 @@
           </div>
           <p class="research-reward-name">Kicklee</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>5 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>5<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
         <div class="research-reward-item pk-tygnon" data-pk="tygnon">
           <img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny rocket-shiny-corner">
@@ -263,6 +355,15 @@
           </div>
           <p class="research-reward-name">Tygnon</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
+            <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
+            <div class="weather-container"></div>
+            <div class="rocket-purif">
+              <p class="rocket-purif-cout"><span class="rocket-purif-titre">Purif :</span><span>5 000<img src="Images/Poussieres.webp" alt="Poussières Étoile" title="Poussières Étoile"></span><span>5<img src="Images/Bonbon.webp" alt="Bonbons" title="Bonbons"></span></p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2719,6 +2820,15 @@
       <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
     </p>
 
+    <!-- Niveau de détail de la page (idée de Cam du 22/10), commun aux deux
+         onglets : simplifiée (noms seuls, sans Types à utiliser), types, ou complète (PC du 100 % et
+         purification des capturables). script.js §23, rocket.css. -->
+    <div class="rocket-details" role="group" aria-label="Niveau de détail">
+      <button type="button" data-detail="simple" aria-pressed="false">Version simplifiée</button>
+      <button type="button" data-detail="types" aria-pressed="true">Uniquement les types</button>
+      <button type="button" data-detail="complet" aria-pressed="false">Détails complets</button>
+    </div>
+
     <!-- Chaque Chef est un bandeau repliable (idée de Cam du 20/10 : trop de
          défilement sinon), fermé au chargement, en mobile comme en desktop.
          Le bandeau montre aussi, en petit, le Pokémon capturable du Chef
@@ -2756,6 +2866,7 @@
           </div>
           <p class="research-reward-name">Pandespiègle</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
           <div class="pokemon-stats">
             <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
             <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
@@ -2872,6 +2983,7 @@
           </div>
           <p class="research-reward-name">Tadmorv d'Alola</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
           <div class="pokemon-stats">
             <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
             <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
@@ -2988,6 +3100,7 @@
           </div>
           <p class="research-reward-name">Osselait</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
           <div class="pokemon-stats">
             <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
             <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>
@@ -3154,6 +3267,7 @@
           </div>
           <p class="research-reward-name">Zekrom</p>
           <div class="rocket-types"></div>
+          <hr class="separator">
           <div class="pokemon-stats">
             <p>PC du 100% : <span class="boost-value" data-pc="n8"></span></p>
             <p>Boost Météo : <span class="boost-value" data-pc="n13"></span></p>

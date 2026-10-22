@@ -7,7 +7,7 @@
 .rocket-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
   max-width: 420px;
   margin: 0 auto 15px auto;
 }
@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
@@ -61,8 +61,8 @@
    rouge = à capturer ». Fond rouge pâle en clair, rouge translucide en
    sombre (--bg-capture-rocket), sans halo. Choix de Cam du 20/10. */
 .rocket-chef-banner img.rocket-banner-capture {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   padding: 2px;
   box-sizing: border-box;
   border: 1.5px solid var(--rouge-rocket);
@@ -74,18 +74,18 @@
    La phrase reste visible bandeau fermé : c'est elle qui permet de
    reconnaitre le Sbire en jeu. */
 .rocket-chef-banner img.rocket-sbire-type {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Marges latérales : une phrase longue passe sur deux lignes sans venir
    sous la flèche du repli. */
 .rocket-sbire-banner {
-  padding: 4px 30px;
+  padding: 3px 30px;
 }
 
 .rocket-sbire-phrase {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   font-style: italic;
   text-align: center;
@@ -132,16 +132,120 @@ body.dark-mode .rocket-chef-banner {
 }
 
 .rocket-chef-banner img {
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
 
 /* PC du 100 % des Pokémon capturables (niveaux 8 et 13), bloc .pokemon-stats
    des raids : centré, la carte étant trop étroite en mobile. */
-.rocket-capturable .pokemon-stats {
+.rocket-capturable .pokemon-stats,
+.rocket-row-capturable .pokemon-stats {
   text-align: center;
-  margin-top: 4px;
+  margin-top: 1px;
+}
+
+/* Séparateur types / PC : la carte est en flex colonne centrée, le <hr>
+   s'y réduirait à une largeur nulle (invisible en desktop) sans stretch. */
+.rocket-list .research-reward-item > hr.separator {
+  align-self: stretch;
+  width: auto;
+}
+
+/* Niveau de détail de la page (idée de Cam du 22/10) : trois pastilles
+   au-dessus des bandeaux, état porté par body[data-rocket-detail] (script.js
+   §23). Sans JS, ou tant qu'aucun choix n'est fait : « Uniquement les types ».
+   Contrôle segmenté, aux couleurs des onglets Sbires / Chefs (le rouge Rocket
+   a été écarté par Cam le 22/10) mais d'une autre forme, pour ne pas s'y
+   confondre. */
+.rocket-details {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 10px;
+  border: 1px solid var(--border-carte);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.rocket-details button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  background: var(--bg-carte);
+  padding: 5px 7px;
+  border: none;
+  border-left: 1px solid var(--border-carte);
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.rocket-details button:first-child {
+  border-left: none;
+}
+
+.rocket-details button[aria-pressed="true"] {
+  background-color: var(--accent-navbar);
+  color: var(--accent-text-navbar);
+  cursor: default;
+}
+
+/* Uniquement les types (défaut) : pas de stats sur les capturables. */
+body:not([data-rocket-detail="complet"]) .rocket-list .research-reward-item > hr.separator,
+body:not([data-rocket-detail="complet"]) .rocket-list .research-reward-item > .pokemon-stats {
+  display: none;
+}
+
+/* Version simplifiée : les noms seuls, sans les types des Pokémon ni les
+   « Types à utiliser » (et le filet qui les précède). */
+body[data-rocket-detail="simple"] .rocket-list .rocket-types,
+body[data-rocket-detail="simple"] .rocket-list .research-rangee-sep:has(+ .rocket-counters-label),
+body[data-rocket-detail="simple"] .rocket-list .rocket-counters-label,
+body[data-rocket-detail="simple"] .rocket-list .rocket-counters {
+  display: none;
+}
+
+/* Le filet sous le nom (global.css) sépare le nom des types : sans types, il
+   n'a plus rien à séparer. */
+body[data-rocket-detail="simple"] .rocket-list .rocket-row .research-reward-name {
+  border-bottom: none;
+}
+
+/* Coût de la purification (Sbires), sous la météo, séparé par un filet.
+   « Purif : », puis Poussières et Bonbons en icônes, sur une seule ligne. */
+.rocket-purif {
+  margin: 3px 8px 0;
+  padding-top: 3px;
+  border-top: 1px solid var(--hr-separator);
+}
+
+.rocket-purif-cout .rocket-purif-titre {
+  font-size: 8px;
+  font-weight: 400;
+  color: var(--text-muet);
+}
+
+.pokemon-stats .rocket-purif-cout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.rocket-purif-cout span {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.rocket-purif-cout img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
 }
 
 /* ==========================================
@@ -174,18 +278,18 @@ body.dark-mode .rocket-chef-banner {
 
 /* Images : forcer la taille (sans overflow:hidden pour ne pas rogner le badge) */
 .rocket-list .rocket-row .research-image-container {
-  width: 70px;
-  height: 72px;
+  width: 56px;
+  height: 58px;
   padding-top: 2px;
   box-sizing: border-box;
   align-items: flex-start;
 }
 
 .rocket-list .rocket-row .research-image-container img.pokemon-img {
-  width: 70px;
-  height: 70px;
-  max-width: 70px;
-  max-height: 70px;
+  width: 56px;
+  height: 56px;
+  max-width: 56px;
+  max-height: 56px;
   object-fit: contain;
 }
 
@@ -372,6 +476,7 @@ body.dark-mode .rocket-counters {
 
   .rocket-list {
     max-width: 700px;
+    gap: 12px;
   }
 
   /* global.css ouvre toujours .intro-content en desktop (intros des pages
@@ -423,23 +528,37 @@ body.dark-mode .rocket-counters {
     padding: 3px 0;
   }
 
+  .rocket-details {
+    margin-bottom: 16px;
+  }
+
+  .rocket-capturable .pokemon-stats,
+  .rocket-row-capturable .pokemon-stats {
+    margin-top: 2px;
+  }
+
+  .rocket-details button {
+    font-size: 14px;
+    padding: 7px 18px;
+  }
+
   .rocket-list .rocket-row .research-reward-item {
     padding-bottom: 6px;
   }
 
   .rocket-list .rocket-row .research-image-container {
-    width: 120px;
-    height: 122px;
+    width: 90px;
+    height: 92px;
     padding-top: 2px;
     box-sizing: border-box;
     align-items: flex-start;
   }
 
   .rocket-list .rocket-row .research-image-container img.pokemon-img {
-    width: 120px;
-    height: 120px;
-    max-width: 120px;
-    max-height: 120px;
+    width: 90px;
+    height: 90px;
+    max-width: 90px;
+    max-height: 90px;
     object-fit: contain;
   }
 
@@ -455,6 +574,29 @@ body.dark-mode .rocket-counters {
   .rocket-capturable {
     margin: 2px 6px;
     padding: 6px 0;
+  }
+
+  .rocket-purif {
+    margin: 6px 16px 0;
+    padding-top: 6px;
+  }
+
+  .rocket-purif-cout .rocket-purif-titre {
+    font-size: 12px;
+  }
+
+  .pokemon-stats .rocket-purif-cout {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .rocket-purif-cout span {
+    gap: 3px;
+  }
+
+  .rocket-purif-cout img {
+    width: 20px;
+    height: 20px;
   }
 
   .rocket-shiny-corner {

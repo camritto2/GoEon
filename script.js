@@ -1510,3 +1510,38 @@ if (document.querySelector('.raids-date[data-debut]')) {
   majStatutRaids();
   setInterval(majStatutRaids, 60000);
 }
+
+
+// 23. NIVEAU DE DÉTAIL (TeamRocket.html)
+// Trois pastilles .rocket-details, une par onglet : « Version simplifiée »,
+// « Uniquement les types » (défaut), « Détails complets ». Le choix se pose
+// sur body[data-rocket-detail], lu par rocket.css, et vaut pour les deux
+// onglets (leurs pastilles restent synchronisées). Il est retenu dans le
+// navigateur du visiteur ; sans stockage disponible, retour au défaut.
+(function () {
+  const groupes = document.querySelectorAll('.rocket-details');
+  if (!groupes.length) return;
+  const CLE = 'goeon-rocket-detail';
+  const NIVEAUX = ['simple', 'types', 'complet'];
+
+  function appliquer(niveau) {
+    document.body.dataset.rocketDetail = niveau;
+    groupes.forEach(g => g.querySelectorAll('button[data-detail]').forEach(b => {
+      b.setAttribute('aria-pressed', b.dataset.detail === niveau ? 'true' : 'false');
+    }));
+  }
+
+  let depart = 'types';
+  try {
+    const memo = localStorage.getItem(CLE);
+    if (NIVEAUX.includes(memo)) depart = memo;
+  } catch (e) { /* stockage indisponible : défaut */ }
+  appliquer(depart);
+
+  groupes.forEach(g => g.addEventListener('click', e => {
+    const b = e.target.closest('button[data-detail]');
+    if (!b || !NIVEAUX.includes(b.dataset.detail)) return;
+    appliquer(b.dataset.detail);
+    try { localStorage.setItem(CLE, b.dataset.detail); } catch (e) { /* rien */ }
+  }));
+})();
