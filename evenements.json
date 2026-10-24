@@ -1227,10 +1227,14 @@
         {
           "debut": "2026-11-21",
           "categorie": "community-day",
-          "court": "CD ???",
-          "long": "Community Day - ???",
+          "court": "CD Scalpion",
+          "long": "Community Day - Scalpion",
           "heures": "14h - 17h",
           "bonus": "Certains bonus prolongés jusqu'à 21h",
+          "sprites": [
+            "Scalpion.png"
+          ],
+          "page": "CDScalpion.html",
           "lignes": [
             "Community Day",
             "14h-17h/21h"

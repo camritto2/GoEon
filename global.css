@@ -242,6 +242,11 @@ h1 {
   border-bottom: none;
 }
 
+/* Retour à la ligne réservé au mobile (« 2 Hyper / Balls ») : masqué en
+   desktop dans le bloc min-width: 769px. Le texte est enveloppé dans un
+   <span>, car le flex de .research-reward-name ignore les <br>. */
+.br-mobile { display: inline; }
+
 .research-reward-name.reward-good {
   color: var(--accent-vert-bon);
 }
@@ -1211,6 +1216,7 @@ body.dark-mode .proba-icon {
   .research-helper { font-size: 16px; }
   .research-list { max-width: 100%; }
   .research-saison-titre { font-size: 18px; margin: -15px 0 16px 0; }
+  .br-mobile { display: none; }
   .passe-go-rank { font-size: 16px; }
   .passe-go-rank-long span { font-size: 13px; }
   .passe-go-intro { font-size: 16px; }

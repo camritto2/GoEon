@@ -4082,6 +4082,39 @@
         "n25": null
       }
     },
+    "scalpereur": {
+      "types": [
+        "Ténèbres",
+        "Acier"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
+    "scalpion": {
+      "types": [
+        "Ténèbres",
+        "Acier"
+      ],
+      "pc": {
+        "n15": 614,
+        "n20": 819,
+        "n25": 1024
+      }
+    },
+    "scalproie": {
+      "types": [
+        "Ténèbres",
+        "Acier"
+      ],
+      "pc": {
+        "n15": null,
+        "n20": null,
+        "n25": null
+      }
+    },
     "scarabrute": {
       "types": [
         "Insecte"
