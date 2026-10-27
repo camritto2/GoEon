@@ -286,9 +286,9 @@
         "Sol"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null
+        "n15": 528,
+        "n20": 705,
+        "n25": 881
       }
     },
     "baggiguane": {
@@ -1322,9 +1322,9 @@
         "Poison"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null
+        "n15": 1233,
+        "n20": 1644,
+        "n25": 2055
       }
     },
     "electhor": {
@@ -1530,6 +1530,16 @@
         "n25": null,
         "n8": 262,
         "n13": 432
+      }
+    },
+    "feuforeve": {
+      "types": [
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 825,
+        "n20": 1100,
+        "n25": 1376
       }
     },
     "feunard-a": {
@@ -1989,6 +1999,17 @@
         "n15": 509,
         "n20": 679,
         "n25": 849
+      }
+    },
+    "grodrive": {
+      "types": [
+        "Spectre",
+        "Vol"
+      ],
+      "pc": {
+        "n15": 1021,
+        "n20": 1361,
+        "n25": 1701
       }
     },
     "grolem": {
@@ -3051,6 +3072,17 @@
         "n25": 993
       }
     },
+    "motisma": {
+      "types": [
+        "Électrik",
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 870,
+        "n20": 1160,
+        "n25": 1451
+      }
+    },
     "moufouette": {
       "types": null,
       "pc": {
@@ -3235,9 +3267,9 @@
         "Vol"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null
+        "n15": 285,
+        "n20": 381,
+        "n25": 476
       }
     },
     "nounourson": {
@@ -3537,6 +3569,50 @@
         "n15": 1243,
         "n20": null,
         "n25": null
+      }
+    },
+    "pitrouille-maxi": {
+      "types": [
+        "Spectre",
+        "Plante"
+      ],
+      "pc": {
+        "n15": 533,
+        "n20": 711,
+        "n25": 888
+      }
+    },
+    "pitrouille-mini": {
+      "types": [
+        "Spectre",
+        "Plante"
+      ],
+      "pc": {
+        "n15": 515,
+        "n20": 686,
+        "n25": 858
+      }
+    },
+    "pitrouille-normale": {
+      "types": [
+        "Spectre",
+        "Plante"
+      ],
+      "pc": {
+        "n15": 523,
+        "n20": 698,
+        "n25": 872
+      }
+    },
+    "pitrouille-ultra": {
+      "types": [
+        "Spectre",
+        "Plante"
+      ],
+      "pc": {
+        "n15": 536,
+        "n20": 714,
+        "n25": 893
       }
     },
     "pohm": {
@@ -4285,9 +4361,9 @@
         "Dragon"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null
+        "n15": 285,
+        "n20": 381,
+        "n25": 476
       }
     },
     "soporifik": {
@@ -4333,6 +4409,17 @@
         "n15": 523,
         "n20": null,
         "n25": null
+      }
+    },
+    "spiritomb": {
+      "types": [
+        "Spectre",
+        "Ténèbres"
+      ],
+      "pc": {
+        "n15": 888,
+        "n20": 1184,
+        "n25": 1480
       }
     },
     "spododo": {
@@ -4498,9 +4585,9 @@
         "Spectre"
       ],
       "pc": {
-        "n15": null,
+        "n15": 632,
         "n20": 843,
-        "n25": null
+        "n25": 1054
       }
     },
     "tentacool": {
@@ -4648,6 +4735,16 @@
         "n15": 169,
         "n20": null,
         "n25": null
+      }
+    },
+    "toutombe": {
+      "types": [
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 435,
+        "n20": 580,
+        "n25": 726
       }
     },
     "toxizap": {

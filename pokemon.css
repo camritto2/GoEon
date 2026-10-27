@@ -1125,6 +1125,11 @@
 .pk-ferosinge .research-reward-name { color: var(--accent-vert-bon); }
 .pk-ferosinge .emoji-shiny  { display: inline; }
 
+/* Feuforêve — Bon / Shiny */
+.pk-feuforeve .pokemon-name { color: var(--accent-vert-bon); }
+.pk-feuforeve .research-reward-name { color: var(--accent-vert-bon); }
+.pk-feuforeve .emoji-shiny  { display: inline; }
+
 /* Feunard d'Alola — Bon / Shiny */
 .pk-feunard-a .pokemon-name { color: var(--accent-vert-bon); }
 .pk-feunard-a .research-reward-name { color: var(--accent-vert-bon); }
@@ -2215,6 +2220,9 @@
 .pk-monorpale .research-reward-name { color: var(--accent-vert-bon); }
 .pk-monorpale .emoji-shiny  { display: inline; }
 
+/* Motisma — Normal / Shiny */
+.pk-motisma .emoji-shiny { display: inline; }
+
 /* Motisma Forme Lavage — Bon / Shiny */
 .pk-motisma-l .pokemon-name { color: var(--accent-vert-bon); }
 .pk-motisma-l .research-reward-name { color: var(--accent-vert-bon); }
@@ -2384,7 +2392,7 @@
 .pk-nosferalto .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nosferalto .emoji-shiny  { display: inline; }
 
-/* Nosférapti — Bon / Shiny */
+/* Nosferapti — Bon / Shiny */
 .pk-nosferapti .pokemon-name { color: var(--accent-vert-bon); }
 .pk-nosferapti .research-reward-name { color: var(--accent-vert-bon); }
 .pk-nosferapti .emoji-shiny  { display: inline; }
@@ -3176,6 +3184,9 @@
 
 /* Spinda — Normal / Shiny */
 .pk-spinda .emoji-shiny { display: inline; }
+
+/* Spiritomb — Normal / Shiny */
+.pk-spiritomb .emoji-shiny { display: inline; }
 
 /* Spoink — Normal / Shiny */
 .pk-spoink .emoji-shiny { display: inline; }

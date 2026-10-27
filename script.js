@@ -331,13 +331,16 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// 12. BOUTON "SIGNALER UNE ERREUR"
+// 12. BOUTON "ME CONTACTER" (formulaire Google)
+// Sert à tout : erreur, oubli, suggestion, simple message. Le title le dit au
+// survol. Les id/classes gardent leur ancien nom « signaler » (CSS inchangé).
 (function() {
   const btn = document.createElement('a');
   btn.href = 'https://docs.google.com/forms/d/e/1FAIpQLSeF7TSueQlUEUiCcHYQDHrtU2GXipDznBt4zobpT5ZcqnspHg/viewform';
   btn.target = '_blank';
   btn.id = 'btn-signaler';
-  btn.innerHTML = '<span class="signaler-texte">⚠️ Signaler une erreur</span>';
+  btn.title = 'Une erreur, un oubli, une idée ou juste un petit mot ? Écrivez-moi !';
+  btn.innerHTML = '<span class="signaler-texte">✉️ Me contacter</span>';
   btn.style.cssText = `
     position: fixed;
     bottom: 20px;
@@ -480,6 +483,19 @@ function switchTab(os, btn) {
   document.querySelectorAll('.pwa-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
 }
+
+// Présélection de l'onglet du bandeau PWA selon l'appareil : iOS pour
+// iPhone/iPad (l'iPad récent se déclare « Macintosh », d'où le test tactile),
+// Android pour tout le reste, ordinateur compris. Le visiteur peut toujours
+// changer d'onglet à la main.
+(function () {
+  const onglets = document.querySelectorAll('.pwa-tab');
+  if (onglets.length < 2) return;
+  const ua = navigator.userAgent;
+  const ios = /iPhone|iPad|iPod/.test(ua) ||
+              (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  switchTab(ios ? 'ios' : 'android', onglets[ios ? 1 : 0]);
+})();
 
 // texte facultatif : « Page à venir » sur les cartes d'évènements dont la
 // page n'est pas encore en ligne. Le href garde déjà le nom de la future
@@ -1435,6 +1451,11 @@ if (document.querySelector('.home-card[data-debut]')) {
 // data-fin, au même format obligatoire que §18 ("AAAA-MM-JJTHH:MM", partie
 // horaire comprise). Au chargement, on ouvre l'édition en cours, sinon la
 // prochaine ; une fois la dernière passée, la dernière reste ouverte.
+// Une adresse en #onglet-<id du panneau> (Halloween2026.html#onglet-partie-2,
+// depuis la carte d'accueil) ouvre ce panneau-là, quelle que soit la date. Le
+// préfixe « onglet- » est voulu : aucun élément ne porte cet id, donc le
+// navigateur ne fait pas défiler la page jusqu'au panneau (titre et onglets
+// restent visibles).
 // Sans JS, le HTML laisse le premier panneau visible.
 (function () {
   const liste = document.querySelector('.onglets-editions');
@@ -1452,6 +1473,14 @@ if (document.querySelector('.home-card[data-debut]')) {
   }
 
   onglets.forEach(o => o.addEventListener('click', () => ouvrir(o)));
+
+  const demande = location.hash.startsWith('#onglet-')
+    ? onglets.find(o => o.getAttribute('aria-controls') === location.hash.slice(8))
+    : null;
+  if (demande) {
+    ouvrir(demande);
+    return;
+  }
 
   // Panneaux sans dates (TeamRocket.html, Sbires / Chefs) : on garde
   // l'onglet marqué aria-selected="true" dans le HTML.

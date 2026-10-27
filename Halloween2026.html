@@ -46,13 +46,17 @@
       <a href="#p1-sauvages">Pokémon Sauvages</a>
       <a href="#p1-raids">Raids</a>
       <a href="#p1-taches">Tâches d'Étude</a>
+      <a href="#p1-etude">Étude Ponctuelle</a>
       <a href="#p1-passe">Passe Go</a>
       <a href="#p1-reco">Recommandations du chef</a>
     </nav>
 
     <h2 class="category-title tier-1" id="p1-bonus">Bonus</h2>
     <div class="intro-rules">
-      <div class="intro-item"><span class="bullet">• </span>Des Bonbons Pikachu, Nosférapti ou Théffroi, ainsi que des Super Bonbons (rares) seront disponibles sur la carte !</div>
+      <div class="intro-item"><span class="bullet">• </span>Des Boîtes-surprises seront disponibles sur la carte ! Elles pourront donner :</div>
+      <div class="intro-item intro-sous-item"><span class="bullet">◦ </span>Goupix, <span class="texte-vert">Tiplouf</span>, <span class="texte-vert">Nosferapti</span>, Sonistrelle, <span class="texte-vert">Grodrive</span> ou <span class="texte-vert">Ectoplasma</span> costumés</div>
+      <div class="intro-item intro-sous-item"><span class="bullet">◦ </span>1 Super Bonbon</div>
+      <div class="intro-item intro-sous-item"><span class="bullet">◦ </span>Des Bonbons Pikachu, Nosferapti ou Théffroi</div>
       <div class="intro-item"><span class="bullet">• </span>Nouveaux Objets d'Avatar et Stickers</div>
       <div class="intro-item"><span class="bullet">• </span>La musique de Lavanville sera disponible dans le jeu !</div>
       <div class="intro-item"><span class="bullet">• </span>Atmosphère d'Halloween dans le jeu !</div>
@@ -61,31 +65,20 @@
 
     <h2 class="category-title tier-1" id="p1-sauvages">Pokémon Sauvages</h2>
 
-    <!-- Pokémon costumés, tous shiny. Choix de Cam du 10/10 : le vert reste
-         sur les costumés « Bons » (comme le gras de l'annonce Discord), sauf
-         Skelénox, neutralisé par nom-neutre. Image de base, jamais d'image
-         de costume. -->
+    <!-- Choix de Cam du 10/10 : le vert reste sur les costumés « Bons »
+         (comme le gras de l'annonce Discord). Image de base, jamais
+         d'image de costume. Skelénox n'est pas costumé (Cam, 27/10).
+         Image Feuforeve.png à déposer. -->
     <div class="pokemon-grid pokemon-grid-6">
 
       <div class="pokemon-card pk-nosferapti">
         <div class="image-container">
           <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
-          <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosférapti" class="pokemon-img">
+          <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
         </div>
         <div class="card-content">
-          <h2 class="pokemon-name">Nosférapti</h2>
+          <h2 class="pokemon-name">Nosferapti</h2>
           <p class="pokemon-subtitle">Coiffé d'un haut-de-forme - Nouveau costume</p>
-        </div>
-      </div>
-
-      <div class="pokemon-card pk-skelenox">
-        <div class="image-container">
-          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
-          <img src="Images/Skelenox.png" data-shiny="Images/SkelenoxS.png" alt="Skelénox" class="pokemon-img">
-        </div>
-        <div class="card-content">
-          <h2 class="pokemon-name nom-neutre">Skelénox</h2>
-          <p class="pokemon-subtitle">Portant un costume de Chenapan d'Halloween</p>
         </div>
       </div>
 
@@ -100,6 +93,59 @@
         </div>
       </div>
 
+      <div class="pokemon-card pk-sonistrelle">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Sonistrelle.png" data-shiny="Images/SonistrelleS.png" alt="Sonistrelle" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Sonistrelle</h2>
+          <p class="pokemon-subtitle">Portant un serre-tête</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-pitrouille">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Pitrouille.png" data-shiny="Images/PitrouilleS.png" alt="Pitrouille" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Pitrouille</h2>
+          <p class="pokemon-subtitle">Toutes Tailles</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-skelenox">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Skelenox.png" data-shiny="Images/SkelenoxS.png" alt="Skelénox" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Skelénox</h2>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-feuforeve">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Feuforeve.png" data-shiny="Images/FeuforeveS.png" alt="Feuforêve" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Feuforêve</h2>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-goupix">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Goupix.png" data-shiny="Images/GoupixS.png" alt="Goupix" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Goupix</h2>
+          <p class="pokemon-subtitle">Portant un costume du Festival effrayant</p>
+        </div>
+      </div>
+
       <div class="pokemon-card pk-grodrive">
         <div class="image-container">
           <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
@@ -108,6 +154,17 @@
         <div class="card-content">
           <h2 class="pokemon-name">Grodrive</h2>
           <p class="pokemon-subtitle">Portant un costume de Chenapan d'Halloween - Rare</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-ectoplasma">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Ectoplasma.png" data-shiny="Images/EctoplasmaS.png" alt="Ectoplasma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Ectoplasma</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween - Rare</p>
         </div>
       </div>
 
@@ -160,8 +217,186 @@
     </div>
 
     <h2 class="category-title tier-1" id="p1-taches">Tâches d'Étude</h2>
+    <p class="research-helper">💡 Les valeurs indiquées correspondent aux PC du 100%.</p>
+
+    <div class="research-list">
+
+      <div class="research-card">
+        <span class="research-task">Attrape 13 Pokémon de type Spectre</span>
+        <div class="research-rewards">
+          <div class="research-reward-item pk-tiplouf" data-pk="tiplouf">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Tiplouf.png" data-shiny="Images/TiploufS.png" alt="Tiplouf" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Tiplouf</span>
+              <span class="research-reward-form">Portant un costume de Chenapan d'Halloween</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-sonistrelle" data-pk="sonistrelle">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Sonistrelle.png" data-shiny="Images/SonistrelleS.png" alt="Sonistrelle" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Sonistrelle</span>
+              <span class="research-reward-form">Portant un serre-tête</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-nosferapti" data-pk="nosferapti">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Nosferapti</span>
+              <span class="research-reward-form">Coiffé d'un haut-de-forme - Nouveau costume</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-task">Gagne 1 Raid</span>
+        <div class="research-rewards">
+          <div class="research-reward-item pk-nosferapti" data-pk="nosferapti">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Nosferapti</span>
+              <span class="research-reward-form">Coiffé d'un haut-de-forme - Nouveau costume</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-theffroi" data-pk="theffroi">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Theffroi.png" data-shiny="Images/TheffroiS.png" alt="Théffroi" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Théffroi</span>
+              <span class="research-reward-form">Portant un nœud - Nouveau costume</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-task">Gagne 3 Raids</span>
+        <div class="research-rewards">
+          <div class="research-reward-item pk-pikachu" data-pk="pikachu">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Pikachu</span>
+              <span class="research-reward-form">Portant un chapeau et une pèlerine - Nouveau costume</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-task">Fais 6 Jolis Lancers</span>
+        <div class="research-rewards">
+          <div class="research-reward-item pk-pitrouille" data-pk="pitrouille-mini">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+              <img src="Images/PitrouilleMini.png" data-shiny="Images/PitrouilleMiniS.png" alt="Pitrouille Taille Mini" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Pitrouille</span>
+              <span class="research-reward-form">Taille Mini</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-pitrouille" data-pk="pitrouille-normale">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+              <img src="Images/Pitrouille.png" data-shiny="Images/PitrouilleS.png" alt="Pitrouille Taille Normale" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Pitrouille</span>
+              <span class="research-reward-form">Taille Normale</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-pitrouille" data-pk="pitrouille-maxi">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+              <img src="Images/PitrouilleMaxi.png" data-shiny="Images/PitrouilleMaxiS.png" alt="Pitrouille Taille Maxi" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Pitrouille</span>
+              <span class="research-reward-form">Taille Maxi</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-pitrouille" data-pk="pitrouille-ultra">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+              <img src="Images/PitrouilleU.png" data-shiny="Images/PitrouilleUS.png" alt="Pitrouille Taille Ultra" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Pitrouille</span>
+              <span class="research-reward-form">Taille Ultra</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-skelenox" data-pk="skelenox">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+              <img src="Images/Skelenox.png" data-shiny="Images/SkelenoxS.png" alt="Skelénox" class="pokemon-img">
+            </div>
+            <span class="research-reward-name">Skelénox</span>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-feuforeve" data-pk="feuforeve">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+              <img src="Images/Feuforeve.png" data-shiny="Images/FeuforeveS.png" alt="Feuforêve" class="pokemon-img">
+            </div>
+            <span class="research-reward-name">Feuforêve</span>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="category-title tier-1" id="p1-etude">Étude Ponctuelle</h2>
+
     <div class="intro-rules">
-      <p>Les détails arriveront au début de l'Évènement</p>
+      <div class="intro-item"><span class="bullet">• </span>6 Super Bonbons</div>
+      <div class="intro-item"><span class="bullet">• </span>1 rencontre avec <span class="texte-vert">Pikachu</span> costumé</div>
+    </div>
+
+    <div class="pokemon-grid pokemon-grid-6">
+
+      <div class="pokemon-card pk-pikachu" data-pk="pikachu">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Pikachu</h2>
+          <p class="pokemon-subtitle">Portant un chapeau et une pèlerine - Nouveau costume</p>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n15"></span></p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- Passe Go commun aux deux parties, répété dans chaque onglet pour
@@ -178,6 +413,451 @@
       <div class="intro-item"><span class="bullet">• </span>Objets d'Avatar</div>
       <div class="intro-item"><span class="bullet">• </span>Des Super Bonbons L</div>
       <div class="intro-item"><span class="bullet">• </span>Des Passes Premium</div>
+    </div>
+
+    <p class="section-sous-titre">Comment gagner des Points Go</p>
+    <div class="intro-rules">
+      <div class="intro-item"><span class="bullet">• </span>Attrape un Pokémon : 5 points</div>
+      <div class="intro-item"><span class="bullet">• </span>Fais éclore un Œuf : 40 points</div>
+      <div class="intro-item"><span class="bullet">• </span>Gagne un Raid : 100 points</div>
+      <p class="intro-p-apres">Limite de 500 points par jour</p>
+      <strong>Bonus quotidien :</strong>
+      <div class="intro-item"><span class="bullet">• </span>Attrape 6 Pokémon de type Spectre : 50 points</div>
+      <div class="intro-item"><span class="bullet">• </span>Attrape 13 Pokémon : 50 points</div>
+    </div>
+
+    <!-- Images Feuforeve.png et Spiritomb.png à déposer. -->
+    <p class="section-sous-titre">Récompenses</p>
+
+    <div class="pokemon-grid pokemon-grid-6">
+
+      <div class="pokemon-card pk-skelenox" data-pk="skelenox">
+        <div class="passe-go-rank">Rang 5</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Skelenox.png" data-shiny="Images/SkelenoxS.png" alt="Skelénox" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Skelénox</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-tiplouf" data-pk="tiplouf">
+        <div class="passe-go-rank">Rang 9</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Tiplouf.png" data-shiny="Images/TiploufS.png" alt="Tiplouf" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Tiplouf</h2>
+          <p class="pokemon-subtitle">Portant un costume de Chenapan d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-feuforeve" data-pk="feuforeve">
+        <div class="passe-go-rank">Rang 15</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Feuforeve.png" data-shiny="Images/FeuforeveS.png" alt="Feuforêve" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Feuforêve</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-sonistrelle" data-pk="sonistrelle">
+        <div class="passe-go-rank">Rang 19</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Sonistrelle.png" data-shiny="Images/SonistrelleS.png" alt="Sonistrelle" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Sonistrelle</h2>
+          <p class="pokemon-subtitle">Portant un serre-tête</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-bacabouh" data-pk="bacabouh">
+        <div class="passe-go-rank">Rang 25</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Bacabouh.png" data-shiny="Images/BacabouhS.png" alt="Bacabouh" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Bacabouh</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-grenousse" data-pk="grenousse">
+        <div class="passe-go-rank">Rang 29</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Grenousse.png" data-shiny="Images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Grenousse</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-nosferapti" data-pk="nosferapti">
+        <div class="passe-go-rank">Rang 30</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Nosferapti</h2>
+          <p class="pokemon-subtitle">Coiffé d'un haut-de-forme - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-polichombr" data-pk="polichombr">
+        <div class="passe-go-rank">Rang 35</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Polichombr.png" data-shiny="Images/PolichombrS.png" alt="Polichombr" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Polichombr</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-brindibou" data-pk="brindibou">
+        <div class="passe-go-rank">Rang 39</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Brindibou.png" data-shiny="Images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Brindibou</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-ectoplasma" data-pk="ectoplasma">
+        <div class="passe-go-rank">Rang 40</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Ectoplasma.png" data-shiny="Images/EctoplasmaS.png" alt="Ectoplasma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Ectoplasma</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-toutombe" data-pk="toutombe">
+        <div class="passe-go-rank">Rang 45</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Toutombe.png" data-shiny="Images/ToutombeS.png" alt="Toutombe" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Toutombe</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-pikachu" data-pk="pikachu">
+        <div class="passe-go-rank">Rang 49</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Pikachu</h2>
+          <p class="pokemon-subtitle">Portant un chapeau et une pèlerine - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-motisma" data-pk="motisma">
+        <div class="passe-go-rank">Rang 50</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Motisma.png" data-shiny="Images/MotismaS.png" alt="Motisma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Motisma</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-spiritomb" data-pk="spiritomb">
+        <div class="passe-go-rank">Rang 108</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Spiritomb.png" data-shiny="Images/SpiritombS.png" alt="Spiritomb" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Spiritomb</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="section-sous-titre">Passe Go Deluxe</p>
+
+    <div class="pokemon-grid pokemon-grid-6">
+
+      <div class="pokemon-card pk-tenefix" data-pk="tenefix">
+        <div class="passe-go-rank">Rang 3</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+          <img src="Images/Tenefix.png" data-shiny="Images/TenefixS.png" alt="Ténéfix" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Ténéfix</h2>
+          <p class="pokemon-subtitle">Dynamax</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-skelenox" data-pk="skelenox">
+        <div class="passe-go-rank">Rang 5</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Skelenox.png" data-shiny="Images/SkelenoxS.png" alt="Skelénox" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Skelénox</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-tiplouf" data-pk="tiplouf">
+        <div class="passe-go-rank">Rang 9</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Tiplouf.png" data-shiny="Images/TiploufS.png" alt="Tiplouf" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Tiplouf</h2>
+          <p class="pokemon-subtitle">Portant un costume de Chenapan d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-nosferapti" data-pk="nosferapti">
+        <div class="passe-go-rank">Rang 13</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Nosferapti</h2>
+          <p class="pokemon-subtitle">Coiffé d'un haut-de-forme - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-sonistrelle" data-pk="sonistrelle">
+        <div class="passe-go-rank">Rang 19</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Sonistrelle.png" data-shiny="Images/SonistrelleS.png" alt="Sonistrelle" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Sonistrelle</h2>
+          <p class="pokemon-subtitle">Portant un serre-tête</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-grodrive" data-pk="grodrive">
+        <div class="passe-go-rank">Rang 23</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Grodrive.png" data-shiny="Images/GrodriveS.png" alt="Grodrive" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Grodrive</h2>
+          <p class="pokemon-subtitle">Portant un costume de Chenapan d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-bacabouh" data-pk="bacabouh">
+        <div class="passe-go-rank">Rang 25</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Bacabouh.png" data-shiny="Images/BacabouhS.png" alt="Bacabouh" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Bacabouh</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-grenousse" data-pk="grenousse">
+        <div class="passe-go-rank">Rang 29</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Grenousse.png" data-shiny="Images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Grenousse</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-nosferapti" data-pk="nosferapti">
+        <div class="passe-go-rank">Rang 33</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Nosferapti</h2>
+          <p class="pokemon-subtitle">Coiffé d'un haut-de-forme - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-polichombr" data-pk="polichombr">
+        <div class="passe-go-rank">Rang 35</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Polichombr.png" data-shiny="Images/PolichombrS.png" alt="Polichombr" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Polichombr</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-brindibou" data-pk="brindibou">
+        <div class="passe-go-rank">Rang 39</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Brindibou.png" data-shiny="Images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Brindibou</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-ectoplasma" data-pk="ectoplasma">
+        <div class="passe-go-rank">Rang 40</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Ectoplasma.png" data-shiny="Images/EctoplasmaS.png" alt="Ectoplasma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Ectoplasma</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-theffroi" data-pk="theffroi">
+        <div class="passe-go-rank">Rang 43</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Theffroi.png" data-shiny="Images/TheffroiS.png" alt="Théffroi" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Théffroi</h2>
+          <p class="pokemon-subtitle">Portant un nœud - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-toutombe" data-pk="toutombe">
+        <div class="passe-go-rank">Rang 45</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Toutombe.png" data-shiny="Images/ToutombeS.png" alt="Toutombe" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Toutombe</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-pikachu" data-pk="pikachu">
+        <div class="passe-go-rank">Rang 49</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Pikachu</h2>
+          <p class="pokemon-subtitle">Portant un chapeau et une pèlerine - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-motisma" data-pk="motisma">
+        <div class="passe-go-rank">Rang 50</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Motisma.png" data-shiny="Images/MotismaS.png" alt="Motisma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Motisma</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-spiritomb" data-pk="spiritomb">
+        <div class="passe-go-rank">Rang 108</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Spiritomb.png" data-shiny="Images/SpiritombS.png" alt="Spiritomb" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Spiritomb</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
     </div>
 
     <h2 class="category-title tier-1" id="p1-reco">Recommandations du chef</h2>
@@ -345,6 +1025,451 @@
       <div class="intro-item"><span class="bullet">• </span>Objets d'Avatar</div>
       <div class="intro-item"><span class="bullet">• </span>Des Super Bonbons L</div>
       <div class="intro-item"><span class="bullet">• </span>Des Passes Premium</div>
+    </div>
+
+    <p class="section-sous-titre">Comment gagner des Points Go</p>
+    <div class="intro-rules">
+      <div class="intro-item"><span class="bullet">• </span>Attrape un Pokémon : 5 points</div>
+      <div class="intro-item"><span class="bullet">• </span>Fais éclore un Œuf : 40 points</div>
+      <div class="intro-item"><span class="bullet">• </span>Gagne un Raid : 100 points</div>
+      <p class="intro-p-apres">Limite de 500 points par jour</p>
+      <strong>Bonus quotidien :</strong>
+      <div class="intro-item"><span class="bullet">• </span>Attrape 6 Pokémon de type Spectre : 50 points</div>
+      <div class="intro-item"><span class="bullet">• </span>Attrape 13 Pokémon : 50 points</div>
+    </div>
+
+    <!-- Images Feuforeve.png et Spiritomb.png à déposer. -->
+    <p class="section-sous-titre">Récompenses</p>
+
+    <div class="pokemon-grid pokemon-grid-6">
+
+      <div class="pokemon-card pk-skelenox" data-pk="skelenox">
+        <div class="passe-go-rank">Rang 5</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Skelenox.png" data-shiny="Images/SkelenoxS.png" alt="Skelénox" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Skelénox</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-tiplouf" data-pk="tiplouf">
+        <div class="passe-go-rank">Rang 9</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Tiplouf.png" data-shiny="Images/TiploufS.png" alt="Tiplouf" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Tiplouf</h2>
+          <p class="pokemon-subtitle">Portant un costume de Chenapan d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-feuforeve" data-pk="feuforeve">
+        <div class="passe-go-rank">Rang 15</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Feuforeve.png" data-shiny="Images/FeuforeveS.png" alt="Feuforêve" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Feuforêve</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-sonistrelle" data-pk="sonistrelle">
+        <div class="passe-go-rank">Rang 19</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Sonistrelle.png" data-shiny="Images/SonistrelleS.png" alt="Sonistrelle" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Sonistrelle</h2>
+          <p class="pokemon-subtitle">Portant un serre-tête</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-bacabouh" data-pk="bacabouh">
+        <div class="passe-go-rank">Rang 25</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Bacabouh.png" data-shiny="Images/BacabouhS.png" alt="Bacabouh" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Bacabouh</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-grenousse" data-pk="grenousse">
+        <div class="passe-go-rank">Rang 29</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Grenousse.png" data-shiny="Images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Grenousse</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-nosferapti" data-pk="nosferapti">
+        <div class="passe-go-rank">Rang 30</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Nosferapti</h2>
+          <p class="pokemon-subtitle">Coiffé d'un haut-de-forme - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-polichombr" data-pk="polichombr">
+        <div class="passe-go-rank">Rang 35</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Polichombr.png" data-shiny="Images/PolichombrS.png" alt="Polichombr" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Polichombr</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-brindibou" data-pk="brindibou">
+        <div class="passe-go-rank">Rang 39</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Brindibou.png" data-shiny="Images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Brindibou</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-ectoplasma" data-pk="ectoplasma">
+        <div class="passe-go-rank">Rang 40</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Ectoplasma.png" data-shiny="Images/EctoplasmaS.png" alt="Ectoplasma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Ectoplasma</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-toutombe" data-pk="toutombe">
+        <div class="passe-go-rank">Rang 45</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Toutombe.png" data-shiny="Images/ToutombeS.png" alt="Toutombe" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Toutombe</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-pikachu" data-pk="pikachu">
+        <div class="passe-go-rank">Rang 49</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Pikachu</h2>
+          <p class="pokemon-subtitle">Portant un chapeau et une pèlerine - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-motisma" data-pk="motisma">
+        <div class="passe-go-rank">Rang 50</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Motisma.png" data-shiny="Images/MotismaS.png" alt="Motisma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Motisma</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-spiritomb" data-pk="spiritomb">
+        <div class="passe-go-rank">Rang 108</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Spiritomb.png" data-shiny="Images/SpiritombS.png" alt="Spiritomb" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Spiritomb</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="section-sous-titre">Passe Go Deluxe</p>
+
+    <div class="pokemon-grid pokemon-grid-6">
+
+      <div class="pokemon-card pk-tenefix" data-pk="tenefix">
+        <div class="passe-go-rank">Rang 3</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Dynamax.webp" alt="Dynamax" title="Dynamax" class="emoji-costume"></div>
+          <img src="Images/Tenefix.png" data-shiny="Images/TenefixS.png" alt="Ténéfix" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Ténéfix</h2>
+          <p class="pokemon-subtitle">Dynamax</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-skelenox" data-pk="skelenox">
+        <div class="passe-go-rank">Rang 5</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Skelenox.png" data-shiny="Images/SkelenoxS.png" alt="Skelénox" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Skelénox</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-tiplouf" data-pk="tiplouf">
+        <div class="passe-go-rank">Rang 9</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Tiplouf.png" data-shiny="Images/TiploufS.png" alt="Tiplouf" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Tiplouf</h2>
+          <p class="pokemon-subtitle">Portant un costume de Chenapan d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-nosferapti" data-pk="nosferapti">
+        <div class="passe-go-rank">Rang 13</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Nosferapti</h2>
+          <p class="pokemon-subtitle">Coiffé d'un haut-de-forme - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-sonistrelle" data-pk="sonistrelle">
+        <div class="passe-go-rank">Rang 19</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Sonistrelle.png" data-shiny="Images/SonistrelleS.png" alt="Sonistrelle" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Sonistrelle</h2>
+          <p class="pokemon-subtitle">Portant un serre-tête</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-grodrive" data-pk="grodrive">
+        <div class="passe-go-rank">Rang 23</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Grodrive.png" data-shiny="Images/GrodriveS.png" alt="Grodrive" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Grodrive</h2>
+          <p class="pokemon-subtitle">Portant un costume de Chenapan d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-bacabouh" data-pk="bacabouh">
+        <div class="passe-go-rank">Rang 25</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Bacabouh.png" data-shiny="Images/BacabouhS.png" alt="Bacabouh" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Bacabouh</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-grenousse" data-pk="grenousse">
+        <div class="passe-go-rank">Rang 29</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Grenousse.png" data-shiny="Images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Grenousse</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-nosferapti" data-pk="nosferapti">
+        <div class="passe-go-rank">Rang 33</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Nosferapti</h2>
+          <p class="pokemon-subtitle">Coiffé d'un haut-de-forme - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-polichombr" data-pk="polichombr">
+        <div class="passe-go-rank">Rang 35</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Polichombr.png" data-shiny="Images/PolichombrS.png" alt="Polichombr" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Polichombr</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-brindibou" data-pk="brindibou">
+        <div class="passe-go-rank">Rang 39</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Brindibou.png" data-shiny="Images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Brindibou</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-ectoplasma" data-pk="ectoplasma">
+        <div class="passe-go-rank">Rang 40</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Ectoplasma.png" data-shiny="Images/EctoplasmaS.png" alt="Ectoplasma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Ectoplasma</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-theffroi" data-pk="theffroi">
+        <div class="passe-go-rank">Rang 43</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Theffroi.png" data-shiny="Images/TheffroiS.png" alt="Théffroi" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Théffroi</h2>
+          <p class="pokemon-subtitle">Portant un nœud - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-toutombe" data-pk="toutombe">
+        <div class="passe-go-rank">Rang 45</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Toutombe.png" data-shiny="Images/ToutombeS.png" alt="Toutombe" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Toutombe</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-pikachu" data-pk="pikachu">
+        <div class="passe-go-rank">Rang 49</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Pikachu</h2>
+          <p class="pokemon-subtitle">Portant un chapeau et une pèlerine - Nouveau costume</p>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-motisma" data-pk="motisma">
+        <div class="passe-go-rank">Rang 50</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Motisma.png" data-shiny="Images/MotismaS.png" alt="Motisma" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Motisma</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-spiritomb" data-pk="spiritomb">
+        <div class="passe-go-rank">Rang 108</div>
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Spiritomb.png" data-shiny="Images/SpiritombS.png" alt="Spiritomb" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Spiritomb</h2>
+          <hr class="separator">
+          <p class="passe-go-pc" data-pc="n15"></p>
+        </div>
+      </div>
+
     </div>
 
     <h2 class="category-title tier-1" id="p2-reco">Recommandations du chef</h2>
