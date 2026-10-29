@@ -822,6 +822,11 @@
 .pk-deoxys-v .research-reward-name { color: var(--accent-vert-bon); }
 .pk-deoxys-v .emoji-shiny  { display: inline; }
 
+/* Desséliande — Bon / Shiny */
+.pk-desseliande .pokemon-name { color: var(--accent-vert-bon); }
+.pk-desseliande .research-reward-name { color: var(--accent-vert-bon); }
+.pk-desseliande .emoji-shiny  { display: inline; }
+
 /* Deusolourdo — Normal / Shiny */
 .pk-deusolourdo .emoji-shiny { display: inline; }
 
@@ -3114,6 +3119,9 @@
 
 /* Simularbre — Normal / Shiny */
 .pk-simularbre .emoji-shiny { display: inline; }
+
+/* Sinistrail — Normal / Shiny */
+.pk-sinistrail .emoji-shiny { display: inline; }
 
 /* Skelénox — Bon / Shiny */
 .pk-skelenox .pokemon-name { color: var(--accent-vert-bon); }
