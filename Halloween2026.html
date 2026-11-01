@@ -888,6 +888,7 @@
       <a href="#p2-sauvages">Pokémon Sauvages</a>
       <a href="#p2-raids">Raids</a>
       <a href="#p2-taches">Tâches d'Étude</a>
+      <a href="#p2-etude">Étude Ponctuelle</a>
       <a href="#p2-attaque">Nouvelle Attaque</a>
       <a href="#p2-passe">Passe Go</a>
       <a href="#p2-reco">Recommandations du chef</a>
@@ -901,7 +902,19 @@
 
     <h2 class="category-title tier-1" id="p2-sauvages">Pokémon Sauvages</h2>
 
+    <!-- Toutombe : nouveau shiny au 01/11, badge nouveau-shiny laissé pendant
+         tout l'évènement. -->
     <div class="pokemon-grid pokemon-grid-6">
+
+      <div class="pokemon-card pk-bacabouh">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Bacabouh.png" data-shiny="Images/BacabouhS.png" alt="Bacabouh" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Bacabouh</h2>
+        </div>
+      </div>
 
       <div class="pokemon-card pk-funecire">
         <div class="image-container">
@@ -913,20 +926,6 @@
         </div>
       </div>
 
-      <div class="pokemon-card pk-brindibou">
-        <div class="image-container">
-          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
-          <img src="Images/Brindibou.png" data-shiny="Images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
-        </div>
-        <div class="card-content">
-          <h2 class="pokemon-name">Brindibou</h2>
-          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
-        </div>
-      </div>
-
-      <!-- Toutombe : nouveau shiny au 01/11, badge affiché par nouveau-shiny
-           (laissé pendant tout l'évènement). Sa ligne emoji-shiny attend en
-           commentaire daté dans pokemon.css, à décommenter le 01/11. -->
       <div class="pokemon-card pk-toutombe">
         <div class="image-container">
           <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
@@ -935,6 +934,38 @@
         <div class="card-content">
           <h2 class="pokemon-name">Toutombe</h2>
           <p class="pokemon-subtitle">Nouveau shiny !</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-grenousse">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Grenousse.png" data-shiny="Images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Grenousse</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-polichombr">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+          <img src="Images/Polichombr.png" data-shiny="Images/PolichombrS.png" alt="Polichombr" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Polichombr</h2>
+        </div>
+      </div>
+
+      <div class="pokemon-card pk-brindibou">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Brindibou.png" data-shiny="Images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Brindibou</h2>
+          <p class="pokemon-subtitle">Portant un déguisement d'Halloween</p>
         </div>
       </div>
 
@@ -999,8 +1030,160 @@
     </div>
 
     <h2 class="category-title tier-1" id="p2-taches">Tâches d'Étude</h2>
+    <p class="research-helper">💡 Les valeurs indiquées correspondent aux PC du 100%.</p>
+
+    <div class="research-list">
+
+      <div class="research-card">
+        <span class="research-task">Attrape 13 Pokémon de type Spectre</span>
+        <div class="research-rewards">
+          <div class="research-reward-item pk-brindibou" data-pk="brindibou">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Brindibou.png" data-shiny="Images/BrindibouS.png" alt="Brindibou" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Brindibou</span>
+              <span class="research-reward-form">Portant un déguisement d'Halloween</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-toutombe" data-pk="toutombe">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+              <img src="Images/Toutombe.png" data-shiny="Images/ToutombeS.png" alt="Toutombe" class="pokemon-img">
+            </div>
+            <span class="research-reward-name">Toutombe</span>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-grenousse" data-pk="grenousse">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Grenousse.png" data-shiny="Images/GrenousseS.png" alt="Grenousse" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Grenousse</span>
+              <span class="research-reward-form">Portant un déguisement d'Halloween</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-task">Fais 6 Jolis Lancers</span>
+        <div class="research-rewards">
+          <div class="research-reward-item pk-funecire" data-pk="funecire">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+              <img src="Images/Funecire.png" data-shiny="Images/FunecireS.png" alt="Funécire" class="pokemon-img">
+            </div>
+            <span class="research-reward-name">Funécire</span>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-toutombe" data-pk="toutombe">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Nouveau shiny" title="Nouveau shiny" class="emoji-shiny nouveau-shiny"></div>
+              <img src="Images/Toutombe.png" data-shiny="Images/ToutombeS.png" alt="Toutombe" class="pokemon-img">
+            </div>
+            <span class="research-reward-name">Toutombe</span>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-bacabouh" data-pk="bacabouh">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+              <img src="Images/Bacabouh.png" data-shiny="Images/BacabouhS.png" alt="Bacabouh" class="pokemon-img">
+            </div>
+            <span class="research-reward-name">Bacabouh</span>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-task">Gagne 1 Raid</span>
+        <div class="research-rewards">
+          <div class="research-reward-item pk-nosferapti" data-pk="nosferapti">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Nosferapti.png" data-shiny="Images/NosferaptiS.png" alt="Nosferapti" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Nosferapti</span>
+              <span class="research-reward-form">Coiffé d'un haut-de-forme - Nouveau costume</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+          <div class="research-reward-item pk-theffroi" data-pk="theffroi">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Theffroi.png" data-shiny="Images/TheffroiS.png" alt="Théffroi" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Théffroi</span>
+              <span class="research-reward-form">Portant un nœud - Nouveau costume</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-task">Gagne 3 Raids</span>
+        <div class="research-rewards">
+          <div class="research-reward-item pk-pikachu" data-pk="pikachu">
+            <div class="research-image-container">
+              <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+              <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+            </div>
+            <div class="research-reward-head">
+              <span class="research-reward-name">Pikachu</span>
+              <span class="research-reward-form">Portant un chapeau et une pèlerine - Nouveau costume</span>
+            </div>
+            <span class="research-cp" data-pc="n15"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <span class="research-task">Attrape 13 Pokémon</span>
+        <div class="research-rewards">
+          <div class="research-reward-item">
+            <div class="research-image-container">
+              <img src="Images/MegaEnergie.webp" alt="Méga-Énergie" class="objet-img">
+              <img src="Images/Tenefix.png" alt="Ténéfix" class="objet-pastille">
+            </div>
+            <span class="research-reward-name">13 Méga-Énergie</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="category-title tier-1" id="p2-etude">Étude Ponctuelle</h2>
+
     <div class="intro-rules">
-      <p>Détails à venir</p>
+      <div class="intro-item"><span class="bullet">• </span>6 Super Bonbons</div>
+      <div class="intro-item"><span class="bullet">• </span>1 rencontre avec <span class="texte-vert">Pikachu</span> costumé</div>
+    </div>
+
+    <div class="pokemon-grid pokemon-grid-6">
+
+      <div class="pokemon-card pk-pikachu" data-pk="pikachu">
+        <div class="image-container">
+          <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"><img src="Images/Costume.webp" alt="Costume" title="Costume" class="emoji-costume"></div>
+          <img src="Images/Pikachu.png" data-shiny="Images/PikachuS.png" alt="Pikachu" class="pokemon-img">
+        </div>
+        <div class="card-content">
+          <h2 class="pokemon-name">Pikachu</h2>
+          <p class="pokemon-subtitle">Portant un chapeau et une pèlerine - Nouveau costume</p>
+          <hr class="separator">
+          <div class="pokemon-stats">
+            <p>PC du 100% : <span class="boost-value" data-pc="n15"></span></p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <h2 class="category-title tier-1" id="p2-attaque">Nouvelle Attaque</h2>
@@ -1035,7 +1218,11 @@
       <p class="intro-p-apres">Limite de 500 points par jour</p>
       <strong>Bonus quotidien :</strong>
       <div class="intro-item"><span class="bullet">• </span>Attrape 6 Pokémon de type Spectre : 50 points</div>
-      <div class="intro-item"><span class="bullet">• </span>Attrape 13 Pokémon : 50 points</div>
+      <div class="intro-item intro-item-fin"><span class="bullet">• </span>Attrape 13 Pokémon : 50 points</div>
+      <strong>Tâches bonus :</strong>
+      <div class="intro-item"><span class="bullet">• </span>Attrape 31 Pokémon de type Spectre : 200 points</div>
+      <div class="intro-item"><span class="bullet">• </span>Attrape 66 Pokémon : 200 points</div>
+      <div class="intro-item"><span class="bullet">• </span>Gagne 2 Raids : 200 points</div>
     </div>
 
     <!-- Images Feuforeve.png et Spiritomb.png à déposer. -->

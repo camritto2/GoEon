@@ -3396,10 +3396,10 @@
 .pk-tokotoro .research-reward-name { color: var(--accent-vert-bon); }
 .pk-tokotoro .emoji-shiny  { display: inline; }
 
-/* Tomberro — Bon (shiny à partir du 01/11, avec Toutombe) */
+/* Tomberro — Bon / Shiny */
 .pk-tomberro .pokemon-name { color: var(--accent-vert-bon); }
 .pk-tomberro .research-reward-name { color: var(--accent-vert-bon); }
-/* À décommenter le 01/11 : .pk-tomberro .emoji-shiny  { display: inline; } */
+.pk-tomberro .emoji-shiny  { display: inline; }
 
 /* Tortank — Bon / Shiny */
 .pk-tortank .pokemon-name { color: var(--accent-vert-bon); }
@@ -3424,10 +3424,10 @@
 /* Tournegrin — Normal / Shiny */
 .pk-tournegrin .emoji-shiny { display: inline; }
 
-/* Toutombe — Bon (shiny à partir du 01/11, Halloween 2026 - 2e Partie) */
+/* Toutombe — Bon / Shiny */
 .pk-toutombe .pokemon-name { color: var(--accent-vert-bon); }
 .pk-toutombe .research-reward-name { color: var(--accent-vert-bon); }
-/* À décommenter le 01/11 : .pk-toutombe .emoji-shiny  { display: inline; } */
+.pk-toutombe .emoji-shiny  { display: inline; }
 
 /* Toxizap — Bon / Shiny */
 .pk-toxizap .pokemon-name { color: var(--accent-vert-bon); }
