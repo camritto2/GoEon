@@ -1513,6 +1513,10 @@ if (document.querySelector('.home-card[data-debut]')) {
 // encore été faite.
 // Le badge va sur sa propre ligne, sous les dates. Une date illisible ne
 // produit aucun badge. Relecture toutes les minutes, comme §18.
+// Interruption facultative au milieu d'une rotation : data-pause-debut,
+// data-pause-fin (même format) et data-pause-texte. Pendant cette fenêtre,
+// le badge « À jour » cède la place au texte de la pause (badge orange).
+// Une pause aux dates illisibles est ignorée, la rotation reste « À jour ».
 function majStatutRaids() {
   const maintenant = Date.now();
 
@@ -1528,9 +1532,19 @@ function majStatutRaids() {
     else if (maintenant > fin)                    classe = 'termine';
     if (!classe) return;
 
+    const pauseDebut = new Date(ligne.dataset.pauseDebut).getTime();
+    const pauseFin   = new Date(ligne.dataset.pauseFin).getTime();
+    if (classe === 'en-cours' && ligne.dataset.pauseTexte
+        && maintenant >= pauseDebut && maintenant <= pauseFin) classe = 'pause';
+
+    const textes = {
+      'en-cours': 'À jour',
+      'pause':    ligne.dataset.pauseTexte,
+      'termine':  'Raids terminés. La mise à jour arrive très vite !'
+    };
     const badge = document.createElement('span');
     badge.className = 'raids-statut raids-statut-' + classe;
-    badge.textContent = (classe === 'en-cours') ? 'À jour' : 'Raids terminés. La mise à jour arrive très vite !';
+    badge.textContent = textes[classe];
     ligne.append(badge);
   });
 }

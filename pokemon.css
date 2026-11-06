@@ -320,6 +320,11 @@
 .pk-bombydou .research-reward-name { color: var(--accent-vert-bon); }
 .pk-bombydou .emoji-shiny  { display: inline; }
 
+/* Boréas — Bon / Shiny */
+.pk-boreas .pokemon-name { color: var(--accent-vert-bon); }
+.pk-boreas .research-reward-name { color: var(--accent-vert-bon); }
+.pk-boreas .emoji-shiny  { display: inline; }
+
 /* Boskara — Bon / Shiny */
 .pk-boskara .pokemon-name { color: var(--accent-vert-bon); }
 .pk-boskara .research-reward-name { color: var(--accent-vert-bon); }
@@ -3558,6 +3563,9 @@
 .pk-viridium .emoji-shiny  { display: inline; }
 
 /* Virovent — Normal / Pas de shiny */
+
+/* Viskuse — Normal / Shiny */
+.pk-viskuse .emoji-shiny { display: inline; }
 
 /* Volcanion — Bon / Shiny */
 .pk-volcanion .pokemon-name { color: var(--accent-vert-bon); }

@@ -698,6 +698,9 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
 
 .raids-statut-en-cours { background-color: var(--accent-vert-bon); }
 .raids-statut-termine  { background-color: #6b7280; }
+/* Pause dans la rotation (data-pause-* sur .raids-date) : orange foncé
+   fixe, lisible en blanc dans les deux modes comme le gris. */
+.raids-statut-pause    { background-color: #c05621; }
 
 .astuce-shiny {
   margin: 0 0 10px 10px;

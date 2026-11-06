@@ -427,6 +427,16 @@
         "n25": null
       }
     },
+    "boreas-avatar": {
+      "types": [
+        "Vol"
+      ],
+      "pc": {
+        "n15": 1433,
+        "n20": 1911,
+        "n25": 2389
+      }
+    },
     "boustiflor": {
       "types": [
         "Plante",
@@ -848,11 +858,14 @@
       }
     },
     "cochignon": {
-      "types": null,
+      "types": [
+        "Glace",
+        "Sol"
+      ],
       "pc": {
         "n15": 1005,
-        "n20": null,
-        "n25": null
+        "n20": 1340,
+        "n25": 1675
       }
     },
     "coiffeton": {
@@ -1698,9 +1711,9 @@
         "Feu"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null
+        "n15": 431,
+        "n20": 575,
+        "n25": 719
       }
     },
     "galegon": {
@@ -1792,6 +1805,17 @@
         "n25": null
       }
     },
+    "giratina-alternative": {
+      "types": [
+        "Spectre",
+        "Dragon"
+      ],
+      "pc": {
+        "n15": 1448,
+        "n20": 1931,
+        "n25": 2414
+      }
+    },
     "giratina-originelle": {
       "types": [
         "Spectre",
@@ -1810,7 +1834,7 @@
       "pc": {
         "n15": 483,
         "n20": 644,
-        "n25": null,
+        "n25": 805,
         "n8": 254,
         "n13": 419
       }
@@ -2398,9 +2422,9 @@
         "Roche"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null
+        "n15": 780,
+        "n20": 1040,
+        "n25": 1300
       }
     },
     "kyurem": {
@@ -2792,8 +2816,8 @@
       ],
       "pc": {
         "n15": 350,
-        "n20": null,
-        "n25": null,
+        "n20": 467,
+        "n25": 583,
         "n8": 184,
         "n13": 303
       }
@@ -3752,6 +3776,16 @@
         "n25": 781
       }
     },
+    "prinplouf": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": 729,
+        "n20": 972,
+        "n25": 1215
+      }
+    },
     "psykokwak": {
       "types": null,
       "pc": {
@@ -4680,11 +4714,13 @@
       }
     },
     "tetarte": {
-      "types": null,
+      "types": [
+        "Eau"
+      ],
       "pc": {
         "n15": 608,
-        "n20": null,
-        "n25": null
+        "n20": 811,
+        "n25": 1013
       }
     },
     "theffroi": {
@@ -4982,6 +5018,28 @@
         "n15": 375,
         "n20": 501,
         "n25": 626
+      }
+    },
+    "viskuse-f": {
+      "types": [
+        "Eau",
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 539,
+        "n20": 718,
+        "n25": 898
+      }
+    },
+    "viskuse-m": {
+      "types": [
+        "Eau",
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 539,
+        "n20": 718,
+        "n25": 898
       }
     },
     "volcaropod": {
