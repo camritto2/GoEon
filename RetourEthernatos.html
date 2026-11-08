@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Le retour d'Éthernatos</title>
+  <link rel="canonical" href="https://goeon.fr/RetourEthernatos">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Le retour d'Éthernatos</h1>
+  <p class="raids-date">
+    Samedi 21 novembre, de 11h à 14h
+  </p>
+
+  <!-- Pas capturable : ni badge Shiny, ni data-shiny, ni PC. Les types
+       viennent de la clé ethernatos de pokemon-data.json (même logique que
+       les Méga-Raids, pas d'entrée propre à la forme Infinimax). -->
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card pk-ethernatos" data-pk="ethernatos">
+      <div class="image-container">
+        <img src="Images/EthernatosG.png" alt="Éthernatos Infinimax" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Éthernatos</h2>
+        <p class="pokemon-subtitle">Infinimax</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Éthernatos Infinimax sera disponible sur la plupart des Sources d'Énergie, et tournera toutes les 30 minutes.</div>
+    <div class="intro-item intro-sous-item"><span class="bullet">◦ </span>Il ne sera pas possible de le capturer, mais il offrira des Bonbons et des Bonbons L</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--                 BONUS                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Les 30 Raids à distance ne suivent pas les horaires de l'évènement :
+       du 20/11 13h au 21/11 18h heure du Pacifique (GMT-8) dans l'article,
+       soit du vendredi 20/11 22h au dimanche 22/11 3h en France. -->
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Limite de Particules Max augmentée à 2 400</div>
+    <div class="intro-item"><span class="bullet">• </span>800 (ou 820) Particules Max obtenues aux Sources d'Énergie</div>
+    <div class="intro-item"><span class="bullet">• </span>30 Raids à distance possibles, du vendredi 20 novembre à 22h au dimanche 22 novembre à 3h</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--         RECOMMANDATIONS DU CHEF         -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="reco">Recommandations du chef</h2>
+  <div class="intro-rules">
+    <p>Le constat est simple : si vous voulez booster votre Éthernatos, foncez ! Les Bonbons sont si rares !</p>
+    <p>Sinon, si vous préférez attendre d'en avoir un 2e un jour, comme moi : on zappe, et on se concentre sur le <a href="CDScalpion.html">Community Day</a> de l'après-midi !</p>
+  </div>
+
+
+  <p class="lien-source">
+    Source : <a href="https://pokemongo.com/news/dynamax-trails-eternamax-eternatus-2026" target="_blank" rel="noopener">Blog Officiel Pokémon Go</a>
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

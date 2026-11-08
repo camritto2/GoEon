@@ -892,12 +892,14 @@
         {
           "nom": "Sentiers Dynamax",
           "debut": "2026-11-16T10:00",
-          "fin": "2026-11-23T20:00"
+          "fin": "2026-11-23T20:00",
+          "page": "SentiersDynamax.html"
         },
         {
           "nom": "Souhaits Crépusculaires",
-          "debut": "2026-11-21T10:00",
-          "fin": "2026-11-30T20:00"
+          "debut": "2026-11-24T10:00",
+          "fin": "2026-11-30T20:00",
+          "page": "SouhaitsCrepusculaires.html"
         }
       ],
       "raids": [
@@ -1006,16 +1008,6 @@
         },
         {
           "categorie": "mega",
-          "debut": "2026-11-09",
-          "fin": "2026-11-15",
-          "pokemon": [
-            {
-              "nom": "???"
-            }
-          ]
-        },
-        {
-          "categorie": "mega",
           "debut": "2026-11-16",
           "fin": "2026-11-24",
           "pokemon": [
@@ -1033,6 +1025,29 @@
             {
               "nom": "Méga-Métalosse",
               "img": "MetalosseM.png"
+            }
+          ]
+        },
+        {
+          "categorie": "mega",
+          "debut": "2026-11-24",
+          "fin": "2026-11-30",
+          "pokemon": [
+            {
+              "nom": "Méga-Dardargnan",
+              "img": "DardargnanM.png"
+            },
+            {
+              "nom": "Méga-Démolosse",
+              "img": "DemolosseM.png"
+            },
+            {
+              "nom": "Méga-Ténéfix",
+              "img": "TenefixM.png"
+            },
+            {
+              "nom": "Méga-Élecsprint",
+              "img": "ElecsprintM.png"
             }
           ]
         },
@@ -1225,19 +1240,39 @@
           ]
         },
         {
+          "debut": "2026-11-19",
+          "categorie": "heure-vedette",
+          "court": "Heure Ouistempo, Flambino & Larméléon",
+          "long": "Heure Vedette - Ouistempo, Flambino & Larméléon",
+          "heures": "18h - 19h",
+          "bonus": "Double Bonbons de Capture",
+          "sprites": [
+            "Ouistempo.png",
+            "Flambino.png",
+            "Larmeleon.png"
+          ],
+          "lignes": [
+            "Heure Vedette",
+            "18h-19h"
+          ]
+        },
+        {
           "debut": "2026-11-21",
           "categorie": "community-day",
-          "court": "CD Scalpion",
-          "long": "Community Day - Scalpion",
-          "heures": "14h - 17h",
-          "bonus": "Certains bonus prolongés jusqu'à 21h",
+          "court": "CD Scalpion & Éthernatos",
+          "long": "Community Day Scalpion & Retour d'Éthernatos",
+          "details": [
+            "Community Day Scalpion : de 14h à 17h, certains bonus prolongés jusqu'à 21h.",
+            "Le retour d'Éthernatos : de 11h à 14h, Éthernatos Infinimax sur la plupart des Sources d'Énergie."
+          ],
           "sprites": [
-            "Scalpion.png"
+            "Scalpion.png",
+            "EthernatosG.png"
           ],
           "page": "CDScalpion.html",
           "lignes": [
             "Community Day",
-            "14h-17h/21h"
+            "Éthernatos"
           ]
         },
         {

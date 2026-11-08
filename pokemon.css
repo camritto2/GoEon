@@ -1125,6 +1125,9 @@
 .pk-felinferno .research-reward-name { color: var(--accent-vert-bon); }
 .pk-felinferno .emoji-shiny  { display: inline; }
 
+/* Ferdeter — Normal / Shiny */
+.pk-ferdeter .emoji-shiny { display: inline; }
+
 /* Fermite — Bon / Shiny */
 .pk-fermite .pokemon-name { color: var(--accent-vert-bon); }
 .pk-fermite .research-reward-name { color: var(--accent-vert-bon); }

@@ -769,6 +769,34 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   font-weight: bold;
 }
 
+/* Clin d'œil du chef : liseré doré sur une carte et texte doré dans les
+   Recommandations. Posé pour la première fois sur Noctali, l'alias de Cam
+   (Souhaits Crépusculaires, 08/11). Réutilisable sur n'importe quelle page :
+   placé après .pokemon-card pour en remplacer la bordure. */
+.carte-clin-doeil {
+  border: 1px solid #f2c230;
+  box-shadow: 0 0 8px rgba(242, 194, 48, 0.45);
+}
+
+.texte-dore {
+  color: #e0a90a;
+  font-weight: bold;
+}
+
+body.dark-mode .texte-dore {
+  color: #ffd54f;
+}
+
+/* Le clin d'œil peut être un lien (vers « À propos ») : il garde alors son
+   doré au lieu de prendre la couleur des liens des encadrés. */
+.intro-rules a.texte-dore {
+  color: #e0a90a;
+}
+
+body.dark-mode .intro-rules a.texte-dore {
+  color: #ffd54f;
+}
+
 /* Paragraphes des encadrés d'intro */
 .intro-rules p {
   margin: 0 0 8px 0;

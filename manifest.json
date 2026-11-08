@@ -20,5 +20,72 @@
       "sizes": "512x512",
       "type": "image/png"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "Raids du moment",
+      "short_name": "Raids",
+      "description": "Les boss de Raids en cours et le PC de leurs 100 %",
+      "url": "/raids.html",
+      "icons": [
+        {
+          "src": "Images/raccourci-raids.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Tâches d'Étude",
+      "short_name": "Tâches d'Étude",
+      "description": "Les Pokémon donnés par chaque Tâche d'Étude",
+      "url": "/TachesEtude.html",
+      "icons": [
+        {
+          "src": "Images/raccourci-taches.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Combats Dynamax",
+      "short_name": "Dynamax",
+      "description": "Les Combats Dynamax et Gigamax en cours",
+      "url": "/dynamax.html",
+      "icons": [
+        {
+          "src": "Images/raccourci-dynamax.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Team Go Rocket",
+      "short_name": "Team Rocket",
+      "description": "Les équipes des Sbires et des Chefs, et les types à utiliser",
+      "url": "/TeamRocket.html",
+      "icons": [
+        {
+          "src": "Images/raccourci-rocket.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Calendrier des évènements",
+      "short_name": "Calendrier",
+      "description": "Le calendrier du mois",
+      "url": "/Calendrier.html",
+      "icons": [
+        {
+          "src": "Images/raccourci-calendrier.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
   ]
 }

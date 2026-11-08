@@ -340,7 +340,7 @@ if ('serviceWorker' in navigator) {
   btn.target = '_blank';
   btn.id = 'btn-signaler';
   btn.title = 'Une erreur, un oubli, une idée ou juste un petit mot ? Écrivez-moi !';
-  btn.innerHTML = '<span class="signaler-texte">✉️ Me contacter</span>';
+  btn.innerHTML = '<span class="signaler-texte">Me contacter</span>';
   btn.style.cssText = `
     position: fixed;
     bottom: 20px;
@@ -1075,20 +1075,61 @@ if (document.querySelector('.home-card[data-debut]')) {
         grille.appendChild(e);
       });
 
-    // Piste 1 : evenements longs
-    tout.evenements.forEach(ev => {
-      if (!chevauche(versDate(ev.debut), versDate(ev.fin), f)) return;
-      const l1 = ligneDe(versDate(ev.debut), f);
-      const l2 = ligneDe(versDate(ev.fin), f);
-      const el = bloc(1, l1, l2 - l1 + 1, 'cal-bloc cal-cat-evenement',
-        '<span class="cal-evt-nom">' + echapper(ev.nom) + '</span>');
-      el.addEventListener('click', () => afficherDetail(
-        ev.nom, null,
-        ['Du ' + dateLongue(ev.debut) + ' au ' + dateLongue(ev.fin)],
-        ev.page
-      ));
-      grille.appendChild(el);
-    });
+    // Piste 1 : evenements longs. Deux evenements qui se chevauchent ne
+    // sont plus decales a la main dans evenements.json (decision de Cam du
+    // 20/10) : comme pour les raids, on calcule jour par jour les
+    // evenements actifs, puis on fusionne les jours consecutifs identiques.
+    // Les jours communs forment ainsi un seul bloc « A & B », dont le clic
+    // presente chacun des evenements avec ses dates et le lien vers sa page.
+    // Les evenements sont pris dans l'ordre de saisie du JSON.
+    // Un relais n'est pas un chevauchement : quand un evenement se termine
+    // le jour meme ou un autre commence, mais AVANT qu'il commence (Halloween
+    // Partie 1 jusqu'a 9h59, Partie 2 des 10h le 1er novembre), le jour
+    // revient au nouvel evenement seul.
+    const evtParJour = [];
+    for (let i = 0; i < f.nb; i++) {
+      const date = ajouterJours(f.debut, i);
+      const duJour = tout.evenements.filter(ev =>
+        date >= jourDe(versDate(ev.debut)) && date <= jourDe(versDate(ev.fin)));
+      evtParJour.push(duJour.filter(ev => !duJour.some(autre =>
+        autre !== ev
+        && memeJour(versDate(autre.debut), date)
+        && versDate(ev.fin) < versDate(autre.debut))));
+    }
+    const signatureEvt = liste => liste.map(ev => ev.nom + '|' + ev.debut).join('#');
+
+    let j = 0;
+    while (j < f.nb) {
+      const actifs = evtParJour[j];
+      const cle = signatureEvt(actifs);
+      let fin = j;
+      while (fin + 1 < f.nb && signatureEvt(evtParJour[fin + 1]) === cle) fin++;
+
+      if (actifs.length) {
+        const noms = joindre(actifs.map(ev => echapper(ev.nom)));
+        const el = bloc(1, j + DECALAGE, fin - j + 1, 'cal-bloc cal-cat-evenement',
+          '<span class="cal-evt-nom">' + noms + '</span>');
+        el.addEventListener('click', () => {
+          if (actifs.length === 1) {
+            const ev = actifs[0];
+            afficherDetail(ev.nom, null,
+              ['Du ' + dateLongue(ev.debut) + ' au ' + dateLongue(ev.fin)], ev.page);
+            return;
+          }
+          // Plusieurs evenements : le panneau n'a qu'un lien de page en bas,
+          // chaque nom porte donc le sien.
+          afficherDetail(actifs.map(ev => ev.nom).join(' & '), null,
+            actifs.map(ev =>
+              '<strong>' + (ev.page
+                ? '<a href="' + ev.page + '">' + echapper(ev.nom) + '</a>'
+                : echapper(ev.nom)) + '</strong> : du '
+              + dateLongue(ev.debut) + ' au ' + dateLongue(ev.fin)),
+            null);
+        });
+        grille.appendChild(el);
+      }
+      j = fin + 1;
+    }
 
     // Piste 2 : les jours
     for (let i = 0; i < f.nb; i++) {
@@ -1103,6 +1144,8 @@ if (document.querySelector('.home-card[data-debut]')) {
     }
 
     // Piste 3 : raids, recalcules jour par jour puis fusionnes
+    const idPokemon = p => p.nom + '|' + (p.forme || '');
+    const memePokemon = (a, b) => idPokemon(a) === idPokemon(b);
     const parJour = [];
     for (let i = 0; i < f.nb; i++) {
       const date = ajouterJours(f.debut, i);
@@ -1111,14 +1154,16 @@ if (document.querySelector('.home-card[data-debut]')) {
         if (!actifs[r.categorie]) return;
         if (date >= jourDe(versDate(r.debut)) && date <= jourDe(versDate(r.fin))) {
           r.pokemon.forEach(p => {
-            if (!actifs[r.categorie].some(x => x.nom === p.nom)) actifs[r.categorie].push(p);
+            // Doublon = même nom ET même forme : les 4 formes de Deoxys
+            // portent toutes le nom « Deoxys » et doivent rester distinctes.
+            if (!actifs[r.categorie].some(x => memePokemon(x, p))) actifs[r.categorie].push(p);
           });
         }
       });
       parJour.push(actifs);
     }
 
-    const signature = a => JSON.stringify([a.legendaire.map(p => p.nom), a.mega.map(p => p.nom)]);
+    const signature = a => JSON.stringify([a.legendaire.map(idPokemon), a.mega.map(idPokemon)]);
 
     let i = 0;
     while (i < f.nb) {
