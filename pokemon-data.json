@@ -2278,6 +2278,16 @@
         "n25": null
       }
     },
+    "hypotrempe": {
+      "types": [
+        "Eau"
+      ],
+      "pc": {
+        "n15": 452,
+        "n20": 603,
+        "n25": 754
+      }
+    },
     "insecateur": {
       "types": [
         "Insecte",
@@ -2851,9 +2861,9 @@
         "Acier"
       ],
       "pc": {
-        "n15": null,
-        "n20": null,
-        "n25": null,
+        "n15": 583,
+        "n20": 778,
+        "n25": 973,
         "n8": 307,
         "n13": 506
       }
@@ -3071,9 +3081,9 @@
         "Acier"
       ],
       "pc": {
-        "n15": null,
+        "n15": 443,
         "n20": 591,
-        "n25": null
+        "n25": 739
       }
     },
     "miascarade": {
@@ -3189,6 +3199,16 @@
         "n25": 993
       }
     },
+    "mordudor": {
+      "types": [
+        "Spectre"
+      ],
+      "pc": {
+        "n15": 473,
+        "n20": 631,
+        "n25": 788
+      }
+    },
     "motisma": {
       "types": [
         "Électrik",
@@ -3261,11 +3281,14 @@
       }
     },
     "mysdibule": {
-      "types": null,
+      "types": [
+        "Acier",
+        "Fée"
+      ],
       "pc": {
         "n15": 700,
-        "n20": null,
-        "n25": null
+        "n20": 934,
+        "n25": 1167
       }
     },
     "mystherbe": {
@@ -4208,9 +4231,9 @@
         "Sol"
       ],
       "pc": {
-        "n15": null,
+        "n15": 589,
         "n20": 786,
-        "n25": null
+        "n25": 983
       }
     },
     "rozbouton": {
@@ -4841,6 +4864,17 @@
         "n25": 408
       }
     },
+    "togedemaru": {
+      "types": [
+        "Électrik",
+        "Acier"
+      ],
+      "pc": {
+        "n15": 926,
+        "n20": 1234,
+        "n25": 1543
+      }
+    },
     "togepi": {
       "types": [
         "Fée"
@@ -5052,6 +5086,17 @@
         "n15": null,
         "n20": null,
         "n25": null
+      }
+    },
+    "venalgue": {
+      "types": [
+        "Poison",
+        "Eau"
+      ],
+      "pc": {
+        "n15": 455,
+        "n20": 607,
+        "n25": 759
       }
     },
     "verpom": {

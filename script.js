@@ -1366,9 +1366,16 @@ if (document.querySelector('.home-card[data-debut]')) {
 // tâche d'étude ne sont jamais boostés — leur PC ne bouge pas avec le temps
 // qu'il fait. Donc pas de .weather-container et pas de data-pc="n25" ailleurs
 // que sur une carte de raid, même si le Pokémon a bien un n25 renseigné.
+//
+// remplirBasePokemon(racine) : fonction nommée depuis le 09/11, pour que la
+// §24 puisse remplir les cartes qu'elle ajoute après le chargement. Sans
+// argument, elle traite toute la page ; le JSON n'est téléchargé qu'une fois.
 
-(function () {
-  if (!document.querySelector('[data-pk]')) return;
+let promesseBasePokemon = null;
+
+function remplirBasePokemon(racine) {
+  racine = racine || document;
+  if (!racine.querySelector('[data-pk]')) return;
 
   // Les 18 types et la météo qui les boost. Ensoleillé couvre aussi la
   // variante de nuit (« Clair » en jeu) : le site n'affiche que « Ensoleillé ».
@@ -1423,18 +1430,21 @@ if (document.querySelector('.home-card[data-debut]')) {
          + '<img src="Images/' + m.img + '" alt="' + m.alt + '" class="weather-icon"></div>';
   }
 
-  fetch('pokemon-data.json')
-    .then(r => {
+  if (!promesseBasePokemon) {
+    promesseBasePokemon = fetch('pokemon-data.json').then(r => {
       if (!r.ok) throw new Error('pokemon-data.json introuvable (HTTP ' + r.status + ')');
       return r.json();
-    })
+    });
+  }
+
+  promesseBasePokemon
     .then(donnees => {
       const base = donnees.pokemon || {};
       const manquants = [];
       const sansTypes = [];
       const sansPC = [];
 
-      document.querySelectorAll('[data-pk]').forEach(carte => {
+      racine.querySelectorAll('[data-pk]').forEach(carte => {
         const cle = carte.dataset.pk;
         const fiche = base[cle];
         if (!fiche) { manquants.push(cle); return; }
@@ -1486,7 +1496,8 @@ if (document.querySelector('.home-card[data-debut]')) {
       }
     })
     .catch(error => console.error('Erreur lors du chargement de pokemon-data.json :', error));
-})();
+}
+remplirBasePokemon();
 
 
 // 21. ONGLETS D'ÉDITIONS (évènement récurrent sur une seule page, et
@@ -1632,4 +1643,112 @@ if (document.querySelector('.raids-date[data-debut]')) {
     appliquer(b.dataset.detail);
     try { localStorage.setItem(CLE, b.dataset.detail); } catch (e) { /* rien */ }
   }));
+})();
+
+
+// 24. TÂCHES DES ÉVÈNEMENTS EN COURS (TachesEtude.html)
+// En haut de la page Tâches d'Étude, les tâches des évènements en cours,
+// recopiées depuis leur propre page : la page d'évènement reste la SEULE
+// source, rien n'est écrit deux fois (décision de Cam, 09/11).
+//  - evenements.json dit ce qui est en cours : un évènement long entre ses
+//    debut / fin, un quotidien (Community Day, Go Fest…) du début de son
+//    premier jour à la fin du dernier. Seules les entrées avec "page" comptent ;
+//    une même page n'est prise qu'une fois (Heure de Raid + évènement long).
+//  - Dans la page, on prend la section dont le h2 a un id finissant par
+//    « taches » (taches, p1-taches…), jusqu'au h2 suivant. Page à onglets
+//    (§21) : la section du panneau dont les dates couvrent maintenant.
+//  - Le research-helper est sauté (la page en a déjà un), et un évènement
+//    sans aucune research-card (« Détails à venir ») n'est pas montré.
+//  - Plusieurs évènements à la fois : un titre chacun, dans l'ordre du JSON.
+// Les cartes ajoutées repassent ensuite par la §20 (PC), la §6 (shiny) et la
+// §17 (séparateurs de rangée).
+(function () {
+  const bloc = document.getElementById('taches-evenements');
+  if (!bloc) return;
+
+  const maintenant = Date.now();
+  const heure = d => d.getHours() + 'h' + (d.getMinutes() ? String(d.getMinutes()).padStart(2, '0') : '');
+  const jour = d => d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+
+  function enCours(debut, fin) {
+    const d = new Date(debut).getTime(), f = new Date(fin).getTime();
+    return !isNaN(d) && !isNaN(f) && d <= maintenant && maintenant <= f;
+  }
+
+  // Section Tâches d'Étude d'une page d'évènement, déjà analysée.
+  function sectionTaches(doc) {
+    let portee = doc;
+    const panneaux = [...doc.querySelectorAll('[data-debut][data-fin]')]
+      .filter(p => p.querySelector('h2[id$="taches"]'));
+    if (panneaux.length) {
+      portee = panneaux.find(p => enCours(p.dataset.debut, p.dataset.fin));
+      if (!portee) return null;
+    }
+    const titre = portee.querySelector('h2[id$="taches"]');
+    if (!titre) return null;
+    const morceaux = [];
+    for (let el = titre.nextElementSibling; el && !el.matches('h2.category-title'); el = el.nextElementSibling) {
+      if (!el.matches('.research-helper')) morceaux.push(el);
+    }
+    return morceaux.some(el => el.matches('.research-card') || el.querySelector('.research-card')) ? morceaux : null;
+  }
+
+  fetch('evenements.json')
+    .then(r => {
+      if (!r.ok) throw new Error('evenements.json introuvable (HTTP ' + r.status + ')');
+      return r.json();
+    })
+    .then(donnees => {
+      const actifs = [];
+      const pages = new Set();
+      function retenir(page, fin) {
+        if (pages.has(page)) return;
+        pages.add(page);
+        actifs.push({ page, fin: new Date(fin) });
+      }
+      (donnees.mois || []).forEach(mois => {
+        (mois.evenements || []).forEach(e => {
+          if (e.page && enCours(e.debut, e.fin)) retenir(e.page, e.fin);
+        });
+        (mois.quotidiens || []).forEach(q => {
+          const fin = (q.fin || q.debut) + 'T23:59';
+          if (q.page && enCours(q.debut + 'T00:00', fin)) retenir(q.page, fin);
+        });
+      });
+      if (!actifs.length) return;
+
+      return Promise.all(actifs.map(a =>
+        fetch(a.page)
+          .then(r => (r.ok ? r.text() : null))
+          .then(html => {
+            if (!html) return null;
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const morceaux = sectionTaches(doc);
+            if (!morceaux) return null;
+            const h1 = doc.querySelector('h1');
+            return { ...a, nom: h1 ? h1.textContent.trim() : a.page, morceaux };
+          })
+          .catch(() => null)
+      )).then(sections => {
+        sections.filter(Boolean).forEach(sec => {
+          const h2 = document.createElement('h2');
+          h2.className = 'category-title tier-1';
+          h2.textContent = sec.nom;
+          const lien = document.createElement('p');
+          lien.className = 'category-link';
+          const quand = sec.fin.toDateString() === new Date().toDateString()
+            ? "Jusqu'à " + heure(sec.fin) + " aujourd'hui"
+            : "Jusqu'au " + jour(sec.fin) + ' à ' + heure(sec.fin);
+          lien.innerHTML = quand + '&nbsp;-&nbsp;<a href="' + sec.page + '">voir l\'évènement</a>';
+          bloc.append(h2, lien);
+          sec.morceaux.forEach(el => bloc.appendChild(document.importNode(el, true)));
+        });
+        if (!bloc.children.length) return;
+        bloc.hidden = false;
+        remplirBasePokemon(bloc);
+        initShinyToggle();
+        insererSeparateurRangee();
+      });
+    })
+    .catch(error => console.error('Tâches des évènements en cours :', error));
 })();

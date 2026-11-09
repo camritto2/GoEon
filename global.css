@@ -154,6 +154,26 @@ h1 {
   border-right: none;
 }
 
+/* Défi de Collection (09/11) : carte en 4 zones. Bandeau .research-task
+   « À attraper », les Pokémon, puis un second bandeau « Récompenses » au
+   milieu de la carte : ni arrondi ni marge négative, filet au-dessus.
+   Double classe pour battre .research-task, y compris en desktop où elle
+   reçoit margin-top: -14px.
+   La zone des Pokémon à attraper prend un fond doré pâle, pour se
+   distinguer des bandeaux bleus et du blanc des récompenses (09/11). */
+.collection-pokemon { background-color: var(--bg-collection); }
+
+.research-task.collection-sous-bandeau {
+  margin: 0;
+  border-radius: 0;
+  border-top: 1px solid var(--hr-separator);
+}
+
+/* Tâches des évènements en cours sur TachesEtude.html (§24 de script.js) :
+   bandeaux jaunes, la couleur des évènements longs du calendrier, pour les
+   distinguer des tâches de saison restées en bleu (09/11). */
+#taches-evenements .research-task { background-color: var(--cal-evt-bg); }
+
 .research-rangee-sep {
   width: 100%;
   border: none;
@@ -182,6 +202,15 @@ h1 {
 .research-image-container .objet-img {
   max-width: 60%;
   max-height: 60%;
+}
+
+/* Récompense sans image dans le jeu (les PX) : son sigle en texte, à la
+   place de l'icône. Taille relative au cadre, donc juste en mobile comme en
+   desktop. Posé le 09/11 (Défi de Collection d'Âme Sauvage). */
+.research-image-container .objet-texte {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-bleu);
 }
 
 /* Pastille d'espèce sur un objet (Méga-Énergie, Bonbon…) : sprite du
@@ -591,6 +620,25 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
   height: 18px;
   vertical-align: middle;
 }
+
+/* Attaque Vedette repliable (09/11, Âme Sauvage) : <details> natif, le
+   nom de l'attaque en <summary>, ses statistiques dedans. Le marqueur du
+   navigateur est masqué au profit d'une flèche ▾ / ▴ tirée de [open],
+   comme .category-toggle. Aucune ligne de script. */
+.attaque-details { margin: 0 0 8px 0; }
+.attaque-details:last-child { margin-bottom: 0; }
+.attaque-details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.attaque-details > summary::-webkit-details-marker { display: none; }
+.attaque-details > summary::after {
+  content: ' ▾';
+  font-size: 0.9em;
+  color: var(--text-secondaire);
+}
+.attaque-details[open] > summary::after { content: ' ▴'; }
+.attaque-details[open] > summary { margin-bottom: 4px; }
 
 /* Séparateur « + » entre deux cartes liées d'une pokemon-grid.
    Remplace les styles inline des anciennes pages évènement. */
@@ -1322,12 +1370,14 @@ body.dark-mode .proba-icon {
 
   .research-card { padding: 14px 0 0 0; }
   .research-task { font-size: 16px; padding-top: 5px; padding-bottom: 5px; margin-bottom: 0; margin-top: -14px; margin-left: 0; margin-right: 0; border-radius: 16px 16px 0 0; }
+  .research-task.collection-sous-bandeau { margin: 0; border-radius: 0; }
   .research-reward-item { width: calc(100% / 6); align-items: center; box-sizing: border-box; }
   .research-reward-name { font-size: 16px; align-self: stretch; }
   .research-image-container { width: 100px; height: 100px; }
   .research-image-container .emoji-shiny { width: 20px; height: 20px; }
   .research-image-container .shiny-boost-circle::after { width: 13px; height: 28px; margin-left: -3px; }
   .research-image-container .emoji-costume { width: 20px; height: 20px; }
+  .research-image-container .objet-texte { font-size: 34px; }
   .research-image-container .badges { top: 6px; left: -10px; }
   .research-reward-head { font-size: 16px; }
   .research-reward-form { font-size: 14px; }

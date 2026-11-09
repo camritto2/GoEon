@@ -2233,6 +2233,9 @@
 .pk-monorpale .research-reward-name { color: var(--accent-vert-bon); }
 .pk-monorpale .emoji-shiny  { display: inline; }
 
+/* Mordudor — Normal / Shiny */
+.pk-mordudor .emoji-shiny { display: inline; }
+
 /* Motisma — Normal / Shiny */
 .pk-motisma .emoji-shiny { display: inline; }
 

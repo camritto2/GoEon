@@ -54,6 +54,7 @@
 
   --text-astuce: #64748b;        /* Textes d'astuce gris */
   --bg-bandeau-tache: #e8f4fd;   /* Bandeau des tâches / rangs Passe Go */
+  --bg-collection: #fdf6e3;      /* Pokémon à attraper du Défi de Collection */
 }
 
 body.dark-mode {
@@ -109,6 +110,7 @@ body.dark-mode {
   --accent-violet: #a78bfa;
   --accent-or: #F4D995;
   --bg-bandeau-tache: #1a2e3d;
+  --bg-collection: #3a3322;
 }
 
 /* Application dynamique du fond du site global */
