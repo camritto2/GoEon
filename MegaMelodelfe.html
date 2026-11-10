@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Journée de Super Méga-Raids Mélodelfe</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="pokemon.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app">
+  <h1>Journée de Super Méga-Raids Mélodelfe</h1>
+  <p class="raids-date">
+    Le samedi 28 novembre, de 14h à 17h
+  </p>
+  <p class="astuce-shiny">
+    <span>💡 Astuce : Cliquez sur un Pokémon pour afficher sa version Shiny ! <img src="Images/Shiny.png" alt="Shiny" class="astuce-shiny-icon"></span>
+  </p>
+
+  <nav class="section-nav">
+    <a href="#honneur">Pokémon à l'Honneur</a>
+    <a href="#specificites">Spécificités</a>
+    <a href="#bonus">Bonus</a>
+    <a href="#attaque">Attaque Spéciale</a>
+    <a href="#defi">Défi Global</a>
+    <a href="#ticket">Ticket Payant</a>
+    <a href="#reco">Recommandations du chef</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--         POKÉMON À L'HONNEUR             -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="honneur">Pokémon à l'Honneur</h2>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <!-- Types, PC du 100 % (n20), Boost Météo (n25) et météos posés par
+         script.js §20 via data-pk="melodelfe-mega" : on combat la Méga
+         (Fée / Vol), on capture un Mélodelfe (Fée). L'entrée porte donc les
+         types du boss et les PC relevés par Cam pour Mélodelfe. -->
+    <div class="pokemon-card pk-melodelfe" data-pk="melodelfe-mega">
+      <div class="image-container">
+        <div class="badges"><span class="shiny-boost-circle"><img src="Images/Shiny.png" alt="Shiny boosté" title="Shiny boosté" class="emoji-shiny"></span></div>
+        <img src="Images/MelodelfeM.png" data-shiny="Images/MelodelfeMS.png" alt="Méga-Mélodelfe" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Méga-Mélodelfe</h2>
+        <p class="pokemon-subtitle">Shiny boosté !</p>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p>
+          <p>Boost Météo : <span class="boost-value" data-pc="n25"></span></p>
+          <div class="weather-container"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--              SPÉCIFICITÉS               -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="specificites">Spécificités</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Mélodelfe pourra <strong>Méga-Évoluer</strong> pour la première fois dans le jeu !</div>
+    <div class="intro-item"><span class="bullet">• </span>Il pourra atteindre le <strong>Super Niveau Max</strong></div>
+    <div class="intro-item"><span class="bullet">• </span>Minimum <strong>7 dresseurs</strong> <em>(à confirmer)</em></div>
+    <div class="intro-item"><span class="bullet">• </span>Les Raids ne seront <strong>pas sur toutes les Arènes</strong></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--               BONUS                     -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="bonus">Bonus</h2>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>Plus de chance d'obtenir un <span class="texte-vert">Mélodelfe</span> Shiny</div>
+    <div class="intro-item"><span class="bullet">• </span>6 Passes de Raid gratuits</div>
+    <div class="intro-item"><span class="bullet">• </span>Limite de Raids à distance augmentée à 20 <em>(du samedi 28, 2h au dimanche 29, 5h)</em></div>
+    <div class="intro-item"><span class="bullet">• </span>Les <span class="texte-vert">Mélodelfe</span> capturés seront au Méga-Niveau 1</div>
+  </div>
+
+  <p class="section-sous-titre">Étude Ponctuelle</p>
+  <div class="pokemon-grid pokemon-grid-6">
+
+    <div class="pokemon-card">
+      <div class="image-container">
+        <div class="badges"></div>
+        <img src="Images/PassePremium.webp" alt="Passe Premium" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Passe Premium</h2>
+      </div>
+    </div>
+
+    <div class="carte-plus">+</div>
+
+    <!-- PC du 100 % (n15) posé par script.js §20 via data-pk="metalosse". -->
+    <div class="pokemon-card pk-metalosse" data-pk="metalosse">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Metalosse.png" data-shiny="Images/MetalosseS.png" alt="Métalosse" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Métalosse</h2>
+        <hr class="separator">
+        <div class="pokemon-stats">
+          <p>PC du 100% : <span class="boost-value" data-pc="n15"></span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--          ATTAQUE SPÉCIALE               -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="attaque">Attaque Spéciale</h2>
+  <div class="intro-rules">
+    <p class="attaque-vedette"><strong>Pouvoir Lunaire+</strong> <img src="Images/Fee.webp" alt="Fée" class="attaque-vedette-icon"></p>
+    <div class="intro-item"><span class="bullet">• </span>Puissance en PvP : 80</div>
+    <div class="intro-item"><span class="bullet">• </span>Puissance en Raids : 160</div>
+    <p><em>La puissance de cette Attaque Chargée augmente avec le Méga-Niveau du Pokémon.</em></p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--              DÉFI GLOBAL                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="defi">Défi Global</h2>
+  <div class="intro-rules">
+    <p>Du samedi 28 novembre à 2h au dimanche 29 novembre à 5h, les dresseurs du monde entier devront participer à des Super Méga-Raids pour débloquer les bonus suivants, uniquement du lundi 30 novembre à 21h au dimanche 13 décembre à 21h :</p>
+    <div class="intro-item"><span class="bullet">• </span>La puissance de Pouvoir Lunaire+ sera augmentée</div>
+    <div class="intro-item"><span class="bullet">• </span><strong><span class="texte-vert">Méga-Mélodelfe</span></strong> aura plus de PC au Super Niveau Max</div>
+    <p><em>Plus de détails seront donnés au lancement de l'Évènement</em></p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--            TICKET PAYANT                -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="ticket">Ticket Payant</h2>
+  <p class="section-sous-titre"><em>5€49 / Disponible en ligne avec 1 Passe Premium supplémentaire</em></p>
+  <div class="intro-rules">
+    <div class="intro-item"><span class="bullet">• </span>8 Passes de Raid supplémentaires <em>(14 au total)</em></div>
+    <div class="intro-item"><span class="bullet">• </span>Plus de chance d'obtenir des <strong>Super Bonbons L</strong> par Raid</div>
+    <div class="intro-item"><span class="bullet">• </span>5 000 PX et 5 000 Poussières Étoiles supplémentaires par Super Méga-Raid</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!--         RECOMMANDATIONS DU CHEF         -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <h2 class="category-title tier-1" id="reco">Recommandations du chef</h2>
+  <div class="intro-rules">
+    <p>Nouveau Méga de type Fée, qui ne compte pas beaucoup de monde. Et Méga-Mélodelfe sera légèrement meilleur que Méga-Gardevoir, numéro 1 actuel, mais de très peu. Dans tous les cas, Mélodelfe est un très bon Pokémon de type Fée, donc des Raids à ne pas manquer !</p>
+  </div>
+
+
+  <p class="lien-source">
+    Source : <a href="https://pokemongo.com/fr/news/clefable-super-mega-raid-day-2026" target="_blank" rel="noopener">Blog Officiel Pokémon Go</a>
+  </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

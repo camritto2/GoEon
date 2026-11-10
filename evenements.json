@@ -474,8 +474,7 @@
         {
           "nom": "Halloween - Partie 1",
           "debut": "2026-10-27T10:00",
-          "fin": "2026-11-01T09:59",
-          "page": "Halloween2026.html"
+          "fin": "2026-11-01T09:59"
         }
       ],
       "raids": [
@@ -800,7 +799,6 @@
             "Crefollet.png",
             "Crefadet.png"
           ],
-          "page": "CrehelfCrefolletCrefadet.html",
           "lignes": [
             "Dynamax",
             "14h-17h"
@@ -859,7 +857,6 @@
           "sprites": [
             "LugulabreM.png"
           ],
-          "page": "MegaLugulabre.html",
           "lignes": [
             "Méga-Raids",
             "14h-17h"
@@ -874,8 +871,7 @@
         {
           "nom": "Halloween - Partie 2",
           "debut": "2026-11-01T10:00",
-          "fin": "2026-11-05T20:00",
-          "page": "Halloween2026.html"
+          "fin": "2026-11-05T20:00"
         },
         {
           "nom": "Âme Sauvage",
@@ -1325,9 +1321,13 @@
         {
           "debut": "2026-11-28",
           "categorie": "journee-raids",
-          "court": "Méga-Raids ???",
-          "long": "Journée de Super Méga-Raids - ???",
+          "court": "Méga-Raids Mélodelfe",
+          "long": "Journée de Super Méga-Raids - Mélodelfe",
           "heures": "14h - 17h",
+          "sprites": [
+            "MelodelfeM.png"
+          ],
+          "page": "MegaMelodelfe.html",
           "lignes": [
             "Méga-Raids",
             "14h-17h"
@@ -1361,7 +1361,172 @@
         }
       ],
       "raids": [],
-      "quotidiens": []
+      "quotidiens": [
+        {
+          "debut": "2026-12-05",
+          "categorie": "dynamax",
+          "court": "Dynamax ???",
+          "long": "Journée de Combat Dynamax - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Dynamax",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2026-12-12",
+          "fin": "2026-12-13",
+          "categorie": "community-day",
+          "court": "Community Day",
+          "long": "Community Day 2026",
+          "lignes": [
+            "Community Day",
+            "2026"
+          ]
+        },
+        {
+          "debut": "2026-12-19",
+          "categorie": "journee-raids",
+          "court": "Raids ???",
+          "long": "Journée de Raids - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Journée Raids",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2026-12-26",
+          "categorie": "eclosion",
+          "court": "Éclosion ???",
+          "long": "Journée d'Éclosion - ???",
+          "heures": "11h - 17h",
+          "lignes": [
+            "Éclosion",
+            "11h-17h"
+          ]
+        }
+      ]
+    },
+    {
+      "cle": "2027-01",
+      "libelle": "Janvier 2027",
+      "evenements": [],
+      "raids": [],
+      "quotidiens": [
+        {
+          "debut": "2027-01-02",
+          "categorie": "community-day",
+          "court": "CDC ???",
+          "long": "Community Day Classique - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Community Day",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2027-01-09",
+          "categorie": "journee-raids",
+          "court": "Méga-Raids ???",
+          "long": "Journée de Super Méga-Raids - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Méga-Raids",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2027-01-16",
+          "categorie": "community-day",
+          "court": "CD ???",
+          "long": "Community Day - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Community Day",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2027-01-23",
+          "categorie": "dynamax",
+          "court": "Dynamax ???",
+          "long": "Journée de Combat Dynamax - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Dynamax",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2027-01-30",
+          "categorie": "journee-raids",
+          "court": "Méga-Raids ???",
+          "long": "Journée de Super Méga-Raids - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Méga-Raids",
+            "14h-17h"
+          ]
+        }
+      ]
+    },
+    {
+      "cle": "2027-02",
+      "libelle": "Février 2027",
+      "evenements": [],
+      "raids": [],
+      "quotidiens": [
+        {
+          "debut": "2027-02-06",
+          "categorie": "community-day",
+          "court": "CD ???",
+          "long": "Community Day - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Community Day",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2027-02-13",
+          "categorie": "journee-raids",
+          "court": "Raids ???",
+          "long": "Journée de Raids - ???",
+          "heures": "14h - 17h",
+          "lignes": [
+            "Journée Raids",
+            "14h-17h"
+          ]
+        },
+        {
+          "debut": "2027-02-19",
+          "fin": "2027-02-21",
+          "categorie": "gofest",
+          "court": "Alola Tour",
+          "long": "Alola Tour à Taïwan & Los Angeles",
+          "details": [
+            "Évènement en présentiel à Taïwan et à Los Angeles."
+          ],
+          "lignes": [
+            "Alola Tour",
+            "Taïwan & L.A."
+          ]
+        },
+        {
+          "debut": "2027-02-27",
+          "fin": "2027-02-28",
+          "categorie": "gofest",
+          "court": "Alola Tour",
+          "long": "Alola Tour",
+          "heures": "10h - 18h",
+          "page": "AlolaTour2027.html",
+          "lignes": [
+            "Alola Tour",
+            "10h-18h"
+          ]
+        }
+      ]
     }
   ]
 }
