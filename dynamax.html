@@ -20,15 +20,31 @@
 
   <h1>Dynamax Disponibles</h1>
 
+  <nav class="section-nav">
+    <a href="#niveau1">Niveau 1</a>
+    <a href="#niveau2">Niveau 2</a>
+    <a href="#niveau3">Niveau 3</a>
+    <a href="#niveau4">Niveau 4</a>
+    <a href="#niveau5">Niveau 5</a>
+    <a href="#offerts">Offerts</a>
+  </nav>
+
   <div class="intro-rules">
+    <button class="intro-toggle" aria-expanded="false" onclick="toggleBanner(this, 'intro-content', 'intro-arrow')">
+      Comprendre la page
+      <span class="intro-arrow" id="intro-arrow">▾</span>
+    </button>
+    <div class="intro-content" id="intro-content">
     Un Pokémon en <span class="texte-vert">vert</span> est un bon Pokémon pour les Dynamax ou en Raids.<br>
     Un Pokémon <span class="texte-orange">avec un fond orange</span> possède aussi une forme Gigamax, plus puissante, mais uniquement disponible pendant des évènements spéciaux.<br>
+    Un Pokémon <span class="texte-jaune">avec un fond jaune</span> possède aussi une forme Gigamax, mais elle n'est pas encore disponible dans le jeu.<br>
     <br>
     Tous ces Pokémon (sauf indication contraire) peuvent être disponibles aux sources d'énergie.<br>
     Le Dynamax Vedette du lundi est plus fréquent durant la semaine qui suit.<br>
     Plus de sources sont actives le lundi.<br>
     <br>
     Lien vers le Tuto Combat Max : <strong>Disponible prochainement</strong>
+    </div>
   </div>
 
   <p class="astuce-shiny">
@@ -36,7 +52,7 @@
   </p>
 
   <!-- NIVEAU 1 -->
-  <h2 class="category-title tier-1">Niveau 1 - 250 Particules Max</h2>
+  <h2 class="category-title tier-1" id="niveau1">Niveau 1 - 250 Particules Max</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card gigamax pk-bulbizarre" data-pk="bulbizarre">
@@ -221,7 +237,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card gigamax pk-minisange" data-pk="minisange">
+    <div class="pokemon-card gigamax-a-venir pk-minisange" data-pk="minisange">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="Images/Minisange.png" data-shiny="Images/MinisangeS.png" alt="Minisange" class="pokemon-img">
@@ -235,7 +251,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card gigamax pk-bibichut" data-pk="bibichut">
+    <div class="pokemon-card gigamax-a-venir pk-bibichut" data-pk="bibichut">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="Images/Bibichut.png" data-shiny="Images/BibichutS.png" alt="Bibichut" class="pokemon-img">
@@ -502,7 +518,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card pk-grillepattes" data-pk="grillepattes">
+    <div class="pokemon-card gigamax-a-venir pk-grillepattes" data-pk="grillepattes">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="Images/Grillepattes.png" data-shiny="Images/GrillepattesS.png" alt="Grillepattes" class="pokemon-img">
@@ -518,7 +534,7 @@
   </div>
 
   <!-- NIVEAU 2 -->
-  <h2 class="category-title tier-1">Niveau 2 - 400 Particules Max</h2>
+  <h2 class="category-title tier-1" id="niveau2">Niveau 2 - 400 Particules Max</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card gigamax pk-machoc" data-pk="machoc">
@@ -577,7 +593,7 @@
       </div>
     </div>
 
-    <div class="pokemon-card gigamax pk-evoli" data-pk="evoli">
+    <div class="pokemon-card gigamax-a-venir pk-evoli" data-pk="evoli">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="Images/Evoli.png" data-shiny="Images/EvoliS.png" alt="Évoli" class="pokemon-img">
@@ -622,7 +638,7 @@
   </div>
 
   <!-- NIVEAU 3 -->
-  <h2 class="category-title tier-1">Niveau 3 - 400 Particules Max</h2>
+  <h2 class="category-title tier-1" id="niveau3">Niveau 3 - 400 Particules Max</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
     <div class="pokemon-card pk-terhal" data-pk="terhal">
@@ -810,7 +826,7 @@
   </div>
 
   <!-- NIVEAU 4 -->
-  <h2 class="category-title tier-1">Niveau 4 - 800 Particules Max</h2>
+  <h2 class="category-title tier-1" id="niveau4">Niveau 4 - 800 Particules Max</h2>
   <p class="section-sous-titre">Évènement uniquement</p>
   <div class="pokemon-grid pokemon-grid-6">
 
@@ -862,7 +878,7 @@
   </div>
 
   <!-- NIVEAU 5 -->
-  <h2 class="category-title tier-1">Niveau 5 - 800 Particules Max</h2>
+  <h2 class="category-title tier-1" id="niveau5">Niveau 5 - 800 Particules Max</h2>
   <p class="section-sous-titre">Évènement uniquement</p>
   <div class="pokemon-grid pokemon-grid-6">
 
@@ -1118,19 +1134,47 @@
       </div>
     </div>
 
+    <div class="pokemon-card pk-regidrago" data-pk="regidrago">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Regidrago.png" data-shiny="Images/RegidragoS.png" alt="Regidrago" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Regidrago</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- ÉTUDE SPÉCIALE -->
-  <h2 class="category-title tier-1">Offert en Étude Spéciale</h2>
+  <!-- ÉTUDE SPÉCIALE / PASSE GO -->
+  <h2 class="category-title tier-1" id="offerts">Offerts en Étude Spéciale/Passe Go</h2>
   <div class="pokemon-grid pokemon-grid-6">
 
-    <div class="pokemon-card gigamax pk-wushours" data-pk="wushours">
+    <div class="pokemon-card gigamax-a-venir pk-wushours" data-pk="wushours">
       <div class="image-container">
         <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
         <img src="Images/Wushours.png" data-shiny="Images/WushoursS.png" alt="Wushours" class="pokemon-img">
       </div>
       <div class="card-content">
         <h2 class="pokemon-name">Wushours</h2>
+        <hr class="separator">
+        <div class="pokemon-types-container"></div>
+        <hr class="separator">
+        <div class="pokemon-stats"><p>PC du 100% : <span class="boost-value" data-pc="n20"></span></p></div>
+      </div>
+    </div>
+
+    <div class="pokemon-card gigamax-a-venir pk-meltan" data-pk="meltan">
+      <div class="image-container">
+        <div class="badges"><img src="Images/Shiny.png" alt="Shiny disponible" title="Shiny disponible" class="emoji-shiny"></div>
+        <img src="Images/Meltan.png" data-shiny="Images/MeltanS.png" alt="Meltan" class="pokemon-img">
+      </div>
+      <div class="card-content">
+        <h2 class="pokemon-name">Meltan</h2>
         <hr class="separator">
         <div class="pokemon-types-container"></div>
         <hr class="separator">

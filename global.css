@@ -391,6 +391,13 @@ h1 {
   background-color: var(--bg-gigamax);
 }
 
+/* Gigamax pas encore disponible dans le jeu : fond jaune, proche de
+   l'orange (page Dynamax, 11/11). Classe à la place de .gigamax, pas en plus. */
+.pokemon-card.gigamax-a-venir,
+.pokemon-card.gigamax-a-venir .image-container {
+  background-color: var(--bg-gigamax-a-venir);
+}
+
 .pokemon-img {
   width: 70px;
   height: 70px;
@@ -814,6 +821,11 @@ span.research-reward-name.nom-neutre { color: var(--text-principal); }
 
 .texte-orange {
   color: #e8894a;
+  font-weight: bold;
+}
+
+.texte-jaune {
+  color: var(--accent-gigamax-a-venir);
   font-weight: bold;
 }
 

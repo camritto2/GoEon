@@ -3084,6 +3084,16 @@
         "n25": null
       }
     },
+    "mewtwo-armure": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": 1366,
+        "n20": 1821,
+        "n25": 2276
+      }
+    },
     "miamiasme": {
       "types": [
         "Poison"

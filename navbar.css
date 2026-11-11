@@ -8,6 +8,8 @@
   /* Mode Clair par défaut */
   --bg-navbar: #2a2a2a;
   --bg-gigamax: #FFF4E6;
+  --bg-gigamax-a-venir: #FDF7C8; /* Gigamax pas encore sorti (page Dynamax) */
+  --accent-gigamax-a-venir: #c9a008;
   --bg-futur-bon: #eaf7ee;       /* Carte « futur bon » (page Absents) */
   --accent-legendaire: #3b82f6;  /* Nom d'un légendaire (page Absents) */
   --accent-mega: #e53e3e;        /* Nom d'une Méga (page Absents) */
@@ -61,6 +63,8 @@ body.dark-mode {
   /* Mode Sombre automatique au clic */
   --bg-navbar: #1a1a1a;
   --bg-gigamax: #3d2a12;       
+  --bg-gigamax-a-venir: #38340f;
+  --accent-gigamax-a-venir: #e3c33a;
   --bg-futur-bon: #16301f;
   --accent-legendaire: #3b82f6;
   --accent-mega: #ff8787;
