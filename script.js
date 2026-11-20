@@ -1526,6 +1526,23 @@ remplirBasePokemon();
       const panneau = document.getElementById(o.getAttribute('aria-controls'));
       if (panneau) panneau.hidden = !actif;
     });
+    // Contenus hors des panneaux qui dépendent de l'onglet ouvert (id du
+    // panneau, plusieurs séparés par des espaces) :
+    //  - data-edition : visible seulement avec son ou ses onglets ;
+    //  - data-edition-defaut : visible quand l'onglet n'a pas de data-edition ;
+    //  - data-edition-sauf : masqué avec son ou ses onglets.
+    const id = onglet.getAttribute('aria-controls');
+    const liste = v => (v || '').split(/\s+/);
+    let propre = false;
+    document.querySelectorAll('[data-edition]').forEach(el => {
+      const ici = liste(el.dataset.edition).includes(id);
+      el.hidden = !ici;
+      if (ici) propre = true;
+    });
+    document.querySelectorAll('[data-edition-defaut]').forEach(el => { el.hidden = propre; });
+    document.querySelectorAll('[data-edition-sauf]').forEach(el => {
+      el.hidden = liste(el.dataset.editionSauf).includes(id);
+    });
   }
 
   onglets.forEach(o => o.addEventListener('click', () => ouvrir(o)));

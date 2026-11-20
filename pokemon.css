@@ -717,6 +717,9 @@
 /* Créhelf — Normal / Shiny */
 .pk-crehelf .emoji-shiny { display: inline; }
 
+/* Cresselia — Normal / Shiny */
+.pk-cresselia .emoji-shiny { display: inline; }
+
 /* Croâporal — Bon / Shiny */
 .pk-croaporal .pokemon-name { color: var(--accent-vert-bon); }
 .pk-croaporal .research-reward-name { color: var(--accent-vert-bon); }
@@ -766,6 +769,11 @@
 .pk-dardargnan .pokemon-name { color: var(--accent-vert-bon); }
 .pk-dardargnan .research-reward-name { color: var(--accent-vert-bon); }
 .pk-dardargnan .emoji-shiny  { display: inline; }
+
+/* Darkrai — Bon / Shiny */
+.pk-darkrai .pokemon-name { color: var(--accent-vert-bon); }
+.pk-darkrai .research-reward-name { color: var(--accent-vert-bon); }
+.pk-darkrai .emoji-shiny  { display: inline; }
 
 /* Darumacho — Bon / Shiny */
 .pk-darumacho .pokemon-name { color: var(--accent-vert-bon); }
@@ -2174,6 +2182,9 @@
 /* Miaouss — Normal / Shiny */
 .pk-miaouss .emoji-shiny { display: inline; }
 
+/* Miaouss d'Alola — Normal / Shiny */
+.pk-miaouss-a .emoji-shiny { display: inline; }
+
 /* Miaouss de Galar — Normal / Shiny */
 .pk-miaouss-g .emoji-shiny { display: inline; }
 
@@ -3482,6 +3493,9 @@
 
 /* Tutafeh — Normal / Shiny */
 .pk-tutafeh .emoji-shiny { display: inline; }
+
+/* Tutafeh de Galar — Normal / Shiny */
+.pk-tutafeh-g .emoji-shiny { display: inline; }
 
 /* Tutankafer — Normal / Shiny */
 .pk-tutankafer .emoji-shiny { display: inline; }

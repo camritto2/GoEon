@@ -876,8 +876,7 @@
         {
           "nom": "Âme Sauvage",
           "debut": "2026-11-09T10:00",
-          "fin": "2026-11-13T20:00",
-          "page": "AmeSauvage.html"
+          "fin": "2026-11-13T20:00"
         },
         {
           "nom": "Pluie de Météno",
@@ -1127,7 +1126,6 @@
           "sprites": [
             "ZacianES.png"
           ],
-          "page": "AmeSauvage.html",
           "lignes": [
             "Heure Raids",
             "18h-19h"
@@ -1143,7 +1141,6 @@
           "sprites": [
             "ZamazentaBS.png"
           ],
-          "page": "AmeSauvage.html",
           "lignes": [
             "Heure Raids",
             "18h-19h"
@@ -1159,7 +1156,6 @@
           "sprites": [
             "Registeel.png"
           ],
-          "page": "AmeSauvage.html",
           "lignes": [
             "Dynamax",
             "18h-19h"
@@ -1174,7 +1170,6 @@
           "sprites": [
             "Regidrago.png"
           ],
-          "page": "AmeSauvage.html",
           "lignes": [
             "Dynamax",
             "18h-19h"
@@ -1190,7 +1185,6 @@
             "Latias.png",
             "Latios.png"
           ],
-          "page": "AmeSauvage.html",
           "lignes": [
             "Dynamax",
             "18h-19h"
@@ -1203,7 +1197,6 @@
           "court": "Terres Sauvages",
           "long": "Terres Sauvages Mondial 2026",
           "heures": "10h - 18h",
-          "page": "TerresSauvages2026.html",
           "lignes": [
             "Terres Sauvages",
             "10h-18h"
