@@ -246,7 +246,7 @@
           "debut": "2026-09-09",
           "categorie": "heure-raid",
           "court": "Raids Zacian",
-          "long": "Heure de Raid - Zacian",
+          "long": "Heure de Raids - Zacian",
           "heures": "18h - 19h",
           "sprites": [
             "ZacianHA.png"
@@ -322,7 +322,7 @@
           "debut": "2026-09-16",
           "categorie": "heure-raid",
           "court": "Raids Zamazenta",
-          "long": "Heure de Raid - Zamazenta",
+          "long": "Heure de Raids - Zamazenta",
           "heures": "18h - 19h",
           "lignes": [
             "Heure Raids",
@@ -382,7 +382,7 @@
           "debut": "2026-09-23",
           "categorie": "heure-raid",
           "court": "Raids Cancrelove",
-          "long": "Heure de Raid - Cancrelove",
+          "long": "Heure de Raids - Cancrelove",
           "heures": "18h - 19h",
           "sprites": [
             "Cancrelove.png"
@@ -439,7 +439,7 @@
           "debut": "2026-09-30",
           "categorie": "heure-raid",
           "court": "Raids Xerneas",
-          "long": "Heure de Raid - Xerneas",
+          "long": "Heure de Raids - Xerneas",
           "heures": "18h - 19h",
           "sprites": [
             "Xerneas.png"
@@ -648,7 +648,7 @@
           "debut": "2026-10-07",
           "categorie": "heure-raid",
           "court": "Raids Yveltal",
-          "long": "Heure de Raid - Yveltal",
+          "long": "Heure de Raids - Yveltal",
           "heures": "18h - 19h",
           "sprites": [
             "Yveltal.png"
@@ -706,7 +706,7 @@
           "debut": "2026-10-14",
           "categorie": "heure-raid",
           "court": "Raids Dialga",
-          "long": "Heure de Raid - Dialga",
+          "long": "Heure de Raids - Dialga",
           "heures": "18h - 19h",
           "sprites": [
             "Dialga.png"
@@ -763,7 +763,7 @@
           "debut": "2026-10-21",
           "categorie": "heure-raid",
           "court": "Raids Palkia",
-          "long": "Heure de Raid - Palkia",
+          "long": "Heure de Raids - Palkia",
           "heures": "18h - 19h",
           "sprites": [
             "Palkia.png"
@@ -822,7 +822,7 @@
           "debut": "2026-10-28",
           "categorie": "heure-raid",
           "court": "Raids Giratina",
-          "long": "Heure de Raid - Giratina",
+          "long": "Heure de Raids - Giratina",
           "heures": "18h - 19h",
           "sprites": [
             "GiratinaO.png"
@@ -1090,7 +1090,7 @@
           "debut": "2026-11-04",
           "categorie": "heure-raid",
           "court": "Raids Giratina",
-          "long": "Heure de Raid - Giratina",
+          "long": "Heure de Raids - Giratina",
           "heures": "18h - 19h",
           "sprites": [
             "GiratinaA.png"
@@ -1121,7 +1121,7 @@
           "debut": "2026-11-09",
           "categorie": "heure-raid",
           "court": "Raids Zacian",
-          "long": "Heure de Raid - Zacian",
+          "long": "Heure de Raids - Zacian",
           "heures": "18h - 19h",
           "sprites": [
             "ZacianES.png"
@@ -1136,7 +1136,7 @@
           "debut": "2026-11-10",
           "categorie": "heure-raid",
           "court": "Raids Zamazenta",
-          "long": "Heure de Raid - Zamazenta",
+          "long": "Heure de Raids - Zamazenta",
           "heures": "18h - 19h",
           "sprites": [
             "ZamazentaBS.png"
@@ -1217,7 +1217,7 @@
           "debut": "2026-11-18",
           "categorie": "heure-raid",
           "court": "Raids Cresselia & Darkrai",
-          "long": "Heure de Raid - Cresselia & Darkrai",
+          "long": "Heure de Raids - Cresselia & Darkrai",
           "heures": "18h - 19h",
           "sprites": [
             "Cresselia.png",
@@ -1282,7 +1282,7 @@
           "debut": "2026-11-25",
           "categorie": "heure-raid",
           "court": "Raids Deoxys",
-          "long": "Heure de Raid - Deoxys",
+          "long": "Heure de Raids - Deoxys",
           "heures": "18h - 19h",
           "sprites": [
             "DeoxysN.png",

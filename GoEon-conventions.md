@@ -1,6 +1,6 @@
 # GoEon — Manuel de fabrication
 
-*Version 5.8 - 20 octobre 2026.*
+*Version 5.9 - 21 novembre 2026.*
 
 ## Ce qu'est ce document
 
@@ -41,6 +41,12 @@ Les données viennent de Cam — classements, rotations, infos d'évènement. Au
 | `top.css` · `optipm.css` · `rocket.css` · `index.css` | Strictement ce qui ne sert qu'à ces pages. |
 | `script.js` | **Toute** la logique du site, en sections numérotées et titrées. Aucun JS ne vit ailleurs. |
 | `pokemon-data.json` | **Source de vérité types et PC du 100 %**, une entrée par forme. Aucune météo n'y est stockée, elle se déduit des types. |
+
+**`worker.js` est le seul code serveur du site**, et la seule exception à « aucun JS hors de `script.js` ». Il ne reçoit que les adresses `/api/*` et le Cron des notifications push. Tout le reste est servi tel quel, sans passer par lui. Il est exclu des fichiers publics par `.assetsignore`.
+- Il lit **`evenements.json`** pour savoir quoi envoyer, et **`annonces.json`** pour les nouveautés du site. Aucune donnée n'est écrite deux fois.
+- Les **formulations des notifications** sont regroupées dans sa section « Formulations ».
+- Ses deux secrets, `VAPID_PUBLIC` et `VAPID_PRIVATE`, se trouvent dans Cloudflare, rubrique **Runtime variables and secrets**. Pas dans « Build », que le Worker ne lit pas. Ils ne s'écrivent jamais dans le dépôt, qui est public.
+- Un bloc commun du calendrier (deux évènements le même jour) peut porter une clé facultative **`"creneaux"`** pour que chaque évènement ait ses propres notifications. Le calendrier l'ignore.
 
 **Règles d'architecture :**
 

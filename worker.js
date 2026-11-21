@@ -175,7 +175,6 @@ const jourISO = p => p.an + '-' + String(p.mois).padStart(2, '0') + '-' + String
 const ajouterJours = (iso, n) => { const [a, m, j] = iso.split('-').map(Number); return new Date(Date.UTC(a, m - 1, j + n)).toISOString().slice(0, 10); };
 const jourSemaine = iso => { const [a, m, j] = iso.split('-').map(Number); return new Date(Date.UTC(a, m - 1, j)).getUTCDay(); };
 const estWeekend = iso => { const d = jourSemaine(iso); return d === 0 || d === 6; };
-const NOMS_JOURS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
 
 function heureTexte(t) {
   const p = partiesParis(t);
@@ -229,7 +228,7 @@ function lireCreneaux(donnees) {
       // "creneaux": [{ "nom": "Community Day Scalpion", "heures": "14h - 17h" }, …]
       const parties = Array.isArray(q.creneaux) && q.creneaux.length
         ? q.creneaux.filter(c => c && c.nom && !nonOfficiel(c.nom, c.heures))
-        : [{ nom: q.long || q.court, heures: q.heures }];
+        : [{ nom: q.long || q.court, heures: q.heures, forme: q.forme, bonus: q.bonus }];
       for (let j = premier, n = 0; j <= dernier && n < 31; j = ajouterJours(j, 1), n++) {
         const [a, m, d] = j.split('-').map(Number);
         for (const partie of parties) {
@@ -238,6 +237,8 @@ function lireCreneaux(donnees) {
           vus.set(id, {
             id, long: false,
             titre: partie.nom,
+            forme: partie.forme || null,
+            bonus: partie.bonus || null,
             heures: h ? partie.heures.replace(/\s*-\s*/, ' - ') : null,
             debut: h ? parisVersUTC(a, m, d, h.debut[0], h.debut[1]) : null,
             fin: h && h.fin ? parisVersUTC(a, m, d, h.fin[0], h.fin[1]) : null,
@@ -258,6 +259,49 @@ function lireCreneaux(donnees) {
 
 const lienPage = c => '/' + (c.page || 'Calendrier.html');
 
+// 6 bis. FORMULATIONS (validées par Cam le 21/11)
+// ------------------------------------------
+// Le libellé d'un évènement du jour se déduit de son nom dans
+// evenements.json (« Heure de Raid - Deoxys ») :
+//   ligne  = ce qui s'écrit dans le résumé (« Heure de Raids Deoxys »)
+//   sujet  = le début de la phrase « … commence dans 2 minutes »
+//   duree  = afficher « (Jusqu'à 17h) » sous le « 2 minutes avant »
+// Les noms d'Évènements sont entre guillemets, jamais les noms de Pokémon.
+
+// Pokémon de l'évènement, avec sa forme : les Légendaires gardent la forme
+// (« Giratina Forme Alternative »), un costume devient « costumé ».
+function avecForme(pk, forme) {
+  if (!forme) return pk;
+  return /portant|costume/i.test(forme) ? pk + ' costumé' : pk + ' ' + forme;
+}
+
+function libelle(c) {
+  const nom = c.titre.replace(/Maîtrise/g, 'Maitrise');
+  const i = nom.indexOf(' - ');
+  const avant = i >= 0 ? nom.slice(0, i) : nom;
+  const pk = i >= 0 ? avecForme(nom.slice(i + 3), c.forme) : '';
+  const ensemble = pk ? avant + ' ' + pk : nom;
+  const evenement = { ligne: '"' + ensemble + '"', sujet: 'L\'Évènement "' + ensemble + '"', duree: true };
+
+  if (/^Journée/.test(ensemble)) return { ligne: ensemble, sujet: 'La ' + ensemble, duree: true };
+  if (/^Community Day/.test(ensemble)) return { ligne: ensemble, sujet: 'Le ' + ensemble, duree: true };
+  if (!pk) return evenement;
+  if (/^Heure de Raid/.test(avant)) { const l = 'Heure de Raids ' + pk; return { ligne: l, sujet: 'L\'' + l, duree: false }; }
+  if (/^Heure Vedette/.test(avant)) { const l = 'Heure Vedette ' + pk + (c.bonus ? ' + ' + c.bonus : ''); return { ligne: l, sujet: 'L\'' + l, duree: false }; }
+  if (/^Heure de Combat Dynamax/.test(avant)) { const l = 'Heure de Combats Dynamax ' + pk; return { ligne: l, sujet: 'L\'' + l, duree: false }; }
+  if (/^Lundi Dynamax/.test(avant)) { const l = 'Combats Dynamax ' + pk; return { ligne: l, sujet: 'Les ' + l, duree: true }; }
+  return evenement; // Maitrise de Capture, Go Fest, Tour…
+}
+
+// « De 18h à 19h : » / « À 10h : » / « Toute la journée : »
+function quand(c) {
+  if (c.debut == null) return 'Toute la journée : ';
+  if (c.fin == null) return 'À ' + heureTexte(c.debut) + ' : ';
+  return 'De ' + heureTexte(c.debut) + ' à ' + heureTexte(c.fin) + ' : ';
+}
+
+const nomEvenement = c => 'l\'Évènement "' + c.titre.replace(/Maîtrise/g, 'Maitrise') + '"';
+
 // Lignes du résumé d'un jour (matin et veille), triées par heure.
 // « debut » marque le début d'un évènement long : cette ligne saute du
 // résumé du matin pour ceux qui reçoivent déjà le « 2 minutes avant ».
@@ -265,10 +309,10 @@ function lignesDuJour(creneaux, jour) {
   const lignes = [];
   for (const c of creneaux) {
     if (c.long) {
-      if (c.jour === jour) lignes.push({ t: c.debut, x: 'Début : ' + c.titre + ' à ' + heureTexte(c.debut), debut: true });
-      if (c.fin != null && jourISO(partiesParis(c.fin)) === jour) lignes.push({ t: c.fin, x: 'Fin : ' + c.titre + ' à ' + heureTexte(c.fin) });
+      if (c.jour === jour) lignes.push({ t: c.debut, x: 'À ' + heureTexte(c.debut) + ' : Début de ' + nomEvenement(c), debut: true });
+      if (c.fin != null && jourISO(partiesParis(c.fin)) === jour) lignes.push({ t: c.fin, x: 'À ' + heureTexte(c.fin) + ' : Fin de ' + nomEvenement(c) });
     } else if (c.jour === jour) {
-      lignes.push({ t: c.debut != null ? c.debut : lireDate(jour), x: c.titre + (c.heures ? ' : ' + c.heures : '') });
+      lignes.push({ t: c.debut != null ? c.debut : lireDate(jour), x: quand(c) + libelle(c).ligne });
     }
   }
   return lignes.sort((a, b) => a.t - b.t);
@@ -284,13 +328,17 @@ function calculerMoments(creneaux, annonces, depuis, jusqua) {
     if (dans(tAvant) && !enHeuresCalmes(c.debut)) {
       moments.push({
         id: 'avant|' + c.id, type: 'avant', t: tAvant, weekend: estWeekend(c.jour),
-        message: {
-          titre: c.titre,
-          texte: c.long
-            ? 'Commence dans ' + AVANCE_MIN + ' minutes' + (c.fin != null ? ', jusqu\'au ' + dateTexte(c.fin) + ' à ' + heureTexte(c.fin) : '')
-            : 'Commence dans ' + AVANCE_MIN + ' minutes' + (c.heures ? ' (' + c.heures + ')' : ''),
-          url: lienPage(c), tag: 'avant-' + c.id
-        }
+        message: c.long
+          ? {
+            titre: 'L\'Évènement "' + c.titre.replace(/Maîtrise/g, 'Maitrise') + '" commence dans ' + AVANCE_MIN + ' minutes',
+            texte: c.fin != null ? '(Jusqu\'au ' + dateTexte(c.fin) + ' à ' + heureTexte(c.fin) + ')' : '',
+            url: lienPage(c), tag: 'avant-' + c.id
+          }
+          : {
+            titre: libelle(c).sujet + ' commence dans ' + AVANCE_MIN + ' minutes',
+            texte: libelle(c).duree && c.fin != null ? '(Jusqu\'à ' + heureTexte(c.fin) + ')' : '',
+            url: lienPage(c), tag: 'avant-' + c.id
+          }
       });
     }
     // À la fin : seulement les gros évènements sur plusieurs jours. La fin
@@ -299,7 +347,7 @@ function calculerMoments(creneaux, annonces, depuis, jusqua) {
     if (c.long && dans(c.fin) && !enHeuresCalmes(c.fin)) {
       moments.push({
         id: 'fin|' + c.id, type: 'fin', t: c.fin, weekend: estWeekend(jourISO(partiesParis(c.fin))),
-        message: { titre: c.titre, texte: 'C\'est terminé !', url: lienPage(c), tag: 'fin-' + c.id }
+        message: { titre: 'L\'Évènement "' + c.titre.replace(/Maîtrise/g, 'Maitrise') + '" est terminé !', texte: '', url: lienPage(c), tag: 'fin-' + c.id }
       });
     }
   }
@@ -313,7 +361,7 @@ function calculerMoments(creneaux, annonces, depuis, jusqua) {
     if (dans(tMatin)) {
       const lignes = lignesDuJour(creneaux, jour);
       const sansDebuts = lignes.filter(l => !l.debut);
-      const message = l => ({ titre: 'Aujourd\'hui sur Pokémon Go', texte: l.map(x => x.x).join('\n'), url: '/Calendrier.html', tag: 'matin-' + jour });
+      const message = l => ({ titre: 'Aujourd\'hui dans Pokémon Go !', texte: l.map(x => x.x).join('\n'), url: '/Calendrier.html', tag: 'matin-' + jour });
       if (lignes.length) moments.push({
         id: 'matin|' + jour, type: 'matin', t: tMatin, weekend: estWeekend(jour),
         message: message(lignes),
@@ -330,7 +378,7 @@ function calculerMoments(creneaux, annonces, depuis, jusqua) {
       const lignes = lignesDuJour(creneaux, lendemain);
       if (lignes.length) moments.push({
         id: 'veille|' + lendemain, type: 'veille', t: tVeille, weekend: true,
-        message: { titre: 'Demain, ' + NOMS_JOURS[jourSemaine(lendemain)], texte: lignes.map(l => l.x).join('\n'), url: '/Calendrier.html', tag: 'veille-' + lendemain }
+        message: { titre: 'Demain dans Pokémon Go !', texte: lignes.map(l => l.x).join('\n'), url: '/Calendrier.html', tag: 'veille-' + lendemain }
       });
     }
   }
