@@ -12,7 +12,8 @@
 //
 // Ce dont il a besoin dans Cloudflare (Workers > goeon > Paramètres) :
 //   - un espace KV relié sous le nom ABONNES (id dans wrangler.jsonc)
-//   - deux secrets : VAPID_PUBLIC et VAPID_PRIVATE
+//   - deux secrets : VAPID_PUBLIC et VAPID_PRIVATE (ou CLE_PRIVEE : le
+//     tableau de bord a refusé d'enregistrer VAPID_PRIVATE le 21/11)
 //
 // Source unique des envois : evenements.json (et annonces.json pour les
 // mises à jour du site), lus directement dans les fichiers du site.
@@ -257,18 +258,20 @@ function lireCreneaux(donnees) {
 
 const lienPage = c => '/' + (c.page || 'Calendrier.html');
 
-// Lignes du résumé d'un jour (matin et veille), triées par heure
+// Lignes du résumé d'un jour (matin et veille), triées par heure.
+// « debut » marque le début d'un évènement long : cette ligne saute du
+// résumé du matin pour ceux qui reçoivent déjà le « 2 minutes avant ».
 function lignesDuJour(creneaux, jour) {
   const lignes = [];
   for (const c of creneaux) {
     if (c.long) {
-      if (c.jour === jour) lignes.push({ t: c.debut, x: 'Début : ' + c.titre + ' à ' + heureTexte(c.debut) });
+      if (c.jour === jour) lignes.push({ t: c.debut, x: 'Début : ' + c.titre + ' à ' + heureTexte(c.debut), debut: true });
       if (c.fin != null && jourISO(partiesParis(c.fin)) === jour) lignes.push({ t: c.fin, x: 'Fin : ' + c.titre + ' à ' + heureTexte(c.fin) });
     } else if (c.jour === jour) {
       lignes.push({ t: c.debut != null ? c.debut : lireDate(jour), x: c.titre + (c.heures ? ' : ' + c.heures : '') });
     }
   }
-  return lignes.sort((a, b) => a.t - b.t).map(l => l.x);
+  return lignes.sort((a, b) => a.t - b.t);
 }
 
 function calculerMoments(creneaux, annonces, depuis, jusqua) {
@@ -290,8 +293,10 @@ function calculerMoments(creneaux, annonces, depuis, jusqua) {
         }
       });
     }
-    // À la fin
-    if (dans(c.fin) && !enHeuresCalmes(c.fin)) {
+    // À la fin : seulement les gros évènements sur plusieurs jours. La fin
+    // d'une Heure de Raid ou d'un Lundi Dynamax n'apporte rien (décidé par
+    // Cam le 21/11).
+    if (c.long && dans(c.fin) && !enHeuresCalmes(c.fin)) {
       moments.push({
         id: 'fin|' + c.id, type: 'fin', t: c.fin, weekend: estWeekend(jourISO(partiesParis(c.fin))),
         message: { titre: c.titre, texte: 'C\'est terminé !', url: lienPage(c), tag: 'fin-' + c.id }
@@ -307,9 +312,15 @@ function calculerMoments(creneaux, annonces, depuis, jusqua) {
     const tMatin = parisVersUTC(a, m, d, HEURE_MATIN, 0);
     if (dans(tMatin)) {
       const lignes = lignesDuJour(creneaux, jour);
+      const sansDebuts = lignes.filter(l => !l.debut);
+      const message = l => ({ titre: 'Aujourd\'hui sur Pokémon Go', texte: l.map(x => x.x).join('\n'), url: '/Calendrier.html', tag: 'matin-' + jour });
       if (lignes.length) moments.push({
         id: 'matin|' + jour, type: 'matin', t: tMatin, weekend: estWeekend(jour),
-        message: { titre: 'Aujourd\'hui sur Pokémon Go', texte: lignes.join('\n'), url: '/Calendrier.html', tag: 'matin-' + jour }
+        message: message(lignes),
+        // Version pour les abonnés au « 2 minutes avant » : sans les débuts
+        // d'évènements longs, qu'ils recevront à l'heure (pas de doublon).
+        // null = rien d'autre ce jour-là, on ne leur envoie pas de résumé.
+        messageAvecAvant: sansDebuts.length ? message(sansDebuts) : null
       });
     }
     // La veille au soir d'un samedi ou d'un dimanche (donc vendredi et samedi à 20h)
@@ -319,7 +330,7 @@ function calculerMoments(creneaux, annonces, depuis, jusqua) {
       const lignes = lignesDuJour(creneaux, lendemain);
       if (lignes.length) moments.push({
         id: 'veille|' + lendemain, type: 'veille', t: tVeille, weekend: true,
-        message: { titre: 'Demain, ' + NOMS_JOURS[jourSemaine(lendemain)], texte: lignes.join('\n'), url: '/Calendrier.html', tag: 'veille-' + lendemain }
+        message: { titre: 'Demain, ' + NOMS_JOURS[jourSemaine(lendemain)], texte: lignes.map(l => l.x).join('\n'), url: '/Calendrier.html', tag: 'veille-' + lendemain }
       });
     }
   }
@@ -379,9 +390,11 @@ async function tourDeCron(env, maintenant) {
     budget -= lot.length;
 
     await Promise.all(lot.map(async a => {
+      const msg = messagePour(a.reglages, moment);
+      if (!msg) return;
       const fiche = await env.ABONNES.get(a.cle, 'json');
       if (!fiche) return;
-      const statut = await envoyer(env, fiche.abonnement, moment.message, TTL[moment.type], moment.type === 'avant' ? 'high' : 'normal');
+      const statut = await envoyer(env, fiche.abonnement, msg, TTL[moment.type], moment.type === 'avant' ? 'high' : 'normal');
       // 404/410 : le navigateur a retiré l'abonnement (appli désinstallée…)
       if (statut === 404 || statut === 410) await env.ABONNES.delete(a.cle);
     }));
@@ -390,6 +403,11 @@ async function tourDeCron(env, maintenant) {
     await env.ABONNES.put(cleEnvoi, fini ? 'fini' : lot[lot.length - 1].cle, { expirationTtl: 3 * 86400 });
     console.log('Envoi', moment.id, ':', lot.length, 'notification(s)', fini ? '' : '(suite à la minute suivante)');
   }
+}
+
+function messagePour(reglages, moment) {
+  if ('messageAvecAvant' in moment && reglages && reglages.avant === true) return moment.messageAvecAvant;
+  return moment.message;
 }
 
 async function listerAbonnes(env) {
@@ -463,7 +481,7 @@ async function enteteVapid(env, endpoint) {
   if (memo && memo.exp - 3600 > Date.now() / 1000) return memo.entete;
 
   const pub = b64uVersOctets(env.VAPID_PUBLIC);
-  const jwk = { kty: 'EC', crv: 'P-256', x: octetsVersB64u(pub.slice(1, 33)), y: octetsVersB64u(pub.slice(33, 65)), d: env.VAPID_PRIVATE, ext: true };
+  const jwk = { kty: 'EC', crv: 'P-256', x: octetsVersB64u(pub.slice(1, 33)), y: octetsVersB64u(pub.slice(33, 65)), d: env.VAPID_PRIVATE || env.CLE_PRIVEE, ext: true };
   const cle = await crypto.subtle.importKey('jwk', jwk, { name: 'ECDSA', namedCurve: 'P-256' }, false, ['sign']);
 
   const exp = Math.floor(Date.now() / 1000) + 12 * 3600;
