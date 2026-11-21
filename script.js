@@ -1769,3 +1769,186 @@ if (document.querySelector('.raids-date[data-debut]')) {
     })
     .catch(error => console.error('Tâches des évènements en cours :', error));
 })();
+
+// 25. NOTIFICATIONS PUSH (Notifications.html)
+// ------------------------------------------
+// L'abonnement est propre à chaque appareil. Les réglages sont gardés dans
+// le navigateur (localStorage) ET envoyés au Worker (worker.js), qui fait les
+// envois. À chaque visite de la page, un appareil abonné renvoie son
+// abonnement : le serveur reste à jour si le navigateur l'a renouvelé.
+// En local (Live Server), /api/ n'existe pas : seul goeon.fr répond.
+(function () {
+  const page = document.getElementById('notif-page');
+  if (!page) return;
+
+  const CLE_LOCALE = 'goeon-notifications';
+  const DEFAUT = { matin: true, avant: true, fin: false, veille: true, jours: 'tous', maj: true };
+
+  const $ = id => document.getElementById(id);
+  const message = $('notif-message'), btnActiver = $('notif-activer'), btnTest = $('notif-test'), btnDesactiver = $('notif-desactiver');
+  const cases = [...page.querySelectorAll('[data-reglage]')];
+  const boutonsJours = [...page.querySelectorAll('[data-jours]')];
+  const enregistre = $('notif-enregistre');
+
+  const supporte = 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
+  const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const installee = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+
+  function lireReglages() {
+    try { return { ...DEFAUT, ...JSON.parse(localStorage.getItem(CLE_LOCALE) || '{}') }; }
+    catch (e) { return { ...DEFAUT }; }
+  }
+  function garderReglages(r) {
+    try { localStorage.setItem(CLE_LOCALE, JSON.stringify(r)); } catch (e) { /* navigation privée */ }
+  }
+  let reglages = lireReglages();
+
+  function afficherReglages() {
+    cases.forEach(c => { c.checked = reglages[c.dataset.reglage] === true; });
+    boutonsJours.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.jours === reglages.jours)));
+  }
+
+  function bloquerReglages(oui) {
+    cases.forEach(c => { c.disabled = oui; });
+    boutonsJours.forEach(b => { b.disabled = oui; });
+  }
+
+  function etat(texte, boutons) {
+    message.textContent = texte;
+    btnActiver.hidden = !boutons.includes('activer');
+    btnTest.hidden = !boutons.includes('test');
+    btnDesactiver.hidden = !boutons.includes('desactiver');
+  }
+
+  function cleVersOctets(b64) {
+    const s = b64.replace(/-/g, '+').replace(/_/g, '/');
+    const bin = atob(s + '==='.slice((s.length + 3) % 4));
+    return Uint8Array.from(bin, c => c.charCodeAt(0));
+  }
+
+  function appel(route, corps) {
+    return fetch('/api/' + route, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(corps)
+    }).then(r => r.json().catch(() => ({})).then(j => ({ ok: r.ok, statut: r.status, ...j })));
+  }
+
+  const abonnementActuel = () => navigator.serviceWorker.ready.then(reg => reg.pushManager.getSubscription());
+
+  function envoyerAbonnement(abonnement) {
+    return appel('abonnement', { abonnement: abonnement.toJSON(), reglages });
+  }
+
+  function etatAbonne() {
+    etat('Les notifications sont activées sur cet appareil.', ['test', 'desactiver']);
+  }
+
+  function etatNonAbonne() {
+    if (Notification.permission === 'denied') {
+      etat('Les notifications sont bloquées pour GoEon. Autorisez-les dans les réglages de votre navigateur, puis rechargez la page.', []);
+    } else {
+      etat('Les notifications ne sont pas activées sur cet appareil.', ['activer']);
+    }
+  }
+
+  // Enregistrement des réglages : immédiat en local, groupé côté serveur
+  let minuterie = null;
+  function reglagesChanges() {
+    garderReglages(reglages);
+    afficherReglages();
+    if (!supporte) return;
+    clearTimeout(minuterie);
+    minuterie = setTimeout(() => {
+      abonnementActuel().then(ab => {
+        if (!ab) { enregistre.textContent = 'Réglages enregistrés. Activez les notifications pour les recevoir.'; return; }
+        return envoyerAbonnement(ab).then(r => {
+          enregistre.textContent = r.ok ? 'Réglages enregistrés ✓' : 'Les réglages n\'ont pas pu être envoyés. Réessayez dans un instant.';
+        });
+      }).catch(() => { enregistre.textContent = 'Le serveur des notifications ne répond pas.'; });
+    }, 600);
+  }
+
+  cases.forEach(c => c.addEventListener('change', () => {
+    reglages[c.dataset.reglage] = c.checked;
+    reglagesChanges();
+  }));
+  boutonsJours.forEach(b => b.addEventListener('click', () => {
+    if (reglages.jours === b.dataset.jours) return;
+    reglages.jours = b.dataset.jours;
+    reglagesChanges();
+  }));
+
+  afficherReglages();
+
+  // Appareil incompatible : sur iPhone, il faut l'application installée
+  if (!supporte) {
+    bloquerReglages(true);
+    if (ios && !installee) {
+      etat('Sur iPhone et iPad, installez d\'abord GoEon sur votre écran d\'accueil (Partager, puis « Sur l\'écran d\'accueil »), puis ouvrez-le depuis son icône pour activer les notifications.', []);
+    } else {
+      etat('Votre navigateur ne permet pas de recevoir des notifications.', []);
+    }
+    return;
+  }
+
+  btnActiver.addEventListener('click', () => {
+    btnActiver.disabled = true;
+    Notification.requestPermission()
+      .then(permission => {
+        if (permission !== 'granted') { etatNonAbonne(); return; }
+        return fetch('/api/cle')
+          .then(r => r.json())
+          .then(({ cle }) => {
+            if (!cle) throw new Error('clé publique absente');
+            return navigator.serviceWorker.ready
+              .then(reg => reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: cleVersOctets(cle) }));
+          })
+          .then(ab => envoyerAbonnement(ab).then(r => {
+            if (!r.ok) throw new Error(r.erreur || 'HTTP ' + r.statut);
+            garderReglages(reglages);
+            etatAbonne();
+            enregistre.textContent = 'C\'est fait ! Vous pouvez envoyer une notification test.';
+          }));
+      })
+      .catch(err => {
+        console.error('Notifications :', err);
+        etat('L\'activation n\'a pas fonctionné. Réessayez dans un instant.', ['activer']);
+      })
+      .finally(() => { btnActiver.disabled = false; });
+  });
+
+  btnTest.addEventListener('click', () => {
+    btnTest.disabled = true;
+    abonnementActuel()
+      .then(ab => ab ? appel('test', { endpoint: ab.endpoint }) : Promise.reject(new Error('pas abonné')))
+      .then(r => {
+        enregistre.textContent = r.ok ? 'Notification envoyée, elle arrive dans quelques secondes.'
+          : r.statut === 429 ? 'Patientez une minute entre deux tests.'
+          : 'L\'envoi n\'a pas fonctionné.';
+      })
+      .catch(() => { enregistre.textContent = 'L\'envoi n\'a pas fonctionné.'; })
+      .finally(() => { setTimeout(() => { btnTest.disabled = false; }, 3000); });
+  });
+
+  btnDesactiver.addEventListener('click', () => {
+    btnDesactiver.disabled = true;
+    abonnementActuel()
+      .then(ab => {
+        if (!ab) return;
+        return appel('desabonnement', { endpoint: ab.endpoint }).catch(() => null).then(() => ab.unsubscribe());
+      })
+      .then(() => { etatNonAbonne(); enregistre.textContent = 'Notifications désactivées sur cet appareil.'; })
+      .catch(err => console.error('Notifications :', err))
+      .finally(() => { btnDesactiver.disabled = false; });
+  });
+
+  // État de départ, et mise à jour silencieuse d'un appareil déjà abonné
+  abonnementActuel()
+    .then(ab => {
+      if (!ab) { etatNonAbonne(); return; }
+      etatAbonne();
+      envoyerAbonnement(ab).catch(() => null);
+    })
+    .catch(() => etatNonAbonne());
+})();

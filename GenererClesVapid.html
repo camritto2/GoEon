@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoEon - Clés des notifications</title>
+<!-- Outil à usage unique, À NE PAS METTRE DANS LE DÉPÔT (il est public).
+     Il fabrique la paire de clés VAPID directement dans le navigateur :
+     la clé privée ne quitte jamais l'ordinateur. -->
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 16px; color: #2d3748; }
+  h1 { font-size: 22px; }
+  label { display: block; font-weight: 600; margin: 22px 0 6px; }
+  textarea { width: 100%; font-family: monospace; font-size: 13px; padding: 8px; box-sizing: border-box; resize: none; }
+  button { font: inherit; font-weight: 600; padding: 8px 16px; border-radius: 20px; border: 0; background: #f6ad55; cursor: pointer; margin-top: 6px; }
+  .avert { background: #fff4e5; border-left: 4px solid #f6ad55; padding: 10px 12px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<h1>Clés des notifications GoEon</h1>
+<p class="avert">À utiliser <strong>une seule fois</strong>. Si tu recharges la page, de nouvelles clés sont fabriquées : il faudrait alors remplacer les deux secrets dans Cloudflare, et les abonnés déjà inscrits devraient réactiver leurs notifications.</p>
+
+<label for="pub">VAPID_PUBLIC</label>
+<textarea id="pub" rows="2" readonly></textarea>
+<button data-copie="pub">Copier</button>
+
+<label for="priv">VAPID_PRIVATE (secrète : à coller dans Cloudflare, nulle part ailleurs)</label>
+<textarea id="priv" rows="1" readonly></textarea>
+<button data-copie="priv">Copier</button>
+
+<script>
+const b64u = o => btoa(String.fromCharCode(...new Uint8Array(o))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+crypto.subtle.generateKey({ name: 'ECDSA', namedCurve: 'P-256' }, true, ['sign', 'verify']).then(async paire => {
+  document.getElementById('pub').value = b64u(await crypto.subtle.exportKey('raw', paire.publicKey));
+  document.getElementById('priv').value = (await crypto.subtle.exportKey('jwk', paire.privateKey)).d;
+}).catch(e => { document.body.insertAdjacentHTML('beforeend', '<p>Erreur : ' + e.message + ' - ouvre ce fichier avec Chrome ou Edge.</p>'); });
+document.querySelectorAll('[data-copie]').forEach(b => b.addEventListener('click', () => {
+  navigator.clipboard.writeText(document.getElementById(b.dataset.copie).value).then(() => { b.textContent = 'Copié ✓'; });
+}));
+</script>
+</body>
+</html>

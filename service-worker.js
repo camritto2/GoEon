@@ -36,6 +36,8 @@ self.addEventListener('activate', e => {
 // Stratégie "réseau d'abord" : on essaie toujours le réseau,
 // et on utilise le cache uniquement si hors-ligne
 self.addEventListener('fetch', e => {
+  // Les appels /api/ (notifications) vont toujours au serveur, jamais au cache
+  if (new URL(e.request.url).pathname.startsWith('/api/')) return;
   e.respondWith(
     fetch(e.request)
       .then(response => {
@@ -59,5 +61,36 @@ self.addEventListener('fetch', e => {
           }
         });
       })
+  );
+});
+
+// Notifications push : le Worker (worker.js) envoie { titre, texte, url, tag }
+self.addEventListener('push', e => {
+  let m = {};
+  try { m = e.data ? e.data.json() : {}; } catch (err) { m = { texte: e.data ? e.data.text() : '' }; }
+  e.waitUntil(
+    self.registration.showNotification(m.titre || 'GoEon', {
+      body: m.texte || '',
+      icon: '/Images/icon-192.png',
+      tag: m.tag || undefined,
+      data: { url: m.url || '/index.html' }
+    })
+  );
+});
+
+// Clic sur une notification : on revient sur GoEon s'il est déjà ouvert,
+// sinon on l'ouvre, directement sur la page concernée
+self.addEventListener('notificationclick', e => {
+  e.notification.close();
+  const cible = new URL((e.notification.data && e.notification.data.url) || '/index.html', self.location.origin).href;
+  e.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then(fenetres => {
+      for (const f of fenetres) {
+        if (f.url.startsWith(self.location.origin) && 'focus' in f) {
+          return f.focus().then(() => f.navigate ? f.navigate(cible) : null);
+        }
+      }
+      return clients.openWindow(cible);
+    })
   );
 });

@@ -1,0 +1,151 @@
+/* ==========================================
+   PAGE NOTIFICATIONS (Notifications.html)
+   Logique dans script.js §25.
+   ========================================== */
+
+/* Largeurs calées sur .intro-rules (800px + padding + bordure = 834px
+   au total), pour que les trois blocs de la page soient alignés */
+.notif-etat {
+  max-width: 808px;
+  margin: 0 auto 10px auto;
+  background-color: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.notif-message {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-principal);
+}
+
+.notif-message:last-child { margin-bottom: 0; }
+
+.notif-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.notif-actions:not(:has(button:not([hidden]))) { display: none; }
+
+.notif-bouton {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-text-navbar);
+  background-color: var(--accent-navbar);
+  border: 1px solid var(--accent-navbar);
+  border-radius: 20px;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+
+.notif-bouton-discret {
+  font-size: 11px;
+  padding: 6px 14px;
+  color: var(--text-secondaire);
+  background-color: var(--bg-carte);
+  border-color: var(--border-carte);
+}
+
+.notif-bouton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Liste des réglages : une ligne par case à cocher */
+.notif-liste {
+  max-width: 834px;
+  margin: 0 auto 10px auto;
+  display: grid;
+  gap: 6px;
+}
+
+.notif-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 11px;
+  color: var(--text-secondaire);
+}
+
+.notif-option input {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin: 0;
+  accent-color: var(--accent-navbar);
+  cursor: pointer;
+}
+
+.notif-option strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text-principal);
+}
+
+.notif-option:has(input:disabled) {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Choix des jours : même pilule que .rocket-details (TeamRocket.html) */
+.notif-jours {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 10px;
+  border: 1px solid var(--border-carte);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.notif-jours button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondaire);
+  background: var(--bg-carte);
+  padding: 7px 14px;
+  border: none;
+  border-left: 1px solid var(--border-carte);
+  cursor: pointer;
+}
+
+.notif-jours button:first-child { border-left: none; }
+
+.notif-jours button[aria-pressed="true"] {
+  background-color: var(--accent-navbar);
+  color: var(--accent-text-navbar);
+  cursor: default;
+}
+
+.notif-jours button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.notif-enregistre {
+  min-height: 1.5em;
+  margin: 4px 0 0 0;
+  text-align: center;
+  font-size: 11px;
+  color: var(--accent-vert-bon);
+}
+
+@media (min-width: 769px) {
+  .notif-message { font-size: 14px; }
+  .notif-option { font-size: 13px; }
+  .notif-option strong { font-size: 15px; }
+}

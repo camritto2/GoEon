@@ -1,0 +1,5 @@
+{
+  "_aide": "Une entrée par mise à jour du site à annoncer en notification. id : unique, jamais réutilisé. date : heure de Paris de l'envoi (AAAA-MM-JJTHH:MM), à mettre dans le futur au moment du push. page : facultative, ouverte au clic.",
+  "_exemple": { "id": "2026-11-28-dynamax", "date": "2026-11-28T18:00", "titre": "Nouvelle page sur GoEon", "texte": "Les meilleurs Pokémon Dynamax sont en ligne !", "page": "dynamax.html" },
+  "annonces": []
+}

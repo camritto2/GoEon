@@ -466,6 +466,32 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   display: block;
 }
 
+/* --- Raccourci vers la page Notifications --- */
+.notif-raccourci {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-carte);
+  border: 1px solid var(--border-carte);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-principal);
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.notif-raccourci:hover { border-color: var(--accent-navbar); }
+
+.notif-raccourci-fleche {
+  font-size: 14px;
+  color: var(--text-secondaire);
+}
+
 /* --- Spécifique Tuto PWA --- */
 
 .pwa-tabs {
@@ -652,6 +678,11 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
 
   /* --- Bandeaux repliables --- */
   .pwa-banner { display: none; }
+
+  .notif-raccourci {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
 
   .legend-toggle {
     font-size: 13px;

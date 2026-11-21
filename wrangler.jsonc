@@ -1,13 +1,35 @@
 {
-  // GoEon — site statique servi par Cloudflare Workers (assets only).
-  // Aucun script Worker : pas de champ "main", uniquement des fichiers statiques.
+  // GoEon — site statique servi par Cloudflare Workers.
+  // Le site reste 100 % statique : worker.js ne reçoit que les adresses
+  // /api/... (notifications push) et le réveil du Cron. Tout le reste est
+  // servi directement depuis les fichiers, sans passer par le script.
   "name": "goeon",
+  "main": "worker.js",
   "compatibility_date": "2026-08-27",
   "assets": {
     // Racine du dépôt : le site n'a pas d'étape de build.
     "directory": "./",
+    // Permet au Worker de lire evenements.json et annonces.json.
+    "binding": "ASSETS",
+    // Seules ces adresses passent par worker.js.
+    "run_worker_first": ["/api/*"],
     // Pas de page 404 personnalisée dans le dépôt pour l'instant.
     // À passer sur "404-page" le jour où un 404.html sera ajouté.
     "not_found_handling": "none"
+  },
+  // Abonnés aux notifications et suivi des envois : espace KV « goeon-abonnes »
+  // (Cloudflare > Stockage et bases de données > Workers KV).
+  "kv_namespaces": [
+    { "binding": "ABONNES", "id": "cab4d3f3ecfd4eaba7cc95240ddc89a6" }
+  ],
+  // Chaque minute : regarde dans evenements.json s'il y a une notification à envoyer.
+  "triggers": {
+    "crons": ["* * * * *"]
+  },
+  // Journaux visibles dans Cloudflare (Workers > goeon > Observabilité).
+  "observability": {
+    "enabled": true
   }
+  // Secrets à créer dans Cloudflare (Paramètres > Variables et secrets),
+  // jamais écrits ici puisque le dépôt est public : VAPID_PUBLIC, VAPID_PRIVATE.
 }

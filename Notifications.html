@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoEon - Notifications</title>
+  <link rel="canonical" href="https://goeon.fr/Notifications">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="notifications.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#29b6f6">
+  <link rel="apple-touch-icon" href="Images/icon-192.png">
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="pokemon-app" id="notif-page">
+
+  <h1>Notifications</h1>
+
+  <div class="intro-rules">
+    <p>Recevez les évènements de Pokémon Go directement sur votre téléphone. Choisissez ce qui vous intéresse : vous pouvez changer vos réglages ou tout couper quand vous voulez.</p>
+    <p>Aucune notification n'est envoyée la nuit, entre 22h et 7h.</p>
+  </div>
+
+  <!-- ÉTAT ET ACTIVATION : textes et boutons gérés par script.js §25 -->
+  <div class="notif-etat" id="notif-etat">
+    <p class="notif-message" id="notif-message">Chargement…</p>
+    <div class="notif-actions">
+      <button type="button" class="notif-bouton" id="notif-activer" hidden>Activer les notifications</button>
+      <button type="button" class="notif-bouton notif-bouton-discret" id="notif-test" hidden>Envoyer une notification test</button>
+      <button type="button" class="notif-bouton notif-bouton-discret" id="notif-desactiver" hidden>Désactiver sur cet appareil</button>
+    </div>
+  </div>
+
+  <!-- RÉGLAGES -->
+  <h2 class="category-title tier-1" id="quand">Quand me prévenir ?</h2>
+  <div class="notif-liste">
+    <label class="notif-option">
+      <input type="checkbox" data-reglage="matin">
+      <span><strong>Chaque matin à 8h</strong>Le programme de la journée</span>
+    </label>
+    <label class="notif-option">
+      <input type="checkbox" data-reglage="avant">
+      <span><strong>2 minutes avant le début</strong>De chaque évènement</span>
+    </label>
+    <label class="notif-option">
+      <input type="checkbox" data-reglage="fin">
+      <span><strong>À la fin</strong>De chaque évènement</span>
+    </label>
+    <label class="notif-option">
+      <input type="checkbox" data-reglage="veille">
+      <span><strong>La veille au soir, à 20h</strong>Pour les évènements du weekend</span>
+    </label>
+  </div>
+
+  <h2 class="category-title tier-1" id="jours">Quels jours ?</h2>
+  <div class="notif-jours" role="group" aria-label="Jours des notifications">
+    <button type="button" data-jours="tous" aria-pressed="true">Toute la semaine</button>
+    <button type="button" data-jours="weekend" aria-pressed="false">Weekend uniquement</button>
+  </div>
+
+  <h2 class="category-title tier-1" id="site">Et aussi</h2>
+  <div class="notif-liste">
+    <label class="notif-option">
+      <input type="checkbox" data-reglage="maj">
+      <span><strong>Les nouveautés du site</strong>Seulement les grosses nouveautés, c'est rare !</span>
+    </label>
+  </div>
+
+  <p class="notif-enregistre" id="notif-enregistre" aria-live="polite"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
