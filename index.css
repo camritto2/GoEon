@@ -492,6 +492,25 @@ body.dark-mode .type-fee      { background: #602040; border-color: #c06090; }
   color: var(--text-secondaire);
 }
 
+/* --- Sprite à gauche des raccourcis (Installer, Notifications) --- */
+.raccourci-gauche {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.raccourci-sprite {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* --- Bloc des raccourcis, au-dessus des Nouveautés --- */
+.notif-raccourci {
+  margin-bottom: 16px;
+}
+
 /* --- Spécifique Tuto PWA --- */
 
 .pwa-tabs {

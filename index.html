@@ -30,6 +30,38 @@
     <p class="hero-subtitle">Toutes les ressources de Pokémon Go pour les joueurs francophones !</p>
   </header>
 
+  <!-- TUTO PWA -->
+  <div class="pwa-banner" id="pwa-banner">
+    <button class="pwa-toggle" aria-expanded="false" onclick="toggleBanner(this, 'pwa-content', 'pwa-arrow')">
+      <span class="raccourci-gauche"><img src="Images/Motisma.png" alt="" class="raccourci-sprite">Installer GoEon sur votre téléphone</span>
+      <span class="pwa-arrow" id="pwa-arrow">▾</span>
+    </button>
+    <div class="pwa-content" id="pwa-content">
+      <div class="pwa-tabs">
+        <button class="pwa-tab" onclick="switchTab('android', this)">Android</button>
+        <button class="pwa-tab" onclick="switchTab('ios', this)">iOS</button>
+      </div>
+      <ul class="pwa-steps" id="pwa-android">
+        <li>Ouvrez GoEon dans Chrome</li>
+        <li>Appuyez sur les 3 points en haut à droite</li>
+        <li>Sélectionnez "Ajouter à l'écran d'accueil"</li>
+        <li>Confirmez en appuyant sur "Ajouter"</li>
+      </ul>
+      <ul class="pwa-steps" id="pwa-ios">
+        <li>Ouvrez GoEon dans Safari</li>
+        <li>Appuyez sur le bouton Partager (rectangle avec une flèche)</li>
+        <li>Faites défiler et sélectionnez "Sur l'écran d'accueil"</li>
+        <li>Confirmez en appuyant sur "Ajouter"</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- RACCOURCI NOTIFICATIONS : visible aussi sur ordinateur, contrairement au tuto PWA -->
+  <a class="notif-raccourci" href="Notifications.html">
+    <span class="raccourci-gauche"><img src="Images/Eoko.png" alt="" class="raccourci-sprite">Recevoir les notifications des évènements</span>
+    <span class="notif-raccourci-fleche">›</span>
+  </a>
+
   <!-- SECTION NOUVEAUTÉS -->
   <section class="home-section">
     <h2 class="section-title">Nouveautés</h2>
@@ -55,37 +87,6 @@
     </ul>
   </section>
 
-  <!-- TUTO PWA -->
-  <div class="pwa-banner" id="pwa-banner">
-    <button class="pwa-toggle" aria-expanded="false" onclick="toggleBanner(this, 'pwa-content', 'pwa-arrow')">
-      Installer GoEon sur votre téléphone
-      <span class="pwa-arrow" id="pwa-arrow">▾</span>
-    </button>
-    <div class="pwa-content" id="pwa-content">
-      <div class="pwa-tabs">
-        <button class="pwa-tab" onclick="switchTab('android', this)">Android</button>
-        <button class="pwa-tab" onclick="switchTab('ios', this)">iOS</button>
-      </div>
-      <ul class="pwa-steps" id="pwa-android">
-        <li>Ouvrez GoEon dans Chrome</li>
-        <li>Appuyez sur les 3 points en haut à droite</li>
-        <li>Sélectionnez "Ajouter à l'écran d'accueil"</li>
-        <li>Confirmez en appuyant sur "Ajouter"</li>
-      </ul>
-      <ul class="pwa-steps" id="pwa-ios">
-        <li>Ouvrez GoEon dans Safari</li>
-        <li>Appuyez sur le bouton Partager (rectangle avec une flèche)</li>
-        <li>Faites défiler et sélectionnez "Sur l'écran d'accueil"</li>
-        <li>Confirmez en appuyant sur "Ajouter"</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- RACCOURCI NOTIFICATIONS : visible aussi sur ordinateur, contrairement au tuto PWA -->
-  <a class="notif-raccourci" href="Notifications.html">
-    Recevoir les notifications des évènements
-    <span class="notif-raccourci-fleche">›</span>
-  </a>
 
   <!-- APERÇU 7 JOURS -->
   <!-- Conteneurs vides : la section 19 de script.js les remplit a partir

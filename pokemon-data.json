@@ -1645,6 +1645,17 @@
         "n25": null
       }
     },
+    "flamenroule": {
+      "types": [
+        "Vol",
+        "Combat"
+      ],
+      "pc": {
+        "n15": 1181,
+        "n20": 1575,
+        "n25": 1969
+      }
+    },
     "flamiaou": {
       "types": [
         "Feu"

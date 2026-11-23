@@ -953,6 +953,52 @@ if (document.querySelector('.home-card[data-debut]')) {
     return palier(Math.min(largeurDispo(total), PAS * jours - 6), PALIERS);
   }
 
+  // Plusieurs rangees par niveau. Quatre Deoxys ou cinq Megas cote a cote
+  // tombent a 16px dans 98px de large, alors qu'un segment de six jours
+  // laisse un grand vide au-dessus et en dessous. On essaie donc de
+  // repartir chaque niveau sur plusieurs rangees (5 Megas = 3 + 2) et on
+  // garde la combinaison qui donne les plus gros sprites, a taille egale
+  // celle qui a le moins de rangees. Le resultat ne descend jamais sous
+  // tailleEmpilee : sur un segment court, rien ne change.
+  const ENTRE_RANGEES = 2;   // .cal-sprites + .cal-sprites
+
+  function rangeesOptimales(nbLeg, nbMega, jours, ecart) {
+    let meilleur = { taille: tailleEmpilee(Math.max(nbLeg, nbMega, 1), jours, ecart), rLeg: 1, rMega: 1 };
+    for (let rL = 1; rL <= Math.max(nbLeg, 1); rL++) {
+      for (let rM = 1; rM <= Math.max(nbMega, 1); rM++) {
+        const rangees = (nbLeg ? rL : 0) + (nbMega ? rM : 0);
+        const dispo = PAS * jours - 6
+                    - (nbLeg && nbMega ? ecart : 0)
+                    - (rangees - (nbLeg && nbMega ? 2 : 1)) * ENTRE_RANGEES;
+        const parRangee = Math.max(nbLeg ? Math.ceil(nbLeg / rL) : 1,
+                                   nbMega ? Math.ceil(nbMega / rM) : 1);
+        const taille = palier(Math.min(largeurDispo(parRangee), dispo / rangees), PALIERS);
+        if (taille > meilleur.taille) meilleur = { taille, rLeg: rL, rMega: rM };
+      }
+    }
+    return meilleur;
+  }
+
+  // Decoupe une liste en N rangees equilibrees, les plus longues en haut.
+  function decouper(liste, n) {
+    const rangees = [];
+    let debut = 0;
+    for (let k = 0; k < n; k++) {
+      const taille = Math.ceil((liste.length - debut) / (n - k));
+      rangees.push(liste.slice(debut, debut + taille));
+      debut += taille;
+    }
+    return rangees.filter(r => r.length);
+  }
+
+  function rangeesSprites(liste, n) {
+    const avecImage = liste.filter(p => p.img);
+    if (!avecImage.length) return rangeeSprites(null, liste.map(p => p.nom).join(', '));
+    return decouper(avecImage, n)
+      .map(r => rangeeSprites(r.map(p => p.img), ''))
+      .join('');
+  }
+
   // Une rotation regionalisee coute bien plus cher qu'une rotation
   // ordinaire : les legendaires ne sont plus cote a cote mais EMPILES,
   // chacun sous son etiquette de zone, et les megas s'ajoutent encore en
@@ -1196,13 +1242,15 @@ if (document.querySelector('.home-card[data-debut]')) {
         // donne parfois des sprites plus grands que de les empiler. C'est
         // le cas du 30 septembre : Xerneas et Mega-Empiflor passent de 22
         // a 44px en se placant cote a cote.
+        const empile = rangeesOptimales(regionalise ? 1 : a.legendaire.length,
+                                        a.mega.length, jours, ecart);
         const fusion = !regionalise
                     && a.legendaire.length && a.mega.length
-                    && tailleFusionnee(total, jours) > tailleEmpilee(nbMax, jours, ecart);
+                    && tailleFusionnee(total, jours) > empile.taille;
 
         const taille = regionalise
           ? tailleRegion
-          : (fusion ? tailleFusionnee(total, jours) : tailleEmpilee(nbMax, jours, ecart));
+          : (fusion ? tailleFusionnee(total, jours) : empile.taille);
 
         let html = '';
         if (fusion) {
@@ -1215,13 +1263,11 @@ if (document.querySelector('.home-card[data-debut]')) {
           if (a.legendaire.length) {
             html += regionalise
               ? rangeeRegions(a.legendaire)
-              : rangeeSprites(a.legendaire.filter(p => p.img).map(p => p.img),
-                              a.legendaire.map(p => p.nom).join(', '));
+              : rangeesSprites(a.legendaire, empile.rLeg);
           }
           if (a.mega.length) {
             html += '<span class="cal-raids-megas">'
-                  + rangeeSprites(a.mega.filter(p => p.img).map(p => p.img),
-                                  a.mega.map(p => p.nom).join(', '))
+                  + rangeesSprites(a.mega, regionalise ? 1 : empile.rMega)
                   + '</span>';
           }
         }

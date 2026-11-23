@@ -229,7 +229,25 @@
   gap: 2px;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
 }
+
+/* Sur les petits ecrans, la colonne est plus etroite que la largeur
+   prevue par le script (LARGEUR) : les sprites retrecissent au lieu de
+   deborder de la case, sans se deformer. */
+.cal-raids > * {
+  max-width: 100%;
+}
+
+.cal-sprites img {
+  flex-shrink: 1;
+  min-width: 0;
+  object-fit: contain;
+}
+
+/* Plusieurs rangees de sprites dans un meme niveau (script.js,
+   rangeesOptimales) : 2px entre elles, comme entre deux sprites. */
+.cal-sprites + .cal-sprites { margin-top: 2px; }
 
 .cal-sprites img {
   width: 28px;
