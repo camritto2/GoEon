@@ -887,8 +887,7 @@
         {
           "nom": "Sentiers Dynamax",
           "debut": "2026-11-16T10:00",
-          "fin": "2026-11-23T20:00",
-          "page": "SentiersDynamax.html"
+          "fin": "2026-11-23T20:00"
         },
         {
           "nom": "Souhaits Crépusculaires",
@@ -1258,7 +1257,6 @@
             "Scalpion.png",
             "EthernatosG.png"
           ],
-          "page": "CDScalpion.html",
           "lignes": [
             "Community Day",
             "Éthernatos"
