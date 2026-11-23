@@ -3948,6 +3948,16 @@
         "n25": null
       }
     },
+    "psystigri": {
+      "types": [
+        "Psy"
+      ],
+      "pc": {
+        "n15": 539,
+        "n20": 719,
+        "n25": 899
+      }
+    },
     "ptera": {
       "types": null,
       "pc": {

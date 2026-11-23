@@ -94,6 +94,16 @@
   color: var(--text-principal);
 }
 
+/* 3e ligne : fréquence des notifications de l'option */
+.notif-frequence {
+  display: block;
+  margin-top: 2px;
+  font-size: 10px;
+  font-style: italic;
+  color: var(--text-secondaire);
+  opacity: 0.8;
+}
+
 .notif-option:has(input:disabled) {
   opacity: 0.5;
   cursor: default;
@@ -148,4 +158,5 @@
   .notif-message { font-size: 14px; }
   .notif-option { font-size: 13px; }
   .notif-option strong { font-size: 15px; }
+  .notif-frequence { font-size: 12px; }
 }
