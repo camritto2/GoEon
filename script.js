@@ -497,6 +497,41 @@ function switchTab(os, btn) {
   switchTab(ios ? 'ios' : 'android', onglets[ios ? 1 : 0]);
 })();
 
+// Bandeau « Installer GoEon » masqué quand l'application est déjà installée.
+// Trois façons de le savoir :
+//  1) on est dans l'application elle-même (mode « standalone ») ;
+//  2) ce navigateur a déjà vu GoEon installé (installation faite ici, ou
+//     application déjà ouverte une fois) : c'est mémorisé. Sur Android, le
+//     navigateur et l'application partagent cette mémoire ; sur iPhone non,
+//     d'où un bandeau qui peut rester visible dans Safari ;
+//  3) Chrome Android sait répondre directement (getInstalledRelatedApps,
+//     grâce à "related_applications" dans manifest.json).
+// Si Chrome propose à nouveau l'installation (beforeinstallprompt), c'est
+// que l'application a été désinstallée : on oublie et on réaffiche.
+(function () {
+  const CLE = 'goeon-installee';
+  const lire = () => { try { return localStorage.getItem(CLE) === '1'; } catch (e) { return false; } };
+  const ecrire = oui => { try { oui ? localStorage.setItem(CLE, '1') : localStorage.removeItem(CLE); } catch (e) { /* navigation privée */ } };
+  const bandeau = document.getElementById('pwa-banner');
+  const masquer = () => { if (bandeau) bandeau.style.display = 'none'; };
+  const enAppli = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+
+  if (enAppli) ecrire(true);
+  window.addEventListener('appinstalled', () => { ecrire(true); masquer(); });
+  window.addEventListener('beforeinstallprompt', () => {
+    ecrire(false);
+    if (bandeau) bandeau.style.display = '';
+  });
+
+  if (!bandeau) return;
+  if (enAppli || lire()) { masquer(); return; }
+  if (navigator.getInstalledRelatedApps) {
+    navigator.getInstalledRelatedApps()
+      .then(apps => { if (apps.length) { ecrire(true); masquer(); } })
+      .catch(() => {});
+  }
+})();
+
 // texte facultatif : « Page à venir » sur les cartes d'évènements dont la
 // page n'est pas encore en ligne. Le href garde déjà le nom de la future
 // page : à la mise en ligne, il suffit de retirer le onclick.

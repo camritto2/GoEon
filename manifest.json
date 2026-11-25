@@ -9,6 +9,12 @@
   "display": "standalone",
   "background_color": "#2d2d2d",
   "theme_color": "#29b6f6",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://goeon.fr/manifest.json"
+    }
+  ],
   "icons": [
     {
       "src": "Images/icon-192.png",
