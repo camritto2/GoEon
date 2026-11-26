@@ -1356,11 +1356,15 @@
         {
           "debut": "2026-12-05",
           "categorie": "dynamax",
-          "court": "Dynamax ???",
-          "long": "Journée de Combat Dynamax - ???",
+          "court": "Lézargus Gigamax",
+          "long": "Journée de Combat - Lézargus Gigamax",
           "heures": "14h - 17h",
+          "sprites": [
+            "LezargusG.png"
+          ],
+          "page": "LezargusGigamax.html",
           "lignes": [
-            "Dynamax",
+            "Gigamax",
             "14h-17h"
           ]
         },

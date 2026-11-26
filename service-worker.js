@@ -72,6 +72,7 @@ self.addEventListener('push', e => {
     self.registration.showNotification(m.titre || 'GoEon', {
       body: m.texte || '',
       icon: '/Images/icon-192.png',
+      badge: '/Images/notif-badge-96.png',
       tag: m.tag || undefined,
       data: { url: m.url || '/index.html' }
     })
